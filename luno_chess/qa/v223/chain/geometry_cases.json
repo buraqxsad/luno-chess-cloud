@@ -1,0 +1,21 @@
+[
+  {"id":"absolute-rook-pin","fen":"k3r3/8/8/8/8/8/4R3/4K3 w - - 0 10","from":"e2","expected":["e2e3","e2e4","e2e5","e2e6","e2e7"]},
+  {"id":"absolute-bishop-pin","fen":"7k/8/8/8/1b6/8/3B4/4K3 w - - 0 10","from":"d2","expected":["d2c3"]},
+  {"id":"absolute-knight-pin","fen":"7k/8/8/8/1b6/8/3N4/4K3 w - - 0 10","from":"d2","expected":[]},
+  {"id":"capture-only-rook-check-escape","fen":"k7/8/8/8/R3r3/8/8/4K3 w - - 0 10","from":"a4","expected":[]},
+  {"id":"quiet-rook-interposition","fen":"k3r3/8/8/8/R7/8/8/4K3 w - - 0 10","from":"a4","expected":["a4e4"]},
+  {"id":"double-check-no-rook-escape","fen":"k3r3/8/8/8/Rb6/8/8/4K3 w - - 0 10","from":"a4","expected":[]},
+  {"id":"pawn-two-captures-quiet-double","fen":"7k/8/8/8/8/3r1r2/4P3/4K3 w - - 0 10","from":"e2","expected":["e2e3","e2e4"]},
+  {"id":"returned-pawn-no-double","fen":"7k/8/8/8/8/3r1r2/4P3/4K3 w - - 0 10","from":"e2","movedPawn":true,"expected":["e2e3"]},
+  {"id":"ordinary-and-en-passant-capture","fen":"7k/8/5n2/3pP3/8/8/8/4K3 w - d6 0 10","from":"e5","expected":["e5e6"]},
+  {"id":"all-knight-destinations-occupied","fen":"7k/8/2r1r3/1r3r2/3N4/1r3r2/2r1r3/K7 w - - 0 10","from":"d4","expected":[]},
+  {"id":"all-knight-destinations-empty","fen":"7k/8/8/8/3N4/8/8/K7 w - - 0 10","from":"d4","expected":["d4b3","d4b5","d4c2","d4c6","d4e2","d4e6","d4f3","d4f5"]},
+  {"id":"quiet-promotion-all-four","fen":"3r1r1k/4P3/8/8/8/8/8/4K3 w - - 0 10","from":"e7","expected":["e7e8q","e7e8r","e7e8b","e7e8n"]},
+  {"id":"angry-knight-corner-capture-only","fen":"7k/8/8/8/8/8/p7/Nr2K3 w - - 0 10","from":"a1","special":"angry_n","expected":[]},
+  {"id":"angry-knight-mixed-neighbours","fen":"7k/8/8/3P4/2bNp3/8/8/4K3 w - - 0 10","from":"d4","special":"angry_n","expected":["d4d3"]},
+  {"id":"rook-bend-empty-only","fen":"7k/8/8/1b6/R7/8/8/4K3 w - - 0 10","from":"a4","special":"rook_bend","expected":["a4b3"]},
+  {"id":"pawn-deviation-empty-only","fen":"7k/8/8/3r4/4P3/8/8/4K3 w - - 0 10","from":"e4","special":"pawn_deviation","expected":["e4f5"]},
+  {"id":"pawn-advance-quiet-two","fen":"7k/8/8/8/4P3/8/8/4K3 w - - 0 10","from":"e4","special":"pawn_advance","expected":["e4e6"]},
+  {"id":"shadow-pass-rook-through-friendly","fen":"8/7k/8/8/8/8/N7/R3K3 w - - 0 10","from":"a1","special":"shadow_pass","expected":["a1a3","a1a4","a1a5","a1a6","a1a7","a1a8"]},
+  {"id":"shadow-pass-bishop-through-friendly","fen":"8/7k/8/8/8/8/1N6/B3K3 w - - 0 10","from":"a1","special":"shadow_pass","expected":["a1c3","a1d4","a1e5","a1f6","a1g7","a1h8"]}
+]

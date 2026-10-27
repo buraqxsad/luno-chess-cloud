@@ -1,0 +1,6613 @@
+{
+  "schema": 1,
+  "authorship": "Expected values authored from rules and chess geometry, not recorded engine outputs.",
+  "fixtures": [
+    {
+      "fixtureId": "mine-capture-overlap",
+      "intent": "Occupied-square capture remains legal; entry Mine and independent overlapping restriction resolve in order.",
+      "fen": "7k/8/8/8/8/8/p7/R3K3 w - - 0 1",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "boardEffects": [
+            {
+              "id": "mine",
+              "type": "mine",
+              "squares": [
+                8
+              ],
+              "duration": "persistent",
+              "owner": "b",
+              "responseSide": "w"
+            },
+            {
+              "id": "lock",
+              "type": "locked_square",
+              "squares": [
+                8
+              ],
+              "duration": "move",
+              "owner": "b",
+              "responseSide": "w"
+            },
+            {
+              "id": "seal",
+              "type": "board_seal",
+              "squares": [
+                8,
+                9,
+                16,
+                17
+              ],
+              "duration": "move",
+              "owner": "b",
+              "responseSide": "w"
+            }
+          ]
+        }
+      },
+      "steps": [
+        {
+          "contains": [
+            "move:a1a2"
+          ]
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1a2"
+          },
+          "expect": {
+            "rules.boardEffects": [],
+            "rules.pieceEffects.0.type": "mine_debuff",
+            "rules.pieceEffects.0.pieceId": "R:0"
+          }
+        }
+      ]
+    },
+    {
+      "fixtureId": "fog-mine-overlap",
+      "intent": "Fog does not remove or replace a persistent overlapping Mine.",
+      "fen": "7k/8/8/8/8/8/p7/R3K3 w - - 0 1",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "setup": {
+        "rules": {
+          "boardEffects": [
+            {
+              "id": "mine",
+              "type": "mine",
+              "squares": [
+                8
+              ],
+              "duration": "persistent",
+              "owner": "b",
+              "responseSide": "w"
+            },
+            {
+              "id": "fog",
+              "type": "fog",
+              "squares": [
+                8,
+                9,
+                16,
+                17
+              ],
+              "duration": "card",
+              "owner": "b",
+              "responseSide": "w"
+            }
+          ]
+        }
+      },
+      "steps": [
+        {
+          "action": {
+            "type": "pass"
+          },
+          "expect": {
+            "rules.boardEffects.0.id": "mine"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1a2"
+          },
+          "expect": {
+            "rules.boardEffects": [],
+            "rules.pieceEffects.0.type": "mine_debuff"
+          }
+        }
+      ]
+    },
+    {
+      "fixtureId": "mine-debuff-purify",
+      "intent": "Purify removes only the selected persistent Mine piece punishment.",
+      "ready": true,
+      "whiteDeckOrder": [
+        "purify",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "setup": {
+        "rules": {
+          "pieceEffects": [
+            {
+              "id": "punishment",
+              "type": "mine_debuff",
+              "pieceId": "R:0",
+              "owner": "b",
+              "responseSide": "w",
+              "duration": "piece_move"
+            }
+          ]
+        }
+      },
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "purify",
+            "target": "punishment"
+          },
+          "expect": {
+            "rules.pieceEffects": [],
+            "rules.mana.w": 5
+          }
+        }
+      ]
+    },
+    {
+      "fixtureId": "mine-debuff-piece-captured",
+      "intent": "Capturing the affected piece removes its persistent punishment naturally.",
+      "fen": "r6k/8/8/8/8/8/8/R3K3 b - - 0 1",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "pieceEffects": [
+            {
+              "id": "punishment",
+              "type": "mine_debuff",
+              "pieceId": "R:0",
+              "owner": "b",
+              "responseSide": "w",
+              "duration": "piece_move"
+            }
+          ]
+        }
+      },
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "a8a1"
+          },
+          "expect": {
+            "rules.pieceEffects": [],
+            "rules.pieceIds.0": "r:56"
+          }
+        }
+      ]
+    },
+    {
+      "fixtureId": "prophecy-invalid-permutations",
+      "intent": "prophecy-invalid-permutations",
+      "ready": true,
+      "whiteDeckOrder": [
+        "prophecy",
+        "radar",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "prophecy"
+          }
+        },
+        {
+          "action": {
+            "type": "resolve",
+            "order": [
+              "chain",
+              "chain"
+            ]
+          },
+          "legal": false,
+          "branch": "prophecy-duplicate-order"
+        },
+        {
+          "action": {
+            "type": "resolve",
+            "order": [
+              "chain"
+            ]
+          },
+          "legal": false,
+          "branch": "prophecy-incomplete-order"
+        },
+        {
+          "action": {
+            "type": "resolve",
+            "selected": "chain",
+            "order": [
+              "slow"
+            ]
+          },
+          "legal": false,
+          "branch": "prophecy-cannot-select-draw"
+        },
+        {
+          "action": {
+            "type": "resolve",
+            "order": [
+              "slow",
+              "chain"
+            ]
+          },
+          "expect": {
+            "rules.phase": "chess",
+            "rules.handCounts.w": 2
+          }
+        }
+      ]
+    },
+    {
+      "fixtureId": "fate-invalid-selection",
+      "intent": "fate-invalid-selection",
+      "ready": true,
+      "whiteDeckOrder": [
+        "fate_exchange",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "fate_exchange",
+            "sacrifice": "radar"
+          }
+        },
+        {
+          "action": {
+            "type": "resolve",
+            "selected": "shelter",
+            "order": [
+              "chain",
+              "chain"
+            ]
+          },
+          "legal": false,
+          "branch": "fate-duplicate-order"
+        },
+        {
+          "action": {
+            "type": "resolve",
+            "order": [
+              "shelter",
+              "chain",
+              "slow"
+            ]
+          },
+          "legal": false,
+          "branch": "fate-missing-selected"
+        },
+        {
+          "action": {
+            "type": "resolve",
+            "selected": "freeze",
+            "order": [
+              "chain",
+              "slow"
+            ]
+          },
+          "legal": false,
+          "branch": "fate-foreign-selected"
+        },
+        {
+          "action": {
+            "type": "resolve",
+            "selected": "shelter",
+            "order": [
+              "chain",
+              "slow"
+            ]
+          },
+          "expect": {
+            "rules.phase": "chess",
+            "rules.handCounts.w": 2,
+            "rules.drawCounts.w": 4
+          }
+        }
+      ]
+    },
+    {
+      "fixtureId": "sabotage-cost-six",
+      "intent": "sabotage-cost-six",
+      "ready": true,
+      "whiteDeckOrder": [
+        "board_seal",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "board_seal",
+            "target": 20
+          },
+          "expect": {
+            "rules.mana.w": 0,
+            "rules.phase": "chess",
+            "rules.modifiers": []
+          }
+        }
+      ],
+      "setup": {
+        "rules": {
+          "modifiers": [
+            {
+              "id": "s",
+              "type": "mana_sabotage",
+              "owner": "b",
+              "responseSide": "w",
+              "targetCard": "board_seal",
+              "ownTurn": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "special-knight-mate",
+      "intent": "special-knight-mate",
+      "ready": true,
+      "whiteDeckOrder": [
+        "angry_n",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "angry_n",
+            "target": 45
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "f6g6"
+          },
+          "expect": {
+            "rules.terminal.reason": "checkmate",
+            "rules.terminal.mateBySpecialMove": true,
+            "rules.terminal.mateByRestriction": false,
+            "rules.drawCounts.w": 3
+          }
+        }
+      ],
+      "fen": "6Bk/5K2/5N2/8/8/8/8/8 w - - 0 1"
+    },
+    {
+      "fixtureId": "finite-deck-fivefold",
+      "intent": "Explicit depletion and knight cycle demonstrate the public repetition invariant and terminal no-draw.",
+      "fen": "6nk/8/8/8/8/8/8/KN6 w - - 0 1",
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "b1c3"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "g8f6"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "radar"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "c3b1"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "radar"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "f6g8"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "prophecy"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "b1c3"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "prophecy"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "g8f6"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "shelter"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "c3b1"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "shelter"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "f6g8"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "chain"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "b1c3"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "chain"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "g8f6"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "slow"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "c3b1"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "slow"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "f6g8"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "pawn_deviation"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "b1c3"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "pawn_deviation"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "g8f6"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "pawn_advance"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "c3b1"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "pawn_advance"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "f6g8"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "locked_square"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "b1c3"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "locked_square"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "g8f6"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "freeze"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "c3b1"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "freeze"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "f6g8"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "purify"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "b1c3"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "purify"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "g8f6"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "c3b1"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "f6g8"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "b1c3"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "g8f6"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "c3b1"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "f6g8"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "b1c3"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "g8f6"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "c3b1"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "f6g8"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "b1c3"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "g8f6"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "c3b1"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "f6g8"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "b1c3"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "g8f6"
+          },
+          "expect": {
+            "rules.terminal.reason": "fivefold",
+            "rules.phase": "terminal",
+            "rules.drawCounts": {
+              "w": 10,
+              "b": 10
+            },
+            "rules.deckCounts": {
+              "w": 0,
+              "b": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-chain-king",
+      "intent": "Atomic rejection: chain-king",
+      "ready": true,
+      "whiteDeckOrder": [
+        "chain",
+        "radar",
+        "prophecy",
+        "shelter",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "chain",
+            "target": 60
+          },
+          "legal": false,
+          "branch": "chain-king"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-freeze-king",
+      "intent": "Atomic rejection: freeze-king",
+      "ready": true,
+      "whiteDeckOrder": [
+        "freeze",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "freeze",
+            "target": 60
+          },
+          "legal": false,
+          "branch": "freeze-king"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-slow-king",
+      "intent": "Atomic rejection: slow-king",
+      "ready": true,
+      "whiteDeckOrder": [
+        "slow",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "slow",
+            "target": 60
+          },
+          "legal": false,
+          "branch": "slow-king"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-hunt_vow-king",
+      "intent": "Atomic rejection: hunt_vow-king",
+      "ready": true,
+      "whiteDeckOrder": [
+        "hunt_vow",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "hunt_vow",
+            "target": 60
+          },
+          "legal": false,
+          "branch": "hunt_vow-king"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-chain-own-piece",
+      "intent": "Atomic rejection: chain-own-piece",
+      "ready": true,
+      "whiteDeckOrder": [
+        "chain",
+        "radar",
+        "prophecy",
+        "shelter",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "chain",
+            "target": 0
+          },
+          "legal": false,
+          "branch": "chain-own-piece"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-freeze-own-piece",
+      "intent": "Atomic rejection: freeze-own-piece",
+      "ready": true,
+      "whiteDeckOrder": [
+        "freeze",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "freeze",
+            "target": 0
+          },
+          "legal": false,
+          "branch": "freeze-own-piece"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-slow-own-piece",
+      "intent": "Atomic rejection: slow-own-piece",
+      "ready": true,
+      "whiteDeckOrder": [
+        "slow",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "slow",
+            "target": 0
+          },
+          "legal": false,
+          "branch": "slow-own-piece"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-hunt_vow-own-piece",
+      "intent": "Atomic rejection: hunt_vow-own-piece",
+      "ready": true,
+      "whiteDeckOrder": [
+        "hunt_vow",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "hunt_vow",
+            "target": 0
+          },
+          "legal": false,
+          "branch": "hunt_vow-own-piece"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-slow-nonslider",
+      "intent": "Atomic rejection: slow-nonslider",
+      "ready": true,
+      "whiteDeckOrder": [
+        "slow",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "slow",
+            "target": 48
+          },
+          "legal": false,
+          "branch": "slow-nonslider"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-shelter-enemy",
+      "intent": "Atomic rejection: shelter-enemy",
+      "ready": true,
+      "whiteDeckOrder": [
+        "shelter",
+        "radar",
+        "prophecy",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "shelter",
+            "target": 48
+          },
+          "legal": false,
+          "branch": "shelter-enemy"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-shelter-king",
+      "intent": "Atomic rejection: shelter-king",
+      "ready": true,
+      "whiteDeckOrder": [
+        "shelter",
+        "radar",
+        "prophecy",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "shelter",
+            "target": 4
+          },
+          "legal": false,
+          "branch": "shelter-king"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-locked_square-occupied",
+      "intent": "Atomic rejection: locked_square-occupied",
+      "ready": true,
+      "whiteDeckOrder": [
+        "locked_square",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "locked_square",
+            "target": 12
+          },
+          "legal": false,
+          "branch": "locked_square-occupied"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-mine-occupied",
+      "intent": "Atomic rejection: mine-occupied",
+      "ready": true,
+      "whiteDeckOrder": [
+        "mine",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "mine",
+            "target": 12
+          },
+          "legal": false,
+          "branch": "mine-occupied"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-watch_vow-occupied",
+      "intent": "Atomic rejection: watch_vow-occupied",
+      "ready": true,
+      "whiteDeckOrder": [
+        "watch_vow",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "watch_vow",
+            "target": 12
+          },
+          "legal": false,
+          "branch": "watch_vow-occupied"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-fog-zone-7",
+      "intent": "Atomic rejection: fog-zone-7",
+      "ready": true,
+      "whiteDeckOrder": [
+        "fog",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "fog",
+            "target": 7
+          },
+          "legal": false,
+          "branch": "fog-zone-7"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-fog-zone-56",
+      "intent": "Atomic rejection: fog-zone-56",
+      "ready": true,
+      "whiteDeckOrder": [
+        "fog",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "fog",
+            "target": 56
+          },
+          "legal": false,
+          "branch": "fog-zone-56"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-board_seal-zone-7",
+      "intent": "Atomic rejection: board_seal-zone-7",
+      "ready": true,
+      "whiteDeckOrder": [
+        "board_seal",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "board_seal",
+            "target": 7
+          },
+          "legal": false,
+          "branch": "board_seal-zone-7"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-board_seal-zone-56",
+      "intent": "Atomic rejection: board_seal-zone-56",
+      "ready": true,
+      "whiteDeckOrder": [
+        "board_seal",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "board_seal",
+            "target": 56
+          },
+          "legal": false,
+          "branch": "board_seal-zone-56"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-seal-no-empty-square",
+      "intent": "Atomic rejection: seal-no-empty-square",
+      "ready": true,
+      "whiteDeckOrder": [
+        "board_seal",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "board_seal",
+            "target": 0
+          },
+          "legal": false,
+          "branch": "seal-no-empty-square"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-mine-owner-slot",
+      "intent": "Atomic rejection: mine-owner-slot",
+      "ready": true,
+      "whiteDeckOrder": [
+        "mine",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "mine",
+            "target": 21
+          },
+          "legal": false,
+          "branch": "mine-owner-slot"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "boardEffects": [
+            {
+              "id": "old",
+              "type": "mine",
+              "squares": [
+                20
+              ],
+              "owner": "w",
+              "duration": "persistent",
+              "responseSide": "b"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-mine-same-square",
+      "intent": "Atomic rejection: mine-same-square",
+      "ready": true,
+      "whiteDeckOrder": [
+        "mine",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "mine",
+            "target": 20
+          },
+          "legal": false,
+          "branch": "mine-same-square"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "boardEffects": [
+            {
+              "id": "old",
+              "type": "mine",
+              "squares": [
+                20
+              ],
+              "owner": "b",
+              "duration": "persistent",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-hunt_vow-existing-vow",
+      "intent": "Atomic rejection: hunt_vow-existing-vow",
+      "ready": true,
+      "whiteDeckOrder": [
+        "hunt_vow",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "hunt_vow",
+            "target": 48
+          },
+          "legal": false,
+          "branch": "hunt_vow-existing-vow"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "vows": [
+            {
+              "id": "old",
+              "type": "hunt",
+              "owner": "w",
+              "pieceId": "p:49",
+              "square": null,
+              "remainingMoves": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-watch_vow-existing-vow",
+      "intent": "Atomic rejection: watch_vow-existing-vow",
+      "ready": true,
+      "whiteDeckOrder": [
+        "watch_vow",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "watch_vow",
+            "target": 20
+          },
+          "legal": false,
+          "branch": "watch_vow-existing-vow"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "vows": [
+            {
+              "id": "old",
+              "type": "hunt",
+              "owner": "w",
+              "pieceId": "p:49",
+              "square": null,
+              "remainingMoves": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-purify-positive",
+      "intent": "Atomic rejection: purify-positive",
+      "ready": true,
+      "whiteDeckOrder": [
+        "purify",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "purify",
+            "target": "shield"
+          },
+          "legal": false,
+          "branch": "purify-positive"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "pieceEffects": [
+            {
+              "id": "shield",
+              "type": "shelter",
+              "owner": "w",
+              "pieceId": "R:0",
+              "responseSide": "b",
+              "duration": "card"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-purify-enemy",
+      "intent": "Atomic rejection: purify-enemy",
+      "ready": true,
+      "whiteDeckOrder": [
+        "purify",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "purify",
+            "target": "dirty"
+          },
+          "legal": false,
+          "branch": "purify-enemy"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "pieceEffects": [
+            {
+              "id": "dirty",
+              "type": "chain",
+              "owner": "w",
+              "pieceId": "p:48",
+              "responseSide": "b",
+              "duration": "move"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-break-own-effect",
+      "intent": "Atomic rejection: break-own-effect",
+      "ready": true,
+      "whiteDeckOrder": [
+        "break_seal",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "break_seal",
+            "target": "own"
+          },
+          "legal": false,
+          "branch": "break-own-effect"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "boardEffects": [
+            {
+              "id": "own",
+              "type": "mine",
+              "squares": [
+                20
+              ],
+              "owner": "w",
+              "duration": "persistent",
+              "responseSide": "b"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-radar-used-target",
+      "intent": "Atomic rejection: radar-used-target",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "radar",
+            "target": "radar"
+          },
+          "legal": false,
+          "branch": "radar-used-target"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "handCounts": {
+            "w": 3,
+            "b": 2
+          },
+          "used": {
+            "w": [],
+            "b": [
+              "radar"
+            ]
+          }
+        },
+        "hidden": {
+          "hands": {
+            "w": [
+              "radar",
+              "prophecy",
+              "shelter"
+            ],
+            "b": [
+              "prophecy",
+              "shelter"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-radar-discarded-target",
+      "intent": "Atomic rejection: radar-discarded-target",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "radar",
+            "target": "radar"
+          },
+          "legal": false,
+          "branch": "radar-discarded-target"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "handCounts": {
+            "w": 3,
+            "b": 2
+          },
+          "discarded": {
+            "w": [],
+            "b": [
+              "radar"
+            ]
+          }
+        },
+        "hidden": {
+          "hands": {
+            "w": [
+              "radar",
+              "prophecy",
+              "shelter"
+            ],
+            "b": [
+              "prophecy",
+              "shelter"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-mana_sabotage-used-target",
+      "intent": "Atomic rejection: mana_sabotage-used-target",
+      "ready": true,
+      "whiteDeckOrder": [
+        "mana_sabotage",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "mana_sabotage",
+            "target": "radar"
+          },
+          "legal": false,
+          "branch": "mana_sabotage-used-target"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "handCounts": {
+            "w": 3,
+            "b": 2
+          },
+          "used": {
+            "w": [],
+            "b": [
+              "radar"
+            ]
+          }
+        },
+        "hidden": {
+          "hands": {
+            "w": [
+              "mana_sabotage",
+              "radar",
+              "prophecy"
+            ],
+            "b": [
+              "prophecy",
+              "shelter"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-mana_sabotage-discarded-target",
+      "intent": "Atomic rejection: mana_sabotage-discarded-target",
+      "ready": true,
+      "whiteDeckOrder": [
+        "mana_sabotage",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "mana_sabotage",
+            "target": "radar"
+          },
+          "legal": false,
+          "branch": "mana_sabotage-discarded-target"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "handCounts": {
+            "w": 3,
+            "b": 2
+          },
+          "discarded": {
+            "w": [],
+            "b": [
+              "radar"
+            ]
+          }
+        },
+        "hidden": {
+          "hands": {
+            "w": [
+              "mana_sabotage",
+              "radar",
+              "prophecy"
+            ],
+            "b": [
+              "prophecy",
+              "shelter"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-card_block-used-target",
+      "intent": "Atomic rejection: card_block-used-target",
+      "ready": true,
+      "whiteDeckOrder": [
+        "card_block",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "card_block",
+            "target": "radar"
+          },
+          "legal": false,
+          "branch": "card_block-used-target"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "handCounts": {
+            "w": 3,
+            "b": 2
+          },
+          "used": {
+            "w": [],
+            "b": [
+              "radar"
+            ]
+          }
+        },
+        "hidden": {
+          "hands": {
+            "w": [
+              "card_block",
+              "radar",
+              "prophecy"
+            ],
+            "b": [
+              "prophecy",
+              "shelter"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-card_block-discarded-target",
+      "intent": "Atomic rejection: card_block-discarded-target",
+      "ready": true,
+      "whiteDeckOrder": [
+        "card_block",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "card_block",
+            "target": "radar"
+          },
+          "legal": false,
+          "branch": "card_block-discarded-target"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "handCounts": {
+            "w": 3,
+            "b": 2
+          },
+          "discarded": {
+            "w": [],
+            "b": [
+              "radar"
+            ]
+          }
+        },
+        "hidden": {
+          "hands": {
+            "w": [
+              "card_block",
+              "radar",
+              "prophecy"
+            ],
+            "b": [
+              "prophecy",
+              "shelter"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-echo-used-target",
+      "intent": "Atomic rejection: echo-used-target",
+      "ready": true,
+      "whiteDeckOrder": [
+        "echo",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "echo",
+            "target": "radar"
+          },
+          "legal": false,
+          "branch": "echo-used-target"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "handCounts": {
+            "w": 3,
+            "b": 2
+          },
+          "used": {
+            "w": [],
+            "b": [
+              "radar"
+            ]
+          }
+        },
+        "hidden": {
+          "hands": {
+            "w": [
+              "echo",
+              "radar",
+              "prophecy"
+            ],
+            "b": [
+              "prophecy",
+              "shelter"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-echo-discarded-target",
+      "intent": "Atomic rejection: echo-discarded-target",
+      "ready": true,
+      "whiteDeckOrder": [
+        "echo",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "echo",
+            "target": "radar"
+          },
+          "legal": false,
+          "branch": "echo-discarded-target"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "handCounts": {
+            "w": 3,
+            "b": 2
+          },
+          "discarded": {
+            "w": [],
+            "b": [
+              "radar"
+            ]
+          }
+        },
+        "hidden": {
+          "hands": {
+            "w": [
+              "echo",
+              "radar",
+              "prophecy"
+            ],
+            "b": [
+              "prophecy",
+              "shelter"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-fate_exchange-self-sacrifice",
+      "intent": "Atomic rejection: fate_exchange-self-sacrifice",
+      "ready": true,
+      "whiteDeckOrder": [
+        "fate_exchange",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "fate_exchange",
+            "sacrifice": "fate_exchange"
+          },
+          "legal": false,
+          "branch": "fate_exchange-self-sacrifice"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-fate_exchange-no-other-card",
+      "intent": "Atomic rejection: fate_exchange-no-other-card",
+      "ready": true,
+      "whiteDeckOrder": [
+        "fate_exchange",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "fate_exchange"
+          },
+          "legal": false,
+          "branch": "fate_exchange-no-other-card"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "handCounts": {
+            "w": 1,
+            "b": 3
+          },
+          "discarded": {
+            "w": [
+              "prophecy",
+              "radar"
+            ],
+            "b": []
+          }
+        },
+        "hidden": {
+          "hands": {
+            "w": [
+              "fate_exchange"
+            ],
+            "b": [
+              "radar",
+              "prophecy",
+              "shelter"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-shadow_contract-self-sacrifice",
+      "intent": "Atomic rejection: shadow_contract-self-sacrifice",
+      "ready": true,
+      "whiteDeckOrder": [
+        "shadow_contract",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "shadow_contract",
+            "sacrifice": "shadow_contract"
+          },
+          "legal": false,
+          "branch": "shadow_contract-self-sacrifice"
+        }
+      ]
+    },
+    {
+      "fixtureId": "precondition-shadow_contract-no-other-card",
+      "intent": "Atomic rejection: shadow_contract-no-other-card",
+      "ready": true,
+      "whiteDeckOrder": [
+        "shadow_contract",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "shadow_contract"
+          },
+          "legal": false,
+          "branch": "shadow_contract-no-other-card"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "handCounts": {
+            "w": 1,
+            "b": 3
+          },
+          "discarded": {
+            "w": [
+              "prophecy",
+              "radar"
+            ],
+            "b": []
+          }
+        },
+        "hidden": {
+          "hands": {
+            "w": [
+              "shadow_contract"
+            ],
+            "b": [
+              "radar",
+              "prophecy",
+              "shelter"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-prophecy-empty-deck",
+      "intent": "Atomic rejection: prophecy-empty-deck",
+      "ready": true,
+      "whiteDeckOrder": [
+        "prophecy",
+        "radar",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "prophecy"
+          },
+          "legal": false,
+          "branch": "prophecy-empty-deck"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "deckCounts": {
+            "w": 0,
+            "b": 7
+          },
+          "discarded": {
+            "w": [
+              "chain",
+              "freeze",
+              "locked_square",
+              "pawn_advance",
+              "pawn_deviation",
+              "purify",
+              "slow"
+            ],
+            "b": []
+          }
+        },
+        "hidden": {
+          "decks": {
+            "w": [],
+            "b": [
+              "chain",
+              "slow",
+              "pawn_deviation",
+              "pawn_advance",
+              "locked_square",
+              "freeze",
+              "purify"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-fate_exchange-empty-deck",
+      "intent": "Atomic rejection: fate_exchange-empty-deck",
+      "ready": true,
+      "whiteDeckOrder": [
+        "fate_exchange",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "fate_exchange",
+            "sacrifice": "radar"
+          },
+          "legal": false,
+          "branch": "fate_exchange-empty-deck"
+        }
+      ],
+      "setup": {
+        "rules": {
+          "deckCounts": {
+            "w": 0,
+            "b": 7
+          },
+          "discarded": {
+            "w": [
+              "chain",
+              "freeze",
+              "locked_square",
+              "pawn_advance",
+              "pawn_deviation",
+              "shelter",
+              "slow"
+            ],
+            "b": []
+          }
+        },
+        "hidden": {
+          "decks": {
+            "w": [],
+            "b": [
+              "chain",
+              "slow",
+              "pawn_deviation",
+              "pawn_advance",
+              "locked_square",
+              "freeze",
+              "purify"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-pawn_deviation-frozen",
+      "intent": "Atomic rejection: pawn_deviation-frozen",
+      "ready": true,
+      "whiteDeckOrder": [
+        "pawn_deviation",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "pawn_deviation",
+            "target": 18
+          },
+          "legal": false,
+          "branch": "pawn_deviation-frozen"
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "setup": {
+        "rules": {
+          "pieceEffects": [
+            {
+              "id": "frozen",
+              "type": "freeze",
+              "pieceId": "P:18",
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-pawn_advance-frozen",
+      "intent": "Atomic rejection: pawn_advance-frozen",
+      "ready": true,
+      "whiteDeckOrder": [
+        "pawn_advance",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "pawn_advance",
+            "target": 8
+          },
+          "legal": false,
+          "branch": "pawn_advance-frozen"
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "setup": {
+        "rules": {
+          "pieceEffects": [
+            {
+              "id": "frozen",
+              "type": "freeze",
+              "pieceId": "P:8",
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-rook_bend-frozen",
+      "intent": "Atomic rejection: rook_bend-frozen",
+      "ready": true,
+      "whiteDeckOrder": [
+        "rook_bend",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "rook_bend",
+            "target": 7
+          },
+          "legal": false,
+          "branch": "rook_bend-frozen"
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "setup": {
+        "rules": {
+          "pieceEffects": [
+            {
+              "id": "frozen",
+              "type": "freeze",
+              "pieceId": "R:7",
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-angry_n-frozen",
+      "intent": "Atomic rejection: angry_n-frozen",
+      "ready": true,
+      "whiteDeckOrder": [
+        "angry_n",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "angry_n",
+            "target": 11
+          },
+          "legal": false,
+          "branch": "angry_n-frozen"
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "setup": {
+        "rules": {
+          "pieceEffects": [
+            {
+              "id": "frozen",
+              "type": "freeze",
+              "pieceId": "N:11",
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-shadow_pass-frozen",
+      "intent": "Atomic rejection: shadow_pass-frozen",
+      "ready": true,
+      "whiteDeckOrder": [
+        "shadow_pass",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "shadow_pass",
+            "target": 0
+          },
+          "legal": false,
+          "branch": "shadow_pass-frozen"
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "setup": {
+        "rules": {
+          "pieceEffects": [
+            {
+              "id": "frozen",
+              "type": "freeze",
+              "pieceId": "R:0",
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-deviation-no-empty-diagonal",
+      "intent": "Atomic rejection: deviation-no-empty-diagonal",
+      "ready": true,
+      "whiteDeckOrder": [
+        "pawn_deviation",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "pawn_deviation",
+            "target": 20
+          },
+          "legal": false,
+          "branch": "deviation-no-empty-diagonal"
+        }
+      ],
+      "fen": "7k/8/8/8/3p1p2/4P3/8/4K3 w - - 0 1"
+    },
+    {
+      "fixtureId": "precondition-advance-intermediate",
+      "intent": "Atomic rejection: advance-intermediate",
+      "ready": true,
+      "whiteDeckOrder": [
+        "pawn_advance",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "pawn_advance",
+            "target": 20
+          },
+          "legal": false,
+          "branch": "advance-intermediate"
+        }
+      ],
+      "fen": "7k/8/8/8/4p3/4P3/8/4K3 w - - 0 1"
+    },
+    {
+      "fixtureId": "precondition-advance-destination",
+      "intent": "Atomic rejection: advance-destination",
+      "ready": true,
+      "whiteDeckOrder": [
+        "pawn_advance",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "pawn_advance",
+            "target": 20
+          },
+          "legal": false,
+          "branch": "advance-destination"
+        }
+      ],
+      "fen": "7k/8/8/4p3/8/4P3/8/4K3 w - - 0 1"
+    },
+    {
+      "fixtureId": "precondition-advance-promotion",
+      "intent": "Atomic rejection: advance-promotion",
+      "ready": true,
+      "whiteDeckOrder": [
+        "pawn_advance",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "pawn_advance",
+            "target": 44
+          },
+          "legal": false,
+          "branch": "advance-promotion"
+        }
+      ],
+      "fen": "7k/8/4P3/8/8/8/8/4K3 w - - 0 1"
+    },
+    {
+      "fixtureId": "precondition-shadow-two-blockers",
+      "intent": "Atomic rejection: shadow-two-blockers",
+      "ready": true,
+      "whiteDeckOrder": [
+        "shadow_pass",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "shadow_pass",
+            "target": 0
+          },
+          "legal": false,
+          "branch": "shadow-two-blockers"
+        }
+      ],
+      "fen": "7k/8/8/8/8/P7/P7/R3K3 w - - 0 1"
+    },
+    {
+      "fixtureId": "precondition-deviation-pinned",
+      "intent": "Atomic rejection: deviation-pinned",
+      "ready": true,
+      "whiteDeckOrder": [
+        "pawn_deviation",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "pawn_deviation",
+            "target": 12
+          },
+          "legal": false,
+          "branch": "deviation-pinned"
+        }
+      ],
+      "fen": "k3r3/8/8/8/8/8/4P3/4K3 w - - 0 1"
+    },
+    {
+      "fixtureId": "precondition-restricted-freeze",
+      "intent": "Atomic rejection: restricted-freeze",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1b1"
+          },
+          "legal": false,
+          "branch": "restricted-freeze"
+        }
+      ],
+      "fen": "7k/8/8/8/8/8/p7/R3K3 w - - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "pieceEffects": [
+            {
+              "id": "blocked",
+              "type": "freeze",
+              "pieceId": "R:0",
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-restricted-chain",
+      "intent": "Atomic rejection: restricted-chain",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1a2"
+          },
+          "legal": false,
+          "branch": "restricted-chain"
+        }
+      ],
+      "fen": "7k/8/8/8/8/8/p7/R3K3 w - - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "pieceEffects": [
+            {
+              "id": "blocked",
+              "type": "chain",
+              "pieceId": "R:0",
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-restricted-slow",
+      "intent": "Atomic rejection: restricted-slow",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1a4"
+          },
+          "legal": false,
+          "branch": "restricted-slow"
+        }
+      ],
+      "fen": "7k/8/8/8/8/8/8/R3K3 w - - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "pieceEffects": [
+            {
+              "id": "blocked",
+              "type": "slow",
+              "pieceId": "R:0",
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-restricted-mine_debuff",
+      "intent": "Atomic rejection: restricted-mine_debuff",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1a2"
+          },
+          "legal": false,
+          "branch": "restricted-mine_debuff"
+        }
+      ],
+      "fen": "7k/8/8/8/8/8/p7/R3K3 w - - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "pieceEffects": [
+            {
+              "id": "blocked",
+              "type": "mine_debuff",
+              "pieceId": "R:0",
+              "owner": "b",
+              "duration": "piece_move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-locked_square-en-passant",
+      "intent": "Atomic rejection: locked_square-en-passant",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "e5d6"
+          },
+          "legal": false,
+          "branch": "locked_square-en-passant"
+        }
+      ],
+      "fen": "7k/8/8/3pP3/8/8/8/4K3 w - d6 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "boardEffects": [
+            {
+              "id": "zone",
+              "type": "locked_square",
+              "squares": [
+                43
+              ],
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-locked_square-empty-promotion",
+      "intent": "Atomic rejection: locked_square-empty-promotion",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "g7g8q"
+          },
+          "legal": false,
+          "branch": "locked_square-empty-promotion"
+        }
+      ],
+      "fen": "k6r/6P1/8/8/8/8/8/4K3 w - - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "boardEffects": [
+            {
+              "id": "zone",
+              "type": "locked_square",
+              "squares": [
+                62
+              ],
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-board_seal-en-passant",
+      "intent": "Atomic rejection: board_seal-en-passant",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "e5d6"
+          },
+          "legal": false,
+          "branch": "board_seal-en-passant"
+        }
+      ],
+      "fen": "7k/8/8/3pP3/8/8/8/4K3 w - d6 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "boardEffects": [
+            {
+              "id": "zone",
+              "type": "board_seal",
+              "squares": [
+                43
+              ],
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-board_seal-empty-promotion",
+      "intent": "Atomic rejection: board_seal-empty-promotion",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "g7g8q"
+          },
+          "legal": false,
+          "branch": "board_seal-empty-promotion"
+        }
+      ],
+      "fen": "k6r/6P1/8/8/8/8/8/4K3 w - - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "boardEffects": [
+            {
+              "id": "zone",
+              "type": "board_seal",
+              "squares": [
+                62
+              ],
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-castling-frozen-rook",
+      "intent": "Atomic rejection: castling-frozen-rook",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "e1g1"
+          },
+          "legal": false,
+          "branch": "castling-frozen-rook"
+        }
+      ],
+      "fen": "4k3/8/8/8/8/8/8/R3K2R w KQ - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "pieceEffects": [
+            {
+              "id": "frozen",
+              "type": "freeze",
+              "pieceId": "R:7",
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-castling-long-slow-rook",
+      "intent": "Atomic rejection: castling-long-slow-rook",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "e1c1"
+          },
+          "legal": false,
+          "branch": "castling-long-slow-rook"
+        }
+      ],
+      "fen": "4k3/8/8/8/8/8/8/R3K2R w KQ - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "pieceEffects": [
+            {
+              "id": "slow",
+              "type": "slow",
+              "pieceId": "R:0",
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "precondition-castling-rook-sealed-destination",
+      "intent": "Atomic rejection: castling-rook-sealed-destination",
+      "ready": true,
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "e1g1"
+          },
+          "legal": false,
+          "branch": "castling-rook-sealed-destination"
+        }
+      ],
+      "fen": "4k3/8/8/8/8/8/8/R3K2R w KQ - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "boardEffects": [
+            {
+              "id": "seal",
+              "type": "board_seal",
+              "squares": [
+                5
+              ],
+              "owner": "b",
+              "duration": "move",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "first-turn",
+      "intent": "First own turns forbid card actions; draw and mana transfer are deterministic",
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "radar",
+            "target": "radar"
+          },
+          "legal": false
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "radar"
+          },
+          "legal": false
+        },
+        {
+          "action": {
+            "type": "pass"
+          },
+          "legal": false
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e2e4"
+          },
+          "expect": {
+            "rules.mana": {
+              "w": 1,
+              "b": 1
+            },
+            "rules.handCounts": {
+              "w": 4,
+              "b": 3
+            },
+            "rules.deckCounts": {
+              "w": 6,
+              "b": 7
+            },
+            "rules.fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e7e5"
+          },
+          "expect": {
+            "rules.phase": "card",
+            "rules.mana": {
+              "w": 2,
+              "b": 1
+            },
+            "rules.handCounts": {
+              "w": 4,
+              "b": 4
+            }
+          }
+        }
+      ]
+    },
+    {
+      "fixtureId": "discard-once",
+      "intent": "Discard is free, permanent and consumes the only card action",
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "discard",
+            "card": "radar"
+          },
+          "expect": {
+            "rules.discarded.w": [
+              "radar"
+            ],
+            "rules.mana.w": 6,
+            "rules.phase": "chess"
+          }
+        },
+        {
+          "action": {
+            "type": "discard",
+            "card": "prophecy"
+          },
+          "legal": false
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e2e4"
+          },
+          "expect": {
+            "rules.drawCounts.w": 4,
+            "rules.handCounts.w": 3
+          }
+        }
+      ],
+      "ready": true
+    },
+    {
+      "fixtureId": "low-mana",
+      "intent": "Rejected card play is atomic",
+      "whiteDeckOrder": [
+        "freeze",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "freeze",
+            "target": 48
+          },
+          "legal": false,
+          "expect": {
+            "rules.mana.w": 3,
+            "rules.used.w": []
+          }
+        }
+      ],
+      "ready": true,
+      "setup": {
+        "rules": {
+          "mana": {
+            "w": 3,
+            "b": 6
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "card-radar",
+      "intent": "Manually reviewed radar cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "radar",
+            "target": "radar"
+          },
+          "expect": {
+            "rules.mana.w": 5,
+            "rules.used.w": [
+              "radar"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-prophecy",
+      "intent": "Manually reviewed prophecy cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "prophecy",
+        "radar",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "prophecy"
+          },
+          "expect": {
+            "rules.mana.w": 5,
+            "rules.used.w": [
+              "prophecy"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "pending"
+          }
+        },
+        {
+          "action": {
+            "type": "resolve",
+            "order": [
+              "slow",
+              "chain"
+            ]
+          },
+          "expect": {
+            "rules.phase": "chess",
+            "rules.handCounts.w": 2,
+            "hidden.knowledge.w.knownUpcomingCards": [
+              "slow",
+              "chain"
+            ]
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-shelter",
+      "intent": "Manually reviewed shelter cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "shelter",
+        "radar",
+        "prophecy",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "shelter",
+            "target": 0
+          },
+          "expect": {
+            "rules.mana.w": 4,
+            "rules.used.w": [
+              "shelter"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-chain",
+      "intent": "Manually reviewed chain cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "chain",
+        "radar",
+        "prophecy",
+        "shelter",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "chain",
+            "target": 27
+          },
+          "expect": {
+            "rules.mana.w": 4,
+            "rules.used.w": [
+              "chain"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-slow",
+      "intent": "Manually reviewed slow cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "slow",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "slow",
+            "target": 52
+          },
+          "expect": {
+            "rules.mana.w": 4,
+            "rules.used.w": [
+              "slow"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-pawn_deviation",
+      "intent": "Manually reviewed pawn_deviation cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "pawn_deviation",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "pawn_deviation",
+            "target": 18
+          },
+          "expect": {
+            "rules.mana.w": 4,
+            "rules.used.w": [
+              "pawn_deviation"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-pawn_advance",
+      "intent": "Manually reviewed pawn_advance cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "pawn_advance",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "pawn_advance",
+            "target": 8
+          },
+          "expect": {
+            "rules.mana.w": 4,
+            "rules.used.w": [
+              "pawn_advance"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-locked_square",
+      "intent": "Manually reviewed locked_square cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "locked_square",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "locked_square",
+            "target": 21
+          },
+          "expect": {
+            "rules.mana.w": 4,
+            "rules.used.w": [
+              "locked_square"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-freeze",
+      "intent": "Manually reviewed freeze cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "freeze",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "freeze",
+            "target": 52
+          },
+          "expect": {
+            "rules.mana.w": 2,
+            "rules.used.w": [
+              "freeze"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-purify",
+      "intent": "Manually reviewed purify cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "purify",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "purify",
+            "target": "dirty"
+          },
+          "expect": {
+            "rules.mana.w": 5,
+            "rules.used.w": [
+              "purify"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true,
+      "setup": {
+        "rules": {
+          "pieceEffects": [
+            {
+              "id": "dirty",
+              "type": "chain",
+              "pieceId": "R:0",
+              "owner": "b",
+              "responseSide": "w",
+              "duration": "move"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "card-mine",
+      "intent": "Manually reviewed mine cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "mine",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "mine",
+            "target": 21
+          },
+          "expect": {
+            "rules.mana.w": 4,
+            "rules.used.w": [
+              "mine"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-break_seal",
+      "intent": "Manually reviewed break_seal cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "break_seal",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "break_seal",
+            "target": "trap"
+          },
+          "expect": {
+            "rules.mana.w": 5,
+            "rules.used.w": [
+              "break_seal"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true,
+      "setup": {
+        "rules": {
+          "boardEffects": [
+            {
+              "id": "trap",
+              "type": "mine",
+              "squares": [
+                20
+              ],
+              "owner": "b",
+              "responseSide": "w",
+              "duration": "persistent"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "card-fog",
+      "intent": "Manually reviewed fog cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "fog",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "fog",
+            "target": 20
+          },
+          "expect": {
+            "rules.mana.w": 3,
+            "rules.used.w": [
+              "fog"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-mana_sabotage",
+      "intent": "Manually reviewed mana_sabotage cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "mana_sabotage",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "mana_sabotage",
+            "target": "radar"
+          },
+          "expect": {
+            "rules.mana.w": 4,
+            "rules.used.w": [
+              "mana_sabotage"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-card_block",
+      "intent": "Manually reviewed card_block cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "card_block",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "card_block",
+            "target": "radar"
+          },
+          "expect": {
+            "rules.mana.w": 3,
+            "rules.used.w": [
+              "card_block"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-rook_bend",
+      "intent": "Manually reviewed rook_bend cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "rook_bend",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "rook_bend",
+            "target": 7
+          },
+          "expect": {
+            "rules.mana.w": 4,
+            "rules.used.w": [
+              "rook_bend"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-angry_n",
+      "intent": "Manually reviewed angry_n cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "angry_n",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "angry_n",
+            "target": 11
+          },
+          "expect": {
+            "rules.mana.w": 3,
+            "rules.used.w": [
+              "angry_n"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-shadow_pass",
+      "intent": "Manually reviewed shadow_pass cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "shadow_pass",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "shadow_pass",
+            "target": 0
+          },
+          "expect": {
+            "rules.mana.w": 3,
+            "rules.used.w": [
+              "shadow_pass"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-hunt_vow",
+      "intent": "Manually reviewed hunt_vow cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "hunt_vow",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "hunt_vow",
+            "target": 52
+          },
+          "expect": {
+            "rules.mana.w": 4,
+            "rules.used.w": [
+              "hunt_vow"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-watch_vow",
+      "intent": "Manually reviewed watch_vow cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "watch_vow",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "watch_vow",
+            "target": 21
+          },
+          "expect": {
+            "rules.mana.w": 4,
+            "rules.used.w": [
+              "watch_vow"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-echo",
+      "intent": "Manually reviewed echo cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "echo",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "echo",
+            "target": "radar"
+          },
+          "expect": {
+            "rules.mana.w": 4,
+            "rules.used.w": [
+              "echo"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-fate_exchange",
+      "intent": "Manually reviewed fate_exchange cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "fate_exchange",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "fate_exchange",
+            "sacrifice": "radar"
+          },
+          "expect": {
+            "rules.mana.w": 3,
+            "rules.used.w": [
+              "fate_exchange"
+            ],
+            "rules.handCounts.w": 1,
+            "rules.phase": "pending"
+          }
+        },
+        {
+          "action": {
+            "type": "resolve",
+            "selected": "chain",
+            "order": [
+              "slow",
+              "shelter"
+            ]
+          },
+          "expect": {
+            "rules.phase": "chess",
+            "rules.handCounts.w": 2,
+            "rules.deckCounts.w": 6,
+            "rules.discarded.w": [
+              "radar"
+            ],
+            "hidden.knowledge.w.knownUpcomingCards": [
+              "slow",
+              "shelter"
+            ]
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-shadow_contract",
+      "intent": "Manually reviewed shadow_contract cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "shadow_contract",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "shadow_contract",
+            "sacrifice": "radar"
+          },
+          "expect": {
+            "rules.mana.w": 5,
+            "rules.used.w": [
+              "shadow_contract"
+            ],
+            "rules.handCounts.w": 1,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "card-board_seal",
+      "intent": "Manually reviewed board_seal cost, ownership and resolution",
+      "whiteDeckOrder": [
+        "board_seal",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "board_seal",
+            "target": 20
+          },
+          "expect": {
+            "rules.mana.w": 1,
+            "rules.used.w": [
+              "board_seal"
+            ],
+            "rules.handCounts.w": 2,
+            "rules.phase": "chess"
+          }
+        }
+      ],
+      "fen": "4k3/1p2r3/8/8/3p4/2P1B3/PP1N4/R3K2R w KQ - 0 1",
+      "ready": true
+    },
+    {
+      "fixtureId": "bound-pawn_deviation",
+      "intent": "Special authorization cannot switch to another piece and applies correct geometry",
+      "whiteDeckOrder": [
+        "pawn_deviation",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "pawn_deviation",
+            "target": 20
+          },
+          "expect": {
+            "rules.special.card": "pawn_deviation",
+            "rules.special.from": 20
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e1d1"
+          },
+          "legal": false
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e3d4"
+          },
+          "expect": {
+            "rules.fen": "7k/8/8/8/3P4/8/8/4K3 b - - 0 1",
+            "rules.special": null,
+            "rules.handCounts.w": 3
+          }
+        }
+      ],
+      "ready": true,
+      "fen": "7k/8/8/8/8/4P3/8/4K3 w - - 0 1"
+    },
+    {
+      "fixtureId": "bound-pawn_advance",
+      "intent": "Special authorization cannot switch to another piece and applies correct geometry",
+      "whiteDeckOrder": [
+        "pawn_advance",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "pawn_advance",
+            "target": 20
+          },
+          "expect": {
+            "rules.special.card": "pawn_advance",
+            "rules.special.from": 20
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e1d1"
+          },
+          "legal": false
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e3e5"
+          },
+          "expect": {
+            "rules.fen": "7k/8/8/4P3/8/8/8/4K3 b - - 0 1",
+            "rules.special": null,
+            "rules.handCounts.w": 3
+          }
+        }
+      ],
+      "ready": true,
+      "fen": "7k/8/8/8/8/4P3/8/4K3 w - - 0 1"
+    },
+    {
+      "fixtureId": "bound-rook_bend",
+      "intent": "Special authorization cannot switch to another piece and applies correct geometry",
+      "whiteDeckOrder": [
+        "rook_bend",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "rook_bend",
+            "target": 0
+          },
+          "expect": {
+            "rules.special.card": "rook_bend",
+            "rules.special.from": 0
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e1d1"
+          },
+          "legal": false
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1b2"
+          },
+          "expect": {
+            "rules.fen": "7k/8/8/8/8/8/1R6/4K3 b - - 1 1",
+            "rules.special": null,
+            "rules.handCounts.w": 3
+          }
+        }
+      ],
+      "ready": true,
+      "fen": "7k/8/8/8/8/8/8/R3K3 w Q - 0 1"
+    },
+    {
+      "fixtureId": "bound-angry_n",
+      "intent": "Special authorization cannot switch to another piece and applies correct geometry",
+      "whiteDeckOrder": [
+        "angry_n",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "angry_n",
+            "target": 1
+          },
+          "expect": {
+            "rules.special.card": "angry_n",
+            "rules.special.from": 1
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e1d1"
+          },
+          "legal": false
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "b1b2"
+          },
+          "expect": {
+            "rules.fen": "7k/8/8/8/8/8/1N6/4K3 b - - 1 1",
+            "rules.special": null,
+            "rules.handCounts.w": 3
+          }
+        }
+      ],
+      "ready": true,
+      "fen": "7k/8/8/8/8/8/8/1N2K3 w - - 0 1"
+    },
+    {
+      "fixtureId": "bound-shadow_pass",
+      "intent": "Special authorization cannot switch to another piece and applies correct geometry",
+      "whiteDeckOrder": [
+        "shadow_pass",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "shadow_pass",
+            "target": 0
+          },
+          "expect": {
+            "rules.special.card": "shadow_pass",
+            "rules.special.from": 0
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e1d1"
+          },
+          "legal": false
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1a4"
+          },
+          "expect": {
+            "rules.fen": "7k/8/8/8/R7/P7/8/4K3 b - - 1 1",
+            "rules.special": null,
+            "rules.handCounts.w": 3
+          }
+        }
+      ],
+      "ready": true,
+      "fen": "7k/8/8/8/8/P7/8/R3K3 w Q - 0 1"
+    },
+    {
+      "fixtureId": "locked_square-capture",
+      "intent": "Empty destination blocked; occupied capture and king move allowed",
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "contains": [
+            "move:a1a2",
+            "move:e1f1"
+          ],
+          "excludes": [
+            "move:a1b1"
+          ]
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1b1"
+          },
+          "legal": false
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1a2"
+          },
+          "expect": {
+            "rules.boardEffects": []
+          }
+        }
+      ],
+      "ready": true,
+      "fen": "7k/8/8/8/8/8/p7/R3K3 w - - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "boardEffects": [
+            {
+              "id": "zone",
+              "type": "locked_square",
+              "squares": [
+                8,
+                1,
+                5
+              ],
+              "duration": "move",
+              "owner": "b",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "board_seal-capture",
+      "intent": "Empty destination blocked; occupied capture and king move allowed",
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "contains": [
+            "move:a1a2",
+            "move:e1f1"
+          ],
+          "excludes": [
+            "move:a1b1"
+          ]
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1b1"
+          },
+          "legal": false
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1a2"
+          },
+          "expect": {
+            "rules.boardEffects": []
+          }
+        }
+      ],
+      "ready": true,
+      "fen": "7k/8/8/8/8/8/p7/R3K3 w - - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "boardEffects": [
+            {
+              "id": "zone",
+              "type": "board_seal",
+              "squares": [
+                8,
+                1,
+                5
+              ],
+              "duration": "move",
+              "owner": "b",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "mine-watch-castle",
+      "intent": "Rook relocation triggers Mine then watch, new debuff survives",
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "e1g1"
+          },
+          "expect": {
+            "rules.fen": "4k3/8/8/8/8/8/8/5RK1 b - - 1 1",
+            "rules.boardEffects": [],
+            "rules.vows": [],
+            "rules.pieceEffects.0.type": "mine_debuff",
+            "rules.pieceEffects.0.pieceId": "R:7",
+            "rules.mana.b": 4
+          }
+        }
+      ],
+      "ready": true,
+      "fen": "4k3/8/8/8/8/8/8/4K2R w K - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "mana": {
+            "w": 6,
+            "b": 1
+          },
+          "boardEffects": [
+            {
+              "id": "trap",
+              "type": "mine",
+              "squares": [
+                5
+              ],
+              "duration": "persistent",
+              "owner": "b",
+              "responseSide": "w"
+            }
+          ],
+          "vows": [
+            {
+              "id": "watch",
+              "type": "watch",
+              "owner": "b",
+              "pieceId": null,
+              "square": 5,
+              "remainingMoves": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "persistent-mine",
+      "intent": "Other-piece move cannot consume the piece-specific Mine punishment",
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1a2"
+          },
+          "legal": false
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e1f1"
+          },
+          "expect": {
+            "rules.pieceEffects.0.id": "punishment"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "h8g8"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "a1b1"
+          },
+          "expect": {
+            "rules.pieceEffects": []
+          }
+        }
+      ],
+      "ready": true,
+      "fen": "7k/8/8/8/8/8/p7/R3K3 w - - 0 1",
+      "setup": {
+        "rules": {
+          "phase": "chess",
+          "pieceEffects": [
+            {
+              "id": "punishment",
+              "type": "mine_debuff",
+              "pieceId": "R:0",
+              "duration": "piece_move",
+              "owner": "b",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "break-one-overlap",
+      "intent": "Only the selected opponent effect is removed; overlapping Mine remains",
+      "whiteDeckOrder": [
+        "break_seal",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "excludes": [
+            "play:break_seal:own:"
+          ]
+        },
+        {
+          "action": {
+            "type": "play",
+            "card": "break_seal",
+            "target": "lock"
+          },
+          "expect": {
+            "rules.boardEffects.0.id": "trap",
+            "rules.boardEffects.1.id": "seal",
+            "rules.boardEffects.2.id": "own"
+          }
+        }
+      ],
+      "ready": true,
+      "setup": {
+        "rules": {
+          "boardEffects": [
+            {
+              "id": "trap",
+              "type": "mine",
+              "squares": [
+                20
+              ],
+              "duration": "persistent",
+              "owner": "b",
+              "responseSide": "w"
+            },
+            {
+              "id": "lock",
+              "type": "locked_square",
+              "squares": [
+                20
+              ],
+              "duration": "move",
+              "owner": "b",
+              "responseSide": "w"
+            },
+            {
+              "id": "seal",
+              "type": "board_seal",
+              "squares": [
+                20,
+                21,
+                28,
+                29
+              ],
+              "duration": "move",
+              "owner": "b",
+              "responseSide": "w"
+            },
+            {
+              "id": "own",
+              "type": "mine",
+              "squares": [
+                21
+              ],
+              "duration": "persistent",
+              "owner": "w",
+              "responseSide": "b"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "shelter-window",
+      "intent": "Siper blocks direct target only until card phase closes",
+      "whiteDeckOrder": [
+        "freeze",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "excludes": [
+            "play:freeze:48:"
+          ]
+        },
+        {
+          "action": {
+            "type": "pass"
+          },
+          "expect": {
+            "rules.pieceEffects": []
+          }
+        }
+      ],
+      "ready": true,
+      "setup": {
+        "rules": {
+          "pieceEffects": [
+            {
+              "id": "siper",
+              "type": "shelter",
+              "pieceId": "p:48",
+              "duration": "card",
+              "owner": "b",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "fog-window",
+      "intent": "Sis direct-target protection expires when card phase closes",
+      "whiteDeckOrder": [
+        "freeze",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "excludes": [
+            "play:freeze:48:"
+          ]
+        },
+        {
+          "action": {
+            "type": "pass"
+          },
+          "expect": {
+            "rules.boardEffects": []
+          }
+        }
+      ],
+      "ready": true,
+      "setup": {
+        "rules": {
+          "boardEffects": [
+            {
+              "id": "fog",
+              "type": "fog",
+              "squares": [
+                48,
+                49,
+                56,
+                57
+              ],
+              "duration": "card",
+              "owner": "b",
+              "responseSide": "w"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixtureId": "radar-stale",
+      "intent": "Negative observation stales only after opponent cumulative draw changes",
+      "whiteDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "radar",
+            "target": "purify"
+          },
+          "expect": {
+            "hidden.knowledge.w.radarObservations.0.result": "NOT_IN_HAND",
+            "hidden.knowledge.w.radarObservations.0.stale": false
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e2e4"
+          }
+        },
+        {
+          "action": {
+            "type": "pass"
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "e7e5"
+          },
+          "expect": {
+            "hidden.knowledge.w.radarObservations.0.stale": true
+          }
+        }
+      ],
+      "ready": true
+    },
+    {
+      "fixtureId": "assisted-mate",
+      "intent": "Frozen rook is the only lost orthodox defense",
+      "whiteDeckOrder": [
+        "freeze",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "freeze",
+            "target": 48
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "g6g7"
+          },
+          "expect": {
+            "rules.phase": "terminal",
+            "rules.terminal.reason": "checkmate",
+            "rules.terminal.mateByRestriction": true,
+            "rules.terminal.mateBySpecialMove": false,
+            "rules.drawCounts.w": 3
+          }
+        }
+      ],
+      "ready": true,
+      "fen": "7k/r7/5KQ1/8/8/8/8/8 w - - 0 1"
+    },
+    {
+      "fixtureId": "assisted-stalemate",
+      "intent": "Frozen rook removes the only legal non-king movement",
+      "whiteDeckOrder": [
+        "freeze",
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "purify"
+      ],
+      "blackDeckOrder": [
+        "radar",
+        "prophecy",
+        "shelter",
+        "chain",
+        "slow",
+        "pawn_deviation",
+        "pawn_advance",
+        "locked_square",
+        "freeze",
+        "purify"
+      ],
+      "steps": [
+        {
+          "action": {
+            "type": "play",
+            "card": "freeze",
+            "target": 56
+          }
+        },
+        {
+          "action": {
+            "type": "move",
+            "uci": "g5g6"
+          },
+          "expect": {
+            "rules.phase": "terminal",
+            "rules.terminal.reason": "stalemate",
+            "rules.terminal.stalemateByRestriction": true,
+            "rules.drawCounts.w": 3
+          }
+        }
+      ],
+      "ready": true,
+      "fen": "r6k/5K2/8/6Q1/8/8/8/8 w - - 0 1"
+    }
+  ]
+}

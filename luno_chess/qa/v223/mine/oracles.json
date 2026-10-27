@@ -1,0 +1,74 @@
+[
+  {
+    "id": "pinned-rook",
+    "fen": "2r5/7k/8/8/8/1pR5/8/2K5 w - - 11 17",
+    "from": "c3",
+    "debuff": "c3",
+    "expected": ["c3c2", "c3c4", "c3c5", "c3c6", "c3c7"],
+    "denied": ["c3b3", "c3d3", "c3c8"],
+    "reason": "The c-file pin permits quiet moves on the file, but Mine forbids capturing c8. Sideways moves expose c1."
+  },
+  {
+    "id": "quiet-check-interposition",
+    "fen": "6r1/k7/8/8/4p3/8/4R3/6K1 w - - 8 21",
+    "from": "e2",
+    "debuff": "e2",
+    "expected": ["e2g2"],
+    "denied": ["e2e4", "e2f2", "e2e3"],
+    "reason": "Only e2-g2 blocks the checking g8 rook. The e4 capture and all other rook moves leave g1 checked."
+  },
+  {
+    "id": "mined-enemy-still-attacks-castling-route",
+    "fen": "k4r2/8/8/8/8/8/4P3/4K2R w K - 16 22",
+    "from": "e1",
+    "debuff": "f8",
+    "expected": ["e1d1", "e1d2"],
+    "denied": ["e1f1", "e1f2", "e1g1"],
+    "reason": "Mine restricts captures, not geometric attacks. The f8 rook still attacks f1/f2 and forbids short castling. e2 is friendly-occupied."
+  },
+  {
+    "id": "capture-only-knight",
+    "fen": "6k1/8/2p1p3/1p3p2/3N4/1p3p2/2p1p3/7K w - - 3 26",
+    "from": "d4",
+    "debuff": "d4",
+    "expected": [],
+    "denied": ["d4b3", "d4b5", "d4c2", "d4c6", "d4e2", "d4e6", "d4f3", "d4f5"],
+    "reason": "Every knight landing square is enemy-occupied. Inspecting the knight must not grant a capture; the king can still move."
+  },
+  {
+    "id": "ep-and-normal-capture-forbidden",
+    "fen": "6k1/8/b7/1Pp5/8/8/8/6K1 w - c6 0 29",
+    "from": "b5",
+    "debuff": "b5",
+    "expected": ["b5b6"],
+    "denied": ["b5a6", "b5c6"],
+    "reason": "b5-c6 is en passant even though c6 is empty; b5-a6 is an ordinary capture. Both are forbidden by the triggered Mine."
+  },
+  {
+    "id": "ep-pin-survives-purification",
+    "fen": "1r4k1/8/8/1Pp5/8/8/8/1K6 w - c6 0 31",
+    "from": "b5",
+    "debuff": null,
+    "expected": ["b5b6"],
+    "denied": ["b5c6"],
+    "reason": "En passant vacates b5 and exposes the b1 king to b8. Removing a Mine debuff cannot legalize that move."
+  },
+  {
+    "id": "all-quiet-promotions",
+    "fen": "1k2r3/3P4/8/8/8/8/8/6K1 w - - 2 34",
+    "from": "d7",
+    "debuff": "d7",
+    "expected": ["d7d8q", "d7d8r", "d7d8b", "d7d8n"],
+    "denied": ["d7e8q", "d7e8r", "d7e8b", "d7e8n"],
+    "reason": "Mine allows every quiet promotion and forbids every capture-promotion. Promotion does not replace the piece identity."
+  },
+  {
+    "id": "castling-king-destinations",
+    "fen": "1k6/3p4/8/8/8/8/5P2/R3K2R w KQ - 5 38",
+    "from": "e1",
+    "debuff": "h1",
+    "expected": ["e1d1", "e1d2", "e1e2", "e1f1", "e1g1", "e1c1"],
+    "denied": ["e1f2"],
+    "reason": "The mined rook can participate in quiet castling. f2 is friendly-occupied; neither route is attacked."
+  }
+]

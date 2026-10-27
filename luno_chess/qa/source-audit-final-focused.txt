@@ -1,0 +1,75 @@
+00:00 +0: loading L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart
+00:00 +0: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: (setUpAll)
+00:00 +0: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: initial three-card hand is baseline, not normal draw
+00:00 +1: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: own draw proves deck, hand, draw count and chess ply deltas
+00:00 +2: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: same-version rebuild and duplicate retry retain one notice token
+00:00 +3: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: synchronization/stale projection replacement never replays draw 1
+00:00 +4: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: synchronization/stale projection replacement never replays draw 4
+00:00 +5: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: synchronization/stale projection replacement never replays draw -1
+00:00 +6: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: missed multi-version history is rendered without replay
+00:00 +7: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: opponent draw contains no card identity
+00:00 +8: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: hand insertion alone and unchanged deck are not normal draw
+00:00 +9: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: private prophecy resolution has distinct semantics
+00:00 +10: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: private fate_exchange resolution has distinct semantics
+00:00 +11: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: controller differentiates foreground polling and reconnect baseline
+00:00 +12: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: initial mount with deck source never shows From deck badge
+00:01 +13: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: opponent draw cancels without replay: background
+00:01 +14: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: opponent draw cancels without replay: reduced-motion
+00:01 +15: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: opponent draw cancels without replay: synchronized
+00:01 +16: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+Shell: {"PAIRED_COPY":169,"DATA_OR_COPY_CANDIDATE":46,"EXISTING_TRANSLATION":731}
+00:04 +17: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +18: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +19: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +20: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +21: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +22: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +23: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +24: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +25: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +26: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +27: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +28: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +29: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:04 +30: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:05 +31: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:05 +32: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:05 +33: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private prophecy flow is not a normal closed draw
+00:05 +34: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit startup tr
+00:05 +35: L:/luno-chess-src/luno_chess/test/source_audit_inventory_test.dart: user content remains verbatim in tr: HAKKINDA
+00:06 +36: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private fate_exchange flow is not a normal closed draw
+00:06 +37: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private fate_exchange flow is not a normal closed draw
+00:06 +38: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private fate_exchange flow is not a normal closed draw
+00:06 +39: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private fate_exchange flow is not a normal closed draw
+00:06 +40: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private fate_exchange flow is not a normal closed draw
+00:06 +41: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: production private fate_exchange flow is not a normal closed draw
+00:06 +42: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit home tr
+Luno native online boot failed: PlatformException(channel-error, Unable to establish connection on channel: "dev.flutter.pigeon.firebase_core_platform_interface.FirebaseCoreHostApi.initializeCore"., null, null)
+00:07 +43: L:/luno-chess-src/luno_chess/test/battle_draw_source_audit_test.dart: normal draw completes within 500ms and never remount-replays
+00:07 +44: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit play tr
+00:07 +45: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit play tr
+00:08 +46: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit play tr
+00:08 +47: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit collection tr
+00:09 +48: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit profile tr
+00:09 +49: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit missions tr
+00:10 +50: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit shop tr
+Luno native online boot failed: PlatformException(channel-error, Unable to establish connection on channel: "dev.flutter.pigeon.firebase_core_platform_interface.FirebaseCoreHostApi.initializeCore"., null, null)
+00:12 +51: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit settings tr
+00:14 +52: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit friends-empty tr
+00:14 +53: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit battle initial, public arsenal and result tr
+00:17 +54: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit own and secret-free opponent draw tr
+00:19 +55: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit startup en
+00:20 +56: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit home en
+Luno native online boot failed: PlatformException(channel-error, Unable to establish connection on channel: "dev.flutter.pigeon.firebase_core_platform_interface.FirebaseCoreHostApi.initializeCore"., null, null)
+00:21 +57: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit play en
+00:21 +58: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit collection en
+00:22 +59: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit profile en
+00:23 +60: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit missions en
+00:23 +61: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit shop en
+Luno native online boot failed: PlatformException(channel-error, Unable to establish connection on channel: "dev.flutter.pigeon.firebase_core_platform_interface.FirebaseCoreHostApi.initializeCore"., null, null)
+00:25 +62: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit settings en
+00:26 +63: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit friends-empty en
+00:26 +64: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit battle initial, public arsenal and result en
+00:28 +65: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: source audit own and secret-free opponent draw en
+00:30 +66: L:/luno-chess-src/luno_chess/test/source_audit_visual_test.dart: (tearDownAll)
+00:30 +66: All tests passed!

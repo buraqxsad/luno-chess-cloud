@@ -1,0 +1,2286 @@
+TAP version 13
+# Subtest: secure shuffle retains ten unique cards and never mutates input
+ok 1 - secure shuffle retains ten unique cards and never mutates input
+  ---
+  duration_ms: 8.2743
+  type: 'test'
+  ...
+# Subtest: initial draw remains secret and first turn is chess only
+ok 2 - initial draw remains secret and first turn is chess only
+  ---
+  duration_ms: 26.1338
+  type: 'test'
+  ...
+# Subtest: intent authoritative move increments once and duplicate request is inert
+ok 3 - intent authoritative move increments once and duplicate request is inert
+  ---
+  duration_ms: 43.7833
+  type: 'test'
+  ...
+# Subtest: delayed server timestamps cannot rewind clocks; card phase consumes time without increment
+ok 4 - delayed server timestamps cannot rewind clocks; card phase consumes time without increment
+  ---
+  duration_ms: 64.5899
+  type: 'test'
+  ...
+# Subtest: reject illegal, out of turn, stale, injected, and reused ID atomically
+ok 5 - reject illegal, out of turn, stale, injected, and reused ID atomically
+  ---
+  duration_ms: 36.2541
+  type: 'test'
+  ...
+# Subtest: clock timeout is terminal exactly once, including pending choices
+ok 6 - clock timeout is terminal exactly once, including pending choices
+  ---
+  duration_ms: 7.1917
+  type: 'test'
+  ...
+# Subtest: bot planner serialization has no opponent secrets and remains invariant
+ok 7 - bot planner serialization has no opponent secrets and remains invariant
+  ---
+  duration_ms: 11.827
+  type: 'test'
+  ...
+# Subtest: analysis requires terminal plus finalized settlement and is participant only
+ok 8 - analysis requires terminal plus finalized settlement and is participant only
+  ---
+  duration_ms: 4.3902
+  type: 'test'
+  ...
+# {"position":"initial","depth":1,"expected":20,"actual":20,"pass":true}
+# {"position":"initial","depth":2,"expected":400,"actual":400,"pass":true}
+# {"position":"initial","depth":3,"expected":8902,"actual":8902,"pass":true}
+# {"position":"initial","depth":4,"expected":197281,"actual":197281,"pass":true}
+# {"position":"kiwipete","depth":1,"expected":48,"actual":48,"pass":true}
+# {"position":"kiwipete","depth":2,"expected":2039,"actual":2039,"pass":true}
+# {"position":"kiwipete","depth":3,"expected":97862,"actual":97862,"pass":true}
+# {"position":"position3","depth":1,"expected":14,"actual":14,"pass":true}
+# {"position":"position3","depth":2,"expected":191,"actual":191,"pass":true}
+# {"position":"position3","depth":3,"expected":2812,"actual":2812,"pass":true}
+# {"position":"position3","depth":4,"expected":43238,"actual":43238,"pass":true}
+# {"position":"position4","depth":1,"expected":6,"actual":6,"pass":true}
+# {"position":"position4","depth":2,"expected":264,"actual":264,"pass":true}
+# {"position":"position4","depth":3,"expected":9467,"actual":9467,"pass":true}
+# {"position":"position5","depth":1,"expected":44,"actual":44,"pass":true}
+# {"position":"position5","depth":2,"expected":1486,"actual":1486,"pass":true}
+# {"position":"position5","depth":3,"expected":62379,"actual":62379,"pass":true}
+# {"position":"position6","depth":1,"expected":46,"actual":46,"pass":true}
+# {"position":"position6","depth":2,"expected":2079,"actual":2079,"pass":true}
+# {"position":"position6","depth":3,"expected":89890,"actual":89890,"pass":true}
+# Subtest: initial depth 1
+ok 9 - initial depth 1
+  ---
+  duration_ms: 6.5841
+  type: 'test'
+  ...
+# Subtest: initial depth 2
+ok 10 - initial depth 2
+  ---
+  duration_ms: 5.239
+  type: 'test'
+  ...
+# Subtest: initial depth 3
+ok 11 - initial depth 3
+  ---
+  duration_ms: 64.4749
+  type: 'test'
+  ...
+# Subtest: initial depth 4
+ok 12 - initial depth 4
+  ---
+  duration_ms: 535.1375
+  type: 'test'
+  ...
+# Subtest: kiwipete depth 1
+ok 13 - kiwipete depth 1
+  ---
+  duration_ms: 0.5778
+  type: 'test'
+  ...
+# Subtest: kiwipete depth 2
+ok 14 - kiwipete depth 2
+  ---
+  duration_ms: 11.5182
+  type: 'test'
+  ...
+# Subtest: kiwipete depth 3
+ok 15 - kiwipete depth 3
+  ---
+  duration_ms: 254.1925
+  type: 'test'
+  ...
+# Subtest: position3 depth 1
+ok 16 - position3 depth 1
+  ---
+  duration_ms: 0.5851
+  type: 'test'
+  ...
+# Subtest: position3 depth 2
+ok 17 - position3 depth 2
+  ---
+  duration_ms: 2.9838
+  type: 'test'
+  ...
+# Subtest: position3 depth 3
+ok 18 - position3 depth 3
+  ---
+  duration_ms: 10.1155
+  type: 'test'
+  ...
+# Subtest: position3 depth 4
+ok 19 - position3 depth 4
+  ---
+  duration_ms: 90.6847
+  type: 'test'
+  ...
+# Subtest: position4 depth 1
+ok 20 - position4 depth 1
+  ---
+  duration_ms: 0.6713
+  type: 'test'
+  ...
+# Subtest: position4 depth 2
+ok 21 - position4 depth 2
+  ---
+  duration_ms: 1.9453
+  type: 'test'
+  ...
+# Subtest: position4 depth 3
+ok 22 - position4 depth 3
+  ---
+  duration_ms: 45.5309
+  type: 'test'
+  ...
+# Subtest: position5 depth 1
+ok 23 - position5 depth 1
+  ---
+  duration_ms: 0.5038
+  type: 'test'
+  ...
+# Subtest: position5 depth 2
+ok 24 - position5 depth 2
+  ---
+  duration_ms: 4.1156
+  type: 'test'
+  ...
+# Subtest: position5 depth 3
+ok 25 - position5 depth 3
+  ---
+  duration_ms: 131.39
+  type: 'test'
+  ...
+# Subtest: position6 depth 1
+ok 26 - position6 depth 1
+  ---
+  duration_ms: 0.4769
+  type: 'test'
+  ...
+# Subtest: position6 depth 2
+ok 27 - position6 depth 2
+  ---
+  duration_ms: 3.9653
+  type: 'test'
+  ...
+# Subtest: position6 depth 3
+ok 28 - position6 depth 3
+  ---
+  duration_ms: 161.5245
+  type: 'test'
+  ...
+# Subtest: divide sums to perft and invalid depth rejects
+ok 29 - divide sums to perft and invalid depth rejects
+  ---
+  duration_ms: 213.679
+  type: 'test'
+  ...
+# Subtest: fifty claim is not automatic; seventy-five is
+ok 30 - fifty claim is not automatic; seventy-five is
+  ---
+  duration_ms: 19.548
+  type: 'test'
+  ...
+# Subtest: mate precedes 75 and stalemate is distinct
+ok 31 - mate precedes 75 and stalemate is distinct
+  ---
+  duration_ms: 0.9874
+  type: 'test'
+  ...
+# Subtest: fivefold automatic, threefold claimable, invalid move atomic
+ok 32 - fivefold automatic, threefold claimable, invalid move atomic
+  ---
+  duration_ms: 148.5386
+  type: 'test'
+  ...
+# Subtest: pinned EP forbidden; irrelevant EP omitted from repetition
+ok 33 - pinned EP forbidden; irrelevant EP omitted from repetition
+  ---
+  duration_ms: 1.981
+  type: 'test'
+  ...
+# Subtest: all four capture/noncapture promotions; cannot castle through check
+ok 34 - all four capture/noncapture promotions; cannot castle through check
+  ---
+  duration_ms: 3.4129
+  type: 'test'
+  ...
+# Subtest: manifest and canonical starter exactly match manually authored contract
+ok 35 - manifest and canonical starter exactly match manually authored contract
+  ---
+  duration_ms: 5.026
+  type: 'test'
+  ...
+# Subtest: deck validation: length, uniqueness, unknown ID
+ok 36 - deck validation: length, uniqueness, unknown ID
+  ---
+  duration_ms: 3.2294
+  type: 'test'
+  ...
+# Subtest: first own turns chess only, both mana 1, one draw to four, second own mana increment
+ok 37 - first own turns chess only, both mana 1, one draw to four, second own mana increment
+  ---
+  duration_ms: 99.5431
+  type: 'test'
+  ...
+# Subtest: one action; discard permanent/free; card does not increment halfmove; no recycle
+ok 38 - one action; discard permanent/free; card does not increment halfmove; no recycle
+  ---
+  duration_ms: 26.1544
+  type: 'test'
+  ...
+# Subtest: insufficient mana and illegal target atomic
+ok 39 - insufficient mana and illegal target atomic
+  ---
+  duration_ms: 6.575
+  type: 'test'
+  ...
+# Subtest: pawn_deviation binding, only special destinations, different piece rejected
+ok 40 - pawn_deviation binding, only special destinations, different piece rejected
+  ---
+  duration_ms: 13.2031
+  type: 'test'
+  ...
+# Subtest: pawn_advance binding, only special destinations, different piece rejected
+ok 41 - pawn_advance binding, only special destinations, different piece rejected
+  ---
+  duration_ms: 16.2485
+  type: 'test'
+  ...
+# Subtest: rook_bend binding, only special destinations, different piece rejected
+ok 42 - rook_bend binding, only special destinations, different piece rejected
+  ---
+  duration_ms: 16.4991
+  type: 'test'
+  ...
+# Subtest: angry_n binding, only special destinations, different piece rejected
+ok 43 - angry_n binding, only special destinations, different piece rejected
+  ---
+  duration_ms: 6.0319
+  type: 'test'
+  ...
+# Subtest: shadow_pass binding, only special destinations, different piece rejected
+ok 44 - shadow_pass binding, only special destinations, different piece rejected
+  ---
+  duration_ms: 9.2343
+  type: 'test'
+  ...
+# Subtest: special pawn standard double creates EP; moved pawn double does not
+ok 45 - special pawn standard double creates EP; moved pawn double does not
+  ---
+  duration_ms: 54.0221
+  type: 'test'
+  ...
+# Subtest: special king safety; pinned pawn cannot deviate; no promotion special advance
+ok 46 - special king safety; pinned pawn cannot deviate; no promotion special advance
+  ---
+  duration_ms: 6.1116
+  type: 'test'
+  ...
+# Subtest: nonmovement can play in check but chess must resolve check
+ok 47 - nonmovement can play in check but chess must resolve check
+  ---
+  duration_ms: 3.5786
+  type: 'test'
+  ...
+# Subtest: king direct targets excluded; chain capture forbidden, slow max2, frozen movement forbidden
+ok 48 - king direct targets excluded; chain capture forbidden, slow max2, frozen movement forbidden
+  ---
+  duration_ms: 61.533
+  type: 'test'
+  ...
+# Subtest: other-piece chess move consumes response-window freeze/chain/slow
+ok 49 - other-piece chess move consumes response-window freeze/chain/slow
+  ---
+  duration_ms: 32.6531
+  type: 'test'
+  ...
+# Subtest: locked_square: empty blocked, occupied capture allowed, king immune, EP blocked
+ok 50 - locked_square: empty blocked, occupied capture allowed, king immune, EP blocked
+  ---
+  duration_ms: 17.0798
+  type: 'test'
+  ...
+# Subtest: board_seal: empty blocked, occupied capture allowed, king immune, EP blocked
+ok 51 - board_seal: empty blocked, occupied capture allowed, king immune, EP blocked
+  ---
+  duration_ms: 27.7325
+  type: 'test'
+  ...
+# Subtest: castling: frozen rook illegal; slow short legal/long illegal; rook zone blocks, king zone does not
+ok 52 - castling: frozen rook illegal; slow short legal/long illegal; rook zone blocks, king zone does not
+  ---
+  duration_ms: 60.4534
+  type: 'test'
+  ...
+# Subtest: Mine + watch simultaneous on castling rook; debuff new move does not consume; king immune
+ok 53 - Mine + watch simultaneous on castling rook; debuff new move does not consume; king immune
+  ---
+  duration_ms: 14.724
+  type: 'test'
+  ...
+# Subtest: persistent Mine debuff survives other-piece move; blocks capture, ends on affected-piece move
+ok 54 - persistent Mine debuff survives other-piece move; blocks capture, ends on affected-piece move
+  ---
+  duration_ms: 15.5181
+  type: 'test'
+  ...
+# Subtest: overlapping removal: opponent-only, one instance, Mine slot remains occupied
+ok 55 - overlapping removal: opponent-only, one instance, Mine slot remains occupied
+  ---
+  duration_ms: 5.7228
+  type: 'test'
+  ...
+# Subtest: Siper/Sis protect direct cards, not normal capture; purify only one negative own-piece effect
+ok 56 - Siper/Sis protect direct cards, not normal capture; purify only one negative own-piece effect
+  ---
+  duration_ms: 13.2678
+  type: 'test'
+  ...
+# Subtest: Radar public target legality independent of opponent hand, private positive/negative and staleness
+ok 57 - Radar public target legality independent of opponent hand, private positive/negative and staleness
+  ---
+  duration_ms: 25.4561
+  type: 'test'
+  ...
+# Subtest: Kehanet inspects <=2, blocks unrelated, reorder no immediate draw, knowledge shifts
+ok 58 - Kehanet inspects <=2, blocks unrelated, reorder no immediate draw, knowledge shifts
+  ---
+  duration_ms: 20.038
+  type: 'test'
+  ...
+# Subtest: Kader Takasi sacrifice, inspect max3, choose1, remaining order, later normal draw
+ok 59 - Kader Takasi sacrifice, inspect max3, choose1, remaining order, later normal draw
+  ---
+  duration_ms: 12.8421
+  type: 'test'
+  ...
+# Subtest: Antlasma next-turn discount, min1, sabotage combination, PASS/DISCARD expiry
+ok 60 - Antlasma next-turn discount, min1, sabotage combination, PASS/DISCARD expiry
+  ---
+  duration_ms: 11.1449
+  type: 'test'
+  ...
+# Subtest: Mana sabotage cost5->6, card block PLAY only, echo exact play not discard
+ok 61 - Mana sabotage cost5->6, card block PLAY only, echo exact play not discard
+  ---
+  duration_ms: 6.6186
+  type: 'test'
+  ...
+# Subtest: Hunt normal capture reward, special capture no reward; expiry two own moves
+ok 62 - Hunt normal capture reward, special capture no reward; expiry two own moves
+  ---
+  duration_ms: 8.2447
+  type: 'test'
+  ...
+# Subtest: terminal after chess move only; checkmate/stalemate prevent draw
+ok 63 - terminal after chess move only; checkmate/stalemate prevent draw
+  ---
+  duration_ms: 53.0582
+  type: 'test'
+  ...
+# Subtest: redacted view has no decks/opponent hand/private knowledge; authority immutable; bot always legal
+ok 64 - redacted view has no decks/opponent hand/private knowledge; authority immutable; bot always legal
+  ---
+  duration_ms: 539.0018
+  type: 'test'
+  ...
+# Subtest: stable public fingerprint excludes hidden/private state and intermediate choices
+ok 65 - stable public fingerprint excludes hidden/private state and intermediate choices
+  ---
+  duration_ms: 13.3081
+  type: 'test'
+  ...
+# Subtest: radar successful rule resolution
+ok 66 - radar successful rule resolution
+  ---
+  duration_ms: 9.2531
+  type: 'test'
+  ...
+# Subtest: prophecy successful rule resolution
+ok 67 - prophecy successful rule resolution
+  ---
+  duration_ms: 9.7992
+  type: 'test'
+  ...
+# Subtest: shelter successful rule resolution
+ok 68 - shelter successful rule resolution
+  ---
+  duration_ms: 8.5039
+  type: 'test'
+  ...
+# Subtest: chain successful rule resolution
+ok 69 - chain successful rule resolution
+  ---
+  duration_ms: 7.6673
+  type: 'test'
+  ...
+# Subtest: slow successful rule resolution
+ok 70 - slow successful rule resolution
+  ---
+  duration_ms: 9.9126
+  type: 'test'
+  ...
+# Subtest: pawn_deviation successful rule resolution
+ok 71 - pawn_deviation successful rule resolution
+  ---
+  duration_ms: 12.3905
+  type: 'test'
+  ...
+# Subtest: pawn_advance successful rule resolution
+ok 72 - pawn_advance successful rule resolution
+  ---
+  duration_ms: 40.0124
+  type: 'test'
+  ...
+# Subtest: locked_square successful rule resolution
+ok 73 - locked_square successful rule resolution
+  ---
+  duration_ms: 9.0382
+  type: 'test'
+  ...
+# Subtest: freeze successful rule resolution
+ok 74 - freeze successful rule resolution
+  ---
+  duration_ms: 7.8379
+  type: 'test'
+  ...
+# Subtest: purify successful rule resolution
+ok 75 - purify successful rule resolution
+  ---
+  duration_ms: 7.3929
+  type: 'test'
+  ...
+# Subtest: mine successful rule resolution
+ok 76 - mine successful rule resolution
+  ---
+  duration_ms: 6.4018
+  type: 'test'
+  ...
+# Subtest: break_seal successful rule resolution
+ok 77 - break_seal successful rule resolution
+  ---
+  duration_ms: 7.2627
+  type: 'test'
+  ...
+# Subtest: fog successful rule resolution
+ok 78 - fog successful rule resolution
+  ---
+  duration_ms: 7.375
+  type: 'test'
+  ...
+# Subtest: mana_sabotage successful rule resolution
+ok 79 - mana_sabotage successful rule resolution
+  ---
+  duration_ms: 7.0355
+  type: 'test'
+  ...
+# Subtest: card_block successful rule resolution
+ok 80 - card_block successful rule resolution
+  ---
+  duration_ms: 6.8532
+  type: 'test'
+  ...
+# Subtest: rook_bend successful rule resolution
+ok 81 - rook_bend successful rule resolution
+  ---
+  duration_ms: 9.5214
+  type: 'test'
+  ...
+# Subtest: angry_n successful rule resolution
+ok 82 - angry_n successful rule resolution
+  ---
+  duration_ms: 8.8841
+  type: 'test'
+  ...
+# Subtest: shadow_pass successful rule resolution
+ok 83 - shadow_pass successful rule resolution
+  ---
+  duration_ms: 10.2324
+  type: 'test'
+  ...
+# Subtest: hunt_vow successful rule resolution
+ok 84 - hunt_vow successful rule resolution
+  ---
+  duration_ms: 8.2279
+  type: 'test'
+  ...
+# Subtest: watch_vow successful rule resolution
+ok 85 - watch_vow successful rule resolution
+  ---
+  duration_ms: 8.091
+  type: 'test'
+  ...
+# Subtest: echo successful rule resolution
+ok 86 - echo successful rule resolution
+  ---
+  duration_ms: 8.8493
+  type: 'test'
+  ...
+# Subtest: fate_exchange successful rule resolution
+ok 87 - fate_exchange successful rule resolution
+  ---
+  duration_ms: 8.0697
+  type: 'test'
+  ...
+# Subtest: shadow_contract successful rule resolution
+ok 88 - shadow_contract successful rule resolution
+  ---
+  duration_ms: 7.4085
+  type: 'test'
+  ...
+# Subtest: board_seal successful rule resolution
+ok 89 - board_seal successful rule resolution
+  ---
+  duration_ms: 8.8439
+  type: 'test'
+  ...
+# Subtest: deck exhaustion: prophecy/fate unavailable at zero; one inspected card is sufficient
+ok 90 - deck exhaustion: prophecy/fate unavailable at zero; one inspected card is sufficient
+  ---
+  duration_ms: 25.4728
+  type: 'test'
+  ...
+# Subtest: positive Radar remains until public use/discard, independent of later draws
+ok 91 - positive Radar remains until public use/discard, independent of later draws
+  ---
+  duration_ms: 41.4999
+  type: 'test'
+  ...
+# Subtest: restriction-assisted mate and stalemate require a genuine lost defense
+ok 92 - restriction-assisted mate and stalemate require a genuine lost defense
+  ---
+  duration_ms: 58.1678
+  type: 'test'
+  ...
+# Subtest: king and enemy blockers cannot be crossed by Shadow Pass; special captures never take kings
+ok 93 - king and enemy blockers cannot be crossed by Shadow Pass; special captures never take kings
+  ---
+  duration_ms: 7.1201
+  type: 'test'
+  ...
+# Subtest: malformed private reveals are rejected before permutation generation
+ok 94 - malformed private reveals are rejected before permutation generation
+  ---
+  duration_ms: 3.4298
+  type: 'test'
+  ...
+# Subtest: terminal initial FENs cannot start a fresh action phase
+ok 95 - terminal initial FENs cannot start a fresh action phase
+  ---
+  duration_ms: 2.3553
+  type: 'test'
+  ...
+# Subtest: invalid initial boards rejected at the authority boundary
+ok 96 - invalid initial boards rejected at the authority boundary
+  ---
+  duration_ms: 0.2439
+  type: 'test'
+  ...
+# Subtest: finite deck exhaustion never recycles and stable fivefold ends without drawing
+ok 97 - finite deck exhaustion never recycles and stable fivefold ends without drawing
+  ---
+  duration_ms: 153.692
+  type: 'test'
+  ...
+# Subtest: canonical bot tie breaking uses fixed character order, not locale collation
+ok 98 - canonical bot tie breaking uses fixed character order, not locale collation
+  ---
+  duration_ms: 7.8432
+  type: 'test'
+  ...
+# Subtest: mine-capture-overlap — Occupied-square capture remains legal; entry Mine and independent overlapping restriction resolve in order.
+ok 99 - mine-capture-overlap — Occupied-square capture remains legal; entry Mine and independent overlapping restriction resolve in order.
+  ---
+  duration_ms: 20.4368
+  type: 'test'
+  ...
+# Subtest: fog-mine-overlap — Fog does not remove or replace a persistent overlapping Mine.
+ok 100 - fog-mine-overlap — Fog does not remove or replace a persistent overlapping Mine.
+  ---
+  duration_ms: 10.2042
+  type: 'test'
+  ...
+# Subtest: mine-debuff-purify — Purify removes only the selected persistent Mine piece punishment.
+ok 101 - mine-debuff-purify — Purify removes only the selected persistent Mine piece punishment.
+  ---
+  duration_ms: 8.1323
+  type: 'test'
+  ...
+# Subtest: mine-debuff-piece-captured — Capturing the affected piece removes its persistent punishment naturally.
+ok 102 - mine-debuff-piece-captured — Capturing the affected piece removes its persistent punishment naturally.
+  ---
+  duration_ms: 26.7302
+  type: 'test'
+  ...
+# Subtest: prophecy-invalid-permutations — prophecy-invalid-permutations
+ok 103 - prophecy-invalid-permutations — prophecy-invalid-permutations
+  ---
+  duration_ms: 5.6641
+  type: 'test'
+  ...
+# Subtest: fate-invalid-selection — fate-invalid-selection
+ok 104 - fate-invalid-selection — fate-invalid-selection
+  ---
+  duration_ms: 4.2799
+  type: 'test'
+  ...
+# Subtest: sabotage-cost-six — sabotage-cost-six
+ok 105 - sabotage-cost-six — sabotage-cost-six
+  ---
+  duration_ms: 3.6092
+  type: 'test'
+  ...
+# Subtest: special-knight-mate — special-knight-mate
+ok 106 - special-knight-mate — special-knight-mate
+  ---
+  duration_ms: 6.4152
+  type: 'test'
+  ...
+# Subtest: finite-deck-fivefold — Explicit depletion and knight cycle demonstrate the public repetition invariant and terminal no-draw.
+ok 107 - finite-deck-fivefold — Explicit depletion and knight cycle demonstrate the public repetition invariant and terminal no-draw.
+  ---
+  duration_ms: 147.0124
+  type: 'test'
+  ...
+# Subtest: precondition-chain-king — Atomic rejection: chain-king
+ok 108 - precondition-chain-king — Atomic rejection: chain-king
+  ---
+  duration_ms: 3.2356
+  type: 'test'
+  ...
+# Subtest: precondition-freeze-king — Atomic rejection: freeze-king
+ok 109 - precondition-freeze-king — Atomic rejection: freeze-king
+  ---
+  duration_ms: 2.9883
+  type: 'test'
+  ...
+# Subtest: precondition-slow-king — Atomic rejection: slow-king
+ok 110 - precondition-slow-king — Atomic rejection: slow-king
+  ---
+  duration_ms: 2.5739
+  type: 'test'
+  ...
+# Subtest: precondition-hunt_vow-king — Atomic rejection: hunt_vow-king
+ok 111 - precondition-hunt_vow-king — Atomic rejection: hunt_vow-king
+  ---
+  duration_ms: 2.8852
+  type: 'test'
+  ...
+# Subtest: precondition-chain-own-piece — Atomic rejection: chain-own-piece
+ok 112 - precondition-chain-own-piece — Atomic rejection: chain-own-piece
+  ---
+  duration_ms: 2.5669
+  type: 'test'
+  ...
+# Subtest: precondition-freeze-own-piece — Atomic rejection: freeze-own-piece
+ok 113 - precondition-freeze-own-piece — Atomic rejection: freeze-own-piece
+  ---
+  duration_ms: 2.7858
+  type: 'test'
+  ...
+# Subtest: precondition-slow-own-piece — Atomic rejection: slow-own-piece
+ok 114 - precondition-slow-own-piece — Atomic rejection: slow-own-piece
+  ---
+  duration_ms: 2.5262
+  type: 'test'
+  ...
+# Subtest: precondition-hunt_vow-own-piece — Atomic rejection: hunt_vow-own-piece
+ok 115 - precondition-hunt_vow-own-piece — Atomic rejection: hunt_vow-own-piece
+  ---
+  duration_ms: 5.1494
+  type: 'test'
+  ...
+# Subtest: precondition-slow-nonslider — Atomic rejection: slow-nonslider
+ok 116 - precondition-slow-nonslider — Atomic rejection: slow-nonslider
+  ---
+  duration_ms: 2.4774
+  type: 'test'
+  ...
+# Subtest: precondition-shelter-enemy — Atomic rejection: shelter-enemy
+ok 117 - precondition-shelter-enemy — Atomic rejection: shelter-enemy
+  ---
+  duration_ms: 2.7119
+  type: 'test'
+  ...
+# Subtest: precondition-shelter-king — Atomic rejection: shelter-king
+ok 118 - precondition-shelter-king — Atomic rejection: shelter-king
+  ---
+  duration_ms: 2.619
+  type: 'test'
+  ...
+# Subtest: precondition-locked_square-occupied — Atomic rejection: locked_square-occupied
+ok 119 - precondition-locked_square-occupied — Atomic rejection: locked_square-occupied
+  ---
+  duration_ms: 3.6716
+  type: 'test'
+  ...
+# Subtest: precondition-mine-occupied — Atomic rejection: mine-occupied
+ok 120 - precondition-mine-occupied — Atomic rejection: mine-occupied
+  ---
+  duration_ms: 3.0839
+  type: 'test'
+  ...
+# Subtest: precondition-watch_vow-occupied — Atomic rejection: watch_vow-occupied
+ok 121 - precondition-watch_vow-occupied — Atomic rejection: watch_vow-occupied
+  ---
+  duration_ms: 3.4547
+  type: 'test'
+  ...
+# Subtest: precondition-fog-zone-7 — Atomic rejection: fog-zone-7
+ok 122 - precondition-fog-zone-7 — Atomic rejection: fog-zone-7
+  ---
+  duration_ms: 3.0967
+  type: 'test'
+  ...
+# Subtest: precondition-fog-zone-56 — Atomic rejection: fog-zone-56
+ok 123 - precondition-fog-zone-56 — Atomic rejection: fog-zone-56
+  ---
+  duration_ms: 2.7704
+  type: 'test'
+  ...
+# Subtest: precondition-board_seal-zone-7 — Atomic rejection: board_seal-zone-7
+ok 124 - precondition-board_seal-zone-7 — Atomic rejection: board_seal-zone-7
+  ---
+  duration_ms: 3.2472
+  type: 'test'
+  ...
+# Subtest: precondition-board_seal-zone-56 — Atomic rejection: board_seal-zone-56
+ok 125 - precondition-board_seal-zone-56 — Atomic rejection: board_seal-zone-56
+  ---
+  duration_ms: 3.9032
+  type: 'test'
+  ...
+# Subtest: precondition-seal-no-empty-square — Atomic rejection: seal-no-empty-square
+ok 126 - precondition-seal-no-empty-square — Atomic rejection: seal-no-empty-square
+  ---
+  duration_ms: 2.8389
+  type: 'test'
+  ...
+# Subtest: precondition-mine-owner-slot — Atomic rejection: mine-owner-slot
+ok 127 - precondition-mine-owner-slot — Atomic rejection: mine-owner-slot
+  ---
+  duration_ms: 3.5068
+  type: 'test'
+  ...
+# Subtest: precondition-mine-same-square — Atomic rejection: mine-same-square
+ok 128 - precondition-mine-same-square — Atomic rejection: mine-same-square
+  ---
+  duration_ms: 2.8951
+  type: 'test'
+  ...
+# Subtest: precondition-hunt_vow-existing-vow — Atomic rejection: hunt_vow-existing-vow
+ok 129 - precondition-hunt_vow-existing-vow — Atomic rejection: hunt_vow-existing-vow
+  ---
+  duration_ms: 3.1139
+  type: 'test'
+  ...
+# Subtest: precondition-watch_vow-existing-vow — Atomic rejection: watch_vow-existing-vow
+ok 130 - precondition-watch_vow-existing-vow — Atomic rejection: watch_vow-existing-vow
+  ---
+  duration_ms: 2.6445
+  type: 'test'
+  ...
+# Subtest: precondition-purify-positive — Atomic rejection: purify-positive
+ok 131 - precondition-purify-positive — Atomic rejection: purify-positive
+  ---
+  duration_ms: 4.5254
+  type: 'test'
+  ...
+# Subtest: precondition-purify-enemy — Atomic rejection: purify-enemy
+ok 132 - precondition-purify-enemy — Atomic rejection: purify-enemy
+  ---
+  duration_ms: 3.7184
+  type: 'test'
+  ...
+# Subtest: precondition-break-own-effect — Atomic rejection: break-own-effect
+ok 133 - precondition-break-own-effect — Atomic rejection: break-own-effect
+  ---
+  duration_ms: 3.3084
+  type: 'test'
+  ...
+# Subtest: precondition-radar-used-target — Atomic rejection: radar-used-target
+ok 134 - precondition-radar-used-target — Atomic rejection: radar-used-target
+  ---
+  duration_ms: 3.0708
+  type: 'test'
+  ...
+# Subtest: precondition-radar-discarded-target — Atomic rejection: radar-discarded-target
+ok 135 - precondition-radar-discarded-target — Atomic rejection: radar-discarded-target
+  ---
+  duration_ms: 2.8679
+  type: 'test'
+  ...
+# Subtest: precondition-mana_sabotage-used-target — Atomic rejection: mana_sabotage-used-target
+ok 136 - precondition-mana_sabotage-used-target — Atomic rejection: mana_sabotage-used-target
+  ---
+  duration_ms: 5.0436
+  type: 'test'
+  ...
+# Subtest: precondition-mana_sabotage-discarded-target — Atomic rejection: mana_sabotage-discarded-target
+ok 137 - precondition-mana_sabotage-discarded-target — Atomic rejection: mana_sabotage-discarded-target
+  ---
+  duration_ms: 3.117
+  type: 'test'
+  ...
+# Subtest: precondition-card_block-used-target — Atomic rejection: card_block-used-target
+ok 138 - precondition-card_block-used-target — Atomic rejection: card_block-used-target
+  ---
+  duration_ms: 3.3126
+  type: 'test'
+  ...
+# Subtest: precondition-card_block-discarded-target — Atomic rejection: card_block-discarded-target
+ok 139 - precondition-card_block-discarded-target — Atomic rejection: card_block-discarded-target
+  ---
+  duration_ms: 2.3906
+  type: 'test'
+  ...
+# Subtest: precondition-echo-used-target — Atomic rejection: echo-used-target
+ok 140 - precondition-echo-used-target — Atomic rejection: echo-used-target
+  ---
+  duration_ms: 2.6626
+  type: 'test'
+  ...
+# Subtest: precondition-echo-discarded-target — Atomic rejection: echo-discarded-target
+ok 141 - precondition-echo-discarded-target — Atomic rejection: echo-discarded-target
+  ---
+  duration_ms: 2.3469
+  type: 'test'
+  ...
+# Subtest: precondition-fate_exchange-self-sacrifice — Atomic rejection: fate_exchange-self-sacrifice
+ok 142 - precondition-fate_exchange-self-sacrifice — Atomic rejection: fate_exchange-self-sacrifice
+  ---
+  duration_ms: 2.5741
+  type: 'test'
+  ...
+# Subtest: precondition-fate_exchange-no-other-card — Atomic rejection: fate_exchange-no-other-card
+ok 143 - precondition-fate_exchange-no-other-card — Atomic rejection: fate_exchange-no-other-card
+  ---
+  duration_ms: 2.3863
+  type: 'test'
+  ...
+# Subtest: precondition-shadow_contract-self-sacrifice — Atomic rejection: shadow_contract-self-sacrifice
+ok 144 - precondition-shadow_contract-self-sacrifice — Atomic rejection: shadow_contract-self-sacrifice
+  ---
+  duration_ms: 2.8588
+  type: 'test'
+  ...
+# Subtest: precondition-shadow_contract-no-other-card — Atomic rejection: shadow_contract-no-other-card
+ok 145 - precondition-shadow_contract-no-other-card — Atomic rejection: shadow_contract-no-other-card
+  ---
+  duration_ms: 2.3737
+  type: 'test'
+  ...
+# Subtest: precondition-prophecy-empty-deck — Atomic rejection: prophecy-empty-deck
+ok 146 - precondition-prophecy-empty-deck — Atomic rejection: prophecy-empty-deck
+  ---
+  duration_ms: 2.8464
+  type: 'test'
+  ...
+# Subtest: precondition-fate_exchange-empty-deck — Atomic rejection: fate_exchange-empty-deck
+ok 147 - precondition-fate_exchange-empty-deck — Atomic rejection: fate_exchange-empty-deck
+  ---
+  duration_ms: 2.3533
+  type: 'test'
+  ...
+# Subtest: precondition-pawn_deviation-frozen — Atomic rejection: pawn_deviation-frozen
+ok 148 - precondition-pawn_deviation-frozen — Atomic rejection: pawn_deviation-frozen
+  ---
+  duration_ms: 8.9426
+  type: 'test'
+  ...
+# Subtest: precondition-pawn_advance-frozen — Atomic rejection: pawn_advance-frozen
+ok 149 - precondition-pawn_advance-frozen — Atomic rejection: pawn_advance-frozen
+  ---
+  duration_ms: 32.5996
+  type: 'test'
+  ...
+# Subtest: precondition-rook_bend-frozen — Atomic rejection: rook_bend-frozen
+ok 150 - precondition-rook_bend-frozen — Atomic rejection: rook_bend-frozen
+  ---
+  duration_ms: 5.6029
+  type: 'test'
+  ...
+# Subtest: precondition-angry_n-frozen — Atomic rejection: angry_n-frozen
+ok 151 - precondition-angry_n-frozen — Atomic rejection: angry_n-frozen
+  ---
+  duration_ms: 5.0448
+  type: 'test'
+  ...
+# Subtest: precondition-shadow_pass-frozen — Atomic rejection: shadow_pass-frozen
+ok 152 - precondition-shadow_pass-frozen — Atomic rejection: shadow_pass-frozen
+  ---
+  duration_ms: 6.3577
+  type: 'test'
+  ...
+# Subtest: precondition-deviation-no-empty-diagonal — Atomic rejection: deviation-no-empty-diagonal
+ok 153 - precondition-deviation-no-empty-diagonal — Atomic rejection: deviation-no-empty-diagonal
+  ---
+  duration_ms: 1.5497
+  type: 'test'
+  ...
+# Subtest: precondition-advance-intermediate — Atomic rejection: advance-intermediate
+ok 154 - precondition-advance-intermediate — Atomic rejection: advance-intermediate
+  ---
+  duration_ms: 1.3924
+  type: 'test'
+  ...
+# Subtest: precondition-advance-destination — Atomic rejection: advance-destination
+ok 155 - precondition-advance-destination — Atomic rejection: advance-destination
+  ---
+  duration_ms: 1.2282
+  type: 'test'
+  ...
+# Subtest: precondition-advance-promotion — Atomic rejection: advance-promotion
+ok 156 - precondition-advance-promotion — Atomic rejection: advance-promotion
+  ---
+  duration_ms: 1.11
+  type: 'test'
+  ...
+# Subtest: precondition-shadow-two-blockers — Atomic rejection: shadow-two-blockers
+ok 157 - precondition-shadow-two-blockers — Atomic rejection: shadow-two-blockers
+  ---
+  duration_ms: 1.5901
+  type: 'test'
+  ...
+# Subtest: precondition-deviation-pinned — Atomic rejection: deviation-pinned
+ok 158 - precondition-deviation-pinned — Atomic rejection: deviation-pinned
+  ---
+  duration_ms: 1.5265
+  type: 'test'
+  ...
+# Subtest: precondition-restricted-freeze — Atomic rejection: restricted-freeze
+ok 159 - precondition-restricted-freeze — Atomic rejection: restricted-freeze
+  ---
+  duration_ms: 5.7979
+  type: 'test'
+  ...
+# Subtest: precondition-restricted-chain — Atomic rejection: restricted-chain
+ok 160 - precondition-restricted-chain — Atomic rejection: restricted-chain
+  ---
+  duration_ms: 3.2864
+  type: 'test'
+  ...
+# Subtest: precondition-restricted-slow — Atomic rejection: restricted-slow
+ok 161 - precondition-restricted-slow — Atomic rejection: restricted-slow
+  ---
+  duration_ms: 5.2811
+  type: 'test'
+  ...
+# Subtest: precondition-restricted-mine_debuff — Atomic rejection: restricted-mine_debuff
+ok 162 - precondition-restricted-mine_debuff — Atomic rejection: restricted-mine_debuff
+  ---
+  duration_ms: 3.0383
+  type: 'test'
+  ...
+# Subtest: precondition-locked_square-en-passant — Atomic rejection: locked_square-en-passant
+ok 163 - precondition-locked_square-en-passant — Atomic rejection: locked_square-en-passant
+  ---
+  duration_ms: 3.0328
+  type: 'test'
+  ...
+# Subtest: precondition-locked_square-empty-promotion — Atomic rejection: locked_square-empty-promotion
+ok 164 - precondition-locked_square-empty-promotion — Atomic rejection: locked_square-empty-promotion
+  ---
+  duration_ms: 8.1692
+  type: 'test'
+  ...
+# Subtest: precondition-board_seal-en-passant — Atomic rejection: board_seal-en-passant
+ok 165 - precondition-board_seal-en-passant — Atomic rejection: board_seal-en-passant
+  ---
+  duration_ms: 5.3095
+  type: 'test'
+  ...
+# Subtest: precondition-board_seal-empty-promotion — Atomic rejection: board_seal-empty-promotion
+ok 166 - precondition-board_seal-empty-promotion — Atomic rejection: board_seal-empty-promotion
+  ---
+  duration_ms: 10.6659
+  type: 'test'
+  ...
+# Subtest: precondition-castling-frozen-rook — Atomic rejection: castling-frozen-rook
+ok 167 - precondition-castling-frozen-rook — Atomic rejection: castling-frozen-rook
+  ---
+  duration_ms: 17.4608
+  type: 'test'
+  ...
+# Subtest: precondition-castling-long-slow-rook — Atomic rejection: castling-long-slow-rook
+ok 168 - precondition-castling-long-slow-rook — Atomic rejection: castling-long-slow-rook
+  ---
+  duration_ms: 18.9831
+  type: 'test'
+  ...
+# Subtest: precondition-castling-rook-sealed-destination — Atomic rejection: castling-rook-sealed-destination
+ok 169 - precondition-castling-rook-sealed-destination — Atomic rejection: castling-rook-sealed-destination
+  ---
+  duration_ms: 23.6843
+  type: 'test'
+  ...
+# Subtest: first-turn — First own turns forbid card actions; draw and mana transfer are deterministic
+ok 170 - first-turn — First own turns forbid card actions; draw and mana transfer are deterministic
+  ---
+  duration_ms: 45.6527
+  type: 'test'
+  ...
+# Subtest: discard-once — Discard is free, permanent and consumes the only card action
+ok 171 - discard-once — Discard is free, permanent and consumes the only card action
+  ---
+  duration_ms: 16.8753
+  type: 'test'
+  ...
+# Subtest: low-mana — Rejected card play is atomic
+ok 172 - low-mana — Rejected card play is atomic
+  ---
+  duration_ms: 2.7453
+  type: 'test'
+  ...
+# Subtest: card-radar — Manually reviewed radar cost, ownership and resolution
+ok 173 - card-radar — Manually reviewed radar cost, ownership and resolution
+  ---
+  duration_ms: 5.5337
+  type: 'test'
+  ...
+# Subtest: card-prophecy — Manually reviewed prophecy cost, ownership and resolution
+ok 174 - card-prophecy — Manually reviewed prophecy cost, ownership and resolution
+  ---
+  duration_ms: 5.4123
+  type: 'test'
+  ...
+# Subtest: card-shelter — Manually reviewed shelter cost, ownership and resolution
+ok 175 - card-shelter — Manually reviewed shelter cost, ownership and resolution
+  ---
+  duration_ms: 5.1107
+  type: 'test'
+  ...
+# Subtest: card-chain — Manually reviewed chain cost, ownership and resolution
+ok 176 - card-chain — Manually reviewed chain cost, ownership and resolution
+  ---
+  duration_ms: 5.1826
+  type: 'test'
+  ...
+# Subtest: card-slow — Manually reviewed slow cost, ownership and resolution
+ok 177 - card-slow — Manually reviewed slow cost, ownership and resolution
+  ---
+  duration_ms: 5.0552
+  type: 'test'
+  ...
+# Subtest: card-pawn_deviation — Manually reviewed pawn_deviation cost, ownership and resolution
+ok 178 - card-pawn_deviation — Manually reviewed pawn_deviation cost, ownership and resolution
+  ---
+  duration_ms: 5.7226
+  type: 'test'
+  ...
+# Subtest: card-pawn_advance — Manually reviewed pawn_advance cost, ownership and resolution
+ok 179 - card-pawn_advance — Manually reviewed pawn_advance cost, ownership and resolution
+  ---
+  duration_ms: 19.8766
+  type: 'test'
+  ...
+# Subtest: card-locked_square — Manually reviewed locked_square cost, ownership and resolution
+ok 180 - card-locked_square — Manually reviewed locked_square cost, ownership and resolution
+  ---
+  duration_ms: 5.5515
+  type: 'test'
+  ...
+# Subtest: card-freeze — Manually reviewed freeze cost, ownership and resolution
+ok 181 - card-freeze — Manually reviewed freeze cost, ownership and resolution
+  ---
+  duration_ms: 5.2164
+  type: 'test'
+  ...
+# Subtest: card-purify — Manually reviewed purify cost, ownership and resolution
+ok 182 - card-purify — Manually reviewed purify cost, ownership and resolution
+  ---
+  duration_ms: 4.8841
+  type: 'test'
+  ...
+# Subtest: card-mine — Manually reviewed mine cost, ownership and resolution
+ok 183 - card-mine — Manually reviewed mine cost, ownership and resolution
+  ---
+  duration_ms: 7.5341
+  type: 'test'
+  ...
+# Subtest: card-break_seal — Manually reviewed break_seal cost, ownership and resolution
+ok 184 - card-break_seal — Manually reviewed break_seal cost, ownership and resolution
+  ---
+  duration_ms: 8.8737
+  type: 'test'
+  ...
+# Subtest: card-fog — Manually reviewed fog cost, ownership and resolution
+ok 185 - card-fog — Manually reviewed fog cost, ownership and resolution
+  ---
+  duration_ms: 7.2285
+  type: 'test'
+  ...
+# Subtest: card-mana_sabotage — Manually reviewed mana_sabotage cost, ownership and resolution
+ok 186 - card-mana_sabotage — Manually reviewed mana_sabotage cost, ownership and resolution
+  ---
+  duration_ms: 8.6437
+  type: 'test'
+  ...
+# Subtest: card-card_block — Manually reviewed card_block cost, ownership and resolution
+ok 187 - card-card_block — Manually reviewed card_block cost, ownership and resolution
+  ---
+  duration_ms: 6.1582
+  type: 'test'
+  ...
+# Subtest: card-rook_bend — Manually reviewed rook_bend cost, ownership and resolution
+ok 188 - card-rook_bend — Manually reviewed rook_bend cost, ownership and resolution
+  ---
+  duration_ms: 5.2626
+  type: 'test'
+  ...
+# Subtest: card-angry_n — Manually reviewed angry_n cost, ownership and resolution
+ok 189 - card-angry_n — Manually reviewed angry_n cost, ownership and resolution
+  ---
+  duration_ms: 5.901
+  type: 'test'
+  ...
+# Subtest: card-shadow_pass — Manually reviewed shadow_pass cost, ownership and resolution
+ok 190 - card-shadow_pass — Manually reviewed shadow_pass cost, ownership and resolution
+  ---
+  duration_ms: 6.3418
+  type: 'test'
+  ...
+# Subtest: card-hunt_vow — Manually reviewed hunt_vow cost, ownership and resolution
+ok 191 - card-hunt_vow — Manually reviewed hunt_vow cost, ownership and resolution
+  ---
+  duration_ms: 5.023
+  type: 'test'
+  ...
+# Subtest: card-watch_vow — Manually reviewed watch_vow cost, ownership and resolution
+ok 192 - card-watch_vow — Manually reviewed watch_vow cost, ownership and resolution
+  ---
+  duration_ms: 10.2755
+  type: 'test'
+  ...
+# Subtest: card-echo — Manually reviewed echo cost, ownership and resolution
+ok 193 - card-echo — Manually reviewed echo cost, ownership and resolution
+  ---
+  duration_ms: 12.9534
+  type: 'test'
+  ...
+# Subtest: card-fate_exchange — Manually reviewed fate_exchange cost, ownership and resolution
+ok 194 - card-fate_exchange — Manually reviewed fate_exchange cost, ownership and resolution
+  ---
+  duration_ms: 12.1445
+  type: 'test'
+  ...
+# Subtest: card-shadow_contract — Manually reviewed shadow_contract cost, ownership and resolution
+ok 195 - card-shadow_contract — Manually reviewed shadow_contract cost, ownership and resolution
+  ---
+  duration_ms: 10.6905
+  type: 'test'
+  ...
+# Subtest: card-board_seal — Manually reviewed board_seal cost, ownership and resolution
+ok 196 - card-board_seal — Manually reviewed board_seal cost, ownership and resolution
+  ---
+  duration_ms: 7.0115
+  type: 'test'
+  ...
+# Subtest: bound-pawn_deviation — Special authorization cannot switch to another piece and applies correct geometry
+ok 197 - bound-pawn_deviation — Special authorization cannot switch to another piece and applies correct geometry
+  ---
+  duration_ms: 4.0101
+  type: 'test'
+  ...
+# Subtest: bound-pawn_advance — Special authorization cannot switch to another piece and applies correct geometry
+ok 198 - bound-pawn_advance — Special authorization cannot switch to another piece and applies correct geometry
+  ---
+  duration_ms: 15.3468
+  type: 'test'
+  ...
+# Subtest: bound-rook_bend — Special authorization cannot switch to another piece and applies correct geometry
+ok 199 - bound-rook_bend — Special authorization cannot switch to another piece and applies correct geometry
+  ---
+  duration_ms: 6.9674
+  type: 'test'
+  ...
+# Subtest: bound-angry_n — Special authorization cannot switch to another piece and applies correct geometry
+ok 200 - bound-angry_n — Special authorization cannot switch to another piece and applies correct geometry
+  ---
+  duration_ms: 7.0987
+  type: 'test'
+  ...
+# Subtest: bound-shadow_pass — Special authorization cannot switch to another piece and applies correct geometry
+ok 201 - bound-shadow_pass — Special authorization cannot switch to another piece and applies correct geometry
+  ---
+  duration_ms: 8.8198
+  type: 'test'
+  ...
+# Subtest: locked_square-capture — Empty destination blocked; occupied capture and king move allowed
+ok 202 - locked_square-capture — Empty destination blocked; occupied capture and king move allowed
+  ---
+  duration_ms: 8.0174
+  type: 'test'
+  ...
+# Subtest: board_seal-capture — Empty destination blocked; occupied capture and king move allowed
+ok 203 - board_seal-capture — Empty destination blocked; occupied capture and king move allowed
+  ---
+  duration_ms: 6.0709
+  type: 'test'
+  ...
+# Subtest: mine-watch-castle — Rook relocation triggers Mine then watch, new debuff survives
+ok 204 - mine-watch-castle — Rook relocation triggers Mine then watch, new debuff survives
+  ---
+  duration_ms: 9.8319
+  type: 'test'
+  ...
+# Subtest: persistent-mine — Other-piece move cannot consume the piece-specific Mine punishment
+ok 205 - persistent-mine — Other-piece move cannot consume the piece-specific Mine punishment
+  ---
+  duration_ms: 17.2495
+  type: 'test'
+  ...
+# Subtest: break-one-overlap — Only the selected opponent effect is removed; overlapping Mine remains
+ok 206 - break-one-overlap — Only the selected opponent effect is removed; overlapping Mine remains
+  ---
+  duration_ms: 2.8276
+  type: 'test'
+  ...
+# Subtest: shelter-window — Siper blocks direct target only until card phase closes
+ok 207 - shelter-window — Siper blocks direct target only until card phase closes
+  ---
+  duration_ms: 4.3544
+  type: 'test'
+  ...
+# Subtest: fog-window — Sis direct-target protection expires when card phase closes
+ok 208 - fog-window — Sis direct-target protection expires when card phase closes
+  ---
+  duration_ms: 3.376
+  type: 'test'
+  ...
+# Subtest: radar-stale — Negative observation stales only after opponent cumulative draw changes
+ok 209 - radar-stale — Negative observation stales only after opponent cumulative draw changes
+  ---
+  duration_ms: 19.556
+  type: 'test'
+  ...
+# Subtest: assisted-mate — Frozen rook is the only lost orthodox defense
+ok 210 - assisted-mate — Frozen rook is the only lost orthodox defense
+  ---
+  duration_ms: 23.535
+  type: 'test'
+  ...
+# Subtest: assisted-stalemate — Frozen rook removes the only legal non-king movement
+ok 211 - assisted-stalemate — Frozen rook removes the only legal non-king movement
+  ---
+  duration_ms: 27.5067
+  type: 'test'
+  ...
+# Subtest: migration retains legacy data, seeds but does not copy legacy public rating
+ok 212 - migration retains legacy data, seeds but does not copy legacy public rating
+  ---
+  duration_ms: 2.854
+  type: 'test'
+  ...
+# Subtest: deterministic starter fallback empty
+ok 213 - deterministic starter fallback empty
+  ---
+  duration_ms: 2.0555
+  type: 'test'
+  ...
+# Subtest: deterministic starter fallback short
+ok 214 - deterministic starter fallback short
+  ---
+  duration_ms: 0.4166
+  type: 'test'
+  ...
+# Subtest: deterministic starter fallback long
+ok 215 - deterministic starter fallback long
+  ---
+  duration_ms: 0.7808
+  type: 'test'
+  ...
+# Subtest: deterministic starter fallback duplicate
+ok 216 - deterministic starter fallback duplicate
+  ---
+  duration_ms: 0.5235
+  type: 'test'
+  ...
+# Subtest: deterministic starter fallback unknown
+ok 217 - deterministic starter fallback unknown
+  ---
+  duration_ms: 0.2131
+  type: 'test'
+  ...
+# Subtest: deterministic starter fallback invalid
+ok 218 - deterministic starter fallback invalid
+  ---
+  duration_ms: 0.3459
+  type: 'test'
+  ...
+# Subtest: exact valid ten and interrupted/corrupt migrated records repair safely
+ok 219 - exact valid ten and interrupted/corrupt migrated records repair safely
+  ---
+  duration_ms: 0.989
+  type: 'test'
+  ...
+# Subtest: chest grants after initial migration become owned without resetting saved deck
+ok 220 - chest grants after initial migration become owned without resetting saved deck
+  ---
+  duration_ms: 0.878
+  type: 'test'
+  ...
+# Subtest: intent envelope rejects authoritative fields and unknown protocols
+ok 221 - intent envelope rejects authoritative fields and unknown protocols
+  ---
+  duration_ms: 16.5721
+  type: 'test'
+  ...
+# Subtest: explicit serializers isolate both decks, opponent hand and private knowledge
+ok 222 - explicit serializers isolate both decks, opponent hand and private knowledge
+  ---
+  duration_ms: 15.9706
+  type: 'test'
+  ...
+# Subtest: rollout stages and rollback are atomic valid objects
+ok 223 - rollout stages and rollback are atomic valid objects
+  ---
+  duration_ms: 2.4392
+  type: 'test'
+  ...
+# Subtest: reject unsafe rollout disabledForce
+ok 224 - reject unsafe rollout disabledForce
+  ---
+  duration_ms: 0.3916
+  type: 'test'
+  ...
+# Subtest: reject unsafe rollout notStoreReady
+ok 225 - reject unsafe rollout notStoreReady
+  ---
+  duration_ms: 0.2138
+  type: 'test'
+  ...
+# Subtest: reject unsafe rollout noPath
+ok 226 - reject unsafe rollout noPath
+  ---
+  duration_ms: 0.186
+  type: 'test'
+  ...
+# Subtest: reject unsafe rollout unsafeShutdown
+ok 227 - reject unsafe rollout unsafeShutdown
+  ---
+  duration_ms: 0.1674
+  type: 'test'
+  ...
+# Subtest: reject unsafe rollout iosNotReady
+ok 228 - reject unsafe rollout iosNotReady
+  ---
+  duration_ms: 0.0989
+  type: 'test'
+  ...
+# Subtest: platform-aware readiness and build gating
+ok 229 - platform-aware readiness and build gating
+  ---
+  duration_ms: 0.883
+  type: 'test'
+  ...
+# Subtest: native V1 compatibility defaults do not silently unlock competitive cards
+ok 230 - native V1 compatibility defaults do not silently unlock competitive cards
+  ---
+  duration_ms: 1.8299
+  type: 'test'
+  ...
+# Subtest: legacy earned rights and already migrated rights are never revoked
+ok 231 - legacy earned rights and already migrated rights are never revoked
+  ---
+  duration_ms: 0.4403
+  type: 'test'
+  ...
+# Subtest: numeric square targets cannot be spoofed by string/array coercion
+ok 232 - numeric square targets cannot be spoofed by string/array coercion
+  ---
+  duration_ms: 18.864
+  type: 'test'
+  ...
+# Subtest: a no-target card rejects empty strings and arrays instead of spending mana
+ok 233 - a no-target card rejects empty strings and arrays instead of spending mana
+  ---
+  duration_ms: 5.7008
+  type: 'test'
+  ...
+# Subtest: resolve validates the actual bounded card array, not its joined string
+ok 234 - resolve validates the actual bounded card array, not its joined string
+  ---
+  duration_ms: 11.6981
+  type: 'test'
+  ...
+# Subtest: unknown extra fields remain inert on otherwise valid actions
+ok 235 - unknown extra fields remain inert on otherwise valid actions
+  ---
+  duration_ms: 6.0216
+  type: 'test'
+  ...
+# Subtest: fresh Dart/TS rejects the same coerced target payloads
+ok 236 - fresh Dart/TS rejects the same coerced target payloads # SKIP
+  ---
+  duration_ms: 0.1185
+  type: 'test'
+  ...
+# Subtest: invalid EP cannot remove a missing/wrong victim: w 4k3/8/8/4P3/8/8/8/4K3
+ok 237 - invalid EP cannot remove a missing/wrong victim: w 4k3/8/8/4P3/8/8/8/4K3
+  ---
+  duration_ms: 12.3075
+  type: 'test'
+  ...
+# Subtest: invalid EP cannot remove a missing/wrong victim: w 4k3/8/8/3nP3/8/8/8/4K3
+ok 238 - invalid EP cannot remove a missing/wrong victim: w 4k3/8/8/3nP3/8/8/8/4K3
+  ---
+  duration_ms: 4.2012
+  type: 'test'
+  ...
+# Subtest: invalid EP cannot remove a missing/wrong victim: w 4k3/8/8/3PP3/8/8/8/4K3
+ok 239 - invalid EP cannot remove a missing/wrong victim: w 4k3/8/8/3PP3/8/8/8/4K3
+  ---
+  duration_ms: 7.6889
+  type: 'test'
+  ...
+# Subtest: invalid EP cannot remove a missing/wrong victim: w 4k3/8/3N4/3pP3/8/8/8/4K3
+ok 240 - invalid EP cannot remove a missing/wrong victim: w 4k3/8/3N4/3pP3/8/8/8/4K3
+  ---
+  duration_ms: 28.7254
+  type: 'test'
+  ...
+# Subtest: invalid EP cannot remove a missing/wrong victim: b 4k3/8/8/8/4p3/8/8/4K3
+ok 241 - invalid EP cannot remove a missing/wrong victim: b 4k3/8/8/8/4p3/8/8/4K3
+  ---
+  duration_ms: 5.2793
+  type: 'test'
+  ...
+# Subtest: invalid EP cannot remove a missing/wrong victim: b 4k3/8/8/8/3Np3/8/8/4K3
+ok 242 - invalid EP cannot remove a missing/wrong victim: b 4k3/8/8/8/3Np3/8/8/4K3
+  ---
+  duration_ms: 2.8667
+  type: 'test'
+  ...
+# Subtest: invalid EP cannot remove a missing/wrong victim: b 4k3/8/8/8/3pp3/8/8/4K3
+ok 243 - invalid EP cannot remove a missing/wrong victim: b 4k3/8/8/8/3pp3/8/8/4K3
+  ---
+  duration_ms: 3.6742
+  type: 'test'
+  ...
+# Subtest: invalid EP cannot remove a missing/wrong victim: b 4k3/8/8/8/3Pp3/3n4/8/4K3
+ok 244 - invalid EP cannot remove a missing/wrong victim: b 4k3/8/8/8/3Pp3/3n4/8/4K3
+  ---
+  duration_ms: 12.5705
+  type: 'test'
+  ...
+# Subtest: castling requires home king and same-side rook: 4k3/8/8/8/8/8/8/4K3 w KQ - 0 1
+ok 245 - castling requires home king and same-side rook: 4k3/8/8/8/8/8/8/4K3 w KQ - 0 1
+  ---
+  duration_ms: 1.3356
+  type: 'test'
+  ...
+# Subtest: castling requires home king and same-side rook: 4k3/8/8/8/8/8/8/N3K2N w KQ - 0 1
+ok 246 - castling requires home king and same-side rook: 4k3/8/8/8/8/8/8/N3K2N w KQ - 0 1
+  ---
+  duration_ms: 4.3478
+  type: 'test'
+  ...
+# Subtest: castling requires home king and same-side rook: 4k3/8/8/8/8/8/8/3K3R w K - 0 1
+ok 247 - castling requires home king and same-side rook: 4k3/8/8/8/8/8/8/3K3R w K - 0 1
+  ---
+  duration_ms: 7.8475
+  type: 'test'
+  ...
+# Subtest: castling requires home king and same-side rook: n3k2n/8/8/8/8/8/8/4K3 b kq - 0 1
+ok 248 - castling requires home king and same-side rook: n3k2n/8/8/8/8/8/8/4K3 b kq - 0 1
+  ---
+  duration_ms: 4.9204
+  type: 'test'
+  ...
+# Subtest: castling requires home king and same-side rook: 3k3r/8/8/8/8/8/8/4K3 b k - 0 1
+ok 249 - castling requires home king and same-side rook: 3k3r/8/8/8/8/8/8/4K3 b k - 0 1
+  ---
+  duration_ms: 5.3392
+  type: 'test'
+  ...
+# Subtest: valid EP, occupied enemy captures, and both castling sides remain available
+ok 250 - valid EP, occupied enemy captures, and both castling sides remain available
+  ---
+  duration_ms: 11.689
+  type: 'test'
+  ...
+# Subtest: battle terminal boundary: white-quiet-149-150
+ok 251 - battle terminal boundary: white-quiet-149-150
+  ---
+  duration_ms: 27.3481
+  type: 'test'
+  ...
+# Subtest: battle terminal boundary: black-quiet-149-150
+ok 252 - battle terminal boundary: black-quiet-149-150
+  ---
+  duration_ms: 15.0996
+  type: 'test'
+  ...
+# Subtest: battle terminal boundary: white-mate-149-150
+ok 253 - battle terminal boundary: white-mate-149-150
+  ---
+  duration_ms: 57.9578
+  type: 'test'
+  ...
+# Subtest: battle terminal boundary: black-mate-149-150
+ok 254 - battle terminal boundary: black-mate-149-150
+  ---
+  duration_ms: 21.937
+  type: 'test'
+  ...
+# Subtest: battle terminal boundary: pawn-resets-149
+ok 255 - battle terminal boundary: pawn-resets-149
+  ---
+  duration_ms: 5.8895
+  type: 'test'
+  ...
+# Subtest: battle terminal boundary: battle-bare-kings-not-dead-draw
+ok 256 - battle terminal boundary: battle-bare-kings-not-dead-draw
+  ---
+  duration_ms: 5.4828
+  type: 'test'
+  ...
+# Subtest: fresh Dart/TS targeted terminal differential
+ok 257 - fresh Dart/TS targeted terminal differential # SKIP
+  ---
+  duration_ms: 0.2196
+  type: 'test'
+  ...
+# Subtest: deleted participant loses private snapshots and analysis but retains internal identity
+ok 258 - deleted participant loses private snapshots and analysis but retains internal identity
+  ---
+  duration_ms: 20.921
+  type: 'test'
+  ...
+# Subtest: bot identity is internal-only and cannot receive a human private projection
+ok 259 - bot identity is internal-only and cannot receive a human private projection
+  ---
+  duration_ms: 6.7039
+  type: 'test'
+  ...
+# Subtest: valid UID is an own participant key even when it matches Object.prototype: __proto__
+ok 260 - valid UID is an own participant key even when it matches Object.prototype: __proto__
+  ---
+  duration_ms: 9.204
+  type: 'test'
+  ...
+# Subtest: valid UID is an own participant key even when it matches Object.prototype: constructor
+ok 261 - valid UID is an own participant key even when it matches Object.prototype: constructor
+  ---
+  duration_ms: 8.8677
+  type: 'test'
+  ...
+# Subtest: valid UID is an own participant key even when it matches Object.prototype: toString
+ok 262 - valid UID is an own participant key even when it matches Object.prototype: toString
+  ---
+  duration_ms: 5.8628
+  type: 'test'
+  ...
+# Subtest: Mine stays public through server commit and reconnect: w
+ok 263 - Mine stays public through server commit and reconnect: w
+  ---
+  duration_ms: 29.9828
+  type: 'test'
+  ...
+# Subtest: Mine stays public through server commit and reconnect: b
+ok 264 - Mine stays public through server commit and reconnect: b
+  ---
+  duration_ms: 6.8414
+  type: 'test'
+  ...
+# Subtest: public Mine blocks duplicate placement and remains a Break Seal target
+ok 265 - public Mine blocks duplicate placement and remains a Break Seal target
+  ---
+  duration_ms: 5.8123
+  type: 'test'
+  ...
+# Subtest: persistent Mine ignores own rook arrival
+ok 266 - persistent Mine ignores own rook arrival
+  ---
+  duration_ms: 14.8384
+  type: 'test'
+  ...
+# Subtest: persistent Mine ignores enemy king arrival
+ok 267 - persistent Mine ignores enemy king arrival
+  ---
+  duration_ms: 12.9144
+  type: 'test'
+  ...
+# Subtest: Mine fixture variants cannot mutate the canonical contract or later initial states
+ok 268 - Mine fixture variants cannot mutate the canonical contract or later initial states
+  ---
+  duration_ms: 8.926
+  type: 'test'
+  ...
+# Subtest: black castling rook triggers public Mine and Watch Vow in the same order
+ok 269 - black castling rook triggers public Mine and Watch Vow in the same order
+  ---
+  duration_ms: 10.183
+  type: 'test'
+  ...
+# Subtest: untriggered Mine does not expire at either player turn boundary
+ok 270 - untriggered Mine does not expire at either player turn boundary
+  ---
+  duration_ms: 29.8473
+  type: 'test'
+  ...
+# Subtest: canonical Mine lifecycle survives serialized authority restoration: mine-capture-overlap
+ok 271 - canonical Mine lifecycle survives serialized authority restoration: mine-capture-overlap
+  ---
+  duration_ms: 9.6185
+  type: 'test'
+  ...
+# Subtest: canonical Mine lifecycle survives serialized authority restoration: fog-mine-overlap
+ok 272 - canonical Mine lifecycle survives serialized authority restoration: fog-mine-overlap
+  ---
+  duration_ms: 13.0653
+  type: 'test'
+  ...
+# Subtest: canonical Mine lifecycle survives serialized authority restoration: mine-debuff-purify
+ok 273 - canonical Mine lifecycle survives serialized authority restoration: mine-debuff-purify
+  ---
+  duration_ms: 11.842
+  type: 'test'
+  ...
+# Subtest: canonical Mine lifecycle survives serialized authority restoration: mine-debuff-piece-captured
+ok 274 - canonical Mine lifecycle survives serialized authority restoration: mine-debuff-piece-captured
+  ---
+  duration_ms: 24.1771
+  type: 'test'
+  ...
+# Subtest: canonical Mine lifecycle survives serialized authority restoration: mine-watch-castle
+ok 275 - canonical Mine lifecycle survives serialized authority restoration: mine-watch-castle
+  ---
+  duration_ms: 25.3538
+  type: 'test'
+  ...
+# Subtest: canonical Mine lifecycle survives serialized authority restoration: persistent-mine
+ok 276 - canonical Mine lifecycle survives serialized authority restoration: persistent-mine
+  ---
+  duration_ms: 46.5717
+  type: 'test'
+  ...
+# Subtest: canonical Mine lifecycle survives serialized authority restoration: break-one-overlap
+ok 277 - canonical Mine lifecycle survives serialized authority restoration: break-one-overlap
+  ---
+  duration_ms: 15.013
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes mana
+ok 278 - Luno repetition distinguishes mana
+  ---
+  duration_ms: 33.4772
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes hand counts
+ok 279 - Luno repetition distinguishes hand counts
+  ---
+  duration_ms: 55.277
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes deck counts
+ok 280 - Luno repetition distinguishes deck counts
+  ---
+  duration_ms: 54.7768
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes draw counts
+ok 281 - Luno repetition distinguishes draw counts
+  ---
+  duration_ms: 46.2745
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes used cards
+ok 282 - Luno repetition distinguishes used cards
+  ---
+  duration_ms: 13.4553
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes discarded cards
+ok 283 - Luno repetition distinguishes discarded cards
+  ---
+  duration_ms: 23.3481
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes moved pawn rights
+ok 284 - Luno repetition distinguishes moved pawn rights
+  ---
+  duration_ms: 9.067
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes piece identity
+ok 285 - Luno repetition distinguishes piece identity
+  ---
+  duration_ms: 29.2675
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes piece effect
+ok 286 - Luno repetition distinguishes piece effect
+  ---
+  duration_ms: 20.2333
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes public Mine
+ok 287 - Luno repetition distinguishes public Mine
+  ---
+  duration_ms: 12.6596
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes modifier
+ok 288 - Luno repetition distinguishes modifier
+  ---
+  duration_ms: 22.8891
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes castling rights
+ok 289 - Luno repetition distinguishes castling rights
+  ---
+  duration_ms: 10.2665
+  type: 'test'
+  ...
+# Subtest: Luno repetition distinguishes first-turn phase
+ok 290 - Luno repetition distinguishes first-turn phase
+  ---
+  duration_ms: 8.1887
+  type: 'test'
+  ...
+# Subtest: public Mine location changes repetition equivalence
+ok 291 - public Mine location changes repetition equivalence
+  ---
+  duration_ms: 10.0064
+  type: 'test'
+  ...
+# Subtest: absolute counters and repetition history do not change equivalence
+ok 292 - absolute counters and repetition history do not change equivalence
+  ---
+  duration_ms: 13.2719
+  type: 'test'
+  ...
+# Subtest: modifier timing is relative to response side own turn
+ok 293 - modifier timing is relative to response side own turn
+  ---
+  duration_ms: 31.0545
+  type: 'test'
+  ...
+# Subtest: EP contributes only when legal under chess and card restrictions
+ok 294 - EP contributes only when legal under chess and card restrictions
+  ---
+  duration_ms: 7.8341
+  type: 'test'
+  ...
+# Subtest: intermediate card resolution cannot record a repetition
+ok 295 - intermediate card resolution cannot record a repetition
+  ---
+  duration_ms: 0.3908
+  type: 'test'
+  ...
+# Subtest: private-order coverage includes all 24 canonical cards
+ok 296 - private-order coverage includes all 24 canonical cards
+  ---
+  duration_ms: 0.0882
+  type: 'test'
+  ...
+# Subtest: card-radar: private order is excluded without weakening secrecy
+ok 297 - card-radar: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 65.6954
+  type: 'test'
+  ...
+# Subtest: card-prophecy: private order is excluded without weakening secrecy
+ok 298 - card-prophecy: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 76.3796
+  type: 'test'
+  ...
+# Subtest: card-shelter: private order is excluded without weakening secrecy
+ok 299 - card-shelter: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 52.1225
+  type: 'test'
+  ...
+# Subtest: card-chain: private order is excluded without weakening secrecy
+ok 300 - card-chain: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 19.2464
+  type: 'test'
+  ...
+# Subtest: card-slow: private order is excluded without weakening secrecy
+ok 301 - card-slow: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 16.1152
+  type: 'test'
+  ...
+# Subtest: card-pawn_deviation: private order is excluded without weakening secrecy
+ok 302 - card-pawn_deviation: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 12.3176
+  type: 'test'
+  ...
+# Subtest: card-pawn_advance: private order is excluded without weakening secrecy
+ok 303 - card-pawn_advance: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 31.9239
+  type: 'test'
+  ...
+# Subtest: card-locked_square: private order is excluded without weakening secrecy
+ok 304 - card-locked_square: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 11.3235
+  type: 'test'
+  ...
+# Subtest: card-freeze: private order is excluded without weakening secrecy
+ok 305 - card-freeze: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 10.7278
+  type: 'test'
+  ...
+# Subtest: card-purify: private order is excluded without weakening secrecy
+ok 306 - card-purify: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 10.4981
+  type: 'test'
+  ...
+# Subtest: card-mine: private order is excluded without weakening secrecy
+ok 307 - card-mine: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 10.9972
+  type: 'test'
+  ...
+# Subtest: card-break_seal: private order is excluded without weakening secrecy
+ok 308 - card-break_seal: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 10.4241
+  type: 'test'
+  ...
+# Subtest: card-fog: private order is excluded without weakening secrecy
+ok 309 - card-fog: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 43.7569
+  type: 'test'
+  ...
+# Subtest: card-mana_sabotage: private order is excluded without weakening secrecy
+ok 310 - card-mana_sabotage: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 19.78
+  type: 'test'
+  ...
+# Subtest: card-card_block: private order is excluded without weakening secrecy
+ok 311 - card-card_block: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 12.4062
+  type: 'test'
+  ...
+# Subtest: card-rook_bend: private order is excluded without weakening secrecy
+ok 312 - card-rook_bend: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 12.6238
+  type: 'test'
+  ...
+# Subtest: card-angry_n: private order is excluded without weakening secrecy
+ok 313 - card-angry_n: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 10.3442
+  type: 'test'
+  ...
+# Subtest: card-shadow_pass: private order is excluded without weakening secrecy
+ok 314 - card-shadow_pass: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 11.316
+  type: 'test'
+  ...
+# Subtest: card-hunt_vow: private order is excluded without weakening secrecy
+ok 315 - card-hunt_vow: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 11.0337
+  type: 'test'
+  ...
+# Subtest: card-watch_vow: private order is excluded without weakening secrecy
+ok 316 - card-watch_vow: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 14.7572
+  type: 'test'
+  ...
+# Subtest: card-echo: private order is excluded without weakening secrecy
+ok 317 - card-echo: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 12.9975
+  type: 'test'
+  ...
+# Subtest: card-fate_exchange: private order is excluded without weakening secrecy
+ok 318 - card-fate_exchange: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 12.6918
+  type: 'test'
+  ...
+# Subtest: card-shadow_contract: private order is excluded without weakening secrecy
+ok 319 - card-shadow_contract: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 11.0913
+  type: 'test'
+  ...
+# Subtest: card-board_seal: private order is excluded without weakening secrecy
+ok 320 - card-board_seal: private order is excluded without weakening secrecy
+  ---
+  duration_ms: 16.5698
+  type: 'test'
+  ...
+# Subtest: private knowledge is excluded while legitimate own knowledge stays visible
+ok 321 - private knowledge is excluded while legitimate own knowledge stays visible
+  ---
+  duration_ms: 14.9227
+  type: 'test'
+  ...
+# Subtest: canonical finite-deck fivefold remains automatic after authority restoration
+ok 322 - canonical finite-deck fivefold remains automatic after authority restoration
+  ---
+  duration_ms: 264.3258
+  type: 'test'
+  ...
+# Subtest: V219 recovered original action is applied once and conflicting ID never mutates
+ok 323 - V219 recovered original action is applied once and conflicting ID never mutates
+  ---
+  duration_ms: 104.6276
+  type: 'test'
+  ...
+# Subtest: V219 unauthorized, illegal and forged-envelope requests do not mutate authority
+ok 324 - V219 unauthorized, illegal and forged-envelope requests do not mutate authority
+  ---
+  duration_ms: 24.4322
+  type: 'test'
+  ...
+# Subtest: V219 active reconnect exposes only the viewer private data, never analysis
+ok 325 - V219 active reconnect exposes only the viewer private data, never analysis
+  ---
+  duration_ms: 21.8281
+  type: 'test'
+  ...
+# Subtest: V219 original action remains idempotent after terminal state
+ok 326 - V219 original action remains idempotent after terminal state
+  ---
+  duration_ms: 31.8272
+  type: 'test'
+  ...
+# Subtest: V219 existing post-match analysis policy stays participant-only and settlement-gated
+ok 327 - V219 existing post-match analysis policy stays participant-only and settlement-gated
+  ---
+  duration_ms: 5.6475
+  type: 'test'
+  ...
+# Subtest: purify/w: ambiguous effect identity rejects without spending
+ok 328 - purify/w: ambiguous effect identity rejects without spending
+  ---
+  duration_ms: 32.3751
+  type: 'test'
+  ...
+# Subtest: purify/b: ambiguous effect identity rejects without spending
+ok 329 - purify/b: ambiguous effect identity rejects without spending
+  ---
+  duration_ms: 7.5447
+  type: 'test'
+  ...
+# Subtest: break_seal/w: ambiguous effect identity rejects without spending
+ok 330 - break_seal/w: ambiguous effect identity rejects without spending
+  ---
+  duration_ms: 21.6072
+  type: 'test'
+  ...
+# Subtest: break_seal/b: ambiguous effect identity rejects without spending
+ok 331 - break_seal/b: ambiguous effect identity rejects without spending
+  ---
+  duration_ms: 9.1627
+  type: 'test'
+  ...
+# Subtest: w/prophecy/timeout: abandon only unresolved private choice
+ok 332 - w/prophecy/timeout: abandon only unresolved private choice
+  ---
+  duration_ms: 32.5867
+  type: 'test'
+  ...
+# Subtest: w/prophecy/resign: abandon only unresolved private choice
+ok 333 - w/prophecy/resign: abandon only unresolved private choice
+  ---
+  duration_ms: 16.1316
+  type: 'test'
+  ...
+# Subtest: w/fate_exchange/timeout: abandon only unresolved private choice
+ok 334 - w/fate_exchange/timeout: abandon only unresolved private choice
+  ---
+  duration_ms: 9.9601
+  type: 'test'
+  ...
+# Subtest: w/fate_exchange/resign: abandon only unresolved private choice
+ok 335 - w/fate_exchange/resign: abandon only unresolved private choice
+  ---
+  duration_ms: 4.7421
+  type: 'test'
+  ...
+# Subtest: w/pawn_deviation/null: quiet EP alias is a special mate
+ok 336 - w/pawn_deviation/null: quiet EP alias is a special mate
+  ---
+  duration_ms: 12.9651
+  type: 'test'
+  ...
+# Subtest: w/pawn_deviation/chain: quiet EP alias is a special mate
+ok 337 - w/pawn_deviation/chain: quiet EP alias is a special mate
+  ---
+  duration_ms: 12.4475
+  type: 'test'
+  ...
+# Subtest: w/pawn_deviation/mine_debuff: quiet EP alias is a special mate
+ok 338 - w/pawn_deviation/mine_debuff: quiet EP alias is a special mate
+  ---
+  duration_ms: 19.6624
+  type: 'test'
+  ...
+# Subtest: b/prophecy/timeout: abandon only unresolved private choice
+ok 339 - b/prophecy/timeout: abandon only unresolved private choice
+  ---
+  duration_ms: 5.0034
+  type: 'test'
+  ...
+# Subtest: b/prophecy/resign: abandon only unresolved private choice
+ok 340 - b/prophecy/resign: abandon only unresolved private choice
+  ---
+  duration_ms: 5.2811
+  type: 'test'
+  ...
+# Subtest: b/fate_exchange/timeout: abandon only unresolved private choice
+ok 341 - b/fate_exchange/timeout: abandon only unresolved private choice
+  ---
+  duration_ms: 4.6874
+  type: 'test'
+  ...
+# Subtest: b/fate_exchange/resign: abandon only unresolved private choice
+ok 342 - b/fate_exchange/resign: abandon only unresolved private choice
+  ---
+  duration_ms: 19.3659
+  type: 'test'
+  ...
+# Subtest: b/pawn_deviation/null: quiet EP alias is a special mate
+ok 343 - b/pawn_deviation/null: quiet EP alias is a special mate
+  ---
+  duration_ms: 13.0858
+  type: 'test'
+  ...
+# Subtest: b/pawn_deviation/chain: quiet EP alias is a special mate
+ok 344 - b/pawn_deviation/chain: quiet EP alias is a special mate
+  ---
+  duration_ms: 12.1093
+  type: 'test'
+  ...
+# Subtest: b/pawn_deviation/mine_debuff: quiet EP alias is a special mate
+ok 345 - b/pawn_deviation/mine_debuff: quiet EP alias is a special mate
+  ---
+  duration_ms: 20.6241
+  type: 'test'
+  ...
+# Subtest: w/shelter: equivalent JSON integer spellings agree
+ok 346 - w/shelter: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 27.9145
+  type: 'test'
+  ...
+# Subtest: w/chain: equivalent JSON integer spellings agree
+ok 347 - w/chain: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 14.9879
+  type: 'test'
+  ...
+# Subtest: w/slow: equivalent JSON integer spellings agree
+ok 348 - w/slow: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 12.4837
+  type: 'test'
+  ...
+# Subtest: w/pawn_deviation: equivalent JSON integer spellings agree
+ok 349 - w/pawn_deviation: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 23.6217
+  type: 'test'
+  ...
+# Subtest: w/pawn_advance: equivalent JSON integer spellings agree
+ok 350 - w/pawn_advance: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 34.8249
+  type: 'test'
+  ...
+# Subtest: w/locked_square: equivalent JSON integer spellings agree
+ok 351 - w/locked_square: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 4.0047
+  type: 'test'
+  ...
+# Subtest: w/freeze: equivalent JSON integer spellings agree
+ok 352 - w/freeze: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 17.4817
+  type: 'test'
+  ...
+# Subtest: w/mine: equivalent JSON integer spellings agree
+ok 353 - w/mine: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 5.2139
+  type: 'test'
+  ...
+# Subtest: w/fog: equivalent JSON integer spellings agree
+ok 354 - w/fog: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 19.5693
+  type: 'test'
+  ...
+# Subtest: w/rook_bend: equivalent JSON integer spellings agree
+ok 355 - w/rook_bend: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 8.7913
+  type: 'test'
+  ...
+# Subtest: w/angry_n: equivalent JSON integer spellings agree
+ok 356 - w/angry_n: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 8.9093
+  type: 'test'
+  ...
+# Subtest: w/shadow_pass: equivalent JSON integer spellings agree
+ok 357 - w/shadow_pass: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 18.5991
+  type: 'test'
+  ...
+# Subtest: w/hunt_vow: equivalent JSON integer spellings agree
+ok 358 - w/hunt_vow: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 3.2934
+  type: 'test'
+  ...
+# Subtest: w/watch_vow: equivalent JSON integer spellings agree
+ok 359 - w/watch_vow: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 17.3644
+  type: 'test'
+  ...
+# Subtest: w/board_seal: equivalent JSON integer spellings agree
+ok 360 - w/board_seal: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 3.5118
+  type: 'test'
+  ...
+# Subtest: b/shelter: equivalent JSON integer spellings agree
+ok 361 - b/shelter: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 2.7453
+  type: 'test'
+  ...
+# Subtest: b/chain: equivalent JSON integer spellings agree
+ok 362 - b/chain: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 2.6124
+  type: 'test'
+  ...
+# Subtest: b/slow: equivalent JSON integer spellings agree
+ok 363 - b/slow: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 2.8959
+  type: 'test'
+  ...
+# Subtest: b/pawn_deviation: equivalent JSON integer spellings agree
+ok 364 - b/pawn_deviation: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 6.0496
+  type: 'test'
+  ...
+# Subtest: b/pawn_advance: equivalent JSON integer spellings agree
+ok 365 - b/pawn_advance: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 12.3928
+  type: 'test'
+  ...
+# Subtest: b/locked_square: equivalent JSON integer spellings agree
+ok 366 - b/locked_square: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 3.3046
+  type: 'test'
+  ...
+# Subtest: b/freeze: equivalent JSON integer spellings agree
+ok 367 - b/freeze: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 17.1961
+  type: 'test'
+  ...
+# Subtest: b/mine: equivalent JSON integer spellings agree
+ok 368 - b/mine: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 4.2452
+  type: 'test'
+  ...
+# Subtest: b/fog: equivalent JSON integer spellings agree
+ok 369 - b/fog: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 4.0386
+  type: 'test'
+  ...
+# Subtest: b/rook_bend: equivalent JSON integer spellings agree
+ok 370 - b/rook_bend: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 28.5179
+  type: 'test'
+  ...
+# Subtest: b/angry_n: equivalent JSON integer spellings agree
+ok 371 - b/angry_n: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 29.154
+  type: 'test'
+  ...
+# Subtest: b/shadow_pass: equivalent JSON integer spellings agree
+ok 372 - b/shadow_pass: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 30.1914
+  type: 'test'
+  ...
+# Subtest: b/hunt_vow: equivalent JSON integer spellings agree
+ok 373 - b/hunt_vow: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 26.1784
+  type: 'test'
+  ...
+# Subtest: b/watch_vow: equivalent JSON integer spellings agree
+ok 374 - b/watch_vow: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 39.0197
+  type: 'test'
+  ...
+# Subtest: b/board_seal: equivalent JSON integer spellings agree
+ok 375 - b/board_seal: equivalent JSON integer spellings agree
+  ---
+  duration_ms: 46.1731
+  type: 'test'
+  ...
+# Subtest: fresh Dart/TS compare raw equivalent and malformed card target JSON
+ok 376 - fresh Dart/TS compare raw equivalent and malformed card target JSON # SKIP
+  ---
+  duration_ms: 0.3713
+  type: 'test'
+  ...
+1..376
+# tests 376
+# suites 0
+# pass 373
+# fail 0
+# cancelled 0
+# skipped 3
+# todo 0
+# duration_ms 11108.4655

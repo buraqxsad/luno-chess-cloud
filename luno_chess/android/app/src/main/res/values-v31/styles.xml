@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/luno_splash_v212</item>
+        <item name="android:windowSplashScreenBackground">@color/luno_splash</item>
+        <item name="android:statusBarColor">@color/luno_splash</item>
+        <item name="android:navigationBarColor">@color/luno_splash</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@color/luno_splash</item>
+        <item name="android:statusBarColor">@color/luno_splash</item>
+        <item name="android:navigationBarColor">@color/luno_splash</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

@@ -1,0 +1,4237 @@
+{
+  "method": "Actual Flutter fixture PNGs, timestamp-gated to this source pass; not device/live-online evidence",
+  "since": "2026-10-11T12:36:02.259Z",
+  "renders": [
+    {
+      "file": "achievements-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "58f6bf44db3830eedf62ee710fde0d986e22ee7a101c72ba030ca61b2ad2c444",
+      "source": "qa\\rc\\screens\\achievements-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:35.121Z"
+    },
+    {
+      "file": "achievements-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "89a6d2be1b4b071ab07ad39a71aa2b639826c7de97c8237315159e88b665481c",
+      "source": "qa\\rc\\screens\\achievements-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:58.828Z"
+    },
+    {
+      "file": "achievements-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "a880bd7f4ba7668dc32e25c16721f1517e2f5d68e516c59734f8a06c398d9c5b",
+      "source": "qa\\rc\\screens\\achievements-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:18.471Z"
+    },
+    {
+      "file": "achievements-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "90aae7bc37e4a30f62d8dd0651ab1d72596aa8bfd55ae39e0d7cf6dee3b761ef",
+      "source": "qa\\rc\\screens\\achievements-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:50.489Z"
+    },
+    {
+      "file": "achievements-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "c5b535408a58088813d895b490ef475e9b39d6374b0271ca446a72eee61f79b0",
+      "source": "qa\\rc\\screens\\achievements-en.png",
+      "modifiedAt": "2026-10-11T12:42:44.382Z"
+    },
+    {
+      "file": "achievements-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "9fa065184fa30f33e77aae3ba42e2e2558acd89858d66d1923950ed7c70b3964",
+      "source": "qa\\rc\\screens\\achievements-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:14.663Z"
+    },
+    {
+      "file": "achievements-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "7a7643ecb59383e5f711e2e5757ff31e1aebe7aa4cf5130aec484c8a1212ce61",
+      "source": "qa\\rc\\screens\\achievements-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:32.668Z"
+    },
+    {
+      "file": "achievements-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "95bcf660627cec7cc0ff78de1ab54540c8ef3e7a6e3812a675cbfcd5f325912b",
+      "source": "qa\\rc\\screens\\achievements-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:55.412Z"
+    },
+    {
+      "file": "achievements-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "24f17d530a27a3bfdae69e44edb30155e52e4bc80727acf6bdc06e55599af5e8",
+      "source": "qa\\rc\\screens\\achievements-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:54.827Z"
+    },
+    {
+      "file": "achievements-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "4d15a535560d47068c34db9411f21d5b33827089df008d25740cedd7420a0e16",
+      "source": "qa\\rc\\screens\\achievements-tr.png",
+      "modifiedAt": "2026-10-11T12:41:58.211Z"
+    },
+    {
+      "file": "arenas-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "bc85b9825cd8fd748b08c0b2af0f317e120ee07bd87e14b530f57b7d59b4e4d9",
+      "source": "qa\\rc\\screens\\arenas-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:43.512Z"
+    },
+    {
+      "file": "arenas-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "6a0badee18e39b9f5d981bf144985ce9a509f6f3e9563b33c7b8722321039f58",
+      "source": "qa\\rc\\screens\\arenas-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:08.707Z"
+    },
+    {
+      "file": "arenas-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "a8909e6e2b2b4868630c962f6f58192351861e74e0686508bbc4893246b703ca",
+      "source": "qa\\rc\\screens\\arenas-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:27.804Z"
+    },
+    {
+      "file": "arenas-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "4ea081065917cd836b42b20540d13175e9e76386b7c4581f99d56731a04e94eb",
+      "source": "qa\\rc\\screens\\arenas-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:46:11.035Z"
+    },
+    {
+      "file": "arenas-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "27e5687284d286a4f8c65d3443783b5c7784242abd57cc3eeadc090f1dd2d7d7",
+      "source": "qa\\rc\\screens\\arenas-en-tail.png",
+      "modifiedAt": "2026-10-11T12:43:01.497Z"
+    },
+    {
+      "file": "arenas-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "0cd4958af3fe8588f7362b0bf0e91e0083f9b5dcbca87c6925bb525b928dff17",
+      "source": "qa\\rc\\screens\\arenas-en.png",
+      "modifiedAt": "2026-10-11T12:43:01.045Z"
+    },
+    {
+      "file": "arenas-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "8139b5501824ebc35f8b8edd37f2e47315571be87ca4e5cfe61d69f8ba077a4c",
+      "source": "qa\\rc\\screens\\arenas-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:22.511Z"
+    },
+    {
+      "file": "arenas-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "c1220cc66a3d3555db38f479399cdb973317169d968110b1ba5767c0e0bcbc58",
+      "source": "qa\\rc\\screens\\arenas-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:44.424Z"
+    },
+    {
+      "file": "arenas-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "9523732d9607215dc9620c471e581083cd0f6b7d3fb11139e0d3e3e767ddf279",
+      "source": "qa\\rc\\screens\\arenas-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:05.062Z"
+    },
+    {
+      "file": "arenas-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "de1b8711b72e8f192e0c284e20a7e3d332c3a7f47878a650208e066616a42fcb",
+      "source": "qa\\rc\\screens\\arenas-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:18.958Z"
+    },
+    {
+      "file": "arenas-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "de4dd487f4ef8798e2ea9cefce5799dea4a21d840bf590a3cca0828d4af985f7",
+      "source": "qa\\rc\\screens\\arenas-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:42:20.701Z"
+    },
+    {
+      "file": "arenas-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "f248005e937a5ea5182c6db69186c660f6c89c1a89e843526c831f9674000363",
+      "source": "qa\\rc\\screens\\arenas-tr.png",
+      "modifiedAt": "2026-10-11T12:42:19.857Z"
+    },
+    {
+      "file": "battle-card-angry_n-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "fcd6fcb94299475a3f1b43cc799f6c4788b15c576cd83efe3f5a23a787126f5d",
+      "source": "qa\\rc\\screens\\battle-card-angry_n-en.png",
+      "modifiedAt": "2026-10-11T12:42:49.942Z"
+    },
+    {
+      "file": "battle-card-angry_n-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "d1f2803a85ab8e8492076d6e3f4262371c9a0915afda6b103979ac35b8a6b086",
+      "source": "qa\\rc\\screens\\battle-card-angry_n-tr.png",
+      "modifiedAt": "2026-10-11T12:41:44.301Z"
+    },
+    {
+      "file": "battle-card-board_seal-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e42ecd2375f1fe65a2971b251a7b25b179003d6fc280efc512bede53dcf39146",
+      "source": "qa\\rc\\screens\\battle-card-board_seal-en.png",
+      "modifiedAt": "2026-10-11T12:42:59.797Z"
+    },
+    {
+      "file": "battle-card-board_seal-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "559020725343e14e2eb33ba9eb807db0fdb9f45bb6aa35e6f0405e6ed8d920c1",
+      "source": "qa\\rc\\screens\\battle-card-board_seal-tr.png",
+      "modifiedAt": "2026-10-11T12:41:58.013Z"
+    },
+    {
+      "file": "battle-card-break_seal-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "6f6666b9233fe7d43c07c9ec184d6c238976ade2bce30f700fa3a59c01042ff1",
+      "source": "qa\\rc\\screens\\battle-card-break_seal-en.png",
+      "modifiedAt": "2026-10-11T12:42:42.396Z"
+    },
+    {
+      "file": "battle-card-break_seal-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "9dbcf7ceafc3ef5f05746d125017034fe8ac6fdf3813ef31a2fa679450a84e12",
+      "source": "qa\\rc\\screens\\battle-card-break_seal-tr.png",
+      "modifiedAt": "2026-10-11T12:41:34.520Z"
+    },
+    {
+      "file": "battle-card-card_block-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "5ebe315eba2f296e23722fb623cb59ff551c69a5ba1d86d96a00186305cfe774",
+      "source": "qa\\rc\\screens\\battle-card-card_block-en.png",
+      "modifiedAt": "2026-10-11T12:42:46.884Z"
+    },
+    {
+      "file": "battle-card-card_block-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "148e960c8788506bc2d9905ce99e7afe51294bb7484cfaa3f9bb19c7e2892ae3",
+      "source": "qa\\rc\\screens\\battle-card-card_block-tr.png",
+      "modifiedAt": "2026-10-11T12:41:40.669Z"
+    },
+    {
+      "file": "battle-card-chain-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "0e2b7ae908b048c73a89a51fe8d10433addf2b75bed1695ec88d332c44ee066b",
+      "source": "qa\\rc\\screens\\battle-card-chain-en.png",
+      "modifiedAt": "2026-10-11T12:42:28.343Z"
+    },
+    {
+      "file": "battle-card-chain-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "a9e7074a82b945a68da04fed2c9c5d414af518046155d82db0429a63db809104",
+      "source": "qa\\rc\\screens\\battle-card-chain-tr.png",
+      "modifiedAt": "2026-10-11T12:41:23.291Z"
+    },
+    {
+      "file": "battle-card-echo-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "42e55152147212cb73bc92efba56fd4455e44ffea7df05abf37b2e1838959785",
+      "source": "qa\\rc\\screens\\battle-card-echo-en.png",
+      "modifiedAt": "2026-10-11T12:42:55.585Z"
+    },
+    {
+      "file": "battle-card-echo-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "5f41b1115c85e2de63e9f55e81d6404f7d86457f4ab0cb03e299bab9993fc301",
+      "source": "qa\\rc\\screens\\battle-card-echo-tr.png",
+      "modifiedAt": "2026-10-11T12:41:52.410Z"
+    },
+    {
+      "file": "battle-card-fate_exchange-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "7eb7969520ba29ce9ead7ad80874e423d01841793db87ef170e414f08a57a3ab",
+      "source": "qa\\rc\\screens\\battle-card-fate_exchange-en.png",
+      "modifiedAt": "2026-10-11T12:42:56.986Z"
+    },
+    {
+      "file": "battle-card-fate_exchange-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "a6080f896d7978a6288ac5b161c5527643da8e7c804294356eec59b2c3d8ca4c",
+      "source": "qa\\rc\\screens\\battle-card-fate_exchange-tr.png",
+      "modifiedAt": "2026-10-11T12:41:54.332Z"
+    },
+    {
+      "file": "battle-card-fog-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "b7a63d0f1ebd1dca47db7ddb2cec25952c00a99b8cc94d4dd7f2d87aea3a1c00",
+      "source": "qa\\rc\\screens\\battle-card-fog-en.png",
+      "modifiedAt": "2026-10-11T12:42:43.750Z"
+    },
+    {
+      "file": "battle-card-fog-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "c5cd2ee9bf4019a76ffae44e0b31ce1644402f500840572e731d838efce0cd22",
+      "source": "qa\\rc\\screens\\battle-card-fog-tr.png",
+      "modifiedAt": "2026-10-11T12:41:36.450Z"
+    },
+    {
+      "file": "battle-card-freeze-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "30b757dacc3a371eda40a101cf687d67b56631f233b5c0a5de5dbc879df50261",
+      "source": "qa\\rc\\screens\\battle-card-freeze-en.png",
+      "modifiedAt": "2026-10-11T12:42:37.466Z"
+    },
+    {
+      "file": "battle-card-freeze-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "04545e0ecb6b9e5c7ad7804117a16e20f2e2f829aebdfef2beddfe2af14013f6",
+      "source": "qa\\rc\\screens\\battle-card-freeze-tr.png",
+      "modifiedAt": "2026-10-11T12:41:29.261Z"
+    },
+    {
+      "file": "battle-card-hunt_vow-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "f0893f28adf3d7f2f825fb70f9eb25417f4a950e321c32339cdc1f3b7ca6a5f9",
+      "source": "qa\\rc\\screens\\battle-card-hunt_vow-en.png",
+      "modifiedAt": "2026-10-11T12:42:52.857Z"
+    },
+    {
+      "file": "battle-card-hunt_vow-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "1a21ac02b66d96222fda4754918ea1f938725c870942983fd28c0dbf60decd18",
+      "source": "qa\\rc\\screens\\battle-card-hunt_vow-tr.png",
+      "modifiedAt": "2026-10-11T12:41:48.360Z"
+    },
+    {
+      "file": "battle-card-locked_square-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "3e8582ff148fa98b30d3adeda8bedaf0ae8b4c54197ebb45e90707e8cb717dec",
+      "source": "qa\\rc\\screens\\battle-card-locked_square-en.png",
+      "modifiedAt": "2026-10-11T12:42:35.317Z"
+    },
+    {
+      "file": "battle-card-locked_square-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "b0151492224c277483ba87ca8cc5525f9571316c80e752b5bfbdc0c101931988",
+      "source": "qa\\rc\\screens\\battle-card-locked_square-tr.png",
+      "modifiedAt": "2026-10-11T12:41:27.929Z"
+    },
+    {
+      "file": "battle-card-mana_sabotage-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "85a2e59cbbced079574b02e1af6d9d557258b12685fbfbfb4890bf7ed8f423b4",
+      "source": "qa\\rc\\screens\\battle-card-mana_sabotage-en.png",
+      "modifiedAt": "2026-10-11T12:42:45.507Z"
+    },
+    {
+      "file": "battle-card-mana_sabotage-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "b8e974d8a255a29d2855977a78521f16e312089e83243449141093be61486624",
+      "source": "qa\\rc\\screens\\battle-card-mana_sabotage-tr.png",
+      "modifiedAt": "2026-10-11T12:41:38.422Z"
+    },
+    {
+      "file": "battle-card-mine-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "0410606b56688419be3315a7eccea72910060f30f270483fedaec676ad806a04",
+      "source": "qa\\rc\\screens\\battle-card-mine-en.png",
+      "modifiedAt": "2026-10-11T12:42:41.088Z"
+    },
+    {
+      "file": "battle-card-mine-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "288fc549f9c5b3ade3765176589c56293634f4d66015404daa79de5e2bd15309",
+      "source": "qa\\rc\\screens\\battle-card-mine-tr.png",
+      "modifiedAt": "2026-10-11T12:41:32.636Z"
+    },
+    {
+      "file": "battle-card-pawn_advance-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "41adda3f708d210b532457a941aa0080e19d6f846bfe54f5282c4fb58deb58c4",
+      "source": "qa\\rc\\screens\\battle-card-pawn_advance-en.png",
+      "modifiedAt": "2026-10-11T12:42:33.542Z"
+    },
+    {
+      "file": "battle-card-pawn_advance-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "512186a56f88a5ddfc1d39963850c99cad049c9dd931cde609c928870566741f",
+      "source": "qa\\rc\\screens\\battle-card-pawn_advance-tr.png",
+      "modifiedAt": "2026-10-11T12:41:26.818Z"
+    },
+    {
+      "file": "battle-card-pawn_deviation-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "682294af6fafcf83aa0ea937f509d7785af156902414ce5430e3238dd405dda6",
+      "source": "qa\\rc\\screens\\battle-card-pawn_deviation-en.png",
+      "modifiedAt": "2026-10-11T12:42:31.833Z"
+    },
+    {
+      "file": "battle-card-pawn_deviation-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "962c06c133045a24d123e9265bbca5132807dfb9f019cde091b84aaccf181d45",
+      "source": "qa\\rc\\screens\\battle-card-pawn_deviation-tr.png",
+      "modifiedAt": "2026-10-11T12:41:25.590Z"
+    },
+    {
+      "file": "battle-card-prophecy-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "10b433492bd8de99664a5cbb5fdb54f5c0fdf9ff8abbe49dca6aaa6609109761",
+      "source": "qa\\rc\\screens\\battle-card-prophecy-en.png",
+      "modifiedAt": "2026-10-11T12:42:25.742Z"
+    },
+    {
+      "file": "battle-card-prophecy-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e824bea722deb4c282275b46db5cd1deb9db2deaaa912916ac7e7a3dc35bd3ca",
+      "source": "qa\\rc\\screens\\battle-card-prophecy-tr.png",
+      "modifiedAt": "2026-10-11T12:41:19.819Z"
+    },
+    {
+      "file": "battle-card-purify-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "64dc4b0d09cb0ea8c1787e1ad277fe9e2949c5bc4217c9e7a7c5ff2db111bb9b",
+      "source": "qa\\rc\\screens\\battle-card-purify-en.png",
+      "modifiedAt": "2026-10-11T12:42:39.629Z"
+    },
+    {
+      "file": "battle-card-purify-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "39b35376070ce85110beebbc4586a0afc75b36edfd3f184179f2f43589886c31",
+      "source": "qa\\rc\\screens\\battle-card-purify-tr.png",
+      "modifiedAt": "2026-10-11T12:41:30.655Z"
+    },
+    {
+      "file": "battle-card-radar-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "a2f9bfa0b07f26442db5c7c3378aa6dd0e8ddeb63459c5dab4a257f8160d8de5",
+      "source": "qa\\rc\\screens\\battle-card-radar-en.png",
+      "modifiedAt": "2026-10-11T12:42:24.403Z"
+    },
+    {
+      "file": "battle-card-radar-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "20198a029cb4ae251489a0caa4affe49a417cefe6e7c1f5e6ab527252c4f70f9",
+      "source": "qa\\rc\\screens\\battle-card-radar-tr.png",
+      "modifiedAt": "2026-10-11T12:41:17.675Z"
+    },
+    {
+      "file": "battle-card-rook_bend-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "f0994e444d9a07967527324b1bd4f49bbab9a44f25134a84b3d15ad578867ba2",
+      "source": "qa\\rc\\screens\\battle-card-rook_bend-en.png",
+      "modifiedAt": "2026-10-11T12:42:48.658Z"
+    },
+    {
+      "file": "battle-card-rook_bend-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "c26cb52feb4b684842b192b4beb22e27afb67f7684bb40ae36153575ce01811c",
+      "source": "qa\\rc\\screens\\battle-card-rook_bend-tr.png",
+      "modifiedAt": "2026-10-11T12:41:42.498Z"
+    },
+    {
+      "file": "battle-card-shadow_contract-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "ddcab8192be88b8858d54a6041754cddeb268f0a986c6027b89c5e2404725061",
+      "source": "qa\\rc\\screens\\battle-card-shadow_contract-en.png",
+      "modifiedAt": "2026-10-11T12:42:58.455Z"
+    },
+    {
+      "file": "battle-card-shadow_contract-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "2ba8614477c598d916c68efcb73cf17ca548fc5391c0b8a5130788c4bd3be84e",
+      "source": "qa\\rc\\screens\\battle-card-shadow_contract-tr.png",
+      "modifiedAt": "2026-10-11T12:41:56.324Z"
+    },
+    {
+      "file": "battle-card-shadow_pass-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "80994ecbf3f6530a20c9b6e6b9ac6adc75886425fe174ef7bec53d1ff623b019",
+      "source": "qa\\rc\\screens\\battle-card-shadow_pass-en.png",
+      "modifiedAt": "2026-10-11T12:42:51.471Z"
+    },
+    {
+      "file": "battle-card-shadow_pass-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "053073366567ef579a558524552b34034cddf842ae5b1145068558552e19183b",
+      "source": "qa\\rc\\screens\\battle-card-shadow_pass-tr.png",
+      "modifiedAt": "2026-10-11T12:41:46.169Z"
+    },
+    {
+      "file": "battle-card-shelter-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "94433cc59ab23b3321812be1293e24ccfc7e81abe44258ef6fb60695ca792d5d",
+      "source": "qa\\rc\\screens\\battle-card-shelter-en.png",
+      "modifiedAt": "2026-10-11T12:42:27.081Z"
+    },
+    {
+      "file": "battle-card-shelter-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "2c07145c3cc0a2c02693f758e4ab8286b368dd7c58f44fae135c5b2e4043fcc0",
+      "source": "qa\\rc\\screens\\battle-card-shelter-tr.png",
+      "modifiedAt": "2026-10-11T12:41:21.964Z"
+    },
+    {
+      "file": "battle-card-slow-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "564863c15caf3252f97e7f21ad134ad1a7d69d077e13a3d847d8fc9358d4c6b1",
+      "source": "qa\\rc\\screens\\battle-card-slow-en.png",
+      "modifiedAt": "2026-10-11T12:42:29.977Z"
+    },
+    {
+      "file": "battle-card-slow-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "7251287b1e81e3c69daf17bf83eb54690b0af456e9397f29cdc15521cbfaf030",
+      "source": "qa\\rc\\screens\\battle-card-slow-tr.png",
+      "modifiedAt": "2026-10-11T12:41:24.432Z"
+    },
+    {
+      "file": "battle-card-watch_vow-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "ab30f6ef99d05684be91bc9bc48dccc9fe22af5f4a9ffe82be60c1a3c86bac70",
+      "source": "qa\\rc\\screens\\battle-card-watch_vow-en.png",
+      "modifiedAt": "2026-10-11T12:42:54.113Z"
+    },
+    {
+      "file": "battle-card-watch_vow-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "4004b9f9bd13439f4bf553afbcb0f3c021108060c664ce341c284adb5b12a716",
+      "source": "qa\\rc\\screens\\battle-card-watch_vow-tr.png",
+      "modifiedAt": "2026-10-11T12:41:50.425Z"
+    },
+    {
+      "file": "battle-compact-en.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "f936bf6b30afb367fefae3291699fbd4318b32e649059684af3e8c3b631b13b3",
+      "source": "qa\\rc\\screens\\battle-compact-en.png",
+      "modifiedAt": "2026-10-11T12:43:01.913Z"
+    },
+    {
+      "file": "battle-compact-four-en.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "495dedd17dcef6ccf0cf0823bf6a64019fffb850d2e43e27238ce4ba8f381bde",
+      "source": "qa\\rc\\screens\\battle-compact-four-en.png",
+      "modifiedAt": "2026-10-11T12:43:05.092Z"
+    },
+    {
+      "file": "battle-compact-four-tr.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "c80876d5bd796d07135f0cfcb40f4e4c8accf186970e40a5839328f4277cdf4e",
+      "source": "qa\\rc\\screens\\battle-compact-four-tr.png",
+      "modifiedAt": "2026-10-11T12:42:04.799Z"
+    },
+    {
+      "file": "battle-compact-selected-en.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "fc040d0ffaf81288dde6505cfcd25917b94ae697c6d4d3a45d8753a0f546acfc",
+      "source": "qa\\rc\\screens\\battle-compact-selected-en.png",
+      "modifiedAt": "2026-10-11T12:43:02.801Z"
+    },
+    {
+      "file": "battle-compact-selected-tr.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "91db063eef2f50fd18a79dd603cd8b5e406cfde4bf1de88c460eb5a1e5ea02a0",
+      "source": "qa\\rc\\screens\\battle-compact-selected-tr.png",
+      "modifiedAt": "2026-10-11T12:42:02.221Z"
+    },
+    {
+      "file": "battle-compact-target-en.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "75998d71fd232f65d2161e37172b0bdc05e9a029df222f074cd4f2ffd1fe5443",
+      "source": "qa\\rc\\screens\\battle-compact-target-en.png",
+      "modifiedAt": "2026-10-11T12:43:04.047Z"
+    },
+    {
+      "file": "battle-compact-target-tr.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "64fbcbbb6ab1d7966ac786bad8f0cef48dd05606297549f01917291709737206",
+      "source": "qa\\rc\\screens\\battle-compact-target-tr.png",
+      "modifiedAt": "2026-10-11T12:42:03.701Z"
+    },
+    {
+      "file": "battle-compact-text-en.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "6ffd1d323b1f653f48a170194332b3d0414c8722f25de38fd43463663d1b0dab",
+      "source": "qa\\rc\\screens\\battle-compact-text-en.png",
+      "modifiedAt": "2026-10-11T12:43:05.813Z"
+    },
+    {
+      "file": "battle-compact-text-tr.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "9b4f66dd325748c77714e6d25dc8e3b40d9b4d6cb66aeaf6867b1b9cbcba6ae3",
+      "source": "qa\\rc\\screens\\battle-compact-text-tr.png",
+      "modifiedAt": "2026-10-11T12:42:06.027Z"
+    },
+    {
+      "file": "battle-compact-tr.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "5e5429e48bc7db514ca768ddfb6fa06c71ba0d4df8c33343a57753389d1a8ac8",
+      "source": "qa\\rc\\screens\\battle-compact-tr.png",
+      "modifiedAt": "2026-10-11T12:42:00.968Z"
+    },
+    {
+      "file": "battle-defeat-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "3d389eb617dbe774e01794ba149f70079b006c5b946e00e99ce12efaefae5dba",
+      "source": "qa\\rc\\screens\\battle-defeat-en.png",
+      "modifiedAt": "2026-10-11T12:43:00.813Z"
+    },
+    {
+      "file": "battle-defeat-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e8e2e154a43e8d713af27d13b64932fafffabeb540652b3c107b22db4daa8587",
+      "source": "qa\\rc\\screens\\battle-defeat-tr.png",
+      "modifiedAt": "2026-10-11T12:41:59.522Z"
+    },
+    {
+      "file": "battle-draw-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "f76d4ce415605059d4808420d06d6ae936daafe14992df7f200c38018356b966",
+      "source": "qa\\rc\\screens\\battle-draw-en.png",
+      "modifiedAt": "2026-10-11T12:43:01.219Z"
+    },
+    {
+      "file": "battle-draw-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "00e779d19439d1757c02bef900893904e6658175a805c648e618e4d06c9f4230",
+      "source": "qa\\rc\\screens\\battle-draw-tr.png",
+      "modifiedAt": "2026-10-11T12:42:00.071Z"
+    },
+    {
+      "file": "battle-emotes-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "82de0fb7cf0f55e6ef37b96a3607b331f0b6b7182d6f2e4b279f4b51623a8656",
+      "source": "qa\\rc\\screens\\battle-emotes-en.png",
+      "modifiedAt": "2026-10-11T12:42:21.369Z"
+    },
+    {
+      "file": "battle-emotes-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "790c2baa5ab34e5919bd1c32aff0a7357b254a2a7e18674bdf5e537a0045c21a",
+      "source": "qa\\rc\\screens\\battle-emotes-tr.png",
+      "modifiedAt": "2026-10-11T12:41:12.543Z"
+    },
+    {
+      "file": "battle-first-turn-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "f257226fb1ac07f563d1ea03c6fdc9d1966398f8c3f487088993302fd41d41e3",
+      "source": "qa\\rc\\screens\\battle-first-turn-en.png",
+      "modifiedAt": "2026-10-11T12:42:10.642Z"
+    },
+    {
+      "file": "battle-first-turn-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "cb608bb305d107b50d7c20d978a31dbfdcd35ab74494d39642fadefa99ba243c",
+      "source": "qa\\rc\\screens\\battle-first-turn-tr.png",
+      "modifiedAt": "2026-10-11T12:40:56.354Z"
+    },
+    {
+      "file": "battle-knowledge-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "34c66662345dec769b1a7b0f8dd4f54f76a0c678ebc2deef7e9e569f28812e8f",
+      "source": "qa\\rc\\screens\\battle-knowledge-en.png",
+      "modifiedAt": "2026-10-11T12:42:22.993Z"
+    },
+    {
+      "file": "battle-knowledge-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "012da57d38367cffd97f98101cafbf2e7dfedc228e43120ded782481da55fec4",
+      "source": "qa\\rc\\screens\\battle-knowledge-tr.png",
+      "modifiedAt": "2026-10-11T12:41:14.948Z"
+    },
+    {
+      "file": "battle-landscape-en.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "a44ea5d1a7ebf58f84a3582d393cc23e705d405c2faef6dc19ab14386e1dabb2",
+      "source": "qa\\rc\\screens\\battle-landscape-en.png",
+      "modifiedAt": "2026-10-11T12:43:08.300Z"
+    },
+    {
+      "file": "battle-landscape-tr.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "a8dde5be4a0bae276d5fd16648b5f828fb6c7e47c94c503efd027accf8f9cbde",
+      "source": "qa\\rc\\screens\\battle-landscape-tr.png",
+      "modifiedAt": "2026-10-11T12:42:09.028Z"
+    },
+    {
+      "file": "battle-main-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "7aa15c53ee3119cc521685853c0069bb36a174773899ad3bb767dabf54f32a0b",
+      "source": "qa\\rc\\screens\\battle-main-en.png",
+      "modifiedAt": "2026-10-11T12:42:09.867Z"
+    },
+    {
+      "file": "battle-main-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "c8aa93b94c23a8c1e4a6ae45b867f206296d7d4e07387790d5dc1f33420335bb",
+      "source": "qa\\rc\\screens\\battle-main-tr.png",
+      "modifiedAt": "2026-10-11T12:40:54.236Z"
+    },
+    {
+      "file": "battle-menu-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "0770db355e5802be8c600d9cd6180de1398327307aebf5c4fc60405e776e0248",
+      "source": "qa\\rc\\screens\\battle-menu-en.png",
+      "modifiedAt": "2026-10-11T12:42:14.638Z"
+    },
+    {
+      "file": "battle-menu-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "1bab6731e95085188194328ef701e04055915212f3cfe3b325a6d7937987fec0",
+      "source": "qa\\rc\\screens\\battle-menu-tr.png",
+      "modifiedAt": "2026-10-11T12:41:04.141Z"
+    },
+    {
+      "file": "battle-opponent-cards-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "d5213b708ad0edb42f54d1998987df2d08e2de05b4fb02c99d25c7cef1f65de2",
+      "source": "qa\\rc\\screens\\battle-opponent-cards-en.png",
+      "modifiedAt": "2026-10-11T12:42:19.811Z"
+    },
+    {
+      "file": "battle-opponent-cards-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "127f549d282336fd6f46cf8bfc51c8b546183dff917baba2d41e0f891a8cbce3",
+      "source": "qa\\rc\\screens\\battle-opponent-cards-tr.png",
+      "modifiedAt": "2026-10-11T12:41:10.522Z"
+    },
+    {
+      "file": "battle-own-deck-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "9f225e6bae4d3c72f73ef61d055a86db9086dc4b41be11ce7d7e35d6b3268c4c",
+      "source": "qa\\rc\\screens\\battle-own-deck-en.png",
+      "modifiedAt": "2026-10-11T12:42:17.943Z"
+    },
+    {
+      "file": "battle-own-deck-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "a2e1ec700c6dd6bbe3facc552a0c04c08aa9ae2a81cc86c1df5789446c4f6668",
+      "source": "qa\\rc\\screens\\battle-own-deck-tr.png",
+      "modifiedAt": "2026-10-11T12:41:08.772Z"
+    },
+    {
+      "file": "battle-resign-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "d03d88a763e90d2a2ea8c98198eab7a8ad8a4c93a7e081725ed2780dec8586a7",
+      "source": "qa\\rc\\screens\\battle-resign-en.png",
+      "modifiedAt": "2026-10-11T12:42:16.232Z"
+    },
+    {
+      "file": "battle-resign-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "6a5df4e57626afe5ae42d64782ab4c6b9fa371c271d0f342dca28723ee6b6815",
+      "source": "qa\\rc\\screens\\battle-resign-tr.png",
+      "modifiedAt": "2026-10-11T12:41:06.534Z"
+    },
+    {
+      "file": "battle-scaled-en.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "df9d3716bffe745683f8d11a688c4a3b261761cda7d15e1a5c42b01ff64e76c2",
+      "source": "qa\\rc\\screens\\battle-scaled-en.png",
+      "modifiedAt": "2026-10-11T12:43:06.525Z"
+    },
+    {
+      "file": "battle-scaled-tr.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "48c5e1525b7fc236a6e4738d3fe559fcc2eaa9d1e7959f4fcc07a0d438499dad",
+      "source": "qa\\rc\\screens\\battle-scaled-tr.png",
+      "modifiedAt": "2026-10-11T12:42:06.977Z"
+    },
+    {
+      "file": "battle-selected-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "4a479ab28bac1743a4d19fc89fef917783ef5b8081c0e3b92ce70c07682c79bc",
+      "source": "qa\\rc\\screens\\battle-selected-en.png",
+      "modifiedAt": "2026-10-11T12:42:11.896Z"
+    },
+    {
+      "file": "battle-selected-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e16af1d9a656dc5bff83335268200cf33883ca3cbe09cd70f7581dee7ec7f77a",
+      "source": "qa\\rc\\screens\\battle-selected-tr.png",
+      "modifiedAt": "2026-10-11T12:40:59.221Z"
+    },
+    {
+      "file": "battle-tablet-en.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "a635e6e07bed65ac90cc3b1467944c1839eb48969e64abae7528572559987624",
+      "source": "qa\\rc\\screens\\battle-tablet-en.png",
+      "modifiedAt": "2026-10-11T12:43:07.643Z"
+    },
+    {
+      "file": "battle-tablet-tr.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "91c41abac54d9b1ac4f72690e791b505c2c988e6dba124800a536c21b15f2ec0",
+      "source": "qa\\rc\\screens\\battle-tablet-tr.png",
+      "modifiedAt": "2026-10-11T12:42:08.119Z"
+    },
+    {
+      "file": "battle-target-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "b00db8b9666ca0e0c95a75f030092d9b886224479ccda3f538f0823f672b10f6",
+      "source": "qa\\rc\\screens\\battle-target-en.png",
+      "modifiedAt": "2026-10-11T12:42:13.469Z"
+    },
+    {
+      "file": "battle-target-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "454229c8cd32605aea4e12f41e769a5aa0cd61928b1a9618e850bd6f6f6aa7bf",
+      "source": "qa\\rc\\screens\\battle-target-tr.png",
+      "modifiedAt": "2026-10-11T12:41:01.800Z"
+    },
+    {
+      "file": "battle-victory-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "8843ac8355f24cecbe377f63790c9f38f66027c04f72c0801b8325e28880110d",
+      "source": "qa\\rc\\screens\\battle-victory-en.png",
+      "modifiedAt": "2026-10-11T12:43:00.319Z"
+    },
+    {
+      "file": "battle-victory-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e2389b9a57b38be3a4c9c58b7984e7964c52aa1a104e917b734fd02a5066d503",
+      "source": "qa\\rc\\screens\\battle-victory-tr.png",
+      "modifiedAt": "2026-10-11T12:41:58.871Z"
+    },
+    {
+      "file": "cards-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "3846214d745af3fff237caebacf6d73aabcbc692b992f606f6b42e5c6072aa78",
+      "source": "qa\\rc\\screens\\cards-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:41.877Z"
+    },
+    {
+      "file": "cards-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "8e4281b4dd67d1e6d30208623248444d7fb1895d584f718f949b99b8562a61f7",
+      "source": "qa\\rc\\screens\\cards-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:07.044Z"
+    },
+    {
+      "file": "cards-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "5ef57a02449f68b46f98d56fb0336205546415993d976f719608738c9c4aab91",
+      "source": "qa\\rc\\screens\\cards-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:25.789Z"
+    },
+    {
+      "file": "cards-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "324f0a6cfab74ce70e7fb77302293dcb2c099e11fd18f467dcdce768076235a5",
+      "source": "qa\\rc\\screens\\cards-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:46:07.447Z"
+    },
+    {
+      "file": "cards-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "dcefab5005bbcd8c6f0b3602a42450662dd24ed2a20b3cf5a7fa9c330a3e5cf2",
+      "source": "qa\\rc\\screens\\cards-en-tail.png",
+      "modifiedAt": "2026-10-11T12:42:58.188Z"
+    },
+    {
+      "file": "cards-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "c9ac7859f57d49ebb07f0730b16a73d492f1e3f9f639949efa76222a35c1cc99",
+      "source": "qa\\rc\\screens\\cards-en.png",
+      "modifiedAt": "2026-10-11T12:42:57.083Z"
+    },
+    {
+      "file": "cards-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "bc3dff28f557a144d9e45bf5d7df34955ca184bf26f35bc138f4a37963c060a4",
+      "source": "qa\\rc\\screens\\cards-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:20.783Z"
+    },
+    {
+      "file": "cards-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "bd84f8b389833de2ca48dc0e0accbffb86fe5330486a480f5b4552da5bcc0741",
+      "source": "qa\\rc\\screens\\cards-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:42.321Z"
+    },
+    {
+      "file": "cards-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "98adb74ed587bf966993a434c4e29bc4df28d507f01a4d67b447d9066ea8a9b1",
+      "source": "qa\\rc\\screens\\cards-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:03.111Z"
+    },
+    {
+      "file": "cards-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "e2336850c97749a6faa63df70e80fc62a79e8637ec04133bc52e53de50bd3214",
+      "source": "qa\\rc\\screens\\cards-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:15.283Z"
+    },
+    {
+      "file": "cards-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "fa662aa57479735c4d7f067939dc144b25e143730329d58313bb30c8475f7efc",
+      "source": "qa\\rc\\screens\\cards-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:42:15.045Z"
+    },
+    {
+      "file": "cards-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "32f745575175c1a987c133b4d7632b30fdcec0a8d8a92119aa6db31408240de4",
+      "source": "qa\\rc\\screens\\cards-tr.png",
+      "modifiedAt": "2026-10-11T12:42:13.846Z"
+    },
+    {
+      "file": "collection-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "de0a4dccd3d372cfc5116b651176c3bd237fb61fec5f4bbd689af49b5e77e0b4",
+      "source": "qa\\rc\\screens\\collection-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:40.797Z"
+    },
+    {
+      "file": "collection-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "bf51696f8150217f640dae70bcd1874fd133d8220718ae30d7f5b6b4db5b96e3",
+      "source": "qa\\rc\\screens\\collection-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:05.974Z"
+    },
+    {
+      "file": "collection-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "dc376ed0538fdc2ed3fd1649f96d51f41d717daebef8723a703496cc9afa4ace",
+      "source": "qa\\rc\\screens\\collection-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:24.633Z"
+    },
+    {
+      "file": "collection-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "23eedb9eb70506e39769560c0f5f4c2ab0671cbfb7f4786d59fa963d0bda5716",
+      "source": "qa\\rc\\screens\\collection-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:46:04.473Z"
+    },
+    {
+      "file": "collection-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "8f7867bd3d3194c3dcca1370108d985fb183b69e06cf959ded16d571caecf122",
+      "source": "qa\\rc\\screens\\collection-en.png",
+      "modifiedAt": "2026-10-11T12:42:55.556Z"
+    },
+    {
+      "file": "collection-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "85550751c97dd9ae6f3c23caa849e4ae0ece331d6b483890c60db7dc37ef1eb9",
+      "source": "qa\\rc\\screens\\collection-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:19.863Z"
+    },
+    {
+      "file": "collection-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "73a553a5a081d7084ed6aeb5f5e940924baa88d26b2d595558e1c1824c790cd6",
+      "source": "qa\\rc\\screens\\collection-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:40.810Z"
+    },
+    {
+      "file": "collection-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "1989540c86d9bb11e2af6afa700749d78919724c54f8f77415f63048b28a71ab",
+      "source": "qa\\rc\\screens\\collection-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:01.886Z"
+    },
+    {
+      "file": "collection-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "6cb9b3747d860ddf1fcfdaef4f638a28b02590df3b7ad015ecbe7121052f54ef",
+      "source": "qa\\rc\\screens\\collection-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:11.299Z"
+    },
+    {
+      "file": "collection-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "3d54495ff92dbca651c5986fa04612c914968e762ce5649dc3a4deb882f2170b",
+      "source": "qa\\rc\\screens\\collection-tr.png",
+      "modifiedAt": "2026-10-11T12:42:11.934Z"
+    },
+    {
+      "file": "costumes-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "0f27a9bab808ddcb59881d25c561d6fc813f9077545b0f7ea213a9cf959f6bd5",
+      "source": "qa\\rc\\screens\\costumes-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:42.320Z"
+    },
+    {
+      "file": "costumes-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "8abc42bce996ea08b477cce9618a076b55063d1feeffb880e780993682fd37b2",
+      "source": "qa\\rc\\screens\\costumes-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:07.595Z"
+    },
+    {
+      "file": "costumes-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "0c7263daff682fbf627b97683d58f318433a6997c2792cd4ab99634c16bfbe85",
+      "source": "qa\\rc\\screens\\costumes-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:26.330Z"
+    },
+    {
+      "file": "costumes-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "7897b77e4ce9c6acf6a0fd94b9b7fec4514d601674844430242231fedbc81c4e",
+      "source": "qa\\rc\\screens\\costumes-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:46:08.902Z"
+    },
+    {
+      "file": "costumes-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "a21284755ab28e8bfd949b1efe04a25ce646a83c8dae2afa246065f76cf861a2",
+      "source": "qa\\rc\\screens\\costumes-en-tail.png",
+      "modifiedAt": "2026-10-11T12:42:59.404Z"
+    },
+    {
+      "file": "costumes-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "de7998874d9768caa53d8e2b4d13b415d587131e38dca1673ac06110f7d445ad",
+      "source": "qa\\rc\\screens\\costumes-en.png",
+      "modifiedAt": "2026-10-11T12:42:58.901Z"
+    },
+    {
+      "file": "costumes-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "bac2e17e9236c24436521478b37c649e8adf224f2c36d391da2b7e66d60070ff",
+      "source": "qa\\rc\\screens\\costumes-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:21.276Z"
+    },
+    {
+      "file": "costumes-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "5bcf374e97bdce71d49d42b71fb86f3df6ee01b77936371dff4fd8eeebf9f07c",
+      "source": "qa\\rc\\screens\\costumes-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:42.899Z"
+    },
+    {
+      "file": "costumes-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "cabfe741b308ee6eb9ef8d6b115e598dcc0629d600469a837972d75ba7f21c8e",
+      "source": "qa\\rc\\screens\\costumes-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:03.635Z"
+    },
+    {
+      "file": "costumes-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "b106706f357f3e8f839897b78d9489dec5e49c742d91fa6cc46acb88696339b4",
+      "source": "qa\\rc\\screens\\costumes-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:16.465Z"
+    },
+    {
+      "file": "costumes-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "bca6aaa911d9b8b4d239733ceec11fbdabf310e04ab1ec82f6963b7670f82206",
+      "source": "qa\\rc\\screens\\costumes-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:42:17.385Z"
+    },
+    {
+      "file": "costumes-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "41dc47c08ae5ede1b29f8f556b0ee01bf217dbcaffce204405ba3df0c5b91112",
+      "source": "qa\\rc\\screens\\costumes-tr.png",
+      "modifiedAt": "2026-10-11T12:42:16.360Z"
+    },
+    {
+      "file": "deck-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "68550aad8fdd5bdb1af6b01cf9bc8ef64ea1e7c9e8a810d4dfdaf1b698c095c7",
+      "source": "qa\\rc\\screens\\deck-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:40.354Z"
+    },
+    {
+      "file": "deck-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "b6d376414e0b1dbd82fcd5e67e37e13f121edf373f5432a1ce98d57e3d97656f",
+      "source": "qa\\rc\\screens\\deck-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:05.618Z"
+    },
+    {
+      "file": "deck-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "55e0450ea9082a397a4616aa5755a4b24ef66ef9c13d2a6fc84a9f75d3cbe126",
+      "source": "qa\\rc\\screens\\deck-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:24.071Z"
+    },
+    {
+      "file": "deck-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "c258c011c0d19c9a662c08cf44b568b01e212de91058b4969eaa011edf3a7c1d",
+      "source": "qa\\rc\\screens\\deck-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:46:03.309Z"
+    },
+    {
+      "file": "deck-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "d7988d946a83a32b4b705dccd2f33a0e0d4f863167b339a81a6844638bb8b387",
+      "source": "qa\\rc\\screens\\deck-en-tail.png",
+      "modifiedAt": "2026-10-11T12:42:54.793Z"
+    },
+    {
+      "file": "deck-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "7da32ab853c70d1ec7ae40a6982669a64babe04b97dbd7297b34c48b7c02b44a",
+      "source": "qa\\rc\\screens\\deck-en.png",
+      "modifiedAt": "2026-10-11T12:42:53.627Z"
+    },
+    {
+      "file": "deck-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "ce01262bfac0036b82916746def33587dc8282ba8441ed25d8ee3f6a1c49bb68",
+      "source": "qa\\rc\\screens\\deck-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:19.532Z"
+    },
+    {
+      "file": "deck-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "d2345cfb81f04d9e25b90be66282be047a8373d7639641f73dc3c2b2aaa91e9e",
+      "source": "qa\\rc\\screens\\deck-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:40.285Z"
+    },
+    {
+      "file": "deck-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "6dcb6022a08da30387cd3f6bac6310c956c29ca67122d8376dfcc20f0f49d63a",
+      "source": "qa\\rc\\screens\\deck-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:01.396Z"
+    },
+    {
+      "file": "deck-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "2d4511d44e7bd6ab24acfdfa6daaa9dff87a3220ba6dc2aa94fe2847f05b71fb",
+      "source": "qa\\rc\\screens\\deck-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:10.211Z"
+    },
+    {
+      "file": "deck-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "487ad521b9e774f9e9be57ecdeba119111a68f593bdf19813be2f7e7fb9373b3",
+      "source": "qa\\rc\\screens\\deck-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:42:10.932Z"
+    },
+    {
+      "file": "deck-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "c260365906c4c9c904d615fff00ff41d0109223c7a5d3e2ff412781256f12314",
+      "source": "qa\\rc\\screens\\deck-tr.png",
+      "modifiedAt": "2026-10-11T12:42:09.960Z"
+    },
+    {
+      "file": "difficulty-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "eda0f531fffa039e127efff79585223652f9ef4cfb6da6573051943380022ced",
+      "source": "qa\\rc\\screens\\difficulty-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:30.283Z"
+    },
+    {
+      "file": "difficulty-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "a73616312a4431e545c4c0970fb3a799f03fa634bacac0ad5be2501cb15fb182",
+      "source": "qa\\rc\\screens\\difficulty-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:52.440Z"
+    },
+    {
+      "file": "difficulty-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "b0833c713ec2b9b02065c2ae304c6b32eb7b9cfce7e78cf12245aab9589efd86",
+      "source": "qa\\rc\\screens\\difficulty-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:12.371Z"
+    },
+    {
+      "file": "difficulty-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "c548b89bcac6468caa25e723d34ee0b51d6e649c3362a6164d349c39b280617b",
+      "source": "qa\\rc\\screens\\difficulty-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:38.588Z"
+    },
+    {
+      "file": "difficulty-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "4eab84483967d7f33b5da5bba42688294085b2de45fa7afa9b718ece6f62f475",
+      "source": "qa\\rc\\screens\\difficulty-en.png",
+      "modifiedAt": "2026-10-11T12:42:33.208Z"
+    },
+    {
+      "file": "difficulty-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "cae4afacb7fc284c1807480879949517cdacbe7188adde198e811ccd38114170",
+      "source": "qa\\rc\\screens\\difficulty-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:09.952Z"
+    },
+    {
+      "file": "difficulty-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "a886d84f6a6956c34e527d42c9050e2b74a1d20f07af8aca11c379d1411685cb",
+      "source": "qa\\rc\\screens\\difficulty-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:26.697Z"
+    },
+    {
+      "file": "difficulty-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "2a7df9824fe381749dafebd69fd83150c2b84239ecf068cf5845b10fb9821d41",
+      "source": "qa\\rc\\screens\\difficulty-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:49.876Z"
+    },
+    {
+      "file": "difficulty-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "1e34e7e50bad64456646df1d3ee828333b0a9505b8fe830bf56967caa054df19",
+      "source": "qa\\rc\\screens\\difficulty-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:40.362Z"
+    },
+    {
+      "file": "difficulty-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "612e718532b28b8fbd68d9fa2dda371c0fc79ce4f24e161cbae96f76ae7ad761",
+      "source": "qa\\rc\\screens\\difficulty-tr.png",
+      "modifiedAt": "2026-10-11T12:41:43.329Z"
+    },
+    {
+      "file": "dm-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "f89d57978e72031cd230723d6d53eee9d9810832f4f3c43966dfa29a3114d7d0",
+      "source": "qa\\rc\\screens\\dm-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:39.487Z"
+    },
+    {
+      "file": "dm-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "f8d84eeebd56f8a03ac1edce24f6f1c1bfc7eeed04bb30cc224d54276d7202f6",
+      "source": "qa\\rc\\screens\\dm-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:04.276Z"
+    },
+    {
+      "file": "dm-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "5ea18c6e65a73e3a326dd36d005625d4b2f8652873357526be57f370f8925905",
+      "source": "qa\\rc\\screens\\dm-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:23.253Z"
+    },
+    {
+      "file": "dm-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "842c906fac07688faac92a25ae4ee19ef7303b38c64016f2ebeae9c6d49489c4",
+      "source": "qa\\rc\\screens\\dm-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:46:00.865Z"
+    },
+    {
+      "file": "dm-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "a534a576e9e7a1dc61e5e53fbe74a4a353f512de00447e8d728363b0709ef06b",
+      "source": "qa\\rc\\screens\\dm-en.png",
+      "modifiedAt": "2026-10-11T12:42:52.236Z"
+    },
+    {
+      "file": "dm-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "ab777acdc3e283a1b5a736c2919e9fb432ced31d6ae50cb0b8aa2341c05848a9",
+      "source": "qa\\rc\\screens\\dm-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:18.555Z"
+    },
+    {
+      "file": "dm-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "b2feb70a1cf397cc4f17dbc65dff3bda3d47653f74e598b245bcf885d126bbee",
+      "source": "qa\\rc\\screens\\dm-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:39.035Z"
+    },
+    {
+      "file": "dm-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "8191e446b4df9bf944acb6d3159033852291676c27b621cb486590ff4c1c359a",
+      "source": "qa\\rc\\screens\\dm-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:00.177Z"
+    },
+    {
+      "file": "dm-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "227f8a97f6ebc9d0462f04b5f1731d87ab5a02a235af9d1e75e4edbe2ba76fca",
+      "source": "qa\\rc\\screens\\dm-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:07.843Z"
+    },
+    {
+      "file": "dm-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "d690ae2db71c6e3f320f4f672b219ab9cd894d1a35da0ea779b1837842c9d37c",
+      "source": "qa\\rc\\screens\\dm-tr.png",
+      "modifiedAt": "2026-10-11T12:42:07.982Z"
+    },
+    {
+      "file": "edit-profile-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "8acc9a7af4726e7a1b6070838ff2ef63db877e38925dcafb5a86861f64df85f1",
+      "source": "qa\\rc\\screens\\edit-profile-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:35.429Z"
+    },
+    {
+      "file": "edit-profile-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "2fe7de19d605f34be377864a6fa639778b234b8597a114a41d9b1cda15dd65f8",
+      "source": "qa\\rc\\screens\\edit-profile-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:59.128Z"
+    },
+    {
+      "file": "edit-profile-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "f7ae6abcb9d117d24075ae5aed93fa74418e81c15bc8d0d46cb979dc16252aad",
+      "source": "qa\\rc\\screens\\edit-profile-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:18.769Z"
+    },
+    {
+      "file": "edit-profile-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "5a2bf263ee245fb5ed4b2785ada86b3fe8b53bc48e1400df9c9fcebffd63385d",
+      "source": "qa\\rc\\screens\\edit-profile-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:50.968Z"
+    },
+    {
+      "file": "edit-profile-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "9fda0487d2d71e21bdd6f3705074d809b6ffb3146af15c7deb59d8236a4c74a6",
+      "source": "qa\\rc\\screens\\edit-profile-en-tail.png",
+      "modifiedAt": "2026-10-11T12:42:45.219Z"
+    },
+    {
+      "file": "edit-profile-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "39c8b30cbd2bbe1863eda13c37195f55d1f325e64649e668b3e0279b9cf05de3",
+      "source": "qa\\rc\\screens\\edit-profile-en.png",
+      "modifiedAt": "2026-10-11T12:42:44.917Z"
+    },
+    {
+      "file": "edit-profile-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "8168d2ec0714fce63382a275b16de2bf425afa7d79ad7cfa17b606ea5a0974ef",
+      "source": "qa\\rc\\screens\\edit-profile-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:14.977Z"
+    },
+    {
+      "file": "edit-profile-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "fec2fa9279dda12518e8559cd29cf490c77bf1aa916638cc904965ee5b14f1f5",
+      "source": "qa\\rc\\screens\\edit-profile-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:33.001Z"
+    },
+    {
+      "file": "edit-profile-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "7d5d691b2a2437bfab46754ffe7f03de22ef35f5bbf8f4ce7e5f74f08998f345",
+      "source": "qa\\rc\\screens\\edit-profile-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:55.831Z"
+    },
+    {
+      "file": "edit-profile-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "da9efec9176b6b771a29846388b534fe81ca1a39180d12fbe92638ee28d8cd58",
+      "source": "qa\\rc\\screens\\edit-profile-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:55.387Z"
+    },
+    {
+      "file": "edit-profile-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "528cf207e0f0672d75702a1dd293d747112b9c3a36f1d026db50f301d378524e",
+      "source": "qa\\rc\\screens\\edit-profile-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:41:59.486Z"
+    },
+    {
+      "file": "edit-profile-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "c17519a223438797c4c8672bca7d53d79f1b7ad945d185c18b4239dcc46b6854",
+      "source": "qa\\rc\\screens\\edit-profile-tr.png",
+      "modifiedAt": "2026-10-11T12:41:59.185Z"
+    },
+    {
+      "file": "emojis-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "349884820ea9cbd47df460680257edacf64d42e32f65821af6241984383edd6b",
+      "source": "qa\\rc\\screens\\emojis-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:42.773Z"
+    },
+    {
+      "file": "emojis-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "4cf585f5683901930aba4c77f4630058c818031a3509d364e6a697304842ead3",
+      "source": "qa\\rc\\screens\\emojis-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:08.037Z"
+    },
+    {
+      "file": "emojis-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "9f0708916132403f32d942f8adbf9331806b1d9e72a901e4ca10f38166589ffd",
+      "source": "qa\\rc\\screens\\emojis-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:26.874Z"
+    },
+    {
+      "file": "emojis-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "de3fac168a73a2d807cd692f994005639c2b163ab9983ed52c8d2342ace221d5",
+      "source": "qa\\rc\\screens\\emojis-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:46:09.580Z"
+    },
+    {
+      "file": "emojis-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "530168f83280758048d6cbf6aab5678306ee65a6f4bf88973518a3a3e0f47e16",
+      "source": "qa\\rc\\screens\\emojis-en-tail.png",
+      "modifiedAt": "2026-10-11T12:43:00.323Z"
+    },
+    {
+      "file": "emojis-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "dc24efdcb698f83f4f4aecb14530e342c577fce1bd2eee457c1dc8328d91a7b8",
+      "source": "qa\\rc\\screens\\emojis-en.png",
+      "modifiedAt": "2026-10-11T12:43:00.098Z"
+    },
+    {
+      "file": "emojis-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "39129d415878ee7f8cf0c5c8a4cac752a57afa2e21ee62c7f096c2435c376ddb",
+      "source": "qa\\rc\\screens\\emojis-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:21.826Z"
+    },
+    {
+      "file": "emojis-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "309e118bb255a441ed33d067f4436fc39f5d3b25fc4a1271df4547fe54fa2c4d",
+      "source": "qa\\rc\\screens\\emojis-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:43.451Z"
+    },
+    {
+      "file": "emojis-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "00fd941e38af48819c968f0645b8d369035ff11113e293d3de936a200cae920d",
+      "source": "qa\\rc\\screens\\emojis-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:04.132Z"
+    },
+    {
+      "file": "emojis-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "72ab9d7368b68bbaba41a198a09cef0694b0a661b681c64b9c7c74e3b3016479",
+      "source": "qa\\rc\\screens\\emojis-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:17.387Z"
+    },
+    {
+      "file": "emojis-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "caaba7ebf542dcca8a42427ba4c64fc24fe3ca29f5b05860d9b3bb3d96f9139b",
+      "source": "qa\\rc\\screens\\emojis-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:42:18.744Z"
+    },
+    {
+      "file": "emojis-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "a82954eb8082c43bcf566f46effe52a0650aff97b5732bb487f09f868e1a0404",
+      "source": "qa\\rc\\screens\\emojis-tr.png",
+      "modifiedAt": "2026-10-11T12:42:18.289Z"
+    },
+    {
+      "file": "friendly-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "b509be7a9f875437968e4099ff2af262f3860a95d5439715bb9eb7dfdd2e248d",
+      "source": "qa\\rc\\screens\\friendly-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:31.053Z"
+    },
+    {
+      "file": "friendly-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "4a151f4b099f69f10739c81cb2091e7621ecb2d940145799b4f48086b786e0aa",
+      "source": "qa\\rc\\screens\\friendly-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:53.565Z"
+    },
+    {
+      "file": "friendly-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "7f52d1965c1e8b74743dbd8fe471be4c09aaca73ea1e85e1a3729dffd0f5ef2d",
+      "source": "qa\\rc\\screens\\friendly-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:13.413Z"
+    },
+    {
+      "file": "friendly-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "5cb894fa42685674e81d503a73fff2c770b169173571b341754b247d5389bf99",
+      "source": "qa\\rc\\screens\\friendly-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:40.379Z"
+    },
+    {
+      "file": "friendly-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "6e613564d29bb83a141e9ad3f5b199e6003941e7495deddcfda8772debce2ca6",
+      "source": "qa\\rc\\screens\\friendly-en.png",
+      "modifiedAt": "2026-10-11T12:42:34.384Z"
+    },
+    {
+      "file": "friendly-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "005895963ad6afca4d2ca10d74b6c2a9854844d79eaddfb6f178c063d3fc9755",
+      "source": "qa\\rc\\screens\\friendly-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:10.572Z"
+    },
+    {
+      "file": "friendly-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "f8b97e51917c2781dba52f59276f3790c3bbc257ca08b7d376c5eb39e42d6564",
+      "source": "qa\\rc\\screens\\friendly-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:27.531Z"
+    },
+    {
+      "file": "friendly-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "b6a322d847772c5b0a858612d25a362d7e4d511348b17b5537b9e31f414e24c8",
+      "source": "qa\\rc\\screens\\friendly-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:50.752Z"
+    },
+    {
+      "file": "friendly-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "d8bc8e19341d0894796eb495da856b5f085e28d27f8eb616996c0e5303eb49e2",
+      "source": "qa\\rc\\screens\\friendly-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:42.191Z"
+    },
+    {
+      "file": "friendly-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e39ceac1a4ec00d2b93f63286e3c8bbab1794331f50eeb58b071c5991a116f09",
+      "source": "qa\\rc\\screens\\friendly-tr.png",
+      "modifiedAt": "2026-10-11T12:41:44.558Z"
+    },
+    {
+      "file": "friends-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "ca3f0c033f391465fa2e6f34eb832a24a4ee5053c8c5fec6a86a556b278780c1",
+      "source": "qa\\rc\\screens\\friends-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:38.940Z"
+    },
+    {
+      "file": "friends-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "71afe42e05ab32bee47254a6200b02c26ebf888e486587479731942451e2d48c",
+      "source": "qa\\rc\\screens\\friends-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:03.453Z"
+    },
+    {
+      "file": "friends-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "e764e395481025f4d52a0ab87752a0782f2a083b0fb7d8689e39ccbe7fa4c9ad",
+      "source": "qa\\rc\\screens\\friends-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:22.514Z"
+    },
+    {
+      "file": "friends-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "73c7db7b43b7fd9a11906799300c7a516b7d91247a596a3671aea8d15a5b23bd",
+      "source": "qa\\rc\\screens\\friends-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:59.440Z"
+    },
+    {
+      "file": "friends-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "6e1acc1d7440f46b2162506c3a4ca4646372e5f687d4fe877f7063819cb9f308",
+      "source": "qa\\rc\\screens\\friends-en-tail.png",
+      "modifiedAt": "2026-10-11T12:42:51.600Z"
+    },
+    {
+      "file": "friends-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "9808f139c72092f28e93d5fe386e9c02c22707f8c88d95e307e54338bbf7b5a2",
+      "source": "qa\\rc\\screens\\friends-en.png",
+      "modifiedAt": "2026-10-11T12:42:51.095Z"
+    },
+    {
+      "file": "friends-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "2d01265dde88cd8409a7ceaf9c65dc6e6eb053710f76361612652a9749b8cbb8",
+      "source": "qa\\rc\\screens\\friends-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:18.091Z"
+    },
+    {
+      "file": "friends-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "a53ca9618cb3fb136b2e5b8e6f191b2cac498ac55908016a643dd7c5ef9559dd",
+      "source": "qa\\rc\\screens\\friends-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:38.344Z"
+    },
+    {
+      "file": "friends-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "4c8d80bdb73a31c9dcd0db1b41e836b515beabc37102592cdf45dcede4923717",
+      "source": "qa\\rc\\screens\\friends-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:59.499Z"
+    },
+    {
+      "file": "friends-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "840e0b7ecb15d12f5b9129177438f69969ed217e99d1fcf2a89288ef8f02b6af",
+      "source": "qa\\rc\\screens\\friends-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:06.398Z"
+    },
+    {
+      "file": "friends-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "c130b62fe3e7d4a20ac5b24401bf78e2dac3a135e5f25569fbe19970f7b66286",
+      "source": "qa\\rc\\screens\\friends-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:42:07.217Z"
+    },
+    {
+      "file": "friends-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "f72cb2e4a9727c10eea7e15e0824a459aca10da553501a05006fcd96f7af4942",
+      "source": "qa\\rc\\screens\\friends-tr.png",
+      "modifiedAt": "2026-10-11T12:42:06.833Z"
+    },
+    {
+      "file": "history-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "e006c7f7dd067971a0791e87e4fc18cb61aacd3e5d3c7563b5881787837d9008",
+      "source": "qa\\rc\\screens\\history-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:34.398Z"
+    },
+    {
+      "file": "history-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "0db90b576c1ddfc87deccec7f26999dc2291a9f6a45b83bbd45f6378ec9f83fc",
+      "source": "qa\\rc\\screens\\history-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:57.415Z"
+    },
+    {
+      "file": "history-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "ebf6a3c11910f30eed0fc1d6570d4bac1882de1db6f671aff3260373c46256c1",
+      "source": "qa\\rc\\screens\\history-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:17.483Z"
+    },
+    {
+      "file": "history-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "9be7d66efc84779a9d1ef84b4065244fdbe77206721c9200caeb66769999fbe9",
+      "source": "qa\\rc\\screens\\history-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:48.050Z"
+    },
+    {
+      "file": "history-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "c6874a4f7b08825b8b75adfa7b64c62b3753225e86c31a6fe200c032093570f9",
+      "source": "qa\\rc\\screens\\history-en.png",
+      "modifiedAt": "2026-10-11T12:42:43.085Z"
+    },
+    {
+      "file": "history-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "530bf08a9b43a6e9929df9717484a14a9d226ed5a0f2ee4141e54b49cb53b35f",
+      "source": "qa\\rc\\screens\\history-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:13.938Z"
+    },
+    {
+      "file": "history-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "20aa07e552e29c04374fee282dada3af5e027ab923b55afbecfccca786b3a16b",
+      "source": "qa\\rc\\screens\\history-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:31.199Z"
+    },
+    {
+      "file": "history-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "8b93e46a6d93bd1e6f0f5a29244e293d73bc04ea1e27e7cfa862f2f1488f14ea",
+      "source": "qa\\rc\\screens\\history-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:54.597Z"
+    },
+    {
+      "file": "history-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "0caa53d2906ffe67137f1f24fccefb0652092bd9d6060345388e90464d75c6c9",
+      "source": "qa\\rc\\screens\\history-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:52.065Z"
+    },
+    {
+      "file": "history-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "9dad88f6138a1175de672af2b663b5dca3857e1b193d065a063fcf4136420c87",
+      "source": "qa\\rc\\screens\\history-tr.png",
+      "modifiedAt": "2026-10-11T12:41:56.653Z"
+    },
+    {
+      "file": "home-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "01e7980fdc2220fd4db3f85c9b00911790b74a37fe8a67d1631f9e9d720e1524",
+      "source": "qa\\rc\\screens\\home-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:28.499Z"
+    },
+    {
+      "file": "home-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "677ae86287b922c48e82d4274a4cee9e60c091395e7ba9cb0a945e2942b2cf8b",
+      "source": "qa\\rc\\screens\\home-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:50.707Z"
+    },
+    {
+      "file": "home-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "55679ffd1f5c67984738a05ee028282e16c7225648cc1d52862530babdd8f6f3",
+      "source": "qa\\rc\\screens\\home-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:10.604Z"
+    },
+    {
+      "file": "home-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "2c770ff0b145e4e7a9a7a73476065cbd422c8e9e3a1234166044b489d0d4a084",
+      "source": "qa\\rc\\screens\\home-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:35.982Z"
+    },
+    {
+      "file": "home-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "b4cd921420eeefe88d8c2608b3dcf3d97b9bc8d7dcc400c217d0bc70cef7574e",
+      "source": "qa\\rc\\screens\\home-en.png",
+      "modifiedAt": "2026-10-11T12:42:30.433Z"
+    },
+    {
+      "file": "home-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "811ee8442fde552c1da3cceb5adaeed1b18f2c19a42f0bd71650f05a39c5fe45",
+      "source": "qa\\rc\\screens\\home-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:08.798Z"
+    },
+    {
+      "file": "home-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "7bfacea3d01a68752082ae479928895e653bd3876c5cc3df82f500a711a73e95",
+      "source": "qa\\rc\\screens\\home-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:24.460Z"
+    },
+    {
+      "file": "home-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "df97c4fab690bce50fb1f16cdb5c62097664954e4beb36722ea4e9bb112ec900",
+      "source": "qa\\rc\\screens\\home-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:48.697Z"
+    },
+    {
+      "file": "home-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "d7ff641599bce0a189109799374360916d2df2c1b73b8c867947303da4f20716",
+      "source": "qa\\rc\\screens\\home-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:36.816Z"
+    },
+    {
+      "file": "home-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "5c3bab88dfaed2e0b2dee1f4f7d1093556edb8c14880bed13eb63f38f3315dd8",
+      "source": "qa\\rc\\screens\\home-tr.png",
+      "modifiedAt": "2026-10-11T12:41:39.041Z"
+    },
+    {
+      "file": "inbox-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "26631fc93679a0b009a31034000c733a6d277120a761cbdc3aca144864aeca2e",
+      "source": "qa\\rc\\screens\\inbox-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:39.266Z"
+    },
+    {
+      "file": "inbox-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "cbc0ca8482ab42dc3b75d7ddef83cc6a362643d3cac05983c5443bb2806753c4",
+      "source": "qa\\rc\\screens\\inbox-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:03.963Z"
+    },
+    {
+      "file": "inbox-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "e75449c0d3a986c178d6d046b64542136c27c5a2107cf145d3b1b31584a0095a",
+      "source": "qa\\rc\\screens\\inbox-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:23.068Z"
+    },
+    {
+      "file": "inbox-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "865a408923a5d562795bc1a56b63f06336c42a3b053f8541cf22761ad49fa544",
+      "source": "qa\\rc\\screens\\inbox-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:46:00.250Z"
+    },
+    {
+      "file": "inbox-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "d740f79fda9ada0008bb411e5920415d62c2ed4d0fde1b95e3535bb08336fb37",
+      "source": "qa\\rc\\screens\\inbox-en.png",
+      "modifiedAt": "2026-10-11T12:42:51.988Z"
+    },
+    {
+      "file": "inbox-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "cac1ce51720d19dab3a602408da7bae9dbedb4d7bef772e401c53575a72126f2",
+      "source": "qa\\rc\\screens\\inbox-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:18.367Z"
+    },
+    {
+      "file": "inbox-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "28ab192bc8342fdb137715ff78130dd524da10fddbb1c93cc2d88a62ece60e72",
+      "source": "qa\\rc\\screens\\inbox-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:38.826Z"
+    },
+    {
+      "file": "inbox-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "646676a99cc4eb6a008464fd05c47cb041988a9cffb204095b433260c707b8e1",
+      "source": "qa\\rc\\screens\\inbox-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:59.907Z"
+    },
+    {
+      "file": "inbox-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "3ccc4d7394d14b7c6372b734461a890ff56d898f202b2394558ddb2a0b12f47b",
+      "source": "qa\\rc\\screens\\inbox-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:07.271Z"
+    },
+    {
+      "file": "inbox-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "6b0fa03d5d584d59d9ec90295d799c1c26f70dc8ee06f4f4fa2d570acf436d2c",
+      "source": "qa\\rc\\screens\\inbox-tr.png",
+      "modifiedAt": "2026-10-11T12:42:07.696Z"
+    },
+    {
+      "file": "levels-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "af8996a853fc6cee5693b253e6e79a23ca737a92456fdf284a710b277dc4d85e",
+      "source": "qa\\rc\\screens\\levels-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:44.570Z"
+    },
+    {
+      "file": "levels-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "6a4ecdb5dc78b387c43d277cead0a30ac44083e439c3784459bc8d89d806368e",
+      "source": "qa\\rc\\screens\\levels-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:09.416Z"
+    },
+    {
+      "file": "levels-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "0d6ce23ead2ff81741252aeca4907131d546cd3998802ede3d87e172aeeebe92",
+      "source": "qa\\rc\\screens\\levels-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:28.433Z"
+    },
+    {
+      "file": "levels-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "dcfcdee869fd67eba80fa2fbf67e230e8bcccba1baaebc0d4b5619c9c3f20ac2",
+      "source": "qa\\rc\\screens\\levels-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:46:13.762Z"
+    },
+    {
+      "file": "levels-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "6bf27072ba6909ee71132fb71dada037945f8c5b6d5cc96b67ec11919f5d8d0c",
+      "source": "qa\\rc\\screens\\levels-en.png",
+      "modifiedAt": "2026-10-11T12:43:02.405Z"
+    },
+    {
+      "file": "levels-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "032b5f054e12a7702041975bdfe73d2cf3130349fb455d11caa6761654935597",
+      "source": "qa\\rc\\screens\\levels-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:23.311Z"
+    },
+    {
+      "file": "levels-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "8970c7e377f685044c2803af8e71719d1f6bb92e63041d8a09dd9f6b80b3c63e",
+      "source": "qa\\rc\\screens\\levels-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:45.359Z"
+    },
+    {
+      "file": "levels-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "279fbe00b972c8fc86ce4708d174b412ff2744a615e4db5f7332fc4a63b5c7e9",
+      "source": "qa\\rc\\screens\\levels-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:05.927Z"
+    },
+    {
+      "file": "levels-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "3b59e0c580537aba9c15469fab9b9b64ed78484273296c235daecf641780b057",
+      "source": "qa\\rc\\screens\\levels-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:22.140Z"
+    },
+    {
+      "file": "levels-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "35a659c51613b896c7b1f7bca1a06c022630e18a3ea545d06bf7c93c7e17ca27",
+      "source": "qa\\rc\\screens\\levels-tr.png",
+      "modifiedAt": "2026-10-11T12:42:22.059Z"
+    },
+    {
+      "file": "loading-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "835a9fc77eaafe48ee932a4a20e0635272fd301b379d5fa5ddd62339127d1d3d",
+      "source": "qa\\rc\\screens\\loading-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:26.677Z"
+    },
+    {
+      "file": "loading-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "105ee3bf0aa8d9159e49cb03cef0ac43af0e50003b4a926edddd81a5acf625f2",
+      "source": "qa\\rc\\screens\\loading-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:48.837Z"
+    },
+    {
+      "file": "loading-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "2ba7f7ddb72daf4d2f865fe723cec9491d5e386e3bbe8b0f9399dad2f9e41f41",
+      "source": "qa\\rc\\screens\\loading-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:08.876Z"
+    },
+    {
+      "file": "loading-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "79d27ce8f6044b9935f1f6f40da1eb8699baca0043c014da0c88088a48f2e67c",
+      "source": "qa\\rc\\screens\\loading-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:31.887Z"
+    },
+    {
+      "file": "loading-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "18bc43edfb5bf4dba76286b1ef3e976e5cd2c2ed2cc6496bd7394e832394e7ff",
+      "source": "qa\\rc\\screens\\loading-en.png",
+      "modifiedAt": "2026-10-11T12:42:27.975Z"
+    },
+    {
+      "file": "loading-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "b0ec44d4d289476a3af36cea11862f3f234010219e0d5c0efa315b34d73d2164",
+      "source": "qa\\rc\\screens\\loading-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:07.416Z"
+    },
+    {
+      "file": "loading-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "508793c93a0495b95e7f87dc15812563ad0a84e167944f7f2b838af11f37fda5",
+      "source": "qa\\rc\\screens\\loading-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:22.310Z"
+    },
+    {
+      "file": "loading-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "737b93b8cef5a8dd9ce9340c3407a76ce10d26f8770add3a89033549c7e8416c",
+      "source": "qa\\rc\\screens\\loading-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:47.324Z"
+    },
+    {
+      "file": "loading-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "c26d12f19e56f7d2964b25da082442f34fcab52c7c72878dfabdeb8a1aeeeca5",
+      "source": "qa\\rc\\screens\\loading-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:32.492Z"
+    },
+    {
+      "file": "loading-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "8089cc7efd6809ad1aa489811efe5e730d03e81f95ab3382e2b3e2b53667588c",
+      "source": "qa\\rc\\screens\\loading-tr.png",
+      "modifiedAt": "2026-10-11T12:41:34.707Z"
+    },
+    {
+      "file": "missions-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "f3ab8c30ad990c9fe492101d84537ac20327c6bbab5fb898548b2514be52dc25",
+      "source": "qa\\rc\\screens\\missions-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:38.560Z"
+    },
+    {
+      "file": "missions-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "5ea4e69766c37cbf59682ce477666485bb4c21ab562fe93766d19be4f9f8ff70",
+      "source": "qa\\rc\\screens\\missions-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:02.587Z"
+    },
+    {
+      "file": "missions-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "77af5a78eafeba38dc514992a3844af68c7ca61586c5a08c335ed2d6453c1f69",
+      "source": "qa\\rc\\screens\\missions-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:21.915Z"
+    },
+    {
+      "file": "missions-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "8784354f4ec89be7fd6827b4a20956c3665ffde30f53b0be54bb0cfac4e02000",
+      "source": "qa\\rc\\screens\\missions-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:58.258Z"
+    },
+    {
+      "file": "missions-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e54c421245dbcb16ecb89307e7d240e4b76cf957ca110791c524e380be0ab74d",
+      "source": "qa\\rc\\screens\\missions-en.png",
+      "modifiedAt": "2026-10-11T12:42:50.323Z"
+    },
+    {
+      "file": "missions-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "8573e402a099d0b3c6ee261e9dfaa2727ec02a1fa3182274801f758821312700",
+      "source": "qa\\rc\\screens\\missions-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:17.627Z"
+    },
+    {
+      "file": "missions-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "2778b860da2a772b62094c85aa2ed986b86f4d95354b09b93688739eacb0e727",
+      "source": "qa\\rc\\screens\\missions-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:37.474Z"
+    },
+    {
+      "file": "missions-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "fe7584d90d27766fa7029908ed9571291dae852de55359837a4c311ccc3a9b2b",
+      "source": "qa\\rc\\screens\\missions-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:58.852Z"
+    },
+    {
+      "file": "missions-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "8c61aadb0c3bc63b01d678622cd5087afd72972634223d9d0afe439ec31ede75",
+      "source": "qa\\rc\\screens\\missions-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:05.058Z"
+    },
+    {
+      "file": "missions-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "3feab6773010723356d99de2bc43775356f620d23279bbf5f57f30a6244cc1fb",
+      "source": "qa\\rc\\screens\\missions-tr.png",
+      "modifiedAt": "2026-10-11T12:42:05.786Z"
+    },
+    {
+      "file": "online-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "77718b26a4738bcc3b2c9dc58a9f95e69f25a10a4a81be942dcf99265f8317fb",
+      "source": "qa\\rc\\screens\\online-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:31.749Z"
+    },
+    {
+      "file": "online-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "8b44e5a4b18c172420c3fc77bc7f4a1c7e44e4aaca12392a5c9927e5e152fa3d",
+      "source": "qa\\rc\\screens\\online-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:54.291Z"
+    },
+    {
+      "file": "online-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "38daa24fd0c9818ea09cf706fc0d1ed5020b117af1652880fb60bfd97a2ffd8b",
+      "source": "qa\\rc\\screens\\online-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:14.365Z"
+    },
+    {
+      "file": "online-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "6a15f34c3a2f2224baa881c1c943c8f998c5929f9fb18f799af104b74e527f30",
+      "source": "qa\\rc\\screens\\online-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:41.862Z"
+    },
+    {
+      "file": "online-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "0f7e0ae4c2defacd6c751f2d8bc9c1c1f95ca2a0d0b5c6c573a6e05b08c3b7e2",
+      "source": "qa\\rc\\screens\\online-en.png",
+      "modifiedAt": "2026-10-11T12:42:35.257Z"
+    },
+    {
+      "file": "online-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "33cf58da36d2e32b933324d2b332051746b7120d26c4220a5433577485a8ab94",
+      "source": "qa\\rc\\screens\\online-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:11.038Z"
+    },
+    {
+      "file": "online-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "1cf12734b1153c2d9ba95e4311bb38f0e388af7a5b8d61fc24ce4825df016df8",
+      "source": "qa\\rc\\screens\\online-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:28.280Z"
+    },
+    {
+      "file": "online-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "b87b6aedc8dc89420ad1b649e08ea7fc933968796b6463b26966adb729013ea4",
+      "source": "qa\\rc\\screens\\online-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:51.459Z"
+    },
+    {
+      "file": "online-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "abaee9106a706b21d842f56a4cb79a01df6291bcc669161a81147bbdbdefb41b",
+      "source": "qa\\rc\\screens\\online-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:43.950Z"
+    },
+    {
+      "file": "online-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "21e584ac36bc7f1ccf9840ecbf804a05e1fa99f33c5aa078d37fc472cc6a7dd6",
+      "source": "qa\\rc\\screens\\online-tr.png",
+      "modifiedAt": "2026-10-11T12:41:45.660Z"
+    },
+    {
+      "file": "pass-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "66bef32e3518b702e46aecc4ce66263f3434d49a61b662e7709c04ba05f2bdc5",
+      "source": "qa\\rc\\screens\\pass-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:32.855Z"
+    },
+    {
+      "file": "pass-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "cc6087bba251c010f9d9b7fbf601e1344101d41df7ea632b22023a09091f100a",
+      "source": "qa\\rc\\screens\\pass-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:55.323Z"
+    },
+    {
+      "file": "pass-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "d943ca95c69b207544ac01d1c0df202f7fadbf4f1821eddfc2dc517bb8ae71f5",
+      "source": "qa\\rc\\screens\\pass-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:15.682Z"
+    },
+    {
+      "file": "pass-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "de71f76b3550ba83c51cbf3738c389433df6f503fc6d1847fdb598e7f810154a",
+      "source": "qa\\rc\\screens\\pass-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:44.502Z"
+    },
+    {
+      "file": "pass-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "879e78aee48f26d3dc9a488904247c23c6fa97909d1f80cd1c79b3eb4c5eefd1",
+      "source": "qa\\rc\\screens\\pass-en-tail.png",
+      "modifiedAt": "2026-10-11T12:42:40.127Z"
+    },
+    {
+      "file": "pass-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "4b2bf01b4a5a3d5fce6ebdd7b8dd7957b17fde37495f2ae37f2983fa5f90d129",
+      "source": "qa\\rc\\screens\\pass-en.png",
+      "modifiedAt": "2026-10-11T12:42:38.938Z"
+    },
+    {
+      "file": "pass-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "ff4b4ba09470881a45d97c077acf3e83cb33c1b92a20e32fbeba402fb8daaefb",
+      "source": "qa\\rc\\screens\\pass-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:12.277Z"
+    },
+    {
+      "file": "pass-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "546710aa4938f4e72ffe8cc5dae134de488ed2c4d32bd4709f5010059fe7af2e",
+      "source": "qa\\rc\\screens\\pass-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:29.412Z"
+    },
+    {
+      "file": "pass-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "1146f63714dda01f8bd1cdcc2836ce44818f714ca8999e10a9c0057ac9345ab0",
+      "source": "qa\\rc\\screens\\pass-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:52.604Z"
+    },
+    {
+      "file": "pass-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "02c00a86619b8e5edc750f2855f740ac200ef3897f34642e2c40aeeddcf76e7a",
+      "source": "qa\\rc\\screens\\pass-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:46.717Z"
+    },
+    {
+      "file": "pass-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e2ab9a372a181642290d4e78121fe6ee4a81131e8e1a2b272f8e499b43bbbd64",
+      "source": "qa\\rc\\screens\\pass-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:41:52.317Z"
+    },
+    {
+      "file": "pass-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "3b97d5a2f5826f2a9518f099a44b407b216bc15b01ad26a568dc454e0db9f1cc",
+      "source": "qa\\rc\\screens\\pass-tr.png",
+      "modifiedAt": "2026-10-11T12:41:50.435Z"
+    },
+    {
+      "file": "play-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "aced80ef98014183975305b2236df3835d1e458c7c81a7ea0d718b104734707d",
+      "source": "qa\\rc\\screens\\play-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:29.767Z"
+    },
+    {
+      "file": "play-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "a4e7f74354d554345926d8905917a0665e848ac1493ae8cd88d9d102607a5734",
+      "source": "qa\\rc\\screens\\play-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:52.136Z"
+    },
+    {
+      "file": "play-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "70c70febeca02e709346a4df5edcc0639255e4cdb248959cfd40cc0ad61190f2",
+      "source": "qa\\rc\\screens\\play-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:11.957Z"
+    },
+    {
+      "file": "play-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "9359fe3b9caf6925f0b39af3dcb7227004f9318f746e6b06dc700f17a085702e",
+      "source": "qa\\rc\\screens\\play-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:37.720Z"
+    },
+    {
+      "file": "play-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "5b1b9d5e7d6381fe780011e6f1b3dbfd974fc7fa2272aab26bc698e55b224cf1",
+      "source": "qa\\rc\\screens\\play-en-tail.png",
+      "modifiedAt": "2026-10-11T12:42:32.697Z"
+    },
+    {
+      "file": "play-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "631648869391981f0ebb38fec16842e02036bfef9b2b7f3a03b738389c28deac",
+      "source": "qa\\rc\\screens\\play-en.png",
+      "modifiedAt": "2026-10-11T12:42:31.808Z"
+    },
+    {
+      "file": "play-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "65f540626e5d683827e21f24e51201f750d4c7ad3fdae8b051dcd99005d5894c",
+      "source": "qa\\rc\\screens\\play-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:09.599Z"
+    },
+    {
+      "file": "play-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "a61bbb64c2d5c09900cc57a869685a18aed547a49f58027f15db16455aa9ca55",
+      "source": "qa\\rc\\screens\\play-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:26.123Z"
+    },
+    {
+      "file": "play-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "9fece10c3d832215d67534aca1bfa4d665986cb6aef40aeae8200bce3588c653",
+      "source": "qa\\rc\\screens\\play-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:49.506Z"
+    },
+    {
+      "file": "play-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "7d077d1d0ab4547e4eaf791637264b5dba1e8b5b929577920e2d1e29a745def3",
+      "source": "qa\\rc\\screens\\play-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:39.390Z"
+    },
+    {
+      "file": "play-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "b9e1cca94219e4482e329fb47c665618bad6398ba7839e72c4066c6dd2817c63",
+      "source": "qa\\rc\\screens\\play-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:41:42.407Z"
+    },
+    {
+      "file": "play-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "c185518d6a7c23ec4c21ceeae75d28f4d4b301e606dfd90d4c0026791611d8ab",
+      "source": "qa\\rc\\screens\\play-tr.png",
+      "modifiedAt": "2026-10-11T12:41:41.429Z"
+    },
+    {
+      "file": "practice-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "91e6ea2e49a68b060a4bff1c0dc30e065088f029eb999884b7ff8b5af043547c",
+      "source": "qa\\rc\\screens\\practice-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:46.812Z"
+    },
+    {
+      "file": "practice-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "bf1aa9dc71920e0075113eee82321b68022626c22d3c9a661a3f55e89a3b589e",
+      "source": "qa\\rc\\screens\\practice-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:11.995Z"
+    },
+    {
+      "file": "practice-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "55671237aa03f74ffc26792704825f3ddcb253e677d2439d7858f5bd16e63580",
+      "source": "qa\\rc\\screens\\practice-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:30.754Z"
+    },
+    {
+      "file": "practice-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "1376987d2b325ed03c02c4ca9acf30a85df086e168a0022044297e7312284f55",
+      "source": "qa\\rc\\screens\\practice-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:46:21.863Z"
+    },
+    {
+      "file": "practice-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "eab8881638a3d047a63dbe87d5545986d65463ca7ed8b407178c57990c0ff7ec",
+      "source": "qa\\rc\\screens\\practice-en.png",
+      "modifiedAt": "2026-10-11T12:43:06.887Z"
+    },
+    {
+      "file": "practice-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "d9197f67eb2d407e0840f2f183e3ede8f7c697118e326c5324dfdb228161cf2c",
+      "source": "qa\\rc\\screens\\practice-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:26.088Z"
+    },
+    {
+      "file": "practice-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "c186a987ee24137ef870a9610d14e19a96bf0abaff2be72062eb55da4b8277cd",
+      "source": "qa\\rc\\screens\\practice-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:48.503Z"
+    },
+    {
+      "file": "practice-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "aa3368343f1de81d532b82b44502f215ee64a5f17dd66b69bb638b42f55dd1a3",
+      "source": "qa\\rc\\screens\\practice-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:08.307Z"
+    },
+    {
+      "file": "practice-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "97ddffe335ff90aed9f47933e17c2cf5fed56c1b02de3c617c5114e72d4a8f9d",
+      "source": "qa\\rc\\screens\\practice-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:29.529Z"
+    },
+    {
+      "file": "practice-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "896231ed10ddb80b026af42e2ae52a7089b4a3aec944d28eb0799db6930e3cf4",
+      "source": "qa\\rc\\screens\\practice-tr.png",
+      "modifiedAt": "2026-10-11T12:42:27.247Z"
+    },
+    {
+      "file": "premium-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "54b91871044622d91ff497fdc923dd9939a684d5767ce2dcb42ced92c80e78c3",
+      "source": "qa\\rc\\screens\\premium-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:33.299Z"
+    },
+    {
+      "file": "premium-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "d695c0d63133e69a105bd69a012e3d13bcf8a21f8af89b6f68aafcfbf9fc71a1",
+      "source": "qa\\rc\\screens\\premium-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:55.758Z"
+    },
+    {
+      "file": "premium-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "2beca736dae900c1ea6e21f7b76ce4e4ceb80e5f05725342e53ee8b73c0d4e57",
+      "source": "qa\\rc\\screens\\premium-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:16.069Z"
+    },
+    {
+      "file": "premium-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "a2b9875cd2a388cec8e8b0b6c9b7b4736cbb056ecf610506161bee39f9585381",
+      "source": "qa\\rc\\screens\\premium-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:45.279Z"
+    },
+    {
+      "file": "premium-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "b16b2f3b2c1a55f58b8fcecb0750dbf600c50f25b360d34631a96ebd7812517e",
+      "source": "qa\\rc\\screens\\premium-en-tail.png",
+      "modifiedAt": "2026-10-11T12:42:41.140Z"
+    },
+    {
+      "file": "premium-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e4d5c42d56b1447bfdab24ad5ba15afbe2c7e267f9103311d3b37011afed17b7",
+      "source": "qa\\rc\\screens\\premium-en.png",
+      "modifiedAt": "2026-10-11T12:42:40.766Z"
+    },
+    {
+      "file": "premium-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "f528cc53fe2073ea828ad4b1b1ec9799938d0005f11e376e7ffba8e0fe4d542f",
+      "source": "qa\\rc\\screens\\premium-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:12.625Z"
+    },
+    {
+      "file": "premium-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "da5f84f8f6070b7753e765e59dc5c9e2d08c792083245126bf446abae3676624",
+      "source": "qa\\rc\\screens\\premium-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:29.825Z"
+    },
+    {
+      "file": "premium-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "a0b39716b3d740cfd2c612de73abe94ca667262a9efb669a16c3e29c47400522",
+      "source": "qa\\rc\\screens\\premium-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:53.089Z"
+    },
+    {
+      "file": "premium-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "6d623833e081432469df5c24742a84cf2aa8e7867f88e8dbb4c087a252e37e96",
+      "source": "qa\\rc\\screens\\premium-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:47.806Z"
+    },
+    {
+      "file": "premium-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "f22d72624fea84e12f0687e3ab8f683b34636d8f4faa85a183260f4adbbfa6ca",
+      "source": "qa\\rc\\screens\\premium-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:41:53.812Z"
+    },
+    {
+      "file": "premium-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "63752b5dcf7903247aa507bd34c1de5585a3b0758692f9999df972fa7dde6675",
+      "source": "qa\\rc\\screens\\premium-tr.png",
+      "modifiedAt": "2026-10-11T12:41:53.367Z"
+    },
+    {
+      "file": "profile-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "f41e1fef662895a7d824ccf98597421490ef32cc21850423c812dbfa118c7f4a",
+      "source": "qa\\rc\\screens\\profile-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:33.817Z"
+    },
+    {
+      "file": "profile-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "9979bb5ef83ae18079bbd04550000b2d9ce08ea07d7c8547a53d5852082cb1de",
+      "source": "qa\\rc\\screens\\profile-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:56.677Z"
+    },
+    {
+      "file": "profile-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "b8914192ce39197563c98ba15ee78f7219ebc03983594706edcd9eb02d0e3343",
+      "source": "qa\\rc\\screens\\profile-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:16.768Z"
+    },
+    {
+      "file": "profile-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "0da6df3a78b0b0f1cd86af3a06a974c8cb70355fdf1cc00d945c00e8e0655bde",
+      "source": "qa\\rc\\screens\\profile-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:46.419Z"
+    },
+    {
+      "file": "profile-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "1c7163ed6aadb8b38126512521fd588d8c327282c37d54eaabd6a09f1960a15b",
+      "source": "qa\\rc\\screens\\profile-en-tail.png",
+      "modifiedAt": "2026-10-11T12:42:42.224Z"
+    },
+    {
+      "file": "profile-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "f0aab8e0da46c5c83bcac14de201f66c86fd0768488f237a645ea6343b2a8f38",
+      "source": "qa\\rc\\screens\\profile-en.png",
+      "modifiedAt": "2026-10-11T12:42:41.752Z"
+    },
+    {
+      "file": "profile-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "a75da347ddedb53783733bb481f3ddecf0c2d1405145a2df12ae8c2484708799",
+      "source": "qa\\rc\\screens\\profile-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:13.212Z"
+    },
+    {
+      "file": "profile-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "8f7002a1ae78e78d06a87807e8dee481dad1bab42b63191a44611bb8c8f800a7",
+      "source": "qa\\rc\\screens\\profile-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:30.606Z"
+    },
+    {
+      "file": "profile-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "6392dc7c4bc9e0df45196bad3b824d9957384a9395d95c5260f2bd7c0401eb40",
+      "source": "qa\\rc\\screens\\profile-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:53.894Z"
+    },
+    {
+      "file": "profile-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "4b4805af4d0ba5ae142ed81a3b4784b8cb41ee7518db8bc6110af452a8c2f03c",
+      "source": "qa\\rc\\screens\\profile-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:49.340Z"
+    },
+    {
+      "file": "profile-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "38821aaa6fa522f3b7e8792b7bcdaddb37a6bfa4fa0a3e98b64c964d4ad85975",
+      "source": "qa\\rc\\screens\\profile-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:41:55.616Z"
+    },
+    {
+      "file": "profile-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "824db98306890b05cdd231267c058fea753445e0758756e6d586b7f223fdf85e",
+      "source": "qa\\rc\\screens\\profile-tr.png",
+      "modifiedAt": "2026-10-11T12:41:55.049Z"
+    },
+    {
+      "file": "public-profile-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "dfdf0aba2e386d92e2c202bbfcff6cbe015fbd2129a7031ae3086b8600b595cb",
+      "source": "qa\\rc\\screens\\public-profile-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:36.050Z"
+    },
+    {
+      "file": "public-profile-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "195c946c84e35aea09f8be936827e444fe303cb401697c7e275fd17b4cb2aecb",
+      "source": "qa\\rc\\screens\\public-profile-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:59.940Z"
+    },
+    {
+      "file": "public-profile-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "fcb7af50814609bbc50a2e01158ea90d4cafc8ebf7974e78eec11b5269c649fc",
+      "source": "qa\\rc\\screens\\public-profile-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:19.467Z"
+    },
+    {
+      "file": "public-profile-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "e5915155732002583890af5621d1b4a70f632b415b1fd0f72aa8ac517c752f8f",
+      "source": "qa\\rc\\screens\\public-profile-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:52.258Z"
+    },
+    {
+      "file": "public-profile-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "2b3c688fd9311dc5a5f2440b40aacecd4e28fde2347ae98ee48e04973ea10157",
+      "source": "qa\\rc\\screens\\public-profile-en.png",
+      "modifiedAt": "2026-10-11T12:42:45.977Z"
+    },
+    {
+      "file": "public-profile-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "0473b7c3006b20bc5cb2ac7e9ff3a3edd8acc014bcde6b87f75ca9f6c158b79e",
+      "source": "qa\\rc\\screens\\public-profile-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:15.548Z"
+    },
+    {
+      "file": "public-profile-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "b5100afbc0b0a50e799be89e9af58f93287a4a5337f32cad5a293ad2efc2e2be",
+      "source": "qa\\rc\\screens\\public-profile-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:33.871Z"
+    },
+    {
+      "file": "public-profile-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "642d44498a65efe9a477ff34eb28cd2e95e9fd3ca6be290f2f8d44119b525403",
+      "source": "qa\\rc\\screens\\public-profile-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:56.363Z"
+    },
+    {
+      "file": "public-profile-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "013ff2fbfd7c53a797cafd04422567467e70272da46a4d57448e01c242ff9a14",
+      "source": "qa\\rc\\screens\\public-profile-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:56.642Z"
+    },
+    {
+      "file": "public-profile-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "3c5d224857017c8a6de4e445915c210542156ec3c2827683f8a25da4f7278d62",
+      "source": "qa\\rc\\screens\\public-profile-tr.png",
+      "modifiedAt": "2026-10-11T12:42:00.405Z"
+    },
+    {
+      "file": "ranking-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "5e5db709f498cfe463e73046062bac1617702516d768f3255c2bc88049b5e23d",
+      "source": "qa\\rc\\screens\\ranking-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:36.762Z"
+    },
+    {
+      "file": "ranking-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "6d61f006eca890e8111abae81a43ffce2643ee47ae1cfc98afe02590ec68fa7b",
+      "source": "qa\\rc\\screens\\ranking-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:00.505Z"
+    },
+    {
+      "file": "ranking-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "a92199387b517e22ddfa08a22d39b91ff60e66f9c7439443d20f8f869f47d7cf",
+      "source": "qa\\rc\\screens\\ranking-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:20.168Z"
+    },
+    {
+      "file": "ranking-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "b40fcc4d35d7d786a356308df636c2d326c1a98c9ac4ac73a0b7257e79d6b2f6",
+      "source": "qa\\rc\\screens\\ranking-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:53.885Z"
+    },
+    {
+      "file": "ranking-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "460d43f1cfb5dc8657b4bd470532771956e78f026a4cb0ccd26e76408e1e5baa",
+      "source": "qa\\rc\\screens\\ranking-en-tail.png",
+      "modifiedAt": "2026-10-11T12:42:48.119Z"
+    },
+    {
+      "file": "ranking-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "d7f53faecc72366858bbfc0ad558f927a38f46f809f87708055d1c2b05933575",
+      "source": "qa\\rc\\screens\\ranking-en.png",
+      "modifiedAt": "2026-10-11T12:42:46.949Z"
+    },
+    {
+      "file": "ranking-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "38b30c70c59bb3a848bfe8e2c4ad269d833fc2620e18b6f85f98ac66b1fa3029",
+      "source": "qa\\rc\\screens\\ranking-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:16.138Z"
+    },
+    {
+      "file": "ranking-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "fe3dd52bb9dee9757d7ea383222fb799d38a5bb047bf23f4d8683f2aa8b3d6e8",
+      "source": "qa\\rc\\screens\\ranking-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:34.441Z"
+    },
+    {
+      "file": "ranking-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "ed9bbf60f68ca30e4ae7089ac814c5c6720c4fe65ba199e931525c7cc6396892",
+      "source": "qa\\rc\\screens\\ranking-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:56.898Z"
+    },
+    {
+      "file": "ranking-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "e41a389554442297d296c750203232120daa069b5e848446599d9bd118110cff",
+      "source": "qa\\rc\\screens\\ranking-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:58.712Z"
+    },
+    {
+      "file": "ranking-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "0205ce4a791c16ca5cffe317c6fd96bb764800f4a2caefbda6c1e05b58afb4d0",
+      "source": "qa\\rc\\screens\\ranking-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:42:02.463Z"
+    },
+    {
+      "file": "ranking-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e64b740f91c473afbe1a0437895c7a4ef8f1c852a620659928f7432eeb3b0150",
+      "source": "qa\\rc\\screens\\ranking-tr.png",
+      "modifiedAt": "2026-10-11T12:42:01.526Z"
+    },
+    {
+      "file": "season-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "206f966890257b478663f410ff289f310bb6903abef4cd8e8354383683b32e97",
+      "source": "qa\\rc\\screens\\season-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:37.751Z"
+    },
+    {
+      "file": "season-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "89192676a6be83d68d22a3f09255050848a714234f028cc1d458d85e9e7acc11",
+      "source": "qa\\rc\\screens\\season-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:01.497Z"
+    },
+    {
+      "file": "season-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "7ae0196e7ba7299f84f19ee8fa13d4b1dd47ba2c57a59917d968bea6729d2c31",
+      "source": "qa\\rc\\screens\\season-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:20.941Z"
+    },
+    {
+      "file": "season-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "7b141caecfb6d08a844f933c9b0d45541c2cbb1ed8bf0475de17a67b8c97a271",
+      "source": "qa\\rc\\screens\\season-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:55.964Z"
+    },
+    {
+      "file": "season-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "f7a64ba4dcbe7f184fd00c1880628b30481d4409bc62c8f6b104843bed81dc0f",
+      "source": "qa\\rc\\screens\\season-en.png",
+      "modifiedAt": "2026-10-11T12:42:49.141Z"
+    },
+    {
+      "file": "season-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "789c5e3a7205fbc03c02c5a600d7fc750d792c81be56deb9598b6097a3314003",
+      "source": "qa\\rc\\screens\\season-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:16.947Z"
+    },
+    {
+      "file": "season-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "5d8316c79fa0fdfda11567c0d4eba8efc426f5c3a4ad228feb6969cab58d4423",
+      "source": "qa\\rc\\screens\\season-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:35.915Z"
+    },
+    {
+      "file": "season-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "88a0dba25e43ee9ad1385cc8318598646468d61b203a95f19aac84af1e6f33b8",
+      "source": "qa\\rc\\screens\\season-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:57.931Z"
+    },
+    {
+      "file": "season-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "9d045fa876a78a3c94e5af84b5569fbe20d58f43a106bf9ac3fa82755d3e4819",
+      "source": "qa\\rc\\screens\\season-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:01.435Z"
+    },
+    {
+      "file": "season-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "2a4671685cef0f6d2433a405357e3ca354a6b4450bd365e210b09779b64a061d",
+      "source": "qa\\rc\\screens\\season-tr.png",
+      "modifiedAt": "2026-10-11T12:42:03.831Z"
+    },
+    {
+      "file": "settings-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "bd3d2559edc6baee2d94f4e4fc8a07c8bac179ec69d378c726da69c6898f8b91",
+      "source": "qa\\rc\\screens\\settings-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:45.409Z"
+    },
+    {
+      "file": "settings-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "b313a6b440a33de821204d7581dd80d0e694e58ddcb4e300ceca54b19295b6c1",
+      "source": "qa\\rc\\screens\\settings-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:10.251Z"
+    },
+    {
+      "file": "settings-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "214135b16c3415ebe33b38822028b964d6b46a4a980027bea9789aa7302d6922",
+      "source": "qa\\rc\\screens\\settings-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:29.155Z"
+    },
+    {
+      "file": "settings-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "45a01eedbf60ae2e958fbd057cc081db9fba04612148523d4f68549a069425e1",
+      "source": "qa\\rc\\screens\\settings-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:46:16.998Z"
+    },
+    {
+      "file": "settings-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "1a7ed3a1c8a8b8de43ca36a5424e7938dd9010860418cde59544b7fcc0804b3d",
+      "source": "qa\\rc\\screens\\settings-en-tail.png",
+      "modifiedAt": "2026-10-11T12:43:04.912Z"
+    },
+    {
+      "file": "settings-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "930c78bb5edc8f005f6deae135a1e1ae2ce1f4f8404fa27e045180742d1f9b6a",
+      "source": "qa\\rc\\screens\\settings-en.png",
+      "modifiedAt": "2026-10-11T12:43:03.580Z"
+    },
+    {
+      "file": "settings-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "c1580bd632aa2a0be0fe4372f6eb773395b76f0e3fa8fb8594821897fcfe11aa",
+      "source": "qa\\rc\\screens\\settings-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:24.224Z"
+    },
+    {
+      "file": "settings-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "c7b4dcde751d3a004d6c32f5da3ad3a4a167317488175a9f94d76ad9fbbc4c5a",
+      "source": "qa\\rc\\screens\\settings-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:46.387Z"
+    },
+    {
+      "file": "settings-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "68a5978fa75e3081e08606bcd90e2ecaf27a457118214c104bf8e31e77a3a39a",
+      "source": "qa\\rc\\screens\\settings-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:06.823Z"
+    },
+    {
+      "file": "settings-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "2a50f470272a17ef0c08f0cd2a63cf87a71e6e7ca27d129f1c46b9152718a2c5",
+      "source": "qa\\rc\\screens\\settings-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:25.412Z"
+    },
+    {
+      "file": "settings-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "9cf0beb3c199752b25864e1522b43535f9e560df0295b140670e9822a413ca44",
+      "source": "qa\\rc\\screens\\settings-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:42:24.645Z"
+    },
+    {
+      "file": "settings-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "635386afc585a611c625683660557cf3061d305aecde42bb7792bbb8269bd049",
+      "source": "qa\\rc\\screens\\settings-tr.png",
+      "modifiedAt": "2026-10-11T12:42:23.690Z"
+    },
+    {
+      "file": "shop-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "944074a948c1256038d24a7a7758252700ff284030b9f3a57b8b27643b19136e",
+      "source": "qa\\rc\\screens\\shop-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:32.396Z"
+    },
+    {
+      "file": "shop-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "eaf82da28b9f1322e202f90292d0644da01ca85f8a831c580ab8abee23bc011f",
+      "source": "qa\\rc\\screens\\shop-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:54.930Z"
+    },
+    {
+      "file": "shop-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "a26c1ca64db5305baa886e40a5bb64a63d8b75f96aeb6f7797c3207a18039454",
+      "source": "qa\\rc\\screens\\shop-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:15.081Z"
+    },
+    {
+      "file": "shop-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "12623cf1983963af25cee49b1b27ca60ab075286a6b4a8ff22195bbef7a18641",
+      "source": "qa\\rc\\screens\\shop-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:43.140Z"
+    },
+    {
+      "file": "shop-en-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "6f8ae481cda33017ac2ff87bd9124bea6f46865ffbbc3834581e6d4e7b12904a",
+      "source": "qa\\rc\\screens\\shop-en-tail.png",
+      "modifiedAt": "2026-10-11T12:42:37.892Z"
+    },
+    {
+      "file": "shop-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "78ce270aca299847ebb76baebd45a77ebf78b129e7d6f8a170850e94f7e12d22",
+      "source": "qa\\rc\\screens\\shop-en.png",
+      "modifiedAt": "2026-10-11T12:42:36.382Z"
+    },
+    {
+      "file": "shop-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "b0f787847e9548f71570322205d89d0d86f6882c0d43569e48ec09608918e3f9",
+      "source": "qa\\rc\\screens\\shop-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:11.543Z"
+    },
+    {
+      "file": "shop-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "f9f8493161b5373f41bb6f2b4f9bb483649bcf2b1c89bf62ed165c34c8e94af6",
+      "source": "qa\\rc\\screens\\shop-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:28.940Z"
+    },
+    {
+      "file": "shop-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "6f503da807242f35488a9cab55b3b7ba8a22e103e36a426742160a7598ec8e37",
+      "source": "qa\\rc\\screens\\shop-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:52.083Z"
+    },
+    {
+      "file": "shop-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "c195a037084f7bad12d7d42e9b98edbd73fdb7f32ed2d3b0399f6fb058a26a6f",
+      "source": "qa\\rc\\screens\\shop-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:45.526Z"
+    },
+    {
+      "file": "shop-tr-tail.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "45a86a65ab8575a7109ac411570ccf363f04efa57ed8c128c2faf5a07a3aa617",
+      "source": "qa\\rc\\screens\\shop-tr-tail.png",
+      "modifiedAt": "2026-10-11T12:41:49.051Z"
+    },
+    {
+      "file": "shop-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e1ff01955e387ac48981df0b7b1fc530e9532d5efc9390a0e5ed73e073d1ebc1",
+      "source": "qa\\rc\\screens\\shop-tr.png",
+      "modifiedAt": "2026-10-11T12:41:47.632Z"
+    },
+    {
+      "file": "tutorial-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "97054831745ac858d76e5dd4efe0e165dcf3a4022d97b6c7cbce0978a9253bd3",
+      "source": "qa\\rc\\screens\\tutorial-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:46.061Z"
+    },
+    {
+      "file": "tutorial-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "b2638e4acaf5f4528ef721f489c62b788f33e3b5c89d4867f38e5c2b6f257cf6",
+      "source": "qa\\rc\\screens\\tutorial-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:47:11.354Z"
+    },
+    {
+      "file": "tutorial-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "5a5f2c97a85e8d058ff15dd2c2bd36bd06e1ba43b84cdb2266cc4dcccfebe5fc",
+      "source": "qa\\rc\\screens\\tutorial-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:29.890Z"
+    },
+    {
+      "file": "tutorial-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "289fb29060ebf36efe2c5d150e56d273369f55ecde6252251616fc783a493188",
+      "source": "qa\\rc\\screens\\tutorial-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:46:20.350Z"
+    },
+    {
+      "file": "tutorial-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "ffac6e7d86effb5e693d002b825cc49939fd8977f858c146d8defc8ebc45f027",
+      "source": "qa\\rc\\screens\\tutorial-en.png",
+      "modifiedAt": "2026-10-11T12:43:05.973Z"
+    },
+    {
+      "file": "tutorial-step-0-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e54a978244e756da1e1f169ef5996614cf2ab72993dc0fc1aade818faa3005e1",
+      "source": "qa\\rc\\screens\\tutorial-step-0-en.png",
+      "modifiedAt": "2026-10-11T12:42:05.593Z"
+    },
+    {
+      "file": "tutorial-step-0-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "2293aa1fb68d7ebfdac43a63e329c390ce06d2989d58e6256797059e333da1a6",
+      "source": "qa\\rc\\screens\\tutorial-step-0-tr.png",
+      "modifiedAt": "2026-10-11T12:41:46.074Z"
+    },
+    {
+      "file": "tutorial-step-1-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "5caab8ccdbe2fa29904a7c94b1e99e4b91e4efc9e60ce715208f280e7afb557c",
+      "source": "qa\\rc\\screens\\tutorial-step-1-en.png",
+      "modifiedAt": "2026-10-11T12:42:07.062Z"
+    },
+    {
+      "file": "tutorial-step-1-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "478b7ca75a1e37102e9b81421d4e09bcf52084c581301451a178ea0920c79863",
+      "source": "qa\\rc\\screens\\tutorial-step-1-tr.png",
+      "modifiedAt": "2026-10-11T12:41:48.856Z"
+    },
+    {
+      "file": "tutorial-step-2-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "06123dbb331c38d68a2ad7bcb2ac638ebfa0d5ba8a44e66d693809ba3539e8f2",
+      "source": "qa\\rc\\screens\\tutorial-step-2-en.png",
+      "modifiedAt": "2026-10-11T12:42:08.292Z"
+    },
+    {
+      "file": "tutorial-step-2-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "8cf6191cf4ccb3d574fc88e774dc826e160b2e4c573d8a00bbc51588e3aa2238",
+      "source": "qa\\rc\\screens\\tutorial-step-2-tr.png",
+      "modifiedAt": "2026-10-11T12:41:51.465Z"
+    },
+    {
+      "file": "tutorial-step-3-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "15d3cf75d7746ba873657e9178cb41474e4e6b9dcb29adb9d09966d313f3527c",
+      "source": "qa\\rc\\screens\\tutorial-step-3-en.png",
+      "modifiedAt": "2026-10-11T12:42:09.679Z"
+    },
+    {
+      "file": "tutorial-step-3-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "135c4421bdadac231070c52f3940779af58ebbc0657d68b9eca9905227503205",
+      "source": "qa\\rc\\screens\\tutorial-step-3-tr.png",
+      "modifiedAt": "2026-10-11T12:41:54.185Z"
+    },
+    {
+      "file": "tutorial-step-4-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "1182aabf2f8d8b9e091c5d37db300a85d484327375b6f2a2f1281986faaee557",
+      "source": "qa\\rc\\screens\\tutorial-step-4-en.png",
+      "modifiedAt": "2026-10-11T12:42:10.962Z"
+    },
+    {
+      "file": "tutorial-step-4-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "e45c98e3eba64c6d43ad97afb72615ce54d7781828b88941b2dfe55517b26d31",
+      "source": "qa\\rc\\screens\\tutorial-step-4-tr.png",
+      "modifiedAt": "2026-10-11T12:41:56.514Z"
+    },
+    {
+      "file": "tutorial-step-5-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "6a02a8684a3bcea23c45aed740c8333d4f935878904fb1521b0d621423d11f7c",
+      "source": "qa\\rc\\screens\\tutorial-step-5-en.png",
+      "modifiedAt": "2026-10-11T12:42:12.401Z"
+    },
+    {
+      "file": "tutorial-step-5-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "896191d27bad8d745dd7625dd7f994a21a0690783700b7910b1ed217fe60e399",
+      "source": "qa\\rc\\screens\\tutorial-step-5-tr.png",
+      "modifiedAt": "2026-10-11T12:41:58.400Z"
+    },
+    {
+      "file": "tutorial-step-6-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "a763e58fac2dc5cab9f858a95edc97dc13bab8b277c2178ed91e52f1f6f24e30",
+      "source": "qa\\rc\\screens\\tutorial-step-6-en.png",
+      "modifiedAt": "2026-10-11T12:42:13.836Z"
+    },
+    {
+      "file": "tutorial-step-6-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "1ac06af5b969e15a48a97a842b92a54c0df2aa127252361e894c9ff8e73b16e2",
+      "source": "qa\\rc\\screens\\tutorial-step-6-tr.png",
+      "modifiedAt": "2026-10-11T12:42:00.219Z"
+    },
+    {
+      "file": "tutorial-step-7-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "9f590d4d00e09b2270751a66a06e2a3c74edc05d61f22d2cc086d60559ea1de0",
+      "source": "qa\\rc\\screens\\tutorial-step-7-en.png",
+      "modifiedAt": "2026-10-11T12:42:14.944Z"
+    },
+    {
+      "file": "tutorial-step-7-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "a35c25bb7a7a7a465ad966a776317bc98bb93047e976efdae459dc3050f4bd3e",
+      "source": "qa\\rc\\screens\\tutorial-step-7-tr.png",
+      "modifiedAt": "2026-10-11T12:42:01.449Z"
+    },
+    {
+      "file": "tutorial-step-8-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "667218c65849a20307bd5fcafd39a71d859ee22584234b56edbab5a94be8c30c",
+      "source": "qa\\rc\\screens\\tutorial-step-8-en.png",
+      "modifiedAt": "2026-10-11T12:42:16.308Z"
+    },
+    {
+      "file": "tutorial-step-8-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "8a7d9e793dd799ba3ee31d2c0c491fade13577467a9b6e75e5ff802cd7a00b0e",
+      "source": "qa\\rc\\screens\\tutorial-step-8-tr.png",
+      "modifiedAt": "2026-10-11T12:42:02.696Z"
+    },
+    {
+      "file": "tutorial-step-9-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "cef6566aff3a0a6295bfdcd480200256223ee8f4a42ae83c8984b64fd5c29689",
+      "source": "qa\\rc\\screens\\tutorial-step-9-en.png",
+      "modifiedAt": "2026-10-11T12:42:17.704Z"
+    },
+    {
+      "file": "tutorial-step-9-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "657a5f3569d26c3dff8b20de362b9b0e5406994a7397ff7d0aeb995cdb9de2e8",
+      "source": "qa\\rc\\screens\\tutorial-step-9-tr.png",
+      "modifiedAt": "2026-10-11T12:42:04.045Z"
+    },
+    {
+      "file": "tutorial-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "475744e91890b99e3ff44405176f623be4dbc798f9dbe994e8eb0a7ce4ae3fd1",
+      "source": "qa\\rc\\screens\\tutorial-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:25.077Z"
+    },
+    {
+      "file": "tutorial-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "1f31b9f51c83d82cec9a4eaaf6329e1791b833793a58613448b0d1d940882ad1",
+      "source": "qa\\rc\\screens\\tutorial-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:47.667Z"
+    },
+    {
+      "file": "tutorial-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "3b4e6d63316004b87cbde70dd6d805da9607cade348166317fc8e5fce28dd7c7",
+      "source": "qa\\rc\\screens\\tutorial-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:07.536Z"
+    },
+    {
+      "file": "tutorial-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "14503efc7ed4a01b4d814c717e44d0b436ac641f6b25e2ca7af16ca5bdba7b0f",
+      "source": "qa\\rc\\screens\\tutorial-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:28.156Z"
+    },
+    {
+      "file": "tutorial-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "954b14f45d98b2c2105ab9c7834c7725779f0f8afadc9b78ba7f7b7fa1213288",
+      "source": "qa\\rc\\screens\\tutorial-tr.png",
+      "modifiedAt": "2026-10-11T12:42:25.849Z"
+    },
+    {
+      "file": "username-en-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "a3392043de3f915c3e2f2da9d54b949c8e6d4b8c14ba0ead8786206cc924bc19",
+      "source": "qa\\rc\\screens\\username-en-compact.png",
+      "modifiedAt": "2026-10-11T12:43:27.470Z"
+    },
+    {
+      "file": "username-en-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "6f69b3805ab948058b3e7717fc95af2405b2f9533f2bafad93108592097d9b02",
+      "source": "qa\\rc\\screens\\username-en-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:49.754Z"
+    },
+    {
+      "file": "username-en-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "10670595a233abc655b2dd2c5a46c0a076c86a9b61ae39369b4c920d3035ef99",
+      "source": "qa\\rc\\screens\\username-en-scaled.png",
+      "modifiedAt": "2026-10-11T12:44:09.577Z"
+    },
+    {
+      "file": "username-en-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "aec7aa36674126404cd24ecf7a1fb028bb08bb764369512f7c1be5eae2a2256c",
+      "source": "qa\\rc\\screens\\username-en-tablet.png",
+      "modifiedAt": "2026-10-11T12:45:33.721Z"
+    },
+    {
+      "file": "username-en.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "40f6d844d0732d695b19fe2968e05607336c66b5e28a77bf728b02720b428c1c",
+      "source": "qa\\rc\\screens\\username-en.png",
+      "modifiedAt": "2026-10-11T12:42:28.806Z"
+    },
+    {
+      "file": "username-tr-compact.png",
+      "width": 640,
+      "height": 1136,
+      "sha256": "10c2fa6123c0a1a282135fc18f19cacb16bb1ed3ae4e8dd3cd451ea7ca0d8d5c",
+      "source": "qa\\rc\\screens\\username-tr-compact.png",
+      "modifiedAt": "2026-10-11T12:43:08.065Z"
+    },
+    {
+      "file": "username-tr-landscape.png",
+      "width": 1688,
+      "height": 780,
+      "sha256": "76e8e77755520d60aaa39d89c9bf1f8bc1da5622e212482f37636d47af9eb0f0",
+      "source": "qa\\rc\\screens\\username-tr-landscape.png",
+      "modifiedAt": "2026-10-11T12:46:23.225Z"
+    },
+    {
+      "file": "username-tr-scaled.png",
+      "width": 640,
+      "height": 1280,
+      "sha256": "f4f59a413530fdcb712b25b93e5bdc5c5f9e9b60dbc6c607ac31dadb333d5b8c",
+      "source": "qa\\rc\\screens\\username-tr-scaled.png",
+      "modifiedAt": "2026-10-11T12:43:47.873Z"
+    },
+    {
+      "file": "username-tr-tablet.png",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "207702737932c9240e497e1b91aeaf7e27e74b372d9fbc11360044d7cc6d2880",
+      "source": "qa\\rc\\screens\\username-tr-tablet.png",
+      "modifiedAt": "2026-10-11T12:44:34.175Z"
+    },
+    {
+      "file": "username-tr.png",
+      "width": 780,
+      "height": 1688,
+      "sha256": "2ea31b8c498f2380a0c67a685241accbf6b9e9552c6894f0825340d4d55feb8e",
+      "source": "qa\\rc\\screens\\username-tr.png",
+      "modifiedAt": "2026-10-11T12:41:36.577Z"
+    }
+  ],
+  "contacts": [
+    {
+      "file": "tr-01.png",
+      "renders": [
+        "achievements-tr.png",
+        "arenas-tr.png",
+        "cards-tr.png",
+        "collection-tr.png",
+        "costumes-tr.png",
+        "deck-tr.png"
+      ]
+    },
+    {
+      "file": "tr-02.png",
+      "renders": [
+        "difficulty-tr.png",
+        "dm-tr.png",
+        "edit-profile-tr.png",
+        "emojis-tr.png",
+        "friendly-tr.png",
+        "friends-tr.png"
+      ]
+    },
+    {
+      "file": "tr-03.png",
+      "renders": [
+        "history-tr.png",
+        "home-tr.png",
+        "inbox-tr.png",
+        "levels-tr.png",
+        "loading-tr.png",
+        "missions-tr.png"
+      ]
+    },
+    {
+      "file": "tr-04.png",
+      "renders": [
+        "online-tr.png",
+        "pass-tr.png",
+        "play-tr.png",
+        "practice-tr.png",
+        "premium-tr.png",
+        "profile-tr.png"
+      ]
+    },
+    {
+      "file": "tr-05.png",
+      "renders": [
+        "public-profile-tr.png",
+        "ranking-tr.png",
+        "season-tr.png",
+        "settings-tr.png",
+        "shop-tr.png",
+        "tutorial-tr.png"
+      ]
+    },
+    {
+      "file": "tr-06.png",
+      "renders": [
+        "username-tr.png"
+      ]
+    },
+    {
+      "file": "en-01.png",
+      "renders": [
+        "achievements-en.png",
+        "arenas-en.png",
+        "cards-en.png",
+        "collection-en.png",
+        "costumes-en.png",
+        "deck-en.png"
+      ]
+    },
+    {
+      "file": "en-02.png",
+      "renders": [
+        "difficulty-en.png",
+        "dm-en.png",
+        "edit-profile-en.png",
+        "emojis-en.png",
+        "friendly-en.png",
+        "friends-en.png"
+      ]
+    },
+    {
+      "file": "en-03.png",
+      "renders": [
+        "history-en.png",
+        "home-en.png",
+        "inbox-en.png",
+        "levels-en.png",
+        "loading-en.png",
+        "missions-en.png"
+      ]
+    },
+    {
+      "file": "en-04.png",
+      "renders": [
+        "online-en.png",
+        "pass-en.png",
+        "play-en.png",
+        "practice-en.png",
+        "premium-en.png",
+        "profile-en.png"
+      ]
+    },
+    {
+      "file": "en-05.png",
+      "renders": [
+        "public-profile-en.png",
+        "ranking-en.png",
+        "season-en.png",
+        "settings-en.png",
+        "shop-en.png",
+        "tutorial-en.png"
+      ]
+    },
+    {
+      "file": "en-06.png",
+      "renders": [
+        "username-en.png"
+      ]
+    },
+    {
+      "file": "battle-01.png",
+      "renders": [
+        "battle-card-break_seal-en.png",
+        "battle-card-break_seal-tr.png",
+        "battle-card-freeze-en.png",
+        "battle-card-freeze-tr.png",
+        "battle-card-mine-en.png",
+        "battle-card-mine-tr.png"
+      ]
+    },
+    {
+      "file": "battle-02.png",
+      "renders": [
+        "battle-card-prophecy-en.png",
+        "battle-card-prophecy-tr.png",
+        "battle-compact-en.png",
+        "battle-compact-four-en.png",
+        "battle-compact-four-tr.png",
+        "battle-compact-selected-en.png"
+      ]
+    },
+    {
+      "file": "battle-03.png",
+      "renders": [
+        "battle-compact-selected-tr.png",
+        "battle-compact-target-en.png",
+        "battle-compact-target-tr.png",
+        "battle-compact-text-en.png",
+        "battle-compact-text-tr.png",
+        "battle-compact-tr.png"
+      ]
+    },
+    {
+      "file": "battle-04.png",
+      "renders": [
+        "battle-defeat-en.png",
+        "battle-defeat-tr.png",
+        "battle-draw-en.png",
+        "battle-draw-tr.png",
+        "battle-main-en.png",
+        "battle-main-tr.png"
+      ]
+    },
+    {
+      "file": "battle-05.png",
+      "renders": [
+        "battle-selected-en.png",
+        "battle-selected-tr.png",
+        "battle-target-en.png",
+        "battle-target-tr.png",
+        "battle-victory-en.png",
+        "battle-victory-tr.png"
+      ]
+    },
+    {
+      "file": "compact-01.png",
+      "renders": [
+        "achievements-en-compact.png",
+        "achievements-tr-compact.png",
+        "arenas-en-compact.png",
+        "arenas-tr-compact.png",
+        "cards-en-compact.png",
+        "cards-tr-compact.png"
+      ]
+    },
+    {
+      "file": "compact-02.png",
+      "renders": [
+        "collection-en-compact.png",
+        "collection-tr-compact.png",
+        "costumes-en-compact.png",
+        "costumes-tr-compact.png",
+        "deck-en-compact.png",
+        "deck-tr-compact.png"
+      ]
+    },
+    {
+      "file": "compact-03.png",
+      "renders": [
+        "difficulty-en-compact.png",
+        "difficulty-tr-compact.png",
+        "dm-en-compact.png",
+        "dm-tr-compact.png",
+        "edit-profile-en-compact.png",
+        "edit-profile-tr-compact.png"
+      ]
+    },
+    {
+      "file": "compact-04.png",
+      "renders": [
+        "emojis-en-compact.png",
+        "emojis-tr-compact.png",
+        "friendly-en-compact.png",
+        "friendly-tr-compact.png",
+        "friends-en-compact.png",
+        "friends-tr-compact.png"
+      ]
+    },
+    {
+      "file": "compact-05.png",
+      "renders": [
+        "history-en-compact.png",
+        "history-tr-compact.png",
+        "home-en-compact.png",
+        "home-tr-compact.png",
+        "inbox-en-compact.png",
+        "inbox-tr-compact.png"
+      ]
+    },
+    {
+      "file": "compact-06.png",
+      "renders": [
+        "levels-en-compact.png",
+        "levels-tr-compact.png",
+        "loading-en-compact.png",
+        "loading-tr-compact.png",
+        "missions-en-compact.png",
+        "missions-tr-compact.png"
+      ]
+    },
+    {
+      "file": "compact-07.png",
+      "renders": [
+        "online-en-compact.png",
+        "online-tr-compact.png",
+        "pass-en-compact.png",
+        "pass-tr-compact.png",
+        "play-en-compact.png",
+        "play-tr-compact.png"
+      ]
+    },
+    {
+      "file": "compact-08.png",
+      "renders": [
+        "practice-en-compact.png",
+        "practice-tr-compact.png",
+        "premium-en-compact.png",
+        "premium-tr-compact.png",
+        "profile-en-compact.png",
+        "profile-tr-compact.png"
+      ]
+    },
+    {
+      "file": "compact-09.png",
+      "renders": [
+        "public-profile-en-compact.png",
+        "public-profile-tr-compact.png",
+        "ranking-en-compact.png",
+        "ranking-tr-compact.png",
+        "season-en-compact.png",
+        "season-tr-compact.png"
+      ]
+    },
+    {
+      "file": "compact-10.png",
+      "renders": [
+        "settings-en-compact.png",
+        "settings-tr-compact.png",
+        "shop-en-compact.png",
+        "shop-tr-compact.png",
+        "tutorial-en-compact.png",
+        "tutorial-tr-compact.png"
+      ]
+    },
+    {
+      "file": "compact-11.png",
+      "renders": [
+        "username-en-compact.png",
+        "username-tr-compact.png"
+      ]
+    },
+    {
+      "file": "scaled-01.png",
+      "renders": [
+        "achievements-en-scaled.png",
+        "achievements-tr-scaled.png",
+        "arenas-en-scaled.png",
+        "arenas-tr-scaled.png",
+        "cards-en-scaled.png",
+        "cards-tr-scaled.png"
+      ]
+    },
+    {
+      "file": "scaled-02.png",
+      "renders": [
+        "collection-en-scaled.png",
+        "collection-tr-scaled.png",
+        "costumes-en-scaled.png",
+        "costumes-tr-scaled.png",
+        "deck-en-scaled.png",
+        "deck-tr-scaled.png"
+      ]
+    },
+    {
+      "file": "scaled-03.png",
+      "renders": [
+        "difficulty-en-scaled.png",
+        "difficulty-tr-scaled.png",
+        "dm-en-scaled.png",
+        "dm-tr-scaled.png",
+        "edit-profile-en-scaled.png",
+        "edit-profile-tr-scaled.png"
+      ]
+    },
+    {
+      "file": "scaled-04.png",
+      "renders": [
+        "emojis-en-scaled.png",
+        "emojis-tr-scaled.png",
+        "friendly-en-scaled.png",
+        "friendly-tr-scaled.png",
+        "friends-en-scaled.png",
+        "friends-tr-scaled.png"
+      ]
+    },
+    {
+      "file": "scaled-05.png",
+      "renders": [
+        "history-en-scaled.png",
+        "history-tr-scaled.png",
+        "home-en-scaled.png",
+        "home-tr-scaled.png",
+        "inbox-en-scaled.png",
+        "inbox-tr-scaled.png"
+      ]
+    },
+    {
+      "file": "scaled-06.png",
+      "renders": [
+        "levels-en-scaled.png",
+        "levels-tr-scaled.png",
+        "loading-en-scaled.png",
+        "loading-tr-scaled.png",
+        "missions-en-scaled.png",
+        "missions-tr-scaled.png"
+      ]
+    },
+    {
+      "file": "scaled-07.png",
+      "renders": [
+        "online-en-scaled.png",
+        "online-tr-scaled.png",
+        "pass-en-scaled.png",
+        "pass-tr-scaled.png",
+        "play-en-scaled.png",
+        "play-tr-scaled.png"
+      ]
+    },
+    {
+      "file": "scaled-08.png",
+      "renders": [
+        "practice-en-scaled.png",
+        "practice-tr-scaled.png",
+        "premium-en-scaled.png",
+        "premium-tr-scaled.png",
+        "profile-en-scaled.png",
+        "profile-tr-scaled.png"
+      ]
+    },
+    {
+      "file": "scaled-09.png",
+      "renders": [
+        "public-profile-en-scaled.png",
+        "public-profile-tr-scaled.png",
+        "ranking-en-scaled.png",
+        "ranking-tr-scaled.png",
+        "season-en-scaled.png",
+        "season-tr-scaled.png"
+      ]
+    },
+    {
+      "file": "scaled-10.png",
+      "renders": [
+        "settings-en-scaled.png",
+        "settings-tr-scaled.png",
+        "shop-en-scaled.png",
+        "shop-tr-scaled.png",
+        "tutorial-en-scaled.png",
+        "tutorial-tr-scaled.png"
+      ]
+    },
+    {
+      "file": "scaled-11.png",
+      "renders": [
+        "username-en-scaled.png",
+        "username-tr-scaled.png"
+      ]
+    },
+    {
+      "file": "tablet-01.png",
+      "renders": [
+        "achievements-en-tablet.png",
+        "achievements-tr-tablet.png",
+        "arenas-en-tablet.png",
+        "arenas-tr-tablet.png",
+        "cards-en-tablet.png",
+        "cards-tr-tablet.png"
+      ]
+    },
+    {
+      "file": "tablet-02.png",
+      "renders": [
+        "collection-en-tablet.png",
+        "collection-tr-tablet.png",
+        "costumes-en-tablet.png",
+        "costumes-tr-tablet.png",
+        "deck-en-tablet.png",
+        "deck-tr-tablet.png"
+      ]
+    },
+    {
+      "file": "tablet-03.png",
+      "renders": [
+        "difficulty-en-tablet.png",
+        "difficulty-tr-tablet.png",
+        "dm-en-tablet.png",
+        "dm-tr-tablet.png",
+        "edit-profile-en-tablet.png",
+        "edit-profile-tr-tablet.png"
+      ]
+    },
+    {
+      "file": "tablet-04.png",
+      "renders": [
+        "emojis-en-tablet.png",
+        "emojis-tr-tablet.png",
+        "friendly-en-tablet.png",
+        "friendly-tr-tablet.png",
+        "friends-en-tablet.png",
+        "friends-tr-tablet.png"
+      ]
+    },
+    {
+      "file": "tablet-05.png",
+      "renders": [
+        "history-en-tablet.png",
+        "history-tr-tablet.png",
+        "home-en-tablet.png",
+        "home-tr-tablet.png",
+        "inbox-en-tablet.png",
+        "inbox-tr-tablet.png"
+      ]
+    },
+    {
+      "file": "tablet-06.png",
+      "renders": [
+        "levels-en-tablet.png",
+        "levels-tr-tablet.png",
+        "loading-en-tablet.png",
+        "loading-tr-tablet.png",
+        "missions-en-tablet.png",
+        "missions-tr-tablet.png"
+      ]
+    },
+    {
+      "file": "tablet-07.png",
+      "renders": [
+        "online-en-tablet.png",
+        "online-tr-tablet.png",
+        "pass-en-tablet.png",
+        "pass-tr-tablet.png",
+        "play-en-tablet.png",
+        "play-tr-tablet.png"
+      ]
+    },
+    {
+      "file": "tablet-08.png",
+      "renders": [
+        "practice-en-tablet.png",
+        "practice-tr-tablet.png",
+        "premium-en-tablet.png",
+        "premium-tr-tablet.png",
+        "profile-en-tablet.png",
+        "profile-tr-tablet.png"
+      ]
+    },
+    {
+      "file": "tablet-09.png",
+      "renders": [
+        "public-profile-en-tablet.png",
+        "public-profile-tr-tablet.png",
+        "ranking-en-tablet.png",
+        "ranking-tr-tablet.png",
+        "season-en-tablet.png",
+        "season-tr-tablet.png"
+      ]
+    },
+    {
+      "file": "tablet-10.png",
+      "renders": [
+        "settings-en-tablet.png",
+        "settings-tr-tablet.png",
+        "shop-en-tablet.png",
+        "shop-tr-tablet.png",
+        "tutorial-en-tablet.png",
+        "tutorial-tr-tablet.png"
+      ]
+    },
+    {
+      "file": "tablet-11.png",
+      "renders": [
+        "username-en-tablet.png",
+        "username-tr-tablet.png"
+      ]
+    },
+    {
+      "file": "landscape-01.png",
+      "renders": [
+        "achievements-en-landscape.png",
+        "achievements-tr-landscape.png",
+        "arenas-en-landscape.png",
+        "arenas-tr-landscape.png",
+        "cards-en-landscape.png",
+        "cards-tr-landscape.png"
+      ]
+    },
+    {
+      "file": "landscape-02.png",
+      "renders": [
+        "collection-en-landscape.png",
+        "collection-tr-landscape.png",
+        "costumes-en-landscape.png",
+        "costumes-tr-landscape.png",
+        "deck-en-landscape.png",
+        "deck-tr-landscape.png"
+      ]
+    },
+    {
+      "file": "landscape-03.png",
+      "renders": [
+        "difficulty-en-landscape.png",
+        "difficulty-tr-landscape.png",
+        "dm-en-landscape.png",
+        "dm-tr-landscape.png",
+        "edit-profile-en-landscape.png",
+        "edit-profile-tr-landscape.png"
+      ]
+    },
+    {
+      "file": "landscape-04.png",
+      "renders": [
+        "emojis-en-landscape.png",
+        "emojis-tr-landscape.png",
+        "friendly-en-landscape.png",
+        "friendly-tr-landscape.png",
+        "friends-en-landscape.png",
+        "friends-tr-landscape.png"
+      ]
+    },
+    {
+      "file": "landscape-05.png",
+      "renders": [
+        "history-en-landscape.png",
+        "history-tr-landscape.png",
+        "home-en-landscape.png",
+        "home-tr-landscape.png",
+        "inbox-en-landscape.png",
+        "inbox-tr-landscape.png"
+      ]
+    },
+    {
+      "file": "landscape-06.png",
+      "renders": [
+        "levels-en-landscape.png",
+        "levels-tr-landscape.png",
+        "loading-en-landscape.png",
+        "loading-tr-landscape.png",
+        "missions-en-landscape.png",
+        "missions-tr-landscape.png"
+      ]
+    },
+    {
+      "file": "landscape-07.png",
+      "renders": [
+        "online-en-landscape.png",
+        "online-tr-landscape.png",
+        "pass-en-landscape.png",
+        "pass-tr-landscape.png",
+        "play-en-landscape.png",
+        "play-tr-landscape.png"
+      ]
+    },
+    {
+      "file": "landscape-08.png",
+      "renders": [
+        "practice-en-landscape.png",
+        "practice-tr-landscape.png",
+        "premium-en-landscape.png",
+        "premium-tr-landscape.png",
+        "profile-en-landscape.png",
+        "profile-tr-landscape.png"
+      ]
+    },
+    {
+      "file": "landscape-09.png",
+      "renders": [
+        "public-profile-en-landscape.png",
+        "public-profile-tr-landscape.png",
+        "ranking-en-landscape.png",
+        "ranking-tr-landscape.png",
+        "season-en-landscape.png",
+        "season-tr-landscape.png"
+      ]
+    },
+    {
+      "file": "landscape-10.png",
+      "renders": [
+        "settings-en-landscape.png",
+        "settings-tr-landscape.png",
+        "shop-en-landscape.png",
+        "shop-tr-landscape.png",
+        "tutorial-en-landscape.png",
+        "tutorial-tr-landscape.png"
+      ]
+    },
+    {
+      "file": "landscape-11.png",
+      "renders": [
+        "username-en-landscape.png",
+        "username-tr-landscape.png"
+      ]
+    }
+  ]
+}

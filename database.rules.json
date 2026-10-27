@@ -1,0 +1,129 @@
+{
+  // ════════════════════════════════════════════════════════════════
+  //  LUNO CHESS — Realtime Database Güvenlik Kuralları
+  //  FAZ 1 (launch-güvenli): oyunu BOZMADAN en kritik açıkları kapatır.
+  //   • Anonim (giriş yapmamış) erişim YOK.
+  //   • Başkasının PROFİLİNİ (altın/elmas/kupa) yazamazsın.
+  //   • Kullanıcı adı rezervasyonu kilitli (çalınamaz/ezilemez).
+  //   • DM/davet/bildirim kutuları sadece sahibine okunur.
+  //  FAZ 2 (online/APK): kupa/altın/maç sonucu Cloud Functions'a taşınınca
+  //   o alanlar "sadece sunucu yazar" olacak. Şimdilik kullanıcı KENDİ
+  //   profilini yazar (kendini kandırabilir ama başkasını bozamaz).
+  // ════════════════════════════════════════════════════════════════
+  "rules": {
+    // Varsayılan: her şey kapalı; aşağıda tek tek açılır.
+    ".read": false,
+    ".write": false,
+
+    // Profiller: herkes okuyabilir (lider tablosu/rakip/profil), yalnız SAHİBİ yazar.
+    "users": {
+      ".read": "auth != null",
+      ".indexOn": ["trophies"],
+      "$uid": {
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    },
+
+    // Kullanıcı adı kilidi: boşsa ya da zaten seninse yazılır; değer kendi uid'in olmalı.
+    // Silmeye de izin (ad değişiminde eski adı serbest bırakmak için) — sahibiysen.
+    "usernames": {
+      ".read": true,
+      "$name": {
+        ".write": "auth != null && (!data.exists() || data.val() === auth.uid) && (!newData.exists() || newData.val() === auth.uid)"
+      }
+    },
+
+    // Kullanıcı adı → e-posta eşlemesi (girişte ad ile bulmak için). Sadece o adın sahibi yazar.
+    "usernameEmails": {
+      ".read": true,
+      "$name": {
+        ".write": "auth != null && (!root.child('usernames').child($name).exists() || root.child('usernames').child($name).val() === auth.uid)"
+      }
+    },
+
+    // Maç odaları (eşleştirme/özel oda): geçici. Giriş yapan okuyup katılabilir.
+    "rooms": {
+      ".read": "auth != null",
+      "$code": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    },
+
+    // Eşleştirme kuyruğu.
+    "queue": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+
+    // Eşleştirme eşleşmeleri (rakibe yazılır).
+    "matches": {
+      "$uid": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    },
+
+    // Maç geçmişi: herkes (profilde) okur, yalnız sahibi yazar.
+    "matchHistory": {
+      "$uid": {
+        ".read": "auth != null",
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    },
+
+    // Arkadaş listeleri: karşılıklı yazım gerektiğinden giriş yapan yazabilir.
+    "friends": {
+      "$uid": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    },
+
+    // Arkadaşlık istekleri: alıcı tüm kutusunu okur; herkes gönderebilir (yazar).
+    // Gönderen, kendi gönderdiği isteği (alıcının düğümü altında) okuyabilir —
+    // "zaten istek attım mı?" kontrolü buna ihtiyaç duyar (yoksa arkadaş ekleme kırılır).
+    "friendRequests": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null",
+        "$fromUid": {
+          ".read": "auth != null && (auth.uid === $uid || auth.uid === $fromUid)"
+        }
+      }
+    },
+
+    // Maç davetleri: SADECE alıcı okur; herkes davet gönderebilir.
+    "matchInvites": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null"
+      }
+    },
+
+    // Bildirimler: SADECE alıcı okur; herkes bildirim gönderebilir.
+    "notifications": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null"
+      }
+    },
+
+    // DM gelen kutusu özeti: SADECE sahibi okur; herkes (mesaj atan) güncelleyebilir.
+    "dmInbox": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null"
+      }
+    },
+
+    // DM konuşmaları: anahtar = iki uid'in sıralı birleşimi (uidA_uidB).
+    // Sadece konuşmanın tarafları okur/yazar.
+    "dm": {
+      "$convId": {
+        ".read": "auth != null && $convId.contains(auth.uid)",
+        ".write": "auth != null && $convId.contains(auth.uid)"
+      }
+    }
+  }
+}

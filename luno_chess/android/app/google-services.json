@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "955253747543",
+    "firebase_url": "https://luno-chess-default-rtdb.firebaseio.com",
+    "project_id": "luno-chess",
+    "storage_bucket": "luno-chess.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955253747543:android:136188eaab561c9b29d812",
+        "android_client_info": {
+          "package_name": "com.luno.chess"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955253747543-6ijh5j8vs2fugd4fhsss9tbkkf92p196.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luno.chess",
+            "certificate_hash": "fa2b9fbdabd0c8dc9b6ce86d05ce00af2dbd429a"
+          }
+        },
+        {
+          "client_id": "955253747543-c1l19eic9rvpbakcaheqnjr1e22jadtf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luno.chess",
+            "certificate_hash": "8504bd1f8f3026a43f7a550482c3476fc11ccc45"
+          }
+        },
+        {
+          "client_id": "955253747543-3n1mocbscmemfqu6miliv5kujdrhn5u8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtyQqa12ihO3iXjPZGWUNRbzZVw3gXFXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955253747543-3n1mocbscmemfqu6miliv5kujdrhn5u8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

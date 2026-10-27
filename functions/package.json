@@ -1,0 +1,27 @@
+{
+  "name": "luno-chess-backend",
+  "version": "1.5.7",
+  "private": true,
+  "description": "Server-authoritative account, economy, billing and deletion API for Luno Chess.",
+  "main": "index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "build:battle": "npm --prefix rules-v1 run build",
+    "pretest": "npm run build:battle",
+    "check": "node --check index.js",
+    "test": "node --test test/*.test.js",
+    "test:emulator": "node test/emulator.integration.js",
+    "test:social:emulator": "node test/friends.integration.js && node test/dm.integration.js",
+    "migrate:username-emails": "node scripts/remove-legacy-username-emails.js"
+  },
+  "dependencies": {
+    "@firebase/app": "0.16.0",
+    "@firebase/app-compat": "0.5.16",
+    "chess.js": "^1.4.0",
+    "firebase-admin": "14.2.0",
+    "firebase-functions": "7.3.2",
+    "googleapis": "174.0.0"
+  }
+}

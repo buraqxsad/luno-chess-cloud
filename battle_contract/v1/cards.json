@@ -1,0 +1,31 @@
+{
+  "schemaVersion":1,
+  "deckSize":10,"startingHand":3,"maxHand":4,"initialMana":1,"manaCap":6,
+  "starter":["radar","prophecy","shelter","chain","slow","pawn_deviation","pawn_advance","locked_square","freeze","purify"],
+  "cards":[
+    {"id":"radar","cost":1,"rarity":"common","category":"knowledge","target":"opponent_card"},
+    {"id":"prophecy","cost":1,"rarity":"rare","category":"knowledge","target":"none"},
+    {"id":"shelter","cost":2,"rarity":"common","category":"protection","target":"own_piece"},
+    {"id":"chain","cost":2,"rarity":"common","category":"restriction","target":"opponent_piece"},
+    {"id":"slow","cost":2,"rarity":"common","category":"restriction","target":"opponent_slider"},
+    {"id":"pawn_deviation","cost":2,"rarity":"common","category":"movement","target":"own_pawn"},
+    {"id":"pawn_advance","cost":2,"rarity":"common","category":"movement","target":"own_pawn"},
+    {"id":"locked_square","cost":2,"rarity":"common","category":"board","target":"empty_square"},
+    {"id":"freeze","cost":4,"rarity":"rare","category":"restriction","target":"opponent_piece"},
+    {"id":"purify","cost":1,"rarity":"common","category":"removal","target":"own_piece_effect"},
+    {"id":"mine","cost":2,"rarity":"rare","category":"board","target":"empty_square"},
+    {"id":"break_seal","cost":1,"rarity":"rare","category":"removal","target":"opponent_board_effect"},
+    {"id":"fog","cost":3,"rarity":"rare","category":"protection","target":"zone"},
+    {"id":"mana_sabotage","cost":2,"rarity":"rare","category":"modifier","target":"opponent_card"},
+    {"id":"card_block","cost":3,"rarity":"rare","category":"modifier","target":"opponent_card"},
+    {"id":"rook_bend","cost":2,"rarity":"epic","category":"movement","target":"own_rook"},
+    {"id":"angry_n","cost":3,"rarity":"epic","category":"movement","target":"own_knight"},
+    {"id":"shadow_pass","cost":3,"rarity":"epic","category":"movement","target":"own_bishop_rook"},
+    {"id":"hunt_vow","cost":2,"rarity":"epic","category":"vow","target":"opponent_piece"},
+    {"id":"watch_vow","cost":2,"rarity":"epic","category":"vow","target":"empty_square"},
+    {"id":"echo","cost":2,"rarity":"epic","category":"modifier","target":"opponent_card"},
+    {"id":"fate_exchange","cost":3,"rarity":"legendary","category":"knowledge","target":"sacrifice"},
+    {"id":"shadow_contract","cost":1,"rarity":"legendary","category":"modifier","target":"sacrifice"},
+    {"id":"board_seal","cost":5,"rarity":"legendary","category":"board","target":"zone"}
+  ]
+}

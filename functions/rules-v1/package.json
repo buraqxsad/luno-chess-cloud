@@ -1,0 +1,16 @@
+{
+  "name": "luno-battle-rules-v1",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "test:chess": "npm run build && node --test dist/test/chess.test.js",
+    "test:core": "npm run build && node --test dist/test/core.test.js",
+    "test:fixtures": "npm run build && node --test dist/test/fixtures.test.js",
+    "test:differential": "npm run build && node dist/test/differential.js"
+  },
+  "dependencies": {"chess.js":"1.4.0"},
+  "devDependencies": {"typescript":"5.9.3", "@types/node":"22.18.6"}
+}

@@ -1,0 +1,20 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {STARTER} from '../src/model.js';
+import {migrateLegacy,validateOwnedDeck} from '../src/online/migration.js';
+test('migration retains legacy data, seeds but does not copy legacy public rating',()=>{const p={deck:['radar1','freeze','card_block','angry_n','unknown','radar2'],unlockedCards:{radar1:true,freeze:true,card_block:true,angry_n:true},trophies:2200,gold:500};const before=structuredClone(p),a=migrateLegacy(p);assert.deepEqual(p,before);assert.deepEqual(a.deck,STARTER);assert.equal(a.rating,0);assert.equal(a.provisionalSkillSeed,2200);assert.equal(a.entitlements.filter(x=>x==='radar').length,1);assert.deepEqual(migrateLegacy(p,a),a);});
+for(const [name,deck] of Object.entries({empty:[],short:STARTER.slice(0,9),long:[...STARTER,'mine'],duplicate:[...STARTER.slice(0,9),'radar'],unknown:[...STARTER.slice(0,9),'unknown'],invalid:{a:'radar'}}))test('deterministic starter fallback '+name,()=>{const a=migrateLegacy({deck,unlockedCards:name==='long'?{mine:true}:{}});assert.deepEqual(a.deck,STARTER);assert.equal(a.fallback,true);assert.equal(a.entitlements.length,name==='long'?11:10);});
+test('exact valid ten and interrupted/corrupt migrated records repair safely',()=>{const a=migrateLegacy({deck:[...STARTER]});assert.equal(a.fallback,false);assert.deepEqual(migrateLegacy({}, {...a,deck:['radar']} ).deck,STARTER);assert.deepEqual(migrateLegacy({},null).deck,STARTER);assert.deepEqual(validateOwnedDeck(STARTER,a),STARTER);assert.throws(()=>validateOwnedDeck([...STARTER.slice(0,9),'mine'],a));assert.throws(()=>validateOwnedDeck([...STARTER.slice(0,9),'radar'],a));});
+test('chest grants after initial migration become owned without resetting saved deck',()=>{
+  const profile:Record<string,unknown>={unlockedCards:{}};
+  const initial=migrateLegacy(profile);
+  profile.unlockedCards={fog:true,radar2:true,mine:false,unknown:true};
+  profile.battleV1UnlockedCards={shadow_contract:true,board_seal:false};
+  const updated=migrateLegacy(profile,initial);
+  assert(updated.entitlements.includes('fog'));
+  assert(updated.entitlements.includes('radar'));
+  assert(updated.entitlements.includes('shadow_contract'));
+  assert(!updated.entitlements.includes('mine'));
+  assert(!updated.entitlements.includes('board_seal'));
+  updated.deck=validateOwnedDeck([...STARTER.slice(0,9),'fog'],updated);
+  assert.deepEqual(migrateLegacy(profile,updated).deck,updated.deck);
+  assert.deepEqual(initial.entitlements,STARTER);
+});

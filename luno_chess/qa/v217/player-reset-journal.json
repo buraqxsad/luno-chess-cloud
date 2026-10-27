@@ -1,0 +1,104 @@
+{
+  "projectId": "luno-chess",
+  "projectNumber": "955253747543",
+  "startedAt": "2026-10-10T17:14:20.641Z",
+  "destructiveUserConfirmation": "Granted in current human message; player accounts and progression only.",
+  "originalSignupDisabled": false,
+  "apiService": "projects/luno-chess/locations/europe-west1/services/lunoapi",
+  "originalPublicInvoker": true,
+  "jobs": [
+    {
+      "name": "projects/luno-chess/locations/europe-west1/jobs/firebase-schedule-sweepRankedMatches-europe-west1",
+      "originalState": "ENABLED"
+    }
+  ],
+  "accountCountBefore": 236,
+  "drainSeconds": 75,
+  "playerRootsBefore": [
+    "publicProfiles",
+    "playerCodes",
+    "accountDeletions",
+    "deletedAccounts",
+    "rankedPlayers",
+    "users",
+    "usernameEmails",
+    "dmInbox",
+    "matchInvites",
+    "messageThrottle",
+    "outgoingFriendRequests",
+    "rooms",
+    "presence",
+    "rankedMatchViews",
+    "friends",
+    "usernames",
+    "dm",
+    "friendRequests",
+    "matchHistory",
+    "serverRateLimits",
+    "auditLogs",
+    "notifications",
+    "rankedReplays",
+    "serverRequests",
+    "rankedState"
+  ],
+  "dataBackedUp": false,
+  "phase": "access-restored",
+  "updatedAt": "2026-10-10T17:23:10.102Z",
+  "accountsDeleted": 236,
+  "accountsAfter": 0,
+  "playerRootsAfter": [],
+  "rootsDeleted": [
+    "publicProfiles",
+    "playerCodes",
+    "accountDeletions",
+    "deletedAccounts",
+    "rankedPlayers",
+    "users",
+    "usernameEmails",
+    "dmInbox",
+    "matchInvites",
+    "messageThrottle",
+    "outgoingFriendRequests",
+    "rooms",
+    "presence",
+    "rankedMatchViews",
+    "friends",
+    "usernames",
+    "dm",
+    "friendRequests",
+    "matchHistory",
+    "serverRateLimits",
+    "auditLogs",
+    "notifications",
+    "rankedReplays",
+    "serverRequests",
+    "rankedState"
+  ],
+  "deployedFunctions": [
+    {
+      "id": "lunoApi",
+      "updateTime": "2026-10-10T17:22:19.101816006Z",
+      "hash": "d9c8d6e1fcfc431a1aecc59750e1d28451bcad68"
+    },
+    {
+      "id": "sweepRankedMatches",
+      "updateTime": "2026-10-10T17:22:19.306988305Z",
+      "hash": "d9c8d6e1fcfc431a1aecc59750e1d28451bcad68"
+    },
+    {
+      "id": "sweepBattleV1",
+      "updateTime": "2026-10-10T17:21:38.498689238Z",
+      "hash": "d9c8d6e1fcfc431a1aecc59750e1d28451bcad68"
+    },
+    {
+      "id": "sweepProductTelemetry",
+      "updateTime": "2026-10-10T17:22:16.626472939Z",
+      "hash": "d9c8d6e1fcfc431a1aecc59750e1d28451bcad68"
+    },
+    {
+      "id": "playBillingNotifications",
+      "updateTime": "2026-10-10T17:22:19.089138872Z",
+      "hash": "d9c8d6e1fcfc431a1aecc59750e1d28451bcad68"
+    }
+  ]
+}

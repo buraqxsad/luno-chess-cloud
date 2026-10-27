@@ -1,0 +1,5 @@
+# Copy this file to key.properties and fill in the real Play upload key values.
+storePassword=REPLACE_ME
+keyPassword=REPLACE_ME
+keyAlias=REPLACE_ME
+storeFile=../upload-keystore.jks

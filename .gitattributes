@@ -1,0 +1,4 @@
+# Preserve copied source bytes by default; normalize executable shell wrappers.
+* -text
+**/gradlew text eol=lf
+*.sh text eol=lf
