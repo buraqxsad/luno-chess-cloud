@@ -534,7 +534,9 @@ class LunoLoadingArtwork extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l = LunoLocalizations.of(context);
-    return ColoredBox(
+    // StartupGate displays this before any Scaffold exists. Material provides
+    // the theme's text defaults instead of the yellow fallback decoration.
+    return Material(
       color: LunoColors.bgDeep,
       child: LayoutBuilder(
         builder: (context, constraints) {
