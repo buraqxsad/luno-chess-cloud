@@ -78,9 +78,20 @@ async function main(){
   assert.equal(replay.messageId,sent.messageId);
   assert.equal(replay.idempotent,true);
   assert.equal(Object.keys(await adminValue(`dm/${opened.conversationId}/msgs`)).length,1);
-  const throttled=await api('/sendDirectMessage',first.idToken,{targetUid:second.localId,text:'Too quick'},'dm-fast-'+suffix);
+  // RTDB reads and replay can take longer than the 1200ms cooldown on a
+  // throttled worker. In direct-handler mode exercise the intended next-ms
+  // server instant, without changing production timing or throttle records.
+  const throttle=await adminValue(`messageThrottle/${first.localId}/${second.localId}`);
+  assert(Number.isSafeInteger(throttle.attemptAt));
+  const wallNow=Date.now;
+  let throttled;
+  try{
+    if(!functionsBase)Date.now=()=>throttle.attemptAt+1;
+    throttled=await api('/sendDirectMessage',first.idToken,{targetUid:second.localId,text:'Too quick'},'dm-fast-'+suffix);
+  }finally{Date.now=wallNow;}
   assert.equal(throttled.status,429,JSON.stringify(throttled.body));
   assert.equal(throttled.body.error,'message-rate-limited');
+  assert.equal(Object.keys(await adminValue(`dm/${opened.conversationId}/msgs`)).length,1);
 
   assert.equal((await clientDb(`dm/${opened.conversationId}/msgs`,second.idToken)).status,200);
   assert.equal((await clientDb(`dm/${opened.conversationId}/msgs`,outsider.idToken)).status,401);
