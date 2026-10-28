@@ -137,11 +137,16 @@ async function main(){
   assert.equal(linkedPrepare.body.alreadyLinked,true);
   console.error('[stage] guest and Google-link safety complete');
 
+  const forgedDaily=await api('/claimDailyReward',first.idToken,
+    {amount:999999999,clientTime:Date.now()+365*24*60*60*1000},'daily-forged-1');
+  assert.equal(forgedDaily.status,400,JSON.stringify(forgedDaily.body));
+  assert.equal(forgedDaily.body.error,'unexpected-field');
+  assert.equal((await db.ref('users/'+first.localId+'/gold').get()).val(),1250);
   const parallelDaily=await Promise.all(Array.from({length:100},function(_,index){
     return api(
       '/claimDailyReward',
       first.idToken,
-      {amount:999999999,clientTime:Date.now()+365*24*60*60*1000},
+      {},
       'daily-parallel-'+index,
       'https://localhost',
       60000
@@ -163,8 +168,8 @@ async function main(){
   assert.equal(dailyRetry.status,200,JSON.stringify(dailyRetry.body));
   assert.equal(dailyRetry.body.idempotent,true);
   const clockSpoof=await api('/claimDailyReward',first.idToken,{clientTime:0,dayKey:'2099-01-01'},'daily-clock-spoof-1');
-  assert.equal(clockSpoof.status,200,JSON.stringify(clockSpoof.body));
-  assert.equal(clockSpoof.body.granted,false);
+  assert.equal(clockSpoof.status,400,JSON.stringify(clockSpoof.body));
+  assert.equal(clockSpoof.body.error,'unexpected-field');
   assert.equal((await db.ref('users/'+first.localId+'/gold').get()).val(),1450);
   const serverState=await api('/getPlayerState',first.idToken,{},'state-read-1');
   assert.equal(serverState.status,200,JSON.stringify(serverState.body));
@@ -225,7 +230,8 @@ async function main(){
   const rewardProfile=(await db.ref('users/'+first.localId).get()).val();
   // Starter 1250 + daily 200 + mission 150 + achievement 100 + Pass 120 + season 1500.
   assert.equal(rewardProfile.gold,3320);
-  assert.equal(rewardProfile.gems,72);
+  // Starter 50 + the configured Silver season reward 30; the other grants above contain no gems.
+  assert.equal(rewardProfile.gems,80);
   assert.equal(Object.keys(rewardProfile.serverEconomy.claims||{}).length,5);
   assert.equal(Object.keys(rewardProfile.serverEconomy.ledger||{}).length,6);
   console.error('[stage] reward races complete');

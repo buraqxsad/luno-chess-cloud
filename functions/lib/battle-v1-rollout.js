@@ -30,10 +30,12 @@ function installBattleV1Rollout(api,deps){
  async function migrate(uid){
   const profile=await deps.requirePlayer(uid);let account;
   if(profile.uid!==uid)throw new BattleError('PROFILE_OWNER_MISMATCH',403);
-  const tx=await db.ref('battleV1Accounts/'+uid).transaction(value=>{
+  const ref=db.ref('battleV1Accounts/'+uid);
+  const tx=await deps.writeAccountMetadata(uid,'battleV1Migration',()=>ref.transaction(value=>{
    const old=value?.accountJson?JSON.parse(value.accountJson):null;
    account=migrateLegacy(profile,old);syncEarlyProgress(account,profile,uid,now());reconcileCompetitiveProgression(account);return {...value,accountJson:JSON.stringify(account)};
-  },undefined,false);
+  },undefined,false),()=>ref.remove());
+  if(!tx.committed||!tx.snapshot.val())throw new BattleError('TEMPORARILY_UNAVAILABLE',503);
   return {profile,account:JSON.parse(tx.snapshot.val().accountJson)};
  }
  async function setBattleV1Deck(context){const b=requireRecord(context.body);exactKeys(b,['client','deck']);await admission(b);await deps.rateLimit(context.uid,'setBattleV1Deck',20,60000);await migrate(context.uid);

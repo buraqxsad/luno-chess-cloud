@@ -150,7 +150,7 @@ void main() {
               ),
               child: child!,
             ),
-        home: const TutorialScreen(),
+        home: const TutorialScreen(lessonMode: true),
       ),
     );
     VoidCallback? oldTap;

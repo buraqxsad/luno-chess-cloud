@@ -25,6 +25,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
+import java.util.regex.Pattern;
 
 // Java 21 source-file launch. Only --self-test writes a temporary synthetic ZIP.
 class V217ReleaseBundleVerify {
@@ -48,12 +49,45 @@ class V217ReleaseBundleVerify {
 
     static Map<String, Object> map() { return new LinkedHashMap<>(); }
 
+    static String[] sourceVersion(Path root) throws Exception {
+        var match = Pattern.compile("(?m)^version:\\s*(\\d+\\.\\d+\\.\\d+)\\+(\\d+)\\s*$")
+            .matcher(Files.readString(root.resolve("pubspec.yaml")));
+        require(match.find(), "SOURCE_VERSION_UNAVAILABLE");
+        return new String[] { match.group(1), match.group(2) };
+    }
+
+    static int expectedBuild(Path root) throws Exception {
+        String configured = System.getProperty("luno.expectedBuild");
+        String value = configured == null ? sourceVersion(root)[1] : configured;
+        require(value.matches("[0-9]+"), "INVALID_EXPECTED_BUILD");
+        long number;
+        try { number = Long.parseLong(value); }
+        catch (NumberFormatException invalid) { throw new Rejected("INVALID_EXPECTED_BUILD"); }
+        require(number > 0 && number <= 2100000000L, "INVALID_EXPECTED_BUILD");
+        return (int) number;
+    }
+
+    static String expectedVersion(Path root) throws Exception {
+        String value = System.getProperty("luno.expectedVersion", sourceVersion(root)[0]);
+        require(value.matches("[0-9]+\\.[0-9]+\\.[0-9]+"), "INVALID_EXPECTED_VERSION");
+        return value;
+    }
+
+    static Path signingPropertiesFile(Path root) {
+        return signingPropertiesFile(root, System.getProperty("luno.signingPropertiesFile", "key.properties"));
+    }
+
+    static Path signingPropertiesFile(Path root, String configured) {
+        Path properties = Path.of(configured);
+        return properties.isAbsolute() ? properties : root.resolve("android").resolve(properties);
+    }
+
     static byte[] configuredCertificate(Path root) throws Exception {
         Properties properties = new Properties();
         char[] password = null;
         try {
             Path android = root.resolve("android");
-            try (InputStream input = Files.newInputStream(android.resolve("key.properties"))) {
+            try (InputStream input = Files.newInputStream(signingPropertiesFile(root))) {
                 properties.load(input);
             }
             for (String field : List.of("storeFile", "storePassword", "keyAlias", "keyPassword")) {
@@ -122,7 +156,7 @@ class V217ReleaseBundleVerify {
         result.put("excludedMetaInfEntries", metadata);
         result.put("everyNonMetaInfPayloadSignatureVerified", true);
         result.put("everyPayloadMatchesConfiguredUploadCertificate", true);
-        result.put("signaturePolicy", "JDK21_JarFile_verification_and_disabled_algorithms");
+        result.put("signaturePolicy", "JDK" + Runtime.version().feature() + "_JarFile_verification_and_disabled_algorithms");
         return result;
     }
 
@@ -200,12 +234,16 @@ class V217ReleaseBundleVerify {
     }
 
     static Map<String, Object> manifest(byte[] bytes, Set<String> allowed, Map<String, Object> result, int expectedBuild) throws Exception {
+        return manifest(bytes, allowed, result, expectedBuild, "1.6.3");
+    }
+
+    static Map<String, Object> manifest(byte[] bytes, Set<String> allowed, Map<String, Object> result, int expectedBuild, String expectedVersion) throws Exception {
         Resources.XmlNode node = Resources.XmlNode.parseFrom(bytes);
         require(node.hasElement(), "MANIFEST_ROOT_MISSING");
         var root = node.getElement();
         require(root.getName().equals("manifest") && root.getNamespaceUri().isEmpty(), "MANIFEST_ROOT_INVALID");
         require("com.luno.chess".equals(attr(root, "", "package")), "APPLICATION_ID_MISMATCH");
-        require("1.6.3".equals(attr(root, ANDROID, "versionName")), "VERSION_NAME_MISMATCH");
+        require(expectedVersion.equals(attr(root, ANDROID, "versionName")), "VERSION_NAME_MISMATCH");
         require(Integer.toString(expectedBuild).equals(attr(root, ANDROID, "versionCode")), "VERSION_CODE_MISMATCH");
         String major = attr(root, ANDROID, "versionCodeMajor");
         require(major == null || major.equals("0"), "VERSION_CODE_MAJOR_MISMATCH");
@@ -243,7 +281,7 @@ class V217ReleaseBundleVerify {
         require(attribute(application, ANDROID, "networkSecurityConfig") == null,
             "NETWORK_SECURITY_CONFIG_REQUIRES_SEPARATE_REVIEW");
         result.put("applicationId", "com.luno.chess");
-        result.put("versionName", "1.6.3");
+        result.put("versionName", expectedVersion);
         result.put("versionCode", expectedBuild);
         result.put("minSdk", 24);
         result.put("targetSdk", 36);
@@ -348,6 +386,10 @@ class V217ReleaseBundleVerify {
     }
 
     static void verify(Path root, Path bundle, Set<String> allowed, Map<String, Object> report) throws Exception {
+        int expectedBuild = expectedBuild(root);
+        String expectedVersion = expectedVersion(root);
+        report.put("expectedBuild", expectedBuild);
+        report.put("expectedVersion", expectedVersion);
         require(Files.isRegularFile(bundle) && bundle.getFileName().toString().endsWith(".aab"), "AAB_NOT_FOUND");
         long size = Files.size(bundle);
         var modified = Files.getLastModifiedTime(bundle);
@@ -362,9 +404,7 @@ class V217ReleaseBundleVerify {
             report.put("stage", "merged_manifest");
             Map<String, Object> manifestReport = map();
             report.put("manifest", manifestReport);
-            int expectedBuild = Integer.getInteger("luno.expectedBuild", 17);
-            require(expectedBuild > 0 && expectedBuild <= 2100000000, "INVALID_EXPECTED_BUILD");
-            manifest(boundedEntry(jar, "base/manifest/AndroidManifest.xml"), allowed, manifestReport, expectedBuild);
+            manifest(boundedEntry(jar, "base/manifest/AndroidManifest.xml"), allowed, manifestReport, expectedBuild, expectedVersion);
             // Extra modules would need their own manifest review; do not silently inspect base only.
             var entries = jar.entries();
             while (entries.hasMoreElements()) {
@@ -447,6 +487,18 @@ class V217ReleaseBundleVerify {
     static void selfTest(Path root, Map<String, Object> report) throws Exception {
         List<Map<String, Object>> tests = new ArrayList<>();
         report.put("syntheticTests", tests);
+        int sourceBuild = Integer.parseInt(sourceVersion(root)[1]);
+        test(tests, "current_source_build_without_historical_17_default", null,
+            () -> manifest(syntheticManifest(Integer.toString(sourceBuild), null, ""), DEFAULT_PERMISSIONS, map(), sourceBuild));
+        test(tests, "configured_version_name_rejects_wrong_manifest", "VERSION_NAME_MISMATCH",
+            () -> manifest(syntheticManifest("19", null, ""), DEFAULT_PERMISSIONS, map(), 19, "2.0.0"));
+        report.put("configuredExpectedBuild", expectedBuild(root));
+        report.put("configuredExpectedVersion", expectedVersion(root));
+        test(tests, "alternate_relative_signing_file_matches_gradle_base", null,
+            () -> require(signingPropertiesFile(root, "alternate.properties").equals(root.resolve("android/alternate.properties")), "SIGNING_PATH_MISMATCH"));
+        Path absoluteProperties = root.resolve("qa/synthetic-signing.properties").toAbsolutePath();
+        test(tests, "alternate_absolute_signing_file_preserved", null,
+            () -> require(signingPropertiesFile(root, absoluteProperties.toString()).equals(absoluteProperties), "SIGNING_PATH_MISMATCH"));
         test(tests, "manifest_expected", null, () -> manifest(syntheticManifest("17", null, ""), DEFAULT_PERMISSIONS));
         test(tests, "manifest_wrong_version", "VERSION_CODE_MISMATCH", () -> manifest(syntheticManifest("18", null, ""), DEFAULT_PERMISSIONS));
         test(tests, "manifest_explicit_build", null, () -> manifest(syntheticManifest("18", null, ""), DEFAULT_PERMISSIONS, map(), 18));
@@ -504,6 +556,8 @@ class V217ReleaseBundleVerify {
         report.put("stage", "arguments");
         int status = 2;
         try {
+            require(Runtime.version().feature() >= 21, "JAVA_21_OR_NEWER_REQUIRED");
+            report.put("javaFeatureVersion", Runtime.version().feature());
             require(args.length >= 2, "INVALID_ARGUMENTS");
             Path root = Path.of(args[1]).toAbsolutePath().normalize();
             if (args[0].equals("--self-test")) {

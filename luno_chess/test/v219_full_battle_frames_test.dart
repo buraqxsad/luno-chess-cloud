@@ -90,7 +90,7 @@ void main() {
         expect(controller.snapshot!.stateVersion, 1);
         expect(find.byType(BattleCastStage), findsOneWidget);
         final duration = battleEffectDuration(card).inMilliseconds;
-        final travel = (duration * .35).round();
+        final travel = battleImpactDelay(card) - 20;
         await tester.pump(Duration(milliseconds: travel));
         expect(
           find.byKey(ValueKey('card-flight-${card.wire}')),
@@ -98,6 +98,7 @@ void main() {
         );
         await frame(tester, '$prefix-travel', travel);
         final impact = battleImpactDelay(card) + 20;
+        expect(impact, greaterThan(travel));
         await tester.pump(Duration(milliseconds: impact - travel));
         await frame(tester, '$prefix-impact', impact);
         await tester.pump(Duration(milliseconds: duration - impact + 100));

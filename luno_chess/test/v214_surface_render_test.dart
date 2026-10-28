@@ -44,6 +44,7 @@ import 'battle_ui/visual_test.dart'
         captureKey,
         VisualScene;
 import 'helpers/live_onboarding_driver.dart';
+import 'helpers/battle_surface_reachability.dart';
 import 'rc_battle_capture_test.dart' as rc_battle;
 import 'rc_screen_capture_test.dart' as rc_screens;
 import 'v214_first_match_ui_test.dart' as first_match;
@@ -167,10 +168,15 @@ Future<void> surfaceCapture(
   });
 }
 
-void assertBoardAndHandVisible(WidgetTester tester, Size size, String label) {
+Future<void> assertBoardAndHandReachable(
+  WidgetTester tester,
+  Size size,
+  String label,
+) async {
   final board = tester.getRect(find.byType(BattleBoard).first);
-  final hand = tester.getRect(find.byType(BattleHand).first);
-  final viewport = Offset.zero & size;
+  final handFinder = find.byType(BattleHand);
+  final hand = tester.getRect(handFinder);
+  final viewport = Rect.fromLTRB(0, 24, size.width, size.height - 24);
   expect(board.top, greaterThanOrEqualTo(viewport.top), reason: label);
   expect(board.bottom, lessThanOrEqualTo(viewport.bottom), reason: label);
   expect(
@@ -178,11 +184,11 @@ void assertBoardAndHandVisible(WidgetTester tester, Size size, String label) {
     greaterThanOrEqualTo(24),
     reason: '$label: chess cells need a readable minimum logical size',
   );
-  expect(hand.top, greaterThanOrEqualTo(viewport.top), reason: label);
   expect(
-    hand.bottom,
-    lessThanOrEqualTo(viewport.bottom),
-    reason: '$label: own hand must be initially visible without scrolling',
+    hand.height,
+    greaterThanOrEqualTo(116),
+    reason:
+        '$label: readable cards must not shrink to fit the information dock',
   );
   final mainScroll = find.byKey(const ValueKey('battle-scroll'));
   if (find
@@ -193,16 +199,6 @@ void assertBoardAndHandVisible(WidgetTester tester, Size size, String label) {
       board.bottom,
       lessThanOrEqualTo(tester.getRect(mainScroll).bottom),
       reason: '$label: board must not be clipped behind the hand dock',
-    );
-  }
-  if (find
-      .ancestor(of: find.byType(BattleHand), matching: mainScroll)
-      .evaluate()
-      .isNotEmpty) {
-    expect(
-      hand.bottom,
-      lessThanOrEqualTo(tester.getRect(mainScroll).bottom),
-      reason: '$label: hand must not be clipped behind the action dock',
     );
   }
   expect(
@@ -218,14 +214,33 @@ void assertBoardAndHandVisible(WidgetTester tester, Size size, String label) {
     matching: find.byType(BattleMana),
   );
   expect(ownMana, findsOneWidget, reason: label);
-  final mana = tester.getRect(ownMana);
-  expect(mana.top, greaterThanOrEqualTo(0), reason: label);
-  expect(mana.bottom, lessThanOrEqualTo(size.height), reason: label);
+  final mana = await revealBattleSurfaceWidget(
+    tester,
+    ownMana,
+    safe: viewport,
+    fixedBoard: board,
+  );
   expect(
     mana.height,
     greaterThanOrEqualTo(16),
     reason: '$label: own mana must not shrink to an unreadable strip',
   );
+  final cards = find.descendant(
+    of: handFinder,
+    matching: find.byType(BattleCardTile),
+  );
+  expect(
+    cards,
+    findsNWidgets(tester.widget<BattleHand>(handFinder).view.ownHand.length),
+  );
+  for (final card in cards.evaluate().toList()) {
+    await revealBattleCard(
+      tester,
+      find.byWidget(card.widget),
+      safe: viewport,
+      fixedBoard: board,
+    );
+  }
 }
 
 void firstSessionTests() {
@@ -518,7 +533,7 @@ void responsiveTests() {
             'matrix-battle-$language-${size.width.toInt()}-${(scale * 100).round()}',
             key: captureKey,
           );
-          assertBoardAndHandVisible(tester, size, label);
+          await assertBoardAndHandReachable(tester, size, label);
           await tester.pumpWidget(const SizedBox());
           await tester.pump();
         });

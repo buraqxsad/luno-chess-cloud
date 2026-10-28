@@ -343,20 +343,29 @@ void main() {
       final at = tester.getCenter(card);
       final drag = await tester.startGesture(at);
       await tester.pump();
+      await tester.pump(const Duration(milliseconds: 90));
       final press = find.descendant(
         of: card,
-        matching: find.byType(AnimatedScale),
+        matching: find.byKey(const ValueKey('hand-card-pose')),
       );
-      expect(tester.widget<AnimatedScale>(press.first).scale, .94);
+      final pressed = tester.widget<Transform>(press);
+      expect(pressed.transform.storage[0], lessThan(.97));
+      expect(pressed.transformHitTests, isFalse);
+      expect(tester.widget<BattleCardTile>(card).selected, false);
+      expect(h.sent, isEmpty);
       await drag.moveTo(at + const Offset(0, -40));
       await tester.pump();
-      expect(tester.widget<AnimatedScale>(press.first).scale, 1);
+      await tester.pump(const Duration(milliseconds: 200));
+      expect(
+        tester.widget<Transform>(press).transform.storage[0],
+        closeTo(1, .001),
+      );
       await drag.up();
       await tester.pumpAndSettle();
       expect(tester.widget<BattleCardTile>(card).selected, false);
       expect(h.sent, isEmpty);
       await capture(tester, 'battle-ready');
-      final touch = await tester.startGesture(at);
+      final touch = await tester.startGesture(tester.getCenter(card));
       for (var frame = 0; frame < 4; frame++) {
         await tester.pump(const Duration(milliseconds: 25));
         await capture(

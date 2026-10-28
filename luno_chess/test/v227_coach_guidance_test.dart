@@ -404,25 +404,86 @@ void main() {
     }
   }
 
-  test(
-    'completed free practice still focuses controls for a pending decision',
-    () {
-      final progress = BattlePracticeProgress(2, onboarding: true)..moves = 4;
-      var state = battleFixture(hand: [CardId.prophecy]);
-      final play = BattleRulesCore.legalActions(state.view(PieceColor.white))
-          .whereType<PlayCardAction>()
-          .firstWhere((a) => a.card == CardId.prophecy);
-      state = DeckManager.apply(state, play);
-      final view = state.view(PieceColor.white);
-      expect(progress.complete, true);
-      expect(progress.stopsPlay, false);
-      expect(view.rules.pending, isNotNull);
-      expect(
-        practiceFocus(progress, view, null, false),
-        BattleCoachFocus.controls,
-        reason:
-            'Free-play completion must not hide an unresolved card decision.',
+  for (final completed in [false, true]) {
+    for (final card in [CardId.prophecy, CardId.fateExchange]) {
+      test(
+        'free practice focuses only its live pending ${card.wire}, complete=$completed',
+        () {
+          final progress = BattlePracticeProgress(2, onboarding: true)
+            ..moves = completed ? 4 : 0;
+          // Fate Exchange needs another card to sacrifice before opening its
+          // pending choice, as in the widget fixture above.
+          var state = battleFixture(hand: [card, CardId.shelter]);
+          final play = BattleRulesCore.legalActions(
+            state.view(PieceColor.white),
+          ).whereType<PlayCardAction>().firstWhere((a) => a.card == card);
+          if (card == CardId.fateExchange) {
+            expect(play.sacrifice, CardId.shelter);
+          }
+          state = DeckManager.apply(state, play);
+          final view = state.view(PieceColor.white);
+          expect(progress.complete, completed);
+          expect(progress.stopsPlay, false);
+          expect(view.rules.pending?.owner, PieceColor.white);
+          expect(
+            practiceFocus(progress, view, null, false),
+            BattleCoachFocus.controls,
+            reason:
+                'Free-play completion must not hide an unresolved card decision.',
+          );
+          expect(
+            practiceFocus(progress, state.view(PieceColor.black), null, false),
+            BattleCoachFocus.none,
+            reason:
+                'The opponent must not be prompted to resolve our decision.',
+          );
+          final terminal = AuthoritativeBattleState(
+            (RuleDraft(state.rules)
+              ..terminal = const TerminalState('resign')).freeze(),
+            state.hidden,
+          );
+          expect(
+            practiceFocus(
+              progress,
+              terminal.view(PieceColor.white),
+              null,
+              false,
+            ),
+            BattleCoachFocus.none,
+            reason: 'An ended practice must never request a card decision.',
+          );
+          final resolve =
+              BattleRulesCore.legalActions(
+                view,
+              ).whereType<ResolveAction>().first;
+          state = DeckManager.apply(state, resolve);
+          expect(state.rules.pending, isNull);
+          expect(
+            practiceFocus(progress, state.view(PieceColor.white), null, false),
+            BattleCoachFocus.none,
+            reason: 'Free practice removes the highlight after confirmation.',
+          );
+        },
       );
-    },
-  );
+    }
+  }
+
+  test('completed lessons that stop play do not focus pending controls', () {
+    final progress =
+        BattlePracticeProgress(0, onboarding: true)
+          ..moves = 4
+          ..cast = true
+          ..discarded = true;
+    var state = battleFixture(hand: [CardId.prophecy]);
+    final play = BattleRulesCore.legalActions(
+      state.view(PieceColor.white),
+    ).whereType<PlayCardAction>().firstWhere((a) => a.card == CardId.prophecy);
+    state = DeckManager.apply(state, play);
+    expect(progress.stopsPlay, true);
+    expect(state.rules.pending, isNotNull);
+    expect(
+      practiceFocus(progress, state.view(PieceColor.white), null, false),
+      BattleCoachFocus.none,
+    );
+  });
 }

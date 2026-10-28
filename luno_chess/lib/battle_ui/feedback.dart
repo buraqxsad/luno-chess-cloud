@@ -16,6 +16,8 @@ import 'tokens.dart';
 import 'spell_vfx.dart';
 import 'effect_timing.dart';
 import 'accepted_frames.dart';
+import 'spell_halo.dart';
+import 'spell_motifs.dart';
 
 List<({CardId card, PieceColor side})> acceptedBattleCasts(
   PlayerView before,
@@ -289,6 +291,7 @@ class _BattleAcceptedFeedbackState extends State<BattleAcceptedFeedback>
         for (final payoff in acceptedBattleVowPayoffs(before, after))
           BattleSpellCue(payoff.card, payoff.side, [payoff.square]),
       ].take(4).toList(growable: false);
+      _warmMotifs(spells.map((spell) => spell.card));
       // Expiration markers must not restart or cut short an accepted cast.
       if (spells.isEmpty && _animations.isNotEmpty) return;
       while (_animations.length >= 3) {
@@ -325,9 +328,23 @@ class _BattleAcceptedFeedbackState extends State<BattleAcceptedFeedback>
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    // Four bounded textures, shared by 24 cards. Warm the player's known hand;
+    // an opponent's public cast is warmed during its existing travel phase.
+    if (_foreground &&
+        !MediaQuery.disableAnimationsOf(context) &&
+        TickerMode.valuesOf(context).enabled) {
+      _warmMotifs(widget.view.ownHand);
+    }
     if (MediaQuery.disableAnimationsOf(context) ||
         !TickerMode.valuesOf(context).enabled) {
       _clear();
+    }
+  }
+
+  void _warmMotifs(Iterable<CardId> cards) {
+    for (final asset
+        in cards.map((card) => battleSpellMotif(card).asset).toSet()) {
+      unawaited(precacheImage(AssetImage(asset), context));
     }
   }
 
@@ -411,6 +428,19 @@ class _BattleAcceptedFeedbackState extends State<BattleAcceptedFeedback>
                       }
                       return Stack(
                         children: [
+                          for (var i = 0; i < spells.length; i++)
+                            if (progressFor(spells[i].card) < 1)
+                              Positioned.fill(
+                                child: BattleSpellHalo(
+                                  key: ValueKey(
+                                    'spell-halo-${spells[i].card.wire}-$i',
+                                  ),
+                                  cue: spells[i],
+                                  viewer: widget.view.viewer,
+                                  progress: impactProgressFor(spells[i].card),
+                                  color: battleAbilityColor(spells[i].card),
+                                ),
+                              ),
                           for (var i = 0; i < spells.length; i++)
                             if (progressFor(spells[i].card) < 1)
                               Positioned.fill(

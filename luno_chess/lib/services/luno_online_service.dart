@@ -639,6 +639,17 @@ class LunoOnlineService extends ChangeNotifier {
     }
   }
 
+  /// Recovery may await native auth and local account binding. An action that
+  /// already had an owner must not adopt whichever account recovery leaves
+  /// ready. An initial anonymous bootstrap has no previous owner to preserve.
+  void _checkKnownAccountOwner((String?, int) owner) {
+    if (_disposed ||
+        (owner.$1 != null &&
+            (user?.uid != owner.$1 || accountRevision != owner.$2))) {
+      throw const LunoApiException('session-changed', 409);
+    }
+  }
+
   Future<void> _ensureReadyForApi({bool resumeDeletion = false}) async {
     // _startInternal syncs the guest profile before it can mark the service
     // ready. Once Firebase has supplied both auth objects, waiting for the
@@ -878,10 +889,12 @@ class LunoOnlineService extends ChangeNotifier {
     if (_signingInGoogle) {
       throw const LunoApiException('account-signin-in-progress', 409);
     }
+    final startingOwner = (user?.uid, accountRevision);
     _deletingAccount = true;
     try {
       final alreadyDeleted = accountFailure?.code == 'account-deleted';
       if (!alreadyDeleted) await _ensureReadyForApi(resumeDeletion: true);
+      _checkKnownAccountOwner(startingOwner);
       final deletingUser = user;
       if (deletingUser == null) {
         throw const LunoApiException('auth-required', 401);
@@ -1011,7 +1024,9 @@ class LunoOnlineService extends ChangeNotifier {
     if (permanentPurchaseIdentity(itemId) == null) {
       throw ArgumentError('Invalid permanent item identity');
     }
+    final startingOwner = (user?.uid, accountRevision);
     await _ensureReadyForApi();
+    _checkKnownAccountOwner(startingOwner);
     final owner = user?.uid;
     if (owner == null) throw const LunoApiException('auth-required', 401);
     final generation = _requestGeneration,
@@ -1064,7 +1079,9 @@ class LunoOnlineService extends ChangeNotifier {
   }
 
   Future<Map<String, dynamic>> _purchasePremiumPass() async {
+    final startingOwner = (user?.uid, accountRevision);
     await _ensureReadyForApi();
+    _checkKnownAccountOwner(startingOwner);
     final owner = user?.uid;
     if (owner == null) throw const LunoApiException('auth-required', 401);
     final generation = _requestGeneration, key = (owner, _requestGeneration);
@@ -1167,7 +1184,9 @@ class LunoOnlineService extends ChangeNotifier {
       }
       return api(path, {'chestId': chestId});
     }
+    final startingOwner = (user?.uid, accountRevision);
     await _ensureReadyForApi();
+    _checkKnownAccountOwner(startingOwner);
     final owner = user?.uid;
     if (owner == null) throw const LunoApiException('auth-required', 401);
     final generation = _requestGeneration;
@@ -1403,9 +1422,11 @@ class LunoOnlineService extends ChangeNotifier {
     if (_signingInGoogle) {
       throw const LunoApiException('account-signin-in-progress', 409);
     }
+    final startingOwner = (user?.uid, accountRevision);
     _linkingGoogle = true;
     try {
       await _ensureReadyForApi();
+      _checkKnownAccountOwner(startingOwner);
       final linkingUser = user;
       if (linkingUser == null) {
         throw const LunoApiException('auth-required', 401);
@@ -2371,6 +2392,7 @@ class LunoOnlineService extends ChangeNotifier {
   }
 
   Future<(String, int)> _requireReadSession() async {
+    if (_disposed) throw const LunoApiException('session-changed', 409);
     if (accountFailure != null) throw accountFailure!;
     if (user == null) {
       await start();
@@ -2387,7 +2409,7 @@ class LunoOnlineService extends ChangeNotifier {
   ) async {
     final (uid, generation) = await _requireReadSession();
     void checkSession() {
-      if (user?.uid != uid || generation != _requestGeneration) {
+      if (_disposed || user?.uid != uid || generation != _requestGeneration) {
         throw const LunoApiException('session-changed', 409);
       }
       if (accountFailure != null) throw accountFailure!;
@@ -2429,12 +2451,13 @@ class LunoOnlineService extends ChangeNotifier {
     String? ownerUid,
     int? ownerRevision,
   }) async {
+    final startingOwner = (this.user?.uid, accountRevision);
     if (_choosingGoogleAccount) {
       throw const LunoApiException('account-signin-in-progress', 409);
     }
     void assertOwner() {
-      if (_disposed ||
-          (ownerUid != null && this.user?.uid != ownerUid) ||
+      _checkKnownAccountOwner(startingOwner);
+      if ((ownerUid != null && this.user?.uid != ownerUid) ||
           (ownerRevision != null && accountRevision != ownerRevision)) {
         throw const LunoApiException('session-changed', 409);
       }

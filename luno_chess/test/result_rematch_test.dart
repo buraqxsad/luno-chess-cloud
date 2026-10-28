@@ -19,6 +19,15 @@ import 'v214_active_deck_test.dart' show reply;
 import 'v217_player_journey_support.dart' show journeyAwait, journeyPump;
 import 'battle_practice_v208_test.dart' show setupPracticeTestAssets;
 
+class _RematchObserver extends NavigatorObserver {
+  int replacements = 0;
+
+  @override
+  void didReplace({Route<dynamic>? newRoute, Route<dynamic>? oldRoute}) {
+    replacements++;
+  }
+}
+
 void main() {
   setupPracticeTestAssets();
   setUpAll(GameStore.instance.load);
@@ -52,9 +61,11 @@ void main() {
         await journeyAwait(tester, online.start);
         await journeyAwait(tester, online.getBattleV1Deck);
         final navigator = GlobalKey<NavigatorState>();
+        final observer = _RematchObserver();
         await tester.pumpWidget(
           MaterialApp(
             navigatorKey: navigator,
+            navigatorObservers: [observer],
             theme: LunoTheme.dark,
             home: const Scaffold(body: Text('ROOT')),
           ),
@@ -90,6 +101,7 @@ void main() {
         callback();
         await tester.pumpAndSettle();
         expect(find.text('COVER'), findsOneWidget);
+        expect(observer.replacements, 0);
         navigator.currentState!.pop();
         await tester.pumpAndSettle();
         callback();
@@ -101,10 +113,29 @@ void main() {
           find.byType(BattleV1Screen, skipOffstage: false),
           findsOneWidget,
         );
+        expect(observer.replacements, 1);
         final game = tester.widget<BattleV1Screen>(find.byType(BattleV1Screen));
+        final gameState = tester.state(find.byType(BattleV1Screen));
         expect(game.local, local);
         expect(game.level, aiLevels.last);
         expect(game.timeControlMinutes, 3);
+        if (local) {
+          // A fresh hotseat match must conceal both hands until the next
+          // player explicitly accepts the device; rematch cannot bypass it.
+          expect(find.byKey(const ValueKey('hotseat-curtain')), findsOneWidget);
+          expect(find.byType(BattleBoard), findsNothing);
+          final ready = find.byKey(const ValueKey('hotseat-ready'));
+          expect(ready, findsOneWidget);
+          callback();
+          await tester.pump();
+          expect(observer.replacements, 1);
+          expect(tester.state(find.byType(BattleV1Screen)), same(gameState));
+          await tester.ensureVisible(ready);
+          await tester.tap(ready);
+          await tester.pumpAndSettle();
+        }
+        expect(find.byKey(const ValueKey('hotseat-curtain')), findsNothing);
+        expect(find.byType(BattleBoard), findsOneWidget);
         final match = tester.widget<BattleBoard>(find.byType(BattleBoard)).view;
         expect(match.rules.terminal, isNull);
         expect(match.rules.ply, 0);
@@ -122,6 +153,8 @@ void main() {
           find.byType(BattleV1Screen, skipOffstage: false),
           findsOneWidget,
         );
+        expect(observer.replacements, 1);
+        expect(tester.state(find.byType(BattleV1Screen)), same(gameState));
         expect(tester.takeException(), isNull);
         await tester.pumpWidget(const SizedBox.shrink());
         await tester.pump(const Duration(seconds: 1));

@@ -24,7 +24,9 @@ void main() {
           store.data = PlayerData.fromJson(PlayerData.initial().toJson());
           store.loaded = true;
           store.hasCompletedTutorial = true;
-          await tester.runAsync(store.save);
+          // Mock preferences use in-memory futures. Keep the store queues in
+          // the test's fake-async zone rather than waiting across runAsync.
+          await store.save();
           final before = store.data.toJson();
           final initialGold = store.data.gold;
           final initialXp = store.data.passXp;
@@ -65,11 +67,11 @@ void main() {
           }
           await tester.pumpWidget(const SizedBox.shrink());
           await tester.pump(const Duration(seconds: 1));
-          await tester.runAsync(store.flush);
+          await store.flush();
           final expected = store.data.toJson();
           for (var launch = 0; launch < 2; launch++) {
             final restored = GameStore.createForTesting();
-            await tester.runAsync(restored.load);
+            await restored.load();
             expect(restored.data.toJson(), expected);
             store.data = restored.data;
             restored.dispose();

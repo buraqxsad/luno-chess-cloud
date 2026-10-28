@@ -417,6 +417,11 @@ class _BattleLessonStageState extends State<BattleLessonStage>
       (a) => a.card == _card,
     );
     final cost = cardDefinitions[_card]!.cost;
+    final editingMana = widget.step == 3 && !_cast;
+    final costCaption = Text(
+      l.learning('Maliyet: $cost mana', 'Cost: $cost mana'),
+      style: BattleTokens.caption,
+    );
     final boardTarget =
         cardDefinitions[_card]!.target != CardTargetType.opponentCard;
     final boardFirst =
@@ -425,6 +430,36 @@ class _BattleLessonStageState extends State<BattleLessonStage>
         MediaQuery.sizeOf(context).width > 350 &&
         BattleTokens.compactText(context);
     final actionBeforeCatalog = widget.step == 4 || widget.step == 5;
+    final inlineAction =
+        actionBeforeCatalog && _view.rules.phase == BattlePhase.card;
+    Widget manaSlider() => Slider(
+      key: const ValueKey('lesson-mana'),
+      value: _mana.toDouble(),
+      min: 1,
+      max: 6,
+      divisions: 5,
+      label: l.learning('Deneme manası: $_mana', 'Practice mana: $_mana'),
+      onChanged: (value) {
+        if (!value.isFinite || value < 1 || value > 6) return;
+        _update(revision, () {
+          _stateRevision++;
+          _mana = value.round();
+          final previous = _selection.play;
+          final draft = RuleDraft(_practice.rules)
+            ..mana[PieceColor.white] = _mana;
+          _practice = AuthoritativeBattleState(
+            draft.freeze(),
+            _practice.hidden,
+          );
+          _selection.cancel();
+          _selection.select(_card, _actions);
+          if (previous != null && _actions.any((a) => a.key == previous.key)) {
+            _selection.play = previous;
+          }
+          _wrongTap = false;
+        });
+      },
+    );
     Widget playCommand() => BattleCommand(
       key: const ValueKey('lesson-play-card'),
       label:
@@ -456,44 +491,17 @@ class _BattleLessonStageState extends State<BattleLessonStage>
             ),
             const SizedBox(width: 10),
             Expanded(
-              child: Text(
-                l.learning('Maliyet: $cost mana', 'Cost: $cost mana'),
-                style: BattleTokens.caption,
-              ),
+              child:
+                  inlineAction
+                      ? playCommand()
+                      : editingMana
+                      ? manaSlider()
+                      : costCaption,
             ),
             _retry(l),
           ],
         ),
-        if (widget.step == 3 && !_cast)
-          Slider(
-            key: const ValueKey('lesson-mana'),
-            value: _mana.toDouble(),
-            min: 1,
-            max: 6,
-            divisions: 5,
-            label: l.learning('Deneme manası: $_mana', 'Practice mana: $_mana'),
-            onChanged: (value) {
-              if (!value.isFinite || value < 1 || value > 6) return;
-              _update(revision, () {
-                _stateRevision++;
-                _mana = value.round();
-                final previous = _selection.play;
-                final draft = RuleDraft(_practice.rules)
-                  ..mana[PieceColor.white] = _mana;
-                _practice = AuthoritativeBattleState(
-                  draft.freeze(),
-                  _practice.hidden,
-                );
-                _selection.cancel();
-                _selection.select(_card, _actions);
-                if (previous != null &&
-                    _actions.any((a) => a.key == previous.key)) {
-                  _selection.play = previous;
-                }
-                _wrongTap = false;
-              });
-            },
-          ),
+        if (editingMana || inlineAction) costCaption,
         if (boardFirst) ...[_board(), const SizedBox(height: 8)],
         const SizedBox(height: 8),
         if (widget.step == 4 ||
@@ -501,10 +509,6 @@ class _BattleLessonStageState extends State<BattleLessonStage>
             widget.step == 3 && boardTarget) ...[
           _board(),
           const SizedBox(height: 12),
-        ],
-        if (actionBeforeCatalog && _view.rules.phase == BattlePhase.card) ...[
-          playCommand(),
-          const SizedBox(height: 8),
         ],
         if (!_cast)
           SizedBox(

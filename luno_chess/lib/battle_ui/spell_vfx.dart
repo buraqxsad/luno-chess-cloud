@@ -7,6 +7,7 @@ import 'effects.dart';
 import 'card_motion.dart';
 import 'effect_timing.dart';
 import 'spell_material.dart';
+import 'spell_choreography.dart';
 
 double battleSpellEnvelope(double progress) {
   if (!progress.isFinite || progress <= 0 || progress >= 1) return 0;
@@ -152,6 +153,30 @@ Offset battleSquareCenter(int square, PieceColor viewer, double cell) => Offset(
       cell / 2,
 );
 
+/// Shared by the material painter and the pre-rendered ring; both anchor to
+/// public squares or the same public resource lane, never hidden card targets.
+Offset battleSpellTarget(BattleSpellCue cue, PieceColor viewer, Size size) {
+  final cell = size.shortestSide / 8;
+  if (cue.squares.isNotEmpty) {
+    return cue.squares
+            .map((s) => battleSquareCenter(s, viewer, cell))
+            .reduce((a, b) => a + b) /
+        cue.squares.length.toDouble();
+  }
+  final own = cue.side == viewer;
+  final resourceOwn =
+      cue.resourceSide != null
+          ? cue.resourceSide == viewer
+          : switch (cue.card) {
+            CardId.radar || CardId.manaSabotage || CardId.cardBlock => !own,
+            _ => own,
+          };
+  return Offset(
+    size.width * .5,
+    resourceOwn ? size.height - cell * 1.1 : cell * 1.1,
+  );
+}
+
 class BattleSpellPainter extends CustomPainter {
   final BattleSpellCue cue;
   final PieceColor viewer;
@@ -183,24 +208,7 @@ class BattleSpellPainter extends CustomPainter {
       size.width * .5,
       own ? size.height - cell * .15 : cell * .15,
     );
-    final resourceOwn =
-        cue.resourceSide != null
-            ? cue.resourceSide == viewer
-            : switch (cue.card) {
-              CardId.radar || CardId.manaSabotage || CardId.cardBlock => !own,
-              _ => own,
-            };
-    final resource = Offset(
-      size.width * .5,
-      resourceOwn ? size.height - cell * 1.1 : cell * 1.1,
-    );
-    final target =
-        cue.squares.isEmpty
-            ? resource
-            : cue.squares
-                    .map((s) => battleSquareCenter(s, viewer, cell))
-                    .reduce((a, b) => a + b) /
-                cue.squares.length.toDouble();
+    final target = battleSpellTarget(cue, viewer, size);
     final t = battleImpactProgress(progress);
     final strength = battleSpellEnvelope(progress);
     final paint =
@@ -250,7 +258,15 @@ class BattleSpellPainter extends CustomPainter {
     canvas.translate(target.dx, target.dy);
     final radius = cell * (cue.squares.length > 1 ? 1.08 : .82);
     _depth(canvas, radius, t, strength);
-    _impactAccent(canvas, radius, t, strength);
+    paintBattleSpellChoreography(
+      canvas,
+      cue.card,
+      radius,
+      t,
+      color,
+      strength,
+      forwardUp: cue.side == viewer,
+    );
     paintBattleSpellMaterial(
       canvas,
       cue.card,
@@ -268,72 +284,6 @@ class BattleSpellPainter extends CustomPainter {
     canvas.restore();
     if (t < 1) _particles(canvas, radius, t, paint);
     canvas.restore();
-  }
-
-  void _impactAccent(Canvas c, double r, double t, double strength) {
-    final open = Curves.easeOutCubic.transform((t * 3).clamp(0, 1));
-    final accent =
-        Paint()
-          ..color = color.withValues(alpha: .3 * strength)
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = math.max(1.8, r * .09)
-          ..strokeCap = StrokeCap.round;
-    final category = cardDefinitions[cue.card]!.category;
-    if (category == CardCategory.board || category == CardCategory.modifier) {
-      for (var i = 0; i < 4; i++) {
-        c.save();
-        c.rotate(i * math.pi / 2);
-        c.drawPath(
-          Path()
-            ..moveTo(-r * .35, -r * 1.14 * open)
-            ..lineTo(-r * .95 * open, -r * 1.14 * open)
-            ..lineTo(-r * 1.14 * open, -r * .95 * open)
-            ..lineTo(-r * 1.14 * open, -r * .35),
-          accent,
-        );
-        c.restore();
-      }
-    } else if (category == CardCategory.knowledge) {
-      c.drawArc(
-        Rect.fromCircle(center: Offset.zero, radius: r * 1.18),
-        -math.pi / 2 + t * math.pi * 2,
-        math.pi * .65,
-        false,
-        accent,
-      );
-      c.drawArc(
-        Rect.fromCircle(center: Offset.zero, radius: r * 1.38),
-        math.pi / 2 - t * math.pi * 2,
-        math.pi * .45,
-        false,
-        accent,
-      );
-    } else if (category == CardCategory.movement) {
-      final direction = cue.side == viewer ? -1.0 : 1.0;
-      for (var i = 0; i < 3; i++) {
-        final y = direction * r * (.5 + i * .28 + t * .3);
-        c.drawLine(
-          Offset(-r * .75, y - direction * r * .22),
-          Offset(-r * .48, y),
-          accent,
-        );
-        c.drawLine(
-          Offset(r * .75, y - direction * r * .22),
-          Offset(r * .48, y),
-          accent,
-        );
-      }
-    } else {
-      for (var i = 0; i < 6; i++) {
-        final angle = i * math.pi / 3 + cue.card.index * .15;
-        final direction = Offset(math.cos(angle), math.sin(angle));
-        c.drawLine(
-          direction * r * (1.02 + t * .12),
-          direction * r * (1.22 + open * .16),
-          accent,
-        );
-      }
-    }
   }
 
   void _depth(Canvas c, double r, double t, double strength) {
@@ -433,15 +383,29 @@ class BattleSpellPainter extends CustomPainter {
   }
 
   void _particles(Canvas canvas, double r, double t, Paint paint) {
-    final fill =
-        Paint()..color = paint.color.withValues(alpha: paint.color.a * .65);
-    for (var i = 0; i < 8; i++) {
-      final angle = i * math.pi / 4 + cue.card.index * .23;
-      final distance = r * (.55 + t * .8);
+    // Deterministic, staggered fragments: no random flicker or permanently
+    // running particle system, and each card keeps its own fragment silhouette.
+    for (var i = 0; i < 12; i++) {
+      final life = (t - (i % 4) * .045) / (.78 + (i % 3) * .06);
+      if (life <= 0 || life >= 1) continue;
+      final angle = i * 2.399963 + cue.card.index * .23;
+      final spread = Curves.easeOutCubic.transform(life);
+      final distance = r * (.48 + spread * (.7 + (i % 3) * .13));
+      final fade = math.sin(life * math.pi) * (1 - life * .55);
+      final fill =
+          Paint()
+            ..color = Color.lerp(
+              color,
+              Colors.white,
+              i.isEven ? .5 : .12,
+            )!.withValues(alpha: paint.color.a * .74 * fade);
       canvas.save();
-      canvas.translate(math.cos(angle) * distance, math.sin(angle) * distance);
-      canvas.rotate(angle);
-      _fragment(canvas, r * .12 * (1 - t * .75), fill);
+      canvas.translate(
+        math.cos(angle) * distance,
+        math.sin(angle) * distance + r * life * life * .16,
+      );
+      canvas.rotate(angle + life * (i.isEven ? .8 : -.65));
+      _fragment(canvas, r * (.065 + (i % 3) * .018) * (1 - life * .7), fill);
       canvas.restore();
     }
   }

@@ -6,6 +6,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 import 'package:luno_chess/models/app_settings.dart';
+import 'package:luno_chess/screens/guide_screen.dart';
+import 'package:luno_chess/screens/legacy_parity_screens.dart';
 import 'package:luno_chess/screens/native_hubs_screen.dart';
 import 'package:luno_chess/services/luno_online_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -80,14 +82,17 @@ void main() {
     action();
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 450));
-    expect(find.text('REHBER  1/10', skipOffstage: false), findsOneWidget);
+    expect(find.byType(TutorialScreen, skipOffstage: false), findsOneWidget);
+    expect(find.byType(GuideScreen, skipOffstage: false), findsOneWidget);
     action();
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 450));
-    expect(find.text('REHBER  1/10', skipOffstage: false), findsOneWidget);
+    expect(find.byType(TutorialScreen, skipOffstage: false), findsOneWidget);
+    expect(find.byType(GuideScreen, skipOffstage: false), findsOneWidget);
     await tester.pumpWidget(const SizedBox());
     await tester.pump();
     action();
+    expect(find.byType(GuideScreen, skipOffstage: false), findsNothing);
     expect(tester.takeException(), isNull);
   });
   for (final scenario in ['repeat', 'account', 'disposed']) {

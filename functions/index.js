@@ -39,6 +39,7 @@ const {retainPurchaseClaim,retainModerationReport,purchaseClaimRetired}=require(
 const {createBattleV1Api}=require('./lib/battle-v1');
 const {installBattleV1Rollout}=require('./lib/battle-v1-rollout');
 const {installBattleV1Recovery}=require('./lib/battle-v1-recovery');
+const {assertTrustedAppId}=require('./lib/app-check-policy');
 const {PROTOCOL:BATTLE_V1_PROTOCOL,readBattleV1Rank,validBattleV1Rating}=require('./lib/battle-v1-public-profile');
 const {PRODUCT_PROGRESS_FIELD,projectBattleV1ProductProgress,readBattleV1ProductProgress,
   productProgressProfile,completeBattleV1ProductSeason,repairBattleV1ProductSeasonCursor}=require('./lib/battle-v1-product-progress');
@@ -339,8 +340,16 @@ async function verifyAppAttestation(req,options){
     const verifier=options&&options.verifyToken?options.verifyToken:function(token){return getAppCheck().verifyToken(token);};
     const verified=await verifier(raw);
     const decoded=verified&&verified.token&&typeof verified.token==='object'?verified.token:verified;
-    const appId=cleanString(verified&&verified.appId||decoded&&decoded.app_id||decoded&&decoded.sub||'',256);
-    if(!decoded||!appId)throw new Error('missing-app-id');
+    if(!decoded||typeof decoded!=='object'||Array.isArray(decoded))throw new Error('missing-app-id');
+    // The current Admin SDK exposes appId beside token.sub; older results use
+    // app_id. Do not coerce, trim or overwrite a conflicting verified identity
+    // before the application allowlist sees it.
+    const identities=[];
+    if(Object.hasOwn(verified,'appId'))identities.push(verified.appId);
+    for(const key of ['app_id','sub'])if(Object.hasOwn(decoded,key))identities.push(decoded[key]);
+    const appId=identities[0];
+    if(!identities.length||identities.some(value=>typeof value!=='string'||!value||
+       value.length>256||value.trim()!==value||value!==appId))throw new Error('invalid-app-id');
     return Object.assign({},decoded,{app_id:appId,appId});
   }catch(error){
     throw httpError(401,'invalid-app-check','The Firebase App Check token is invalid or expired.');
@@ -4170,7 +4179,7 @@ async function resolveLegacyForV1(uid){
 }
 const {installBattleV1Friendly}=require('./lib/battle-v1-friendly');
 const {installBattleV1Emotes}=require('./lib/battle-v1-emotes');
-const battleV1=installBattleV1Friendly(installBattleV1Recovery(installBattleV1Rollout(createBattleV1Api({db,now,requirePlayer,rateLimit}),{requirePlayer,rateLimit,resolveLegacyForV1}),{requirePlayer,rateLimit,logger}),{requirePlayer,rateLimit,resolveLegacyForV1,assertInteractionAllowed,requireFriendship,withSocialPairLock});
+const battleV1=installBattleV1Friendly(installBattleV1Recovery(installBattleV1Rollout(createBattleV1Api({db,now,requirePlayer,rateLimit}),{requirePlayer,rateLimit,resolveLegacyForV1,writeAccountMetadata}),{requirePlayer,rateLimit,logger}),{requirePlayer,rateLimit,resolveLegacyForV1,assertInteractionAllowed,requireFriendship,withSocialPairLock});
 ROUTES.getBattleV1=battleV1.getBattleV1;
 installBattleV1Emotes(battleV1,{requirePlayer,rateLimit});
 ROUTES.sendBattleV1Emote=battleV1.sendBattleV1Emote;
@@ -4190,6 +4199,7 @@ async function handler(req,res){
     if(!operation)throw httpError(404,'route-not-found','Unknown API operation.');
     const token=await authenticate(req),uid=token.uid;
     const appCheck=await verifyAppAttestation(req,{allowAuthFallback:AUTH_FALLBACK_ROUTES.has(route)});
+    assertTrustedAppId(appCheck);
     uidHash=hash(uid).slice(0,12);
     appId=cleanString(appCheck&&appCheck.appId||appCheck&&appCheck.app_id||'',96);
     if(appCheck&&appCheck.degraded)logger.warn('Luno API using Firebase Auth fallback',{requestId:correlationId,route,uidHash,appId});

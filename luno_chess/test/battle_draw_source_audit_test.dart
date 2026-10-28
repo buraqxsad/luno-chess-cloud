@@ -243,14 +243,27 @@ void main() {
           await tester.tap(find.byKey(ValueKey('private-${selected.wire}')));
           await tester.pump();
         }
+        expect(h.sent.whereType<ResolveAction>(), isEmpty);
         await tester.ensureVisible(
           find.byKey(const ValueKey('confirm-private')),
         );
+        await tester.pump();
+        final selectedOrigin =
+            card == CardId.fateExchange
+                ? tester.getCenter(
+                  find.descendant(
+                    of: find.byKey(ValueKey('private-${selected.wire}')),
+                    matching: find.byType(BattleCardArt),
+                  ),
+                )
+                : null;
         await tester.tap(find.byKey(const ValueKey('confirm-private')));
         await tester.pump();
         await tester.pump(const Duration(milliseconds: 200));
         expect(find.text('From deck'), findsNothing);
         expect(find.byType(BattleClosedCard), findsNothing);
+        final resolved = h.sent.whereType<ResolveAction>().toList();
+        expect(resolved, hasLength(1));
         if (card == CardId.fateExchange) {
           expect(find.text('Selected card'), findsOneWidget);
           final arrival = tester.widget<BattleCardArrival>(
@@ -259,7 +272,9 @@ void main() {
             ),
           );
           expect(arrival.exchange, true);
+          expect(arrival.absoluteOrigin, selectedOrigin);
           expect(arrival.absoluteOrigin, isNotNull);
+          expect(resolved.single.selected, selected);
         }
         await tester.pump(const Duration(milliseconds: 600));
         await tester.pumpWidget(const SizedBox());

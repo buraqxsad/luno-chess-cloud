@@ -360,6 +360,8 @@ void main() {
         await tester.pump();
         await waitForOwnTurn(tester);
         final wrongCard = find.byKey(const ValueKey('hand-radar'));
+        await tester.ensureVisible(wrongCard);
+        await tester.pumpAndSettle();
         expect(wrongCard.hitTestable(), findsOneWidget);
         final beforeDetail =
             tester.widget<BattleBoard>(find.byType(BattleBoard)).view.rules;
@@ -395,6 +397,8 @@ void main() {
           ),
         );
         final hand = find.byKey(const ValueKey('hand-shelter'));
+        await tester.ensureVisible(hand);
+        await tester.pumpAndSettle();
         expect(hand.hitTestable(), findsOneWidget);
         noOverflow(tester);
         await capture(
@@ -419,6 +423,8 @@ void main() {
         board.onTap(board.targets.first);
         await tester.pump();
         final play = find.byKey(const ValueKey('play-card'));
+        await tester.ensureVisible(play);
+        await tester.pumpAndSettle();
         expect(play.hitTestable(), findsOneWidget);
         await capture(
           tester,
@@ -457,6 +463,8 @@ void main() {
                 .rules
                 .mana[PieceColor.white];
         final discard = find.byKey(const ValueKey('discard-card'));
+        await tester.ensureVisible(discard);
+        await tester.pumpAndSettle();
         await capture(
           tester,
           'before-discard-$language-320',
@@ -521,16 +529,27 @@ void main() {
             expect(find.byType(BattleBoard), findsOneWidget);
             noOverflow(tester);
             if (size.height > size.width) {
-              for (final tile in find.byType(BattleCardTile).evaluate()) {
-                final rect = tester.getRect(find.byWidget(tile.widget));
+              // Portrait lessons keep the full board and readable speech;
+              // their hand and actions share the scrollable play area. Verify
+              // every real card is reachable, including with enlarged text.
+              final tiles = find.byType(BattleCardTile).evaluate().toList();
+              expect(tiles, isNotEmpty);
+              for (final tile in tiles) {
+                final card = find.byWidget(tile.widget);
+                await tester.ensureVisible(card);
+                await tester.pumpAndSettle();
+                expect(card.hitTestable(), findsOneWidget);
+                final rect = tester.getRect(card);
                 expect(rect.top, greaterThanOrEqualTo(0));
                 expect(
                   rect.bottom,
                   lessThanOrEqualTo(size.height),
                   reason:
-                      'The hand must stay on screen, not below the scroll viewport.',
+                      'A revealed hand card must fit inside the screen viewport.',
                 );
               }
+              await tester.ensureVisible(find.byType(BattleBoard));
+              await tester.pumpAndSettle();
             }
             if (size.width == 390 ||
                 (size.width == 320 && stage == 0) ||

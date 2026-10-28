@@ -90,11 +90,12 @@ BattleCoachFocus practiceFocus(
   CardId? selected,
   bool targetReady,
 ) {
-  if (p.complete) return BattleCoachFocus.none;
+  if (p.stopsPlay || v.rules.terminal != null) return BattleCoachFocus.none;
   if (v.rules.board.turn != v.viewer) {
     return BattleCoachFocus.none;
   }
   if (v.rules.pending != null) return BattleCoachFocus.controls;
+  if (p.complete) return BattleCoachFocus.none;
   if (p.guidedMatch) {
     if (v.rules.phase == BattlePhase.chess) return BattleCoachFocus.board;
     if (p.cast && !p.discarded) {
@@ -115,7 +116,6 @@ BattleCoachFocus practiceFocus(
         ? BattleCoachFocus.hand
         : BattleCoachFocus.board;
   }
-  if (p.complete) return BattleCoachFocus.none;
   if (p.freePlay) return BattleCoachFocus.none;
   if (v.rules.phase == BattlePhase.chess) return BattleCoachFocus.board;
   if (!p.cast) {

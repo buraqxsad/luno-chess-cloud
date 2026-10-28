@@ -97,10 +97,21 @@ void main() {
     await tester.ensureVisible(replayButton);
     await tester.tap(replayButton);
     await tester.pumpAndSettle();
+    expect(find.byType(ResultScreen, skipOffstage: false), findsNothing);
     expect(find.byType(BattleV1Screen), findsOneWidget);
     final replay = tester.widget<BattleV1Screen>(find.byType(BattleV1Screen));
     expect(replay.local, isTrue);
     expect(replay.timeControlMinutes, 3);
+    expect(find.byKey(const ValueKey('hotseat-curtain')), findsOneWidget);
+    final handoverClock = tester.widget<BattleClock>(find.byType(BattleClock));
+    expect(handoverClock.active, isTrue);
+    final ready = find.byKey(const ValueKey('hotseat-ready'));
+    expect(ready, findsOneWidget);
+    await tester.ensureVisible(ready);
+    await tester.tap(ready);
+    await tester.pumpAndSettle();
+    expect(find.byKey(const ValueKey('hotseat-curtain')), findsNothing);
+    expect(find.byType(BattleV1Screen), findsOneWidget);
     final clocks = tester.widgetList<BattleClock>(find.byType(BattleClock));
     expect(clocks, hasLength(2));
     // The active clock uses real elapsed time while the route settles.
@@ -160,12 +171,18 @@ void main() {
     tester,
   ) async {
     await tester.pumpWidget(const MaterialApp(home: ArenasScreen()));
-    await tester.scrollUntilVisible(find.text('ARENA YOLU'), 100,
-        scrollable: find.byType(Scrollable).first);
+    await tester.scrollUntilVisible(
+      find.text('ARENA YOLU'),
+      100,
+      scrollable: find.byType(Scrollable).first,
+    );
     await tester.pumpAndSettle();
     expect(find.text('ARENA YOLU'), findsOneWidget);
-    await tester.scrollUntilVisible(find.text('Acemi Kampı'), 100,
-        scrollable: find.byType(Scrollable).first);
+    await tester.scrollUntilVisible(
+      find.text('Acemi Kampı'),
+      100,
+      scrollable: find.byType(Scrollable).first,
+    );
     await tester.pumpAndSettle();
     expect(find.text('Acemi Kampı'), findsOneWidget);
     expect(find.text('Acemi Kampı').hitTestable(), findsOneWidget);

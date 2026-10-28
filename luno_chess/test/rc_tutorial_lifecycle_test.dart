@@ -89,7 +89,7 @@ void main() {
     unawaited(
       navigator.currentState!.push(
         MaterialPageRoute<void>(
-          builder: (_) => TutorialScreen(playerStore: store),
+          builder: (_) => TutorialScreen(playerStore: store, lessonMode: true),
         ),
       ),
     );

@@ -14,7 +14,7 @@ function fixture(){
   const work=previous.catch(()=>{}).then(operation);pairs.set(key,work);
   try{return await work;}finally{if(pairs.get(key)===work)pairs.delete(key);}
  }
- let at=1000;const deps={db,now:()=>at,requirePlayer:async uid=>{const p=read('users/'+uid);if(!p)throw new Error('player missing');return copy(p);},rateLimit:async()=>{},assertInteractionAllowed:async(first,second)=>{if(read('blocks/'+first+'/'+second)||read('blocks/'+second+'/'+first))throw new protocol.BattleError('user-blocked',403);},requireFriendship:async()=>{},withSocialPairLock};
+ let at=1000;const deps={db,now:()=>at,requirePlayer:async uid=>{const p=read('users/'+uid);if(!p)throw new Error('player missing');return copy(p);},rateLimit:async()=>{},writeAccountMetadata:async(_uid,_route,write)=>write(),assertInteractionAllowed:async(first,second)=>{if(read('blocks/'+first+'/'+second)||read('blocks/'+second+'/'+first))throw new protocol.BattleError('user-blocked',403);},requireFriendship:async()=>{},withSocialPairLock};
  for(const uid of ['alice','bob','attacker'])write('users/'+uid,{uid,username:uid,trophies:1200,arenaIdx:4,gold:100,games:0,wins:0,losses:0,draws:0,serverCompetition:{legacy:true},serverSeason:{legacy:true}});
  const api=installBattleV1Friendly(installBattleV1Recovery(installBattleV1Rollout(createBattleV1Api(deps),deps),deps),deps);
  const client={platform:'android',build:17,protocolVersion:protocol.PROTOCOL};

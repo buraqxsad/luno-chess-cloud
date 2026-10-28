@@ -91,11 +91,21 @@ class BattleCastTrailPainter extends CustomPainter {
       final center =
           point(step) +
           Offset(math.cos(angle), math.sin(angle)) * (5 + i * 1.4);
-      canvas.drawCircle(
-        center,
-        1.8 - i * .18,
+      final radius = 2.3 - i * .21;
+      final tangent = point((step + .012).clamp(0.0, 1.0)) - point(step);
+      canvas.save();
+      canvas.translate(center.dx, center.dy);
+      canvas.rotate(math.atan2(tangent.dy, tangent.dx) + angle * .2);
+      canvas.drawPath(
+        Path()
+          ..moveTo(-radius * 1.7, 0)
+          ..lineTo(0, -radius * .55)
+          ..lineTo(radius, 0)
+          ..lineTo(0, radius * .55)
+          ..close(),
         Paint()..color = light.withValues(alpha: (.8 - i * .1) * fade),
       );
+      canvas.restore();
     }
     if (progress >= battleCastArrivalFraction) {
       final impact =

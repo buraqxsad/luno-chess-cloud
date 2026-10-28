@@ -770,18 +770,37 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
           ...data.emojiLoadout.where(data.ownedEmojis.contains),
           ...data.ownedEmojis.where((id) => !data.emojiLoadout.contains(id)),
         ].take(4).toList();
+    final privacyEpoch = _hotseatPrivacy.epoch;
     await _sheet<void>(
       BattleSheet(
         title: LunoLocalizations.of(context).learning('İfadeler', 'Emotes'),
-        child: BattleEmotePicker(
-          channel: channel,
-          ids: ids,
-          onSend: (id) async {
-            if (!mounted || terminal || sheetRoute?.isCurrent != true) return;
-            final sent = await channel.send(id, view!.viewer, data.ownedEmojis);
-            if (sent && mounted && sheetRoute?.isCurrent == true) {
-              sheetRoute?.navigator?.pop();
-            }
+        child: Builder(
+          builder: (pickerContext) {
+            final route = ModalRoute.of(pickerContext);
+            final token = sheetToken;
+            bool ownsPicker() =>
+                _emotePresentationCurrent &&
+                identical(emotes, channel) &&
+                _hotseatInputCurrent(privacyEpoch) &&
+                token != null &&
+                identical(sheetToken, token) &&
+                identical(sheetRoute, route) &&
+                route?.isCurrent == true;
+            return BattleEmotePicker(
+              channel: channel,
+              ids: ids,
+              onSend: (id) async {
+                if (!ownsPicker() || view == null) return;
+                final sent = await channel.send(
+                  id,
+                  view!.viewer,
+                  data.ownedEmojis,
+                );
+                // A completed request belongs to this picker, even if another
+                // match sheet has opened while its response was in flight.
+                if (sent && ownsPicker()) route?.navigator?.pop();
+              },
+            );
           },
         ),
       ),
@@ -1071,6 +1090,19 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
     sheetToken = token;
     sheetOpen = true;
     sheetVersion = version;
+    var removalScheduled = false;
+    void removeSheet(ModalRoute<dynamic>? route) {
+      if (removalScheduled || route?.isActive != true) return;
+      removalScheduled = true;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (route!.isActive) route.navigator?.removeRoute(route);
+      });
+    }
+
+    final ownerChanges = Listenable.merge([
+      GameStore.instance,
+      if (_isHotseat) _hotseatPrivacy,
+    ]);
     try {
       final result = await showModalBottomSheet<T>(
         context: context,
@@ -1086,26 +1118,28 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
         ),
         builder: (ctx) {
           final route = ModalRoute.of(ctx);
-          if (sheetToken == token) {
-            sheetRoute = route;
-          } else if (_isHotseat && route?.isActive == true) {
-            // The app can hide before this route's first builder invocation.
-            WidgetsBinding.instance.addPostFrameCallback((_) {
-              if (mounted && route!.isActive) {
-                route.navigator?.removeRoute(route);
-              }
-            });
-          }
-          if (!_isHotseat) return child;
           return AnimatedBuilder(
-            animation: _hotseatPrivacy,
-            builder:
-                (_, _) =>
-                    _foreground &&
-                            _hotseatPrivacy.revealed &&
-                            _hotseatPrivacy.epoch == privacyEpoch
-                        ? child
-                        : const SizedBox.shrink(),
+            animation: ownerChanges,
+            builder: (_, _) {
+              final ownsSheet =
+                  mounted &&
+                  !_ownerInvalidated &&
+                  _ownerRevision == GameStore.instance.accountBindingRevision &&
+                  identical(sheetToken, token) &&
+                  (!_isHotseat ||
+                      (_foreground &&
+                          _hotseatPrivacy.revealed &&
+                          _hotseatPrivacy.epoch == privacyEpoch));
+              if (!ownsSheet) {
+                // Account changes can precede this route's first builder.
+                // Never build the old private child, and remove this exact
+                // sheet even if an unrelated route has opened above it.
+                removeSheet(route);
+                return const SizedBox.shrink();
+              }
+              sheetRoute = route;
+              return child;
+            },
           );
         },
       );
@@ -1132,20 +1166,25 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
     if (!ready || view?.rules.pending?.owner != view?.viewer) return;
     final capturedVersion = version;
     final privacyEpoch = _hotseatPrivacy.epoch;
+    Offset? takeOrigin;
     final picked = await _sheet<ResolveAction>(
       PrivateChoiceSheet(
         view: view!,
         actions: actions.whereType<ResolveAction>().toList(),
         onTakeOrigin: (_, bounds) {
-          if (_canInteract &&
-              version == capturedVersion &&
-              _hotseatInputCurrent(privacyEpoch)) {
-            _exchangeOrigin = bounds.center;
-          }
+          // The private sheet owns the current route until it closes. Keep its
+          // origin local until the returned choice passes admission below.
+          takeOrigin = bounds.center;
         },
       ),
     );
-    if (mounted && picked != null && ready && version == capturedVersion) {
+    if (mounted &&
+        picked != null &&
+        ready &&
+        _canInteract &&
+        version == capturedVersion &&
+        _hotseatInputCurrent(privacyEpoch)) {
+      _exchangeOrigin = takeOrigin;
       await _apply(picked);
     }
   }

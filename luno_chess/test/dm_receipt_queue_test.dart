@@ -14,6 +14,9 @@ List<Map<String, dynamic>> snapshot(int count) => List.generate(
   (i) => {'messageId': 'm$i', 'ts': i, 'from': 'friend', 'text': 'Message $i'},
 );
 
+// The receipt protocol acknowledges the observed cursor only with marked=true.
+const confirmedRead = '{"ok":true,"marked":true}';
+
 void main() {
   for (final scenario in [
     'success',
@@ -24,6 +27,7 @@ void main() {
     'disposed',
     'target',
     'retry-cap',
+    'malformed-latest',
   ]) {
     testWidgets('receipt queue serializes $scenario', (tester) async {
       final auth = TestAuth();
@@ -129,7 +133,7 @@ void main() {
         http.Response(
           scenario == 'failure' || scenario == 'retry-cap'
               ? '{"ok":false,"error":"unavailable"}'
-              : '{"ok":true}',
+              : confirmedRead,
           200,
         ),
       );
@@ -144,18 +148,18 @@ void main() {
           await tester.pump();
           await tester.pump(const Duration(milliseconds: 300));
           expect(targets, ['friend', 'friend']);
-          responses.last.complete(http.Response('{"ok":true}', 200));
+          responses.last.complete(http.Response(confirmedRead, 200));
         }
       } else if (scenario == 'target') {
         streams[1].add(snapshot(2));
         await tester.pump();
         await tester.pump(const Duration(milliseconds: 300));
         expect(targets, ['friend', 'new_friend']);
-        responses[1].complete(http.Response('{"ok":true}', 200));
+        responses[1].complete(http.Response(confirmedRead, 200));
         await tester.pump();
         await tester.pump(const Duration(milliseconds: 300));
         expect(targets, ['friend', 'new_friend', 'new_friend']);
-        responses.last.complete(http.Response('{"ok":true}', 200));
+        responses.last.complete(http.Response(confirmedRead, 200));
       } else if (scenario == 'retry-cap') {
         await tester.pump(const Duration(seconds: 2));
         expect(targets, ['friend', 'friend']);
@@ -173,16 +177,44 @@ void main() {
         await tester.pump();
         await tester.pump(const Duration(milliseconds: 300));
         expect(targets, ['friend', 'friend', 'friend']);
-        responses.last.complete(http.Response('{"ok":true}', 200));
+        responses.last.complete(http.Response(confirmedRead, 200));
       } else {
         expect(targets, ['friend', 'friend']);
-        expect(observedIds.last, 'm3');
-        responses.last.complete(http.Response('{"ok":true}', 200));
+        expect(observedIds, ['m0', 'm3']);
+        responses.last.complete(
+          http.Response(
+            scenario == 'malformed-latest' ? '{"ok":true}' : confirmedRead,
+            200,
+          ),
+        );
         await tester.pump();
         streams[0].add(snapshot(4));
         await tester.pump();
         await tester.pump(const Duration(seconds: 3));
-        expect(targets, ['friend', 'friend']);
+        if (scenario == 'malformed-latest') {
+          // An unconfirmed latest cursor gets one retry, never a false ack or
+          // an endless loop when the same stream snapshot is emitted again.
+          expect(targets, ['friend', 'friend', 'friend']);
+          expect(observedIds, ['m0', 'm3', 'm3']);
+          responses.last.complete(http.Response('{"ok":true}', 200));
+          await tester.pump();
+          streams[0].add(snapshot(4));
+          await tester.pump();
+          await tester.pump(const Duration(seconds: 3));
+          expect(targets, hasLength(3));
+          streams[0].add(snapshot(5));
+          await tester.pump();
+          await tester.pump(const Duration(milliseconds: 300));
+          expect(observedIds, ['m0', 'm3', 'm3', 'm4']);
+          responses.last.complete(http.Response(confirmedRead, 200));
+          await tester.pump();
+          streams[0].add(snapshot(5));
+          await tester.pump();
+          await tester.pump(const Duration(seconds: 3));
+          expect(targets, hasLength(4));
+        } else {
+          expect(targets, ['friend', 'friend']);
+        }
       }
       await tester.pump();
       await tester.pumpWidget(const SizedBox.shrink());

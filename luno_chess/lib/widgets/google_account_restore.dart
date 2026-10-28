@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import '../i18n/battle_learning_copy.dart';
 import '../i18n/luno_localizations.dart';
 import '../navigation/luno_account_modal.dart';
 import '../services/luno_online_service.dart';
@@ -17,6 +18,7 @@ Future<void> showGoogleAccountRestore({
       ModalRoute.of(context)?.isCurrent == true &&
       owner == (online.user?.uid, online.accountRevision);
   if (!current() || online.accountSignInInProgress) return;
+  final copy = LunoLocalizations(Locale(english ? 'en' : 'tr'));
   onBusyChanged?.call(true);
   try {
     final confirmed = await showLunoAccountDialog<bool>(
@@ -26,9 +28,10 @@ Future<void> showGoogleAccountRestore({
           (dialogContext) => AlertDialog(
             scrollable: true,
             title: Text(
-              english
-                  ? 'Open your Google-linked account'
-                  : 'Google hesabındaki LUNO profilini aç',
+              copy.learning(
+                'Google hesabındaki LUNO profilini aç',
+                'Open your Google-linked account',
+              ),
             ),
             content: Text(
               english
@@ -114,6 +117,7 @@ class _GoogleAccountRestoreButtonState
   @override
   Widget build(BuildContext context) {
     final english = widget.english ?? LunoLocalizations.of(context).isEnglish;
+    final copy = LunoLocalizations(Locale(english ? 'en' : 'tr'));
     return ListenableBuilder(
       listenable: widget.online,
       builder:
@@ -142,9 +146,10 @@ class _GoogleAccountRestoreButtonState
                     )
                     : const Icon(Icons.login_rounded),
             label: Text(
-              english
-                  ? 'Sign in to my existing account'
-                  : 'Mevcut hesabıma giriş yap',
+              copy.learning(
+                'Mevcut hesabıma giriş yap',
+                'Sign in to my existing account',
+              ),
               textAlign: TextAlign.center,
             ),
           ),

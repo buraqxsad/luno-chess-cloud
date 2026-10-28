@@ -6,6 +6,7 @@ import '../battle_ui/mentor.dart';
 import '../battle_ui/primitives.dart';
 import '../battle_ui/tokens.dart';
 import '../battle_v1/model.dart';
+import '../i18n/battle_learning_copy.dart';
 import '../i18n/battle_v1_copy.dart';
 import '../i18n/luno_localizations.dart';
 import '../models/game_store.dart';
@@ -205,18 +206,18 @@ class _BattleWelcomeScreenState extends State<BattleWelcomeScreen>
                           const SizedBox(width: 12),
                           IconButton(
                             key: const ValueKey('welcome-skip'),
-                            tooltip:
-                                en
-                                    ? 'Skip training for now'
-                                    : 'Eğitimi şimdilik geç',
+                            tooltip: l.learning(
+                              'Eğitimi şimdilik geç',
+                              'Skip training for now',
+                            ),
                             onPressed: _active && !_advancing ? _skip : null,
                             icon: const Icon(Icons.skip_next_rounded),
                           ),
                           Semantics(
-                            label:
-                                en
-                                    ? 'Welcome, step ${step + 1} of ${GameStore.welcomeStepCount}'
-                                    : 'Karşılama, ${GameStore.welcomeStepCount} adımın ${step + 1}. adımı',
+                            label: l.learning(
+                              'Karşılama, ${GameStore.welcomeStepCount} adımın ${step + 1}. adımı',
+                              'Welcome, step ${step + 1} of ${GameStore.welcomeStepCount}',
+                            ),
                             child: ExcludeSemantics(
                               child: Text(
                                 '${step + 1} / ${GameStore.welcomeStepCount}',
@@ -293,7 +294,7 @@ class _BattleWelcomeScreenState extends State<BattleWelcomeScreen>
             dimension: 48,
             child: BattleArt('piece-w-king'),
           ),
-          title: en ? 'Your goal: checkmate' : 'Hedefin: şah mat',
+          title: l.learning('Hedefin: şah mat', 'Your goal: checkmate'),
           text:
               en
                   ? 'Checkmate the opposing king. Cards add new options to your plan on the board.'
@@ -347,7 +348,7 @@ class _BattleWelcomeScreenState extends State<BattleWelcomeScreen>
         _WelcomePoint(
           key: const ValueKey('welcome-card-phase'),
           icon: Icons.style_rounded,
-          title: en ? 'Your card choice' : 'Kart seçimin',
+          title: l.learning('Kart seçimin', 'Your card choice'),
           text:
               en
                   ? 'Play, discard or skip a card. Then move a chess piece.'
@@ -367,7 +368,7 @@ class _BattleWelcomeScreenState extends State<BattleWelcomeScreen>
         _WelcomePoint(
           key: const ValueKey('welcome-discard-rule'),
           icon: Icons.delete_outline_rounded,
-          title: en ? 'Discard to make space' : 'Feda: elinde yer aç',
+          title: l.learning('Feda: elinde yer aç', 'Discard to make space'),
           text:
               en
                   ? 'No mana gained. You still make your chess move.'
@@ -395,7 +396,7 @@ class _BattleWelcomeScreenState extends State<BattleWelcomeScreen>
       _WelcomePoint(
         key: const ValueKey('welcome-clock'),
         icon: Icons.schedule_rounded,
-        title: en ? 'Your turn, your clock' : 'Sıra sende, saat sende',
+        title: l.learning('Sıra sende, saat sende', 'Your turn, your clock'),
         text:
             en
                 ? 'The clock is stopped in training. In normal matches, your time runs on your turn, even while choosing a card.'
@@ -405,10 +406,10 @@ class _BattleWelcomeScreenState extends State<BattleWelcomeScreen>
       _WelcomePoint(
         key: const ValueKey('welcome-coaching'),
         icon: Icons.style_rounded,
-        title:
-            en
-                ? 'A little help when you need it'
-                : 'İhtiyacın olduğunda yardım',
+        title: l.learning(
+          'İhtiyacın olduğunda yardım',
+          'A little help when you need it',
+        ),
         text:
             en
                 ? 'I will point to legal moves and useful card targets. Your completed exercises are saved.'
@@ -418,7 +419,7 @@ class _BattleWelcomeScreenState extends State<BattleWelcomeScreen>
       _WelcomePoint(
         key: const ValueKey('welcome-free-play'),
         icon: Icons.open_with_rounded,
-        title: en ? 'The choices are yours' : 'Seçimler senin',
+        title: l.learning('Seçimler senin', 'The choices are yours'),
         text:
             en
                 ? 'Try four chess moves, a targeted card and a discard. Use Skip Card too, then continue without finishing a full match.'

@@ -10,7 +10,8 @@ import 'package:luno_chess/screens/legacy_parity_screens.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'battle_practice_v208_test.dart' show setupPracticeTestAssets;
-import 'battle_tutorial_v207_test.dart' show shell, warm, noOverflow, boundaryKey;
+import 'battle_tutorial_v207_test.dart'
+    show shell, warm, noOverflow, boundaryKey;
 import 'rc_screen_capture_test.dart' show capture;
 
 void main() {
@@ -37,19 +38,28 @@ void main() {
           addTearDown(tester.view.resetDevicePixelRatio);
           GameStore.instance.tutorialStep = step;
           final before = GameStore.instance.data.toJson();
-          await tester.pumpWidget(shell(
-            const TutorialScreen(onboarding: true),
-            language: language,
-            scale: scale,
-            reduced: true,
-          ));
+          await tester.pumpWidget(
+            shell(
+              const TutorialScreen(onboarding: true),
+              language: language,
+              scale: scale,
+              reduced: true,
+            ),
+          );
           await warm(tester);
           final command = find.byKey(const ValueKey('lesson-play-card'));
-          final catalog = find.byKey(ValueKey(
-            step == 4 ? 'lesson-card-chain' : 'lesson-card-shelter',
-          ));
-          expect(tester.getRect(command).bottom,
-              lessThanOrEqualTo(tester.getRect(catalog).top));
+          final catalog = find.byKey(
+            ValueKey(step == 4 ? 'lesson-card-chain' : 'lesson-card-shelter'),
+          );
+          expect(
+            tester.getRect(command).bottom,
+            lessThanOrEqualTo(tester.getRect(catalog).top),
+          );
+          expect(
+            tester.getRect(command).bottom,
+            lessThanOrEqualTo(tester.getRect(find.byType(BattleBoard)).top),
+            reason: 'The target/confirm action stays beside its instruction',
+          );
           if (scale == 1) {
             expect(command.hitTestable(), findsOneWidget);
           }
@@ -68,17 +78,22 @@ void main() {
           expect(command.hitTestable(), findsOneWidget);
           expect(tester.widget<BattleCommand>(command).onPressed, isNotNull);
           noOverflow(tester);
-          await capture(tester,
+          await capture(
+            tester,
             'lesson-$step-$language-${size.width.toInt()}-target-ready',
             repaintKey: boundaryKey,
-            outputDirectory: 'qa/v216/after/tutorial-integration');
+            outputDirectory: 'qa/v216/after/tutorial-integration',
+          );
           await tester.tap(command);
           await tester.pumpAndSettle();
-          final after = tester.widget<BattleBoard>(find.byType(BattleBoard)).view;
+          final after =
+              tester.widget<BattleBoard>(find.byType(BattleBoard)).view;
           expect(after.rules.phase, BattlePhase.chess);
           expect(after.rules.used[PieceColor.white], contains(selectedCard));
-          expect(after.rules.mana[PieceColor.white],
-              mana - cardDefinitions[selectedCard]!.cost);
+          expect(
+            after.rules.mana[PieceColor.white],
+            mana - cardDefinitions[selectedCard]!.cost,
+          );
           expect(GameStore.instance.data.toJson(), before);
           noOverflow(tester);
           await tester.pumpWidget(const SizedBox());

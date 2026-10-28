@@ -73,7 +73,7 @@ final visualSurfaces = <String, Widget Function()>{
   'settings': () => const SettingsScreen(),
   'edit-profile': () => const EditProfileScreen(),
   'guide': () => const GuideScreen(),
-  'tutorial': () => const TutorialScreen(),
+  'tutorial': () => const TutorialScreen(lessonMode: true),
   for (var i = 1; i < 10; i++)
     'tutorial-$i': () {
       GameStore.instance.tutorialStep = i;

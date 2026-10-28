@@ -31,8 +31,9 @@ Widget shell(
   String language = 'tr',
   double scale = 1,
   bool reduced = false,
+  ThemeData? theme,
 }) => MaterialApp(
-  theme: LunoTheme.dark,
+  theme: theme ?? LunoTheme.dark,
   locale: Locale(language),
   supportedLocales: LunoLocalizations.supportedLocales,
   localizationsDelegates: const [

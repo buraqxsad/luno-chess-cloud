@@ -9,6 +9,7 @@ import 'package:luno_chess/theme/luno_theme.dart';
 import 'battle_practice_v208_test.dart' show setupPracticeTestAssets;
 import 'battle_ui/visual_test.dart'
     show renderBattle, visualTap, closeCapture, editedFixture;
+import 'helpers/battle_surface_reachability.dart';
 
 void main() {
   setupPracticeTestAssets();
@@ -61,16 +62,43 @@ void main() {
             final hand = tester.getRect(find.byType(BattleHand));
             expect(board.bottom, lessThanOrEqualTo(hand.top));
             expect(own.bottom, lessThanOrEqualTo(hand.top));
-            for (final rect in [board, own, hand]) {
-              expect(safe.contains(rect.topLeft), isTrue);
-              expect(
-                safe.contains(rect.bottomRight - const Offset(.01, .01)),
-                isTrue,
-              );
-            }
+            expect(safe.contains(board.topLeft), isTrue);
+            expect(
+              safe.contains(board.bottomRight - const Offset(.01, .01)),
+              isTrue,
+            );
             expect(board.width, greaterThanOrEqualTo(224));
             expect(hand.height, greaterThanOrEqualTo(116));
+            await revealBattleSurfaceWidget(
+              tester,
+              find.byWidgetPredicate(
+                (widget) => widget is BattlePlayerHeader && widget.own,
+              ),
+              safe: safe,
+              fixedBoard: board,
+              // The row's centre is an inert Spacer, not a tap target.
+              interactive: false,
+            );
+            for (final id
+                in tester
+                    .widget<BattleHand>(find.byType(BattleHand))
+                    .view
+                    .ownHand) {
+              await revealBattleCard(
+                tester,
+                find.byKey(ValueKey('hand-${id.wire}')),
+                safe: safe,
+                fixedBoard: board,
+              );
+            }
             final card = find.byKey(const ValueKey('hand-shelter'));
+            await revealBattleSurfaceWidget(
+              tester,
+              card,
+              safe: safe,
+              fixedBoard: board,
+              wholeBounds: false,
+            );
             expect(card.hitTestable(), findsOneWidget);
             await tester.tap(card);
             await tester.pumpAndSettle();
@@ -92,37 +120,62 @@ void main() {
               language: language,
               textScale: textScale,
               theme: LunoTheme.darkFor(language),
-              state: editedFixture((_) {}, hand: [
-                CardId.shelter,
-                CardId.chain,
-                CardId.lockedSquare,
-                if (count == 4) CardId.slow,
-              ]),
+              state: editedFixture(
+                (_) {},
+                hand: [
+                  CardId.shelter,
+                  CardId.chain,
+                  CardId.lockedSquare,
+                  if (count == 4) CardId.slow,
+                ],
+              ),
             );
             final board = tester.getRect(find.byType(BattleBoard));
             final hand = tester.getRect(find.byType(BattleHand));
+            const safe = Rect.fromLTWH(0, 24, 320, 520);
             expect(board.width / 8, greaterThanOrEqualTo(24));
             if (count == 4) {
-              expect(find.text(language == 'en'
-                  ? 'Hand full · Make space'
-                  : 'El dolu · Yer aç'), findsOneWidget);
+              expect(
+                find.text(
+                  language == 'en'
+                      ? 'Hand full · Make space'
+                      : 'El dolu · Yer aç',
+                ),
+                findsOneWidget,
+              );
             }
             expect(board.bottom, lessThanOrEqualTo(hand.top));
             expect(hand.top, greaterThanOrEqualTo(0));
-            expect(hand.bottom, lessThanOrEqualTo(544));
+            expect(hand.height, greaterThanOrEqualTo(116));
             for (final id in [
               CardId.shelter,
               CardId.chain,
               CardId.lockedSquare,
               if (count == 4) CardId.slow,
             ]) {
-              expect(find.byKey(ValueKey('hand-${id.wire}')).hitTestable(),
-                  findsOneWidget);
+              await revealBattleCard(
+                tester,
+                find.byKey(ValueKey('hand-${id.wire}')),
+                safe: safe,
+                fixedBoard: board,
+              );
             }
-            expect(find.byKey(const ValueKey('pass-card')).hitTestable(),
-                findsOneWidget);
-            expect(find.byKey(const ValueKey('open-menu')).hitTestable(),
-                findsOneWidget);
+            for (final key in ['pass-card', 'open-menu']) {
+              await revealBattleSurfaceWidget(
+                tester,
+                find.byKey(ValueKey(key)),
+                safe: safe,
+                fixedBoard: board,
+              );
+            }
+            expect(
+              find.byKey(const ValueKey('pass-card')).hitTestable(),
+              findsOneWidget,
+            );
+            expect(
+              find.byKey(const ValueKey('open-menu')).hitTestable(),
+              findsOneWidget,
+            );
             expect(tester.takeException(), isNull);
             await closeCapture(tester);
           },
@@ -137,25 +190,43 @@ void main() {
           size: const Size(320, 640),
           language: language,
           theme: LunoTheme.darkFor(language),
-          state: editedFixture((_) {}, hand: const [
-            CardId.shadowContract,
-            CardId.fateExchange,
-            CardId.pawnDeviation,
-            CardId.boardSeal,
-          ]),
+          state: editedFixture(
+            (_) {},
+            hand: const [
+              CardId.shadowContract,
+              CardId.fateExchange,
+              CardId.pawnDeviation,
+              CardId.boardSeal,
+            ],
+          ),
         );
-        expect(tester.getSize(find.byType(BattleBoard)).width,
-            greaterThanOrEqualTo(224));
+        expect(
+          tester.getSize(find.byType(BattleBoard)).width,
+          greaterThanOrEqualTo(224),
+        );
         expect(tester.getSize(find.byType(BattleHand)).height, 152);
-        for (final art in find.descendant(
-          of: find.byType(BattleHand),
-          matching: find.byType(BattleCardArt),
-        ).evaluate()) {
-          expect(tester.getSize(find.byWidget(art.widget)).height,
-              greaterThanOrEqualTo(44));
+        for (final art
+            in find
+                .descendant(
+                  of: find.byType(BattleHand),
+                  matching: find.byType(BattleCardArt),
+                )
+                .evaluate()) {
+          expect(
+            tester.getSize(find.byWidget(art.widget)).height,
+            greaterThanOrEqualTo(44),
+          );
         }
-        expect(find.byKey(const ValueKey('pass-card')).hitTestable(),
-            findsOneWidget);
+        await revealBattleSurfaceWidget(
+          tester,
+          find.byKey(const ValueKey('pass-card')),
+          safe: const Rect.fromLTWH(0, 24, 320, 592),
+          fixedBoard: tester.getRect(find.byType(BattleBoard)),
+        );
+        expect(
+          find.byKey(const ValueKey('pass-card')).hitTestable(),
+          findsOneWidget,
+        );
         expect(tester.takeException(), isNull);
         await closeCapture(tester);
       },

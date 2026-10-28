@@ -198,8 +198,9 @@ void main() {
           }
           if (request.url.path.endsWith('/getPlayerState')) {
             final state = v220ChestState('first');
-            if (scenario == 'malformed')
+            if (scenario == 'malformed') {
               (state['shopChests'] as Map)['common']['price'] = 1;
+            }
             return http.Response(jsonEncode({'ok': true, 'state': state}), 200);
           }
           expect(request.url.path.endsWith('/openChest'), true);

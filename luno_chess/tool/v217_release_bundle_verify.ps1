@@ -3,9 +3,11 @@ param(
     [string]$Bundle,
     [switch]$ParentFinalBuildComplete,
     [switch]$SelfTest,
-    [string]$Java = 'C:\Program Files\Microsoft\jdk-21.0.12.8-hotspot\bin\java.exe',
+    [string]$Java = 'java',
     [string]$ClasspathFile,
-    [ValidateRange(1, 2100000000)][int]$ExpectedBuild = 17,
+    [ValidateRange(0, 2100000000)][int]$ExpectedBuild = 0,
+    [string]$ExpectedVersion,
+    [string]$SigningPropertiesFile,
     [string[]]$AllowedPermission
 )
 
@@ -23,6 +25,7 @@ try {
     } elseif (-not $ParentFinalBuildComplete -or -not $Bundle) {
         throw 'Wait for the parent final rebuild to succeed, then pass -ParentFinalBuildComplete and -Bundle.'
     }
+    if (-not [IO.Path]::IsPathRooted($Java)) { $Java = (Get-Command $Java -CommandType Application -ErrorAction Stop).Source }
     if (-not (Test-Path -LiteralPath $Java -PathType Leaf)) { throw 'Java 21 executable unavailable.' }
     if (-not (Test-Path -LiteralPath $ClasspathFile -PathType Leaf)) { throw 'Local classpath list unavailable.' }
     $paths = @(Get-Content -LiteralPath $ClasspathFile | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
@@ -36,7 +39,11 @@ try {
             throw 'Local classpath is missing a required artifact.'
         }
     }
-    $arguments = @('-Xmx256m', "-Dluno.expectedBuild=$ExpectedBuild", '--class-path', ($paths -join [IO.Path]::PathSeparator),
+    $arguments = @('-Xmx256m')
+    if ($ExpectedBuild -gt 0) { $arguments += "-Dluno.expectedBuild=$ExpectedBuild" }
+    if ($ExpectedVersion) { $arguments += "-Dluno.expectedVersion=$ExpectedVersion" }
+    if ($SigningPropertiesFile) { $arguments += "-Dluno.signingPropertiesFile=$SigningPropertiesFile" }
+    $arguments += @('--class-path', ($paths -join [IO.Path]::PathSeparator),
         (Join-Path $PSScriptRoot 'v217_release_bundle_verify.java'))
     if ($SelfTest) {
         $arguments += @('--self-test', $root)

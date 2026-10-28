@@ -111,6 +111,25 @@ void main() {
       await expectLater(pending, throwsA(errorCode('session-changed')));
       expect(reads, 0);
     });
+
+    test('$kind cannot start a new database read after disposal', () async {
+      var reads = 0;
+      final service = LunoOnlineService.forTesting(
+        bootstrap: () async {},
+        auth: TestAuth(),
+        databaseRead: (path) async {
+          reads++;
+          return fixture(path);
+        },
+      );
+      await service.start();
+      service.dispose();
+      await expectLater(
+        load(service, kind),
+        throwsA(errorCode('session-changed')),
+      );
+      expect(reads, 0);
+    });
   }
 
   for (final failed in [false, true]) {

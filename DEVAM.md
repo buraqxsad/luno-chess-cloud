@@ -4,6 +4,146 @@ Son dogrulama/aktarim tarihi: 27 Ekim 2026. Bu dosya kaynak aktarimini anlatir;
 oyunun kusursuz, canli servislerin tamamen kabul edilmis veya Play yayininin
 onaylanmis oldugu anlamina gelmez.
 
+## 28 Ekim bulut geliştirmesi — V239 / ilk yayın kabul adayı
+
+Dal ve HEAD korundu: `codex/cloud-transfer-20261027`,
+`14780e10e9b511aababd009517507425890c4840`. V237/V238 runtime düzeltmeleri ve
+animasyonlar korundu; yeni oyun özelliği yok. Yerel sürüm adayı `1.6.3+19`;
+Play Console geçmişinde 19'un kullanılabilirliği doğrulanmadı.
+
+- Yeni üretim oyun/backend bug düzeltmesi 0; release verifier'da iki somut
+  sorun giderildi: eski build17/sabit sürüm varsayımı ve alternatif Gradle
+  signing-properties yolunun yok sayılması. Java21/PATH kontrolü eklendi.
+- Yeni 5 backend yarış/sınır ve 77 Flutter kabul testi eklendi. Son TR kart/ses
+  77/77, EN kart 76/76; analiz temiz. Tam Flutter **11701 pass / 99 fail /
+  0 skip**: 97 tarihsel golden farkı; diğer iki ilk-koşu hatası hedefli takipte
+  geçti. Tam suite yeşil sayılmaz; golden'lar değiştirilmedi.
+- Backend 1312 pass / 0 fail / 1 opt-in skip; TypeScript 376/376 (Dart bridge
+  etkin). Differential 3101 senaryo / 10967 state ve legal set / sıfır ayrışma.
+  Yerel Auth/RTDB 21 ayrı suite; ilk iki timeout değişmemiş testlerle tekrarda
+  geçti. İki ayrı backend süreci günlük ödülde tek grant/replay değişmezliğini
+  doğruladı. Bunlar üretim Play/iki fiziksel cihaz kabulü değildir.
+- Debug APK ve yalnız x86_64 için profile APK üretildi; aynı debug sertifikası,
+  1.6.3+19/min24/target36, 749 asset hash'i, ELF/16KB ZIP hizalaması doğrulandı.
+  Release AAB ve APK gerçek build denemeleri eksik upload imzasında guard ile
+  durdu; koruma atlanmadı. İmzalı final AAB yok.
+- Aynı API29 AVD snapshot yüklenemeyince açıldı; yeni profile APK kuruldu ve
+  Luno welcome gerçek Android framebuffer'ında çizildi. SystemUI ANR görüldü;
+  tam oyuncu kabulü geçilmedi. Başlangıç PSS tek örnek 129855KiB; battle/tepe
+  RAM değildir. Guest IPv4/IPv6 dış ağı engellendi; VM sonunda `avd stop` ile
+  duraklatıldı, yeni snapshot kaydedilmedi. Ölçülen kernel sayfa boyutu4096B.
+- 24 kartın TR/EN gerçek Flutter savaş ekranı matrisi, 106 güncel widget PNG,
+  Blender48 kare denetimi ve host atlas cache/decode ölçümü kaydedildi. 9MiB
+  host cache cihaz RAM/GPU ölçümü değildir. Android FPS/build-raster p95–p99,
+  gerçek16KB/Play Integrity/lisans testi ve tek gerçek oyuncu zinciri geçilmedi.
+
+Güncel kanıtlar: `/workspace/luno-review/v239/REPORT.md`, `verification.json`,
+`animations/card-acceptance.md`, `PLAY-GATES.md`, `performance.json`.
+APK/hash'ler ve değişen kaynakların yedeği aynı dizindedir. Kaynaklar çalışma
+ağacında; commit/push, canlı deploy, gerçek ödeme ve Play yayın yapılmadı.
+**RELEASE HOLD** devam eder. Android snapshot/başlatma denemelerinin güncel
+sonucu için `v239/android/device/` kaydına bakın; eski paused-VM varsayımını
+doğrulamadan kullanmayın.
+
+## 28 Ekim bulut geliştirmesi — V238 / ilk yayın hazırlığı
+
+Kullanıcı ilk kamuya açık yayını hazırladığımızı doğruladı. V237 korunarak:
+
+- 24 karta farklı sonlu vektör hareketi; Blender/Cycles ile kristal, zincir ve
+  sis atlasları eklendi. Üç yeni dosya toplam 421148 bayt. Dört ortak atlasın
+  ham RGBA toplamı 9 MiB; bu gerçek cihaz RAM/FPS ölçümü değildir. Orijinal
+  sanat, kurallar, mana, hedef gizliliği ve süreler korunur. Kaynaklar
+  `luno_chess/artwork/v238/` altında yeniden üretilebilir.
+- Hesap silme sonrası gecikmiş V1 migration'ın yan hesap kaydı oluşturması,
+  gece yarısında ters sıralı günlük ödülün ilerlemeyi geri alması, geç emoji
+  yanıtının yeni pencereyi kapatması ve ilk çizim öncesi hesap değişiminde
+  eski özel pencerenin görünmesi düzeltildi; negatif regresyonlar eklendi.
+- Son seçilmiş Flutter regresyonu 447/447; backend
+  1307 pass / 0 fail / 1 skip; TS kuralları
+  373 pass / 0 fail / 3 skip. Tam analiz temiz.
+  Bu sonuç tam Flutter suite'inin yeşil olduğu anlamına gelmez; V237'deki 97
+  tarihsel görsel fark çözülmüş sayılmaz, golden'lar değiştirilmedi.
+- Yerel yayın preflight'ı 17/17; gerçek aktif Gradle
+  `preReleaseBuild`, eksik/yarım imza bilgisi ve olmayan keystore ile üç
+  durumda doğru imza guard'ında durdu. Debug APK kimlik değiştirmeden üretildi.
+
+Yeni test APK'sı: `/workspace/luno-review/v238/Luno-Chess-v238-debug.apk`, 241367917 bayt.
+SHA-256: `288fc337494d2a83ad6146abd1b2a3876dcd117d3468013a8b3530504601cf2b`. v2 imza, önceki debug sertifikası, ARM64/x86_64 ve
+dört atlasın paketteki birebir içeriği doğrulandı. Sürüm `1.6.3+18` korundu.
+İlk kamu yayını için önceki test-track kodları ayrıca kontrol edilmelidir.
+
+Güncel rapor/kanıt: `/workspace/luno-review/v238/REPORT.md`, `verification.json`.
+Altı gerçek Flutter animasyon önizlemesi `vfx/previews/` içindedir. Yeni QA
+çıktıları inceleme dizinine taşındı; tracked fixture'lar korunur. Değişen
+kaynakların V237+V238 yedeği `source-changes.zip` içindedir. Çalışma ağacı henüz
+commit/push edilmedi. SDK/bağımlılık, release kimliği ve tarihsel manifest korunur.
+
+**RELEASE HOLD:** imzalı final AAB/Play test-track teslimi, sağlıklı gerçek
+Android/16 KB runtime/FPS, Google/App Check, iki hesap online ve Play ödeme/
+restore/refund/RTDN kabulü ile ilk mağaza beyanları tamamlanmadı. API29 VM
+duraklatılmış kalır. Production deploy, Play upload veya yayın yapılmadı.
+
+## 28 Ekim bulut gelistirmesi — V237
+
+Asagidaki eski aktarim notlari tarihsel kayittir. 28 Ekim calismasinda yarim
+App Check izin-listesi handler'a baglandi; Flutter oturum sahipligi hatalari,
+aktarim girdileri ve rehber/efektler uzerinde yeni degisiklikler yapildi.
+Guncel kanitlar bulutta `/workspace/luno-upgrade/` altindadir; ilk temiz aktarim
+incelemesi `/workspace/luno-review/INCELEME.md` tarihsel olarak korunur.
+
+- Ana menu/Ayarlar Rehber'i canli TR/EN ogrenme merkezini acar. Orijinal Luno
+  portresi, sonlu tepkiler, secilebilir on ders, kucuk tahta ornegi, uygulamali
+  tekrar, Akademi ve kart katalog baglantilari vardir. Onboarding ve mevcut
+  ilerleme/oduller korunur; hareket azaltma ve yasam dongusu dikkate alinir.
+- Blender'da ozgun halka uretildi; ImageMagick bloom ve kayipsiz WebP atlasla
+  16 kare tek 164.026 baytlik dokuya alindi. Uretim kaynaklari
+  `luno_chess/artwork/v237/`, runtime `lib/widgets/luno_arcane_halo.dart`.
+  Kartlara ozel vektorler korunarak ucus izleri/parcaciklar iyilestirildi.
+  Oyun kurali, hedef gizliligi, mana ve gorsel sureler degistirilmedi.
+- Hazirlik/hesap kurtarma beklenirken eski isteklerin yeni hesabi sahiplenmesi
+  ve dispose sonrasi veritabani okumalari engellendi; regresyonlar eklendi.
+- Eksik eski HTML hero girdisi, native orijinalinden byte-identical kopyayla
+  geri kondu. Kayip QA oracle'inin orijinali bulunamadi: mevcut elle yazilmis
+  geometri konumlari ve acik sozlesmeye dayali **yeni** 72 bagimsiz kontrol
+  yazildi. Kayip dosyanin geri getirildigi veya bilinmeyen orijinal kapsamla
+  esdeger oldugu iddia edilmez. Provenans ve sinirlar:
+  `luno_chess/test/helpers/V223_PROPHECY_CHECKS.md`.
+- `TRANSFER_MANIFEST.json`, ilk aktarimin tarihsel hash listesidir. V237 kaynak
+  degisikliklerini tanimlamaz ve yeni kodu ona uydurmak icin yeniden yazilmadi.
+
+28 Ekim son kanit: tam Flutter analizi temiz; backend 1301 pass / 0 fail / 1
+kontrollu skip. Ilk genis Flutter kesfi 11412 pass / 278 fail verdi; bu final
+yesil suite degildir. Ardindan 22 islevsel basarisiz dosya kendi hedefli
+tekrarlarinda dogrulandi. Son rehber/kayit grubu 15/15, responsive grup 145/145
+gecti; ayrintili ortusmeyen kanit eslemesi bulut raporundadir. 97 tarihsel
+gorsel karsilastirma farki saklandi; golden'lar ezilmedi. 50 battle golden
+adayinin eski temiz commit'te de V237 ile byte-identical oldugu kanitlandi.
+
+Yeni debug APK: `/workspace/luno-upgrade/Luno-Chess-v237-debug.apk`,
+240934629 bayt, ARM64 + x86_64; v2 imzasi ve onceki bulut debug sertifikasiyla
+eslesmesi dogrulandi. Yeni halo dokusunun APK icindeki kopyasi kaynakla birebir.
+Uygulama surumu 1.6.3+18 korundu; bu bir Play/release paketi degildir. Bu yeni
+APK cihazda kurulum/oynanabilirlik kabulunden gecmis sayilmaz. Guncel rapor ve
+sonuclar: `/workspace/luno-upgrade/REPORT.md`, `verification.json`.
+Kaynak degisiklikleri calisma agacinda; henuz commit/push yapilmadi. Yalniz
+degisen kaynaklarin yedegi `source-changes.zip` icindedir.
+
+Bu calisma SDK/paket yukseltmesi, production deploy veya release imzalama
+degisikligi icermez. Canli Google/App Check/Play billing ve donanim FPS kabul
+kapilari ayridir; onceki **RELEASE HOLD** karari yalniz yerel testlerle kalkmaz.
+
+Bulutta her komuttan once:
+
+```bash
+source /workspace/toolchains/luno-env.sh
+cd /workspace/luno-chess/luno_chess
+```
+
+Bu script Flutter 3.47.1 / Dart 3.13.1 / Java 21.0.12 / Node 22.23.3 secimini
+yapar; daha yeni baseline Flutter ile projeyi yukseltme. API 29 VM duraklatildi;
+KVM/GPU olmadigi icin System UI ANR'leri goruldu. Widget render/testleri yerel
+UI gelistirme kanitidir; emulator boot veya APK derlemek cihaz kabulunu kanitlamaz.
+
 ## Dogru Proje
 
 - **Aktif uygulama:** `luno_chess/`, yerel Flutter/Dart; giris `lib/main.dart`.

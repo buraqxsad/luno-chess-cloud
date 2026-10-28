@@ -25,13 +25,20 @@ import '../theme/luno_theme.dart';
 import '../widgets/luno_surface.dart';
 import 'battle_practice_campaign.dart';
 import 'battle_v1_screen.dart';
+import 'guide_screen.dart';
 
 /// HTML sürümündeki tutorial akışının native karşılığı.
 class TutorialScreen extends StatefulWidget implements LunoAccountScopedPage {
   final bool onboarding;
   final GameStore? playerStore;
+  final bool lessonMode;
 
-  const TutorialScreen({super.key, this.onboarding = false, this.playerStore});
+  const TutorialScreen({
+    super.key,
+    this.onboarding = false,
+    this.playerStore,
+    this.lessonMode = false,
+  });
 
   @override
   State<TutorialScreen> createState() => _TutorialScreenState();
@@ -101,6 +108,9 @@ class _TutorialScreenState extends State<TutorialScreen> {
 
   @override
   Widget build(BuildContext context) {
+    if (!widget.onboarding && !widget.lessonMode) {
+      return GuideScreen(playerStore: store);
+    }
     final l = LunoLocalizations.of(context);
     final steps = l.battleLessons;
     final current = steps[step];
@@ -156,12 +166,20 @@ class _TutorialScreenState extends State<TutorialScreen> {
                           if (!widget.onboarding)
                             IconButton(
                               key: const ValueKey('replay-guided-basics'),
-                              tooltip: l.learning('Temel eğitimi tekrar aç', 'Replay the basics'),
+                              tooltip: l.learning(
+                                'Temel eğitimi tekrar aç',
+                                'Replay the basics',
+                              ),
                               onPressed: () {
                                 if (!_active || _finishing) return;
-                                Navigator.of(context).push(lunoRoute(
-                                  BattlePracticeCampaign(guidedReplay: true, storeOverride: store),
-                                ));
+                                Navigator.of(context).push(
+                                  lunoRoute(
+                                    BattlePracticeCampaign(
+                                      guidedReplay: true,
+                                      storeOverride: store,
+                                    ),
+                                  ),
+                                );
                               },
                               icon: const Icon(Icons.play_lesson_rounded),
                             ),

@@ -23,7 +23,7 @@ const _criticalCopy = <CardId, (List<String>, List<String>)>{
     [
       'en fazla 2',
       'normal kart çekişi değildir',
-      'eline kart eklemez',
+      'Eline kart eklemez',
       'onaylayınca',
     ],
     ['up to 2', 'not a normal draw', 'adds no card', 'Confirming'],
@@ -59,7 +59,7 @@ const _criticalCopy = <CardId, (List<String>, List<String>)>{
     ],
   ),
   CardId.lockedSquare: (
-    ['hâlâ boşsa', 'Şah', 'üzerinden', 'geçerken alma', 'sonunda biter'],
+    ['hâlâ boşsa', 'Şah', 'Üzerinden', 'Geçerken alma', 'sonunda biter'],
     ['while it is empty', 'Kings', 'pass through', 'en passant', 'expires'],
   ),
   CardId.freeze: (
@@ -142,7 +142,7 @@ const _criticalCopy = <CardId, (List<String>, List<String>)>{
     ['orthogonal', 'opposing non-king', 'Hunt Vow', 'No other piece'],
   ),
   CardId.shadowPass: (
-    ['tam bir dost', 'ikinci taşın', 'şahın', 'boş kareye', 'rok hakkını'],
+    ['tam bir dost', 'İkinci taşın', 'şahın', 'boş kareye', 'rok hakkını'],
     [
       'exactly 1 friendly',
       'second piece',
@@ -220,7 +220,7 @@ const _criticalCopy = <CardId, (List<String>, List<String>)>{
       '2 azalır',
       'en az 1',
       'bu turda başlamaz',
-      'mana kazandırmaz',
+      'Mana kazandırmaz',
     ],
     [
       'Sacrifice another',
@@ -237,7 +237,7 @@ const _criticalCopy = <CardId, (List<String>, List<String>)>{
       'o anda boş',
       'Şah',
       'dolu karede',
-      'geçerken alma',
+      'Geçerken alma',
       'sonunda biter',
     ],
     [

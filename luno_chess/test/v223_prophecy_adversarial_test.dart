@@ -9,9 +9,9 @@ import 'package:luno_chess/engine/piece.dart';
 import 'package:luno_chess/i18n/luno_localizations.dart';
 import 'package:luno_chess/screens/battle_v1_screen.dart';
 
-import '../qa/v223/prophecy/independent_checks.dart';
 import 'helpers/battle_v1_response.dart';
 import 'helpers/v223_prophecy_cases.dart';
+import 'helpers/v223_prophecy_independent_checks.dart';
 
 Map<String, dynamic> _response(
   AuthoritativeBattleState state,

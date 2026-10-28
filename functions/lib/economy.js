@@ -224,14 +224,17 @@ function dailyState(profile,timestamp){
     daily.streak=safeInteger(inventory.dailyStreak,0);
   }
   daily.streak=safeInteger(daily.streak,0);
-  const today=utcDayOrdinal(timestamp);
+  // An older request can resume after a newer daily claim commits at midnight.
+  // Only the server claim time is a floor; legacy inventory time is not proof.
+  const lastClaimAt=safeInteger(daily.lastClaimAt,0);
+  const today=utcDayOrdinal(Math.max(Number(timestamp),lastClaimAt));
   const nextStreak=(daily.lastClaimDay===today||daily.lastClaimDay===today-1)?daily.streak:0;
   return {
     serverTime:Number(timestamp),
     canClaim:daily.lastClaimDay!==today,
     streak:daily.streak,
     lastClaimDay:Number.isSafeInteger(daily.lastClaimDay)?daily.lastClaimDay:null,
-    lastClaimAt:safeInteger(daily.lastClaimAt,0),
+    lastClaimAt,
     nextClaimAt:(today+1)*DAY_MS,
     nextReward:{gold:DAILY_REWARDS[nextStreak%DAILY_REWARDS.length],gems:0}
   };

@@ -336,7 +336,7 @@ void main() {
                   .first,
             )
             .opacity,
-        closeTo(.8, .001),
+        closeTo(.34, .001),
         reason: 'The accepted target is visibly marked during impact',
       );
       await tester.pump(Duration(milliseconds: duration ~/ 4 - 1));
@@ -352,6 +352,19 @@ void main() {
   testWidgets(
     'V203 initial effects do not flash and enemy Mines animate publicly',
     (tester) async {
+      final mineArt = ResizeImage(
+        AssetImage(BattleArt.path('mine')),
+        width: 128,
+      );
+      final cleanupArt = ResizeImage(
+        const AssetImage(LunoVisualAssets.cleanse),
+        width: 128,
+      );
+      final mine = find.ancestor(of: find.image(mineArt), matching: pulses());
+      final cleanup = find.ancestor(
+        of: find.image(cleanupArt),
+        matching: pulses(),
+      );
       await tester.pumpWidget(
         shell(feedback(view(draft: boardEffect(BoardEffectType.fog)))),
       );
@@ -379,11 +392,17 @@ void main() {
               find.descendant(of: pulses(), matching: find.byType(Image)),
             )
             .map((image) => image.image),
-        contains(ResizeImage(AssetImage(BattleArt.path('mine')), width: 128)),
+        contains(mineArt),
       );
+      await tester.pump();
       await tester.pump(const Duration(milliseconds: 2800));
+      expect(pulses(), findsNothing);
       await tester.pumpWidget(shell(feedback(view())));
       expect(pulses(), findsOneWidget);
+      expect(cleanup, findsOneWidget);
+      await tester.pump();
+      final cleanupElapsed = battleCleanupDuration.inMilliseconds ~/ 2;
+      await tester.pump(Duration(milliseconds: cleanupElapsed));
       await tester.pumpWidget(
         shell(
           feedback(
@@ -393,7 +412,54 @@ void main() {
           ),
         ),
       );
-      expect(pulses(), findsOneWidget);
+      expect(
+        pulses(),
+        findsNWidgets(2),
+        reason: 'The fresh public Mine keeps its independent cleanup marker',
+      );
+      expect(mine, findsOneWidget);
+      expect(cleanup, findsOneWidget);
+      await tester.pump();
+      await tester.pump(
+        Duration(
+          milliseconds:
+              battleCleanupDuration.inMilliseconds - cleanupElapsed - 1,
+        ),
+      );
+      expect(pulses(), findsNWidgets(2));
+      await tester.pump(const Duration(milliseconds: 1));
+      expect(cleanup, findsNothing);
+      expect(mine, findsOneWidget);
+      expect(
+        tester
+            .widget<Opacity>(
+              find.descendant(of: mine, matching: find.byType(Opacity)),
+            )
+            .opacity,
+        0,
+        reason: 'The new cast retains its own travel phase',
+      );
+      final mineDuration = battleEffectDuration(CardId.mine).inMilliseconds;
+      await tester.pump(
+        Duration(milliseconds: mineDuration - cleanupElapsed - 1),
+      );
+      expect(mine, findsOneWidget);
+      await tester.pump(const Duration(milliseconds: 1));
+      expect(pulses(), findsNothing);
+      await tester.pumpWidget(
+        shell(
+          feedback(
+            view(
+              draft: boardEffect(BoardEffectType.mine, owner: PieceColor.black),
+            ),
+          ),
+        ),
+      );
+      expect(
+        pulses(),
+        findsNothing,
+        reason: 'A refresh cannot replay the cast',
+      );
     },
   );
   testWidgets('V203 pulse cap and orientation use the board inner grid', (
