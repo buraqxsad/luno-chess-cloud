@@ -20,6 +20,7 @@ void main() {
   final calls = <MethodCall>[];
   final messenger = TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
   late LunoAudioService audio;
+  var effectMillis = 0;
   final store = GameStore.instance;
   Completer<void>? hold, entered;
 
@@ -52,6 +53,9 @@ void main() {
       return call.method == 'getCurrentPosition' ? 0 : null;
     });
     audio = LunoAudioService.instance;
+    // Native plugin callbacks yield to the host, while widget time is fake.
+    // Host CPU contention must not consume the production stale-SFX budget.
+    audio.effectMillisForTesting = () => effectMillis;
     await audio.initialize();
     await LunoSettings.instance.setEffectsLevel(3);
     await LunoSettings.instance.setMusicLevel(0);
@@ -61,6 +65,7 @@ void main() {
     calls.clear();
   });
   tearDownAll(() async {
+    audio.effectMillisForTesting = null;
     await LunoSettings.instance.setEffectsLevel(0);
   });
   List<MethodCall> resumes() => calls.where((c) => c.method == 'resume').toList();
@@ -72,11 +77,35 @@ void main() {
   }
 
   testWidgets('five semantic reveals and six cancellation boundaries use prepared native audio', (tester) async {
+    effectMillis += 2000;
+    calls.clear();
+    hold = Completer<void>();
+    entered = Completer<void>();
+    await tester.pumpWidget(shell(CosmeticPresentationFeedback(
+      playerStore: store,
+      sound: LunoSound.emoteUnlock,
+      child: const Scaffold(body: Text('Confirmed emote')),
+    ), reduced: true));
+    await flush(tester);
+    await tester.runAsync(() => entered!.future.timeout(const Duration(seconds: 2)));
+    // Let the host exceed the production stale-audio budget while the widget
+    // test's logical clock remains still. This models an overloaded worker.
+    await tester.runAsync(() => Future<void>.delayed(Duration(
+      milliseconds: LunoAudioService.policyForSound(LunoSound.emoteUnlock).maxAgeMs + 50,
+    )));
+    hold!.complete();
+    hold = null;
+    await flush(tester);
+    expect(resumes(), hasLength(1));
+    await tester.pumpWidget(const SizedBox());
+    await flush(tester);
+
     await tester.pumpWidget(shell(const Scaffold(body: SizedBox())));
     final preloadContext = tester.element(find.byType(Scaffold));
     await tester.runAsync(() => precacheImage(
       const AssetImage('assets/native_art/polish-v203-button-secondary.webp'), preloadContext));
     for (final kind in ['card', 'set', 'reward', 'emote', 'fragments']) {
+      effectMillis += 2000;
       calls.clear();
       Widget page() => Scaffold(body: kind == 'emote' || kind == 'fragments'
         ? ChestRevealDialog(chestId: 'rare', rewards: [
@@ -100,6 +129,7 @@ void main() {
     }
 
   for (final cancellation in ['epoch', 'account', 'hidden', 'paused', 'disposed', 'close']) {
+      effectMillis += 2000;
       calls.clear();
       hold = Completer<void>();
       entered = Completer<void>();
