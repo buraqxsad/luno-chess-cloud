@@ -232,13 +232,15 @@ class LunoBillingService extends ChangeNotifier {
       _guard(owner);
       return _play.launch(product, _accountHash(owner));
     });
+    // Restore may change product status while this native call is still open.
+    var launchTimedOut = false;
     unawaited(
       launch
           .then<void>((_) {}, onError: (Object _, StackTrace _) {})
           .whenComplete(() {
             if (isCurrent(owner) &&
                 identical(_launchOperation, operation) &&
-                _productStatuses[productId] != LunoBillingStatus.purchasing) {
+                launchTimedOut) {
               _launchProduct = null;
               _launchOperation = null;
             }
@@ -259,8 +261,9 @@ class LunoBillingService extends ChangeNotifier {
       return launched;
     } catch (error) {
       if (isCurrent(owner)) {
-        if (error is! TimeoutException &&
-            identical(_launchOperation, operation)) {
+        if (error is TimeoutException) {
+          launchTimedOut = true;
+        } else if (identical(_launchOperation, operation)) {
           _launchProduct = null;
           _launchOperation = null;
         }
@@ -331,7 +334,22 @@ class LunoBillingService extends ChangeNotifier {
         _emit(LunoBillingStatus.error, productId: id, code: 'account-mismatch');
         continue;
       }
-      if (_launchProduct == id) {
+      final token = receipt.purchaseToken;
+      final completedStatus =
+          receipt.status == LunoPlayPurchaseStatus.purchased ||
+          receipt.status == LunoPlayPurchaseStatus.restored;
+      final key =
+          completedStatus && token.isNotEmpty && token.length <= 4096
+              ? sha256.convert(utf8.encode(token)).toString()
+              : null;
+      final historicalReceipt =
+          key != null &&
+          (_queue.containsKey(key) ||
+              _completed.contains(key) ||
+              _rejected.containsKey(key));
+      // A replay may still need restore verification, but it cannot resolve a
+      // newer Play sheet whose purchase token has not arrived yet.
+      if (_launchProduct == id && !historicalReceipt) {
         _launchProduct = null;
         _launchOperation = null;
       }
@@ -353,12 +371,10 @@ class LunoBillingService extends ChangeNotifier {
         case LunoPlayPurchaseStatus.restored:
           break;
       }
-      final token = receipt.purchaseToken;
-      if (token.isEmpty || token.length > 4096 || receipt.productId.isEmpty) {
+      if (key == null || receipt.productId.isEmpty) {
         _emit(LunoBillingStatus.error, productId: id, code: 'invalid-receipt');
         continue;
       }
-      final key = sha256.convert(utf8.encode(token)).toString();
       final retryInactiveMembership =
           replayCompleted &&
           lunoBillingCatalog[id] == LunoBillingProductKind.membership &&
