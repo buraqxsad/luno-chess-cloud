@@ -87,7 +87,15 @@ function installBattleV1Recovery(api,deps){
   if(!active.exists()){active=await db.ref('matchSecretsV1').orderByChild('status').equalTo('active').limitToFirst(80).get();}
   const activeIds=Object.keys(active.val()||{}).sort();await db.ref('battleV1Maintenance/cursor').set(activeIds.at(-1)||'');
   for(const [id,value] of Object.entries(active.val()||{})){try{const m=api.hydrate(value),human=Object.values(m.players).find(p=>!p.bot);if(!human)continue;const tx=await api.transact(id,human.uid,current=>({match:authority.expireClock(current,now())}));await driveBot(tx.match,human.uid);if(tx.match.result)await settle(id,human.uid);}catch(e){deps.logger?.warn('Battle V1 maintenance deferred',{matchId:id,code:e.code||'TEMPORARILY_UNAVAILABLE'});}}
-  const pending=await db.ref('matchSecretsV1').orderByChild('settlementStatus').equalTo('pending').limitToFirst(80).get();
+  // Failed early settlements must not starve later players. Keep this cursor
+  // separate from active maintenance and wrap so deferred records are retried.
+  const pendingCursorRef=db.ref('battleV1Maintenance/settlementCursor');
+  const pendingCursor=(await pendingCursorRef.get()).val();
+  const pendingQuery=db.ref('matchSecretsV1').orderByChild('settlementStatus');
+  let pending=await (validMatchId(pendingCursor)?pendingQuery.startAt('pending',pendingCursor+'\uf8ff').endAt('pending'):pendingQuery.equalTo('pending')).limitToFirst(80).get();
+  if(!pending.exists()&&validMatchId(pendingCursor))pending=await db.ref('matchSecretsV1').orderByChild('settlementStatus').equalTo('pending').limitToFirst(80).get();
+  const pendingIds=Object.keys(pending.val()||{}).sort();
+  await pendingCursorRef.set(pendingIds.at(-1)||'');
   for(const [id,value] of Object.entries(pending.val()||{})){try{const m=api.hydrate(value),human=Object.values(m.players).find(p=>!p.bot);if(human)await settle(id,human.uid);}catch(e){deps.logger?.warn('Battle V1 settlement deferred',{matchId:id,code:e.code||'TEMPORARILY_UNAVAILABLE'});}}
  }
  async function ackBattleV1Result(context){
