@@ -1,0 +1,84 @@
+[
+  {
+    "command": [
+      "shell",
+      "getprop",
+      "sys.boot_completed"
+    ],
+    "status": "TIMEOUT"
+  },
+  {
+    "command": [
+      "shell",
+      "getconf",
+      "PAGE_SIZE"
+    ],
+    "exit_code": 0,
+    "stdout": "4096",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "shell",
+      "iptables",
+      "-S",
+      "OUTPUT"
+    ],
+    "exit_code": 0,
+    "stdout": "-P OUTPUT DROP\n-A OUTPUT -o lo -j ACCEPT\n-A OUTPUT -j oem_out\n-A OUTPUT -j fw_OUTPUT\n-A OUTPUT -j st_OUTPUT\n-A OUTPUT -j bw_OUTPUT",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "shell",
+      "ip6tables",
+      "-S",
+      "OUTPUT"
+    ],
+    "exit_code": 0,
+    "stdout": "-P OUTPUT DROP\n-A OUTPUT -o lo -j ACCEPT\n-A OUTPUT -j oem_out\n-A OUTPUT -j fw_OUTPUT\n-A OUTPUT -j st_OUTPUT\n-A OUTPUT -j bw_OUTPUT",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "shell",
+      "wm",
+      "size",
+      "360x640"
+    ],
+    "status": "TIMEOUT"
+  },
+  {
+    "command": [
+      "shell",
+      "wm",
+      "density",
+      "160"
+    ],
+    "status": "TIMEOUT"
+  },
+  {
+    "command": [
+      "shell",
+      "settings",
+      "put",
+      "global",
+      "window_animation_scale",
+      "0"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "shell",
+      "settings",
+      "put",
+      "global",
+      "transition_animation_scale",
+      "0"
+    ],
+    "status": "TIMEOUT"
+  }
+]

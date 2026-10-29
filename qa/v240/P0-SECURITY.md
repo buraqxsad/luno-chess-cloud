@@ -1,0 +1,16 @@
+# V240 — güvenlik ve veri bütünlüğü kabul kapsamı
+
+Aşağıdaki PASS sonuçları kaynak ve yerel test kapsamıdır. **Üretim/staging Firebase, gerçek App Check/Play Integrity, gerçek Google hesapları ve Play lisans ödemesi BLOCKED**; bu tablo onları kapatmaz. Son backend 1312 pass / 0 fail / 1 opt-in skip, TypeScript 376/376; atlanan opt-in V220 yerel gerçek SDK paketi ayrıca 15/15 geçti. Auth/RTDB 12 ayrı suite son durumda geçti. İlk DM zamanlama hatası ve düzeltmesi saklandı.
+
+| Alan | Güncel kanıt | Sonuç / sınır |
+| --- | --- | --- |
+| Android App ID / App Check / yetki | `functions/index.js` handler: doğrulanmış sonuç hemen `assertTrustedAppId(appCheck)` kontrolünden geçer; V236 policy ve handler testleri full backend logunda geçti. | PASS yerel: aynı projedeki yabancı Android uygulaması, web, foreign project, eksik/çelişen kimlik reddedilir. Yazmadan önce 403 kontrolü vardır. Gerçek production attestation BLOCKED. |
+| Tombstone / migration / geç callback / Google geri yükleme | V238 migration-erasure, account-deletion-gate, retained-data-erasure ve retained-record-race; gerçek SDK silme/okuma yarışı; Flutter account/store/restore/owner testleri. | PASS ilgili yerel invariantlar. Gerçek Google hesabı geri giriş/hesap değişimi BLOCKED. |
+| Günlük ödül / streak / tekrar / gece yarısı | V238 cursor sıralama ve V239 daily acceptance; 12 farklı request ID, yanıt kaybı, iki UTC sınırında gecikme. Gerçek RTDB V239 iki ayrı backend süreci ve 8 eşzamanlı claim. | PASS testlerde tek grant, replay değişmezliği, cursor geriye gitmez. İki fiziksel cihaz kabulü değildir. |
+| Online action / idempotency / concurrent turn / terminal settlement | Tam backend ve TS core/authoritative; Flutter online lifecycle ve settlement; V220 gerçek SDK transaction paketi. | PASS yerel senaryolar. Dağıtılmış üretim backend ve iki gerçek kullanıcı zinciri NOT RUN. |
+| Kupa / elmas / altın / receipt / restore / refund / recovery | Tam ekonomi/billing testleri, soft-purchase-recovery gerçek RTDB, V215 ekonomi yerel paketi; Flutter Google Play adapter/pending/restore/service testleri. | PASS mock/yerel state ve tekrar teslim senaryoları. Gerçek Play pending/refund/subscription/lisans kabulü BLOCKED. |
+| Hotseat / public-private ayrımı | V236 hotseat privacy, account switch/owner lifecycle; online private projection testleri; differential 3820 redaction kontrolü. | PASS test kapsamı; native her kart ve tüm pencere permütasyonları NOT RUN. |
+| DM / arkadaşlık / hesap silme yetkileri | friends, DM, social safety, retained erasure gerçek Auth/RTDB; tam backend yetki testleri. | PASS son yerel koşular. DM fixture saati düzeltilirken üretim throttle ve 429 assertion korundu; Functions HTTP modu NOT RUN. |
+| Eski backend / yeni istemci | V240 üretim değişikliği yalnız loading Material bağlamıdır; protokol/API/serialized model değişmedi. Eski uyumluluk testleri korundu. | PASS yerel sözleşmeler; gerçekten dağıtılmış eski backend sürümüne kabul NOT RUN. |
+
+Yerel emülatör `luno-chess` namespace kullanımı production erişimi anlamına gelmez; localhost Auth/RTDB kullanıldı. Canlı deploy veya oyuncu verisi işlemi yapılmadı. Ham test çıktıları `logs/` içinde sıkıştırılmıştır. App Check token/VM service secret tanı satırları paylaşım öncesi filtrelendi.

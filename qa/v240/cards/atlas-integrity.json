@@ -1,0 +1,366 @@
+{
+  "v238_four_shipped_atlases_unchanged": true,
+  "compressed_bytes": 585174,
+  "logical_rgba_bytes": 9437184,
+  "actual_android_gpu_allocation": null,
+  "atlases": [
+    {
+      "asset": "assets/native_art/v237-arcane-halo-atlas.webp",
+      "bytes": 164026,
+      "sha256": "b047675b8f1086f7c77017c09b160ff8b2744304279fa23e8e4574867208bc76"
+    },
+    {
+      "asset": "assets/native_art/v238-binding-atlas.webp",
+      "bytes": 214622,
+      "sha256": "d92d6b097b328ddd9cb0213e8f758949feacebf260796641b1ba49150faf2c9b"
+    },
+    {
+      "asset": "assets/native_art/v238-crystal-atlas.webp",
+      "bytes": 140332,
+      "sha256": "fc609f1f0cab1d07e838a668e6791d4b913b81b009d78263c804462a5356d4b4"
+    },
+    {
+      "asset": "assets/native_art/v238-veil-atlas.webp",
+      "bytes": 66194,
+      "sha256": "3f54a52ac176b49c4c436b7d5592b041bb5baf2fea3f8f0ca47f998f679493ae"
+    }
+  ],
+  "raw_frames": [
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-00.png",
+      "sha256": "2dbde66f854cad65ac3fdfd8c83dd4be18f8ef7873b24cd93201da3133b2fb51",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-01.png",
+      "sha256": "3f9d9a04f139315b26e56f489763de7cb074b8ffa8423aec356f78d944a14097",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-02.png",
+      "sha256": "b322d8a42172ae05143b6408ac6d97c63ceca34a424fe0c94930bce323e8fc04",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-03.png",
+      "sha256": "6680c2e8d4fb2dd38bdb4d0b554965f9302346f92eb13f235fc8f2edd529b6a1",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-04.png",
+      "sha256": "f150cf6d201520cee47295524b450757696523622ede2fa6fcbded876ea3632d",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-05.png",
+      "sha256": "26095e0188ac8dc0a97eff2e58ba3814fc72544a6387f4405443216bfb65dfee",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-06.png",
+      "sha256": "dbb3c3c37960c34fca6c5dd284df0aa87c69d3ee4db0b57bfd021b6d07b05f20",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-07.png",
+      "sha256": "894080008df1ba1c169bb4d9e6fef91b4b687a9cbad100679da7c3634894f783",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-08.png",
+      "sha256": "b0fad6de84e6cdc6814bd622e55691d62df96541f01fa3397c6302b57980edc4",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-09.png",
+      "sha256": "3597451691ce40fef46e79f026f82f5b88fbe5c878de2ade4573607cb6ec2e80",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-10.png",
+      "sha256": "3f2cd7040b01614380f0d81261c44e792d7bef11e2fb4197dea68116ef808a99",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-11.png",
+      "sha256": "4e4d7d770c6818cff884da5e39fbe21a01cdaa58b642bf9b8a2fc7c603c2fca9",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-12.png",
+      "sha256": "0e44f2c3ac37da28ccedf16383e9edcb57beb984a3c285d7e491c3302a8b7641",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-13.png",
+      "sha256": "e7a29abfcf34cfb4b8c88f73ddc1e712489031b39be530cbbd1ceed1b94522b5",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-14.png",
+      "sha256": "7d526e5c306e07547fe6cfb125f992990fba83b7c5e39d2eb75195518a7933ae",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/crystal/halo-15.png",
+      "sha256": "6aad72cafe349b7c875a429c07b0485c90903fbc668bf879a8411637fb4778be",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-00.png",
+      "sha256": "23f7cee61a4478da8c8a3a30340bede193910eaba3dfae5af98d06b0e491f5ea",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-01.png",
+      "sha256": "81546c742dab7df82587d6b9fcf1306fa09c37e32e1ad1667897bce90d6173d2",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-02.png",
+      "sha256": "bff869b6ffcf954e9678159dd02260d92d4341a3f9527e8194b4580f00b0e923",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-03.png",
+      "sha256": "79f771fcd3ccccbd911524e7d5c77f923c34f4541213e06455c0348ea83174db",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-04.png",
+      "sha256": "27a8096ffbd7c83e1ae54c25ff0a3dbd959ecac59013424a0699ab9cde469658",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-05.png",
+      "sha256": "340ddadf3dc88df6d3bbf73450ce3549653498a481b47af2140fd82c3fe263f0",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-06.png",
+      "sha256": "275b7a3da18c4153f9fb5833b4f850f039343c6f1981daa81a6ea98f228e9e86",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-07.png",
+      "sha256": "2cd89a5a85996890ea4d463cb3e311c36b49806108118a0de43aa729d311d0ec",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-08.png",
+      "sha256": "4cf1b7fb2b9e1593e94f06b0e168d2d90ec0a5df30e82ad71b8666de6d4573d3",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-09.png",
+      "sha256": "3684b8f3c25dc426b91548aae9e0fcdf73d964bf0080e7a4beac12d68774ed18",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-10.png",
+      "sha256": "a2b0d4139e6225d0a902696cb12bd419a9728162fbcf3175054034998393eacd",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-11.png",
+      "sha256": "cae346a09a6565071621a8bb28fc01fd7e7104fad3939e3aa5e3b0a2491e8a7b",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-12.png",
+      "sha256": "735fe2b8dc2712374628e5e7742ce0eb3a8d34dd87621828436d682e84805704",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-13.png",
+      "sha256": "e25505507e90e812200dddc28f719098f3e1fb4ce8a5ef33de5ee9c7f8a756c4",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-14.png",
+      "sha256": "bbd1394414373e4c81cb559f62b00e1d0422f67469f09bfad772fba6ecce100b",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/binding/halo-15.png",
+      "sha256": "344302612016d6d4dac98550c58a34993ed4ecbb028fa1048131a5d12d59a7c2",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-00.png",
+      "sha256": "1e150d55e7f80b38b1cdb746ce8b4b56ee5f03c15534ae848cfe5412cf493c58",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-01.png",
+      "sha256": "b427ba6f7e719c5fb4898d96b2de81dd5dad3362f389ca4465f4875f177160ff",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-02.png",
+      "sha256": "09419d9a9f4260e03f86ba9e1606d231efc42ec78c89d3e7bebfc21deb793a24",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-03.png",
+      "sha256": "e50dc0d464c8dc1efa2f417279d5db95c1fc4e2650248c851b15846d1c7e5b92",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-04.png",
+      "sha256": "b2cf2c67757c9514cc54457d4c600b05934ed76aede56ab41ab6e91bdb6e6b01",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-05.png",
+      "sha256": "693ed58c3b91fb0c976b6e22e019c0df631ab0117946be7cc72a6e63ecba20a8",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-06.png",
+      "sha256": "cc29b5a99e3777c2d4c150d73831d07c53ab86aeed09a4e6fcdd1aa13da3fdca",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-07.png",
+      "sha256": "d8a226ba84b4e3010500bd5e27a173541c8e2a5068358e9de84a28bf8ee19e65",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-08.png",
+      "sha256": "9e8923da5ed8fa797df437904dbf3e19c0600378ea2843a9729eba9f77301715",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-09.png",
+      "sha256": "ff0a40819826ce6c95c03054d43456153870661b9ce5a92ffb97e1fbe1d3d8df",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-10.png",
+      "sha256": "29fd50bf20d8b3ab201533485e5335dadcce3cedb67cee94893b09dd2a38d679",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-11.png",
+      "sha256": "65c6476b1261f9d4e0e2b232871ce4deee85e4fbad9595716c090f7117ee0b47",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-12.png",
+      "sha256": "08ac14b3754c14d4bd941826be588d08edf09e4bd4e4db09f2b1ff05b2365c0a",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-13.png",
+      "sha256": "5af86af31b20afb6770b28e2d3a1cc9f89d76eab94c62c2d23d4842e0b82ab8b",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-14.png",
+      "sha256": "9c176fcb0909ad4024d07666924ce5edb4ce37af69bb3c883c410eca5cad3bbf",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "/workspace/luno-review/v238/creative/frames/veil/halo-15.png",
+      "sha256": "6e225fb5b1150b9313799c6b3346f8e8ffae0cd2204c0eb82bbca1df9a7c9d4d",
+      "crc_pass": true,
+      "width": 192,
+      "height": 192
+    }
+  ]
+}

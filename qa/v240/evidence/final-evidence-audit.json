@@ -1,0 +1,19 @@
+{
+  "json_files_parsed": 38,
+  "markdown_missing_links": [],
+  "secret_pattern_matches": [],
+  "apk_hashes_rechecked": [
+    {
+      "file": "Luno-Chess-v240-debug-arm64.apk",
+      "sha256": "5d36574273528f8425942b629935870250d974973c875cccfe0ed3185d06fe91",
+      "bytes": 201281167
+    },
+    {
+      "file": "Luno-Chess-v240-profile-x64.apk",
+      "sha256": "d0e9883906db6958bc8e8dd14a408f0f985eb697334b9c40dfc43ac957e2f547",
+      "bytes": 149263763
+    }
+  ],
+  "production_paths_changed_after_build": false,
+  "untracked_files_exclusively_qa": true
+}

@@ -1,0 +1,21 @@
+{
+  "git_status_before_full": "",
+  "history": [
+    "ac0dd98e9924544af12e96fa6c2637eb5b7d8960 test(audio): isolate cosmetic reveal timing from worker scheduling",
+    "81f92d71e2ac8f13a9e1eb022de1eac2c0f7bbba fix(android): give startup artwork Material typography before Scaffold",
+    "1247012a429f4a329440dec5983b4fb09e07f1b4 chore: checkpoint V239 cloud source and preserved V237-V238 fixes"
+  ],
+  "version": "1.6.3+19",
+  "play_code_available": "BLOCKED; no Console history access; retained candidate19",
+  "full_regression_source_commit": "ac0dd98e9924544af12e96fa6c2637eb5b7d8960",
+  "build_source_commit": "831a7ae11f28094c4b54f37415c80031ba1fd029",
+  "runtime_change_between_test_and_build_commits": [],
+  "commit_history": [
+    "831a7ae11f28094c4b54f37415c80031ba1fd029 test(backend): anchor DM cooldown checks to the admitted attempt",
+    "ac0dd98e9924544af12e96fa6c2637eb5b7d8960 test(audio): isolate cosmetic reveal timing from worker scheduling",
+    "81f92d71e2ac8f13a9e1eb022de1eac2c0f7bbba fix(android): give startup artwork Material typography before Scaffold",
+    "1247012a429f4a329440dec5983b4fb09e07f1b4 chore: checkpoint V239 cloud source and preserved V237-V238 fixes"
+  ],
+  "full_regression_tree": "225120569d17a59b606119bd2bfde13261ce20cd",
+  "build_tree": "72954966a14a439708b9bb72cc75232699cb725d"
+}

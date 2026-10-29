@@ -1,0 +1,244 @@
+{
+  "build_source_commit": "831a7ae11f28094c4b54f37415c80031ba1fd029",
+  "installed_apk": "/workspace/luno-review/v240/Luno-Chess-v240-profile-x64.apk",
+  "installed_apk_sha256": "d0e9883906db6958bc8e8dd14a408f0f985eb697334b9c40dfc43ac957e2f547",
+  "device": {
+    "kind": "software Android emulator, not physical",
+    "avd": "Luno_Android_10",
+    "api": 29,
+    "abi": "x86_64",
+    "kvm": false,
+    "hardware_gpu": false,
+    "display_px": "720x1280",
+    "density_dpi": 320,
+    "logical_width_dp": 360,
+    "kernel_page_size_bytes": 4096,
+    "page_size_evidence": "earlier same API29 AVD getconf PAGE_SIZE; final run not remeasured"
+  },
+  "network": "Guest IPv4/IPv6 OUTPUT DROP, loopback allowed; no production Firebase acceptance; see operations.",
+  "default_renderer_status": "FAIL",
+  "reason": "İlk güncel profile APK açılışında com.luno.chess raster thread SIGSEGV/null-pointer ile kapandı; native backtrace libc extent_recycle/je_malloc ve libflutter.so içeriyor. Sonraki varsayılan V239/V240 kontrolleri 90 saniye sonunda canlıydı ve karşılama 1/3 ekranını çizdi; tutulan son 800 log satırında yeni signal yok. Bu sınırlı tekrar ilk çökmenin kök nedenini veya giderildiğini kanıtlamaz. Software diagnostic de karşılama çizdi; tutorial butonuna dokunma denemeleri 1/3 ekranını ilerletmedi, adb input yavaşlığı/SystemUI ANR görüldüğünden uygulama kaynaklı takılma kanıtlanmadı. Sağlıklı tam oyuncu zinciri/24 kart ve native performans kabulü tamamlanmadı.",
+  "full_player_journey": "BLOCKED",
+  "physical_device": "NOT RUN",
+  "actual_16kb_runtime": "NOT RUN",
+  "steps": [
+    {
+      "flow": "Önceki test paketini kaldırma → yeni profile APK kurulumu → temiz veri",
+      "status": "PASS",
+      "evidence": "native/uninstall.json ve native/operations.json: uninstall/install/pm clear Success; gerçek Android paket yöneticisi."
+    },
+    {
+      "flow": "Varsayılan açılış ve karşılama ekranını çizme",
+      "status": "PASS (görüntü kapsamı)",
+      "evidence": "screenshots/native/renderer-controls-long/v240-default-retry.png: güncel APK, karşılama 1/3, 90 saniye sonunda PID3898. Kararlılık kabulü ayrı FAIL."
+    },
+    {
+      "flow": "Varsayılan native açılış kararlılığı",
+      "status": "FAIL",
+      "evidence": "logs/native-early-logcat.txt.gz: ilk güncel çalıştırmada 00:43:31 raster SIGSEGV. Kök neden ve çözüm doğrulanmadı."
+    },
+    {
+      "flow": "Açılış alt çizgi düzeltmesi, native tanı çizimi",
+      "status": "PASS (diagnostic)",
+      "evidence": "screenshots/native/renderer-controls/v240-software-diagnostic.png: aynı güncel APK, intent-only software rendering ile sarı alt çizgi yok; üretim renderer ayarı değiştirilmedi."
+    },
+    {
+      "flow": "Misafir hesap → Baby Luno öğretimi",
+      "status": "BLOCKED",
+      "reason": "Karşılama 1/3 görüldü; dokunma denemeleri sonraki adıma ilerlemedi. Guest oturumu ve oynanabilir öğretim doğrulanmadı. Ekranın çizilmesi guest giriş kanıtı değildir."
+    },
+    {
+      "flow": "Ana menü → deste kaydı → AI savaşı → kart kullanımı → maç sonucu",
+      "status": "NOT RUN",
+      "reason": "Önceki native adım tamamlanmadı. Widget sonuçları bu zincirin yerine sayılmadı."
+    },
+    {
+      "flow": "İlk oyundan sonra yeniden açma ve kaydı geri alma",
+      "status": "NOT RUN",
+      "reason": "İlk oyun/kayıt native ortamda tamamlanmadı; pm clear yeniden açma kabulü değildir."
+    },
+    {
+      "flow": "Gerçek Google giriş/hesap değişimi → online eşleşme → reconnect",
+      "status": "BLOCKED",
+      "reason": "Uygun Play Services cihazı, iki test hesabı ve staging kabul erişimi yok. Guest dış ağ güvenlik duvarında kapalıydı."
+    },
+    {
+      "flow": "Sonuç → ödül → mağaza, gerçek Play lisans ödemesi",
+      "status": "BLOCKED",
+      "reason": "Native zincir tamamlanmadı; lisans test hesabı/track/Console erişimi yok. Gerçek para işlemi yapılmadı."
+    },
+    {
+      "flow": "Hotseat perdesi/emoji/deste/hızlı rota, gerçek Android",
+      "status": "NOT RUN",
+      "reason": "Yerel Flutter regresyonları geçti; native oyun ekranına ulaşılmadı."
+    }
+  ],
+  "renderer_observation": {
+    "initial_observed_crash": {
+      "status": "FAIL",
+      "utc": "2026-10-29 00:43:31",
+      "pid": 3303,
+      "tid": 3331,
+      "thread": "1.raster",
+      "signal": "SIGSEGV 11, null pointer",
+      "native_stack": "libc extent_recycle / je_malloc, then libflutter.so",
+      "evidence": "logs/native-early-logcat.txt.gz",
+      "root_cause": "UNRESOLVED; no demonstrated Dart source cause and no globally changed renderer/SDK"
+    },
+    "short_control_seconds": 20,
+    "short_controls": [
+      {
+        "case": "v239-default",
+        "apk": "/workspace/luno-review/v239/Luno-Chess-v239-profile-x64.apk",
+        "launch": {
+          "args": [
+            "shell",
+            "am",
+            "start",
+            "-S",
+            "-f",
+            "0x10008000",
+            "-n",
+            "com.luno.chess/.MainActivity"
+          ],
+          "exit_code": 0,
+          "stdout": "Stopping: com.luno.chess\nStarting: Intent { flg=0x10008000 cmp=com.luno.chess/.MainActivity }",
+          "stderr": ""
+        },
+        "pid_after_wait": "3528",
+        "native_crash_signal_in_log": false,
+        "impeller_enabled_log": true,
+        "same_flutter_engine_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+        "diagnostic_only": false
+      },
+      {
+        "case": "v240-default-retry",
+        "apk": "/workspace/luno-review/v240/Luno-Chess-v240-profile-x64.apk",
+        "launch": {
+          "args": [
+            "shell",
+            "am",
+            "start",
+            "-S",
+            "-f",
+            "0x10008000",
+            "-n",
+            "com.luno.chess/.MainActivity"
+          ],
+          "exit_code": 0,
+          "stdout": "Stopping: com.luno.chess\nStarting: Intent { flg=0x10008000 cmp=com.luno.chess/.MainActivity }",
+          "stderr": ""
+        },
+        "pid_after_wait": "3602",
+        "native_crash_signal_in_log": false,
+        "impeller_enabled_log": true,
+        "same_flutter_engine_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+        "diagnostic_only": false
+      },
+      {
+        "case": "v240-software-diagnostic",
+        "apk": "/workspace/luno-review/v240/Luno-Chess-v240-profile-x64.apk",
+        "launch": {
+          "args": [
+            "shell",
+            "am",
+            "start",
+            "-S",
+            "-f",
+            "0x10008000",
+            "-n",
+            "com.luno.chess/.MainActivity",
+            "--ez",
+            "enable-software-rendering",
+            "true",
+            "--ez",
+            "enable-impeller",
+            "false"
+          ],
+          "exit_code": 0,
+          "stdout": "Stopping: com.luno.chess\nStarting: Intent { flg=0x10008000 cmp=com.luno.chess/.MainActivity (has extras) }",
+          "stderr": ""
+        },
+        "pid_after_wait": "3675",
+        "native_crash_signal_in_log": false,
+        "impeller_enabled_log": false,
+        "same_flutter_engine_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+        "diagnostic_only": true
+      }
+    ],
+    "long_control_seconds": 90,
+    "long_controls": [
+      {
+        "case": "v239-default",
+        "apk": "/workspace/luno-review/v239/Luno-Chess-v239-profile-x64.apk",
+        "launch": {
+          "args": [
+            "shell",
+            "am",
+            "start",
+            "-S",
+            "-f",
+            "0x10008000",
+            "-n",
+            "com.luno.chess/.MainActivity"
+          ],
+          "exit_code": 0,
+          "stdout": "Stopping: com.luno.chess\nStarting: Intent { flg=0x10008000 cmp=com.luno.chess/.MainActivity }",
+          "stderr": ""
+        },
+        "pid_after_wait": "3807",
+        "native_crash_signal_in_log": false,
+        "impeller_enabled_log": false,
+        "same_flutter_engine_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+        "diagnostic_only": false,
+        "observation_wait_seconds": 90
+      },
+      {
+        "case": "v240-default-retry",
+        "apk": "/workspace/luno-review/v240/Luno-Chess-v240-profile-x64.apk",
+        "launch": {
+          "args": [
+            "shell",
+            "am",
+            "start",
+            "-S",
+            "-f",
+            "0x10008000",
+            "-n",
+            "com.luno.chess/.MainActivity"
+          ],
+          "exit_code": 0,
+          "stdout": "Stopping: com.luno.chess\nStarting: Intent { flg=0x10008000 cmp=com.luno.chess/.MainActivity }",
+          "stderr": ""
+        },
+        "pid_after_wait": "3898",
+        "native_crash_signal_in_log": false,
+        "impeller_enabled_log": false,
+        "same_flutter_engine_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+        "diagnostic_only": false,
+        "observation_wait_seconds": 90
+      }
+    ],
+    "long_screenshots_reviewed": true,
+    "long_screenshot_conclusion": "Both V239 and V240 reached the welcome 1/3 Flutter screen under default launch settings.",
+    "log_window_limit": "Each retry retained last 800 lines, not a complete capture. PID at end and screenshot prove only the bounded observation.",
+    "engine_same_as_v239_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+    "invalid_launch_controls_excluded": true,
+    "diagnostic_renderer_flags": [
+      "--ez enable-software-rendering true",
+      "--ez enable-impeller false"
+    ],
+    "production_renderer_changed": false
+  },
+  "performance_diagnostics": {
+    "battle_fps": null,
+    "flutter_build_raster_p95_p99_ms": null,
+    "fresh_native_peak_ram_bytes": null,
+    "gpu_texture_bytes": null,
+    "reason": "No healthy battle/long-session profile; do not recycle V239 startup PSS as V240 or host cache as device RAM."
+  },
+  "final_vm_state": "Stopped using adb emu kill after comparisons; no new snapshot, no second AVD booted; private emulator log sanitized and removed.",
+  "production_deploy": false,
+  "real_money": false,
+  "play_upload": false
+}

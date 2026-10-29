@@ -1,0 +1,26 @@
+[
+  {
+    "name": "privacy",
+    "url": "https://luno-legal-site.vercel.app/",
+    "status": 200,
+    "final_url": "https://luno-legal-site.vercel.app/",
+    "sha256": "11dd356c632c22f4be7020d155e56cc088d99ab7744fa24c6c117fe7afef7d41",
+    "request_submitted": false
+  },
+  {
+    "name": "terms",
+    "url": "https://luno-legal-site.vercel.app/terms.html",
+    "status": 200,
+    "final_url": "https://luno-legal-site.vercel.app/terms",
+    "sha256": "d3423d924d2148b9ad99de78d456ffda52cdbea2a5e0b04108faf52e320297ac",
+    "request_submitted": false
+  },
+  {
+    "name": "delete-account",
+    "url": "https://luno-legal-site.vercel.app/delete-account.html",
+    "status": 200,
+    "final_url": "https://luno-legal-site.vercel.app/delete-account",
+    "sha256": "42683dc0a230348ca28fc852bc3956f42f4914b8e8fb4a38a8b1102c69cc722b",
+    "request_submitted": false
+  }
+]

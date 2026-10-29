@@ -1,0 +1,61 @@
+[
+  {
+    "name": "target-sdk",
+    "url": "https://developer.android.com/google/play/requirements/target-sdk",
+    "status": 200,
+    "final_url": "https://developer.android.com/google/play/requirements/target-sdk",
+    "excerpts": [
+      " based on your preferences. When you upload an APK, it must meet Google Play's target API level requirements . Starting August 31 2026: New apps and app updates must target Android 16 (API level 36) or higher to be submitted to Google Play; except for Wear OS and Android Automotive OS apps, which must target Android 15 (API level 35) or highe",
+      "than your app's target API level. If you need more time to update your app, you'll be able to request an extension to November 1, 2026. You'll be able to access your app's extension forms in Play Console later this year. Exceptions to these requirements include: Permanently private apps that are restricted to users in a specific organization ",
+      "d in the Content License . Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2026-10-28 UTC. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINe",
+      "must meet Google Play's target API level requirements . Starting August 31 2026: New apps and app updates must target Android 16 (API level 36) or higher to be submitted to Google Play; except for Wear OS and Android Automotive OS apps, which must target Android 15 (API level 35) or higher, and Android TV and Android XR apps, which must target Androi",
+      "ze content based on your preferences. When you upload an APK, it must meet Google Play's target API level requirements . Starting August 31 2026: New apps and app updates must target Android 16 (API level 36) or higher to be submitted to Google Play; except for Wear OS and Android Automotive OS apps, which must target Android 15 (API level 35) or "
+    ]
+  },
+  {
+    "name": "16kb",
+    "url": "https://developer.android.com/guide/practices/page-sizes",
+    "status": 200,
+    "final_url": "https://developer.android.com/guide/practices/page-sizes",
+    "excerpts": [
+      " Support 16 KB page sizes | Compatibility | Android Developers Skip to main content Essentials Build AI experiences Build AI-powered Android apps with Gemini APIs and more. Get started Get started Create your first app. Use ",
+      "rt \u2348 Support different languages and cultures Support different platform versions Filters on Google Play \u2348 64-bit Support Support 16 KB page sizes Build AI experiences Get started Get started Hello, world! Adaptive apps Compose for UI AI-powered IDE Monetization with Play \u2197\ufe0f Developer Verification Registered App Stores Optimize by form factor ",
+      "duct News Community How-tos Case Studies Events & Programs Documentation Android Developers Develop Devices Compatibility Support 16 KB page sizes Stay organized with collections Save and categorize content based on your preferences. Historically, Android has only supported 4 KB memory page sizes, which has optimized system memory performance "
+    ]
+  },
+  {
+    "name": "closed-testing",
+    "url": "https://support.google.com/googleplay/android-developer/answer/14151465?hl=en",
+    "status": 200,
+    "final_url": "https://support.google.com/googleplay/android-developer/answer/14151465?hl=en",
+    "excerpts": [
+      "rements Developers with personal accounts created after November 13, 2023, must run a closed test for their app with a minimum of 12 testers who have been opted in continuously for at least 14 days. When you meet these criteria, you can apply for production access on the Dashboard in Play Console to distribute your app on Google Play. When you appl",
+      "ies with Google Play policy before launch. You must run a closed test before applying to publish your app to production. At least 12 testers must be opted in to your closed test when you apply for production access, and they must have been opted in continuously for the preceding 14 days. You can start a closed test after completing your app setup. ",
+      "must run a closed test that meets Google Play criteria. When applying, you must answer questions about your closed test. At least 12 testers must be opted in to your closed test continuously for the preceding 14 days when you apply for production access. Summary of testing requirements per track Refer to the following table to review the purpose an",
+      "mber 13, 2023, must run a closed test for their app with a minimum of 12 testers who have been opted in continuously for at least 14 days. When you meet these criteria, you can apply for production access on the Dashboard in Play Console to distribute your app on Google Play. When you apply, you answer questions to help clarify your app design, ",
+      "pted in to your closed test when you apply for production access, and they must have been opted in continuously for the preceding 14 days. You can start a closed test after completing your app setup. Open testing: Surfaces your app's test version on Google Play, allowing anyone to join your testing program and submit private feedback. Before sel",
+      " answer questions about your closed test. At least 12 testers must be opted in to your closed test continuously for the preceding 14 days when you apply for production access. Summary of testing requirements per track Refer to the following table to review the purpose and access requirements for each testing track. Track type Purpose Requirement"
+    ]
+  },
+  {
+    "name": "pre-launch",
+    "url": "https://support.google.com/googleplay/android-developer/answer/9844487?hl=en",
+    "status": 200,
+    "final_url": "https://support.google.com/googleplay/android-developer/answer/9844487?hl=en",
+    "excerpts": []
+  },
+  {
+    "name": "billing-test",
+    "url": "https://developer.android.com/google/play/billing/test",
+    "status": 200,
+    "final_url": "https://developer.android.com/google/play/billing/test",
+    "excerpts": [
+      "ces. You should be testing your integration throughout development. To test during the development phase, we recommend leveraging license testers and Play Billing Lab to run through the scenarios described in this section. License Testers To configure license testers, see Test in-app billing with application licensing . Using license testers provide the",
+      "pment phase, we recommend leveraging license testers and Play Billing Lab to run through the scenarios described in this section. License Testers To configure license testers, see Test in-app billing with application licensing . Using license testers provide the following benefits: Ordinarily, the Google Play Billing Library is blocked for apps that are",
+      "eraging license testers and Play Billing Lab to run through the scenarios described in this section. License Testers To configure license testers, see Test in-app billing with application licensing . Using license testers provide the following benefits: Ordinarily, the Google Play Billing Library is blocked for apps that aren't signed and uploaded to Go",
+      "multiple test purchases for the same non-consumable product, you can refund and revoke purchases using Google Play Console . Test pending purchases Test a pending purchase where the item should be granted when the purchase state becomes PURCHASED . License testers have access to two test instruments for delayed forms of payment where the payment",
+      "or the same non-consumable product, you can refund and revoke purchases using Google Play Console . Test pending purchases Test a pending purchase where the item should be granted when the purchase state becomes PURCHASED . License testers have access to two test instruments for delayed forms of payment where the payment automatically completes ",
+      "e purchase has been granted. Figure 4. Test a purchase with an approved slow test card. You can find more information at Handling pending transactions . Test user-initiated chargebacks License testers have access to a test instrument that lets them simulate a user-initiated chargeback. Make a purchase with the test instrument Test card, approves"
+    ]
+  }
+]

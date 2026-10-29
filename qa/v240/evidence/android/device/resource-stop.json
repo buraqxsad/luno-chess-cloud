@@ -1,0 +1,9 @@
+{
+  "command": "adb emu kill existing AVD only",
+  "exit_code": 0,
+  "stdout": "OK: killing emulator, bye bye",
+  "stderr": "",
+  "reason": "Observed 8371982336/8589934592 cgroup memory; paused emulator RSS3455648KiB. Preserve test evidence and avoid resource exhaustion.",
+  "snapshot_saved": false,
+  "second_avd_started": false
+}

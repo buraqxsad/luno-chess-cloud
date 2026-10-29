@@ -1,0 +1,16 @@
+[
+  {
+    "artifact": "Luno-Chess-v240-profile-x64.apk",
+    "entry": "lib/x86_64/libapp.so",
+    "sha256": "9a3d02e8a973e7baa951ca54d83fa13d1d6b3a2424e2b39e7a8bffba6ddb7367",
+    "v239_sha256": "da5eca22bdb00f36c99ce9c50a5af7391804ed78bbba67e213c181074c5abc29",
+    "updated_runtime_payload": true
+  },
+  {
+    "artifact": "Luno-Chess-v240-debug-arm64.apk",
+    "entry": "assets/flutter_assets/kernel_blob.bin",
+    "sha256": "422e0093c1f0007e30bfaa23ca20597609dbf6f37b6d0f511ecb9ca641126ce2",
+    "v239_sha256": "e5a0b76d68b6f0dff60f065fba84aec9a18f4ae6f963f2a809f40ba5aee77530",
+    "updated_runtime_payload": true
+  }
+]

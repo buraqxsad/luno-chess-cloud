@@ -1,0 +1,73 @@
+[
+  {
+    "command": [
+      "flutter",
+      "build",
+      "apk",
+      "--profile",
+      "--target-platform",
+      "android-x64",
+      "--build-number",
+      "19",
+      "--no-pub"
+    ],
+    "exit_code": 0,
+    "log": "profile-x64-build.log",
+    "source_commit": "831a7ae11f28094c4b54f37415c80031ba1fd029"
+  },
+  {
+    "command": [
+      "python3",
+      "/workspace/luno-review/v240/android/audit_apk.py",
+      "/workspace/luno-review/v240/Luno-Chess-v240-profile-x64.apk"
+    ],
+    "exit_code": 0,
+    "log": "profile-x64-audit.log",
+    "source_commit": "831a7ae11f28094c4b54f37415c80031ba1fd029"
+  },
+  {
+    "command": [
+      "flutter",
+      "build",
+      "apk",
+      "--debug",
+      "--target-platform",
+      "android-arm64",
+      "--build-number",
+      "19",
+      "--no-pub"
+    ],
+    "exit_code": 0,
+    "log": "debug-arm64-build.log",
+    "source_commit": "831a7ae11f28094c4b54f37415c80031ba1fd029"
+  },
+  {
+    "command": [
+      "python3",
+      "/workspace/luno-review/v240/android/audit_apk.py",
+      "/workspace/luno-review/v240/Luno-Chess-v240-debug-arm64.apk"
+    ],
+    "exit_code": 0,
+    "log": "debug-arm64-audit.log",
+    "source_commit": "831a7ae11f28094c4b54f37415c80031ba1fd029"
+  },
+  {
+    "command": [
+      "./gradlew",
+      ":app:validateLunoReleaseSigning",
+      "--offline"
+    ],
+    "exit_code": 1,
+    "log": "release-signing-guard.log",
+    "source_commit": "831a7ae11f28094c4b54f37415c80031ba1fd029"
+  },
+  {
+    "command": [
+      "./gradlew",
+      "--stop"
+    ],
+    "exit_code": 0,
+    "log": "gradle-stop.log",
+    "source_commit": "831a7ae11f28094c4b54f37415c80031ba1fd029"
+  }
+]

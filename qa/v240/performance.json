@@ -1,0 +1,218 @@
+{
+  "source_commit": "831a7ae11f28094c4b54f37415c80031ba1fd029",
+  "acceptance": "NOT RUN",
+  "host_only_atlas_observations": {
+    "scope": "Flutter software widget worker, not an Android profile benchmark",
+    "textures": [
+      {
+        "asset": "assets/native_art/v237-arcane-halo-atlas.webp",
+        "compressed_bytes": 164026,
+        "decoded_rgba_bytes": 2359296,
+        "host_decode_wall_microseconds": 15680
+      },
+      {
+        "asset": "assets/native_art/v238-crystal-atlas.webp",
+        "compressed_bytes": 140332,
+        "decoded_rgba_bytes": 2359296,
+        "host_decode_wall_microseconds": 14489
+      },
+      {
+        "asset": "assets/native_art/v238-binding-atlas.webp",
+        "compressed_bytes": 214622,
+        "decoded_rgba_bytes": 2359296,
+        "host_decode_wall_microseconds": 8412
+      },
+      {
+        "asset": "assets/native_art/v238-veil-atlas.webp",
+        "compressed_bytes": 66194,
+        "decoded_rgba_bytes": 2359296,
+        "host_decode_wall_microseconds": 5141
+      }
+    ],
+    "image_cache_before_bytes": 0,
+    "image_cache_after_bytes": 9437184,
+    "image_cache_live_count": 0,
+    "image_cache_pending_count": 0,
+    "gpu_texture_allocation": null,
+    "android_total_pss_bytes": null,
+    "android_build_raster_p95_p99": null,
+    "performance_acceptance": "NOT RUN"
+  },
+  "compressed_atlas_bytes": 585174,
+  "logical_rgba_bytes": 9437184,
+  "android_battle_fps": null,
+  "android_build_p95_ms": null,
+  "android_build_p99_ms": null,
+  "android_raster_p95_ms": null,
+  "android_raster_p99_ms": null,
+  "android_long_match_frames": null,
+  "android_battle_peak_pss_bytes": null,
+  "android_gpu_texture_bytes": null,
+  "native_diagnostics": {
+    "battle_fps": null,
+    "flutter_build_raster_p95_p99_ms": null,
+    "fresh_native_peak_ram_bytes": null,
+    "gpu_texture_bytes": null,
+    "reason": "No healthy battle/long-session profile; do not recycle V239 startup PSS as V240 or host cache as device RAM."
+  },
+  "renderer_observation": {
+    "initial_observed_crash": {
+      "status": "FAIL",
+      "utc": "2026-10-29 00:43:31",
+      "pid": 3303,
+      "tid": 3331,
+      "thread": "1.raster",
+      "signal": "SIGSEGV 11, null pointer",
+      "native_stack": "libc extent_recycle / je_malloc, then libflutter.so",
+      "evidence": "logs/native-early-logcat.txt.gz",
+      "root_cause": "UNRESOLVED; no demonstrated Dart source cause and no globally changed renderer/SDK"
+    },
+    "short_control_seconds": 20,
+    "short_controls": [
+      {
+        "case": "v239-default",
+        "apk": "/workspace/luno-review/v239/Luno-Chess-v239-profile-x64.apk",
+        "launch": {
+          "args": [
+            "shell",
+            "am",
+            "start",
+            "-S",
+            "-f",
+            "0x10008000",
+            "-n",
+            "com.luno.chess/.MainActivity"
+          ],
+          "exit_code": 0,
+          "stdout": "Stopping: com.luno.chess\nStarting: Intent { flg=0x10008000 cmp=com.luno.chess/.MainActivity }",
+          "stderr": ""
+        },
+        "pid_after_wait": "3528",
+        "native_crash_signal_in_log": false,
+        "impeller_enabled_log": true,
+        "same_flutter_engine_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+        "diagnostic_only": false
+      },
+      {
+        "case": "v240-default-retry",
+        "apk": "/workspace/luno-review/v240/Luno-Chess-v240-profile-x64.apk",
+        "launch": {
+          "args": [
+            "shell",
+            "am",
+            "start",
+            "-S",
+            "-f",
+            "0x10008000",
+            "-n",
+            "com.luno.chess/.MainActivity"
+          ],
+          "exit_code": 0,
+          "stdout": "Stopping: com.luno.chess\nStarting: Intent { flg=0x10008000 cmp=com.luno.chess/.MainActivity }",
+          "stderr": ""
+        },
+        "pid_after_wait": "3602",
+        "native_crash_signal_in_log": false,
+        "impeller_enabled_log": true,
+        "same_flutter_engine_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+        "diagnostic_only": false
+      },
+      {
+        "case": "v240-software-diagnostic",
+        "apk": "/workspace/luno-review/v240/Luno-Chess-v240-profile-x64.apk",
+        "launch": {
+          "args": [
+            "shell",
+            "am",
+            "start",
+            "-S",
+            "-f",
+            "0x10008000",
+            "-n",
+            "com.luno.chess/.MainActivity",
+            "--ez",
+            "enable-software-rendering",
+            "true",
+            "--ez",
+            "enable-impeller",
+            "false"
+          ],
+          "exit_code": 0,
+          "stdout": "Stopping: com.luno.chess\nStarting: Intent { flg=0x10008000 cmp=com.luno.chess/.MainActivity (has extras) }",
+          "stderr": ""
+        },
+        "pid_after_wait": "3675",
+        "native_crash_signal_in_log": false,
+        "impeller_enabled_log": false,
+        "same_flutter_engine_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+        "diagnostic_only": true
+      }
+    ],
+    "long_control_seconds": 90,
+    "long_controls": [
+      {
+        "case": "v239-default",
+        "apk": "/workspace/luno-review/v239/Luno-Chess-v239-profile-x64.apk",
+        "launch": {
+          "args": [
+            "shell",
+            "am",
+            "start",
+            "-S",
+            "-f",
+            "0x10008000",
+            "-n",
+            "com.luno.chess/.MainActivity"
+          ],
+          "exit_code": 0,
+          "stdout": "Stopping: com.luno.chess\nStarting: Intent { flg=0x10008000 cmp=com.luno.chess/.MainActivity }",
+          "stderr": ""
+        },
+        "pid_after_wait": "3807",
+        "native_crash_signal_in_log": false,
+        "impeller_enabled_log": false,
+        "same_flutter_engine_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+        "diagnostic_only": false,
+        "observation_wait_seconds": 90
+      },
+      {
+        "case": "v240-default-retry",
+        "apk": "/workspace/luno-review/v240/Luno-Chess-v240-profile-x64.apk",
+        "launch": {
+          "args": [
+            "shell",
+            "am",
+            "start",
+            "-S",
+            "-f",
+            "0x10008000",
+            "-n",
+            "com.luno.chess/.MainActivity"
+          ],
+          "exit_code": 0,
+          "stdout": "Stopping: com.luno.chess\nStarting: Intent { flg=0x10008000 cmp=com.luno.chess/.MainActivity }",
+          "stderr": ""
+        },
+        "pid_after_wait": "3898",
+        "native_crash_signal_in_log": false,
+        "impeller_enabled_log": false,
+        "same_flutter_engine_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+        "diagnostic_only": false,
+        "observation_wait_seconds": 90
+      }
+    ],
+    "long_screenshots_reviewed": true,
+    "long_screenshot_conclusion": "Both V239 and V240 reached the welcome 1/3 Flutter screen under default launch settings.",
+    "log_window_limit": "Each retry retained last 800 lines, not a complete capture. PID at end and screenshot prove only the bounded observation.",
+    "engine_same_as_v239_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+    "invalid_launch_controls_excluded": true,
+    "diagnostic_renderer_flags": [
+      "--ez enable-software-rendering true",
+      "--ez enable-impeller false"
+    ],
+    "production_renderer_changed": false
+  },
+  "host_decode_cache_not_device_ram": true,
+  "software_emulator_not_physical_device": true,
+  "reason": "No validated healthy Android battle/long-session profile. No KVM/hardware GPU/physical device. No performance PASS."
+}

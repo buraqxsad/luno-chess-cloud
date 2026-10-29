@@ -1,0 +1,107 @@
+[
+  {
+    "gate": "V239 kaynakları, V235–V238 düzeltmeleri ve orijinal girdiler",
+    "status": "PASS",
+    "evidence": "781 korunan orijinal girdi,4atlas ve eski düzeltmeler korundu; runtime değişikliği yalnız loading Material bağlamı."
+  },
+  {
+    "gate": "P0 backend/kurallar/hesap/ekonomi, yerel",
+    "status": "PASS",
+    "evidence": "Backend/TS tam;12yerel Auth/RTDB suite. App-ID, tombstone, daily, concurrent action/settlement, DM/friends/privacy, receipt/recovery."
+  },
+  {
+    "gate": "Üretim/staging Firebase ve App Check/Play Integrity",
+    "status": "BLOCKED",
+    "evidence": "Staging yapılandırması/kimliği ve production kabul erişimi yok. Yerel emulator gerçek cloud kabulü değildir; deploy yapılmadı."
+  },
+  {
+    "gate": "Eski backend/yeni istemci, gerçek dağıtılmış sürüm",
+    "status": "NOT RUN",
+    "evidence": "V240 protocol/API/serialized model/payload değişikliği yapmaz; yerel uyumluluk regresyonları geçti. Gerçekte dağıtılmış eski backend sürümüne erişim yok."
+  },
+  {
+    "gate": "Google hesap geri giriş/değişim, gerçek hesap",
+    "status": "BLOCKED",
+    "evidence": "Mock/service regresyonları geçti; uygun Play Services cihazı/hesabı yok."
+  },
+  {
+    "gate": "Tam Flutter",
+    "status": "FAIL",
+    "evidence": "11711pass/97fail; görsel karşılaştırmalar değiştirilmedi. Diğer hata0."
+  },
+  {
+    "gate": "24 kart Flutter ekran/animasyon",
+    "status": "PASS",
+    "evidence": "TR77/77, EN76/76; normal/reduced, iki yön, finite cleanup ve tested special moves. Native kapsam ayrı."
+  },
+  {
+    "gate": "Gerçek Android tam oyuncu yolculuğu/24kart",
+    "status": "BLOCKED",
+    "evidence": "İlk güncel profile APK açılışında com.luno.chess raster thread SIGSEGV/null-pointer ile kapandı; native backtrace libc extent_recycle/je_malloc ve libflutter.so içeriyor. Sonraki varsayılan V239/V240 kontrolleri 90 saniye sonunda canlıydı ve karşılama 1/3 ekranını çizdi; tutulan son 800 log satırında yeni signal yok. Bu sınırlı tekrar ilk çökmenin kök nedenini veya giderildiğini kanıtlamaz. Software diagnostic de karşılama çizdi; tutorial butonuna dokunma denemeleri 1/3 ekranını ilerletmedi, adb input yavaşlığı/SystemUI ANR görüldüğünden uygulama kaynaklı takılma kanıtlanmadı. Sağlıklı tam oyuncu zinciri/24 kart ve native performans kabulü tamamlanmadı."
+  },
+  {
+    "gate": "Varsayılan renderer ile native açılış",
+    "status": "FAIL",
+    "evidence": "İlk güncel profile APK açılışında com.luno.chess raster thread SIGSEGV/null-pointer ile kapandı; native backtrace libc extent_recycle/je_malloc ve libflutter.so içeriyor. Sonraki varsayılan V239/V240 kontrolleri 90 saniye sonunda canlıydı ve karşılama 1/3 ekranını çizdi; tutulan son 800 log satırında yeni signal yok. Bu sınırlı tekrar ilk çökmenin kök nedenini veya giderildiğini kanıtlamaz. Software diagnostic de karşılama çizdi; tutorial butonuna dokunma denemeleri 1/3 ekranını ilerletmedi, adb input yavaşlığı/SystemUI ANR görüldüğünden uygulama kaynaklı takılma kanıtlanmadı. Sağlıklı tam oyuncu zinciri/24 kart ve native performans kabulü tamamlanmadı."
+  },
+  {
+    "gate": "Fiziksel Android ve uzun maç FPS/build-raster p95–p99",
+    "status": "NOT RUN",
+    "evidence": "Uygun fiziksel cihaz yok; emülatör sonuçları fiziksel diye sunulmadı."
+  },
+  {
+    "gate": "API36, paket kimliği ve yerel sürüm",
+    "status": "PASS",
+    "evidence": "com.luno.chess,1.6.3+19,min24/target36; gerçek iki APK manifestinde doğrulandı."
+  },
+  {
+    "gate": "versionCode19 Play geçmişinde kullanılabilirliği",
+    "status": "BLOCKED",
+    "evidence": "Console geçmişi yok; +19 korundu, kullanılabilir diye işaretlenmedi."
+  },
+  {
+    "gate": "İmzalı release APK/AAB",
+    "status": "BLOCKED",
+    "evidence": "Mevcut upload imza bilgileri yok; gerçek Gradle signing guard doğru durdu. Sahte/debug release oluşturulmadı."
+  },
+  {
+    "gate": "Test APK imza/hash/asset/ELF/ZIP16KB",
+    "status": "PASS",
+    "evidence": "Aynı debug sertifikası/v2,749asset,ELF64 PT_LOAD ve zipalign -P16. Release/Play kabulü değildir."
+  },
+  {
+    "gate": "Gerçek16KB runtime",
+    "status": "NOT RUN",
+    "evidence": "Erişilen API29 kernel4096B. Static align kontrolü runtime yerine sayılmadı."
+  },
+  {
+    "gate": "Play Billing license: purchase/pending/cancel/restore/refund/subscription",
+    "status": "BLOCKED",
+    "evidence": "Yerel backend/adapter/recovery geçti; lisans test hesabı/track/Console yok, gerçek para kullanılmadı."
+  },
+  {
+    "gate": "Privacy/Terms/hesap silme public bağlantıları",
+    "status": "PASS",
+    "evidence": "Üç GET HTTP200; Luno içerikleri ve silme talimatı var. Form/e-posta gönderilmedi; Console beyanı yerine sayılmadı."
+  },
+  {
+    "gate": "Data Safety/rating/audience/store media/reviewer login",
+    "status": "BLOCKED",
+    "evidence": "Play Console erişimi yok; mevcut beyanlar ve giriş doğrulanamadı."
+  },
+  {
+    "gate": "Pre-launch Report",
+    "status": "NOT RUN",
+    "evidence": "Console raporu yok; yeni rapor için gereken Play upload bu görevde yapılmadı."
+  },
+  {
+    "gate": "Koşullu kapalı test/production erişimi",
+    "status": "BLOCKED",
+    "evidence": "Kişisel hesap13Kasım2023sonrası ise resmî şart en az12tester/14kesintisizgün. Hesap türü/tarihi/track geçmişi bilinmiyor."
+  },
+  {
+    "gate": "Canlı deploy/gerçek ödeme/upload/yayın yapmama",
+    "status": "PASS",
+    "evidence": "Bu eylemler yapılmadı."
+  }
+]

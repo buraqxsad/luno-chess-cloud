@@ -4,6 +4,41 @@ Son dogrulama/aktarim tarihi: 27 Ekim 2026. Bu dosya kaynak aktarimini anlatir;
 oyunun kusursuz, canli servislerin tamamen kabul edilmis veya Play yayininin
 onaylanmis oldugu anlamina gelmez.
 
+## 29 Ekim bulut geliştirmesi — V240 / final Android kalite çalışması
+
+**RELEASE HOLD.** Güncel teslim kanıtı [qa/v240/REPORT.md](qa/v240/REPORT.md),
+[24 kart matrisi](qa/v240/cards/acceptance.md), [kabul kapıları](qa/v240/GATES.md).
+V239 çalışma ağacı `1247012a429f4a329440dec5983b4fb09e07f1b4` ile korunarak
+commitlendi. Güncel build kaynağı `831a7ae11f28094c4b54f37415c80031ba1fd029`;
+son QA/devir commit’i runtime değiştirmez. Dal aynı, GitHub push yapılmadı.
+
+- 1 üretim P2 düzeltildi: Scaffold öncesi loading artwork’ünün sarı fallback
+  metin alt çizgileri Material bağlamıyla giderildi. 8 TR/EN/dar-geniş/büyük yazı
+  regresyonu; önce fail, sonra PASS. İki QA zamanlama kusuru da düzeltildi;
+  üretim ses süresi ve DM throttle/assertion’ları korunur. Yeni özellik yok.
+- Tam Flutter 11711 pass / 97 fail / 0 skip, 430 dosya; 97 tarihsel görsel fark
+  eski V239 adaylarıyla byte-identical, golden güncellenmedi. Analiz temiz;
+  son TR 77/77, EN 76/76. Backend 1312/0/1; TS 376/0/0; differential
+  3101 senaryo / 10967 state ve legal set / sıfır ayrışma. Yerel Auth/RTDB
+  12 ayrı suite son durumda geçti; ilk DM fixture hatası ve takibi saklandı.
+- Güncel debug ARM64 ve profile x86_64 test APK’ları üretildi. Sürüm
+  1.6.3+19, min24/target36; eski debug sertifikası, SHA, 749 asset ve static
+  ELF/ZIP 16KB denetimi geçti. Upload imzası yok; release APK/AAB BLOCKED.
+  +19’un Play geçmişindeki uygunluğu bilinmiyor; key/kimlik değiştirilmedi.
+- API29 gerçek emülatörün ilk güncel profile açılışında raster SIGSEGV kaydedildi.
+  V239/V240 90 saniyelik default tekrarları welcome 1/3 ekranına ulaştı; ilk
+  crash’in kök nedenini veya çözüldüğünü kanıtlamaz. Software tanı da ekranı
+  çizdi, fakat tutorial etkileşimi ilerlemedi; tam native kabul geçilmedi.
+  Fiziksel cihaz, uzun maç FPS/build-raster p95–p99/GPU RAM ve gerçek16KB
+  runtime NOT RUN. VM `adb emu kill` ile kapatıldı; eski paused-VM varsayımını
+  kullanma. API35 açılmadı; guest dış ağı kapalıydı, yeni snapshot yok.
+- Gerçek Firebase/AppCheck/Play Integrity, Google, Play lisans ödemesi ve Console
+  beyanları/track/pre-launch/koşullu kapalı test kabulü tamamlanmadı. Canlı deploy,
+  gerçek para, Play upload ve kamu yayını yapılmadı.
+
+Tam günlükler ve iki APK ayrıca `/workspace/luno-review/v240/` içindedir.
+Aşağıdaki V239 ve eski kayıtlar tarihsel sonuçlardır; V240 kabulü diye okunmamalı.
+
 ## 28 Ekim bulut geliştirmesi — V239 / ilk yayın kabul adayı
 
 Dal ve HEAD korundu: `codex/cloud-transfer-20261027`,

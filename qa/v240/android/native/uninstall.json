@@ -1,0 +1,7 @@
+{
+  "stage": "uninstall previous emulator test package only",
+  "exit_code": 0,
+  "stdout": "Success",
+  "stderr": "",
+  "wall_seconds": 38.223
+}

@@ -1,0 +1,81 @@
+{
+  "build_source_commit": "831a7ae11f28094c4b54f37415c80031ba1fd029",
+  "test_apks": [
+    {
+      "file": "/workspace/luno-review/v240/Luno-Chess-v240-debug-arm64.apk",
+      "bytes": 201281167,
+      "sha256": "5d36574273528f8425942b629935870250d974973c875cccfe0ed3185d06fe91",
+      "package": "com.luno.chess",
+      "version": "1.6.3+19",
+      "min_sdk": 24,
+      "target_sdk": 36,
+      "signature_v2_verified": true,
+      "same_previous_debug_certificate": true,
+      "certificate_sha256": "80b92f838556e958fdcb59bfc626a57f29e611e8b19cfc4cc32317ca79c4cdae",
+      "debuggable": true,
+      "source_asset_files_verified": 749,
+      "apk_16kb_zip_alignment_check_pass": true,
+      "abis_with_flutter_engine": [
+        "arm64-v8a"
+      ],
+      "all_native_payload_abis": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86_64"
+      ],
+      "partial_native_abis_not_supported_for_testing": [
+        "armeabi-v7a",
+        "x86_64"
+      ],
+      "actual_16kb_runtime": "NOT RUN",
+      "release_upload_certificate_verified": false,
+      "play_or_device_acceptance": false,
+      "release_decision": "HOLD"
+    },
+    {
+      "file": "/workspace/luno-review/v240/Luno-Chess-v240-profile-x64.apk",
+      "bytes": 149263763,
+      "sha256": "d0e9883906db6958bc8e8dd14a408f0f985eb697334b9c40dfc43ac957e2f547",
+      "package": "com.luno.chess",
+      "version": "1.6.3+19",
+      "min_sdk": 24,
+      "target_sdk": 36,
+      "signature_v2_verified": true,
+      "same_previous_debug_certificate": true,
+      "certificate_sha256": "80b92f838556e958fdcb59bfc626a57f29e611e8b19cfc4cc32317ca79c4cdae",
+      "debuggable": true,
+      "source_asset_files_verified": 749,
+      "apk_16kb_zip_alignment_check_pass": true,
+      "abis_with_flutter_engine": [
+        "x86_64"
+      ],
+      "all_native_payload_abis": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86_64"
+      ],
+      "partial_native_abis_not_supported_for_testing": [
+        "arm64-v8a",
+        "armeabi-v7a"
+      ],
+      "actual_16kb_runtime": "NOT RUN",
+      "release_upload_certificate_verified": false,
+      "play_or_device_acceptance": false,
+      "release_decision": "HOLD"
+    }
+  ],
+  "release_aab": null,
+  "release_apk": null,
+  "release_status": {
+    "source_commit": "831a7ae11f28094c4b54f37415c80031ba1fd029",
+    "guard_exit": 1,
+    "missing_signing_identity_rejected": true,
+    "release_aab": "BLOCKED",
+    "release_apk": "BLOCKED",
+    "full_release_builds": "NOT RUN when required signing prerequisite fails; no redundant compilation or fake key",
+    "signing_identity_changed": false,
+    "play_upload": false,
+    "public_publication": false
+  },
+  "signing_identity_changed": false
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "args": [
+      "shell",
+      "-n",
+      "input",
+      "tap",
+      "360",
+      "1200"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "wall_seconds": 37.196
+  },
+  {
+    "args": [
+      "emu",
+      "screenrecord",
+      "screenshot",
+      "/workspace/luno-review/v240/android/device-final/v240-software-intro-retry.png"
+    ],
+    "exit_code": 0,
+    "stdout": "OK",
+    "stderr": "",
+    "wall_seconds": 0.077
+  }
+]

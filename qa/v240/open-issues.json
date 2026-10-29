@@ -1,0 +1,32 @@
+[
+  {
+    "priority": "P0 acceptance",
+    "status": "BLOCKED",
+    "item": "Production Firebase/AppCheck, real accounts and Play Billing",
+    "reason": "No real cloud/Play/license/appropriate-device acceptance; local tests do not close these gates."
+  },
+  {
+    "priority": "P0 native acceptance",
+    "status": "FAIL",
+    "item": "Observed native startup/raster crash",
+    "reason": "İlk güncel profile APK açılışında com.luno.chess raster thread SIGSEGV/null-pointer ile kapandı; native backtrace libc extent_recycle/je_malloc ve libflutter.so içeriyor. Sonraki varsayılan V239/V240 kontrolleri 90 saniye sonunda canlıydı ve karşılama 1/3 ekranını çizdi; tutulan son 800 log satırında yeni signal yok. Bu sınırlı tekrar ilk çökmenin kök nedenini veya giderildiğini kanıtlamaz. Software diagnostic de karşılama çizdi; tutorial butonuna dokunma denemeleri 1/3 ekranını ilerletmedi, adb input yavaşlığı/SystemUI ANR görüldüğünden uygulama kaynaklı takılma kanıtlanmadı. Sağlıklı tam oyuncu zinciri/24 kart ve native performans kabulü tamamlanmadı."
+  },
+  {
+    "priority": "P1",
+    "status": "FAIL",
+    "item": "Historical visual golden mismatches",
+    "reason": "97 comparisons remain failed; 97/97 current candidates match V239. No references overwritten."
+  },
+  {
+    "priority": "P1",
+    "status": "BLOCKED",
+    "item": "Healthy native journey, physical performance and16KB",
+    "reason": "İlk güncel profile APK açılışında com.luno.chess raster thread SIGSEGV/null-pointer ile kapandı; native backtrace libc extent_recycle/je_malloc ve libflutter.so içeriyor. Sonraki varsayılan V239/V240 kontrolleri 90 saniye sonunda canlıydı ve karşılama 1/3 ekranını çizdi; tutulan son 800 log satırında yeni signal yok. Bu sınırlı tekrar ilk çökmenin kök nedenini veya giderildiğini kanıtlamaz. Software diagnostic de karşılama çizdi; tutorial butonuna dokunma denemeleri 1/3 ekranını ilerletmedi, adb input yavaşlığı/SystemUI ANR görüldüğünden uygulama kaynaklı takılma kanıtlanmadı. Sağlıklı tam oyuncu zinciri/24 kart ve native performans kabulü tamamlanmadı."
+  },
+  {
+    "priority": "P1",
+    "status": "BLOCKED",
+    "item": "Signed AAB, Console declarations and required testing",
+    "reason": "Existing upload key unavailable; track/code history, DataSafety/rating/media/reviewer/prelaunch/conditionalclosedtest unverified."
+  }
+]

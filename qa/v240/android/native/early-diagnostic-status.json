@@ -1,0 +1,12 @@
+[
+  {
+    "name": "process",
+    "exit_code": 1,
+    "lines": 0
+  },
+  {
+    "name": "early-logcat",
+    "exit_code": 0,
+    "lines": 524
+  }
+]

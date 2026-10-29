@@ -1,0 +1,115 @@
+{
+  "recordedUtc": "2026-10-28T23:29:42.341088+00:00",
+  "scope": "read-only local source/configuration; no build, network, signing or device operation",
+  "localConfigurationPassed": true,
+  "releaseDecision": "HOLD",
+  "versionFromSource": {
+    "name": "1.6.3",
+    "code": 19
+  },
+  "checks": [
+    {
+      "id": "pubspec_android_version",
+      "passed": true
+    },
+    {
+      "id": "android_application_id",
+      "passed": true
+    },
+    {
+      "id": "android_uses_flutter_version",
+      "passed": true
+    },
+    {
+      "id": "main_source_manifest_no_unsafe_override",
+      "passed": true
+    },
+    {
+      "id": "main_manifest_native_launcher",
+      "passed": true
+    },
+    {
+      "id": "debug_source_manifest_no_unsafe_override",
+      "passed": true
+    },
+    {
+      "id": "profile_source_manifest_no_unsafe_override",
+      "passed": true
+    },
+    {
+      "id": "firebase_project",
+      "passed": true
+    },
+    {
+      "id": "firebase_functions_runtime",
+      "passed": true
+    },
+    {
+      "id": "firebase_production_rules_selected",
+      "passed": true
+    },
+    {
+      "id": "database_root_denies_direct_access",
+      "passed": true
+    },
+    {
+      "id": "firebase_client_project",
+      "passed": true
+    },
+    {
+      "id": "firebase_exactly_one_android_client",
+      "passed": true
+    },
+    {
+      "id": "firebase_client_matches_app_check_allowlist",
+      "passed": true
+    },
+    {
+      "id": "git_index_available",
+      "passed": true
+    },
+    {
+      "id": "no_tracked_credential_filenames",
+      "passed": true
+    },
+    {
+      "id": "no_emulator_or_debug_token_environment",
+      "passed": true
+    }
+  ],
+  "trackedCredentialFilenameCount": 0,
+  "contaminatingEnvironmentVariableNames": [],
+  "defaultSigningPropertiesPresent": false,
+  "signingPropertiesContentRead": false,
+  "signingOrUploadCertificateVerified": false,
+  "artifactOrDeviceInspected": false,
+  "unverifiedAcceptanceGates": [
+    "Play Console latest versionCode and proposed code availability",
+    "Final signed release AAB identity, upload certificate, merged permissions and native 16 KB alignment",
+    "Play-delivered release, Play App Signing identity and actual 16 KB runtime",
+    "Healthy physical Android onboarding/game/lifecycle/TalkBack and release FPS/RAM/thermal/audio session",
+    "Native Google restore and production Play Integrity/App Check",
+    "Deployed backend/rules parity and two-account/two-device online recovery",
+    "Play license purchase/restore/ack/consume/subscription/refund/RTDN flows"
+  ],
+  "publicConfigurationInputSha256": {
+    "luno_chess/pubspec.yaml": "ac6b558e8977ed805aefabbc9e9c46a4d677b34923e43395a197b0ea7b91c65d",
+    "luno_chess/android/app/build.gradle.kts": "b10fe93e2db1274eede553afb8972088b120c8e9b5a3996f1c239cdd65fd3187",
+    "luno_chess/android/app/src/main/AndroidManifest.xml": "725b555ec8c1ee1cf691892e6135a8789a687a0e623e33c20480d5a39874353e",
+    "luno_chess/android/app/src/debug/AndroidManifest.xml": "b01a4541a8144c15bc617bab7eb267c99fa1476368fbbda5a12cdbf4e316a34c",
+    "luno_chess/android/app/src/profile/AndroidManifest.xml": "b01a4541a8144c15bc617bab7eb267c99fa1476368fbbda5a12cdbf4e316a34c",
+    "firebase.json": "916db8a48241600c092ea99c19a4004beafff69172f1fabe19d86f635db4f0a7",
+    ".firebaserc": "0f30b52f96ca0260fd676a687a668b1ad4947dfd312c715f94f2279d4418a8f4",
+    "functions/package.json": "84891b1bdc3fd21485556ef90f5b0b38e457e130a416333c1f642d77720a0940",
+    "database.rules.production.json": "167998d9a535e5a88876429b7df030763e4e9c3b753ff9625f6edfbc6b68552a",
+    "luno_chess/android/app/google-services.json": "8e8656e3b6f58bbdf505e47c7d1c141a048d06e51193c14966a3016c8a15dde0",
+    "functions/lib/app-check-policy.js": "acb2677bb80174c1666909e92c990518ca5de1fc4e94fcc9bb721070ce46ab92"
+  },
+  "limits": [
+    "Exit 0 means these local configuration checks passed; releaseDecision remains HOLD.",
+    "Missing signing files are reported without reading them; alternate Gradle signing paths are not resolved.",
+    "Source checks do not evaluate Gradle overrides, merge manifests, verify security behavior or prove deployment.",
+    "Tracked filename screening does not scan file contents and is not a complete secret scan.",
+    "No historical test result is counted as a new run."
+  ]
+}

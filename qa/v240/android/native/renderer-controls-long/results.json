@@ -1,0 +1,52 @@
+[
+  {
+    "case": "v239-default",
+    "apk": "/workspace/luno-review/v239/Luno-Chess-v239-profile-x64.apk",
+    "launch": {
+      "args": [
+        "shell",
+        "am",
+        "start",
+        "-S",
+        "-f",
+        "0x10008000",
+        "-n",
+        "com.luno.chess/.MainActivity"
+      ],
+      "exit_code": 0,
+      "stdout": "Stopping: com.luno.chess\nStarting: Intent { flg=0x10008000 cmp=com.luno.chess/.MainActivity }",
+      "stderr": ""
+    },
+    "pid_after_wait": "3807",
+    "native_crash_signal_in_log": false,
+    "impeller_enabled_log": false,
+    "same_flutter_engine_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+    "diagnostic_only": false,
+    "observation_wait_seconds": 90
+  },
+  {
+    "case": "v240-default-retry",
+    "apk": "/workspace/luno-review/v240/Luno-Chess-v240-profile-x64.apk",
+    "launch": {
+      "args": [
+        "shell",
+        "am",
+        "start",
+        "-S",
+        "-f",
+        "0x10008000",
+        "-n",
+        "com.luno.chess/.MainActivity"
+      ],
+      "exit_code": 0,
+      "stdout": "Stopping: com.luno.chess\nStarting: Intent { flg=0x10008000 cmp=com.luno.chess/.MainActivity }",
+      "stderr": ""
+    },
+    "pid_after_wait": "3898",
+    "native_crash_signal_in_log": false,
+    "impeller_enabled_log": false,
+    "same_flutter_engine_sha256": "6954f504c303290dd811184066183c01c5f112e9310c615847cfa35118f6cc7d",
+    "diagnostic_only": false,
+    "observation_wait_seconds": 90
+  }
+]

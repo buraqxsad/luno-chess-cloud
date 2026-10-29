@@ -1,0 +1,276 @@
+[
+  {
+    "args": [
+      "shell",
+      "getprop",
+      "sys.boot_completed"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "adb: device offline",
+    "wall_seconds": 0.016
+  },
+  {
+    "args": [
+      "shell",
+      "getprop",
+      "sys.boot_completed"
+    ],
+    "exit_code": 0,
+    "stdout": "1",
+    "stderr": "",
+    "wall_seconds": 5.9
+  },
+  {
+    "args": [
+      "root"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "wall_seconds": 3.008
+  },
+  {
+    "args": [
+      "shell",
+      "iptables",
+      "-w",
+      "2",
+      "-P",
+      "OUTPUT",
+      "DROP"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "wall_seconds": 2.07
+  },
+  {
+    "args": [
+      "shell",
+      "ip6tables",
+      "-w",
+      "2",
+      "-P",
+      "OUTPUT",
+      "DROP"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "wall_seconds": 1.538
+  },
+  {
+    "args": [
+      "shell",
+      "iptables",
+      "-w",
+      "2",
+      "-I",
+      "OUTPUT",
+      "-o",
+      "lo",
+      "-j",
+      "ACCEPT"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "wall_seconds": 1.812
+  },
+  {
+    "args": [
+      "shell",
+      "iptables",
+      "-S",
+      "OUTPUT"
+    ],
+    "exit_code": 0,
+    "stdout": "-P OUTPUT DROP\n-A OUTPUT -o lo -j ACCEPT\n-A OUTPUT -j oem_out\n-A OUTPUT -j fw_OUTPUT\n-A OUTPUT -j st_OUTPUT\n-A OUTPUT -j bw_OUTPUT",
+    "stderr": "",
+    "wall_seconds": 1.535
+  },
+  {
+    "args": [
+      "shell",
+      "ip6tables",
+      "-w",
+      "2",
+      "-I",
+      "OUTPUT",
+      "-o",
+      "lo",
+      "-j",
+      "ACCEPT"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "wall_seconds": 0.913
+  },
+  {
+    "args": [
+      "shell",
+      "ip6tables",
+      "-S",
+      "OUTPUT"
+    ],
+    "exit_code": 0,
+    "stdout": "-P OUTPUT DROP\n-A OUTPUT -o lo -j ACCEPT\n-A OUTPUT -j oem_out\n-A OUTPUT -j fw_OUTPUT\n-A OUTPUT -j st_OUTPUT\n-A OUTPUT -j bw_OUTPUT",
+    "stderr": "",
+    "wall_seconds": 1.005
+  },
+  {
+    "args": [
+      "install",
+      "-r",
+      "/workspace/luno-review/v240/Luno-Chess-v240-profile-x64.apk"
+    ],
+    "exit_code": 0,
+    "stdout": "Performing Streamed Install\nSuccess",
+    "stderr": "",
+    "wall_seconds": 28.777
+  },
+  {
+    "args": [
+      "shell",
+      "pm",
+      "clear",
+      "com.luno.chess"
+    ],
+    "exit_code": 0,
+    "stdout": "Success",
+    "stderr": "",
+    "wall_seconds": 2.474
+  },
+  {
+    "args": [
+      "shell",
+      "am",
+      "start",
+      "-n",
+      "com.luno.chess/.MainActivity"
+    ],
+    "exit_code": 0,
+    "stdout": "Starting: Intent { cmp=com.luno.chess/.MainActivity }",
+    "stderr": "",
+    "wall_seconds": 1.883
+  },
+  {
+    "args": [
+      "emu",
+      "screenrecord",
+      "screenshot",
+      "/workspace/luno-review/v240/android/device-final/v240-first-screen.png"
+    ],
+    "exit_code": 0,
+    "stdout": "OK",
+    "stderr": "",
+    "wall_seconds": 0.209
+  },
+  {
+    "args": [
+      "shell",
+      "wm",
+      "size"
+    ],
+    "exit_code": 0,
+    "stdout": "Physical size: 720x1280",
+    "stderr": "",
+    "wall_seconds": 1.169
+  },
+  {
+    "args": [
+      "shell",
+      "wm",
+      "density"
+    ],
+    "exit_code": 0,
+    "stdout": "Physical density: 320",
+    "stderr": "",
+    "wall_seconds": 0.721
+  },
+  {
+    "args": [
+      "shell",
+      "input",
+      "tap",
+      "235",
+      "715"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "wall_seconds": 5.596
+  },
+  {
+    "args": [
+      "emu",
+      "screenrecord",
+      "screenshot",
+      "/workspace/luno-review/v240/android/device-final/v240-software-later.png"
+    ],
+    "exit_code": 0,
+    "stdout": "OK",
+    "stderr": "",
+    "wall_seconds": 0.119
+  },
+  {
+    "args": [
+      "shell",
+      "input",
+      "tap",
+      "558",
+      "402"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "wall_seconds": 6.559
+  },
+  {
+    "args": [
+      "emu",
+      "screenrecord",
+      "screenshot",
+      "/workspace/luno-review/v240/android/device-final/v240-software-intro.png"
+    ],
+    "exit_code": 0,
+    "stdout": "OK",
+    "stderr": "",
+    "wall_seconds": 0.137
+  },
+  {
+    "args": [
+      "shell",
+      "input",
+      "tap",
+      "360",
+      "1200"
+    ],
+    "status": "TIMEOUT",
+    "wall_seconds": 15.013
+  },
+  {
+    "args": [
+      "emu",
+      "screenrecord",
+      "screenshot",
+      "/workspace/luno-review/v240/android/device-final/v240-software-intro-step2.png"
+    ],
+    "exit_code": 0,
+    "stdout": "OK",
+    "stderr": "",
+    "wall_seconds": 0.09
+  },
+  {
+    "args": [
+      "emu",
+      "kill"
+    ],
+    "exit_code": 0,
+    "stdout": "OK: killing emulator, bye bye",
+    "stderr": "",
+    "wall_seconds": 0.171
+  }
+]
