@@ -6,7 +6,14 @@ const TTL=120000,ALPHABET='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 function installBattleV1Friendly(api,deps){
  const {db,now}=api;
  const roomCode=()=>Array.from({length:6},()=>ALPHABET[crypto.randomInt(ALPHABET.length)]).join('');
- function state(value){const v={...value,queue:value?.queue||{},active:value?.active||{},reservations:value?.reservations||{},rooms:value?.rooms||{},roomByUser:value?.roomByUser||{},invites:value?.invites||{}};for(const [code,r] of Object.entries(v.rooms))if(r.expiresAt<=now()){delete v.rooms[code];if(v.roomByUser[r.host.uid]===code)delete v.roomByUser[r.host.uid];}for(const [key,i] of Object.entries(v.invites))if(i.expiresAt<=now())delete v.invites[key];return v;}
+ function state(value){
+  const v={...value,queue:value?.queue||{},active:value?.active||{},reservations:value?.reservations||{},rooms:value?.rooms||{},roomByUser:value?.roomByUser||{},invites:value?.invites||{}};
+  // available() permits changing modes once the search lease expires. Remove
+  // that stale entry before the room's host-busy check observes it again.
+  for(const [uid,q] of Object.entries(v.queue))if(!q||now()-q.lastSeenAt>=TTL)delete v.queue[uid];
+  for(const [code,r] of Object.entries(v.rooms))if(r.expiresAt<=now()){delete v.rooms[code];if(v.roomByUser[r.host.uid]===code)delete v.roomByUser[r.host.uid];}
+  for(const [key,i] of Object.entries(v.invites))if(i.expiresAt<=now())delete v.invites[key];return v;
+ }
  function available(v,uid){
   if(v.active[uid])throw new BattleError('MATCH_ALREADY_ACTIVE');
   if(v.queue[uid]&&now()-v.queue[uid].lastSeenAt<TTL)throw new BattleError('QUEUE_ACTIVE');
