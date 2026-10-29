@@ -1,0 +1,536 @@
+{
+  "source_commit": "dbdc0741caf7e27259d6a820d5273123e994198e",
+  "scope": "Actual Flutter BattleV1Screen with fixture server transport; default TR in final full run. No native acceptance inferred.",
+  "rows": [
+    {
+      "card": "radar",
+      "atlas": "arcane",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 radar identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 radar timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 radar resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "prophecy",
+      "atlas": "veil",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 prophecy identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 prophecy timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 prophecy resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "shelter",
+      "atlas": "crystal",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 shelter identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 shelter timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 shelter resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "chain",
+      "atlas": "binding",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 chain identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 chain timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 chain resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "slow",
+      "atlas": "binding",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 slow identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 slow timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 slow resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "pawn_deviation",
+      "atlas": "arcane",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 pawn_deviation identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 pawn_deviation timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 pawn_deviation resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "pawn_advance",
+      "atlas": "crystal",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 pawn_advance identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 pawn_advance timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 pawn_advance resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "locked_square",
+      "atlas": "binding",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 locked_square identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 locked_square timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 locked_square resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "freeze",
+      "atlas": "crystal",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 freeze identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 freeze timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 freeze resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "purify",
+      "atlas": "crystal",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 purify identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 purify timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 purify resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "mine",
+      "atlas": "binding",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 mine identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 mine timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 mine resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "break_seal",
+      "atlas": "binding",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 break_seal identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 break_seal timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 break_seal resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "fog",
+      "atlas": "veil",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 fog identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 fog timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 fog resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "mana_sabotage",
+      "atlas": "veil",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 mana_sabotage identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 mana_sabotage timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 mana_sabotage resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "card_block",
+      "atlas": "binding",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 card_block identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 card_block timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 card_block resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "rook_bend",
+      "atlas": "binding",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 rook_bend identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 rook_bend timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 rook_bend resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "angry_n",
+      "atlas": "crystal",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 angry_n identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 angry_n timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 angry_n resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "shadow_pass",
+      "atlas": "veil",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 shadow_pass identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 shadow_pass timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 shadow_pass resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "hunt_vow",
+      "atlas": "binding",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 hunt_vow identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 hunt_vow timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 hunt_vow resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "watch_vow",
+      "atlas": "arcane",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 watch_vow identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 watch_vow timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 watch_vow resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "echo",
+      "atlas": "veil",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 echo identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 echo timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 echo resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "fate_exchange",
+      "atlas": "veil",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 fate_exchange identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 fate_exchange timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 fate_exchange resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "shadow_contract",
+      "atlas": "veil",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 shadow_contract identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 shadow_contract timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 shadow_contract resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    },
+    {
+      "card": "board_seal",
+      "atlas": "binding",
+      "current_tr_widget": "PASS",
+      "tests": [
+        {
+          "name": "V239 board_seal identity target duplicate audio and background",
+          "result": "success"
+        },
+        {
+          "name": "V239 board_seal timeout clears active accepted feedback",
+          "result": "success"
+        },
+        {
+          "name": "V239 board_seal resign clears active accepted feedback",
+          "result": "success"
+        }
+      ],
+      "current_en_selected_run": "NOT RUN",
+      "native_android": "NOT RUN",
+      "physical_audio_gpu_memory": "NOT RUN"
+    }
+  ],
+  "historical_en_evidence": "../../v240/cards/acceptance.md",
+  "all_card_assets_unchanged": true
+}

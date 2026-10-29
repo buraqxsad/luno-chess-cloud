@@ -1,0 +1,10 @@
+{
+  "initial_render": "16 frames and blend exported; first process hung in PulseAudio teardown and was cleaned up",
+  "initial_exit": "forced cleanup, not PASS",
+  "final_render_exit": 0,
+  "final_mode": "Blender -noaudio, local IPC permitted",
+  "atlas_repeat_identical": true,
+  "frames": 16,
+  "file_bytes": 324110,
+  "decoded_rgba_bytes": 1638400
+}

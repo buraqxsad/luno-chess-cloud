@@ -1,0 +1,62 @@
+[
+  {
+    "gate": "Canlı Luno / ilk adımlar / lifecycle, Flutter",
+    "status": "PASS",
+    "evidence": "22 yeni özellik +8 güvenlik testi; güncel welcome ve varsa battle PNG. Native kabul değildir."
+  },
+  {
+    "gate": "Premium ve ödeme kilidi yarışları, yerel",
+    "status": "PASS",
+    "evidence": "2 P1 kusur önce failing test ile üretildi;12 yeni backend ve6 yeni istemci senaryosu, mevcut ilgili regresyonlar geçti."
+  },
+  {
+    "gate": "Tam backend / TypeScript / differential",
+    "status": "PASS",
+    "evidence": "Backend 1324/0/1; TS 376/0/0; 3101 senaryo, sıfır ayrışma."
+  },
+  {
+    "gate": "Tam Flutter",
+    "status": "FAIL",
+    "evidence": "11747 pass /97 fail; eski pixel karşılaştırmaları açık, golden güncellemesi yok."
+  },
+  {
+    "gate": "Yeni test APK kimlik/imza/hash/asset/ELF/ZIP",
+    "status": "PASS",
+    "evidence": "Aynı debug sertifikası;750 asset;1.6.3+19/min24/target36; statik16KB doğrulandı."
+  },
+  {
+    "gate": "İmzalı yayın APK/AAB",
+    "status": "BLOCKED",
+    "evidence": "Mevcut upload anahtarı/properties yok. Gerçek signing guard durdu; debug key ile release oluşturulmadı."
+  },
+  {
+    "gate": "Güncel APK ile tam native oyuncu zinciri",
+    "status": "NOT RUN",
+    "evidence": "Yeni APK native cihaza kurulmadı. V240’daki ilk raster SIGSEGV çözülmüş sayılmaz; sağlıklı Android kabulü gerekir."
+  },
+  {
+    "gate": "V240 native raster çökmesi",
+    "status": "FAIL",
+    "evidence": "Önceki gerçek API29 logunda SIGSEGV; sonraki sınırlı tekrarlar root cause veya çözüm kanıtı değil."
+  },
+  {
+    "gate": "Fiziksel cihaz / FPS / RAM / p95–p99 / gerçek16KB",
+    "status": "NOT RUN",
+    "evidence": "Sağlıklı fiziksel cihaz/KVM/GPU yok. Atlas boyutu veya host decode ölçümü bu kapıları kapatmaz."
+  },
+  {
+    "gate": "Üretim Firebase / Google / AppCheck / Play Integrity",
+    "status": "BLOCKED",
+    "evidence": "Kimlik/erişim yok; deploy yapılmadı. Yerel admin SDK veya mock başarıları gerçek attestation değildir."
+  },
+  {
+    "gate": "Play lisans purchase/pending/restore/refund/subscription",
+    "status": "BLOCKED",
+    "evidence": "Uygun lisans hesabı/test track/Play Services cihazı yok. Gerçek para harcanmadı."
+  },
+  {
+    "gate": "Play versionCode/Console beyanları/Pre-launch/kapalı test",
+    "status": "BLOCKED",
+    "evidence": "Console erişimi yok; +19 kullanılabilirliği ve zorunlu şartlar doğrulanmadı. Upload/yayın yapılmadı."
+  }
+]

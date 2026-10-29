@@ -1,0 +1,15 @@
+{
+  "immutable_evidence_contents_retained": true,
+  "hardlinked_identical_files": 4475,
+  "bytes_saved": 1800903509,
+  "rebuildable_test_outputs_removed_only_after_full_tests": [
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/test_cache",
+      "bytes": 144062584
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/unit_test_assets",
+      "bytes": 112480781
+    }
+  ]
+}

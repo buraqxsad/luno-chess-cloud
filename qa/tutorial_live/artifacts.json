@@ -1,0 +1,86 @@
+{
+  "source": {
+    "full_regression_source_commit": "dbdc0741caf7e27259d6a820d5273123e994198e",
+    "build_source_commit": "dbdc0741caf7e27259d6a820d5273123e994198e",
+    "base_commit": "92338645d8145ce2dd2d0ea1b6eff7f63d2611c3",
+    "backend_full_test_commit": "e1ff5b38bfb2e98670bc339dbca8d6bc158fadb6",
+    "backend_tree_sha": "d874d1b10919c9bbeffa8f49c3c27865e67c32a5",
+    "backend_sources_identical_since_full_test": true,
+    "runtime_change_between_test_and_build_commits": []
+  },
+  "test_apks": [
+    {
+      "file": "/workspace/luno-review/tutorial-live/Luno-Chess-tutorial-live-debug-arm64.apk",
+      "bytes": 201608682,
+      "sha256": "4289070d721b6770db801822bb777e1a3ab7d0b269d60a2307be77778f4447b2",
+      "package": "com.luno.chess",
+      "version": "1.6.3+19",
+      "min_sdk": 24,
+      "target_sdk": 36,
+      "signature_v2_verified": true,
+      "same_previous_debug_certificate": true,
+      "certificate_sha256": "80b92f838556e958fdcb59bfc626a57f29e611e8b19cfc4cc32317ca79c4cdae",
+      "debuggable": true,
+      "source_asset_files_verified": 750,
+      "apk_16kb_zip_alignment_check_pass": true,
+      "abis_with_flutter_engine": [
+        "arm64-v8a"
+      ],
+      "all_native_payload_abis": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86_64"
+      ],
+      "partial_native_abis_not_supported_for_testing": [
+        "armeabi-v7a",
+        "x86_64"
+      ],
+      "actual_16kb_runtime": "NOT RUN",
+      "release_upload_certificate_verified": false,
+      "play_or_device_acceptance": false,
+      "release_decision": "HOLD"
+    },
+    {
+      "file": "/workspace/luno-review/tutorial-live/Luno-Chess-tutorial-live-profile-x64.apk",
+      "bytes": 149588098,
+      "sha256": "3e201293c53b2143aaa3c404bad9a32ab6dc7679107216cff0e65453b52f275c",
+      "package": "com.luno.chess",
+      "version": "1.6.3+19",
+      "min_sdk": 24,
+      "target_sdk": 36,
+      "signature_v2_verified": true,
+      "same_previous_debug_certificate": true,
+      "certificate_sha256": "80b92f838556e958fdcb59bfc626a57f29e611e8b19cfc4cc32317ca79c4cdae",
+      "debuggable": true,
+      "source_asset_files_verified": 750,
+      "apk_16kb_zip_alignment_check_pass": true,
+      "abis_with_flutter_engine": [
+        "x86_64"
+      ],
+      "all_native_payload_abis": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86_64"
+      ],
+      "partial_native_abis_not_supported_for_testing": [
+        "arm64-v8a",
+        "armeabi-v7a"
+      ],
+      "actual_16kb_runtime": "NOT RUN",
+      "release_upload_certificate_verified": false,
+      "play_or_device_acceptance": false,
+      "release_decision": "HOLD"
+    }
+  ],
+  "release": {
+    "source_commit": "dbdc0741caf7e27259d6a820d5273123e994198e",
+    "guard_exit": 1,
+    "missing_signing_identity_rejected": true,
+    "release_aab": "BLOCKED",
+    "release_apk": "BLOCKED",
+    "full_release_builds": "NOT RUN when required signing prerequisite fails; no redundant compilation or fake key",
+    "signing_identity_changed": false,
+    "play_upload": false,
+    "public_publication": false
+  }
+}

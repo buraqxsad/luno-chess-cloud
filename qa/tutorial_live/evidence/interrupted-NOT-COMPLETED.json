@@ -1,0 +1,9 @@
+{
+  "reason": "Interrupted before a confirmed unavailable-action guidance fix; not final regression",
+  "generated_untracked_files_preserved": 1261,
+  "tracked_generated_inventories_archived_then_restored": [
+    "luno_chess/qa/rc/product-inventory.json",
+    "luno_chess/qa/source-audit/string-inventory.json"
+  ],
+  "golden_reference_updates": 0
+}

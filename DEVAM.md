@@ -4,6 +4,42 @@ Son dogrulama/aktarim tarihi: 27 Ekim 2026. Bu dosya kaynak aktarimini anlatir;
 oyunun kusursuz, canli servislerin tamamen kabul edilmis veya Play yayininin
 onaylanmis oldugu anlamina gelmez.
 
+## 29 Ekim — V240 sonrası canlı tutorial ve bug avı
+
+**RELEASE HOLD.** En yeni teslim [qa/tutorial_live/REPORT.md](qa/tutorial_live/REPORT.md),
+[animasyon önizlemesi](qa/tutorial_live/animation/luno-live-preview.webp) ve
+[yayın kapıları](qa/tutorial_live/GATES.md) içindedir. Build ve son tam Flutter
+regresyonunun kesin kaynağı `dbdc0741caf7e27259d6a820d5273123e994198e`;
+son QA/devir commit’i çalışma kodunu değiştirmez. Dal ve V240 düzeltmeleri korunur.
+
+- Kullanıcının canlı Luno isteği uygulandı: orijinal çizim Blender ile 16 kare
+  hareketlendirildi; göz kırpma, küçük ağız hareketi, baş selamı ve el dalgası.
+  Tek lossless atlas 324110 bayt; mantıksal decode 1.5625 MiB, cihaz RAM ölçümü
+  değildir. Uyuyan idle timer; reduced motion, background ve route temizliği.
+  İlk hamle/kart yönergeleri tek işleme ayrılır; ilerleme ve oyun kuralları aynı.
+- 2 P1 düzeltildi: gecikmiş claim snapshot’ının Premium hakkını silmesi veya
+  iptal edilmiş hakkı geri açması; eski Play makbuzunun yeni satın alma kilidini
+  çözmesi. 1 P2: oynanamayan kart ve boş elde imkânsız hedef/kart seçme yönergesi.
+  Önce failing regresyon, sonra düzeltme. Backend gerçek yerel Admin SDK/RTDB
+  ile ayrıca eski kaynakta 3 fail, düzeltmede 3 pass; Play yanıtları mock.
+- Son tam Flutter: 11747 pass / 97 fail / 0 skip, 433 dosya. 97 görsel FAIL,
+  eski V239/V240 adaylarıyla aynı; golden değişmedi, suite PASS sayılmaz.
+  Analiz temiz; backend 1324/0/1, TS 376/0/0; differential 3101 senaryo,
+  10967 state/legal set, sıfır ayrışma. Tutorial dar kapsam 42/42; örtüşen
+  test sayıları toplanmaz. Eski kaynakla durdurulan koşu ayrı arşivlendi.
+- İki yeni test APK’sı üretildi: debug ARM64 / profile x86_64, aynı debug
+  sertifikası; 1.6.3+19, min24/target36, 750 asset ve statik ELF/ZIP 16KB PASS.
+  Runtime payload’ları V240’tan farklı, güncel commit’ten üretildi. Mevcut upload
+  imzası yok; release APK/AAB BLOCKED, yeni imza oluşturulmadı.
+- Yeni APK native cihaza kurulmadı. V240’taki ilk raster SIGSEGV açık; tam
+  native yolculuk, fiziksel FPS/p95–p99/RAM, gerçek 16KB runtime NOT RUN.
+  Üretim Firebase/AppCheck/Google/Play Integrity, lisanslı ödeme ve Console
+  kabulü BLOCKED. Canlı deploy, para, Play upload/yayın veya GitHub push yok.
+
+APK, kaynak bundle’ı, QA arşivi ve SHA-256 listesi ayrıca
+`/workspace/luno-review/tutorial-live/` içindedir. V240 ve aşağıdaki eski kayıtlar
+tarihsel sonuçlardır; güncel teslimin yerine okunmamalı.
+
 ## 29 Ekim bulut geliştirmesi — V240 / final Android kalite çalışması
 
 **RELEASE HOLD.** Güncel teslim kanıtı [qa/v240/REPORT.md](qa/v240/REPORT.md),

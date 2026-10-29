@@ -1,0 +1,19 @@
+{
+  "source_commit": "dbdc0741caf7e27259d6a820d5273123e994198e",
+  "payloads": [
+    {
+      "file": "Luno-Chess-tutorial-live-profile-x64.apk",
+      "payload": "lib/x86_64/libapp.so",
+      "sha256": "f98dfcbc5484b4ea29d8ff378c8245e70cf161d6bbdc54e10958d6452118f053",
+      "v240_sha256": "9a3d02e8a973e7baa951ca54d83fa13d1d6b3a2424e2b39e7a8bffba6ddb7367",
+      "different_from_v240": true
+    },
+    {
+      "file": "Luno-Chess-tutorial-live-debug-arm64.apk",
+      "payload": "assets/flutter_assets/kernel_blob.bin",
+      "sha256": "7b43dbbb0376d6170403ad13b98575c576de2f74da8cee9d35cdb0528331de60",
+      "v240_sha256": "422e0093c1f0007e30bfaa23ca20597609dbf6f37b6d0f511ecb9ca641126ce2",
+      "different_from_v240": true
+    }
+  ]
+}

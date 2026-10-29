@@ -1,0 +1,56 @@
+--- baseline/functions/index.js
++++ fixed/functions/index.js
+@@ -3950,23 +3950,36 @@
+ }
+ async function recomputePremiumFromClaims(uid,at){
+   await assertAccountOperationAllowed(uid,'recomputePremiumFromClaims');
+-  const claims=(await db.ref('purchaseClaims').orderByChild('uid').equalTo(uid).get()).val()||{};
+-  let premiumUntil=0;
+-  Object.keys(claims).forEach(function(key){
+-    const claim=claims[key]||{},expiry=safeInt(claim.expiry,0);
+-    if(!purchaseClaimRetired(claim)&&claim.kind==='subs'&&claim.active===true&&expiry>at)premiumUntil=Math.max(premiumUntil,expiry);
+-  });
+-  const result=await transactExistingPlayer(uid,function(profile){
+-    if(profile.uid!==uid)return {commit:false,error:'profile-owner-mismatch'};
+-    normalizeProductEntitlements(profile);
+-    profile.premiumUntil=premiumUntil;
+-    profile.updatedAt=ServerValue.TIMESTAMP;
+-    return {commit:true};
+-  });
+-  if(result.decision.error)throw httpError(403,result.decision.error,'Player profile ownership changed.');
+-  await assertAccountOperationAllowed(uid,'recomputePremiumFromClaims');
+-  if(result.committed)await publishPublicProfile(uid,result.profile);
+-  return {premiumUntil,active:premiumUntil>at};
++  for(let attempt=0;attempt<3;attempt++){
++    const before=(await db.ref(`users/${uid}`).get()).val();
++    if(!before)throw httpError(404,'profile-not-found','Player profile does not exist.');
++    if(before.uid!==uid)throw httpError(403,'profile-owner-mismatch','Player profile ownership changed.');
++    const revision=playerStateRevision(before);
++    const claims=(await db.ref('purchaseClaims').orderByChild('uid').equalTo(uid).get()).val()||{};
++    let premiumUntil=0;
++    Object.keys(claims).forEach(function(key){
++      const claim=claims[key]||{},expiry=safeInt(claim.expiry,0);
++      if(!purchaseClaimRetired(claim)&&claim.kind==='subs'&&claim.active===true&&expiry>at)premiumUntil=Math.max(premiumUntil,expiry);
++    });
++    const result=await transactExistingPlayer(uid,function(profile){
++      if(profile.uid!==uid)return {commit:false,error:'profile-owner-mismatch'};
++      // The claim query is outside this transaction. A concurrent fulfillment or
++      // reconciliation changes the profile revision, so refresh its claims
++      // rather than applying an entitlement computed before that change.
++      if(playerStateRevision(profile)!==revision)return {commit:false,refreshClaims:true};
++      normalizeProductEntitlements(profile);
++      profile.premiumUntil=premiumUntil;
++      profile.updatedAt=ServerValue.TIMESTAMP;
++      return {commit:true};
++    });
++    if(result.decision.error)throw httpError(403,result.decision.error,'Player profile ownership changed.');
++    if(result.decision.refreshClaims)continue;
++    await assertAccountOperationAllowed(uid,'recomputePremiumFromClaims');
++    if(result.committed)await publishPublicProfile(uid,result.profile);
++    return {premiumUntil,active:premiumUntil>at};
++  }
++  // RTDN retries this transient conflict; never commit a stale entitlement.
++  throw httpError(503,'subscription-state-changed','Subscription changed during reconciliation. Retry the notification.');
+ }
+ async function reconcileSubscriptionClaim(claim,tokenHash,purchaseToken,eventAt,eventType){
+   const definition=PRODUCT_CATALOG[claim.productId];

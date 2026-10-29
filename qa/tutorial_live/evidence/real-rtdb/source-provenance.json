@@ -1,0 +1,13 @@
+{
+  "baseline": {
+    "commit": "92338645d8145ce2dd2d0ea1b6eff7f63d2611c3",
+    "sha256": "628ebadad8da3810e2ec936e125edff475103f6052cfdda240796a2a491f5666",
+    "file": "baseline-index.cjs"
+  },
+  "fixed": {
+    "commit": "d07e7b4ac83069e007fe752151179985253ff57b",
+    "sha256": "ff02b6e8c8dae5cc51d21dd1d510a31f8cecf5c23a09917db754334730299116",
+    "file": "fixed-index.cjs"
+  },
+  "comparison_scope": "Only recomputePremiumFromClaims differs between captured source files."
+}

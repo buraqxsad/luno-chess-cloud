@@ -1,0 +1,15 @@
+{
+  "removed_rebuildable_unused_generated_smoke_outputs": [
+    {
+      "path": "/workspace/toolchains/smoke/build",
+      "bytes": 903505712
+    },
+    {
+      "path": "/workspace/toolchains/smoke/.dart_tool/flutter_build",
+      "bytes": 87540910
+    }
+  ],
+  "installed_tools_preserved": true,
+  "luno_source_and_qa_fixtures_preserved": true,
+  "smoke_source_and_recorded_proofs_preserved": true
+}

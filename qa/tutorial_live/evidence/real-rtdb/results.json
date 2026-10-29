@@ -1,0 +1,123 @@
+{
+  "scope": "Real localhost RTDB4.11.2/Admin SDK transactions, provider response mocked; no Auth/Functions/production/staging/device acceptance.",
+  "project": "demo-luno-premium-race",
+  "namespace": "demo-luno-premium-race-default-rtdb",
+  "host": "127.0.0.1:19000",
+  "java_command": [
+    "java",
+    "-Xms32m",
+    "-Xmx192m",
+    "-XX:MaxMetaspaceSize=96m",
+    "-XX:ReservedCodeCacheSize=32m",
+    "-Xss256k",
+    "-XX:ActiveProcessorCount=2",
+    "-XX:+UseSerialGC",
+    "-Duser.language=en",
+    "-jar",
+    "/workspace/toolchains/firebase-emulators/firebase-database-emulator-v4.11.2.jar",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "19000",
+    "--single_project_mode",
+    "Warning"
+  ],
+  "peak_combined_rss_kib": 351524,
+  "runs": [
+    {
+      "variant": "baseline",
+      "exit_code": 1,
+      "counts": {
+        "tests": 3,
+        "pass": 0,
+        "fail": 3,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "observations": [
+        {
+          "case": "concurrent-fulfillment",
+          "variant": "baseline",
+          "expected": 1793356446086,
+          "grant_before_release": 1793356446086,
+          "actual_after_refresh": 0,
+          "claim_query_reads": 1
+        },
+        {
+          "case": "old-revocation-new-purchase",
+          "variant": "baseline",
+          "expected": 1793529263182,
+          "actual_after_refresh": 0,
+          "old_claim_active": false,
+          "claim_query_reads": 1
+        },
+        {
+          "case": "stale-active-after-revocation",
+          "variant": "baseline",
+          "expected": 0,
+          "revoked_before_release": 0,
+          "actual_after_refresh": 1793356464366,
+          "claim_query_reads": 2
+        }
+      ]
+    },
+    {
+      "variant": "fixed",
+      "exit_code": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "observations": [
+        {
+          "case": "concurrent-fulfillment",
+          "variant": "fixed",
+          "expected": 1793356469249,
+          "grant_before_release": 1793356469249,
+          "actual_after_refresh": 1793356469249,
+          "claim_query_reads": 2
+        },
+        {
+          "case": "old-revocation-new-purchase",
+          "variant": "fixed",
+          "expected": 1793529270058,
+          "actual_after_refresh": 1793529270058,
+          "old_claim_active": false,
+          "claim_query_reads": 2
+        },
+        {
+          "case": "stale-active-after-revocation",
+          "variant": "fixed",
+          "expected": 0,
+          "revoked_before_release": 0,
+          "actual_after_refresh": 0,
+          "claim_query_reads": 3
+        }
+      ]
+    }
+  ],
+  "source_provenance": {
+    "baseline": {
+      "commit": "92338645d8145ce2dd2d0ea1b6eff7f63d2611c3",
+      "sha256": "628ebadad8da3810e2ec936e125edff475103f6052cfdda240796a2a491f5666",
+      "file": "baseline-index.cjs"
+    },
+    "fixed": {
+      "commit": "d07e7b4ac83069e007fe752151179985253ff57b",
+      "sha256": "ff02b6e8c8dae5cc51d21dd1d510a31f8cecf5c23a09917db754334730299116",
+      "file": "fixed-index.cjs"
+    },
+    "comparison_scope": "Only recomputePremiumFromClaims differs between captured source files."
+  },
+  "rules_sha256": "167998d9a535e5a88876429b7df030763e4e9c3b753ff9625f6edfbc6b68552a",
+  "rules_loaded_http_status": 200,
+  "local_sdk_acceptance": "PASS; baseline3/3 reproduced failures, fixed3/3 passes",
+  "port19000_closed_after_cleanup": true,
+  "elapsed_seconds": 36.843,
+  "firebase_admin_sdk_version": "14.2.0",
+  "source_files_hashes_reverified": true,
+  "private_logs_remaining": 0
+}

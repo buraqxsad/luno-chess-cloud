@@ -1,0 +1,135 @@
+[
+  {
+    "case": "battle-default",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_fraction": 0.018265,
+    "diff_channel_max_ge16_pixels": 3121,
+    "diff_channel_max_ge64_pixels": 887,
+    "bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "master_sha256": "02b0a1fe46feaa618094f428614fe35372584f1ef6cd771327431d538db1a2a9",
+    "candidate_sha256": "5ff4d6f84fe27dc8c29e3d35a354b629c7be05c0e6f999c5e09ec2c076be80db"
+  },
+  {
+    "case": "home",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 19807,
+    "changed_fraction": 0.060174,
+    "diff_channel_max_ge16_pixels": 7798,
+    "diff_channel_max_ge64_pixels": 3019,
+    "bbox": [
+      9,
+      45,
+      381,
+      808
+    ],
+    "master_sha256": "ce4db9636eb498b9a4d23600010255f281c102c75ff9fc64872beb067d895d70",
+    "candidate_sha256": "d233691fe586389cb90f70ad776f910bf737e2814dfa5f9d7b075a55afc507db"
+  },
+  {
+    "case": "card-art",
+    "size": [
+      480,
+      820
+    ],
+    "changed_pixels": 3993,
+    "changed_fraction": 0.010145,
+    "diff_channel_max_ge16_pixels": 905,
+    "diff_channel_max_ge64_pixels": 158,
+    "bbox": [
+      53,
+      132,
+      442,
+      782
+    ],
+    "master_sha256": "12d661ee0c894f0e2ab1f3e1d452c8d7d523241682d6c9dfad4a6dca33ae630a",
+    "candidate_sha256": "88047ca7e39c3a2d32b73d2b3916e59918d7cb52a5d82e45f97c3bef57739b93"
+  },
+  {
+    "case": "tutorial",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 7209,
+    "changed_fraction": 0.021901,
+    "diff_channel_max_ge16_pixels": 3312,
+    "diff_channel_max_ge64_pixels": 981,
+    "bbox": [
+      18,
+      52,
+      366,
+      790
+    ],
+    "master_sha256": "c001ef8a97bdc728c9ef5bb6c514b6a465bcedcf730819fbd500ca8329c440b8",
+    "candidate_sha256": "93d1fc6dc9f5d1189a1c1cec7b44ee5a42597aadd30f1d1ade84fa4058f97f69"
+  },
+  {
+    "case": "tutorial9",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 20789,
+    "changed_fraction": 0.063158,
+    "diff_channel_max_ge16_pixels": 13272,
+    "diff_channel_max_ge64_pixels": 7839,
+    "bbox": [
+      18,
+      57,
+      390,
+      790
+    ],
+    "master_sha256": "7cb2b762c37481040dcc80d35056b97960d12db7bf080978993b52f436d7a453",
+    "candidate_sha256": "032b23caa16ef42983a7e2cf03a98f0cbeed89fde50c6cc1ba9e7f9624db6c55"
+  },
+  {
+    "case": "guide",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 298941,
+    "changed_fraction": 0.908194,
+    "diff_channel_max_ge16_pixels": 206599,
+    "diff_channel_max_ge64_pixels": 76938,
+    "bbox": [
+      0,
+      42,
+      390,
+      844
+    ],
+    "master_sha256": "8052d3ae773973f821ca389322550d1b49fb3508936028ccab9aca7e6a466769",
+    "candidate_sha256": "e89ea82af82867ce842aae025ab5b89ec29a6c3d236aedc213186eac4933279f"
+  },
+  {
+    "case": "battle-compact-four-large",
+    "size": [
+      320,
+      640
+    ],
+    "changed_pixels": 2927,
+    "changed_fraction": 0.014292,
+    "diff_channel_max_ge16_pixels": 1813,
+    "diff_channel_max_ge64_pixels": 661,
+    "bbox": [
+      16,
+      43,
+      312,
+      608
+    ],
+    "master_sha256": "426b96bcffe13fb47e30d13aef27a0bac25393c95939a6e943f92b83ec5d5493",
+    "candidate_sha256": "cb34f10299b05229b1a4b2755e764b3177f0880729ce118552811035fd613bec"
+  }
+]

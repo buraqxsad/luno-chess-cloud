@@ -1,0 +1,26 @@
+[
+  {
+    "case": "concurrent-fulfillment",
+    "variant": "baseline",
+    "expected": 1793356446086,
+    "grant_before_release": 1793356446086,
+    "actual_after_refresh": 0,
+    "claim_query_reads": 1
+  },
+  {
+    "case": "old-revocation-new-purchase",
+    "variant": "baseline",
+    "expected": 1793529263182,
+    "actual_after_refresh": 0,
+    "old_claim_active": false,
+    "claim_query_reads": 1
+  },
+  {
+    "case": "stale-active-after-revocation",
+    "variant": "baseline",
+    "expected": 0,
+    "revoked_before_release": 0,
+    "actual_after_refresh": 1793356464366,
+    "claim_query_reads": 2
+  }
+]

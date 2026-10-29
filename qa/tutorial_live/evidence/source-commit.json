@@ -1,0 +1,9 @@
+{
+  "full_regression_source_commit": "dbdc0741caf7e27259d6a820d5273123e994198e",
+  "build_source_commit": "dbdc0741caf7e27259d6a820d5273123e994198e",
+  "base_commit": "92338645d8145ce2dd2d0ea1b6eff7f63d2611c3",
+  "backend_full_test_commit": "e1ff5b38bfb2e98670bc339dbca8d6bc158fadb6",
+  "backend_tree_sha": "d874d1b10919c9bbeffa8f49c3c27865e67c32a5",
+  "backend_sources_identical_since_full_test": true,
+  "runtime_change_between_test_and_build_commits": []
+}
