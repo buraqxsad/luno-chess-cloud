@@ -1,6 +1,7 @@
+import 'dart:async';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import '../theme/luno_assets.dart';
+import '../widgets/luno_mentor_portrait.dart';
 import 'tokens.dart';
 
 class LunoLessonSpeech extends StatelessWidget {
@@ -18,16 +19,7 @@ class LunoLessonSpeech extends StatelessWidget {
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       if (portrait) ...[
-        BattleMentor(
-          cue: cue,
-          width: 68,
-          height: 86,
-          child: Image.asset(
-            LunoAssets.lunoPortrait,
-            cacheWidth: 192,
-            fit: BoxFit.contain,
-          ),
-        ),
+        BattleMentor(cue: cue, width: 68, height: 86),
         const SizedBox(width: 8),
       ],
       Expanded(
@@ -71,12 +63,14 @@ class BattleMentor extends StatefulWidget {
   final Object cue;
   final double width, height;
   final Widget? child;
+  final bool idle;
   const BattleMentor({
     super.key,
     required this.cue,
     this.width = 54,
     this.height = 76,
     this.child,
+    this.idle = false,
   });
   @override
   State<BattleMentor> createState() => _BattleMentorState();
@@ -85,11 +79,13 @@ class BattleMentor extends StatefulWidget {
 class _BattleMentorState extends State<BattleMentor>
     with SingleTickerProviderStateMixin, WidgetsBindingObserver {
   late final AnimationController _motion;
+  Timer? _idle;
   bool _started = false, _foreground = true;
   bool get _enabled =>
       _foreground &&
       !MediaQuery.disableAnimationsOf(context) &&
-      TickerMode.valuesOf(context).enabled;
+      TickerMode.valuesOf(context).enabled &&
+      (ModalRoute.of(context)?.isCurrent ?? true);
   @override
   void initState() {
     super.initState();
@@ -99,10 +95,31 @@ class _BattleMentorState extends State<BattleMentor>
     _motion = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1100),
-    );
+    )..addStatusListener(_onMotionStatus);
+  }
+
+  void _onMotionStatus(AnimationStatus status) {
+    if (status == AnimationStatus.completed) _scheduleIdle();
+  }
+
+  void _scheduleIdle() {
+    if (!mounted || !widget.idle || !_enabled || _motion.isAnimating) {
+      _idle?.cancel();
+      _idle = null;
+      return;
+    }
+    // Unrelated parent/theme rebuilds must not postpone a sleeping gesture.
+    if (_idle?.isActive ?? false) return;
+    // Sleep between short gestures: no continuous ticker, shader or video.
+    _idle = Timer(const Duration(milliseconds: 4700), () {
+      _idle = null;
+      if (mounted && widget.idle && _enabled) _motion.forward(from: 0);
+    });
   }
 
   void _settle() {
+    _idle?.cancel();
+    _idle = null;
     _motion.stop();
     if (_motion.value != 1) _motion.value = 1;
   }
@@ -116,6 +133,8 @@ class _BattleMentorState extends State<BattleMentor>
     } else if (!_started) {
       _started = true;
       _motion.forward();
+    } else if (!_motion.isAnimating) {
+      _scheduleIdle();
     }
   }
 
@@ -125,19 +144,28 @@ class _BattleMentorState extends State<BattleMentor>
     if (!_enabled) {
       _settle();
     } else if (old.cue != widget.cue) {
+      _idle?.cancel();
       _motion.forward(from: 0);
+    } else if (!_motion.isAnimating) {
+      _scheduleIdle();
     }
   }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     _foreground = state == AppLifecycleState.resumed;
-    if (!_foreground) _settle();
+    if (!_foreground) {
+      _settle();
+    } else {
+      _scheduleIdle();
+    }
   }
 
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
+    _idle?.cancel();
+    _motion.removeStatusListener(_onMotionStatus);
     _motion.dispose();
     super.dispose();
   }
@@ -150,13 +178,7 @@ class _BattleMentorState extends State<BattleMentor>
       child: RepaintBoundary(
         child: AnimatedBuilder(
           animation: _motion,
-          child:
-              widget.child ??
-              Image.asset(
-                LunoAssets.lunoPortrait,
-                cacheWidth: 144,
-                fit: BoxFit.contain,
-              ),
+          child: widget.child,
           builder: (_, child) {
             final t = _motion.value, nod = math.sin(t * math.pi) * (1 - t);
             return Transform(
@@ -167,7 +189,14 @@ class _BattleMentorState extends State<BattleMentor>
                     ..translateByDouble(0, -5 * nod, 0, 1)
                     ..rotateY(.2 * nod)
                     ..rotateZ(.09 * math.sin(t * math.pi * 2) * (1 - t)),
-              child: child,
+              child:
+                  child ??
+                  Center(
+                    child: LunoMentorPortrait(
+                      progress: _motion.value,
+                      size: math.min(widget.width, widget.height),
+                    ),
+                  ),
             );
           },
         ),

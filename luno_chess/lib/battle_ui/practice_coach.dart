@@ -288,18 +288,21 @@ class BattlePracticeCoach extends StatelessWidget {
             TutorialCoach(
               text: text,
               cue: text,
-              heading: l.learning(
-                p.onboarding
-                    ? p.guidedMatch
-                        ? 'LUNO · İLK MAÇIN'
-                        : 'LUNO · ${p.freePlay ? 'SERBEST' : 'ANTRENMAN'} ${p.stage + 1}/3'
-                    : 'LUNO · BİRLİKTE ÖĞRENELİM',
-                p.onboarding
-                    ? p.guidedMatch
-                        ? 'LUNO · YOUR FIRST MATCH'
-                        : 'LUNO · ${p.freePlay ? 'FREE PLAY' : 'PRACTICE'} ${p.stage + 1}/3'
-                    : 'LUNO · LET US LEARN',
-              ),
+              heading:
+                  p.guidedMatch
+                      ? _nextActionHeading(l, p, view, blockedPiece)
+                      : l.learning(
+                        p.onboarding
+                            ? p.guidedMatch
+                                ? 'LUNO · İLK MAÇIN'
+                                : 'LUNO · ${p.freePlay ? 'SERBEST' : 'ANTRENMAN'} ${p.stage + 1}/3'
+                            : 'LUNO · BİRLİKTE ÖĞRENELİM',
+                        p.onboarding
+                            ? p.guidedMatch
+                                ? 'LUNO · YOUR FIRST MATCH'
+                                : 'LUNO · ${p.freePlay ? 'FREE PLAY' : 'PRACTICE'} ${p.stage + 1}/3'
+                            : 'LUNO · LET US LEARN',
+                      ),
               feedback: invalidTarget,
             ),
             if (p.onboarding &&
@@ -405,6 +408,47 @@ class BattlePracticeCoach extends StatelessWidget {
     );
   }
 
+  String _nextActionHeading(
+    LunoLocalizations l,
+    BattlePracticeProgress p,
+    PlayerView view,
+    bool blockedPiece,
+  ) {
+    final action =
+        p.canFinish(view)
+            ? p.complete
+                ? l.learning('HAZIRSIN', 'READY')
+                : l.learning('DENEME BİTTİ', 'ATTEMPT ENDED')
+            : view.rules.board.turn != view.viewer
+            ? l.learning('SIRA LUNO’DA', 'LUNO’S TURN')
+            : view.rules.pending != null
+            ? l.learning('SEÇİMİ BİTİR', 'FINISH CHOICE')
+            : view.rules.special != null
+            ? l.learning('İŞARETLİ TAŞ', 'MARKED PIECE')
+            : blockedPiece
+            ? l.learning('BAŞKA TAŞ', 'TRY A PIECE')
+            : invalidTarget
+            ? l.learning('HEDEF SEÇ', 'PICK TARGET')
+            : view.rules.phase == BattlePhase.chess
+            ? selectedPiece == null
+                ? l.learning('TAŞ SEÇ', 'PICK A PIECE')
+                : l.learning('KARE SEÇ', 'PICK A SQUARE')
+            : p.cast && !p.discarded
+            ? selected == null
+                ? l.learning('KART SEÇ', 'PICK A CARD')
+                : l.learning('FEDA ET', 'DISCARD')
+            : p.cast && p.discarded && !p.passed
+            ? selected == null
+                ? l.learning('KARTI GEÇ', 'SKIP CARD')
+                : l.learning('KARTI KAPAT', 'CLOSE CARD')
+            : selected == null
+            ? l.learning('KART SEÇ', 'PICK A CARD')
+            : targetReady
+            ? l.learning('KARTI OYNA', 'PLAY CARD')
+            : l.learning('HEDEF SEÇ', 'PICK TARGET');
+    return 'LUNO · $action';
+  }
+
   String _targetInstruction(LunoLocalizations l, CardId card, int? square) {
     final example =
         square == null
@@ -488,11 +532,11 @@ class BattlePracticeCoach extends StatelessWidget {
     if (v.rules.ownTurns[v.viewer] == 1) {
       return l.learning(
         selectedPiece == null
-            ? 'Yanındayım! İlk tur kart yok. Beyaz taşını, sonra ışıklı kareyi seç.'
-            : 'Işıklı kareler yasal hamlelerin. Birini seç; hamlenden sonra destenden bir kart gelecek.',
+            ? 'Yanındayım! İlk tur kart yok. İstediğin beyaz taşına dokun; hamlelerini göstereyim.'
+            : 'Şimdi ışıklı karelerden birine dokun. Hamlen bitince Bebek Luno oynayacak; sonra yine senin sıran.',
         selectedPiece == null
-            ? 'I am here! No cards on turn one. Choose a white piece, then a lit square.'
-            : 'The lit squares are legal moves. Choose one; a card comes from your deck after your move.',
+            ? 'I am here! No cards on turn one. Tap any white piece; I will show its moves.'
+            : 'Now tap one of the lit squares. Baby Luno will play next; then it is your turn again.',
       );
     }
     if (v.rules.phase == BattlePhase.card && p.cast && !p.discarded) {

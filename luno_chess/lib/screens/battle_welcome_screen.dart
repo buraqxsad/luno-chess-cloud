@@ -250,6 +250,7 @@ class _BattleWelcomeScreenState extends State<BattleWelcomeScreen>
                             TutorialCoach(
                               cue: 'welcome-$_ownerRevision-$step',
                               text: greeting,
+                              largePortrait: true,
                             ),
                             const SizedBox(height: 20),
                             ..._lesson(l, step),
@@ -422,8 +423,8 @@ class _BattleWelcomeScreenState extends State<BattleWelcomeScreen>
         title: l.learning('Seçimler senin', 'The choices are yours'),
         text:
             en
-                ? 'Try four chess moves, a targeted card and a discard. Use Skip Card too, then continue without finishing a full match.'
-                : 'Dört taş hamlesi, hedefli kart ve feda dene. Kartı Geç düğmesini de kullan, sonra tam maçı bitirmeden devam edebilirsin.',
+                ? 'Start with one chess move. I will introduce cards, Discard and Skip Card one at a time. After four moves and these exercises, you can continue without finishing the match.'
+                : 'Önce bir taş hamlesi yapalım. Kart, feda ve Kartı Geç adımlarını sırayla göstereceğim. Dört hamle ve bu alıştırmalardan sonra maçı bitirmeden devam edebilirsin.',
       ),
     ];
   }

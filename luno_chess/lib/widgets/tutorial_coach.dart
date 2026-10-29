@@ -7,7 +7,7 @@ import '../battle_ui/tokens.dart';
 class TutorialCoach extends StatelessWidget {
   final String text;
   final Object cue;
-  final bool portrait, feedback;
+  final bool portrait, feedback, largePortrait;
   final String? heading;
   const TutorialCoach({
     super.key,
@@ -15,6 +15,7 @@ class TutorialCoach extends StatelessWidget {
     required this.cue,
     this.portrait = true,
     this.feedback = false,
+    this.largePortrait = false,
     this.heading,
   });
 
@@ -44,7 +45,12 @@ class TutorialCoach extends StatelessWidget {
     crossAxisAlignment: CrossAxisAlignment.center,
     children: [
       if (portrait) ...[
-        BattleMentor(cue: cue, width: 56, height: 76),
+        BattleMentor(
+          cue: cue,
+          idle: true,
+          width: largePortrait ? 88 : 56,
+          height: largePortrait ? 104 : 76,
+        ),
         const SizedBox(width: 8),
       ],
       Expanded(

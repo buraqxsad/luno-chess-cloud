@@ -1,0 +1,15 @@
+{
+  "source_asset": "assets/native_art/luno-portrait-v212.webp",
+  "source_sha256": "365d2dd004e2d6e054201154ccfdc9ad61ebf76edad8f6d6d141f9be313dedd6",
+  "atlas_asset": "assets/native_art/tutorial-luno-live-atlas.webp",
+  "atlas_sha256": "9aecb1ff1297ad68aefa6eed69bc825c3f6c91fd500236392a326bc435488441",
+  "atlas_bytes": 324110,
+  "frames": 16,
+  "frame_size": [
+    160,
+    160
+  ],
+  "decoded_rgba_bytes": 1638400,
+  "runtime_duration_ms": 1100,
+  "physical_device_performance": "NOT RUN"
+}
