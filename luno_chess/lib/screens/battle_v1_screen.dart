@@ -1086,10 +1086,12 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
       return null;
     }
     final privacyEpoch = _hotseatPrivacy.epoch;
+    final snapshotVersion = version;
+    final snapshotTerminal = terminal;
     final token = Object();
     sheetToken = token;
     sheetOpen = true;
-    sheetVersion = version;
+    sheetVersion = snapshotVersion;
     var removalScheduled = false;
     void removeSheet(ModalRoute<dynamic>? route) {
       if (removalScheduled || route?.isActive != true) return;
@@ -1102,6 +1104,8 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
     final ownerChanges = Listenable.merge([
       GameStore.instance,
       if (_isHotseat) _hotseatPrivacy,
+      if (controller case final current?) current,
+      if (localSession case final current?) current,
     ]);
     try {
       final result = await showModalBottomSheet<T>(
@@ -1126,14 +1130,16 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                   !_ownerInvalidated &&
                   _ownerRevision == GameStore.instance.accountBindingRevision &&
                   identical(sheetToken, token) &&
+                  version == snapshotVersion &&
+                  terminal == snapshotTerminal &&
                   (!_isHotseat ||
                       (_foreground &&
                           _hotseatPrivacy.revealed &&
                           _hotseatPrivacy.epoch == privacyEpoch));
               if (!ownsSheet) {
-                // Account changes can precede this route's first builder.
-                // Never build the old private child, and remove this exact
-                // sheet even if an unrelated route has opened above it.
+                // Ownership or match updates can precede the first builder.
+                // Hide stale private choices before painting, and remove this
+                // exact route even if another screen has opened above it.
                 removeSheet(route);
                 return const SizedBox.shrink();
               }
