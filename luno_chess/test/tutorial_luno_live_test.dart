@@ -6,6 +6,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:luno_chess/battle_ui/mentor.dart';
+import 'package:luno_chess/battle_ui/interaction.dart';
 import 'package:luno_chess/battle_ui/practice_coach.dart';
 import 'package:luno_chess/battle_v1/authoritative.dart';
 import 'package:luno_chess/battle_v1/core.dart';
@@ -43,6 +44,35 @@ Future<void> capture(WidgetTester tester, String name) async {
 
 void main() {
   setupPracticeTestAssets();
+
+  test('discard-only card cannot produce an impossible target error', () {
+    final base = battleFixture(hand: const [CardId.shelter]);
+    final draft = RuleDraft(base.rules)..mana[PieceColor.white] = 0;
+    final view = AuthoritativeBattleState(
+      draft.freeze(),
+      base.hidden,
+    ).view(PieceColor.white);
+    final actions = BattleRulesCore.legalActions(view);
+    final selection = BattleInteraction()..select(CardId.shelter, actions);
+    expect(selection.card, CardId.shelter);
+    expect(actions.whereType<PlayCardAction>(), isEmpty);
+    expect(selection.tap(12, view, actions), isEmpty);
+    expect(
+      selection.invalidTarget,
+      false,
+      reason:
+          'There are no playable targets: explain card availability, not a wrong square.',
+    );
+    expect(selection.card, CardId.shelter);
+    expect(
+      actions.whereType<DiscardAction>().any((a) => a.card == CardId.shelter),
+      true,
+    );
+    expect(
+      BattleRulesCore.legalActions(view).map((a) => a.key),
+      actions.map((a) => a.key),
+    );
+  });
 
   testWidgets(
     'portrait atlas is transparent, bounded and contains distinct blink poses',
@@ -226,16 +256,26 @@ void main() {
   );
 
   for (final language in ['tr', 'en']) {
-    for (final scenario in ['close-card', 'special-move', 'ended']) {
+    for (final scenario in [
+      'close-card',
+      'special-move',
+      'ended',
+      'unplayable',
+      'empty-hand',
+    ]) {
       testWidgets(
         'next action agrees with available control $scenario $language',
         (tester) async {
           final p =
               BattlePracticeProgress(0, onboarding: true, guidedMatch: true)
-                ..cast = true
-                ..discarded = true;
-          final state = battleFixture(hand: const [CardId.radar]);
+                ..cast = scenario != 'unplayable' && scenario != 'empty-hand'
+                ..discarded =
+                    scenario != 'unplayable' && scenario != 'empty-hand';
+          final state = battleFixture(
+            hand: scenario == 'empty-hand' ? const [] : const [CardId.radar],
+          );
           final draft = RuleDraft(state.rules);
+          if (scenario == 'unplayable') draft.mana[PieceColor.white] = 0;
           if (scenario == 'special-move') {
             draft.phase = BattlePhase.chess;
             draft.special = SpecialMoveAuthorization(CardId.pawnAdvance, 12, [
@@ -256,7 +296,10 @@ void main() {
                       draft.freeze(),
                       state.hidden,
                     ).view(PieceColor.white),
-                    selected: scenario == 'close-card' ? CardId.radar : null,
+                    selected:
+                        (scenario == 'close-card' || scenario == 'unplayable')
+                            ? CardId.radar
+                            : null,
                   ),
                 ),
               ),
@@ -273,9 +316,33 @@ void main() {
                   ? (language == 'en' ? 'CLOSE CARD' : 'KARTI KAPAT')
                   : scenario == 'special-move'
                   ? (language == 'en' ? 'MARKED PIECE' : 'İŞARETLİ TAŞ')
+                  : scenario == 'unplayable'
+                  ? (language == 'en' ? 'CHECK CARD' : 'KARTI İNCELE')
+                  : scenario == 'empty-hand'
+                  ? (language == 'en' ? 'SKIP CARD' : 'KARTI GEÇ')
                   : (language == 'en' ? 'ATTEMPT ENDED' : 'DENEME BİTTİ');
           expect(coach.heading, contains(expected));
           expect(p.complete, false);
+          if (scenario == 'empty-hand') {
+            final view = AuthoritativeBattleState(
+              draft.freeze(),
+              state.hidden,
+            ).view(PieceColor.white);
+            expect(
+              practiceFocus(p, view, null, false),
+              BattleCoachFocus.controls,
+            );
+            expect(
+              coach.text,
+              contains(
+                language == 'en' ? 'No cards in hand' : 'Elinde kart yok',
+              ),
+            );
+            expect(
+              BattleRulesCore.legalActions(view).any((a) => a is PassAction),
+              true,
+            );
+          }
           noOverflow(tester);
           await tester.pumpWidget(const SizedBox());
         },

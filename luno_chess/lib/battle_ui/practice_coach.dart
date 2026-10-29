@@ -98,6 +98,7 @@ BattleCoachFocus practiceFocus(
   if (p.complete) return BattleCoachFocus.none;
   if (p.guidedMatch) {
     if (v.rules.phase == BattlePhase.chess) return BattleCoachFocus.board;
+    if (v.ownHand.isEmpty) return BattleCoachFocus.controls;
     if (p.cast && !p.discarded) {
       return selected == null
           ? BattleCoachFocus.hand
@@ -290,7 +291,7 @@ class BattlePracticeCoach extends StatelessWidget {
               cue: text,
               heading:
                   p.guidedMatch
-                      ? _nextActionHeading(l, p, view, blockedPiece)
+                      ? _nextActionHeading(l, p, view, blockedPiece, legal)
                       : l.learning(
                         p.onboarding
                             ? p.guidedMatch
@@ -413,6 +414,7 @@ class BattlePracticeCoach extends StatelessWidget {
     BattlePracticeProgress p,
     PlayerView view,
     bool blockedPiece,
+    List<BattleAction> legal,
   ) {
     final action =
         p.canFinish(view)
@@ -433,6 +435,8 @@ class BattlePracticeCoach extends StatelessWidget {
             ? selectedPiece == null
                 ? l.learning('TAŞ SEÇ', 'PICK A PIECE')
                 : l.learning('KARE SEÇ', 'PICK A SQUARE')
+            : view.ownHand.isEmpty
+            ? l.learning('KARTI GEÇ', 'SKIP CARD')
             : p.cast && !p.discarded
             ? selected == null
                 ? l.learning('KART SEÇ', 'PICK A CARD')
@@ -443,6 +447,8 @@ class BattlePracticeCoach extends StatelessWidget {
                 : l.learning('KARTI KAPAT', 'CLOSE CARD')
             : selected == null
             ? l.learning('KART SEÇ', 'PICK A CARD')
+            : !legal.whereType<PlayCardAction>().any((a) => a.card == selected)
+            ? l.learning('KARTI İNCELE', 'CHECK CARD')
             : targetReady
             ? l.learning('KARTI OYNA', 'PLAY CARD')
             : l.learning('HEDEF SEÇ', 'PICK TARGET');
@@ -537,6 +543,19 @@ class BattlePracticeCoach extends StatelessWidget {
         selectedPiece == null
             ? 'I am here! No cards on turn one. Tap any white piece; I will show its moves.'
             : 'Now tap one of the lit squares. Baby Luno will play next; then it is your turn again.',
+      );
+    }
+    if (v.rules.phase == BattlePhase.card && v.ownHand.isEmpty) {
+      final restart =
+          v.rules.deckCounts[v.viewer] == 0
+              ? l.learning(
+                ' Menüden eğitimi yeniden başlatabilirsin.',
+                ' You can restart training from the menu.',
+              )
+              : '';
+      return l.learning(
+        'Elinde kart yok. ${l.battle(BattleCopy.pass)} ile taş hamlene devam et.$restart',
+        'No cards in hand. Tap ${l.battle(BattleCopy.pass)} to make your chess move.$restart',
       );
     }
     if (v.rules.phase == BattlePhase.card && p.cast && !p.discarded) {

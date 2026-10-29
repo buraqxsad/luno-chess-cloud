@@ -159,6 +159,12 @@ class BattleInteraction {
     final candidates = options(actions);
     if (view.rules.phase == BattlePhase.pending) return const [];
     if (card != null) {
+      // Discard-only cards have no playable target. Keep the selection for
+      // discard and let the status explain availability instead of a bad square.
+      if (candidates.isEmpty) {
+        invalidTarget = false;
+        return const [];
+      }
       final targetType = cardDefinitions[card]!.target;
       if (targetType == CardTargetType.none ||
           targetType == CardTargetType.opponentCard ||
