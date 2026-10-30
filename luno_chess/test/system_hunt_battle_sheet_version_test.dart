@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:luno_chess/battle_ui/sheets.dart';
 import 'package:luno_chess/battle_v1/authoritative.dart';
-import 'package:luno_chess/battle_v1/core.dart';
 import 'package:luno_chess/battle_v1/model.dart';
 import 'package:luno_chess/engine/piece.dart';
 import 'package:luno_chess/models/game_store.dart';

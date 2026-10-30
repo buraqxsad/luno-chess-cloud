@@ -174,10 +174,12 @@ void main() {
           expect(service.lastError, isNull);
         } else {
           expect(service.lastSyncAt, previousSync);
-          if (boundary == 'access-denied')
+          if (boundary == 'access-denied') {
             expect(service.lastError, expectedFailure);
-          if (!boundary.startsWith('store-notification-'))
+          }
+          if (!boundary.startsWith('store-notification-')) {
             expect(store.data.gold, beforeGold);
+          }
         }
         if (restarted != null) await restarted;
       },
