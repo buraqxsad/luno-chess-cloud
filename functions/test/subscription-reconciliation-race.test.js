@@ -65,7 +65,9 @@ test('a delayed membership refresh preserves a subscription granted after its cl
   }finally{gate.release();}
   await refresh;
   assert.equal(db.read('users/'+uid+'/premiumUntil'),expiry,'The older claim snapshot cannot erase a newer owned grant.');
-  assert.equal(gate.queryReads(),2,'The stale claim query must be refreshed after the revision changes.');
+  // One initial held query, one purchase-completion projection, and the required
+  // fresh read after the held snapshot sees that the profile revision changed.
+  assert.equal(gate.queryReads(),3,'The stale query is refreshed in addition to the purchase completion projection.');
 });
 
 function subscriptionClaim(expiry,active=true){

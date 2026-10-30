@@ -3727,8 +3727,18 @@ function applyVoidedPurchaseRevocation(profile,claim,tokenHashValue,at){
   const economy=profile.serverEconomy||{},previous=economy.purchaseTokens&&economy.purchaseTokens[tokenHashValue];
   if(economy.billingReversals&&economy.billingReversals[tokenHashValue])return {revoked:false,idempotent:true};
   if(!previous){
-    if(claim.status==='verified')return {revoked:false,ungranted:true};
-    return {error:'purchase-receipt-invalid'};
+    if(claim.status!=='verified')return {error:'purchase-receipt-invalid'};
+    // A verified fulfillment may already be waiting to transact this profile.
+    // Persist the provider-confirmed revocation in the same transaction even
+    // without a grant: its stale claim snapshot must not mint currency later.
+    profile.serverEconomy=profile.serverEconomy||{};
+    profile.serverEconomy.billingReversals=profile.serverEconomy.billingReversals||{};
+    profile.serverEconomy.billingReversals[tokenHashValue]={
+      productId:claim.productId,requestedGold:0,recoveredGold:0,requestedGems:0,recoveredGems:0,
+      debtGold:0,debtGems:0,createdAt:at,ungranted:true
+    };
+    profile.updatedAt=at;
+    return {revoked:false,ungranted:true};
   }
   if(previous.productId!==claim.productId||previous.kind!=='inapp'||previous.active!==true||previous.entitlementStatus!=='granted')return {error:'purchase-receipt-invalid'};
   for(const field of ['grantGold','grantGems'])if(!Number.isSafeInteger(previous[field])||previous[field]<0||previous[field]>1000000000||claim[field]!=null&&claim[field]!==previous[field])return {error:'purchase-receipt-invalid'};
@@ -3751,20 +3761,40 @@ function applyVoidedPurchaseRevocation(profile,claim,tokenHashValue,at){
   return {revoked:true,recoveredGold,recoveredGems,debtGold:requestedGold-recoveredGold,debtGems:requestedGems-recoveredGems};
 }
 function billingReviewRequired(profile){return !!(profile&&profile.serverEconomy&&profile.serverEconomy.billingReviewRequired===true);}
-async function writePurchaseClaim(uid,tokenHash,productId,patch,create=false){
+function purchaseClaimRevision(claim){
+  const revision=claim&&claim.claimRevision;
+  if(revision==null)return 0;
+  if(!Number.isSafeInteger(revision)||revision<0)throw httpError(503,'purchase-claim-state-invalid','Purchase claim revision is invalid.');
+  return revision;
+}
+async function writePurchaseClaim(uid,tokenHash,productId,patch,create=false,expectedRevision=null,allowCreate=true){
   return writeAccountMetadata(uid,'writePurchaseClaim',async function(){
+    const subscription=Object.hasOwn(PRODUCT_CATALOG,productId)&&PRODUCT_CATALOG[productId].type==='subs';
+    let revisionConflict=false;
     const result=await db.ref(`purchaseClaims/${tokenHash}`).transaction(function(value){
-      if(value===null)return create?Object.assign({},patch,{uid,productId}):null;
+      revisionConflict=false;
+      if(value===null){
+        // Probe a cold cache; do not recreate a disappeared fenced claim.
+        if(!create||!allowCreate||expectedRevision!=null&&expectedRevision!==0)return null;
+        return Object.assign({},patch,{uid,productId},subscription?{claimRevision:1}:{});
+      }
       if(value.uid!==uid||value.productId!==productId||purchaseClaimRetired(value))return;
+      const revision=subscription?purchaseClaimRevision(value):0;
+      if(expectedRevision!=null&&revision!==expectedRevision){revisionConflict=true;return;}
       if(create)return value;
       const consumable=Object.hasOwn(PRODUCT_CATALOG,productId)&&PRODUCT_CATALOG[productId].type!=='subs';
       if(consumable&&(value.voided===true||value.entitlementStatus==='voided')&&(patch.active===true||['granted','complete'].includes(patch.status)))return;
       if(value.status==='complete'&&patch.status==='reconcile-required')return value;
       const next=Object.assign({},value,patch,{uid,productId});
+      if(subscription){
+        if(revision>=Number.MAX_SAFE_INTEGER)throw httpError(503,'purchase-claim-state-invalid','Purchase claim revision is exhausted.');
+        next.claimRevision=revision+1;
+      }
       if(value.status==='complete'&&patch.status==='granted')next.status='complete';
       for(const field of Object.keys(next))if(next[field]===null)delete next[field];
       return next;
     },undefined,false);
+    if(revisionConflict)throw httpError(503,'subscription-state-changed','Subscription changed during verification. Retry the purchase.');
     if(!result.committed||!result.snapshot.val())throw httpError(409,'purchase-claim-changed','Purchase claim disappeared or changed owner.');
     return result.snapshot.val();
   },()=>anonymizePurchaseClaim(uid,tokenHash));
@@ -3798,34 +3828,48 @@ async function fulfillPurchase(uid,body){
     return completedConsumableReplay(profile,uid,current,productId,tokenHash);
   }
   if(existingBefore&&existingBefore.voided===true&&definition.type!=='subs')throw httpError(409,'purchase-revoked','Purchase was revoked.');
-  const verified=await verifyWithGoogle(productId,purchaseToken,definition,hash(uid));
+  const expectedClaimRevision=definition.type==='subs'?purchaseClaimRevision(existingBefore):null;
+  let verified=await verifyWithGoogle(productId,purchaseToken,definition,hash(uid));
   verified.productId=productId;
   const consumed=verified.kind==='inapp'&&(verified.data.productLineItem||[]).some(function(item){
     return item.productId===productId&&item.productOfferDetails?.consumptionState==='CONSUMPTION_STATE_CONSUMED';
   });
   await assertAccountOperationAllowed(uid,'fulfillPurchase');
-  const claim=await writePurchaseClaim(uid,tokenHash,productId,{status:'verified',verifiedAt:ServerValue.TIMESTAMP},true);
+  const claim=await writePurchaseClaim(uid,tokenHash,productId,{status:'verified',verifiedAt:ServerValue.TIMESTAMP},true,expectedClaimRevision,verified.kind!=='subs'||!existingBefore);
   if(claim.voided===true&&verified.kind!=='subs')throw httpError(409,'purchase-revoked','Purchase was revoked.');
+  let expectedWriteRevision=verified.kind==='subs'?purchaseClaimRevision(claim):null;
   try{
+    if(verified.kind==='subs'&&!existingBefore){
+      // Ownership is proved before creating any global claim. Revalidate after
+      // registration so an RTDN deferred while the claim was absent is observed.
+      verified=await verifyWithGoogle(productId,purchaseToken,definition,hash(uid));
+      verified.productId=productId;
+    }
     const grantResult=await transactExistingPlayer(uid,function(profile){
+      if(verified.kind==='subs'){
+        const reconciledRevision=profile.serverEconomy?.subscriptionClaimRevisions?.[tokenHash];
+        if(reconciledRevision!=null&&(!Number.isSafeInteger(reconciledRevision)||reconciledRevision<0))return {commit:false,error:'subscription-state-changed'};
+        if(reconciledRevision!=null&&reconciledRevision>purchaseClaimRevision(claim))return {commit:false,error:'subscription-state-changed'};
+      }
       // A consumed token can only complete an already committed owned grant.
       if(consumed)completedConsumableReplay(profile,uid,claim,productId,tokenHash);
       const decision=applyVerifiedPurchaseGrant(profile,uid,definition,verified,tokenHash);
       return Object.assign({commit:!decision.error},decision);
     });
     const grantDecision=grantResult.decision;
-    if(grantDecision.error)throw httpError(409,grantDecision.error,'Purchase could not be granted to this player.');
+    if(grantDecision.error)throw httpError(grantDecision.error==='subscription-state-changed'?503:409,grantDecision.error,'Purchase could not be granted to this player.');
     await assertAccountOperationAllowed(uid,'fulfillPurchase');
     await publishPublicProfile(uid,grantResult.profile);
     const lifecycle=verified.kind==='subs'?subscriptionLifecycle(verified,now()):null;
     const verifiedOrderId=cleanString(verified.data&&verified.data.latestOrderId||verified.data&&verified.data.orderId||'',160);
     const receipt=grantResult.profile.serverEconomy.purchaseTokens[tokenHash];
-    await writePurchaseClaim(uid,tokenHash,productId,{
+    const grantedClaim=await writePurchaseClaim(uid,tokenHash,productId,{
       status:'granted',kind:verified.kind,grantedAt:ServerValue.TIMESTAMP,
       entitlementStatus:lifecycle?lifecycle.status:'granted',active:lifecycle?lifecycle.active:true,
       expiry:lifecycle?lifecycle.expiry:null,grantGold:safeInt(receipt.grantGold,0),grantGems:safeInt(receipt.grantGems,0),
       orderIdHash:verifiedOrderId?hash(verifiedOrderId):null,lastError:null
-    });
+    },false,expectedWriteRevision);
+    expectedWriteRevision=verified.kind==='subs'?purchaseClaimRevision(grantedClaim):null;
     await assertAccountOperationAllowed(uid,'fulfillPurchase');
     const client=playClient();
     if(verified.kind==='subs'){
@@ -3834,7 +3878,20 @@ async function fulfillPurchase(uid,body){
     }else if(!consumed){
       await playRequest(()=>client.purchases.products.consume({packageName:PACKAGE_NAME,productId,token:purchaseToken}));
     }
-    await writePurchaseClaim(uid,tokenHash,productId,{status:'complete',completedAt:ServerValue.TIMESTAMP});
+    // Another token's reconciliation can run between profile grant and claim
+    // publication. Project the owned grant before committing purchase completion.
+    if(verified.kind==='subs'){
+      const projected=await recomputePremiumFromClaims(uid,now());
+      if(grantedClaim.active!==true||safeInt(grantedClaim.expiry,0)<=now()||projected.premiumUntil<safeInt(grantedClaim.expiry,0)){
+        throw httpError(503,'subscription-state-changed','Subscription changed before purchase completion. Retry the purchase.');
+      }
+    }
+    // This final CAS proves that this token's lifecycle did not change during
+    // projection; another token's active Premium cannot justify this purchase.
+    // writeAccountMetadata also rechecks erasure after the commit and retires
+    // late metadata, without introducing a separate stale final-read window.
+    const completedClaim=await writePurchaseClaim(uid,tokenHash,productId,{status:'complete',completedAt:ServerValue.TIMESTAMP},false,expectedWriteRevision);
+    expectedWriteRevision=verified.kind==='subs'?purchaseClaimRevision(completedClaim):null;
     return {ok:true,verified:true,entitlementGranted:true,idempotent:!!(grantDecision&&grantDecision.idempotent)};
   }catch(error){
     let deletionError=isAccountDeletionError(error)?error:null;
@@ -3844,7 +3901,7 @@ async function fulfillPurchase(uid,body){
     }
     if(deletionError){await anonymizePurchaseClaim(uid,tokenHash);throw deletionError;}
     logger.error('Purchase fulfillment failed',{uidHash:hash(uid).slice(0,16),productId,tokenHash,errorCode:'purchase-fulfillment-failed'});
-    await writePurchaseClaim(uid,tokenHash,productId,{status:'reconcile-required',lastError:null}).catch(function(){});
+    await writePurchaseClaim(uid,tokenHash,productId,{status:'reconcile-required',lastError:null},false,expectedWriteRevision).catch(function(){});
     throw error;
   }
 }
@@ -3956,10 +4013,12 @@ async function recomputePremiumFromClaims(uid,at){
     if(before.uid!==uid)throw httpError(403,'profile-owner-mismatch','Player profile ownership changed.');
     const revision=playerStateRevision(before);
     const claims=(await db.ref('purchaseClaims').orderByChild('uid').equalTo(uid).get()).val()||{};
-    let premiumUntil=0;
+    let premiumUntil=0;const claimRevisions={};
     Object.keys(claims).forEach(function(key){
       const claim=claims[key]||{},expiry=safeInt(claim.expiry,0);
-      if(!purchaseClaimRetired(claim)&&claim.kind==='subs'&&claim.active===true&&expiry>at)premiumUntil=Math.max(premiumUntil,expiry);
+      if(purchaseClaimRetired(claim)||claim.kind!=='subs')return;
+      claimRevisions[key]=purchaseClaimRevision(claim);
+      if(claim.active===true&&expiry>at)premiumUntil=Math.max(premiumUntil,expiry);
     });
     const result=await transactExistingPlayer(uid,function(profile){
       if(profile.uid!==uid)return {commit:false,error:'profile-owner-mismatch'};
@@ -3967,8 +4026,17 @@ async function recomputePremiumFromClaims(uid,at){
       // reconciliation changes the profile revision, so refresh its claims
       // rather than applying an entitlement computed before that change.
       if(playerStateRevision(profile)!==revision)return {commit:false,refreshClaims:true};
+      const installedRevisions=profile.serverEconomy?.subscriptionClaimRevisions||{};
+      for(const [key,claimRevision] of Object.entries(claimRevisions)){
+        // A cached query must not roll back a fence already committed here.
+        if(Number.isSafeInteger(installedRevisions[key])&&installedRevisions[key]>claimRevision)return {commit:false,refreshClaims:true};
+      }
       normalizeProductEntitlements(profile);
       profile.premiumUntil=premiumUntil;
+      // Fence old verified grants even if access was already zero and there was
+      // no token receipt. This is reconciliation metadata, never grant authority.
+      profile.serverEconomy=profile.serverEconomy||{};
+      profile.serverEconomy.subscriptionClaimRevisions=Object.assign({},profile.serverEconomy.subscriptionClaimRevisions||{},claimRevisions);
       profile.updatedAt=ServerValue.TIMESTAMP;
       return {commit:true};
     });
@@ -3987,7 +4055,7 @@ async function reconcileSubscriptionClaim(claim,tokenHash,purchaseToken,eventAt,
   const verified=await fetchGooglePurchase(claim.productId,purchaseToken,definition),external=verified.data.externalAccountIdentifiers||{};
   if(external.obfuscatedExternalAccountId!==hash(claim.uid))throw httpError(409,'account-mismatch','Subscription belongs to another player.');
   const lifecycle=subscriptionLifecycle(verified,eventAt);
-  await writePurchaseClaim(claim.uid,tokenHash,claim.productId,{kind:'subs',entitlementStatus:lifecycle.status,active:lifecycle.active,expiry:lifecycle.expiry,lastRtdnType:eventType,lastReconciledAt:ServerValue.TIMESTAMP});
+  await writePurchaseClaim(claim.uid,tokenHash,claim.productId,{kind:'subs',entitlementStatus:lifecycle.status,active:lifecycle.active,expiry:lifecycle.expiry,lastRtdnType:eventType,lastReconciledAt:ServerValue.TIMESTAMP},false,purchaseClaimRevision(claim));
   const premium=await recomputePremiumFromClaims(claim.uid,eventAt);
   return {eventType,status:lifecycle.status,active:lifecycle.active,expiry:lifecycle.expiry,premiumUntil:premium.premiumUntil};
 }

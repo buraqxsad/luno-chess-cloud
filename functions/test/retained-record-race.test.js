@@ -175,8 +175,16 @@ test('completed receipt cannot disagree with historical claim amounts',async t=>
   await assert.rejects(fulfillPurchase(uid,{productId,purchaseToken:token}),{code:'purchase-receipt-invalid'});
 });
 test('refund of a verified but ungranted purchase cannot debit unrelated gold',()=>{
-  const profile=starterProfile(uid,'ungranted_name'),before=structuredClone(profile);
-  assert.deepEqual(applyVoidedPurchaseRevocation(profile,claim(),key,Date.now()),{revoked:false,ungranted:true});assert.deepEqual(profile,before);
+  const profile=starterProfile(uid,'ungranted_name'),before=structuredClone(profile),at=Date.now();
+  assert.deepEqual(applyVoidedPurchaseRevocation(profile,claim(),key,at),{revoked:false,ungranted:true});
+  before.serverEconomy.billingReversals={[key]:{
+    productId,requestedGold:0,recoveredGold:0,requestedGems:0,recoveredGems:0,
+    debtGold:0,debtGems:0,createdAt:at,ungranted:true
+  }};
+  before.updatedAt=at;
+  // Every other field, including all unrelated currency and entitlements,
+  // remains byte-for-byte equivalent while the new grant guard is durable.
+  assert.deepEqual(profile,before);
 });
 for(const invalid of ['missing','mismatched-product','negative-amount','claim-disagrees'])test(`refund fails closed for ${invalid} grant evidence`,()=>{
   const profile=starterProfile(uid,'refund_name'),value=receipt(),entry={...claim(),status:'complete'};
@@ -209,7 +217,8 @@ test('subscription fulfillment still grants expiry and revalidates on replay',as
   const db=memoryDatabase(t,seed()),calls=fakePlay(t),subscriptionId='luno_premium_month',before=db.read('users/'+uid+'/gold');
   assert.equal((await fulfillPurchase(uid,{productId:subscriptionId,purchaseToken:token})).entitlementGranted,true);
   assert.equal(db.read(path+'/status'),'complete');assert.equal(db.read(path+'/kind'),'subs');assert.ok(db.read('users/'+uid+'/premiumUntil')>Date.now());
-  await fulfillPurchase(uid,{productId:subscriptionId,purchaseToken:token});assert.equal(calls.get,2);assert.equal(calls.consume,0);assert.equal(db.read('users/'+uid+'/gold'),before);
+  assert.equal(calls.get,2,'The first owned claim is freshly revalidated after registration.');
+  await fulfillPurchase(uid,{productId:subscriptionId,purchaseToken:token});assert.equal(calls.get,3,'Replay still performs its own current provider verification.');assert.equal(calls.consume,0);assert.equal(db.read('users/'+uid+'/gold'),before);
 });
 test('live subscription notification recomputes Premium through cold profile transactions',async t=>{
   const data=seed();data.purchaseClaims={[key]:{...claim(),productId:'luno_premium_month',status:'complete',kind:'subs'}};const db=memoryDatabase(t,data);fakePlay(t);
