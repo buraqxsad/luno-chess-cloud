@@ -3670,11 +3670,11 @@ function subscriptionLifecycle(verified,at){
   const accessStates=new Set(['SUBSCRIPTION_STATE_ACTIVE','SUBSCRIPTION_STATE_IN_GRACE_PERIOD','SUBSCRIPTION_STATE_CANCELED']);
   return {status,expiry,active:accessStates.has(status)&&expiry>time,grace:status==='SUBSCRIPTION_STATE_IN_GRACE_PERIOD',canceled:status==='SUBSCRIPTION_STATE_CANCELED',onHold:status==='SUBSCRIPTION_STATE_ON_HOLD',revoked:status==='SUBSCRIPTION_STATE_REVOKED',expired:status==='SUBSCRIPTION_STATE_EXPIRED'||expiry<=time};
 }
-async function verifyWithGoogle(productId,purchaseToken,definition,accountHash){
+async function verifyWithGoogle(productId,purchaseToken,definition,accountHash,allowOwnedInactive=false){
   const verified=await fetchGooglePurchase(productId,purchaseToken,definition);
   if(verified.kind==='subs'){
     const lifecycle=subscriptionLifecycle(verified,now()),external=verified.data.externalAccountIdentifiers||{};
-    if(!lifecycle.active)throw httpError(409,'purchase-not-active','Subscription is not active for this product.');
+    if(!lifecycle.active&&!allowOwnedInactive)throw httpError(409,'purchase-not-active','Subscription is not active for this product.');
     if(external.obfuscatedExternalAccountId!==accountHash)throw httpError(409,'account-mismatch','Purchase belongs to another player.');
     return verified;
   }
@@ -3838,7 +3838,7 @@ async function fulfillPurchase(uid,body){
   }
   if(existingBefore&&existingBefore.voided===true&&definition.type!=='subs')throw httpError(409,'purchase-revoked','Purchase was revoked.');
   const expectedClaimRevision=definition.type==='subs'?purchaseClaimRevision(existingBefore):null;
-  let verified=await verifyWithGoogle(productId,purchaseToken,definition,hash(uid));
+  let verified=await verifyWithGoogle(productId,purchaseToken,definition,hash(uid),definition.type==='subs'&&existingBefore!==null);
   verified.productId=productId;
   const consumed=verified.kind==='inapp'&&(verified.data.productLineItem||[]).some(function(item){
     return item.productId===productId&&item.productOfferDetails?.consumptionState==='CONSUMPTION_STATE_CONSUMED';
@@ -3847,7 +3847,21 @@ async function fulfillPurchase(uid,body){
   const claim=await writePurchaseClaim(uid,tokenHash,productId,{status:'verified',verifiedAt:ServerValue.TIMESTAMP},true,expectedClaimRevision,verified.kind!=='subs'||!existingBefore);
   if(claim.voided===true&&verified.kind!=='subs')throw httpError(409,'purchase-revoked','Purchase was revoked.');
   let expectedWriteRevision=verified.kind==='subs'?purchaseClaimRevision(claim):null;
+  let reconciledInactive=false;
   try{
+    if(verified.kind==='subs'&&!subscriptionLifecycle(verified,now()).active){
+      // A current owned restore is also authority for loss of access. Do not
+      // keep an old active claim until an independently delayed RTDN arrives.
+      const lifecycle=subscriptionLifecycle(verified,now());
+      const inactiveClaim=await writePurchaseClaim(uid,tokenHash,productId,{
+        kind:'subs',active:false,entitlementStatus:lifecycle.status,expiry:lifecycle.expiry,
+        lastReconciledAt:ServerValue.TIMESTAMP
+      },false,expectedWriteRevision);
+      expectedWriteRevision=purchaseClaimRevision(inactiveClaim);
+      await recomputePremiumFromClaims(uid,now());
+      reconciledInactive=true;
+      throw httpError(409,'purchase-not-active','Subscription is not active for this product.');
+    }
     if(verified.kind==='subs'&&!existingBefore){
       // Ownership is proved before creating any global claim. Revalidate after
       // registration so an RTDN deferred while the claim was absent is observed.
@@ -3909,6 +3923,7 @@ async function fulfillPurchase(uid,body){
       catch(gateError){if(isAccountDeletionError(gateError))deletionError=gateError;}
     }
     if(deletionError){await anonymizePurchaseClaim(uid,tokenHash);throw deletionError;}
+    if(reconciledInactive)throw error;
     logger.error('Purchase fulfillment failed',{uidHash:hash(uid).slice(0,16),productId,tokenHash,errorCode:'purchase-fulfillment-failed'});
     await writePurchaseClaim(uid,tokenHash,productId,{status:'reconcile-required',lastError:null},false,expectedWriteRevision).catch(function(){});
     throw error;
