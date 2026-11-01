@@ -1,0 +1,68 @@
+[
+  {
+    "file": "chess",
+    "exit": 0,
+    "counts": {
+      "tests": 26,
+      "pass": 26,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  {
+    "file": "v218-rule-geometry",
+    "exit": 0,
+    "counts": {
+      "tests": 14,
+      "pass": 14,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  {
+    "file": "v219-rules-contract",
+    "exit": 0,
+    "counts": {
+      "tests": 60,
+      "pass": 60,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  {
+    "file": "v223-removal-identity",
+    "exit": 0,
+    "counts": {
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  {
+    "file": "v223-terminal-cards",
+    "exit": 0,
+    "counts": {
+      "tests": 14,
+      "pass": 14,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  {
+    "file": "v224-card-wire-targets",
+    "exit": 0,
+    "counts": {
+      "tests": 31,
+      "pass": 30,
+      "fail": 0,
+      "skipped": 1,
+      "cancelled": 0
+    }
+  }
+]

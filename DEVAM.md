@@ -4,6 +4,40 @@ Son dogrulama/aktarim tarihi: 27 Ekim 2026. Bu dosya kaynak aktarimini anlatir;
 oyunun kusursuz, canli servislerin tamamen kabul edilmis veya Play yayininin
 onaylanmis oldugu anlamina gelmez.
 
+## 1 Kasım teslimi — sistem çapında bug avı
+
+**RELEASE HOLD.** En yeni [rapor](qa/system_bug_hunt/REPORT.md),
+[kök nedenler](qa/system_bug_hunt/BUGS.md), [24 kart matrisi](qa/system_bug_hunt/cards/acceptance.md)
+ve [açık P1/kabul engelleri](qa/system_bug_hunt/OPEN-ISSUES.md).
+Son tam Flutter/build kaynağı `219b1daf5f2329c558bc1ac7a3cf6c781e316514`; son QA commit’i
+runtime değiştirmez. V240, canlı Luno, kurallar/assetler ve imza kimliği korunur.
+
+- 7 yeni hata ailesi kapatıldı:3P1,4P2. Refund sonrası geç currency grant;
+  subscription eski provider/claim/sonuç yarışları; pending settlement starvation;
+  expired queue sonrası room join; silme sonrası presence; geç refreshState
+  completion; stale modal ilk karesi. Önceki düzeltmeler yeniden sayılmadı.
+- Ekonomi: refund10+subscription20 yeni vaka; ilgili208/208. Profil/token claim
+  fencing, fresh ilk registration doğrulaması ve final completion CAS. Geçerli
+  yenileme/legacy claim ve tombstone korunur; backend canlıya deploy edilmedi.
+- Tam Flutter:11759 pass /97 fail /
+  0 skip, 435 dosya. Tarihsel görsel karşılaştırmalar
+  FAIL kalır; golden güncellenmedi. Analiz temiz. Tam backend:1365/0/1;
+  TypeScript:376/0/0; differential3101senaryo/10967state,
+  sıfır ayrışma. Node doğrudan herdosyada gerçek TAP case sayılarıyla çalıştı.
+- Gerçek yerel presence RTDB rules12/12. Ek yeni Billing gerçek SDK proof’u iki
+  bounded timeout nedeniyle FAIL/NOTCOMPLETE;0durableobservation. Mock ve geçmiş
+  yerel başarılar bu eksik kapıyı kapatmaz. Kanıtların ilk başarısız koşuları korunur.
+- Yeni ARM64 debug test APK’sı üretildi; com.luno.chess/1.6.3+19/min24/target36,
+  aynı debug sertifikası,750asset ve statik ELF/ZIP16KB PASS. Upload anahtarı yok;
+  release APK/AAB BLOCKED. +19 Play geçmişiyle doğrulanmadı.
+- Yeni APK native cihazda çalıştırılmadı. V240 raster SIGSEGV, native oyuncu
+  yolculuğu, fiziksel performans/gerçek16KB, gerçek Firebase/Google/AppCheck/
+  Integrity ve Play lisans/Console kabulleri açık. Canlı deploy, para, Play
+  upload/yayın veya GitHub push yapılmadı.
+
+Tam dış kanıt/APK/source bundle/QA ZIP/SHA-256:
+`/workspace/luno-review/system-bug-hunt/`. Aşağıdaki kayıtlar tarihseldir.
+
 ## 29 Ekim — V240 sonrası canlı tutorial ve bug avı
 
 **RELEASE HOLD.** En yeni teslim [qa/tutorial_live/REPORT.md](qa/tutorial_live/REPORT.md),

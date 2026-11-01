@@ -1,0 +1,122 @@
+[
+  {
+    "file": "system-hunt-identity-presence.test.js",
+    "command": [
+      "node",
+      "test/system-hunt-identity-presence.test.js"
+    ],
+    "exit_code": 0,
+    "counts": {
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  {
+    "file": "v236-app-check-policy.test.js",
+    "command": [
+      "node",
+      "test/v236-app-check-policy.test.js"
+    ],
+    "exit_code": 0,
+    "counts": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  {
+    "file": "account-deletion-gate.test.js",
+    "command": [
+      "node",
+      "test/account-deletion-gate.test.js"
+    ],
+    "exit_code": 0,
+    "counts": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  {
+    "file": "account-metadata-erasure.test.js",
+    "command": [
+      "node",
+      "test/account-metadata-erasure.test.js"
+    ],
+    "exit_code": 0,
+    "counts": {
+      "tests": 26,
+      "pass": 26,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  {
+    "file": "v238-battle-v1-migration-erasure.test.js",
+    "command": [
+      "node",
+      "test/v238-battle-v1-migration-erasure.test.js"
+    ],
+    "exit_code": 0,
+    "counts": {
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  {
+    "file": "v218-social-atomic.test.js",
+    "command": [
+      "node",
+      "test/v218-social-atomic.test.js"
+    ],
+    "exit_code": 0,
+    "counts": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  {
+    "file": "v219-sidecar-social-integrity.test.js",
+    "command": [
+      "node",
+      "test/v219-sidecar-social-integrity.test.js"
+    ],
+    "exit_code": 0,
+    "counts": {
+      "tests": 27,
+      "pass": 27,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  {
+    "file": "dm-receipt-race.test.js",
+    "command": [
+      "node",
+      "test/dm-receipt-race.test.js"
+    ],
+    "exit_code": 0,
+    "counts": {
+      "tests": 27,
+      "pass": 27,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  }
+]

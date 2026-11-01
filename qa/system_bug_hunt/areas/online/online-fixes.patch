@@ -1,0 +1,41 @@
+diff --git a/functions/lib/battle-v1-friendly.js b/functions/lib/battle-v1-friendly.js
+index 3ec09d0..8f348b0 100644
+--- a/functions/lib/battle-v1-friendly.js
++++ b/functions/lib/battle-v1-friendly.js
+@@ -6,7 +6,14 @@ const TTL=120000,ALPHABET='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+ function installBattleV1Friendly(api,deps){
+  const {db,now}=api;
+  const roomCode=()=>Array.from({length:6},()=>ALPHABET[crypto.randomInt(ALPHABET.length)]).join('');
+- function state(value){const v={...value,queue:value?.queue||{},active:value?.active||{},reservations:value?.reservations||{},rooms:value?.rooms||{},roomByUser:value?.roomByUser||{},invites:value?.invites||{}};for(const [code,r] of Object.entries(v.rooms))if(r.expiresAt<=now()){delete v.rooms[code];if(v.roomByUser[r.host.uid]===code)delete v.roomByUser[r.host.uid];}for(const [key,i] of Object.entries(v.invites))if(i.expiresAt<=now())delete v.invites[key];return v;}
++ function state(value){
++  const v={...value,queue:value?.queue||{},active:value?.active||{},reservations:value?.reservations||{},rooms:value?.rooms||{},roomByUser:value?.roomByUser||{},invites:value?.invites||{}};
++  // available() permits changing modes once the search lease expires. Remove
++  // that stale entry before the room's host-busy check observes it again.
++  for(const [uid,q] of Object.entries(v.queue))if(!q||now()-q.lastSeenAt>=TTL)delete v.queue[uid];
++  for(const [code,r] of Object.entries(v.rooms))if(r.expiresAt<=now()){delete v.rooms[code];if(v.roomByUser[r.host.uid]===code)delete v.roomByUser[r.host.uid];}
++  for(const [key,i] of Object.entries(v.invites))if(i.expiresAt<=now())delete v.invites[key];return v;
++ }
+  function available(v,uid){
+   if(v.active[uid])throw new BattleError('MATCH_ALREADY_ACTIVE');
+   if(v.queue[uid]&&now()-v.queue[uid].lastSeenAt<TTL)throw new BattleError('QUEUE_ACTIVE');
+diff --git a/functions/lib/battle-v1-recovery.js b/functions/lib/battle-v1-recovery.js
+index f771fd3..a2da4d8 100644
+--- a/functions/lib/battle-v1-recovery.js
++++ b/functions/lib/battle-v1-recovery.js
+@@ -87,7 +87,15 @@ function installBattleV1Recovery(api,deps){
+   if(!active.exists()){active=await db.ref('matchSecretsV1').orderByChild('status').equalTo('active').limitToFirst(80).get();}
+   const activeIds=Object.keys(active.val()||{}).sort();await db.ref('battleV1Maintenance/cursor').set(activeIds.at(-1)||'');
+   for(const [id,value] of Object.entries(active.val()||{})){try{const m=api.hydrate(value),human=Object.values(m.players).find(p=>!p.bot);if(!human)continue;const tx=await api.transact(id,human.uid,current=>({match:authority.expireClock(current,now())}));await driveBot(tx.match,human.uid);if(tx.match.result)await settle(id,human.uid);}catch(e){deps.logger?.warn('Battle V1 maintenance deferred',{matchId:id,code:e.code||'TEMPORARILY_UNAVAILABLE'});}}
+-  const pending=await db.ref('matchSecretsV1').orderByChild('settlementStatus').equalTo('pending').limitToFirst(80).get();
++  // Failed early settlements must not starve later players. Keep this cursor
++  // separate from active maintenance and wrap so deferred records are retried.
++  const pendingCursorRef=db.ref('battleV1Maintenance/settlementCursor');
++  const pendingCursor=(await pendingCursorRef.get()).val();
++  const pendingQuery=db.ref('matchSecretsV1').orderByChild('settlementStatus');
++  let pending=await (validMatchId(pendingCursor)?pendingQuery.startAt('pending',pendingCursor+'\uf8ff').endAt('pending'):pendingQuery.equalTo('pending')).limitToFirst(80).get();
++  if(!pending.exists()&&validMatchId(pendingCursor))pending=await db.ref('matchSecretsV1').orderByChild('settlementStatus').equalTo('pending').limitToFirst(80).get();
++  const pendingIds=Object.keys(pending.val()||{}).sort();
++  await pendingCursorRef.set(pendingIds.at(-1)||'');
+   for(const [id,value] of Object.entries(pending.val()||{})){try{const m=api.hydrate(value),human=Object.values(m.players).find(p=>!p.bot);if(human)await settle(id,human.uid);}catch(e){deps.logger?.warn('Battle V1 settlement deferred',{matchId:id,code:e.code||'TEMPORARILY_UNAVAILABLE'});}}
+  }
+  async function ackBattleV1Result(context){

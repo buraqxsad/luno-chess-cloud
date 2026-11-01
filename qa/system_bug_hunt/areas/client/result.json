@@ -1,0 +1,56 @@
+{
+  "bugs": [
+    {
+      "severity": "P2",
+      "title": "refreshState accepts stale completion after local username persistence",
+      "root_cause": "API request checks finish before awaiting requireUsernamePublication. A delayed SharedPreferences write leaves a second async window with no final owner/generation/state-epoch/access/disposal check before applyServerState and service metadata/notify. Store notification can also change ownership synchronously.",
+      "source_file": "luno_chess/lib/services/luno_online_service.dart",
+      "test_file": "luno_chess/test/system_hunt_client_refresh_boundary_test.dart",
+      "baseline": {
+        "pass": 1,
+        "fail": 4,
+        "log": "refresh-before.log",
+        "case_count": 5
+      },
+      "fixed_narrow": {
+        "pass": 7,
+        "fail": 0,
+        "log": "refresh-after.log"
+      },
+      "fixed_related_regression": {
+        "pass": 91,
+        "fail": 0,
+        "skip": 0,
+        "files": 8,
+        "log": "refresh-regression.log"
+      },
+      "additional_new_fixed_tests": 2,
+      "boundary_names": [
+        "same-session",
+        "account-change",
+        "dispose",
+        "access-denied",
+        "retry",
+        "store-notification-account-change",
+        "store-notification-dispose"
+      ],
+      "scope_limit": "P2 stale client completion/lifecycle issue; no proven unauthorized backend grant or native-device acceptance."
+    }
+  ],
+  "base_commit": "fc11b702876d0d5c181c545bf6e52319fdddc520",
+  "baseline_source_sha256": "80619d29d7968b57930896f6f21aa8ef75006e4865934d25700d2d6bf4258bf5",
+  "fixed_source_sha256": "a6e1d67f8a56fa1507e747cd11261442fb76daa5750b1410fb8dd8f1de91d8ac",
+  "test_sha256": "1740f65f0d223f907811eab54f3d8f1b6d697cb87d4fbeb8d49145ffbf0e2718",
+  "production_files_changed": [
+    "luno_chess/lib/services/luno_online_service.dart"
+  ],
+  "new_test_files": [
+    "luno_chess/test/system_hunt_client_refresh_boundary_test.dart"
+  ],
+  "overlapping_test_counts_not_summed": true,
+  "full_regression": "NOT RUN by agent",
+  "native_device": "NOT RUN",
+  "production_firebase": "NOT RUN",
+  "deploy": false,
+  "commit": false
+}

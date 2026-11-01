@@ -1,0 +1,38 @@
+{
+  "variant": "fixed",
+  "scope": "Real local RTDB security rules; Admin SDK databaseAuthVariableOverride client identities, no Auth/Functions/production.",
+  "rules_file": "/workspace/luno-chess/database.rules.production.json",
+  "rules_sha256": "2c62fa56509b6f5ed84abf6847763193e4399fcaf181bfbce161ce78bcf45ff9",
+  "project": "demo-luno-presence-erasure",
+  "namespace": "demo-luno-presence-erasure-default-rtdb",
+  "peak_combined_rss_kib": 233336,
+  "java_command": [
+    "java",
+    "-Xms32m",
+    "-Xmx192m",
+    "-XX:MaxMetaspaceSize=96m",
+    "-XX:ReservedCodeCacheSize=32m",
+    "-Xss256k",
+    "-XX:ActiveProcessorCount=2",
+    "-XX:+UseSerialGC",
+    "-Duser.language=en",
+    "-jar",
+    "/workspace/toolchains/firebase-emulators/firebase-database-emulator-v4.11.2.jar",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "19000",
+    "--single_project_mode",
+    "Warning"
+  ],
+  "exit_code": 0,
+  "counts": {
+    "tests": 12,
+    "pass": 12,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "port_closed": true,
+  "elapsed_seconds": 16.979
+}

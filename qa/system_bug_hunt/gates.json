@@ -1,0 +1,67 @@
+[
+  {
+    "gate": "Yeni güvenlik/hesap/ödeme/online/arayüz regresyonları",
+    "status": "PASS",
+    "reason": "Önce başarısız tekrar üretim; sonra dar regresyonlar. Ekonomi Play yanıtları simüle."
+  },
+  {
+    "gate": "Gerçek yerel RTDB Billing ek proof",
+    "status": "FAIL / NOT COMPLETE",
+    "reason": "İki bütçeli koşu SDK zaman aşımında durdu;0 durable observation. Yerel socket adapter tekrarı da PASS olmadı; kaynak değişmedi."
+  },
+  {
+    "gate": "Gerçek yerel RTDB presence rules",
+    "status": "PASS",
+    "reason": "Owner/onDisconnect olumlu; yanlış UID/auth-null olumsuz. Önce9/3, sonra12/0. Üretim attestation değildir."
+  },
+  {
+    "gate": "Backend tam",
+    "status": "PASS",
+    "reason": "1365 pass /0 fail /1 skip; her dosya doğrudan Node, gerçek alt test sayıları."
+  },
+  {
+    "gate": "TypeScript / Dart differential",
+    "status": "PASS",
+    "reason": "TS 376 pass; 3101 senaryo /10967 state ve tam legal set; sıfır ayrışma."
+  },
+  {
+    "gate": "Tam Flutter",
+    "status": "FAIL",
+    "reason": "11759 pass /97 fail /0 skip. Tarihsel görsel farklar açık; golden değişmedi."
+  },
+  {
+    "gate": "Yeni debug APK statik kabulü",
+    "status": "PASS",
+    "reason": "com.luno.chess/1.6.3+19/min24/target36; aynı debug imzası;750 asset; ELF/ZIP16KB."
+  },
+  {
+    "gate": "Release APK/AAB",
+    "status": "BLOCKED",
+    "reason": "Mevcut upload key/properties yok; signing guard durdu, kimlik değiştirilmedi."
+  },
+  {
+    "gate": "Yeni APK native yolculuğu",
+    "status": "NOT RUN",
+    "reason": "Sağlıklı native cihaz kabulü yok; önceki API29 raster SIGSEGV açık."
+  },
+  {
+    "gate": "Fiziksel FPS/RAM/p95–p99/gerçek16KB",
+    "status": "NOT RUN",
+    "reason": "Fiziksel Android/KVM/GPU erişimi yok; statik16KB runtime değildir."
+  },
+  {
+    "gate": "Üretim Firebase/AppCheck/Google/Integrity",
+    "status": "BLOCKED",
+    "reason": "Hazır kimlik/servis erişimi yok; deploy yapılmadı."
+  },
+  {
+    "gate": "Play lisans satın alma/restore/refund/üyelik",
+    "status": "BLOCKED",
+    "reason": "Lisans hesabı/track ve Play Services cihazı yok; gerçek para harcanmadı."
+  },
+  {
+    "gate": "Play Console/versionCode/Pre-launch/beyanlar",
+    "status": "BLOCKED",
+    "reason": "Console geçmişi yok; +19 uygunluğu ve zorunlu mağaza kapıları doğrulanmadı."
+  }
+]

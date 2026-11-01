@@ -1,0 +1,192 @@
+{
+  "source_base": "fc11b702876d0d5c181c545bf6e52319fdddc520",
+  "bugs": [
+    {
+      "severity": "P1",
+      "area": "V1 pending settlement maintenance",
+      "root_cause": "Every sweep rereads the first 80 pending records without a rotating cursor; a full failing page indefinitely starves later players.",
+      "before": {
+        "pass": 1,
+        "fail": 2
+      },
+      "after": {
+        "pass": 3,
+        "fail": 0
+      },
+      "fix": "Independent validated settlementCursor, bounded ordered status query, exclusive key progression and wrap retry."
+    },
+    {
+      "severity": "P2",
+      "area": "Friendly room after expired ranked search",
+      "root_cause": "available() permits expired search leases, but their queued entry remains and joinRoom rejects host as busy.",
+      "before": {
+        "pass": 2,
+        "fail": 3
+      },
+      "after": {
+        "pass": 5,
+        "fail": 0
+      },
+      "fix": "Prune expired ranked queue leases in the same friendly-control transaction; retain live searches."
+    }
+  ],
+  "focused_runs": [
+    {
+      "log": "settlement-after.log",
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "log": "expired-queue-after.log",
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "log": "v217-settlement-recovery.log",
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "log": "legacy-settlement-recovery.log",
+      "tests": 19,
+      "pass": 19,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "log": "v213-battle-progress.log",
+      "tests": 18,
+      "pass": 18,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "log": "v201b-friendly.log",
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "log": "v201b-recovery.log",
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "log": "v201b-authority.log",
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "log": "v201b-rollout.log",
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "log": "settlement-presence.log",
+      "tests": 8,
+      "pass": 8,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "log": "v236-query-index-contract.log",
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    }
+  ],
+  "totals": {
+    "tests": 74,
+    "pass": 74,
+    "fail": 0,
+    "skipped": 0
+  },
+  "production_acceptance": "NOT RUN",
+  "live_deploy": false,
+  "scope": "Actual exported server API/maintenance over deterministic local memory DB and controlled transient read failures; no actual Firebase SDK server integration in this agent run.",
+  "files": [
+    {
+      "file": "functions/lib/battle-v1-recovery.js",
+      "sha256": "34676f097fe1a7e831ca988d5c8324cacb01eaa14e1b0f0673119831673642aa"
+    },
+    {
+      "file": "functions/lib/battle-v1-friendly.js",
+      "sha256": "24db67ece22b41a0f70a42c75aea612365564e86796aa21916910d915f99dd9a"
+    },
+    {
+      "file": "functions/test/system-hunt-online-settlement-fairness.test.js",
+      "sha256": "13f95ecf68d228ba6dacd531affd9bc1c252855c1e52edc94b83084de8ec2edf"
+    },
+    {
+      "file": "functions/test/system-hunt-online-expired-queue-room.test.js",
+      "sha256": "fa41d4c68e83cbef22911721e593fb1ce46ae4b664868f55de0086a20834cd94"
+    }
+  ],
+  "baseline_provenance": [
+    {
+      "file": "battle-v1-friendly.js",
+      "commit": "fc11b702876d0d5c181c545bf6e52319fdddc520",
+      "sha256": "557f4ae7a76ce2e8297a76122dd6bb83d9cc37a6afd01b747339d28a8a5ab4e9"
+    },
+    {
+      "file": "battle-v1-recovery.js",
+      "commit": "fc11b702876d0d5c181c545bf6e52319fdddc520",
+      "sha256": "a64f85ab7e378a088bd7180e6570f231457c62a06c309e5e8990cefc5679c2e1"
+    }
+  ],
+  "exact_final_proofs": [
+    {
+      "log": "settlement-baseline-exact.log",
+      "tests": 3,
+      "pass": 1,
+      "fail": 2,
+      "skipped": 0
+    },
+    {
+      "log": "expired-queue-baseline-exact.log",
+      "tests": 5,
+      "pass": 2,
+      "fail": 3,
+      "skipped": 0
+    },
+    {
+      "log": "settlement-final.log",
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "log": "expired-queue-final.log",
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "skipped": 0
+    }
+  ]
+}

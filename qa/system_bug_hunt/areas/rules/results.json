@@ -1,0 +1,99 @@
+{
+  "scope": "24-card rules, orthodox engine, terminal/repetition, identity/conservation/knowledge invariants",
+  "baseline_commit": "fc11b702876d0d5c181c545bf6e52319fdddc520",
+  "new_confirmed_bugs": 0,
+  "production_files_changed": [],
+  "new_tracked_tests": [],
+  "flutter_focused": {
+    "pass": 488,
+    "fail": 0,
+    "skip": 0,
+    "exit": 0
+  },
+  "typescript_focused": {
+    "tests": 149,
+    "pass": 148,
+    "fail": 0,
+    "skipped": 1,
+    "cancelled": 0
+  },
+  "conservation_probe": {
+    "scope": "bounded independently stated conservation/identity/known-prefix/nonstale-radar invariants; TS engine only",
+    "seedCount": 48,
+    "statesInspected": 8654,
+    "chessMoves": 4331,
+    "atomicIllegalRejections": 8606,
+    "cardsCast": {
+      "mine": 33,
+      "radar": 43,
+      "shadow_contract": 48,
+      "watch_vow": 36,
+      "locked_square": 29,
+      "echo": 32,
+      "pawn_advance": 28,
+      "chain": 36,
+      "card_block": 12,
+      "shelter": 44,
+      "freeze": 3,
+      "break_seal": 11,
+      "hunt_vow": 10,
+      "prophecy": 24,
+      "pawn_deviation": 34,
+      "rook_bend": 18,
+      "angry_n": 8,
+      "fog": 24,
+      "shadow_pass": 16,
+      "purify": 6,
+      "mana_sabotage": 30,
+      "slow": 23,
+      "board_seal": 2,
+      "fate_exchange": 1
+    },
+    "passed": true
+  },
+  "accepted_input_immutability_probe": {
+    "scope": "bounded conservation plus accepted-action input immutability; TS engine only",
+    "seedCount": 8,
+    "statesInspected": 1448,
+    "chessMoves": 725,
+    "atomicIllegalRejections": 1440,
+    "cardsCast": {
+      "mine": 6,
+      "radar": 7,
+      "shadow_contract": 10,
+      "watch_vow": 8,
+      "locked_square": 5,
+      "echo": 5,
+      "pawn_advance": 6,
+      "chain": 5,
+      "card_block": 4,
+      "shelter": 8,
+      "freeze": 1,
+      "break_seal": 4,
+      "hunt_vow": 2,
+      "prophecy": 3,
+      "pawn_deviation": 4,
+      "rook_bend": 3,
+      "angry_n": 3,
+      "fog": 3,
+      "shadow_pass": 1,
+      "purify": 1,
+      "mana_sabotage": 2,
+      "slow": 2
+    },
+    "passed": true
+  },
+  "counts_from_overlapping_runs_not_added": true,
+  "invalid_attempts": [
+    {
+      "log": "flutter-invalid-test-path.log",
+      "cause": "Nonexistent test/v223_movement_card_semantics_test.dart supplied by reviewer; corrected command uses existing files. Not a product failure."
+    },
+    {
+      "log": "typescript-focused.log",
+      "cause": "node --test only gave file-level outer records; excluded from case counts; actual direct-node per-case outcomes in typescript-direct-results.json."
+    }
+  ],
+  "fresh_cross_language_differential": "NOT RUN by this agent; root owns final fresh differential",
+  "native_device_and_production_acceptance": "NOT RUN"
+}

@@ -1,0 +1,9 @@
+{
+  "full_regression_source_commit": "21dcb5032e43d805431a3cdd24af147f4f6dfc19",
+  "build_source_commit": "21dcb5032e43d805431a3cdd24af147f4f6dfc19",
+  "base_commit": "fc11b702876d0d5c181c545bf6e52319fdddc520",
+  "frozen_utc": "2026-10-30T22:37:06.933697+00:00",
+  "typescript_differential_source_commit": "96126331b7d38c2a06545a50924da0e5ea8e02b1",
+  "engine_ts_inputs_byte_identical_to_final": true,
+  "runtime_change_between_test_and_build_commits": []
+}

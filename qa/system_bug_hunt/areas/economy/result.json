@@ -1,0 +1,107 @@
+{
+  "recorded_utc": "2026-10-30T22:37:42.988726+00:00",
+  "production_bug_count": 2,
+  "severity_counts": {
+    "P1": 2
+  },
+  "bug_families": [
+    {
+      "title": "Confirmed refund can be followed by a suspended consumable grant",
+      "severity": "P1",
+      "before": {
+        "file": "refund-race-before.log",
+        "tests": 5,
+        "pass": 2,
+        "fail": 3,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "final_new_tests": 10,
+      "root_cause": "Confirmed pre-grant reversal left no atomic profile marker; an old verified grant could pass after the claim had become voided.",
+      "fix": "Persist a zero-valued ungranted reversal marker in the owner profile transaction; the existing grant path rejects that token."
+    },
+    {
+      "title": "Stale subscription fulfillment or reconciliation can override newer lifecycle and lose a published grant",
+      "severity": "P1",
+      "before": {
+        "file": "subscription-stale-before.log",
+        "tests": 4,
+        "pass": 0,
+        "fail": 4,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "final_new_tests": 20,
+      "root_cause": "Cross-record profile/claim lifecycle writes lacked a shared version fence and completion could race the claims projection.",
+      "fix": "Subscription claim CAS, persistent per-token profile fence, registration-after-ownership plus fresh provider revalidation, authoritative final completion CAS after projection, and fenced failure metadata."
+    }
+  ],
+  "subcases_not_counted_as_separate_production_bugs": true,
+  "intermediate_before_runs": {
+    "publication_gap": {
+      "file": "subscription-publication-gap-before.log",
+      "tests": 15,
+      "pass": 14,
+      "fail": 1,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "final_snapshot_boundaries": {
+      "file": "final-boundaries-before.log",
+      "tests": 17,
+      "pass": 15,
+      "fail": 2,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  "final_focused_direct_node": {
+    "files": 10,
+    "tests": 208,
+    "pass": 208,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "records": "final-focused-results.json",
+    "overlapping_root_full_counts_not_summed": true
+  },
+  "source_files": [
+    {
+      "path": "functions/index.js",
+      "sha256": "5b0a8ef98fd05ee3d8414db884b617fdef44881c2c3c27ade8be5fbaa82aaf59"
+    },
+    {
+      "path": "functions/test/retained-record-race.test.js",
+      "sha256": "d465e72d86c03a05d50ec9531fe9b28d4ab71c16a3913aa556ee428f4ac0b0d5"
+    },
+    {
+      "path": "functions/test/subscription-reconciliation-race.test.js",
+      "sha256": "76b056991aa13d14e6f91a62256e5144fef77785a5c7b0a4c6bfff79700f6c3a"
+    },
+    {
+      "path": "functions/test/system-hunt-economy-refund-grant-race.test.js",
+      "sha256": "b805af7ab79fcd7cb49898abd84d3198ced141acd6b91f6fccb5790c7db62036"
+    },
+    {
+      "path": "functions/test/system-hunt-economy-subscription-stale-fulfillment.test.js",
+      "sha256": "af6527eea53b73798f9814e0bf8e0d20171a05b8d9bd519b1eec0e5af71e80da"
+    }
+  ],
+  "source_freeze_ready": true,
+  "syntax_check": "PASS",
+  "diff_check": "PASS",
+  "full_regression": "NOT RUN by agent",
+  "real_play_billing": "NOT RUN; provider mocked",
+  "production_firebase": "NOT RUN; memory database fixture",
+  "deploy": false,
+  "real_money": false,
+  "play_upload": false,
+  "commit_by_agent": false,
+  "assertions_removed_or_weakened": false,
+  "intentional_existing_expectation_changes": [
+    "retained-record full profile equality includes exact zero-value revocation metadata; all other profile fields remain equal",
+    "first subscription provider validation2 + replay1 =3; unrelated monetary/idempotency assertions retained",
+    "held claims query count3 = initial held read + final purchase projection + required retry after revision changes"
+  ],
+  "client_retry_check": "luno_online_billing_backend delegates retryability to LunoOnlineService.isRetryableFailure; status503 remains retryable and unknown code is sanitized to verification-unavailable"
+}

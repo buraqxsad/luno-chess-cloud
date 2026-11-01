@@ -1,0 +1,44 @@
+--- a/functions/index.js
++++ b/functions/index.js
+@@ -3727,8 +3727,18 @@
+   const economy=profile.serverEconomy||{},previous=economy.purchaseTokens&&economy.purchaseTokens[tokenHashValue];
+   if(economy.billingReversals&&economy.billingReversals[tokenHashValue])return {revoked:false,idempotent:true};
+   if(!previous){
+-    if(claim.status==='verified')return {revoked:false,ungranted:true};
+-    return {error:'purchase-receipt-invalid'};
++    if(claim.status!=='verified')return {error:'purchase-receipt-invalid'};
++    // A verified fulfillment may already be waiting to transact this profile.
++    // Persist the provider-confirmed revocation in the same transaction even
++    // without a grant: its stale claim snapshot must not mint currency later.
++    profile.serverEconomy=profile.serverEconomy||{};
++    profile.serverEconomy.billingReversals=profile.serverEconomy.billingReversals||{};
++    profile.serverEconomy.billingReversals[tokenHashValue]={
++      productId:claim.productId,requestedGold:0,recoveredGold:0,requestedGems:0,recoveredGems:0,
++      debtGold:0,debtGems:0,createdAt:at,ungranted:true
++    };
++    profile.updatedAt=at;
++    return {revoked:false,ungranted:true};
+   }
+   if(previous.productId!==claim.productId||previous.kind!=='inapp'||previous.active!==true||previous.entitlementStatus!=='granted')return {error:'purchase-receipt-invalid'};
+   for(const field of ['grantGold','grantGems'])if(!Number.isSafeInteger(previous[field])||previous[field]<0||previous[field]>1000000000||claim[field]!=null&&claim[field]!==previous[field])return {error:'purchase-receipt-invalid'};
+--- a/functions/test/retained-record-race.test.js
++++ b/functions/test/retained-record-race.test.js
+@@ -175,8 +175,16 @@
+   await assert.rejects(fulfillPurchase(uid,{productId,purchaseToken:token}),{code:'purchase-receipt-invalid'});
+ });
+ test('refund of a verified but ungranted purchase cannot debit unrelated gold',()=>{
+-  const profile=starterProfile(uid,'ungranted_name'),before=structuredClone(profile);
+-  assert.deepEqual(applyVoidedPurchaseRevocation(profile,claim(),key,Date.now()),{revoked:false,ungranted:true});assert.deepEqual(profile,before);
++  const profile=starterProfile(uid,'ungranted_name'),before=structuredClone(profile),at=Date.now();
++  assert.deepEqual(applyVoidedPurchaseRevocation(profile,claim(),key,at),{revoked:false,ungranted:true});
++  before.serverEconomy.billingReversals={[key]:{
++    productId,requestedGold:0,recoveredGold:0,requestedGems:0,recoveredGems:0,
++    debtGold:0,debtGems:0,createdAt:at,ungranted:true
++  }};
++  before.updatedAt=at;
++  // Every other field, including all unrelated currency and entitlements,
++  // remains byte-for-byte equivalent while the new grant guard is durable.
++  assert.deepEqual(profile,before);
+ });
+ for(const invalid of ['missing','mismatched-product','negative-amount','claim-disagrees'])test(`refund fails closed for ${invalid} grant evidence`,()=>{
+   const profile=starterProfile(uid,'refund_name'),value=receipt(),entry={...claim(),status:'complete'};

@@ -1,0 +1,40 @@
+{
+  "baseline_commit": "fc11b702876d0d5c181c545bf6e52319fdddc520",
+  "bugs_fixed": [
+    {
+      "severity": "P2",
+      "title": "Battle modal admitted from an obsolete snapshot before its first builder",
+      "root_cause": "_changed could only close an existing sheetRoute, but the first builder had not assigned one yet; builder ownership omitted match version/terminal. Already-visible sheets also retained their old child through the first invalidated paint.",
+      "source": "luno_chess/lib/screens/battle_v1_screen.dart",
+      "new_regression": "luno_chess/test/system_hunt_battle_sheet_version_test.dart",
+      "before": {
+        "pass": 1,
+        "fail": 4,
+        "exit": 1
+      },
+      "after_combined": {
+        "pass": 22,
+        "fail": 0,
+        "skip": 0,
+        "exit": 0
+      },
+      "baseline_source_sha256": "6191ad3d4bd6ae72e5e7f105e504e62bd8798cfe7433f81f4e18a5b2ba9c4734",
+      "fixed_source_sha256": "89df1a0cea6279c5d038234120f29b4de9af9e744b74ac8ae1f73cad88c318ab"
+    }
+  ],
+  "reviewed_scope": [
+    "battle sheet ownership and lazy first-build boundary",
+    "hotseat privacy acknowledgement and account binding admission",
+    "emote picker late send/response and exact-route ownership",
+    "accepted feedback history reset, reduced-motion and lifecycle cancellation",
+    "finite mentor and tutorial progression callback guards",
+    "central audio queue/scene ownership and lifecycle"
+  ],
+  "other_new_verified_bugs": 0,
+  "device_native_test": "NOT RUN",
+  "emulator_started": false,
+  "goldens_changed": false,
+  "existing_assertions_weakened": false,
+  "commit_performed": false,
+  "production_deploy": false
+}

@@ -1,0 +1,8 @@
+{
+  "source": "21dcb5032e43d805431a3cdd24af147f4f6dfc19",
+  "stage": "analyze",
+  "exit": 1,
+  "flutter_full_started": false,
+  "cause": "Three lint/style infos in new tests; production logic unchanged.",
+  "not_a_full_test_result": true
+}

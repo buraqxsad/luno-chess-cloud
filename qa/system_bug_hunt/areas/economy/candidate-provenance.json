@@ -1,0 +1,6 @@
+{
+  "working_index_sha256_before_patch": "ff02b6e8c8dae5cc51d21dd1d510a31f8cecf5c23a09917db754334730299116",
+  "candidate_index_sha256": "1651e0041a51d425f34940a394fff2cea508d79302ab42c8013a4fca0dc4e70c",
+  "working_source_not_modified_by_agent": true,
+  "candidate_only_behavior_change": "Profile-side zero-amount revocation marker for provider-confirmed ungranted refund"
+}

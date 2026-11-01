@@ -1,0 +1,13 @@
+diff --git a/database.rules.production.json b/database.rules.production.json
+index cf5200c..99a8354 100644
+--- a/database.rules.production.json
++++ b/database.rules.production.json
+@@ -40,7 +40,7 @@
+     "presence": {
+       ".read": "auth != null",
+       "$uid": {
+-        ".write": "auth != null && auth.uid === $uid",
++        ".write": "auth != null && auth.uid === $uid && root.child('users').child(auth.uid).exists()",
+         ".validate": "newData.hasChildren(['online','lastSeen']) && newData.child('online').isBoolean() && newData.child('lastSeen').isNumber() && newData.child('lastSeen').val() <= now + 10000"
+       }
+     },

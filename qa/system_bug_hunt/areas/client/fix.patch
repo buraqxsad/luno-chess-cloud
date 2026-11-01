@@ -1,0 +1,49 @@
+diff --git a/luno_chess/lib/services/luno_online_service.dart b/luno_chess/lib/services/luno_online_service.dart
+index 3d3acfa..64117c7 100644
+--- a/luno_chess/lib/services/luno_online_service.dart
++++ b/luno_chess/lib/services/luno_online_service.dart
+@@ -854,6 +854,7 @@ class LunoOnlineService extends ChangeNotifier {
+   );
+ 
+   Future<void> refreshState() async {
++    final startingOwner = (user?.uid, accountRevision);
+     final uid = user?.uid;
+     final revision = _playerStore.accountBindingRevision;
+     final draft =
+@@ -861,8 +862,24 @@ class LunoOnlineService extends ChangeNotifier {
+             ? _playerStore.data.username
+             : _playerStore.pendingUsernameDraft;
+     final result = await getPlayerState();
++    _checkKnownAccountOwner(startingOwner);
+     final state = result['state'];
+     if (state is Map) {
++      final completionOwner = (user?.uid, accountRevision);
++      final generation = _requestGeneration;
++      void checkCurrentState() {
++        _checkKnownAccountOwner(completionOwner);
++        if (accountFailure != null) throw accountFailure!;
++        if (generation != _requestGeneration ||
++            (_bindsPlayerStore &&
++                (state[GameStore.serverStateOwnerKey] != user?.uid ||
++                    state[GameStore.serverStateEpochKey] !=
++                        _playerStore.serverStateEpoch))) {
++          throw const LunoApiException('session-changed', 409);
++        }
++      }
++
++      checkCurrentState();
+       final profile = state['profile'];
+       if (_bindsPlayerStore &&
+           uid != null &&
+@@ -870,7 +887,11 @@ class LunoOnlineService extends ChangeNotifier {
+           profile['usernameGenerated'] == true) {
+         await _playerStore.requireUsernamePublication(uid, revision, draft);
+       }
++      // The local username write can outlive auth recovery or access denial.
++      // Its completion must not clear a newer error or notify a disposed owner.
++      checkCurrentState();
+       _playerStore.applyServerState(Map<String, dynamic>.from(state));
++      checkCurrentState();
+       lastSyncAt = DateTime.now();
+       lastError = null;
+       notifyListeners();

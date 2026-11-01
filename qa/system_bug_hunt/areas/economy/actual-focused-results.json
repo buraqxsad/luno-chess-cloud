@@ -1,0 +1,74 @@
+[
+  {
+    "file": "test/system-hunt-economy-refund-grant-race.test.js",
+    "exit_code": 0,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "test/core.test.js",
+    "exit_code": 0,
+    "tests": 56,
+    "pass": 56,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "test/retained-record-race.test.js",
+    "exit_code": 0,
+    "tests": 66,
+    "pass": 66,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "test/v217-billing-recovery.test.js",
+    "exit_code": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "test/subscription-reconciliation-race.test.js",
+    "exit_code": 0,
+    "tests": 12,
+    "pass": 12,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "test/v215-product-economy.test.js",
+    "exit_code": 0,
+    "tests": 31,
+    "pass": 31,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "test/v238-daily-claim-ordering.test.js",
+    "exit_code": 0,
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "test/v239-daily-acceptance.test.js",
+    "exit_code": 0,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "test/v236-economy-route-recovery.test.js",
+    "exit_code": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "file": "v201b-friendly.test.js",
+    "exit_code": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v201b-recovery.test.js",
+    "exit_code": 0,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v201b-authority.test.js",
+    "exit_code": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v201b-rollout.test.js",
+    "exit_code": 0,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "settlement-presence.test.js",
+    "exit_code": 0,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v236-query-index-contract.test.js",
+    "exit_code": 0,
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  }
+]

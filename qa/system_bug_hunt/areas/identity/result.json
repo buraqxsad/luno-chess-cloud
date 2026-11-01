@@ -1,0 +1,66 @@
+{
+  "baseline_commit": "fc11b702876d0d5c181c545bf6e52319fdddc520",
+  "production_bug_count": 1,
+  "severity": "P2",
+  "bug": "Deleted-account presence recreated by late heartbeat or registered onDisconnect",
+  "changed_files": [
+    {
+      "file": "database.rules.production.json",
+      "sha256": "2c62fa56509b6f5ed84abf6847763193e4399fcaf181bfbce161ce78bcf45ff9"
+    },
+    {
+      "file": "functions/test/system-hunt-identity-presence.test.js",
+      "sha256": "23a50ffe6fec136454e1f109f4dad17255a7b8e016c075a3642ce89d9e718a6f"
+    },
+    {
+      "file": "functions/test/system-hunt-identity-presence.integration.js",
+      "sha256": "cd7a7bb5b4486b2189b3c39fb75c34352c6827252081a317b5561c286d467d38"
+    }
+  ],
+  "actual_rules_proof": {
+    "baseline": {
+      "tests": 12,
+      "pass": 9,
+      "fail": 3,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "fixed": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "same_repo_integration_script_for_canonical_baseline_and_fixed": true,
+    "baseline_rules_sha256": "167998d9a535e5a88876429b7df030763e4e9c3b753ff9625f6edfbc6b68552a",
+    "fixed_rules_sha256": "2c62fa56509b6f5ed84abf6847763193e4399fcaf181bfbce161ce78bcf45ff9",
+    "negative_auth_controls_passed": true,
+    "live_owner_and_onDisconnect_controls_passed": true,
+    "namespace": "demo-luno-presence-erasure-default-rtdb",
+    "host": "127.0.0.1:19000",
+    "admin_sdk_version": "14.2.0",
+    "rtdb_version": "4.11.2",
+    "peak_combined_rss_kib": 233336,
+    "port_closed": true
+  },
+  "focused_direct_node_tests": {
+    "files": 8,
+    "pass": 113,
+    "fail": 0,
+    "skipped": 0
+  },
+  "contract_before": {
+    "pass": 2,
+    "fail": 1
+  },
+  "contract_after": {
+    "pass": 3,
+    "fail": 0
+  },
+  "production_firebase_acceptance": "NOT RUN",
+  "deploy": false,
+  "assertions_weakened": false,
+  "legacy_rules_modified": false,
+  "index_js_modified_by_this_agent": false
+}

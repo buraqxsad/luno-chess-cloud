@@ -1,0 +1,13 @@
+{
+  "resumed_utc": "2026-10-30T22:31:19.275780+00:00",
+  "head": "96126331b7d38c2a06545a50924da0e5ea8e02b1",
+  "previous_completed_agent_areas": [
+    "identity",
+    "online",
+    "client",
+    "battle",
+    "rules"
+  ],
+  "remaining_work": "Finish subscription fencing; final regression, package and QA evidence.",
+  "production_access_credentials_ready": false
+}

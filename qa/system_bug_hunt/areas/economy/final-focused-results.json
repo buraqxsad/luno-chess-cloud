@@ -1,0 +1,122 @@
+[
+  {
+    "file": "test/system-hunt-economy-refund-grant-race.test.js",
+    "exit_code": 0,
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "elapsed_seconds": 1.587,
+    "log": "system-hunt-economy-refund-grant-race-final-source.log",
+    "source_sha256": "b805af7ab79fcd7cb49898abd84d3198ced141acd6b91f6fccb5790c7db62036"
+  },
+  {
+    "file": "test/system-hunt-economy-subscription-stale-fulfillment.test.js",
+    "exit_code": 0,
+    "tests": 20,
+    "pass": 20,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "elapsed_seconds": 1.636,
+    "log": "system-hunt-economy-subscription-stale-fulfillment-final-source.log",
+    "source_sha256": "af6527eea53b73798f9814e0bf8e0d20171a05b8d9bd519b1eec0e5af71e80da"
+  },
+  {
+    "file": "test/core.test.js",
+    "exit_code": 0,
+    "tests": 56,
+    "pass": 56,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "elapsed_seconds": 0.77,
+    "log": "core-final-source.log",
+    "source_sha256": "45d2f99a09618cb8dacadf672155fa3b15a70d8b2f9b894809ce32abc9e116cf"
+  },
+  {
+    "file": "test/retained-record-race.test.js",
+    "exit_code": 0,
+    "tests": 66,
+    "pass": 66,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "elapsed_seconds": 1.835,
+    "log": "retained-record-race-final-source.log",
+    "source_sha256": "d465e72d86c03a05d50ec9531fe9b28d4ab71c16a3913aa556ee428f4ac0b0d5"
+  },
+  {
+    "file": "test/subscription-reconciliation-race.test.js",
+    "exit_code": 0,
+    "tests": 12,
+    "pass": 12,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "elapsed_seconds": 2.042,
+    "log": "subscription-reconciliation-race-final-source.log",
+    "source_sha256": "76b056991aa13d14e6f91a62256e5144fef77785a5c7b0a4c6bfff79700f6c3a"
+  },
+  {
+    "file": "test/v217-billing-recovery.test.js",
+    "exit_code": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "elapsed_seconds": 2.291,
+    "log": "v217-billing-recovery-final-source.log",
+    "source_sha256": "a421b52f57933b7a8a793e56282e72523d9ed7a6a116f67dbe0f92f5d6a61feb"
+  },
+  {
+    "file": "test/v215-product-economy.test.js",
+    "exit_code": 0,
+    "tests": 31,
+    "pass": 31,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "elapsed_seconds": 1.251,
+    "log": "v215-product-economy-final-source.log",
+    "source_sha256": "3f12fa469c373db45ed81e483fae8d641350dfad7dde09ae3c5d9fe0ece97267"
+  },
+  {
+    "file": "test/v238-daily-claim-ordering.test.js",
+    "exit_code": 0,
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "elapsed_seconds": 1.054,
+    "log": "v238-daily-claim-ordering-final-source.log",
+    "source_sha256": "b035ff088ef3a240b335dd5f1ce63ea8f6bce989c4cb7de93f9dc789c2678612"
+  },
+  {
+    "file": "test/v239-daily-acceptance.test.js",
+    "exit_code": 0,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "elapsed_seconds": 1.177,
+    "log": "v239-daily-acceptance-final-source.log",
+    "source_sha256": "b773f3cfc444425a72c54690193b25137a9959f6a01f1a34c19334b2c70f8e95"
+  },
+  {
+    "file": "test/v236-economy-route-recovery.test.js",
+    "exit_code": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "elapsed_seconds": 0.826,
+    "log": "v236-economy-route-recovery-final-source.log",
+    "source_sha256": "baabfc86a35c1ea1b84450443137ef314e43ec875d2d0c2158ee233db2143167"
+  }
+]

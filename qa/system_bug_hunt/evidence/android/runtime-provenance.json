@@ -1,0 +1,8 @@
+{
+  "source_commit": "219b1daf5f2329c558bc1ac7a3cf6c781e316514",
+  "file": "Luno-Chess-system-bug-hunt-debug-arm64.apk",
+  "payload": "assets/flutter_assets/kernel_blob.bin",
+  "sha256": "3ac75d4e297031d6dcfd439ba6af7b1aaa5300e5dbe63fd5b580b27bbd0391ae",
+  "tutorial_live_sha256": "7b43dbbb0376d6170403ad13b98575c576de2f74da8cee9d35cdb0528331de60",
+  "different_from_previous": true
+}

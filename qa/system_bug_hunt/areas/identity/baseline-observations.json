@@ -1,0 +1,51 @@
+[
+  {
+    "case": "live-owner-write",
+    "persisted_presence": {
+      "lastSeen": 1793289117482,
+      "online": true
+    }
+  },
+  {
+    "case": "wrong-uid",
+    "persisted_presence": null
+  },
+  {
+    "case": "unauthenticated",
+    "persisted_presence": null
+  },
+  {
+    "case": "live-heartbeat-remove",
+    "persisted_presence": null
+  },
+  {
+    "case": "future-timestamp",
+    "persisted_presence": null
+  },
+  {
+    "case": "malformed-online",
+    "persisted_presence": null
+  },
+  {
+    "case": "missing-lastSeen",
+    "persisted_presence": null
+  },
+  {
+    "case": "account-switch",
+    "persisted_presence": null
+  },
+  {
+    "case": "live-onDisconnect",
+    "persisted_presence": {
+      "lastSeen": 1793289118234,
+      "online": false
+    }
+  },
+  {
+    "case": "deleted-onDisconnect",
+    "persisted_presence": {
+      "lastSeen": 1793289118346,
+      "online": false
+    }
+  }
+]

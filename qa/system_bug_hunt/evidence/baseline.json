@@ -1,0 +1,22 @@
+{
+  "started_utc": "2026-10-29T15:45:43.583570+00:00",
+  "source_commit": "fc11b702876d0d5c181c545bf6e52319fdddc520",
+  "branch": "codex/cloud-transfer-20261027",
+  "git_status_at_start": "",
+  "prior_flutter": {
+    "success": 11747,
+    "fail": 97,
+    "skip": 0
+  },
+  "prior_backend": {
+    "success": 1324,
+    "fail": 0,
+    "skip": 1
+  },
+  "prior_ts": {
+    "success": 376,
+    "fail": 0,
+    "skip": 0
+  },
+  "release_decision_at_start": "HOLD"
+}
