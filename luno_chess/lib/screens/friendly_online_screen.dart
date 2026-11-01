@@ -28,6 +28,14 @@ class _FriendlyOnlineScreenState extends State<FriendlyOnlineScreen>
   late final online = widget.online ?? LunoOnlineService.instance;
   late final (String?, int) _owner;
   bool get _ownsAccount => _owner == (online.user?.uid, online.accountRevision);
+  bool _foreground = true;
+  (String, Map<String, dynamic>)? _pendingMatch;
+  bool _matchNavigationScheduled = false;
+  bool get _canPresent =>
+      mounted &&
+      _ownsAccount &&
+      _foreground &&
+      ModalRoute.of(context)?.isCurrent == true;
   void _checkOwner() {
     if (!_ownsAccount) throw const LunoApiException('session-changed', 409);
   }
@@ -56,6 +64,8 @@ class _FriendlyOnlineScreenState extends State<FriendlyOnlineScreen>
   void initState() {
     super.initState();
     _owner = (online.user?.uid, online.accountRevision);
+    final lifecycle = WidgetsBinding.instance.lifecycleState;
+    _foreground = lifecycle == null || lifecycle == AppLifecycleState.resumed;
     WidgetsBinding.instance.addObserver(this);
     online.addListener(_onOnlineChanged);
   }
@@ -76,6 +86,7 @@ class _FriendlyOnlineScreenState extends State<FriendlyOnlineScreen>
 
   void _onOnlineChanged() {
     if (!_ownsAccount) {
+      _pendingMatch = null;
       _flowGeneration++;
       _pollToken++;
       _pollTimer?.cancel();
@@ -88,7 +99,9 @@ class _FriendlyOnlineScreenState extends State<FriendlyOnlineScreen>
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
+    _foreground = state == AppLifecycleState.resumed;
     if (state == AppLifecycleState.resumed) {
+      _schedulePendingMatch();
       if (roomCode != null && !_cancelling) {
         _startPolling(_flowGeneration);
         unawaited(_pollRoom(_flowGeneration));
@@ -114,6 +127,7 @@ class _FriendlyOnlineScreenState extends State<FriendlyOnlineScreen>
 
   Future<bool> _ensureOnline() async {
     _checkOwner();
+    if (!_canPresent) return false;
     if (online.isOnline) return true;
     try {
       await online.start().timeout(const Duration(seconds: 12));
@@ -121,6 +135,7 @@ class _FriendlyOnlineScreenState extends State<FriendlyOnlineScreen>
       // Keep the room screen responsive when the device has no network.
     }
     _checkOwner();
+    if (!_canPresent) return false;
     if (!mounted || !online.isOnline) {
       if (mounted) {
         setState(() {
@@ -134,7 +149,8 @@ class _FriendlyOnlineScreenState extends State<FriendlyOnlineScreen>
   }
 
   Future<void> _runAction(Future<void> Function() action) async {
-    if (!_ownsAccount ||
+    if (!_canPresent ||
+        _pendingMatch != null ||
         _preparing ||
         busy ||
         roomCode != null ||
@@ -288,7 +304,7 @@ class _FriendlyOnlineScreenState extends State<FriendlyOnlineScreen>
   }
 
   Future<void> _cancelRoom() async {
-    if (!_ownsAccount || _cancelling) return;
+    if (!_canPresent || _cancelling) return;
     final code = roomCode;
     if (code == null) return;
     final generation = ++_flowGeneration;
@@ -358,13 +374,35 @@ class _FriendlyOnlineScreenState extends State<FriendlyOnlineScreen>
     // it before replacing the route prevents dispose() from racing a second
     // cancellation request against the newly opened match.
     roomCode = null;
+    if (!_canPresent) {
+      // Keep the accepted match until this page is visible again. Replacing
+      // the navigator's top route here could discard an unrelated screen.
+      setState(() => _pendingMatch = (matchId, view));
+      return;
+    }
+    _pendingMatch = null;
     Navigator.of(context).pushReplacement(
       lunoRoute(BattleV1Screen(matchId: matchId, initialView: view)),
     );
   }
 
+  void _schedulePendingMatch() {
+    if (_pendingMatch == null || _matchNavigationScheduled || !_canPresent) {
+      return;
+    }
+    _matchNavigationScheduled = true;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _matchNavigationScheduled = false;
+      final pending = _pendingMatch;
+      if (pending != null && _canPresent) {
+        _openMatch(pending.$1, pending.$2);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    _schedulePendingMatch();
     final copy = LunoLocalizations.of(context);
     return Scaffold(
       resizeToAvoidBottomInset: true,
@@ -569,7 +607,7 @@ class _FriendlyOnlineScreenState extends State<FriendlyOnlineScreen>
 
   Future<void> _copyRoomCode() async {
     final code = roomCode;
-    if (!mounted || code == null || busy || _cancelling) return;
+    if (!_canPresent || code == null || busy || _cancelling) return;
     try {
       await Clipboard.setData(ClipboardData(text: code));
       if (mounted && roomCode == code) _toast('Oda kodu kopyalandı.');
