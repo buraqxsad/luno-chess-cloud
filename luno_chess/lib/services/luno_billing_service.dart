@@ -477,6 +477,36 @@ class LunoBillingService extends ChangeNotifier {
     if (response['ok'] != true || state is! Map || state['uid'] != owner.uid) {
       throw const LunoBillingFailure('invalid-server-state', retryable: true);
     }
+    int? revision, observedAt;
+    if (state.containsKey('stateRevision') ||
+        state.containsKey('stateObservedAt')) {
+      final rawRevision = state['stateRevision'];
+      final rawObservedAt = state['stateObservedAt'];
+      const maxSafeInteger = 9007199254740991;
+      if (rawRevision is! int ||
+          rawRevision < 0 ||
+          rawRevision > maxSafeInteger ||
+          rawObservedAt is! int ||
+          rawObservedAt < 0 ||
+          rawObservedAt > maxSafeInteger) {
+        throw const LunoBillingFailure('invalid-server-state', retryable: true);
+      }
+      revision = rawRevision;
+      observedAt = rawObservedAt;
+    }
+    final previousRevision = _latestSnapshot?.state['stateRevision'];
+    final previousObservedAt = _latestSnapshot?.state['stateObservedAt'];
+    // Restore and receipt verification can refresh concurrently. Match the
+    // store's ordering so a late old response cannot undo current ownership.
+    // Observation time also orders clock-based expiry at the same revision.
+    if (previousRevision is int &&
+        previousObservedAt is int &&
+        (revision == null ||
+            revision < previousRevision ||
+            (revision == previousRevision &&
+                observedAt! < previousObservedAt))) {
+      return;
+    }
     final snapshot = LunoBillingSnapshot(
       owner,
       Map<String, dynamic>.from(state),
