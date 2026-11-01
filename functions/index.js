@@ -3101,8 +3101,17 @@ async function reportMessage(context){
   await rateLimit(uid,'reportMessage',8,60*60*1000);
   const target=await targetPlayer(body.targetUid,uid),messageId=strictString(body.messageId,128,'invalid-message-id'),reason=reportReason(body.reason);
   if(/[.#$\[\]\/]/.test(messageId))throw httpError(400,'invalid-message-id','Message id is invalid.');
-  const conversation=conversationId(uid,target.targetUid),message=(await db.ref(`dm/${conversation}/msgs/${messageId}`).get()).val();
-  if(!message||message.from!==target.targetUid)throw httpError(404,'message-not-found','Reported message does not exist for this conversation.');
+  const conversation=conversationId(uid,target.targetUid);
+  const [membersSnapshot,messageSnapshot]=await Promise.all([
+    db.ref(`dm/${conversation}/members`).get(),db.ref(`dm/${conversation}/msgs/${messageId}`).get()
+  ]);
+  const members=membersSnapshot.val(),message=messageSnapshot.val();
+  // Legacy keys can collide even when the pairs share a target. Declared
+  // participants must bind the report to this pair; read only its small member
+  // map and the reported message, never the unbounded conversation history.
+  const foreign=members!=null&&(typeof members!=='object'||Array.isArray(members)||
+    Object.keys(members).length!==2||members[uid]!==true||members[target.targetUid]!==true);
+  if(foreign||!message||message.from!==target.targetUid)throw httpError(404,'message-not-found','Reported message does not exist for this conversation.');
   return idempotent(uid,context.requestId,'reportMessage',async function(){
     const id=reportId(uid,context.requestId);
     await writeModerationReport({reportId:id,reporterUid:uid,targetUid:target.targetUid,messageId,conversationId:conversation,reason,messageText:cleanString(message.text,500),createdAt:ServerValue.TIMESTAMP,status:'open'});
