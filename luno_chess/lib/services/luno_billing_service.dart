@@ -43,6 +43,7 @@ class LunoBillingService extends ChangeNotifier {
   final Map<String, _QueuedPurchase> _queue = {};
   final Set<String> _completed = {};
   final Map<String, String> _rejected = {};
+  final Map<String, Object> _pendingReceipts = {};
   StreamSubscription<List<LunoPlayPurchase>>? _subscription;
   LunoBillingOwner? _owner;
   Future<void>? _initialization;
@@ -283,6 +284,7 @@ class LunoBillingService extends ChangeNotifier {
   }
 
   Future<void> _restore(LunoBillingOwner owner) async {
+    final pendingAtStart = Map<String, Object>.of(_pendingReceipts);
     try {
       final owned = await _play
           .queryOwned(_accountHash(owner))
@@ -292,6 +294,21 @@ class LunoBillingService extends ChangeNotifier {
         queued.deferred = false;
       }
       _handleBatch(owner, owned, replayCompleted: true);
+      final ownedProducts = owned.map((receipt) => receipt.productId).toSet();
+      for (final entry in pendingAtStart.entries) {
+        final id = entry.key;
+        if (!ownedProducts.contains(id) &&
+            identical(_pendingReceipts[id], entry.value) &&
+            _productStatuses[id] == LunoBillingStatus.pending &&
+            _launchProduct != id &&
+            !_queue.values.any((purchase) => purchase.productId == id)) {
+          // A successful current ownership query includes live pending
+          // payments. Release only an older pending receipt absent from it;
+          // a stream update during the query keeps its own generation.
+          _pendingReceipts.remove(id);
+          _emit(LunoBillingStatus.idle, productId: id);
+        }
+      }
       await retryQueued();
       _guard(owner);
       await _refreshState(owner);
@@ -355,6 +372,7 @@ class LunoBillingService extends ChangeNotifier {
       }
       switch (receipt.status) {
         case LunoPlayPurchaseStatus.pending:
+          _pendingReceipts[id] = Object();
           _emit(LunoBillingStatus.pending, productId: id);
           continue;
         case LunoPlayPurchaseStatus.canceled:
@@ -559,6 +577,7 @@ class LunoBillingService extends ChangeNotifier {
     _queue.clear();
     _completed.clear();
     _rejected.clear();
+    _pendingReceipts.clear();
     _missing = const {};
     _latestSnapshot = null;
     return subscription?.cancel() ?? Future<void>.value();
