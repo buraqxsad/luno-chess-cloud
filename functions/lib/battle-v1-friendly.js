@@ -6,6 +6,9 @@ const TTL=120000,ALPHABET='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 function installBattleV1Friendly(api,deps){
  const {db,now}=api;
  const roomCode=()=>Array.from({length:6},()=>ALPHABET[crypto.randomInt(ALPHABET.length)]).join('');
+ // Fresh room/invite leases cannot reuse an older canonical match when the
+ // HTTP request ID is retried. Records from older backends retain their ID.
+ const friendlyMatchId=(uid,entry,kind)=>api.matchId(uid,entry.requestId+'|'+kind+(typeof entry.matchNonce==='string'?'|'+entry.matchNonce:''));
  function state(value){
   const v={...value,queue:value?.queue||{},active:value?.active||{},reservations:value?.reservations||{},rooms:value?.rooms||{},roomByUser:value?.roomByUser||{},invites:value?.invites||{}};
   // available() permits changing modes once the search lease expires. Remove
@@ -37,8 +40,8 @@ function installBattleV1Friendly(api,deps){
  }
  async function prepare(context,required){const b=requireRecord(context.body);exactKeys(b,['client',...required]);await api.admission(b);await deps.requirePlayer(context.uid);await deps.rateLimit(context.uid,'battleV1Friendly',20,60000);if(deps.resolveLegacyForV1)await deps.resolveLegacyForV1(context.uid);return b;}
  async function createBattleV1Room(context){
-  await prepare(context,[]);const owner=await api.entry(context.uid,context.body.client),code=roomCode(),at=now();
-  const v=await transact(v=>{const previous=v.rooms[v.roomByUser[context.uid]];if(previous?.requestId===context.requestId&&previous.expiresAt>at)return v;available(v,context.uid);if(v.rooms[code]?.expiresAt>at)throw new BattleError('ROOM_CODE_CONFLICT');v.rooms[code]={code,host:owner,createdAt:at,expiresAt:at+TTL,requestId:context.requestId};v.roomByUser[context.uid]=code;return v;});
+  await prepare(context,[]);const owner=await api.entry(context.uid,context.body.client),code=roomCode(),at=now(),matchNonce=crypto.randomUUID();
+  const v=await transact(v=>{const previous=v.rooms[v.roomByUser[context.uid]];if(previous?.requestId===context.requestId&&previous.expiresAt>at)return v;available(v,context.uid);if(v.rooms[code]?.expiresAt>at)throw new BattleError('ROOM_CODE_CONFLICT');v.rooms[code]={code,host:owner,createdAt:at,expiresAt:at+TTL,requestId:context.requestId,matchNonce};v.roomByUser[context.uid]=code;return v;});
   const room=v.rooms[v.roomByUser[context.uid]];return {ok:true,created:true,roomCode:room.code,durationMinutes:5,expiresAt:room.expiresAt,protocolVersion:PROTOCOL};
  }
  async function cancelBattleV1Room(context){
@@ -50,17 +53,19 @@ function installBattleV1Friendly(api,deps){
   const first=(await db.ref('battleV1Control/rooms/'+b.roomCode).get()).val();if(!first||first.host.uid===context.uid||first.expiresAt<=now())throw new BattleError('ROOM_UNAVAILABLE',404);
   return deps.withSocialPairLock(context.uid,first.host.uid,async()=>{
   await deps.assertInteractionAllowed(context.uid,first.host.uid);
-  const guest=await api.entry(context.uid,b.client),id=api.matchId(first.host.uid,first.requestId+'|room');
-  const v=await transact(v=>{const r=v.rooms[b.roomCode];if(!r||r.host.uid!==first.host.uid||r.createdAt!==first.createdAt||r.expiresAt<=now())throw new BattleError('ROOM_UNAVAILABLE',404);if(r.matchId){if(r.guestUid!==context.uid)throw new BattleError('ROOM_FULL');return v;}available(v,context.uid);if(v.active[r.host.uid]||v.queue[r.host.uid])throw new BattleError('OPPONENT_BUSY');v.reservations[id]={w:r.host,b:guest,rated:false};v.active[r.host.uid]=id;v.active[context.uid]=id;r.matchId=id;r.guestUid=context.uid;return v;});
-  const match=await api.completeReservation(id)||await api.load(id,context.uid);return {...api.snapshot(match,context.uid),joined:true,durationMinutes:5};
+  const guest=await api.entry(context.uid,b.client),id=friendlyMatchId(first.host.uid,first,'room');
+  const v=await transact(v=>{const r=v.rooms[b.roomCode];if(!r||r.host.uid!==first.host.uid||r.createdAt!==first.createdAt||r.matchNonce!==first.matchNonce||r.expiresAt<=now())throw new BattleError('ROOM_UNAVAILABLE',404);if(r.matchId){if(r.guestUid!==context.uid)throw new BattleError('ROOM_FULL');return v;}available(v,context.uid);if(v.active[r.host.uid]||v.queue[r.host.uid])throw new BattleError('OPPONENT_BUSY');v.reservations[id]={w:r.host,b:guest,rated:false};v.active[r.host.uid]=id;v.active[context.uid]=id;r.matchId=id;r.guestUid=context.uid;return v;});
+  // A persisted matchId wins for pending joins created by an older backend.
+  const acceptedId=v.rooms[b.roomCode].matchId;
+  const match=await api.completeReservation(acceptedId)||await api.load(acceptedId,context.uid);return {...api.snapshot(match,context.uid),joined:true,durationMinutes:5};
   });
  }
  async function sendBattleV1Invite(context){
   const b=await prepare(context,['targetUid']);if(!validUid(b.targetUid)||b.targetUid===context.uid)throw new BattleError('INVALID_PLAYER',400);
   return (deps.withSocialPairMetadata||deps.withSocialPairLock)(context.uid,b.targetUid,async()=>{
   await deps.assertInteractionAllowed(context.uid,b.targetUid);await deps.requireFriendship(context.uid,b.targetUid);
-  const from=await api.entry(context.uid,b.client),at=now(),key=context.uid+'|'+b.targetUid;
-  const v=await transact(v=>{available(v,context.uid);available(v,b.targetUid);const previous=v.invites[key];if(previous&&previous.expiresAt>at)return v;v.invites[key]={from,to:b.targetUid,requestId:context.requestId,expiresAt:at+TTL};return v;});
+  const from=await api.entry(context.uid,b.client),at=now(),key=context.uid+'|'+b.targetUid,matchNonce=crypto.randomUUID();
+  const v=await transact(v=>{available(v,context.uid);available(v,b.targetUid);const previous=v.invites[key];if(previous&&previous.expiresAt>at)return v;v.invites[key]={from,to:b.targetUid,requestId:context.requestId,expiresAt:at+TTL,matchNonce};return v;});
   const invite=v.invites[key],safe={fromUid:context.uid,fromUsername:from.player.name,fromName:from.player.name,expiresAt:invite.expiresAt,sentAt:at,status:'pending',durationMinutes:5,protocolVersion:PROTOCOL};
   await db.ref('matchInvites/'+b.targetUid+'/'+context.uid).set(safe);return {ok:true,sent:true,status:'pending',expiresAt:invite.expiresAt};
   });
@@ -70,7 +75,7 @@ function installBattleV1Friendly(api,deps){
   return deps.withSocialPairLock(context.uid,b.fromUid,async()=>{
   const key=b.fromUid+'|'+context.uid;await deps.assertInteractionAllowed(context.uid,b.fromUid);await deps.requireFriendship(context.uid,b.fromUid);
   const guest=await api.entry(context.uid,b.client);let id=null;
-  const v=await transact(v=>{id=null;const invite=v.invites[key];if(!invite||invite.expiresAt<=now())throw new BattleError('INVITE_UNAVAILABLE',404);if(!b.accept){delete v.invites[key];return v;}if(invite.matchId){id=invite.matchId;return v;}available(v,context.uid);available(v,b.fromUid);id=api.matchId(b.fromUid,invite.requestId+'|invite');v.reservations[id]={w:invite.from,b:guest,rated:false};v.active[b.fromUid]=id;v.active[context.uid]=id;invite.matchId=id;return v;});
+  const v=await transact(v=>{id=null;const invite=v.invites[key];if(!invite||invite.expiresAt<=now())throw new BattleError('INVITE_UNAVAILABLE',404);if(!b.accept){delete v.invites[key];return v;}if(invite.matchId){id=invite.matchId;return v;}available(v,context.uid);available(v,b.fromUid);id=friendlyMatchId(b.fromUid,invite,'invite');v.reservations[id]={w:invite.from,b:guest,rated:false};v.active[b.fromUid]=id;v.active[context.uid]=id;invite.matchId=id;return v;});
   await db.ref('matchInvites/'+context.uid+'/'+b.fromUid).remove();if(!b.accept)return {ok:true,accepted:false};
   const match=await api.completeReservation(id)||await api.load(id,context.uid);return {...api.snapshot(match,context.uid),accepted:true,durationMinutes:5};
   });
