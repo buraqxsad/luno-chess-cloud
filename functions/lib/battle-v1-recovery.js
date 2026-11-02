@@ -48,7 +48,16 @@ function installBattleV1Recovery(api,deps){
      return profile;
     },undefined,false);
    }
-   await db.ref('battleV1Ratings/'+p.uid).transaction(value=>value?.revision>=account.ratingRevision?value:{uid:p.uid,name:p.name,rating:account.rating,games:account.games||0,revision:account.ratingRevision||0,protocolVersion:PROTOCOL},undefined,false);
+   const ratingRef=db.ref('battleV1Ratings/'+p.uid);
+   const publishRating=()=>ratingRef.transaction(value=>value?.revision>=account.ratingRevision?value:{uid:p.uid,name:p.name,rating:account.rating,games:account.games||0,revision:account.ratingRevision||0,protocolVersion:PROTOCOL},undefined,false);
+   try{
+    if(deps.writeAccountMetadata)await deps.writeAccountMetadata(p.uid,'battleV1Rating',publishRating,()=>ratingRef.remove());
+    else await publishRating();
+   }catch(error){
+    // Deletion may finish after the account receipt was captured. Retire a late
+    // public rating row, while allowing deletion and the surviving player to settle.
+    if(!['account-deleted','account-deletion-in-progress'].includes(error.code))throw error;
+   }
   }
   const tx=await api.transact(id,uid,m=>{if(m.settlementStatus==='complete')return {match:m};m.settlementStatus='complete';m.settlements=receipts;m.stateVersion++;return {match:m};});
   match=tx.match;await api.publish(match);await cleanup(match);return match;

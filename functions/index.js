@@ -4331,7 +4331,7 @@ async function resolveLegacyForV1(uid){
 }
 const {installBattleV1Friendly}=require('./lib/battle-v1-friendly');
 const {installBattleV1Emotes}=require('./lib/battle-v1-emotes');
-const battleV1=installBattleV1Friendly(installBattleV1Recovery(installBattleV1Rollout(createBattleV1Api({db,now,requirePlayer,rateLimit}),{requirePlayer,rateLimit,resolveLegacyForV1,writeAccountMetadata}),{requirePlayer,rateLimit,logger}),{requirePlayer,rateLimit,resolveLegacyForV1,assertInteractionAllowed,requireFriendship,withSocialPairLock});
+const battleV1=installBattleV1Friendly(installBattleV1Recovery(installBattleV1Rollout(createBattleV1Api({db,now,requirePlayer,rateLimit}),{requirePlayer,rateLimit,resolveLegacyForV1,writeAccountMetadata}),{requirePlayer,rateLimit,logger,writeAccountMetadata}),{requirePlayer,rateLimit,resolveLegacyForV1,assertInteractionAllowed,requireFriendship,withSocialPairLock});
 ROUTES.getBattleV1=battleV1.getBattleV1;
 installBattleV1Emotes(battleV1,{requirePlayer,rateLimit});
 ROUTES.sendBattleV1Emote=battleV1.sendBattleV1Emote;
