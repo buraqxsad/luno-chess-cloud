@@ -1,5 +1,6 @@
 'use strict';
 const crypto=require('node:crypto');
+const {isDeepStrictEqual}=require('node:util');
 const {protocol,authority}=require('./battle-v1');
 const {STARTER}=require('../rules-v1/dist/src/model.js');
 const {migrateLegacy,validateOwnedDeck}=require('../rules-v1/dist/src/online/migration.js');
@@ -46,13 +47,49 @@ function installBattleV1Rollout(api,deps){
   const {account}=await migrate(context.uid);return {ok:true,protocolVersion:PROTOCOL,deck:account.deck,entitlements:account.entitlements,progression:progressionSummary(account),available:c.v1MatchmakingEnabled&&!c.maintenanceMode};
  }
  async function getBattleV1Rollout(context){const b=requireRecord(context.body);exactKeys(b,['client']);const c=await config(),client=requireClient(b.client,c);return {ok:true,protocolVersion:PROTOCOL,configVersion:c.configVersion,available:c.v1MatchmakingEnabled&&!c.maintenanceMode,maintenanceMode:c.maintenanceMode,minClientBuild:client.platform==='android'?c.minV1ClientBuildAndroid:c.minV1ClientBuildIos};}
+ async function recoverLegacyReservation(id,reservation,conflict){
+  const entries=[reservation.w,reservation.b],uids=new Set(entries.map(entry=>entry.uid));
+  let original;
+  for(const entry of entries){
+   try{original=await api.load(id,entry.uid);break;}
+   catch(error){if(error.code!=='NOT_PARTICIPANT')throw error;}
+  }
+  if(!original)throw conflict;
+  const canonicalUids=new Set(Object.values(original.players).map(player=>player.uid));
+  await db.ref('battleV1Control').transaction(value=>{
+   if(value===null)return null;
+   // Legacy rows have no ownership token. Compare their complete captured
+   // value so a delayed failure cannot remove a replacement reservation.
+   if(!isDeepStrictEqual(value.reservations?.[id],reservation))return value;
+   delete value.reservations[id];
+   for(const entry of entries){
+    if(value.active?.[entry.uid]!==id)continue;
+    if(!original.result&&canonicalUids.has(entry.uid))continue;
+    delete value.active[entry.uid];
+    if(reservation.rated!==false&&!entry.player.bot&&!canonicalUids.has(entry.uid)&&!value.queue?.[entry.uid]){
+     value.queue=value.queue||{};value.queue[entry.uid]={...entry,lastSeenAt:now()};
+    }
+   }
+   for(const [code,room] of Object.entries(value.rooms||{})){
+    if(room.matchId!==id||!uids.has(room.host?.uid)||!uids.has(room.guestUid))continue;
+    delete value.rooms[code];if(value.roomByUser?.[room.host.uid]===code)delete value.roomByUser[room.host.uid];
+   }
+   for(const [key,invite] of Object.entries(value.invites||{})){
+    if(invite.matchId===id&&uids.has(invite.from?.uid)&&uids.has(invite.to))delete value.invites[key];
+   }
+   return value;
+  },undefined,false);
+  return original;
+ }
  async function completeReservation(id){
   const reservation=(await db.ref('battleV1Control/reservations/'+id).get()).val();
   if(!reservation){return null;}
   let m;
   try{m=await api.create(id,reservation.w.player,reservation.b.player,reservation.w.deck,reservation.b.deck,reservation.rated,{w:reservation.w.rating||0,b:reservation.b.rating||0});}
   catch(error){
-   if(error.code!=='MATCH_CREATION_CONFLICT'||!reservation.requestUid||!reservation.reservationToken)throw error;
+   if(error.code!=='MATCH_CREATION_CONFLICT')throw error;
+   if(!reservation.reservationToken)return recoverLegacyReservation(id,reservation,error);
+   if(!reservation.requestUid)throw error;
    // A delayed duplicate can cross terminal cleanup after its deterministic ID
    // was already consumed. Restore its peer without cancelling a newer attempt.
    const original=await api.load(id,reservation.requestUid);

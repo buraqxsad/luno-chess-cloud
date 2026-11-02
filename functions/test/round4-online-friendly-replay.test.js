@@ -109,3 +109,66 @@ test('a stale room snapshot cannot reserve against a replacement lease with iden
  assert.deepEqual(Object.keys(db.read('battleV1Control/active')||{}),[]);assert.equal(db.read('matchSecretsV1'),null);
  assert.equal(db.read('battleV1Control/rooms/'+room.body.roomCode+'/requestId'),'round4-replacement-room');
 });
+
+test('an already stranded legacy room reservation retains a recovery path after backend upgrade',async t=>{
+ const db=setup(t),requestId='round4-legacy-stranded-room';
+ const old=await request(host,'createBattleV1Room',{client},requestId),oldPath='battleV1Control/rooms/'+old.body.roomCode;
+ const firstRow=db.read(oldPath);delete firstRow.matchNonce;db.write(oldPath,firstRow);
+ const original=await request(first,'joinBattleV1Room',{client,roomCode:old.body.roomCode},'round4-stranded-room-original-join');assert.equal(original.status,200);await finish(original.body.matchId);
+ const canonicalBefore=db.read('matchSecretsV1/'+original.body.matchId);db.advance(120001);
+ const fresh=await request(host,'createBattleV1Room',{client},requestId),path='battleV1Control/rooms/'+fresh.body.roomCode;
+ const legacy=db.read(path);delete legacy.matchNonce;db.write(path,legacy);
+ const joined=await request(third,'joinBattleV1Room',{client,roomCode:fresh.body.roomCode},'round4-stranded-room-third-join');
+ await assertThirdRecovery(db,{original,fresh,joined});
+ assert.deepEqual(db.read('matchSecretsV1/'+original.body.matchId),canonicalBefore,'Retiring a bad reservation cannot mutate the prior canonical match.');
+});
+test('an already stranded legacy invitation reservation retains a recovery path after backend upgrade',async t=>{
+ const db=setup(t),requestId='round4-legacy-stranded-invite';
+ assert.equal((await request(host,'sendBattleV1Invite',{client,targetUid:first},requestId)).status,200);
+ const oldPath='battleV1Control/invites/'+host+'|'+first,old=db.read(oldPath);delete old.matchNonce;db.write(oldPath,old);
+ const original=await request(first,'respondBattleV1Invite',{client,fromUid:host,accept:true},'round4-stranded-invite-first');assert.equal(original.status,200);await finish(original.body.matchId);
+ const canonicalBefore=db.read('matchSecretsV1/'+original.body.matchId);
+ assert.equal((await request(host,'sendBattleV1Invite',{client,targetUid:third},requestId)).status,200);
+ const path='battleV1Control/invites/'+host+'|'+third,legacy=db.read(path);delete legacy.matchNonce;db.write(path,legacy);
+ const accepted=await request(third,'respondBattleV1Invite',{client,fromUid:host,accept:true},'round4-stranded-invite-third');
+ await assertThirdRecovery(db,{original,accepted});
+ assert.deepEqual(db.read('matchSecretsV1/'+original.body.matchId),canonicalBefore);
+});
+
+async function conflictingLegacyReservation(db,id,{rated=false}={}){
+ const own=await api.battleV1.entry(host,client),peer=await api.battleV1.entry(third,client);
+ const reservation={w:own,b:peer,rated};db.write('battleV1Control/reservations/'+id,reservation);
+ db.write('battleV1Control/active/'+host,id);db.write('battleV1Control/active/'+third,id);return reservation;
+}
+test('legacy conflict recovery never removes a newer reservation owner',async t=>{
+ const db=setup(t),id=await oldRoom();await conflictingLegacyReservation(db,id);
+ const create=api.battleV1.create.bind(api.battleV1);let changed=false,replacement;
+ t.mock.method(api.battleV1,'create',async(...args)=>{
+  try{return await create(...args);}
+  catch(error){
+   if(!changed){changed=true;const captured=db.read('battleV1Control/reservations/'+id);replacement={...captured,reservationToken:require('node:crypto').randomUUID(),requestUid:third};db.write('battleV1Control/reservations/'+id,replacement);}
+   throw error;
+  }
+ });
+ await api.battleV1.completeReservation(id);
+ assert.equal(changed,true);assert.deepEqual(db.read('battleV1Control/reservations/'+id),replacement);
+ assert.equal(db.read('battleV1Control/active/'+third),id);
+});
+test('legacy conflict recovery preserves legitimate active participants of the canonical match',async t=>{
+ const db=setup(t),room=await request(host,'createBattleV1Room',{client},'round4-live-canonical');
+ const joined=await request(first,'joinBattleV1Room',{client,roomCode:room.body.roomCode},'round4-live-canonical-first');assert.equal(joined.status,200);
+ const id=joined.body.matchId,canonicalBefore=db.read('matchSecretsV1/'+id);await conflictingLegacyReservation(db,id);
+ await api.battleV1.completeReservation(id);
+ assert.equal(db.read('battleV1Control/active/'+host),id);assert.equal(db.read('battleV1Control/active/'+first),id);
+ assert.equal(db.read('battleV1Control/active/'+third),null);assert.equal(db.read('battleV1Control/reservations/'+id),null);
+ assert.deepEqual(db.read('matchSecretsV1/'+id),canonicalBefore);assert.equal(db.read('battleV1Control/queue/'+third),null,'Friendly recovery cannot silently enqueue ranked play.');
+});
+test('legacy ranked conflict restores the unrelated waiting peer without rewriting a canonical result',async t=>{
+ const db=setup(t),id=await oldRoom(),canonicalBefore=db.read('matchSecretsV1/'+id),reservation=await conflictingLegacyReservation(db,id,{rated:true});
+ await api.battleV1.completeReservation(id);
+ assert.equal(db.read('battleV1Control/active/'+third),null);assert.equal(db.read('battleV1Control/reservations/'+id),null);
+ const queued=db.read('battleV1Control/queue/'+third);assert.equal(queued.uid,third);assert.deepEqual(queued.deck,reservation.b.deck);assert.equal(queued.joinedAt,reservation.b.joinedAt);
+ assert.deepEqual(db.read('matchSecretsV1/'+id),canonicalBefore);
+ assert.equal((await request(third,'cancelBattleV1Queue',{protocolVersion:protocol.PROTOCOL},'round4-recovered-queue-cancel')).status,200);
+ assert.equal(db.read('battleV1Control/queue/'+third),null);
+});
