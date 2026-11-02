@@ -42,7 +42,7 @@ function installBattleV1Friendly(api,deps){
  }
  async function sendBattleV1Invite(context){
   const b=await prepare(context,['targetUid']);if(!validUid(b.targetUid)||b.targetUid===context.uid)throw new BattleError('INVALID_PLAYER',400);
-  return deps.withSocialPairLock(context.uid,b.targetUid,async()=>{
+  return (deps.withSocialPairMetadata||deps.withSocialPairLock)(context.uid,b.targetUid,async()=>{
   await deps.assertInteractionAllowed(context.uid,b.targetUid);await deps.requireFriendship(context.uid,b.targetUid);
   const from=await api.entry(context.uid,b.client),at=now(),key=context.uid+'|'+b.targetUid;
   const v=await transact(v=>{available(v,context.uid);available(v,b.targetUid);const previous=v.invites[key];if(previous&&previous.expiresAt>at)return v;v.invites[key]={from,to:b.targetUid,requestId:context.requestId,expiresAt:at+TTL};return v;});
