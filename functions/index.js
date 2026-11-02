@@ -3840,9 +3840,6 @@ async function fulfillPurchase(uid,body){
   const expectedClaimRevision=definition.type==='subs'?purchaseClaimRevision(existingBefore):null;
   let verified=await verifyWithGoogle(productId,purchaseToken,definition,hash(uid),definition.type==='subs'&&existingBefore!==null);
   verified.productId=productId;
-  const consumed=verified.kind==='inapp'&&(verified.data.productLineItem||[]).some(function(item){
-    return item.productId===productId&&item.productOfferDetails?.consumptionState==='CONSUMPTION_STATE_CONSUMED';
-  });
   await assertAccountOperationAllowed(uid,'fulfillPurchase');
   const claim=await writePurchaseClaim(uid,tokenHash,productId,{status:'verified',verifiedAt:ServerValue.TIMESTAMP},true,expectedClaimRevision,verified.kind!=='subs'||!existingBefore);
   if(claim.voided===true&&verified.kind!=='subs')throw httpError(409,'purchase-revoked','Purchase was revoked.');
@@ -3862,12 +3859,17 @@ async function fulfillPurchase(uid,body){
       reconciledInactive=true;
       throw httpError(409,'purchase-not-active','Subscription is not active for this product.');
     }
-    if(verified.kind==='subs'&&!existingBefore){
+    if(!existingBefore){
       // Ownership is proved before creating any global claim. Revalidate after
       // registration so an RTDN deferred while the claim was absent is observed.
+      // This includes consumables: their only refund may already be ACKed as
+      // unmatched, while the pre-registration PURCHASED response is stale.
       verified=await verifyWithGoogle(productId,purchaseToken,definition,hash(uid));
       verified.productId=productId;
     }
+    const consumed=verified.kind==='inapp'&&(verified.data.productLineItem||[]).some(function(item){
+      return item.productId===productId&&item.productOfferDetails?.consumptionState==='CONSUMPTION_STATE_CONSUMED';
+    });
     const grantResult=await transactExistingPlayer(uid,function(profile){
       if(verified.kind==='subs'){
         const reconciledRevision=profile.serverEconomy?.subscriptionClaimRevisions?.[tokenHash];

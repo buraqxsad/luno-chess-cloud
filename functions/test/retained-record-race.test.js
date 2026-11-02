@@ -99,7 +99,8 @@ for(const endpoint of [reportUser,reportMessage])test(`${endpoint.name} uses gua
 test('fresh fulfillment grants once and completed replay never calls Play again',async t=>{
   const db=memoryDatabase(t,seed()),calls=fakePlay(t),before=db.read('users/'+uid+'/gold');
   const first=await fulfillPurchase(uid,{productId,purchaseToken:token});assert.equal(first.entitlementGranted,true);assert.equal(db.read('users/'+uid+'/gold'),before+1000);
-  const second=await fulfillPurchase(uid,{productId,purchaseToken:token});assert.equal(second.idempotent,true);assert.equal(calls.get,1);assert.equal(calls.consume,1);assert.equal(db.read('users/'+uid+'/gold'),before+1000);assert.equal(db.read(path+'/status'),'complete');
+  assert.equal(calls.get,2,'First registration revalidates after ownership becomes visible to RTDN.');
+  const second=await fulfillPurchase(uid,{productId,purchaseToken:token});assert.equal(second.idempotent,true);assert.equal(calls.get,2,'Completed consumable replay performs no additional provider lookup.');assert.equal(calls.consume,1);assert.equal(db.read('users/'+uid+'/gold'),before+1000);assert.equal(db.read(path+'/status'),'complete');
 });
 for(const invalid of ['missing','revoked','wrong-product','wrong-kind','unproven'])test(`completed consumable replay rejects ${invalid} receipt`,async t=>{
   const data=seed();data.purchaseClaims={[key]:{...claim(),status:'complete',active:true}};
