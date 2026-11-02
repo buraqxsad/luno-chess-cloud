@@ -2629,10 +2629,24 @@ class LunoOnlineService extends ChangeNotifier {
   }
 
   Future<void> _ensureRemoteProfile() async {
+    final owner = (user?.uid, accountRevision);
+    final generation = _requestGeneration;
+    final stateEpoch = _bindsPlayerStore ? _playerStore.serverStateEpoch : null;
+    void checkBootstrapOwner() {
+      _checkKnownAccountOwner(owner);
+      if (accountFailure != null) throw accountFailure!;
+      if (generation != _requestGeneration ||
+          (stateEpoch != null &&
+              _playerStore.serverStateEpoch != stateEpoch)) {
+        throw const LunoApiException('session-changed', 409);
+      }
+    }
+
     try {
       await refreshState();
     } on LunoApiException catch (error) {
       if (error.code != 'profile-not-found') rethrow;
+      checkBootstrapOwner();
       final uid = user!.uid;
       final revision = _playerStore.accountBindingRevision;
       final draft =
@@ -2642,11 +2656,15 @@ class LunoOnlineService extends ChangeNotifier {
       // Bootstrap reserves a server alias only. A chosen local name must go
       // through the consent-gated public username endpoint.
       final created = await api('/createGuestPlayer', const {});
+      checkBootstrapOwner();
       if (_bindsPlayerStore &&
           created['usernameGenerated'] == true &&
           created['uid'] == uid) {
         await _playerStore.requireUsernamePublication(uid, revision, draft);
       }
+      // A local write must not let this creation flow adopt a later session
+      // when it starts the final authoritative read.
+      checkBootstrapOwner();
       await refreshState();
     }
   }
