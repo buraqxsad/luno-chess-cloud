@@ -1,0 +1,50 @@
+{
+  "phases": {
+    "chess": 102,
+    "card": 148,
+    "pending": 4,
+    "terminal": 4
+  },
+  "actions": {
+    "move": 1383,
+    "discard": 403,
+    "pass": 148,
+    "play": 2825,
+    "resolve": 16
+  },
+  "playedCardBranches": {
+    "angry_n": 3,
+    "board_seal": 189,
+    "break_seal": 4,
+    "card_block": 28,
+    "chain": 73,
+    "echo": 28,
+    "fate_exchange": 6,
+    "fog": 147,
+    "freeze": 68,
+    "hunt_vow": 33,
+    "locked_square": 564,
+    "mana_sabotage": 28,
+    "mine": 115,
+    "pawn_advance": 6,
+    "pawn_deviation": 6,
+    "prophecy": 112,
+    "purify": 2,
+    "radar": 1094,
+    "rook_bend": 2,
+    "shadow_contract": 4,
+    "shadow_pass": 2,
+    "shelter": 211,
+    "slow": 16,
+    "watch_vow": 84
+  },
+  "specialAuthorizationStates": {
+    "angry_n": 3,
+    "pawn_deviation": 2,
+    "pawn_advance": 2,
+    "rook_bend": 2,
+    "shadow_pass": 2
+  },
+  "pendingStates": 4,
+  "terminalStates": 4
+}

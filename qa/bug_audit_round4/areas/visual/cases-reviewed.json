@@ -1,0 +1,3009 @@
+[
+  {
+    "name": "arsenal-large-text",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/arsenal-large-text.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/arsenal-large-text_testImage.png",
+    "reference_sha256": "a9d71005335765fc98fb0860eb40273a96dee2090474e6e83669233091297d52",
+    "candidate_sha256": "74a9045b443a9614422fa43bb9661a6c9ee2c1c4934ab305c499351d74acb3b4",
+    "size": [
+      320,
+      640
+    ],
+    "changed_pixels": 8483,
+    "changed_percent": 4.14208984375,
+    "difference_bbox": [
+      17,
+      43,
+      255,
+      590
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-01.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Five visible list rows, 320x640 at 1.5 text; continuation is scroll content. Names/statuses remain legible."
+    }
+  },
+  {
+    "name": "arsenal",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/arsenal.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/arsenal_testImage.png",
+    "reference_sha256": "20d39b64f5a2310ed2b1a6e430cbb31790d0143b8dc637bf9b7304e3b5ec4c8a",
+    "candidate_sha256": "4622e4c9081fd856124a8a2bb47696f1c49a61b5d6e35bb481914e60c52410b6",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 8011,
+    "changed_percent": 2.4337708105480615,
+    "difference_bbox": [
+      16,
+      35,
+      326,
+      820
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-01.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Opponent 10-card arsenal: visible names and unused statuses preserved; scroll continuation present."
+    }
+  },
+  {
+    "name": "boardSeal",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/boardSeal.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/boardSeal_testImage.png",
+    "reference_sha256": "928741969192dc4865fe601c3f0e36c3bee1a4e999aeaa0af9e12ef097808100",
+    "candidate_sha256": "71d1d04ed440946483e88dd1a375c5f8c40572909eb4a34f007c9472130f5ba8",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-01.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "e2-adjacent board-seal overlay and pieces/board geometry retained."
+    }
+  },
+  {
+    "name": "card-detail",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/card-detail.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/card-detail_testImage.png",
+    "reference_sha256": "295228c2fe29f5c7fd6b261f5580564fb1f40c0aa0097ad34a7ef055085f4e1d",
+    "candidate_sha256": "9c42ecdb827538e00a229649a686d912013464b01e497a5da989141a12aa9409",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 13206,
+    "changed_percent": 4.012030623405031,
+    "difference_bbox": [
+      16,
+      35,
+      371,
+      783
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-01.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Shelter title, cost 2, own-piece target and duration/limits copy preserved; no missing paragraph visible."
+    }
+  },
+  {
+    "name": "cardBlock",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/cardBlock.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/cardBlock_testImage.png",
+    "reference_sha256": "d141cb9092cbfaa3e9fa28828d2311fd11bace99d51bdce3cb17362bbc5967ec",
+    "candidate_sha256": "5d4e31edf258540fcb1fd95b57285e72eafff86ba360eba33a19c9bb7194d385",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-01.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Modifier fixture retains dimmed shelter, cards/costs/status; no newly changed target."
+    }
+  },
+  {
+    "name": "chain",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/chain.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/chain_testImage.png",
+    "reference_sha256": "c8e6b425caf2c373112c3bb2d2e3dc68d0568b2fe9c5d644c338c7b506152247",
+    "candidate_sha256": "e8d3f8f2de89f8b0633ede35278c730f7e2b5d0978067460ab1c9b5a56bbc4e1",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-01.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "e2 effect fixture, board and hand positions retained."
+    }
+  },
+  {
+    "name": "check",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/check.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/check_testImage.png",
+    "reference_sha256": "3a6687cddf10d098c659348111ef2a7e033c10c07c2a5b404108f96035aad3bb",
+    "candidate_sha256": "05152937f34f6e3e15682ffba4013b55644d6eda79aed294e3023f2ac5df9bc1",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 5932,
+    "changed_percent": 1.802163081783935,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      751
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-02.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "e1 white king in check from e2 rook; red king square and chess instruction retained."
+    }
+  },
+  {
+    "name": "checkmate",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/checkmate.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/checkmate_testImage.png",
+    "reference_sha256": "c32dc0c6d2382ee0e0cbdb623687ea7c0d4bf625a2888691a97e9f912318a492",
+    "candidate_sha256": "b9fab3318cb5210d72413c993830bfa87fa1c9b6ec3801330010fb1f1a8b9a79",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 3061,
+    "changed_percent": 0.9299428849191882,
+    "difference_bbox": [
+      27,
+      121,
+      349,
+      495
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-02.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "White-winner terminal: victory and checkmate reason retained; actions readable."
+    }
+  },
+  {
+    "name": "compact-four-large-text",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/compact-four-large-text.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/compact-four-large-text_testImage.png",
+    "reference_sha256": "426b96bcffe13fb47e30d13aef27a0bac25393c95939a6e943f92b83ec5d5493",
+    "candidate_sha256": "cb34f10299b05229b1a4b2755e764b3177f0880729ce118552811035fd613bec",
+    "size": [
+      320,
+      640
+    ],
+    "changed_pixels": 2927,
+    "changed_percent": 1.42919921875,
+    "difference_bbox": [
+      16,
+      43,
+      312,
+      608
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-02.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": true,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Both reference and candidate initial 320x640 text150 view clip hand/controls below viewport; current layout contains scroll containers, reachability not rerun."
+    }
+  },
+  {
+    "name": "compact-four",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/compact-four.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/compact-four_testImage.png",
+    "reference_sha256": "de07917faff32bc5d4ff35930f92177b301da31761194d742936f407fc689963",
+    "candidate_sha256": "c24fa4d3ae70a2d24c90c5d390be41342833dce2911d96da13851266f46dd315",
+    "size": [
+      320,
+      640
+    ],
+    "changed_pixels": 3666,
+    "changed_percent": 1.7900390625,
+    "difference_bbox": [
+      16,
+      36,
+      304,
+      608
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-02.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Four costs 1/3/2/5 and names visible; lower continuation shared by reference."
+    }
+  },
+  {
+    "name": "compact",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/compact.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/compact_testImage.png",
+    "reference_sha256": "fb009e485bf50b47bac80d2aa9eb81366d35798ca97aa1c0115d405d64ffbf7c",
+    "candidate_sha256": "1402e221c3a350a577d045a71f47f448ce880ba7be3f161a519d8925fed9809a",
+    "size": [
+      320,
+      640
+    ],
+    "changed_pixels": 2720,
+    "changed_percent": 1.328125,
+    "difference_bbox": [
+      16,
+      36,
+      304,
+      608
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-02.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "320x640 base layout: board/hand visible, lower controls continue below view in both."
+    }
+  },
+  {
+    "name": "default",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/default.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/default_testImage.png",
+    "reference_sha256": "02b0a1fe46feaa618094f428614fe35372584f1ef6cd771327431d538db1a2a9",
+    "candidate_sha256": "5ff4d6f84fe27dc8c29e3d35a354b629c7be05c0e6f999c5e09ec2c076be80db",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-02.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": true,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Initial board, 6/6 own mana, 1/6 opponent mana, 3 cards at cost2 and pass action retained."
+    }
+  },
+  {
+    "name": "discount",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/discount.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/discount_testImage.png",
+    "reference_sha256": "45eb0652052a48f5175f12f3b137c54e15a4753f8762471a82e2572b5d27904b",
+    "candidate_sha256": "a5326b8608709cee44ffed63b1bec5043f3a79e5d39659a21f5c91856b379edc",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 5970,
+    "changed_percent": 1.8137076193948232,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-03.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Discounted cost1 for three hand cards retained."
+    }
+  },
+  {
+    "name": "echo",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/echo.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/echo_testImage.png",
+    "reference_sha256": "087ff73da0c171a24fe6a6e2c5ba9c05997dadc4f3b05de009fedad5b000b6dd",
+    "candidate_sha256": "ed4f4fef6b05fd1239b14473885aabfb1c847c80bbf68ea7bb36ca5c826a9e49",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-03.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Echo modifier fixture: same hand/cost/board; effect behavior not inferred from static image."
+    }
+  },
+  {
+    "name": "fate-large-text",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/fate-large-text.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/fate-large-text_testImage.png",
+    "reference_sha256": "15c5ce34987b1a53150a5ad5238273d4cc89523e105faadaa13a17c1c00d7e0a",
+    "candidate_sha256": "7f521542930796019ad142080f0db70fd0f8622d5bf73023a75ea387249e1f90",
+    "size": [
+      320,
+      640
+    ],
+    "changed_pixels": 7219,
+    "changed_percent": 3.52490234375,
+    "difference_bbox": [
+      16,
+      43,
+      277,
+      595
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-03.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Fate ordering at text150: Radar/Prophecy/Chain rows, up/down and disabled confirm retained."
+    }
+  },
+  {
+    "name": "fate",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/fate.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/fate_testImage.png",
+    "reference_sha256": "aa7d8f669cf4374602f35e65259d5c54dfcfa8616c93862501b74b0997712efb",
+    "candidate_sha256": "f5339af55b375234b5bbe69a6943bbbd1c9f69d77770c638461034e9f43a1286",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 4614,
+    "changed_percent": 1.4017499088589136,
+    "difference_bbox": [
+      16,
+      35,
+      347,
+      799
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-03.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Fate 3-row ordering and disabled confirm retained."
+    }
+  },
+  {
+    "name": "first-turn",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/first-turn.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/first-turn_testImage.png",
+    "reference_sha256": "dfe69125a868b9ad7f2be7d072a335b7e3c29f37e36bb0c212d513dd0df2dcd9",
+    "candidate_sha256": "3e0c16389b9ae3da441ffcce35acd9b5a719262314b58f5edf87096fd6106033",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 5450,
+    "changed_percent": 1.6557297362984567,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      751
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-03.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "1/6 mana, dim cards, no card-stage action and first-turn chess instruction retained."
+    }
+  },
+  {
+    "name": "fog",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/fog.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/fog_testImage.png",
+    "reference_sha256": "3e7eef8317bb679649faf5c02d82f691dc285b4334fdf4f5aada50f39fb5d807",
+    "candidate_sha256": "339c8c0b0ae6c6fd2c54060677f918560f525007a215c75d75ac8a21e19a54dd",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-03.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Fog zone around e2/f3 retained, pieces and hand unchanged."
+    }
+  },
+  {
+    "name": "four-card",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/four-card.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/four-card_testImage.png",
+    "reference_sha256": "8059d777e188c9c3aa0a92dc7cc53814a946b26115e9cf82d5b1e33ed72e3bef",
+    "candidate_sha256": "2330a5cb1a524e6d591f829bce625054aaab9ca9c7fda56cb67722de9e6e4434",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 7033,
+    "changed_percent": 2.136650868878357,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      804
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-04.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Four card costs1/3/2/5, hand4/4, deck6 and pass retained."
+    }
+  },
+  {
+    "name": "freeze",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/freeze.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/freeze_testImage.png",
+    "reference_sha256": "c3e17879ce2fded0ff0017c0cbfc5b29f50effe1d10e58777dd2d4f2612b3eac",
+    "candidate_sha256": "96bce734eca34719c873662d997c60aed8633964aaa860be488133c16e7ff7a9",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-04.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Frozen e2 piece fixture retains board and hand positions."
+    }
+  },
+  {
+    "name": "large-text",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/large-text.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/large-text_testImage.png",
+    "reference_sha256": "8e312818d57a46972cdefa5560a91dcef7a35f66a1854887f62f01a4173fb39f",
+    "candidate_sha256": "093420945b06bc94ed6a02d5dd804cc1f8c2b489715dad42df42a395961e12d3",
+    "size": [
+      320,
+      740
+    ],
+    "changed_pixels": 3524,
+    "changed_percent": 1.4881756756756757,
+    "difference_bbox": [
+      16,
+      43,
+      304,
+      671
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-04.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": true,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "320x740 text150 initial image leaves pass/status below viewport in both; scroll reachability not rerun."
+    }
+  },
+  {
+    "name": "large",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/large.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/large_testImage.png",
+    "reference_sha256": "9a9af15ae4968ca854e44a267283e5d9b98e843e01305fe24fb6dbe5cfa3969a",
+    "candidate_sha256": "15cf9843c5ed44b82257598d48435e0b17cd8d1d9729fad67f96cf11044d0958",
+    "size": [
+      430,
+      932
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.500149715540473,
+    "difference_bbox": [
+      16,
+      35,
+      414,
+      841
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-04.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "430x932 layout keeps board, hand, pass, guide and deck footer visible."
+    }
+  },
+  {
+    "name": "lockedSquare",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/lockedSquare.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/lockedSquare_testImage.png",
+    "reference_sha256": "0a8c23106ca6ce023de3a7113047f15365091f4a31f0797832793ceadfd25859",
+    "candidate_sha256": "dd88af62a199354ff058a1ce9a78349b275d1982e134d721d7e5b786f98186b2",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-04.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "e2 locked-square fixture retains target/effect board presentation."
+    }
+  },
+  {
+    "name": "long-tr",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/long-tr.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/long-tr_testImage.png",
+    "reference_sha256": "cd85c3eeef17016f3fd41126504f00d7fda5706f08edd6a92a4aba4fbd518d6e",
+    "candidate_sha256": "ac0b830cab5371aad03410a9c108a39a7509d61ab534534579b030c43681f3dd",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6669,
+    "changed_percent": 2.0260663507109005,
+    "difference_bbox": [
+      16,
+      34,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-04.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Long opponent name uses ellipsis in both; no new text collision observed."
+    }
+  },
+  {
+    "name": "low-mana",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/low-mana.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/low-mana_testImage.png",
+    "reference_sha256": "6562455c69a44fba4b92961ba5a473964ce69789b15aa9d2cf81dadd023865f8",
+    "candidate_sha256": "c9bef1fa09b7b89d82669706784ae505f0252ef395398f840cb5773312f017e4",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6010,
+    "changed_percent": 1.8258597642483898,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-05.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Own0/6, dimmed cards and pass retained; no unaffordable action appears active."
+    }
+  },
+  {
+    "name": "low-time",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/low-time.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/low-time_testImage.png",
+    "reference_sha256": "cff46182ee66beee1e6bd256f5170808bdd8cb63282fefbcc0036ca905e4a325",
+    "candidate_sha256": "fe48468a789aac3e8bbb4811b240b329361ea6e39cebb68b0e444276eafa730b",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 5986,
+    "changed_percent": 1.8185684773362498,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-05.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Both clocks0:19 in red retained."
+    }
+  },
+  {
+    "name": "manaSabotage",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/manaSabotage.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/manaSabotage_testImage.png",
+    "reference_sha256": "46d25824249cbfbb68d3e7f10a3c676fcab2bffa006f0208ca47c6164c0c70cc",
+    "candidate_sha256": "ef5bb92083d54f28d4ec5cb9cc8c61c0ee31a602d3a755dc72b3a5ac18ed7fb5",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6031,
+    "changed_percent": 1.8322396402965124,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-05.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Shelter cost3 versus other cost2 cards retained."
+    }
+  },
+  {
+    "name": "match-menu",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/match-menu.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/match-menu_testImage.png",
+    "reference_sha256": "10379a01f7cc33329ec8aa4c71a16ed7e9ec53f2ca1fced56189e666b0811eba",
+    "candidate_sha256": "eaa35628143e9170e42c9807173d9727ba2bd588c6a71514836680458aebd4ef",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 3692,
+    "changed_percent": 1.1216429699842023,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      786
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-05.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Resign and leave-match commands retained in sheet."
+    }
+  },
+  {
+    "name": "mine-vow",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/mine-vow.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/mine-vow_testImage.png",
+    "reference_sha256": "c38cf2b81cb269b2fb95a1136fd81a3e61e1b127c621c301e656ed7c2231d8a9",
+    "candidate_sha256": "2a83a9d328146819c190f0be4bd562cb3c209e5bbade5e1975cda9ea039c421b",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-05.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Combined hidden mine/vow e2 fixture: same visible disclosure as reference; image alone does not prove privacy."
+    }
+  },
+  {
+    "name": "mine",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/mine.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/mine_testImage.png",
+    "reference_sha256": "9d8173ab1b5d1ddb42f63f082664b738d84693673a4dc0edb6a9b1e70a0719d8",
+    "candidate_sha256": "5d116f230fb4ec55d6bb8939c8654cc47b09723beb0249c026dad6379f91b93b",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-05.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Hidden mine fixture: same visible disclosure as reference; image alone does not prove privacy."
+    }
+  },
+  {
+    "name": "mismatch",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/mismatch.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/mismatch_testImage.png",
+    "reference_sha256": "4fea0a1cd97bbed3bbcb3b847f2f0c21c0ff059c57db772e90647a54f75ed050",
+    "candidate_sha256": "21fead79b8d6cb9d125262a5da77c082ad64c700da553b82aaedf97b6c1c8aa1",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 4930,
+    "changed_percent": 1.4977518532020901,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      799
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-06.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Projection error: disabled board/pass and retry action retained."
+    }
+  },
+  {
+    "name": "movement",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/movement.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/movement_testImage.png",
+    "reference_sha256": "b0e06f09b3f86a3cef4997521f7ee20a30416804cc9cf1091e916053f95cd4cb",
+    "candidate_sha256": "d7d3875f0c068023c8f289e399dd5828de568132456f598d2725fa50406028ee",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 5267,
+    "changed_percent": 1.6001336735933893,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      751
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-06.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Special move target dots on third rank, highlighted b2/d2 and special-move guide retained."
+    }
+  },
+  {
+    "name": "multi-effect",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/multi-effect.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/multi-effect_testImage.png",
+    "reference_sha256": "9f1fc192419650ed50d1fd70d803c83f79efc4df0e4a67d9bf164d10fcb1e956",
+    "candidate_sha256": "5f798cf3da02b3ae80dece3186024058a4815e0eed3c7330bd55c02a628e4432",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-06.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Combined overlay region near e2/f3 retained; effect semantics not proven by still image."
+    }
+  },
+  {
+    "name": "pending",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/pending.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/pending_testImage.png",
+    "reference_sha256": "d71ee2b7886822f2d22b0058bfdd104fa90fd168b212ab05ba3250cd323eaf75",
+    "candidate_sha256": "a82be202aee43606b457605da7791c5b1e9c80167eb271a6a004d9cefa562fb8",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 4530,
+    "changed_percent": 1.3762304046664235,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      790
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-06.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Confirming move status and disabled pass/retry actions retained."
+    }
+  },
+  {
+    "name": "piece-target",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/piece-target.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/piece-target_testImage.png",
+    "reference_sha256": "6ab014e832664b5b7b2149c6e4b206999aa9c9d4a3b4123307da9cea3a7c8d16",
+    "candidate_sha256": "6f5d8c2f3c3378de9171a7732f9563d80eb1c708b1d0ea88cb89e9d40fc1c451",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6201,
+    "changed_percent": 1.8838862559241707,
+    "difference_bbox": [
+      16,
+      35,
+      379,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-06.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": true,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Shelter targets own pieces, chosen e2 highlighted, Play enabled, mana2 and confirmation copy retained."
+    }
+  },
+  {
+    "name": "prophecy",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/prophecy.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/prophecy_testImage.png",
+    "reference_sha256": "635115980907806faa6251504adada3d906fd8bdf20907b394cb5c8ba3a5d8a8",
+    "candidate_sha256": "a8217dbd7320d888fbb55bbb580b61b3274906b13611777d94820997056f2db6",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 4702,
+    "changed_percent": 1.4284846275367602,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      783
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-06.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Two pending cards Radar/Chain, ordering controls and enabled confirm retained."
+    }
+  },
+  {
+    "name": "radar-stale",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/radar-stale.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/radar-stale_testImage.png",
+    "reference_sha256": "432eed25eb722565f4ddd0653c0c91dfb63e3ca86a322d38a37cebb46b1861c5",
+    "candidate_sha256": "bdba60ddc87a284c28fe1808ccfc32a4eec9d0463ffe65d0defef7e4ebdb0629",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 4463,
+    "changed_percent": 1.3558755620366996,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      785
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-07.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Private info says Shelter not current; known upcoming Radar/Prophecy retained."
+    }
+  },
+  {
+    "name": "radar",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/radar.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/radar_testImage.png",
+    "reference_sha256": "7857adfb1665d969a4d29cccb28220a93648f9d80c9b4b3d0be96e0e461397ae",
+    "candidate_sha256": "6150591a40cc74416813211ba1ef663b26db5e7bb5318d70a7131909f1139ca8",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 4181,
+    "changed_percent": 1.2702029408190545,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      785
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-07.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Private info says Shelter in hand; known upcoming Radar/Prophecy retained."
+    }
+  },
+  {
+    "name": "reconnect",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/reconnect.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/reconnect_testImage.png",
+    "reference_sha256": "05b182fb491961f4debbabddea2a22d5d3714584b90fb19d685f5896bd365629",
+    "candidate_sha256": "e2fa2bfa8107e99bdea08b7bd874cc1d29c0fae0cfd3188fce43117c4cd651ab",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 5477,
+    "changed_percent": 1.6639324340746142,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-07.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Reconnecting guide and disabled pass retained."
+    }
+  },
+  {
+    "name": "resign-confirm",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/resign-confirm.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/resign-confirm_testImage.png",
+    "reference_sha256": "a0d6ed99f245d651d08d2a836849914a55d974e6bb5c86652136cdca456f5637",
+    "candidate_sha256": "b6f52fe974dd6c335b06b3ee31f96195359bf0316775ce65a6ebb8c831c033db",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 4727,
+    "changed_percent": 1.4360797180702394,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      800
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-07.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Resign confirmation sheet title and destructive command retained."
+    }
+  },
+  {
+    "name": "resign",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/resign.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/resign_testImage.png",
+    "reference_sha256": "f1874cd114d957479e84ca3a086b31a2fa83a233b17f4e9cdc7d1ff5b5395ffa",
+    "candidate_sha256": "9b3b428303f445d25948f5cdd37aba910cd13b76bc5012e3a65192770750ce4d",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 3196,
+    "changed_percent": 0.9709563737999757,
+    "difference_bbox": [
+      27,
+      121,
+      349,
+      495
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-07.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "White-winner victory with resignation reason retained."
+    }
+  },
+  {
+    "name": "selected",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/selected.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/selected_testImage.png",
+    "reference_sha256": "8d0080f7f70d22f41b63e259a2d100827d8b8482bde7f8c1c90e4738a50249f5",
+    "candidate_sha256": "5168f671ad8e8f75777bb74e2a297b93d88e75b67007cb08cea26cd452234b7b",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 5949,
+    "changed_percent": 1.8073277433467008,
+    "difference_bbox": [
+      16,
+      35,
+      379,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-07.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Shelter selected, own-piece target rings and disabled Play until target retained."
+    }
+  },
+  {
+    "name": "shelter",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/shelter.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/shelter_testImage.png",
+    "reference_sha256": "2ff5c2389276f185aaec22bd7aeeb1c22d3cf525f071d3e7fb4d9e65fb7ecbec",
+    "candidate_sha256": "76fe2e3b693cb50d41f7e4487ba2d8f1076440fb474e1e9c9da529262ba006af",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-08.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Sheltered e2 overlay retained; no new target/geometry change observed."
+    }
+  },
+  {
+    "name": "slow",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/slow.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/slow_testImage.png",
+    "reference_sha256": "f91891380a2768d94ab3ebbd3cf5afa4e233e469d36e9c5e7f84c251858450ff",
+    "candidate_sha256": "407c1de83be55b2d10689d2dd6f0c0a4959f3cef1f67b624890b48dd2fd9ef28",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-08.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Slow e2 effect fixture board/hand retained."
+    }
+  },
+  {
+    "name": "square-target",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/square-target.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/square-target_testImage.png",
+    "reference_sha256": "e0a1997cbfa2cede8a7db0b62613419d41476cd3962bf67e1bed10f5a3947891",
+    "candidate_sha256": "e588a147476604f79b563352eb457ed4931f1e4dcb311aea6e8db9b9821db7bb",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6347,
+    "changed_percent": 1.928241584639689,
+    "difference_bbox": [
+      16,
+      35,
+      379,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-08.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": true,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Locked square chosen e4, dots only empty middle ranks, cost2 and enabled Play retained."
+    }
+  },
+  {
+    "name": "stalemate",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/stalemate.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/stalemate_testImage.png",
+    "reference_sha256": "728f879537c08b8596a9568072adf794ee0bdce5358c447d96b682936e444d18",
+    "candidate_sha256": "8f7c58724b19d9c8859f3338ef8e00776b64e44ec775b1b8591db30ca2ae8b4e",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 3283,
+    "changed_percent": 0.9973872888564832,
+    "difference_bbox": [
+      27,
+      121,
+      349,
+      495
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-08.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Draw/pat reason retained."
+    }
+  },
+  {
+    "name": "timeout",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/timeout.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/timeout_testImage.png",
+    "reference_sha256": "7d8c1a38321448eda761c1e57cfb51d6872fa5cf8d760788a5f13470e5b2b100",
+    "candidate_sha256": "b4f82afa74a779956ff04e973090275ff4a01cc8c1602653d83bbd66ec06d0ed",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 3142,
+    "changed_percent": 0.9545509782476607,
+    "difference_bbox": [
+      27,
+      121,
+      349,
+      495
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-08.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": true,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Full-resolution check shows victory/Sure doldu for white winner, consistent with fixture; initial reduced-sheet suspicion withdrawn."
+    }
+  },
+  {
+    "name": "vow",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/vow.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/vow_testImage.png",
+    "reference_sha256": "c3003ddfd882ff9a3086db861f10cfc62de68e5b3fa036fa3fcd2f73c8b86017",
+    "candidate_sha256": "981a48b261e59ddeee2591fdf6f6b3dcca467aaa4182d8f21c70f867d638c08d",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6012,
+    "changed_percent": 1.8264673714910682,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-08.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Vow e2 fixture has same public presentation; no privacy behavior inferred."
+    }
+  },
+  {
+    "name": "zero-card",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/zero-card.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/zero-card_testImage.png",
+    "reference_sha256": "03f4791422e582d65433ce393c67710ee28347b1fe5330ce7902213f95cfe255",
+    "candidate_sha256": "20abe5afdee8b397bf8490fafacfa674d786640f43abbe734f63e3883a867466",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 5654,
+    "changed_percent": 1.7177056750516466,
+    "difference_bbox": [
+      16,
+      35,
+      374,
+      727
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-09.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Empty hand, own6/6, deck10, pass and move guidance retained."
+    }
+  },
+  {
+    "name": "zone",
+    "group": "battle",
+    "reference": "/workspace/luno-chess/luno_chess/test/battle_ui/goldens/zone.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/battle_ui/failures/zone_testImage.png",
+    "reference_sha256": "cee70d53d860f6ad52e3024f28484a1a80814c3cef4780614ccf0d09e09abffb",
+    "candidate_sha256": "a5aece493bb3df5afe170473085b0a5e6fed42c7ec25af7579407cd23170894d",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6405,
+    "changed_percent": 1.9458621946773607,
+    "difference_bbox": [
+      16,
+      35,
+      379,
+      801
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "battle-09.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_edge_delta_no_target_rule_layout_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Fog e4/f4/e5/f5 2x2 target, rings/dots and zone confirmation copy retained."
+    }
+  },
+  {
+    "name": "achievements",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/achievements.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/achievements_testImage.png",
+    "reference_sha256": "4ce4d1d6e250af3bed3ef12091dad19571a2e983424d45b7c411e6855c0a7bdf",
+    "candidate_sha256": "44ec7ccd60c91af953f8da253de5bd4aa80b91d9457ae3ae91611514b3978527",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 2409,
+    "changed_percent": 0.7318629238060518,
+    "difference_bbox": [
+      17,
+      43,
+      375,
+      519
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-01.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Offline-load error and retry retained; no success state inferred."
+    }
+  },
+  {
+    "name": "arenas",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/arenas.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/arenas_testImage.png",
+    "reference_sha256": "9770c7003fa2cd1fe40a9b19a6791de37ff93ca65ea9b9c36ef391c87e58572d",
+    "candidate_sha256": "50002ad541dc01261fdd135d0800a9919a24c58298522d7f546f73d2db40f813",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 16268,
+    "changed_percent": 4.942277311945558,
+    "difference_bbox": [
+      14,
+      43,
+      365,
+      818
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-01.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Arena1,0/100,next100 and reward previews retained; text/control raster differences only visibly material."
+    }
+  },
+  {
+    "name": "battle-card-art-v204",
+    "group": "card-art",
+    "reference": "/workspace/luno-chess/luno_chess/test/goldens/battle-card-art-v204.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/battle-card-art-v204_testImage.png",
+    "reference_sha256": "12d661ee0c894f0e2ab1f3e1d452c8d7d523241682d6c9dfad4a6dca33ae630a",
+    "candidate_sha256": "88047ca7e39c3a2d32b73d2b3916e59918d7cb52a5d82e45f97c3bef57739b93",
+    "size": [
+      480,
+      820
+    ],
+    "changed_pixels": 3993,
+    "changed_percent": 1.014481707317073,
+    "difference_bbox": [
+      53,
+      132,
+      442,
+      782
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "card-art-01.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": true,
+      "verdict": "text_edge_delta_art_unchanged_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "All24 distinct art images/layout preserved; enhanced diff isolates card wire-label text edges, no art-pixel change in grid."
+    }
+  },
+  {
+    "name": "browser",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/browser.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/browser_testImage.png",
+    "reference_sha256": "ea12822e6c89fa834baf944b4a737780cf50ab03a325f3c39292168e1c0daf8c",
+    "candidate_sha256": "3b582d4d583aeb82d5e915433a715700947d655ce032278bfc431f293a261952",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 7687,
+    "changed_percent": 2.3353384372341717,
+    "difference_bbox": [
+      17,
+      27,
+      369,
+      699
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-01.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Legacy-card archive label and locked/unlocked grid retained; not active Battle V1 catalog."
+    }
+  },
+  {
+    "name": "cards",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/cards.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/cards_testImage.png",
+    "reference_sha256": "9431a305d7eb9d261be689bf4bc7278659b441cc113b6ce0decda3e170e6e4d3",
+    "candidate_sha256": "d8cf2527760dea7886e5356165c396d1267bbda45f171beb4b80379e78389ed3",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6761,
+    "changed_percent": 2.0540162838741036,
+    "difference_bbox": [
+      17,
+      43,
+      314,
+      721
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-01.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Current explicit back arrow added; 24-card preview grid and loading spinner remain. Navigation fixture is offline, not live ownership acceptance."
+    }
+  },
+  {
+    "name": "chest",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/chest.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/chest_testImage.png",
+    "reference_sha256": "0860079e7a8251d73fc9cc11736951bb0fee865c52ae59b550c996e370764931",
+    "candidate_sha256": "ed15883a396be8c9867502ab1ccacf9225e3f046e02abb9ce122932b30a33d58",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 2209,
+    "changed_percent": 0.6711021995382185,
+    "difference_bbox": [
+      100,
+      236,
+      264,
+      618
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-01.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Cosmetic chest gold1500/gems30 and collect command retained."
+    }
+  },
+  {
+    "name": "collection",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/collection.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/collection_testImage.png",
+    "reference_sha256": "a32206c6d7d416b08bcfe38423a1b47168115d62ab4e30e8cf2fd76517b2852b",
+    "candidate_sha256": "69d3b9a75e0c4179e1c65dd081b6bab2867b5e6d3c1386371d875af1f9b2b380",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 9809,
+    "changed_percent": 2.980009721715883,
+    "difference_bbox": [
+      17,
+      27,
+      369,
+      541
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-01.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Battle24-card count and four category links retained."
+    }
+  },
+  {
+    "name": "costumes",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/costumes.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/costumes_testImage.png",
+    "reference_sha256": "9608985e5019e2b7f2ca1769fe460e1876e73b7f7a1b78b08c66dbc577515741",
+    "candidate_sha256": "613f88f2c08fa3234b5f8bf4bf4cbe05a6234e65f55895ecfcf46592c7989e3f",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 9891,
+    "changed_percent": 3.0049216186656946,
+    "difference_bbox": [
+      15,
+      39,
+      332,
+      820
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-02.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "White/black selector and owned/locked costume entries retained."
+    }
+  },
+  {
+    "name": "daily-reward",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/daily-reward.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/daily-reward_testImage.png",
+    "reference_sha256": "7a2dc6239f8d1d8da57aa702738b73d42a6f778a84f0bb6a4e44c4cb8648609d",
+    "candidate_sha256": "bf1b20f5ef74035b333790c7fcc71287e048f040d108f562960a696f5262f478",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 1932,
+    "changed_percent": 0.5869485964272694,
+    "difference_bbox": [
+      103,
+      276,
+      286,
+      582
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-02.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "500-gold reward dialog retained; not proof a backend grant happened."
+    }
+  },
+  {
+    "name": "deck",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/deck.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/deck_testImage.png",
+    "reference_sha256": "ccd030f58f2610cc6ee53ec9501bff189599807566fca02353b860007825d58b",
+    "candidate_sha256": "065ae6f069d050beec7d09af1642e8fe73654d4205ad67764ef77116e34f56c1",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 69609,
+    "changed_percent": 21.14746627779803,
+    "difference_bbox": [
+      15,
+      43,
+      375,
+      820
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-02.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": true,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Current back arrow and multi-line affordability/target guidance added; pushes save/other cards lower. V236 FINDINGS documents guidance addition; scroll reachability not rerun."
+    }
+  },
+  {
+    "name": "defeat",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/defeat.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/defeat_testImage.png",
+    "reference_sha256": "5836cdeb75f885435c7324b11ef75dd56727bc91b442a1897bfbc866671e4b7a",
+    "candidate_sha256": "79605a31e0f28016d93d4ebbc75623dc1db947fe5f3603f5ec2ad8d31ea71a07",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 3115,
+    "changed_percent": 0.9463482804715032,
+    "difference_bbox": [
+      36,
+      437,
+      354,
+      621
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-02.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Defeat state with replay/home retained."
+    }
+  },
+  {
+    "name": "difficulty",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/difficulty.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/difficulty_testImage.png",
+    "reference_sha256": "b3b0c8d38a6dcd7d6556438d4c5f2d097bc08bc48da8a46f6eb12d59ba4eb312",
+    "candidate_sha256": "a929c76d8a83170e3f0a5bd61ba30913595542882cc01a07d8f61e5c05e78790",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 9655,
+    "changed_percent": 2.933223964029651,
+    "difference_bbox": [
+      17,
+      38,
+      356,
+      790
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-02.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Six AI trainers and trophy labels retained."
+    }
+  },
+  {
+    "name": "dm",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/dm.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/dm_testImage.png",
+    "reference_sha256": "3ffbbd423a081839561e9601ca4e1a79898fff3dbe651740dc00bc0c5d27bf5a",
+    "candidate_sha256": "02478662a775ec84c6a88b555e26e54c20f3b9ae8522c149516c35a19953c5f8",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 638,
+    "changed_percent": 0.19382671041438815,
+    "difference_bbox": [
+      17,
+      43,
+      364,
+      795
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-02.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Loading spinner and composer retained in offline fixture; loaded conversation not covered."
+    }
+  },
+  {
+    "name": "draw",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/draw.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/draw_testImage.png",
+    "reference_sha256": "5be9d1a79cf9228202fc86b09bbae52efa43f63e51c3f1b8d5a3e28a065c81d1",
+    "candidate_sha256": "2bb5d456ffbeac3bc1aa6fdf8eb7968c07fb5061c4d814685e493eb372afe94d",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 2740,
+    "changed_percent": 0.8324219224693158,
+    "difference_bbox": [
+      102,
+      443,
+      288,
+      621
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-03.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Draw result and replay/home retained."
+    }
+  },
+  {
+    "name": "edit-profile",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/edit-profile.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/edit-profile_testImage.png",
+    "reference_sha256": "dadf45011d403825a7fd68c2823ea13f498e1d8d671126ceced2430b60dc4a1e",
+    "candidate_sha256": "c583a92baf4594f306ceddd14b8886030d2dc42a662f6e23a4c8ff26de8309b3",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 4581,
+    "changed_percent": 1.391724389354721,
+    "difference_bbox": [
+      17,
+      39,
+      375,
+      726
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-03.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Country, bio counter27/160 and avatar selector retained."
+    }
+  },
+  {
+    "name": "emojis",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/emojis.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/emojis_testImage.png",
+    "reference_sha256": "4047ee6fa526b1d0ab76691a0bb936f6eb5267241f44d6f2949ad57359ff2e32",
+    "candidate_sha256": "bc41b5fb712530ccfd6b394b9de7f22d3092455446e1a4449aac4567786bc1ad",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6101,
+    "changed_percent": 1.853505893790254,
+    "difference_bbox": [
+      17,
+      39,
+      360,
+      766
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-03.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "0/4 selected and owned/locked emoji grid retained."
+    }
+  },
+  {
+    "name": "friendly",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/friendly.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/friendly_testImage.png",
+    "reference_sha256": "90626b2651cc467c7c7754054206386f0eddd4f05fa0ad64dc5e214d5484fed6",
+    "candidate_sha256": "9f7f350ac34e12ffd55054c05e52e511374be26f25404aa8d7bfe52aae520fe4",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 8176,
+    "changed_percent": 2.4838984080690243,
+    "difference_bbox": [
+      16,
+      43,
+      355,
+      651
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-03.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Create room and join code controls retained,5-minute policy visible."
+    }
+  },
+  {
+    "name": "friends",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/friends.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/friends_testImage.png",
+    "reference_sha256": "90809b3446bcb17706f3e36382c51d7ccd53201b1099ef16972dc2215558feb7",
+    "candidate_sha256": "1dc6d0a75e37a8833c2a5a5bc2d61d47e4937059167dea7d072f2036594ade70",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 3341,
+    "changed_percent": 1.0150078988941549,
+    "difference_bbox": [
+      16,
+      43,
+      375,
+      299
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-03.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Lookup/requests/ranking controls retained; loading spinner is fixture state."
+    }
+  },
+  {
+    "name": "guide",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/guide.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/guide_testImage.png",
+    "reference_sha256": "8052d3ae773973f821ca389322550d1b49fb3508936028ccab9aca7e6a466769",
+    "candidate_sha256": "e89ea82af82867ce842aae025ab5b89ec29a6c3d236aedc213186eac4933279f",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 298941,
+    "changed_percent": 90.81935836675173,
+    "difference_bbox": [
+      0,
+      42,
+      390,
+      844
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-03.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": true,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Large documented V237 replacement: interactive hub, mascot, academy/card links and mini-board replace prose. Visual design approval record for exact replacement absent."
+    }
+  },
+  {
+    "name": "history",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/history.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/history_testImage.png",
+    "reference_sha256": "879c2fc0e92ffac709bdc84f7112c434c02d07957755663d29b6ba520c546f1b",
+    "candidate_sha256": "763658273c02f6197046f1541f3a133f1b173b08056ba3684a82268d40722612",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 4029,
+    "changed_percent": 1.2240247903755013,
+    "difference_bbox": [
+      17,
+      39,
+      353,
+      560
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-04.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Empty match-history state retained."
+    }
+  },
+  {
+    "name": "home",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/home.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/home_testImage.png",
+    "reference_sha256": "ce4db9636eb498b9a4d23600010255f281c102c75ff9fc64872beb067d895d70",
+    "candidate_sha256": "d233691fe586389cb90f70ad776f910bf737e2814dfa5f9d7b075a55afc507db",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 19807,
+    "changed_percent": 6.017438327864868,
+    "difference_bbox": [
+      9,
+      45,
+      381,
+      808
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-04.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "First-match CTA, arena0/100 and navigation remain readable; CTA/typography metrics differ."
+    }
+  },
+  {
+    "name": "inbox",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/inbox.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/inbox_testImage.png",
+    "reference_sha256": "340cfcb99c2555bf071e4890a4282f49d0aeabe5171f5b3b6514ebc0168142cd",
+    "candidate_sha256": "eb346458b06aa2813ae29fd00f42aaa3439f0a5b8c13ec848b1b27ef0f5e7426",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 661,
+    "changed_percent": 0.20081419370518896,
+    "difference_bbox": [
+      17,
+      39,
+      124,
+      57
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-04.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Loading fixture retained; does not cover loaded/empty/error notifications."
+    }
+  },
+  {
+    "name": "levels",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/levels.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/levels_testImage.png",
+    "reference_sha256": "e87d7807f848ec7fc1e6c334d09d919c46d791c307d1a0c4270dec8d62ce4d78",
+    "candidate_sha256": "c790781e44dcddbf72cf26382f2ed79a6f324250660cab0a5f60031237754d64",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 6999,
+    "changed_percent": 2.1263215457528255,
+    "difference_bbox": [
+      16,
+      39,
+      350,
+      531
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-04.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Level1,next2,+140 gold preview retained."
+    }
+  },
+  {
+    "name": "missions",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/missions.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/missions_testImage.png",
+    "reference_sha256": "4de2631e71b9fad0bf389a9ccd9244137ec35a8f85a83156b4b5d5f26fd0ac33",
+    "candidate_sha256": "3b4e34746c19438676d706af5516ccda3654cf6a1267b28afd6cbdb2eb38affc",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 5096,
+    "changed_percent": 1.5481832543443919,
+    "difference_bbox": [
+      16,
+      39,
+      357,
+      567
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-04.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Offline mission-load failure and retry retained."
+    }
+  },
+  {
+    "name": "pass",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/pass.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/pass_testImage.png",
+    "reference_sha256": "6ed01fc1498756af6bbe7d4f6d0e349abe73c290cb47da421869180149a14125",
+    "candidate_sha256": "49881d938f80156f38c95f6a680affa6af12438310f91ec0075ba48f2a72bf14",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 7782,
+    "changed_percent": 2.3641997812613926,
+    "difference_bbox": [
+      14,
+      27,
+      369,
+      805
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-04.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "0/30 progress, separate450-gem Pass Premium and reward tracks retained."
+    }
+  },
+  {
+    "name": "play",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/play.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/play_testImage.png",
+    "reference_sha256": "7b9969de8ea877ad34922ffdd6c69a72750ef423f65c853fbe167901d7746d17",
+    "candidate_sha256": "0c6b9eb572486c5c72c20327b324be017290d7538aa1e38436517717b0a09e01",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 12356,
+    "changed_percent": 3.7537975452667394,
+    "difference_bbox": [
+      12,
+      45,
+      361,
+      793
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-05.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Starter-deck offline preview and ranked/training modes retained."
+    }
+  },
+  {
+    "name": "premium",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/premium.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/premium_testImage.png",
+    "reference_sha256": "6036b27b7f309f93f1b5725decff756997278dfa6c9c34bb2467b0aba49c45da",
+    "candidate_sha256": "0d55fbdc1d269cb75afe1ed0e6bd034237ac84cd28b15e56856667c4d3d0a72f",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 16043,
+    "changed_percent": 4.873921497144246,
+    "difference_bbox": [
+      17,
+      43,
+      355,
+      808
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-05.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Unverified membership, disabled purchase options and benefits retained."
+    }
+  },
+  {
+    "name": "profile",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/profile.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/profile_testImage.png",
+    "reference_sha256": "afb9822a59c1956e528e43a441f580d398a24157df10b8d6346198f0ccd2d23a",
+    "candidate_sha256": "f6df874d7e2828e575b3cef8e49d02379fcf60c6f6ad8882780c1b2cdfb748c5",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 8452,
+    "changed_percent": 2.567748207558634,
+    "difference_bbox": [
+      17,
+      39,
+      377,
+      812
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-05.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Profile/bio/stats/gold1250/gems42 retained."
+    }
+  },
+  {
+    "name": "promotion",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/promotion.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/promotion_testImage.png",
+    "reference_sha256": "121783a8f1a008fadb8a41318ad33a159a0dc2ea75c9f3b05de265117f9e8eaa",
+    "candidate_sha256": "b0e98538ce6222609ae71835e796dedc1f8294d2f21e4b6361381da01030243d",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 11996,
+    "changed_percent": 3.64442824158464,
+    "difference_bbox": [
+      22,
+      66,
+      354,
+      761
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-05.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": true,
+      "verdict": "visible_glyph_defect_current_declared_font_chain",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Both images show missing Turkish dotted I glyphs in PİYON VADİSİ; current explicit Cinzel plus inherited Spectral TR chain lacks U+0130. Reported to root for current focused reproduction/fix."
+    }
+  },
+  {
+    "name": "public-profile",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/public-profile.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/public-profile_testImage.png",
+    "reference_sha256": "4419ab2da86e5acbbb29dfe32f817a3181f2b4d1ff253882e16ee8bdbf621abb",
+    "candidate_sha256": "9fe3fd72d87345e5b20fbdfac30b24cb70c340cf689013d132ad338cc49e2f4f",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 4392,
+    "changed_percent": 1.3343055049216186,
+    "difference_bbox": [
+      16,
+      39,
+      335,
+      492
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-05.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Deniz,1450 trophies,84 wins,70% retained."
+    }
+  },
+  {
+    "name": "queue",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/queue.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/queue_testImage.png",
+    "reference_sha256": "7b658d9103a6d8e373a304772b6d0a5620d2cc79679ac28d164fcc022c7dcd66",
+    "candidate_sha256": "1daf62cb5407f6052440e6ffa01469e620fd99e4ea05e86ccd6f6ef392cbce22",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 8328,
+    "changed_percent": 2.5300765585125773,
+    "difference_bbox": [
+      16,
+      43,
+      350,
+      456
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-05.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Offline connection-required queue state and reconnect retained."
+    }
+  },
+  {
+    "name": "ranking",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/ranking.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/ranking_testImage.png",
+    "reference_sha256": "c13e28e853dfb81979905384ef32b1897ce6e6e0b96503aeef682625211e8f10",
+    "candidate_sha256": "c2f32d4770a1301045173c30a1a4203269d71f9215edb0f7bc37f10ac3aa1c62",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 2799,
+    "changed_percent": 0.8503463361283267,
+    "difference_bbox": [
+      16,
+      43,
+      375,
+      573
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-06.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Offline ranking failure and retry retained."
+    }
+  },
+  {
+    "name": "season-reward",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/season-reward.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/season-reward_testImage.png",
+    "reference_sha256": "2a07cd9af32753ec7445be618bbb9b0f1c545548457735c7b3a829a09fd8d733",
+    "candidate_sha256": "b56c1554f1cf8f845fda948c8b0a723acd1907181a2925ee6ccf886ac783da79",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 3716,
+    "changed_percent": 1.1289342568963423,
+    "difference_bbox": [
+      48,
+      214,
+      341,
+      398
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-06.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "HUKUMDAR,500gold/20gems and claim retained."
+    }
+  },
+  {
+    "name": "season",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/season.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/season_testImage.png",
+    "reference_sha256": "c1db75e483bd42eb9ffcf0dd27e690db4ad94242e1eee97604a7673f02dfde42",
+    "candidate_sha256": "43f1387599ae3e96272ec971b8bfb582c8f0bbfa891efd1d112cd989d97dd2d1",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 3140,
+    "changed_percent": 0.9539433710049824,
+    "difference_bbox": [
+      16,
+      43,
+      375,
+      488
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-06.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Season not ready/offline and retry retained."
+    }
+  },
+  {
+    "name": "settings",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/settings.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/settings_testImage.png",
+    "reference_sha256": "600985b4ff5b61d6a2f54d57e49f8fb6a02a72f59c436e8c8dc2e069a6e3691c",
+    "candidate_sha256": "4dccfd7350793a87e541d39c2fb840d9998ee0f02c55bfc5a6fc36b2eefdee08",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 28892,
+    "changed_percent": 8.777494227731195,
+    "difference_bbox": [
+      13,
+      43,
+      376,
+      820
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-06.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": true,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Same language/audio/vibration/account controls; typography/control-spacing differences remain readable. Exact design signoff unavailable."
+    }
+  },
+  {
+    "name": "shop",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/shop.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/shop_testImage.png",
+    "reference_sha256": "eb4f1ae62ede444cb5b79cb27a75e18a0d19e4c950b8e65ec19f4879701e1b82",
+    "candidate_sha256": "0c87f8bd06253af1a87ec210871b2d6475b1487eac09e1b4f9e811f7f8e92320",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 11010,
+    "changed_percent": 3.3448778709442215,
+    "difference_bbox": [
+      14,
+      27,
+      374,
+      796
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-06.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Premium/Pass/daily-gift/cosmetic chest sections retained; reward200 and chest500 visible."
+    }
+  },
+  {
+    "name": "tutorial-1",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/tutorial-1.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/tutorial-1_testImage.png",
+    "reference_sha256": "d56b8c0c0729d55fb93d74b582be8f8357e92da3c219a30db6faa850ba1b8340",
+    "candidate_sha256": "3f906baf5c502f322264802e644b5b5e01ea55be05c6b98147f73c857cb3bf19",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 65887,
+    "changed_percent": 20.016709199173654,
+    "difference_bbox": [
+      18,
+      57,
+      390,
+      790
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-06.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Step2/10 first move: white TutorialCoach styling and small stage shift; pieces/first-turn restriction retained."
+    }
+  },
+  {
+    "name": "tutorial-2",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/tutorial-2.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/tutorial-2_testImage.png",
+    "reference_sha256": "f69c4461b70a69fb62ab0eaa125c692776f71c02b0eaf345f4a4e29e1e0cb921",
+    "candidate_sha256": "2fc01f72d648de38b9c682a28355c14911e4e1fd3c6a1f96c9ceb671146fafff",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 54366,
+    "changed_percent": 16.51658767772512,
+    "difference_bbox": [
+      18,
+      57,
+      390,
+      790
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-07.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Step3/10: white coach, same skip-card instruction and board position."
+    }
+  },
+  {
+    "name": "tutorial-3",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/tutorial-3.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/tutorial-3_testImage.png",
+    "reference_sha256": "c0c1b5a95cb178e6dfbcaed14c22f0b099a9b8e77b0112bc21282a369fb1e9a1",
+    "candidate_sha256": "acef154a8a675dd4ce6cfcd1f5c7245c64217432c25f6c16a2afcd842414a010",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 90165,
+    "changed_percent": 27.392453518045937,
+    "difference_bbox": [
+      18,
+      57,
+      390,
+      790
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-07.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Step4/10: white coach and reflowed mana slider/cost row, opponent-card target instruction retained."
+    }
+  },
+  {
+    "name": "tutorial-4",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/tutorial-4.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/tutorial-4_testImage.png",
+    "reference_sha256": "7bc73552d21652b7f700528b7cef800ccc7d0476c763f626690ae846adb760e9",
+    "candidate_sha256": "ad72b61a641e75272b5e375c85e5a71e42b7459f629ec60bff530eefa8a0d240",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 101594,
+    "changed_percent": 30.864625106331268,
+    "difference_bbox": [
+      18,
+      57,
+      390,
+      790
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-07.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": true,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Step5/10: white coach plus disabled target-selection command move board down; black c7/f7/d5 rings retained."
+    }
+  },
+  {
+    "name": "tutorial-5",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/tutorial-5.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/tutorial-5_testImage.png",
+    "reference_sha256": "eb39df541468941be9517699c35c796661be9a8a613a6d00e354a219d4626f9b",
+    "candidate_sha256": "3e29d7ca613b12b242cc08ce1ce6d082ee738360d7f8d4bcdee021cc000e2fc8",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 102365,
+    "changed_percent": 31.098857698383764,
+    "difference_bbox": [
+      18,
+      57,
+      390,
+      790
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-07.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Step6/10: same reflow/disabled target-selection command, white own-piece targets retained."
+    }
+  },
+  {
+    "name": "tutorial-6",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/tutorial-6.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/tutorial-6_testImage.png",
+    "reference_sha256": "8270e0f89ef9830f0d08674c879df1f7932b2566f096c6ee077e0997db1b8d01",
+    "candidate_sha256": "15a738961e1aa404d1dcb337537d64f1f595f86f8087bcca861f3bb76c0a3bcb",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 54666,
+    "changed_percent": 16.60772876412687,
+    "difference_bbox": [
+      18,
+      57,
+      390,
+      790
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-07.png",
+    "sheet_position": 5,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Step7/10: white coach, skip-card instruction and board retained."
+    }
+  },
+  {
+    "name": "tutorial-7",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/tutorial-7.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/tutorial-7_testImage.png",
+    "reference_sha256": "36ad21ccad580b447fad5e76ac2d977dd188f41adc31df2175243e4417319097",
+    "candidate_sha256": "2102dadefa8478d56e3ba5bcb286b4ccb0d41b7cd18e2818e843c8b5195040fa",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 80324,
+    "changed_percent": 24.402722080447198,
+    "difference_bbox": [
+      18,
+      57,
+      390,
+      790
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-07.png",
+    "sheet_position": 6,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Step8/10: white coach, Radar/Prophecy and opposing-card choices retained."
+    }
+  },
+  {
+    "name": "tutorial-8",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/tutorial-8.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/tutorial-8_testImage.png",
+    "reference_sha256": "f6f0004a55b6ad2662b86f3f04cd246ef204778765edf297434b6857b52d1215",
+    "candidate_sha256": "4f954dfdd6c84d65d7521af0497265df8b6c95c243fdfc97a5e7945f8d47429d",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 13831,
+    "changed_percent": 4.20190788674201,
+    "difference_bbox": [
+      18,
+      57,
+      368,
+      790
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-08.png",
+    "sheet_position": 1,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Step9/10 ranked/training/5+2 instruction retained; same two mode icons and next."
+    }
+  },
+  {
+    "name": "tutorial-9",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/tutorial-9.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/tutorial-9_testImage.png",
+    "reference_sha256": "7cb2b762c37481040dcc80d35056b97960d12db7bf080978993b52f436d7a453",
+    "candidate_sha256": "032b23caa16ef42983a7e2cf03a98f0cbeed89fde50c6cc1ba9e7f9624db6c55",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 20789,
+    "changed_percent": 6.315773484019929,
+    "difference_bbox": [
+      18,
+      57,
+      390,
+      790
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-08.png",
+    "sheet_position": 2,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Step10/10 first-match guidance copy updated; four lesson cards and Play transition retained. DEVAM tutorial-live notes describe guided first match."
+    }
+  },
+  {
+    "name": "tutorial",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/tutorial.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/tutorial_testImage.png",
+    "reference_sha256": "c001ef8a97bdc728c9ef5bb6c514b6a465bcedcf730819fbd500ca8329c440b8",
+    "candidate_sha256": "93d1fc6dc9f5d1189a1c1cec7b44ee5a42597aadd30f1d1ade84fa4058f97f69",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 7209,
+    "changed_percent": 2.1901203062340504,
+    "difference_bbox": [
+      18,
+      52,
+      366,
+      790
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-08.png",
+    "sheet_position": 3,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "existing_design_or_guidance_delta_without_exact_signoff",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Welcome step1/10, Luno portrait and next retained; header adds catalog/academy actions."
+    }
+  },
+  {
+    "name": "victory",
+    "group": "surface",
+    "reference": "/workspace/luno-chess/luno_chess/qa/v203-after/victory.png",
+    "candidate": "/workspace/luno-review/bug-audit-round3/generated/luno_chess/test/failures/victory_testImage.png",
+    "reference_sha256": "e5fdf627c168f7289a2b47d88e03dca7c4ab5cc4be1b8d78caef9b56238b5da7",
+    "candidate_sha256": "1b065f1d6fcff064f3edbfaf25609cc6bdccedf94931c5473595e59f3fac01cc",
+    "size": [
+      390,
+      844
+    ],
+    "changed_pixels": 3038,
+    "changed_percent": 0.9229554016283874,
+    "difference_bbox": [
+      76,
+      403,
+      312,
+      661
+    ],
+    "generated_master_matches_reference": true,
+    "same_v239_candidate": true,
+    "contact_sheet": "surface-08.png",
+    "sheet_position": 4,
+    "inspection": {
+      "contact_sheet": true,
+      "full_resolution": false,
+      "verdict": "text_or_control_metrics_delta_no_semantic_regression_observed",
+      "golden_acceptance": "unresolved_fail",
+      "notes": "Victory/reward50/replay/home retained."
+    }
+  }
+]

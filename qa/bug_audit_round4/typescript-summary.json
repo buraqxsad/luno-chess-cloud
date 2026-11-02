@@ -1,0 +1,256 @@
+{
+  "scope": "typescript",
+  "runner": "Each *.test.js executed directly in a fresh Node process; actual TAP case counts, no file-level wrapper acceptance.",
+  "files": 16,
+  "totals": {
+    "tests": 376,
+    "pass": 376,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "results": [
+    {
+      "file": "dist/test/authority.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.318,
+      "log": "authority.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/chess.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 26,
+        "pass": 26,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.425,
+      "log": "chess.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/core.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 64,
+        "pass": 64,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.63,
+      "log": "core.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/fixtures.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 113,
+        "pass": 113,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.177,
+      "log": "fixtures.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/migration.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 9,
+        "pass": 9,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.116,
+      "log": "migration.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/protocol.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 9,
+        "pass": 9,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.115,
+      "log": "protocol.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/v215-native-migration.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.115,
+      "log": "v215-native-migration.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/v218-rule-actions.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.217,
+      "log": "v218-rule-actions.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/v218-rule-geometry.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 14,
+        "pass": 14,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.266,
+      "log": "v218-rule-geometry.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/v218-rule-terminal.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.318,
+      "log": "v218-rule-terminal.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/v218_online_private_access.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.165,
+      "log": "v218_online_private_access.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/v219-rules-contract.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 60,
+        "pass": 60,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.373,
+      "log": "v219-rules-contract.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/v219_online_boundary.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.216,
+      "log": "v219_online_boundary.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/v223-removal-identity.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.165,
+      "log": "v223-removal-identity.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/v223-terminal-cards.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 14,
+        "pass": 14,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.316,
+      "log": "v223-terminal-cards.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "dist/test/v224-card-wire-targets.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 31,
+        "pass": 31,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.769,
+      "log": "v224-card-wire-targets.test.js.log",
+      "assertions_observed": true
+    }
+  ],
+  "all_pass": true
+}

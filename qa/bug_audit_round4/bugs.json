@@ -1,0 +1,56 @@
+[
+  {
+    "severity": "P1",
+    "bug": "RTDN lease’in ACK ve takeover sahipliği",
+    "commit": "4c0e823",
+    "area": "economy",
+    "fix": "Yarım kalan processing lease başarı diye ACK ediliyor, eski worker yeni sahibin durumunu ezebiliyordu. Yalnız complete duplicate kabul edilir; her attempt UUID ile complete/failed CAS yapar.",
+    "proof": "8 baseline vakası: 4 geçti / 4 başarısız →8/8; ilgili 84/84.",
+    "new_independent_family": true
+  },
+  {
+    "severity": "P2",
+    "bug": "Kurtarma yazısının kalıcı sanılması",
+    "commit": "e1bdd77",
+    "area": "client",
+    "fix": "SharedPreferences reddedilen yazıyı cache’inde tutuyordu. Ack almamış kurtarma ve kalıcı pending intent yeniden denenir; restart, UID değişimi ve erasure korunur.",
+    "proof": "35 baseline vakası: 15 geçti / 20 başarısız; son 49 yeni + 70 eski = 119/119.",
+    "new_independent_family": true
+  },
+  {
+    "severity": "P2",
+    "bug": "Eski private projection’dan pencere açılması",
+    "commit": "7723784",
+    "area": "battle",
+    "fix": "Eski frame’in knowledge/deck widget’ı yeni sürüm diye damgalanıyordu. Pencere açılışı origin stateVersion ile kabul edilir.",
+    "proof": "7 birleşik baseline vakası: 4 geçti / 3 başarısız; iki overlay hatası ve bir compact residual; son 7/7, ilgili 122/122.",
+    "new_independent_family": true
+  },
+  {
+    "severity": "P2",
+    "bug": "Türkçe arena başlığında eksik glifler",
+    "commit": "fc336b7",
+    "area": "visual",
+    "fix": "Cinzel-latin ve inherited Spectral-latin İ/Ş/Ğ içermiyordu. Mevcut CinzelTurkish fallback açıkça tanımlandı.",
+    "proof": "3 raster vakası: 1 geçti / 2 başarısız → 3/3; ilgili 39/39. Tam PNG değişimi yalnız başlıkta 2045 piksel.",
+    "new_independent_family": true
+  },
+  {
+    "severity": "P1",
+    "bug": "Önceki aile: oda/davet ve eski rezervasyon kapsamı",
+    "commit": "0662662 +21a15c3",
+    "area": "online",
+    "fix": "Queue koruması oda/daveti kapsamıyordu. Yeni lease nonce’si; legacy fallback/persisted ID; eski çakışmış rezervasyonun koşullu CAS ile emekliye ayrılması.",
+    "proof": "13 baseline vakası: 5 geçti / 8 başarısız; son 13/13 ve ilgili 62/62.",
+    "new_independent_family": false
+  },
+  {
+    "severity": "P2",
+    "bug": "Önceki aile: compact Pass yolu",
+    "commit": "7723784",
+    "area": "battle",
+    "fix": "Küçük ekran/büyük yazı ikon kontrolü önceki selection gate’i kullanmıyordu. Aynı mevcut kapı bu yola da uygulandı.",
+    "proof": "Bir failing stale-pass + geçerli current control; yukarıdaki birleşik 7 ve 122 koşusunda geçti.",
+    "new_independent_family": false
+  }
+]

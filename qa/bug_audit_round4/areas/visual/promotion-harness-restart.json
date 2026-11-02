@@ -1,0 +1,4 @@
+{
+  "reason": "Native image future in fake async test did not progress; rerun capture inside tester.runAsync. No assertion cases completed or production conclusion.",
+  "terminated_test_processes": []
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "gate": "Altı somut kaynak düzeltmesi",
+    "status": "PASS",
+    "reason": "Dört yeni aile ve önceki iki kapsam eksiği başarısız tekrar üretim sonrası kapatıldı. Evrensel hatasızlık kanıtı değildir."
+  },
+  {
+    "gate": "Flutter analiz",
+    "status": "PASS",
+    "reason": "No issues found; ilk redundant null warning düzeltildi, test başlamadan tekrar analiz edildi."
+  },
+  {
+    "gate": "Tam Flutter",
+    "status": "FAIL",
+    "reason": "11862 geçti /97 başarısız /0 atlandı. 97 eski golden farkı açık."
+  },
+  {
+    "gate": "Tam backend",
+    "status": "PASS",
+    "reason": "1458 geçti /0 başarısız /1 atlandı; gerçek per-case TAP."
+  },
+  {
+    "gate": "TypeScript/differential",
+    "status": "PASS",
+    "reason": "376 test; 3101 senaryo/10967 durum ve tam legal set, sıfır ayrışma."
+  },
+  {
+    "gate": "Yerel gerçek RTDB/Admin SDK",
+    "status": "PASS",
+    "reason": "Yedi dar vaka: altı Billing/lease ve bir legacy V1 recovery. Google fake, production/Auth/Play kabulü değildir."
+  },
+  {
+    "gate": "Güncel ARM64 debug APK statik kabulü",
+    "status": "PASS",
+    "reason": "Aynı sertifika,750 asset,targetSdk 36,ELF/ZIP statik 16 KB; native runtime kabulü değildir."
+  },
+  {
+    "gate": "Önceki Android raster SIGSEGV",
+    "status": "FAIL",
+    "reason": "UNRESOLVED: Yeni sağlıklı native ortamda kök neden/düzelme kanıtı yok."
+  },
+  {
+    "gate": "Native yolculuk/fiziksel FPS-RAM-p95–p99/gerçek 16 KB",
+    "status": "NOT RUN",
+    "reason": "KVM/GPU/fiziksel Android yok; emulator açılmadı."
+  },
+  {
+    "gate": "Üretim Firebase/Google/App Check/Integrity",
+    "status": "BLOCKED",
+    "reason": "Staging/üretim erişimi ve gerçek servis kabulü yok."
+  },
+  {
+    "gate": "Play lisans Billing/Console/Pre-launch",
+    "status": "BLOCKED",
+    "reason": "Lisans hesabı/track/Console erişimi yok; +19 uygunluğu bilinmiyor."
+  },
+  {
+    "gate": "Release APK/AAB",
+    "status": "BLOCKED",
+    "reason": "Mevcut upload key/properties yok; imza değiştirilmedi."
+  }
+]

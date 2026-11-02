@@ -1,0 +1,12 @@
+# Altı somut kusur — dört yeni aile, iki kapsam eksiği
+
+Yeni aileler: 1 P1 + 3 P2. Önceki ailelerdeki oda/davet/legacy ve compact kontrol eksikleri: 1 P1 + 1 P2. Toplam 6 somut düzeltme; önceki aileler yeni diye yeniden sayılmadı. Aynı fix’in retry/owner alt vakaları ayrı bug yapılmadı.
+
+| Önem | Kusur | Tür | Commit | Kök neden/düzeltme | Kanıt |
+| --- | --- | --- | --- | --- | --- |
+| P1 | [RTDN lease’in ACK ve takeover sahipliği](areas/economy/REPORT.md) | Yeni aile | `4c0e823` | Yarım kalan processing lease başarı diye ACK ediliyor, eski worker yeni sahibin durumunu ezebiliyordu. Yalnız complete duplicate kabul edilir; her attempt UUID ile complete/failed CAS yapar. | 8 baseline vakası: 4 geçti / 4 başarısız →8/8; ilgili 84/84. |
+| P2 | [Kurtarma yazısının kalıcı sanılması](areas/client/REPORT.md) | Yeni aile | `e1bdd77` | SharedPreferences reddedilen yazıyı cache’inde tutuyordu. Ack almamış kurtarma ve kalıcı pending intent yeniden denenir; restart, UID değişimi ve erasure korunur. | 35 baseline vakası: 15 geçti / 20 başarısız; son 49 yeni + 70 eski = 119/119. |
+| P2 | [Eski private projection’dan pencere açılması](areas/battle/REPORT.md) | Yeni aile | `7723784` | Eski frame’in knowledge/deck widget’ı yeni sürüm diye damgalanıyordu. Pencere açılışı origin stateVersion ile kabul edilir. | 7 birleşik baseline vakası: 4 geçti / 3 başarısız; iki overlay hatası ve bir compact residual; son 7/7, ilgili 122/122. |
+| P2 | [Türkçe arena başlığında eksik glifler](areas/visual/PROMOTION-FIX.md) | Yeni aile | `fc336b7` | Cinzel-latin ve inherited Spectral-latin İ/Ş/Ğ içermiyordu. Mevcut CinzelTurkish fallback açıkça tanımlandı. | 3 raster vakası: 1 geçti / 2 başarısız → 3/3; ilgili 39/39. Tam PNG değişimi yalnız başlıkta 2045 piksel. |
+| P1 | [Önceki aile: oda/davet ve eski rezervasyon kapsamı](areas/online/REPORT.md) | Önceki ailede kapsam eksiği | `0662662 +21a15c3` | Queue koruması oda/daveti kapsamıyordu. Yeni lease nonce’si; legacy fallback/persisted ID; eski çakışmış rezervasyonun koşullu CAS ile emekliye ayrılması. | 13 baseline vakası: 5 geçti / 8 başarısız; son 13/13 ve ilgili 62/62. |
+| P2 | [Önceki aile: compact Pass yolu](areas/battle/REPORT.md) | Önceki ailede kapsam eksiği | `7723784` | Küçük ekran/büyük yazı ikon kontrolü önceki selection gate’i kullanmıyordu. Aynı mevcut kapı bu yola da uygulandı. | Bir failing stale-pass + geçerli current control; yukarıdaki birleşik 7 ve 122 koşusunda geçti. |

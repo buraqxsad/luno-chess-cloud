@@ -1,0 +1,138 @@
+{
+  "source_commit": "0f40ddda041c205b129f3a35d9d4e9f1b661bf8c",
+  "source_index_sha256": "92c1fe742398d30255e33efffc78e82aa6cc862f6a11e7955cc2444b48920a08",
+  "scope": "Real localhost RTDB4.11.2/Admin SDK transactions. One exact-loopback condition change in memory in the actual bundled standalone transport; proxy env/headers and all DB transaction code unchanged. Google Play fake; no Auth/Functions/Android/production/staging/money.",
+  "namespace": "demo-luno-billing-fence-r4-final-default-rtdb",
+  "host": "127.0.0.1:19000",
+  "java_command": [
+    "java",
+    "-Xms32m",
+    "-Xmx192m",
+    "-XX:MaxMetaspaceSize=96m",
+    "-XX:ReservedCodeCacheSize=32m",
+    "-Xss256k",
+    "-XX:ActiveProcessorCount=2",
+    "-XX:+UseSerialGC",
+    "-Duser.language=en",
+    "-jar",
+    "/workspace/toolchains/firebase-emulators/firebase-database-emulator-v4.11.2.jar",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "19000",
+    "--single_project_mode",
+    "Warning"
+  ],
+  "peak_combined_rss_kib": 363220,
+  "local_sdk_acceptance": "PASS",
+  "rules_sha256": "2c62fa56509b6f5ed84abf6847763193e4399fcaf181bfbce161ce78bcf45ff9",
+  "rules_loaded_status": 200,
+  "worker_exit": 0,
+  "counts": {
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "observations": [
+    {
+      "case": "pregrant-refund",
+      "expected_gold": 1250,
+      "actual_gold": 1250,
+      "ungranted_marker": true,
+      "purchase_receipt_absent": true,
+      "error_code": "purchase-revoked",
+      "provider_consume_calls": 0
+    },
+    {
+      "case": "stale-subscription-profile-grant",
+      "premium_until": 0,
+      "current_claim_active": false,
+      "current_claim_revision": 2,
+      "installed_profile_fence": 2,
+      "error_code": "subscription-state-changed",
+      "provider_lookups": 3,
+      "newer_claim_unchanged": true
+    },
+    {
+      "case": "stale-subscription-granted-claim",
+      "premium_until": 0,
+      "current_claim_active": false,
+      "current_claim_revision": 2,
+      "installed_profile_fence": 2,
+      "error_code": "subscription-state-changed",
+      "provider_lookups": 3,
+      "newer_claim_unchanged": true
+    },
+    {
+      "case": "fresh-owned-inactive-without-rtdn",
+      "initial_owned_grant": true,
+      "initial_claim_revision": 3,
+      "current_claim_revision": 4,
+      "installed_profile_fence": 4,
+      "premium_until": 0,
+      "current_claim_active": false,
+      "entitlement_status": "SUBSCRIPTION_STATE_ON_HOLD",
+      "provider_lookups_for_inactive": 1,
+      "rtdn_invoked_by_test": false,
+      "expected_gold": 1250,
+      "actual_gold": 1250
+    },
+    {
+      "case": "first-inapp-ACKed-unmatched-refund",
+      "provider_lookups": 2,
+      "event_status": "complete",
+      "unmatched_status": "awaiting-client-claim",
+      "redelivery_duplicate": true,
+      "error_code": "purchase-not-complete",
+      "expected_gold": 1250,
+      "actual_gold": 1250,
+      "receipt_absent": true,
+      "consume_calls": 0
+    },
+    {
+      "case": "interrupted-RTDN-lease-retry",
+      "initial_worker_interrupted": true,
+      "recent_lease_error": "billing-event-in-progress",
+      "provider_confirmations": 1,
+      "consume_calls": 1,
+      "initial_gold": 1250,
+      "granted_gold": 2250,
+      "final_gold": 1250,
+      "event_status": "complete",
+      "attempts": 2,
+      "takeover_new_owner": true,
+      "complete_redelivery_duplicate": true
+    },
+    {
+      "case": "legacy-friendly-reservation-recovery",
+      "reservation_absent": true,
+      "third_active_absent": true,
+      "bad_room_absent": true,
+      "canonical_result_unchanged": true,
+      "returned_original_id": true
+    }
+  ],
+  "transport_audit": {
+    "selected_connections": 2,
+    "rejected_other_urls": 0,
+    "headers_or_proxy_environment_changed": false,
+    "smoke_pass": true,
+    "inherited_proxy_environment_unchanged": true
+  },
+  "transport_provenance": {
+    "standalone_module": "/workspace/luno-chess/functions/node_modules/@firebase/database-compat/dist/index.standalone.js",
+    "original_sha256": "98421fa06420904b942332c20705b0a577374e82a5bde95bdaf770052d1aa760",
+    "in_memory_sha256": "37485ba9ba07895906cfc1b7cf205c8d045dc41cf54cd93b50a4203cea9309ed",
+    "exact_replaced_blocks": 1,
+    "changed_transport_condition_only": true,
+    "repo_or_sdk_disk_files_modified": false
+  },
+  "source_reverified_after_run": true,
+  "earlier_successful_baseline": "/workspace/luno-review/bug-audit-round2/runtime/sdk-proof-final/results.json",
+  "earlier_two_timeouts_preserved_at": "/workspace/luno-review/system-bug-hunt/economy/sdk-proof/",
+  "port19000_closed_after_cleanup": true,
+  "elapsed_seconds": 8.344,
+  "private_logs_remaining": 0
+}

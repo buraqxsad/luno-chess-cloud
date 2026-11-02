@@ -1,0 +1,316 @@
+{
+  "recorded_utc": "2026-11-02T23:10:47.980386+00:00",
+  "source_commit": "0f40ddda041c205b129f3a35d9d4e9f1b661bf8c",
+  "flutter_build_exit": 0,
+  "first_apk_audit_exit": 1,
+  "canonical_apk_sha256": "7334ed34bc984c2fba160df485d769d7dc17d8114fb4dcae1a5448a32831c669",
+  "canonical_apk_bytes": 201619754,
+  "canonical_apk_crc_verified": true,
+  "gradle_stopped": true,
+  "removed_rebuildable_outputs": [
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/outputs/flutter-apk/app-debug.apk",
+      "bytes": 201619754,
+      "kind": "byte-identical generated APK copy"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/outputs/apk/debug/app-debug.apk",
+      "bytes": 201619754,
+      "kind": "byte-identical generated APK copy"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/dex_number_of_buckets_file/debug",
+      "bytes": 1,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_external_libs_artifact_transform/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/dex_archive_input_jar_hashes/debug",
+      "bytes": 389,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/compiled_navigation_res/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/runtime_symbol_list/debug",
+      "bytes": 118558,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/aar_metadata_check/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_file_lib/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/android_res_source_set_path_map/debug",
+      "bytes": 10314,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/project_dex_archive/debug",
+      "bytes": 76923,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/compressed_assets/debug",
+      "bytes": 137897177,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/external_file_lib_dex_archives/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/compatible_screen_manifest/debug",
+      "bytes": 190,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/compile_symbol_list/debug",
+      "bytes": 714,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/mixed_scope_dex_archive/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_jni_libs/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/packaged_manifests/debug",
+      "bytes": 15178,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/symbol_list_with_package_name/debug",
+      "bytes": 561,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/desugar_graph/debug",
+      "bytes": 470,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/manifest_merge_blame_file/debug",
+      "bytes": 58061,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_java_res/debug",
+      "bytes": 35796,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/nested_resources_validation_report/debug",
+      "bytes": 15,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_manifest/debug",
+      "bytes": 29580,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/sub_project_dex_archive/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/assets/debug",
+      "bytes": 190952565,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/app_metadata/debug",
+      "bytes": 56,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_res_blame_folder/debug",
+      "bytes": 1668512,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_subproject/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/validate_signing_config/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/dex/debug",
+      "bytes": 19965056,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/stable_resource_ids_file/debug",
+      "bytes": 102762,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/local_only_symbol_list/debug",
+      "bytes": 601,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_external_lib/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_test_only_native_libs/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/compile_r_class_jar/debug",
+      "bytes": 3086,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_project/debug",
+      "bytes": 3548,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/flutter/debug",
+      "bytes": 191257548,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/annotation_processor_list/debug",
+      "bytes": 2,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/packaged_res/debug",
+      "bytes": 649209,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/java_res/debug",
+      "bytes": 24,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/stripped_native_libs/debug",
+      "bytes": 54447820,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/navigation_json/debug",
+      "bytes": 2,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/data_binding_layout_info_type_package/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/external_libs_dex_archive_with_artifact_transforms/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_dex/debug",
+      "bytes": 1228,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/apk_ide_redirect_file/debug",
+      "bytes": 81,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/duplicate_classes_check/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_native_libs/debug",
+      "bytes": 644861376,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/linked_resources_binary_format/debug",
+      "bytes": 1545839,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/compile_and_runtime_r_class_jar/debug",
+      "bytes": 609645,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/incremental/debug",
+      "bytes": 2353735,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_manifests/debug",
+      "bytes": 15176,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_mixed_scope/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/signing_config_versions/debug",
+      "bytes": 96,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/data_binding_layout_info_type_merge/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_res/debug",
+      "bytes": 1558784,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/external_libs_dex_archive/debug",
+      "bytes": 0,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/javac/debug",
+      "bytes": 3506,
+      "kind": "completed rebuildable debug intermediate"
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/incremental/packageDebug/tmp/debug",
+      "bytes": 95025,
+      "kind": "completed rebuildable debug intermediate"
+    }
+  ],
+  "free_before": 0,
+  "free_after": 1546833920,
+  "apk_rebuild_needed": false,
+  "cause": "APK build and canonical copy completed. Static audit failed BEFORE ANY CHECK at out.mkdir with ENOSPC. Same SHA/CRC-verified APK retained; no rebuild needed."
+}

@@ -1,0 +1,5 @@
+Requested action: bash /workspace/luno-review/bug-audit-round4/client/replay-baseline.sh
+Requested permission: per-command network access for Flutter loopback IPC.
+Result: action not executed.
+Automatic approval review failed due usage limit. The tool stated this was a review failure, not a determination that the action was unsafe, and prohibited bypassing the approval check.
+No retry or bypass was attempted. The parent agent was informed and submitted its own normally reviewed local validation request. That request was accepted and completed the canonical baseline replay (15 pass /20 fail; exit1) and final focused regression (119/119; exit0). The script restored the exact final GameStore hash afterward.

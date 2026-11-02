@@ -1,0 +1,54 @@
+{
+  "severity": "P1",
+  "classification": "prior-family residual coverage; not counted as an independent NEW family",
+  "parent_round3_fix": "92c71b4",
+  "fix_commit": "0662662",
+  "baseline": {
+    "baseline": "d67cd449cbd8834a4878f5484941d376fa7c17d8",
+    "index_sha256": "c370ab3286f08549122050ce83213542dfd1b52ba582eb2c6389098067cd4f31",
+    "friendly_sha256": "5a69e284206501df9feb93904de4e532ea6917f54aa2d8eac25105f94e90b7bb",
+    "exit": 1,
+    "counts": {
+      "tests": 8,
+      "pass": 5,
+      "fail": 3,
+      "skipped": 0
+    },
+    "test_sha256": "0a9888a30339c00d74d3ebcef2d1bbbadb62ebc52cfbb0fe51ef696919f854ad"
+  },
+  "actual_focused": {
+    "tests": 47,
+    "pass": 47,
+    "fail": 0,
+    "skipped": 0
+  },
+  "root_cause": "Room/invitation leases used requester-owned HTTP request IDs as canonical match identity, allowing a later lease/friend to collide with a settled match; prior protection covered queue reservations only.",
+  "source_sha256": {
+    "functions/lib/battle-v1-friendly.js": "653bb788d7e6a55d526f4a656f3a1f1e64f98100faf45cfc520e62e2284c17cc",
+    "functions/lib/battle-v1-rollout.js": "49c0ecd21296beda068b41c8fe660b09b9cb2405c6422cd35997f23539d07971",
+    "functions/test/round4-online-friendly-replay.test.js": "b4e48f058096f1c1d12b4853887af8dbd574b3cac9096ce21993fd54c8df4345"
+  },
+  "test_sha256": "0a9888a30339c00d74d3ebcef2d1bbbadb62ebc52cfbb0fe51ef696919f854ad",
+  "new_verified_open_this_scope": 0,
+  "real_firebase": "NOT RUN",
+  "production_actions": false,
+  "agent_stop": "Online agent ended with automatic content flag after saving valid baseline. Root used existing ordinary local dispatcher regression, added positive legacy/persisted-ID controls and implemented minimal private lease identity change without escalation/remote calls.",
+  "legacy_recovery_commit": "21a15c3",
+  "final_baseline": {
+    "exit": 1,
+    "counts": {
+      "tests": 13,
+      "pass": 5,
+      "fail": 8,
+      "skipped": 0
+    },
+    "source_commit": "d67cd449cbd8834a4878f5484941d376fa7c17d8",
+    "captured_rollout_sha256": "186ba1fe1747e25deb36e09f1054d730d44f0d49f9a3b077b4a2bf980d4743a6"
+  },
+  "final_focused": {
+    "tests": 62,
+    "pass": 62,
+    "fail": 0,
+    "skipped": 0
+  }
+}

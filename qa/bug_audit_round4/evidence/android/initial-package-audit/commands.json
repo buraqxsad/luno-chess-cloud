@@ -1,0 +1,30 @@
+[
+  {
+    "args": [
+      "flutter",
+      "build",
+      "apk",
+      "--debug",
+      "--target-platform",
+      "android-arm64",
+      "--build-number",
+      "19",
+      "--no-pub"
+    ],
+    "cwd": "/workspace/luno-chess/luno_chess",
+    "exit": 0,
+    "log": "debug-arm64-build.log",
+    "source_commit": "0f40ddda041c205b129f3a35d9d4e9f1b661bf8c"
+  },
+  {
+    "args": [
+      "python3",
+      "/workspace/luno-review/bug-audit-round4/android/audit_apk.py",
+      "/workspace/luno-review/bug-audit-round4/Luno-Chess-bug-audit-round4-debug-arm64.apk"
+    ],
+    "cwd": "/workspace/luno-chess",
+    "exit": 1,
+    "log": "debug-arm64-audit.log",
+    "source_commit": "0f40ddda041c205b129f3a35d9d4e9f1b661bf8c"
+  }
+]

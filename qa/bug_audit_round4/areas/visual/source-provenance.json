@@ -1,0 +1,32 @@
+{
+  "luno_chess/test/battle_ui/visual_test.dart": {
+    "baseline_sha256": "08c64cc008764b56e4536ead69ac07d0923fe984539d884acbcc8406e56fbfc8",
+    "review_time_sha256": "08c64cc008764b56e4536ead69ac07d0923fe984539d884acbcc8406e56fbfc8",
+    "same_as_baseline": true
+  },
+  "luno_chess/test/visual_v203_test.dart": {
+    "baseline_sha256": "6c049a3a0cbff94c54c95fc37a2969409d6a3b5793a714953235a22831bf9c5e",
+    "review_time_sha256": "6c049a3a0cbff94c54c95fc37a2969409d6a3b5793a714953235a22831bf9c5e",
+    "same_as_baseline": true
+  },
+  "luno_chess/test/battle_card_art_v204_test.dart": {
+    "baseline_sha256": "a1b35f124b37a6ac48681a81330c44847c5bc39a2ca25d77bedb847673ab3b07",
+    "review_time_sha256": "a1b35f124b37a6ac48681a81330c44847c5bc39a2ca25d77bedb847673ab3b07",
+    "same_as_baseline": true
+  },
+  "luno_chess/lib/widgets/arena_progression_benefits.dart": {
+    "baseline_sha256": "c93e266faec75e218efdf077426806a9787665facdb185df132e95d41cbb5866",
+    "review_time_sha256": "c93e266faec75e218efdf077426806a9787665facdb185df132e95d41cbb5866",
+    "same_as_baseline": true
+  },
+  "luno_chess/lib/theme/luno_theme.dart": {
+    "baseline_sha256": "f109942ed6a0fcf448b48bd6f8cc12b2bf7501d0a15edf4f1eb15a7e7f3d73bf",
+    "review_time_sha256": "f109942ed6a0fcf448b48bd6f8cc12b2bf7501d0a15edf4f1eb15a7e7f3d73bf",
+    "same_as_baseline": true
+  },
+  "luno_chess/pubspec.yaml": {
+    "baseline_sha256": "ac6b558e8977ed805aefabbc9e9c46a4d677b34923e43395a197b0ea7b91c65d",
+    "review_time_sha256": "ac6b558e8977ed805aefabbc9e9c46a4d677b34923e43395a197b0ea7b91c65d",
+    "same_as_baseline": true
+  }
+}

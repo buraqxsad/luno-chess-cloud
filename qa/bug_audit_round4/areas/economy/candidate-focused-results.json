@@ -1,0 +1,92 @@
+[
+  {
+    "file": "round4-economy-rtdn-lease.test.js",
+    "exitCode": 0,
+    "seconds": 3.465,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "round3-economy-unmatched-refund.test.js",
+    "exitCode": 0,
+    "seconds": 5.302,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "system-hunt-economy-refund-grant-race.test.js",
+    "exitCode": 0,
+    "seconds": 5.281,
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "system-hunt-economy-subscription-stale-fulfillment.test.js",
+    "exitCode": 0,
+    "seconds": 6.551,
+    "tests": 20,
+    "pass": 20,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "subscription-reconciliation-race.test.js",
+    "exitCode": 0,
+    "seconds": 5.002,
+    "tests": 12,
+    "pass": 12,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "round2-economy-subscription-inactive-refresh.test.js",
+    "exitCode": 0,
+    "seconds": 8.742,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v217-billing-recovery.test.js",
+    "exitCode": 0,
+    "seconds": 8.499,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v220-billing-pagination.test.js",
+    "exitCode": 0,
+    "seconds": 5.892,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v238-daily-claim-ordering.test.js",
+    "exitCode": 0,
+    "seconds": 4.615,
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v239-daily-acceptance.test.js",
+    "exitCode": 0,
+    "seconds": 8.196,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "skipped": 0
+  }
+]

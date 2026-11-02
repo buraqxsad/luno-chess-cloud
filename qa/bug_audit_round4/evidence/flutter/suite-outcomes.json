@@ -1,0 +1,1338 @@
+{
+  "test/v214_username_consent_test.dart": {
+    "success": 4
+  },
+  "test/v230_learning_ui_test.dart": {
+    "success": 18
+  },
+  "test/v214_pass_pacing_test.dart": {
+    "success": 4
+  },
+  "test/v216_audio_visual_test.dart": {
+    "success": 16
+  },
+  "test/v235_learning_acceptance_test.dart": {
+    "success": 19
+  },
+  "test/public_profile_freshness_test.dart": {
+    "success": 9
+  },
+  "test/v236_battle_readability_test.dart": {
+    "success": 30
+  },
+  "test/permanent_purchase_recovery_test.dart": {
+    "success": 44
+  },
+  "test/v236_deck_navigation_test.dart": {
+    "success": 25
+  },
+  "test/rc_deck_navigation_owner_test.dart": {
+    "success": 7
+  },
+  "test/v215_audio_runtime_test.dart": {
+    "success": 1
+  },
+  "test/v223_locked_square_adversarial_test.dart": {
+    "success": 76
+  },
+  "test/battle_ui/visual_test.dart": {
+    "error": 50,
+    "success": 60
+  },
+  "test/battle_ui/private_effect_test.dart": {
+    "success": 11
+  },
+  "test/battle_ui/layout_test.dart": {
+    "success": 24
+  },
+  "test/battle_ui/lifecycle_accessibility_test.dart": {
+    "success": 13
+  },
+  "test/battle_ui/interaction_test.dart": {
+    "success": 12
+  },
+  "test/battle_ui/foundation_test.dart": {
+    "success": 8
+  },
+  "test/rc_audio_epoch_test.dart": {
+    "success": 1
+  },
+  "test/v214_ugc_safety_test.dart": {
+    "success": 10
+  },
+  "test/source_audit_inventory_test.dart": {
+    "success": 20
+  },
+  "test/game_input_lifecycle_test.dart": {
+    "success": 1
+  },
+  "test/rc_achievement_ownership_test.dart": {
+    "success": 10
+  },
+  "test/v223_removal_identity_test.dart": {
+    "success": 4
+  },
+  "test/v214_rank_projection_test.dart": {
+    "success": 18
+  },
+  "test/v229_learning_guidance_test.dart": {
+    "success": 22
+  },
+  "test/costume_layout_regression_test.dart": {
+    "success": 7
+  },
+  "test/shop_chest_request_recovery_test.dart": {
+    "success": 29
+  },
+  "test/season_clock_test.dart": {
+    "success": 3
+  },
+  "test/luno_google_play_billing_adapter_test.dart": {
+    "success": 10
+  },
+  "test/visual_v31_regression_test.dart": {
+    "success": 2
+  },
+  "test/v221_online_action_admission_test.dart": {
+    "success": 5
+  },
+  "test/v223_break_seal_adversarial_test.dart": {
+    "success": 324
+  },
+  "test/v236_hotseat_screen_test.dart": {
+    "success": 16
+  },
+  "test/emoji_layout_regression_test.dart": {
+    "success": 6
+  },
+  "test/visual_polish_v203_test.dart": {
+    "success": 26
+  },
+  "test/game_result_navigation_test.dart": {
+    "success": 6
+  },
+  "test/round3_economy_pending_restore_test.dart": {
+    "success": 6
+  },
+  "test/online_response_lifecycle_test.dart": {
+    "success": 18
+  },
+  "test/v214_first_match_ui_test.dart": {
+    "success": 6
+  },
+  "test/v216_cosmetics_audio_test.dart": {
+    "success": 1
+  },
+  "test/battle_deck_account_test.dart": {
+    "success": 7
+  },
+  "test/v238_battle_sheet_owner_test.dart": {
+    "success": 4
+  },
+  "test/v232_battle_motion_boundaries_test.dart": {
+    "success": 14
+  },
+  "test/v216_1_emote_acquisition_test.dart": {
+    "success": 10
+  },
+  "test/visual_v43_regression_test.dart": {
+    "success": 1
+  },
+  "test/dm_read_session_test.dart": {
+    "success": 5
+  },
+  "test/v223_all_square_interaction_test.dart": {
+    "success": 48
+  },
+  "test/inbox_connection_resilience_test.dart": {
+    "success": 9
+  },
+  "test/v217_player_journey_app_test.dart": {
+    "success": 1
+  },
+  "test/pass_premium_purchase_recovery_test.dart": {
+    "success": 61
+  },
+  "test/profile_save_account_test.dart": {
+    "success": 6
+  },
+  "test/friends_layout_regression_test.dart": {
+    "success": 4
+  },
+  "test/v223_card_copy_semantics_test.dart": {
+    "success": 4
+  },
+  "test/friend_load_resilience_test.dart": {
+    "success": 6
+  },
+  "test/resource_amount_layout_test.dart": {
+    "success": 6
+  },
+  "test/v217_compact_phase_test.dart": {
+    "success": 24
+  },
+  "test/v231_battle_capture_test.dart": {
+    "success": 5
+  },
+  "test/tutorial_luno_live_test.dart": {
+    "success": 22
+  },
+  "test/shop_account_action_test.dart": {
+    "success": 17
+  },
+  "test/visual_v58_regression_test.dart": {
+    "success": 6
+  },
+  "test/v214_ugc_consent_ui_test.dart": {
+    "success": 16
+  },
+  "test/v223_action_cache_test.dart": {
+    "success": 50
+  },
+  "test/v223_mana_sabotage_adversarial_test.dart": {
+    "success": 125
+  },
+  "test/v214_battle_visibility_test.dart": {
+    "success": 1
+  },
+  "test/dm_receipt_queue_test.dart": {
+    "success": 9
+  },
+  "test/v237_spell_polish_test.dart": {
+    "success": 5
+  },
+  "test/visual_v50_regression_test.dart": {
+    "success": 2
+  },
+  "test/v216_tutorial_integration_test.dart": {
+    "success": 8
+  },
+  "test/visual_v52_regression_test.dart": {
+    "success": 2
+  },
+  "test/rc_battle_capture_test.dart": {
+    "success": 90
+  },
+  "test/notification_read_session_test.dart": {
+    "success": 10
+  },
+  "test/battle_v1/core_test.dart": {
+    "success": 59
+  },
+  "test/battle_v1/fixtures_test.dart": {
+    "success": 113
+  },
+  "test/battle_v1/online_test.dart": {
+    "success": 14
+  },
+  "test/battle_v1/settlement_receipt_test.dart": {
+    "success": 11
+  },
+  "test/battle_v1/card_stress_v212_test.dart": {
+    "success": 24
+  },
+  "test/battle_v1/local_clock_test.dart": {
+    "success": 4
+  },
+  "test/round3_client_departure_write_test.dart": {
+    "success": 7
+  },
+  "test/models/player_data_test.dart": {
+    "success": 3
+  },
+  "test/v216_1_cosmetic_product_test.dart": {
+    "success": 27
+  },
+  "test/match_recreation_test.dart": {
+    "success": 1
+  },
+  "test/v216_progression_ux_test.dart": {
+    "success": 36
+  },
+  "test/google_link_flow_test.dart": {
+    "success": 15
+  },
+  "test/v220_visual_spells_test.dart": {
+    "success": 97
+  },
+  "test/battle_tutorial_v207_test.dart": {
+    "success": 33
+  },
+  "test/visual_v48_regression_test.dart": {
+    "success": 2
+  },
+  "test/battle_card_identity_v210_test.dart": {
+    "success": 63
+  },
+  "test/audio_service_test.dart": {
+    "success": 2
+  },
+  "test/rc_screen_copy_test.dart": {
+    "success": 23
+  },
+  "test/v216_costume_art_comparison_test.dart": {
+    "success": 54
+  },
+  "test/emoji_selection_regression_test.dart": {
+    "success": 1
+  },
+  "test/v218_online_service_test.dart": {
+    "success": 13
+  },
+  "test/ranking_score_layout_test.dart": {
+    "success": 2
+  },
+  "test/online_request_session_test.dart": {
+    "success": 6
+  },
+  "test/rc_v1_invite_contract_test.dart": {
+    "success": 27
+  },
+  "test/interaction_clarity_v211_test.dart": {
+    "success": 56
+  },
+  "test/profile_update_result_test.dart": {
+    "success": 3
+  },
+  "test/battle_draw_source_audit_test.dart": {
+    "success": 21
+  },
+  "test/v219_rules_repetition_contract_test.dart": {
+    "success": 44
+  },
+  "test/v223_radar_adversarial_test.dart": {
+    "success": 72
+  },
+  "test/v215_billing_ui_test.dart": {
+    "success": 8
+  },
+  "test/card_collection_layout_test.dart": {
+    "success": 6
+  },
+  "test/v237_living_guide_test.dart": {
+    "success": 14
+  },
+  "test/v238_spell_capture_test.dart": {
+    "success": 6
+  },
+  "test/battle_presentation_v209_test.dart": {
+    "success": 30
+  },
+  "test/visual_v47_regression_test.dart": {
+    "success": 1
+  },
+  "test/visual_v29_regression_test.dart": {
+    "success": 1
+  },
+  "test/ranking_error_layout_test.dart": {
+    "success": 1
+  },
+  "test/friend_search_state_test.dart": {
+    "success": 1
+  },
+  "test/online_account_block_test.dart": {
+    "success": 2
+  },
+  "test/v216_audio_mixer_test.dart": {
+    "success": 9
+  },
+  "test/card_dialog_regression_test.dart": {
+    "success": 8
+  },
+  "test/v215_product_telemetry_test.dart": {
+    "success": 26
+  },
+  "test/rc_deck_label_fit_test.dart": {
+    "success": 4
+  },
+  "test/rc_settings_volume_target_test.dart": {
+    "success": 2
+  },
+  "test/public_player_read_test.dart": {
+    "success": 14
+  },
+  "test/v223_prophecy_adversarial_test.dart": {
+    "success": 90
+  },
+  "test/v229_reward_flow_boundary_test.dart": {
+    "success": 50
+  },
+  "test/v214_vfx_review_test.dart": {
+    "success": 79
+  },
+  "test/rc_account_confirmation_owner_test.dart": {
+    "success": 6
+  },
+  "test/battle_vfx_v206_test.dart": {
+    "success": 72
+  },
+  "test/v218_online_protocol_test.dart": {
+    "success": 12
+  },
+  "test/result_rematch_test.dart": {
+    "success": 6
+  },
+  "test/v238_emote_picker_owner_test.dart": {
+    "success": 5
+  },
+  "test/v217_player_journey_ranked_test.dart": {
+    "success": 3
+  },
+  "test/v219_first_offline_entry_test.dart": {
+    "success": 22
+  },
+  "test/v223_pawn_advance_adversarial_test.dart": {
+    "success": 201
+  },
+  "test/v214_deck_progression_result_test.dart": {
+    "success": 26
+  },
+  "test/chest_close_regression_test.dart": {
+    "success": 1
+  },
+  "test/v214_active_deck_test.dart": {
+    "success": 15
+  },
+  "test/rc_product_inventory_test.dart": {
+    "success": 3
+  },
+  "test/v216_general_inventory_test.dart": {
+    "success": 192
+  },
+  "test/v218_local_audio_startup_test.dart": {
+    "success": 1
+  },
+  "test/v223_remaining_card_semantics_test.dart": {
+    "success": 180
+  },
+  "test/v234_profile_regression_test.dart": {
+    "success": 5
+  },
+  "test/ai_resume_race_test.dart": {
+    "success": 3
+  },
+  "test/visual_v35_regression_test.dart": {
+    "success": 1
+  },
+  "test/v215_deck_replacement_test.dart": {
+    "success": 3
+  },
+  "test/match/card_exhaustive_test.dart": {
+    "success": 17
+  },
+  "test/match/match_test.dart": {
+    "success": 13
+  },
+  "test/round2_client_friendly_route_test.dart": {
+    "success": 5
+  },
+  "test/v218_rules_geometry_test.dart": {
+    "success": 14
+  },
+  "test/v231_battle_vfx_test.dart": {
+    "success": 28
+  },
+  "test/v215_native_hooks_test.dart": {
+    "success": 6
+  },
+  "test/v216_battle_visual_test.dart": {
+    "success": 52
+  },
+  "test/v234_player_state_ordering_test.dart": {
+    "success": 10
+  },
+  "test/luno_online_billing_backend_test.dart": {
+    "success": 4
+  },
+  "test/v216_1_arenas_visual_test.dart": {
+    "success": 12
+  },
+  "test/v220_billing_odds_test.dart": {
+    "success": 14
+  },
+  "test/v221_offline_lifecycle_test.dart": {
+    "success": 4
+  },
+  "test/store_test.dart": {
+    "success": 22
+  },
+  "test/v215_audio_controls_test.dart": {
+    "success": 16
+  },
+  "test/shop_pass_polish_test.dart": {
+    "success": 6
+  },
+  "test/visual_v64_regression_test.dart": {
+    "success": 4
+  },
+  "test/piece_selection_regression_test.dart": {
+    "success": 14
+  },
+  "test/v236_account_restore_ui_test.dart": {
+    "success": 4
+  },
+  "test/v236_hotseat_privacy_test.dart": {
+    "success": 2
+  },
+  "test/v216_costume_asset_test.dart": {
+    "success": 3
+  },
+  "test/system_hunt_battle_sheet_version_test.dart": {
+    "success": 5
+  },
+  "test/v216_1_battle_emote_integration_test.dart": {
+    "success": 6
+  },
+  "test/v217_first_match_observation_test.dart": {
+    "success": 7
+  },
+  "test/v220_billing_restore_test.dart": {
+    "success": 6
+  },
+  "test/screen_smoke_test.dart": {
+    "success": 1824
+  },
+  "test/home_capture_test.dart": {
+    "success": 1
+  },
+  "test/rc_tutorial_interaction_gate_test.dart": {
+    "success": 2
+  },
+  "test/v216_theme_semantics_test.dart": {
+    "success": 2
+  },
+  "test/v224_card_wire_targets_test.dart": {
+    "success": 30
+  },
+  "test/pending_promotion_test.dart": {
+    "success": 6
+  },
+  "test/ui_button_audit_test.dart": {
+    "success": 6
+  },
+  "test/v235_release_identity_test.dart": {
+    "success": 10
+  },
+  "test/visual_v38_regression_test.dart": {
+    "success": 1
+  },
+  "test/reward_modal_account_test.dart": {
+    "success": 9
+  },
+  "test/tutorial_flow_test.dart": {
+    "success": 1
+  },
+  "test/server_state_ownership_test.dart": {
+    "success": 10
+  },
+  "test/visual_v54_regression_test.dart": {
+    "success": 3
+  },
+  "test/v214_audio_semantics_test.dart": {
+    "success": 36
+  },
+  "test/v216_battle_payoff_test.dart": {
+    "success": 18
+  },
+  "test/round4_battle_compact_pass_test.dart": {
+    "success": 2
+  },
+  "test/v219_battle_impact_frames_test.dart": {
+    "success": 15
+  },
+  "test/v218_local_ai_budget_test.dart": {
+    "success": 5
+  },
+  "test/friend_action_lifecycle_test.dart": {
+    "success": 1
+  },
+  "test/v220_billing_pending_chest_recovery_test.dart": {
+    "success": 3
+  },
+  "test/v222_all_card_contract_test.dart": {
+    "success": 97
+  },
+  "test/v218_rules_action_validation_test.dart": {
+    "success": 4
+  },
+  "test/initial_stream_timeout_test.dart": {
+    "success": 8
+  },
+  "test/visual_v66_regression_test.dart": {
+    "success": 4
+  },
+  "test/v223_notice_lifecycle_test.dart": {
+    "success": 16
+  },
+  "test/v215_vfx_overlap_test.dart": {
+    "success": 33
+  },
+  "test/v228_store_write_recovery_test.dart": {
+    "success": 13
+  },
+  "test/visual_v44_regression_test.dart": {
+    "success": 1
+  },
+  "test/round4_battle_knowledge_test.dart": {
+    "success": 5
+  },
+  "test/v214_collection_contract_test.dart": {
+    "success": 4
+  },
+  "test/v236_font_licenses_test.dart": {
+    "success": 1
+  },
+  "test/rc_tutorial_lifecycle_test.dart": {
+    "success": 4
+  },
+  "test/v214_control_style_test.dart": {
+    "success": 43
+  },
+  "test/account_store_isolation_test.dart": {
+    "success": 11
+  },
+  "test/v216_1_audio_emotes_test.dart": {
+    "success": 11
+  },
+  "test/achievement_claim_regression_test.dart": {
+    "success": 1
+  },
+  "test/visual_v42_regression_test.dart": {
+    "success": 1
+  },
+  "test/online_hub_account_block_test.dart": {
+    "success": 6
+  },
+  "test/inbox_notification_action_test.dart": {
+    "success": 7
+  },
+  "test/v225_card_terminal_lifecycle_test.dart": {
+    "success": 77
+  },
+  "test/v236_google_credentials_test.dart": {
+    "success": 4
+  },
+  "test/online_database_session_test.dart": {
+    "success": 26
+  },
+  "test/v215_cosmetic_surfaces_test.dart": {
+    "success": 42
+  },
+  "test/v216_cosmetics_cover_inspection_test.dart": {
+    "success": 10
+  },
+  "test/v218_economy_store_test.dart": {
+    "success": 13
+  },
+  "test/v236_google_restore_test.dart": {
+    "success": 10
+  },
+  "test/reward_screen_account_test.dart": {
+    "success": 19
+  },
+  "test/visual_v45_regression_test.dart": {
+    "success": 2
+  },
+  "test/rc_tutorial_board_visibility_test.dart": {
+    "success": 10
+  },
+  "test/v214_bootstrap_consent_test.dart": {
+    "success": 25
+  },
+  "test/widget_test.dart": {
+    "success": 10
+  },
+  "test/v215_welcome_ui_test.dart": {
+    "success": 4
+  },
+  "test/v219_full_battle_frames_test.dart": {
+    "success": 8
+  },
+  "test/responsive_test.dart": {
+    "success": 2
+  },
+  "test/direct_message_rows_test.dart": {
+    "success": 24
+  },
+  "test/v229_social_boundary_test.dart": {
+    "success": 14
+  },
+  "test/v215_battle_accessibility_test.dart": {
+    "success": 4
+  },
+  "test/shop_reward_dialog_test.dart": {
+    "success": 2
+  },
+  "test/v218_local_session_timer_test.dart": {
+    "success": 2
+  },
+  "test/engine/final_rules_test.dart": {
+    "success": 15
+  },
+  "test/engine/perft_test.dart": {
+    "success": 11
+  },
+  "test/engine/chess_game_test.dart": {
+    "success": 7
+  },
+  "test/engine/ai_test.dart": {
+    "success": 4
+  },
+  "test/billing_historical_receipt_launch_test.dart": {
+    "success": 6
+  },
+  "test/rc_settings_inbox_navigation_test.dart": {
+    "success": 6
+  },
+  "test/v216_cosmetics_visual_test.dart": {
+    "success": 24
+  },
+  "test/v216_audio_feedback_test.dart": {
+    "success": 36
+  },
+  "test/pass_account_action_test.dart": {
+    "success": 12
+  },
+  "test/v221_economy_account_restore_test.dart": {
+    "success": 3
+  },
+  "test/v218_social_public_profile_block_test.dart": {
+    "success": 3
+  },
+  "test/rc_battle_modal_ownership_test.dart": {
+    "success": 8
+  },
+  "test/social_account_scope_test.dart": {
+    "success": 5
+  },
+  "test/card_localization_test.dart": {
+    "success": 2
+  },
+  "test/v226_card_effect_semantics_test.dart": {
+    "success": 320
+  },
+  "test/v215_privacy_legal_ui_test.dart": {
+    "success": 24
+  },
+  "test/v240_startup_surface_test.dart": {
+    "success": 8
+  },
+  "test/v214_public_rank_api_test.dart": {
+    "success": 16
+  },
+  "test/online_bootstrap_failure_test.dart": {
+    "success": 4
+  },
+  "test/visual_v49_regression_test.dart": {
+    "success": 3
+  },
+  "test/online_match_recovery_test.dart": {
+    "success": 8
+  },
+  "test/v223_shelter_adversarial_test.dart": {
+    "success": 153
+  },
+  "test/collection_navigation_test.dart": {
+    "success": 1
+  },
+  "test/visual_v37_regression_test.dart": {
+    "success": 1
+  },
+  "test/v215_progression_product_test.dart": {
+    "success": 172
+  },
+  "test/visual_v63_regression_test.dart": {
+    "success": 2
+  },
+  "test/rc_screen_capture_test.dart": {
+    "success": 62
+  },
+  "test/v216_1_pass_entry_freshness_test.dart": {
+    "success": 2
+  },
+  "test/visual_v33_regression_test.dart": {
+    "success": 3
+  },
+  "test/v223_black_card_ui_test.dart": {
+    "success": 96
+  },
+  "test/v218_social_dm_lifecycle_test.dart": {
+    "success": 9
+  },
+  "test/v216_inbox_layout_test.dart": {
+    "success": 6
+  },
+  "test/v219_offline_practice_boundary_test.dart": {
+    "success": 2
+  },
+  "test/v227_onboarding_lesson_contract_test.dart": {
+    "success": 103
+  },
+  "test/online_auth_transition_test.dart": {
+    "success": 5
+  },
+  "test/source_audit_startup_test.dart": {
+    "success": 3
+  },
+  "test/rc_information_modal_owner_test.dart": {
+    "success": 4
+  },
+  "test/battle_practice_v208_test.dart": {
+    "success": 28
+  },
+  "test/v219_card_render_contract_test.dart": {
+    "success": 17
+  },
+  "test/v214_pass_version_store_test.dart": {
+    "success": 3
+  },
+  "test/ranking_lifecycle_test.dart": {
+    "success": 11
+  },
+  "test/account_erasure_test.dart": {
+    "success": 9
+  },
+  "test/chest_layout_regression_test.dart": {
+    "success": 6
+  },
+  "test/online_activity_session_test.dart": {
+    "success": 9
+  },
+  "test/card_upgrade_flow_test.dart": {
+    "success": 6
+  },
+  "test/v222_card_use_ui_test.dart": {
+    "success": 48
+  },
+  "test/v222_card_presentation_test.dart": {
+    "success": 6
+  },
+  "test/v223_pawn_deviation_adversarial_test.dart": {
+    "success": 147
+  },
+  "test/visual_v36_regression_test.dart": {
+    "success": 3
+  },
+  "test/v238_spell_choreography_test.dart": {
+    "success": 3
+  },
+  "test/round3_client_bootstrap_continuation_test.dart": {
+    "success": 6
+  },
+  "test/ui_polish_test.dart": {
+    "success": 1
+  },
+  "test/v214_introduction_test.dart": {
+    "success": 3
+  },
+  "test/dm_send_session_test.dart": {
+    "success": 11
+  },
+  "test/v219_battle_presentation_epoch_test.dart": {
+    "success": 12
+  },
+  "test/visual_v59_regression_test.dart": {
+    "success": 9
+  },
+  "test/v216_1_emote_capture_test.dart": {
+    "success": 30
+  },
+  "test/battle_motion_v208_test.dart": {
+    "success": 4
+  },
+  "test/v215_settings_privacy_label_test.dart": {
+    "success": 2
+  },
+  "test/match_confirmation_lifecycle_test.dart": {
+    "success": 1
+  },
+  "test/visual_v51_regression_test.dart": {
+    "success": 2
+  },
+  "test/v215_costume_battle_test.dart": {
+    "success": 11
+  },
+  "test/visual_v203_test.dart": {
+    "error": 46
+  },
+  "test/v215_product_contract_test.dart": {
+    "success": 16
+  },
+  "test/visual_v73_regression_test.dart": {
+    "success": 2
+  },
+  "test/profile_edit_regression_test.dart": {
+    "success": 4
+  },
+  "test/system_hunt_client_refresh_boundary_test.dart": {
+    "success": 7
+  },
+  "test/v216_reward_frame_test.dart": {
+    "success": 48
+  },
+  "test/ui_v205_test.dart": {
+    "success": 44
+  },
+  "test/rc_home_landscape_test.dart": {
+    "success": 8
+  },
+  "test/online_deleted_session_recovery_test.dart": {
+    "success": 22
+  },
+  "test/v216_arena_integration_test.dart": {
+    "success": 50
+  },
+  "test/round4_promotion_glyph_render_test.dart": {
+    "success": 3
+  },
+  "test/v216_1_shop_pass_visual_test.dart": {
+    "success": 48
+  },
+  "test/visual_v34_regression_test.dart": {
+    "success": 1
+  },
+  "test/screen_request_timeouts_test.dart": {
+    "success": 7
+  },
+  "test/rc_username_ownership_test.dart": {
+    "success": 7
+  },
+  "test/rc_home_action_owner_test.dart": {
+    "success": 7
+  },
+  "test/navigation_motion_regression_test.dart": {
+    "success": 2
+  },
+  "test/rc_tutorial_scroll_test.dart": {
+    "success": 2
+  },
+  "test/visual_v74_regression_test.dart": {
+    "success": 1
+  },
+  "test/v237_request_bootstrap_owner_test.dart": {
+    "success": 12
+  },
+  "test/v216_tutorial_home_visual_test.dart": {
+    "success": 8
+  },
+  "test/online_settlement_test.dart": {
+    "success": 4
+  },
+  "test/account_deletion_flow_test.dart": {
+    "success": 15
+  },
+  "test/ai_confirmation_test.dart": {
+    "success": 2
+  },
+  "test/v214_surface_render_test.dart": {
+    "success": 99
+  },
+  "test/v214_first_session_test.dart": {
+    "success": 8
+  },
+  "test/v228_battle_interaction_regression_test.dart": {
+    "success": 61
+  },
+  "test/tutorial_live_safety_test.dart": {
+    "success": 8
+  },
+  "test/v215_parent_visual_test.dart": {
+    "success": 8
+  },
+  "test/v216_battle_regression_test.dart": {
+    "success": 8
+  },
+  "test/v224_card_branch_closure_test.dart": {
+    "success": 520
+  },
+  "test/friend_session_action_test.dart": {
+    "success": 27
+  },
+  "test/public_profile_navigation_test.dart": {
+    "success": 20
+  },
+  "test/online_badges_test.dart": {
+    "success": 3
+  },
+  "test/v227_coach_guidance_test.dart": {
+    "success": 27
+  },
+  "test/v236_deck_metrics_test.dart": {
+    "success": 5
+  },
+  "test/collection_selection_result_test.dart": {
+    "success": 4
+  },
+  "test/v214_social_safety_ui_test.dart": {
+    "success": 26
+  },
+  "test/card_upgrade_confirmation_test.dart": {
+    "success": 6
+  },
+  "test/rc_profile_navigation_test.dart": {
+    "success": 2
+  },
+  "test/v218_economy_pass_contract_test.dart": {
+    "success": 2
+  },
+  "test/v234_pending_envelope_test.dart": {
+    "success": 69
+  },
+  "test/v223_card_block_adversarial_test.dart": {
+    "success": 124
+  },
+  "test/leaderboard_result_test.dart": {
+    "success": 9
+  },
+  "test/battle_learning_v203_test.dart": {
+    "success": 36
+  },
+  "test/public_profile_resilience_test.dart": {
+    "success": 16
+  },
+  "test/v216_cosmetic_rewards_test.dart": {
+    "success": 26
+  },
+  "test/v216_1_arenas_test.dart": {
+    "success": 16
+  },
+  "test/card_upgrade_eligibility_test.dart": {
+    "success": 2
+  },
+  "test/v214_social_safety_result_test.dart": {
+    "success": 16
+  },
+  "test/card_action_account_test.dart": {
+    "success": 10
+  },
+  "test/visual_v46_regression_test.dart": {
+    "success": 2
+  },
+  "test/v219_rules_mine_contract_test.dart": {
+    "success": 16
+  },
+  "test/v216_progression_visual_test.dart": {
+    "success": 16
+  },
+  "test/profile_match_stats_test.dart": {
+    "success": 3
+  },
+  "test/v217_home_battle_entry_test.dart": {
+    "success": 5
+  },
+  "test/rc_purchase_bootstrap_test.dart": {
+    "success": 8
+  },
+  "test/battle_card_art_v204_test.dart": {
+    "error": 1
+  },
+  "test/v229_store_boundary_test.dart": {
+    "success": 33
+  },
+  "test/v223_freeze_adversarial_test.dart": {
+    "success": 98
+  },
+  "test/collection_deck_save_test.dart": {
+    "success": 2
+  },
+  "test/deck_layout_regression_test.dart": {
+    "success": 3
+  },
+  "test/player_search_result_test.dart": {
+    "success": 14
+  },
+  "test/round3_battle_selection_test.dart": {
+    "success": 8
+  },
+  "test/v223_slow_adversarial_test.dart": {
+    "success": 43
+  },
+  "test/luno_billing_service_test.dart": {
+    "success": 32
+  },
+  "test/match_history_live_test.dart": {
+    "success": 9
+  },
+  "test/v223_purify_adversarial_test.dart": {
+    "success": 86
+  },
+  "test/dm_lifecycle_regression_test.dart": {
+    "success": 1
+  },
+  "test/v228_online_controller_regression_test.dart": {
+    "success": 12
+  },
+  "test/rc_auxiliary_navigation_test.dart": {
+    "success": 5
+  },
+  "test/v239_atlas_observation_test.dart": {
+    "success": 1
+  },
+  "test/v233_online_regression_test.dart": {
+    "success": 11
+  },
+  "test/source_string_audit_paired_copy_test.dart": {
+    "success": 13
+  },
+  "test/v239_card_acceptance_test.dart": {
+    "success": 76
+  },
+  "test/visual_v30_regression_test.dart": {
+    "success": 2
+  },
+  "test/dm_loading_resilience_test.dart": {
+    "success": 9
+  },
+  "test/v220_billing_policy_ui_test.dart": {
+    "success": 10
+  },
+  "test/v216_cosmetics_safety_test.dart": {
+    "success": 109
+  },
+  "test/rc_tutorial_capture_test.dart": {
+    "success": 20
+  },
+  "test/deck_update_result_test.dart": {
+    "success": 4
+  },
+  "test/social_action_result_test.dart": {
+    "success": 6
+  },
+  "test/v214_progression_integration_test.dart": {
+    "success": 4
+  },
+  "test/round2_client_billing_snapshot_order_test.dart": {
+    "success": 12
+  },
+  "test/card_upgrade_result_test.dart": {
+    "success": 3
+  },
+  "test/v223_fog_adversarial_test.dart": {
+    "success": 206
+  },
+  "test/v223_rook_bend_adversarial_test.dart": {
+    "success": 280
+  },
+  "test/v215_first_session_state_test.dart": {
+    "success": 6
+  },
+  "test/visual_v67_regression_test.dart": {
+    "success": 3
+  },
+  "test/v214_introduction_ui_test.dart": {
+    "success": 19
+  },
+  "test/v221_local_action_admission_test.dart": {
+    "success": 2
+  },
+  "test/pass_action_result_test.dart": {
+    "success": 4
+  },
+  "test/friend_search_transport_test.dart": {
+    "success": 7
+  },
+  "test/v219_online_screen_recovery_test.dart": {
+    "success": 2
+  },
+  "test/v218_rules_terminal_test.dart": {
+    "success": 6
+  },
+  "test/v216_friendly_art_test.dart": {
+    "success": 3
+  },
+  "test/v219_settings_preservation_test.dart": {
+    "success": 7
+  },
+  "test/v223_card_admission_test.dart": {
+    "success": 144
+  },
+  "test/account_operation_guard_test.dart": {
+    "success": 9
+  },
+  "test/visual_v60_regression_test.dart": {
+    "success": 6
+  },
+  "test/online_retry_policy_test.dart": {
+    "success": 17
+  },
+  "test/v222_card_targeting_test.dart": {
+    "success": 5
+  },
+  "test/source_audit_visual_test.dart": {
+    "success": 22
+  },
+  "test/v223_effect_tracking_test.dart": {
+    "success": 28
+  },
+  "test/v233_social_regression_test.dart": {
+    "success": 2
+  },
+  "test/v223_chain_adversarial_test.dart": {
+    "success": 134
+  },
+  "test/rc_surface_word_fit_test.dart": {
+    "success": 8
+  },
+  "test/rc_account_surface_test.dart": {
+    "success": 11
+  },
+  "test/rc_compact_battle_board_test.dart": {
+    "success": 22
+  },
+  "test/rank_catalog_test.dart": {
+    "success": 5
+  },
+  "test/rc_matchmaking_owner_test.dart": {
+    "success": 12
+  },
+  "test/direct_message_read_key_test.dart": {
+    "success": 6
+  },
+  "test/v223_move_feedback_test.dart": {
+    "success": 24
+  },
+  "test/v217_ai_deck_test.dart": {
+    "success": 12
+  },
+  "test/v216_1_social_visual_test.dart": {
+    "success": 64
+  },
+  "test/reward_claim_result_test.dart": {
+    "success": 2
+  },
+  "test/round4_client_recovery_durability_test.dart": {
+    "success": 49
+  },
+  "test/v222_opponent_card_notice_test.dart": {
+    "success": 6
+  },
+  "test/battle_async_v213_test.dart": {
+    "success": 8
+  },
+  "test/pass_chest_request_recovery_test.dart": {
+    "success": 22
+  },
+  "test/v223_mine_adversarial_test.dart": {
+    "success": 84
+  },
+  "test/mission_claim_regression_test.dart": {
+    "success": 1
+  },
+  "test/v215_bot_policy_test.dart": {
+    "success": 33
+  },
+  "test/v219_online_recovery_test.dart": {
+    "success": 18
+  },
+  "test/v214_card_copy_test.dart": {
+    "success": 78
+  },
+  "test/v236_tutorial_layout_test.dart": {
+    "success": 30
+  },
+  "test/settings_test.dart": {
+    "success": 8
+  },
+  "test/v219_settings_locale_persistence_test.dart": {
+    "success": 34
+  },
+  "test/v215_blocked_pagination_test.dart": {
+    "success": 16
+  },
+  "test/shop_action_result_test.dart": {
+    "success": 7
+  },
+  "test/v217_first_match_store_test.dart": {
+    "success": 6
+  },
+  "test/v219_android_source_contract_test.dart": {
+    "success": 5
+  },
+  "test/profile_test.dart": {
+    "success": 6
+  },
+  "test/match_menu_lifecycle_test.dart": {
+    "success": 1
+  },
+  "test/onboarding_repair_v212_test.dart": {
+    "success": 53
+  },
+  "test/visual_v53_regression_test.dart": {
+    "success": 1
+  },
+  "test/v230_onboarding_flow_test.dart": {
+    "success": 31
+  },
+  "test/v216_battle_safety_test.dart": {
+    "success": 18
+  },
+  "test/account_modal_lifecycle_test.dart": {
+    "success": 14
+  },
+  "test/visual_v27_regression_test.dart": {
+    "success": 4
+  },
+  "test/v217_player_journey_ownership_test.dart": {
+    "success": 2
+  },
+  "test/visual_v55_regression_test.dart": {
+    "success": 7
+  },
+  "test/v227_battle_learning_ui_test.dart": {
+    "success": 14
+  },
+  "test/visual_v28_regression_test.dart": {
+    "success": 2
+  },
+  "test/inbox_stream_resilience_test.dart": {
+    "success": 12
+  },
+  "test/v216_battle_stages_test.dart": {
+    "success": 24
+  },
+  "test/v216_tutorial_home_regression_test.dart": {
+    "success": 26
+  },
+  "test/v223_accepted_frames_test.dart": {
+    "success": 55
+  },
+  "test/dm_receipt_cursor_test.dart": {
+    "success": 6
+  },
+  "test/v228_store_migration_recovery_test.dart": {
+    "success": 6
+  },
+  "test/v229_dm_read_ack_test.dart": {
+    "success": 19
+  },
+  "test/rc_settings_loading_race_test.dart": {
+    "success": 5
+  },
+  "test/v219_online_bootstrap_reentry_test.dart": {
+    "success": 6
+  },
+  "test/v235_gameplay_lifecycle_test.dart": {
+    "success": 11
+  },
+  "test/v218_economy_persistence_test.dart": {
+    "success": 7
+  },
+  "test/visual_v56_regression_test.dart": {
+    "success": 6
+  },
+  "test/season_claim_regression_test.dart": {
+    "success": 2
+  },
+  "test/v231_hand_motion_test.dart": {
+    "success": 18
+  },
+  "test/v221_emote_ordering_test.dart": {
+    "success": 4
+  },
+  "test/v215_audio_migration_test.dart": {
+    "success": 33
+  },
+  "test/game_confirmation_state_test.dart": {
+    "success": 6
+  }
+}

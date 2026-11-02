@@ -1,0 +1,12 @@
+{
+  "new_independent_families_found": 4,
+  "new_independent_families_fixed": 4,
+  "prior_family_residuals_fixed": 2,
+  "concrete_defects_fixed": 6,
+  "new_verified_source_defects_left_open_this_round": 0,
+  "scope": "Listed proofs and bounded source audits only; no exhaustive guarantee.",
+  "global_bug_free_acceptance": "NOT ESTABLISHED",
+  "previous_native_P1": "UNRESOLVED",
+  "historical_visual_comparisons": "FAIL",
+  "release_decision": "HOLD"
+}

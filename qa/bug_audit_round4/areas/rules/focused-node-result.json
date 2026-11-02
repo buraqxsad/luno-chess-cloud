@@ -1,0 +1,22 @@
+[
+  {
+    "file": "v219-rules-contract.test.js",
+    "exitCode": 0,
+    "seconds": 4.439,
+    "tests": 60,
+    "pass": 60,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "v223-terminal-cards.test.js",
+    "exitCode": 0,
+    "seconds": 1.186,
+    "tests": 14,
+    "pass": 14,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "before_friendly_sha256": "5a69e284206501df9feb93904de4e532ea6917f54aa2d8eac25105f94e90b7bb",
+  "after_friendly_sha256": "653bb788d7e6a55d526f4a656f3a1f1e64f98100faf45cfc520e62e2284c17cc",
+  "scope": "New per-lease private match nonce, stable pending replay, legacy ID fallback and persisted joined match ID; room/invite residual coverage of deterministic ID collision."
+}

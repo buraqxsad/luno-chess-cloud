@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-11-02T22:42:34.021545+00:00",
+  "old_exec_session_handle": "Unknown process id",
+  "original_full_flutter_still_running": true,
+  "original_pipeline_and_deferred_sdk_still_running": true,
+  "actual_test_counts_observed_after_reattach": {
+    "pass": 6758,
+    "fail": 50
+  },
+  "test_restarted": false,
+  "source_commit": "0f40ddda041c205b129f3a35d9d4e9f1b661bf8c",
+  "note": "First commentary inferred interruption from lost session and inaccessible /proc exe links; corrected promptly after ps/cmdline and increasing JSONL counts proved process continuity. No outputs moved or overwritten."
+}

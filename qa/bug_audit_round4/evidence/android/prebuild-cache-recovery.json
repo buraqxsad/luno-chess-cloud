@@ -1,0 +1,36 @@
+{
+  "recorded_utc": "2026-11-02T22:35:02.310657+00:00",
+  "gradle_inactive_verified": true,
+  "source_assets_fixtures_tools_original_dependencies_retained": true,
+  "removed_generated_caches": [
+    {
+      "path": "/workspace/toolchains/gradle-cache/caches/9.1.0/transforms/3e2a68e1d0c2d9777641b119203d8e83",
+      "bytes": 174,
+      "kind": "rebuildable unused x86_64 profile Gradle transform"
+    },
+    {
+      "path": "/workspace/toolchains/gradle-cache/caches/9.1.0/transforms/b84184b3790d7d593345cfd3fdf49d62",
+      "bytes": 174,
+      "kind": "rebuildable unused x86_64 profile Gradle transform"
+    },
+    {
+      "path": "/workspace/toolchains/gradle-cache/caches/9.1.0/transforms/ae36680df7ab3f79741b4df6ce55512c",
+      "bytes": 176857991,
+      "kind": "rebuildable unused x86_64 profile Gradle transform"
+    },
+    {
+      "path": "/workspace/toolchains/gradle-cache/caches/9.1.0/transforms/79ac32820664f550678e23891fe1e7c9",
+      "bytes": 195,
+      "kind": "rebuildable unused x86_64 profile Gradle transform"
+    },
+    {
+      "path": "/workspace/toolchains/gradle-cache/caches/9.1.0/transforms/0d073be89792c2ea2cad5a2ca535d42e",
+      "bytes": 141152362,
+      "kind": "rebuildable Gradle instrumented Kotlin1.7.10 compiler transform, original dependency retained"
+    }
+  ],
+  "free_before": 715730944,
+  "free_after": 892686336,
+  "gradle_inactive_reverified_by_process_status_and_cmdline": true,
+  "free_after_latest_cleanup": 516038656
+}

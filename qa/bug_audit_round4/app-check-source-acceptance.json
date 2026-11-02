@@ -1,0 +1,28 @@
+{
+  "source_commit": "0f40ddda041c205b129f3a35d9d4e9f1b661bf8c",
+  "functions_index_sha256": "92c1fe742398d30255e33efffc78e82aa6cc862f6a11e7955cc2444b48920a08",
+  "policy_call_present_in_handler": true,
+  "route_suite": {
+    "file": "test/api-route-boundary.test.js",
+    "exit": 0,
+    "counts": {
+      "tests": 54,
+      "pass": 54,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "elapsed_seconds": 0.622,
+    "log": "api-route-boundary.test.js.log",
+    "assertions_observed": true
+  },
+  "invalid_verified_app_ids_rejected_cases": [
+    "verified but untrusted app cannot read or mutate a player (1:955253747543:web:136188eaab561c9b29d812)",
+    "verified but untrusted app cannot read or mutate a player (1:955253747543:android:aaaaaaaaaaaaaaaaaaaaaa)",
+    "verified but untrusted app cannot read or mutate a player (1:123456789:android:136188eaab561c9b29d812)"
+  ],
+  "local_source_tests": "PASS",
+  "actual_production_AppCheck_Integrity": "BLOCKED",
+  "reason": "No real Google/App Check/Integrity or staging identity. Source/mocked route acceptance only."
+}

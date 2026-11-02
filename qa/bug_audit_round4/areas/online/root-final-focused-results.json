@@ -1,0 +1,100 @@
+{
+  "runs": [
+    {
+      "file": "round4-online-friendly-replay.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 13,
+        "pass": 13,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "file": "v201b-friendly.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "file": "round2-online-admission-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "file": "round3-online-enqueue-replay.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "file": "round3-security-v1-invite-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "file": "round3-runtime-friendly-cold.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "file": "v238-battle-v1-migration-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "file": "round3-online-settlement-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "file": "v201b-recovery.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      }
+    }
+  ],
+  "totals": {
+    "tests": 62,
+    "pass": 62,
+    "fail": 0,
+    "skipped": 0
+  }
+}

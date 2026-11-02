@@ -1,0 +1,13 @@
+{
+  "baseline": "d67cd449cbd8834a4878f5484941d376fa7c17d8",
+  "index_sha256": "c370ab3286f08549122050ce83213542dfd1b52ba582eb2c6389098067cd4f31",
+  "friendly_sha256": "5a69e284206501df9feb93904de4e532ea6917f54aa2d8eac25105f94e90b7bb",
+  "exit": 1,
+  "counts": {
+    "tests": 8,
+    "pass": 5,
+    "fail": 3,
+    "skipped": 0
+  },
+  "test_sha256": "0a9888a30339c00d74d3ebcef2d1bbbadb62ebc52cfbb0fe51ef696919f854ad"
+}

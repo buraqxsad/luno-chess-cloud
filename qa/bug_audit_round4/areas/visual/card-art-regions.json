@@ -1,0 +1,246 @@
+{
+  "definition": "104x104 art boxes from battle_card_art_v204_test.dart; wrap448x768 centered in480x820",
+  "regions": [
+    {
+      "index": 0,
+      "box": [
+        20,
+        26,
+        124,
+        130
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 1,
+      "box": [
+        132,
+        26,
+        236,
+        130
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 2,
+      "box": [
+        244,
+        26,
+        348,
+        130
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 3,
+      "box": [
+        356,
+        26,
+        460,
+        130
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 4,
+      "box": [
+        20,
+        154,
+        124,
+        258
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 5,
+      "box": [
+        132,
+        154,
+        236,
+        258
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 6,
+      "box": [
+        244,
+        154,
+        348,
+        258
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 7,
+      "box": [
+        356,
+        154,
+        460,
+        258
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 8,
+      "box": [
+        20,
+        282,
+        124,
+        386
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 9,
+      "box": [
+        132,
+        282,
+        236,
+        386
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 10,
+      "box": [
+        244,
+        282,
+        348,
+        386
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 11,
+      "box": [
+        356,
+        282,
+        460,
+        386
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 12,
+      "box": [
+        20,
+        410,
+        124,
+        514
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 13,
+      "box": [
+        132,
+        410,
+        236,
+        514
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 14,
+      "box": [
+        244,
+        410,
+        348,
+        514
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 15,
+      "box": [
+        356,
+        410,
+        460,
+        514
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 16,
+      "box": [
+        20,
+        538,
+        124,
+        642
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 17,
+      "box": [
+        132,
+        538,
+        236,
+        642
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 18,
+      "box": [
+        244,
+        538,
+        348,
+        642
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 19,
+      "box": [
+        356,
+        538,
+        460,
+        642
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 20,
+      "box": [
+        20,
+        666,
+        124,
+        770
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 21,
+      "box": [
+        132,
+        666,
+        236,
+        770
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 22,
+      "box": [
+        244,
+        666,
+        348,
+        770
+      ],
+      "same_pixels": true
+    },
+    {
+      "index": 23,
+      "box": [
+        356,
+        666,
+        460,
+        770
+      ],
+      "same_pixels": true
+    }
+  ],
+  "all_24_art_rectangles_pixel_identical": true
+}

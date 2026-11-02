@@ -1,0 +1,11 @@
+{
+  "exit": 1,
+  "counts": {
+    "tests": 13,
+    "pass": 5,
+    "fail": 8,
+    "skipped": 0
+  },
+  "source_commit": "d67cd449cbd8834a4878f5484941d376fa7c17d8",
+  "captured_rollout_sha256": "186ba1fe1747e25deb36e09f1054d730d44f0d49f9a3b077b4a2bf980d4743a6"
+}

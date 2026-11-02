@@ -1,0 +1,68 @@
+{
+  "baseline": "d67cd449cbd8834a4878f5484941d376fa7c17d8",
+  "new_defects": [
+    {
+      "id": "R4-CLIENT-01",
+      "severity": "P2",
+      "family": "Recovery preservation write rejection becomes false durable success on retry",
+      "status": "fixed; final focused regression passed"
+    }
+  ],
+  "baseline_initial": {
+    "passed": 4,
+    "failed": 9,
+    "skipped": 0,
+    "exit_code": 1,
+    "log": "recovery-before.log"
+  },
+  "last_executed_candidate": {
+    "passed": 105,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "log": "recovery-final-candidate.log",
+    "is_final_source": false
+  },
+  "final_focused": {
+    "status": "PASS",
+    "passed": 119,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "new_cases": 49,
+    "unchanged_cases": 70,
+    "files": 6,
+    "log": "root-final-focused.log",
+    "executed_by": "parent through normally reviewed local-IPC tool request",
+    "command": "source /workspace/toolchains/luno-env.sh\nflock /workspace/luno-review/bug-audit-round4/flutter.lock flutter test --no-pub --concurrency=1 --reporter expanded test/round4_client_recovery_durability_test.dart test/round3_client_departure_write_test.dart test/account_store_isolation_test.dart test/v228_store_write_recovery_test.dart test/v228_store_migration_recovery_test.dart test/v229_store_boundary_test.dart"
+  },
+  "canonical_baseline": {
+    "status": "EXPECTED FAIL",
+    "passed": 15,
+    "failed": 20,
+    "skipped": 0,
+    "exit_code": 1,
+    "cases": 35,
+    "log": "canonical-before.log",
+    "script": "replay-baseline.sh",
+    "name_filter": "^(?!.*(backup_pending_v1|pending-marker)).*$",
+    "excluded_implementation_only_tests": 14,
+    "production_sha256": "f5932f691465c57fee4ed124f4587d3ef13e9b2754e9ede8e45bcb35098cd79d",
+    "restored_final_sha256": "02c9d56f9a968741844e057ed220a59c8f62db2797d64a61229d4a67e141f371",
+    "executed_by": "parent through normally reviewed local-IPC tool request"
+  },
+  "production_files": {
+    "luno_chess/lib/models/game_store.dart": "02c9d56f9a968741844e057ed220a59c8f62db2797d64a61229d4a67e141f371"
+  },
+  "test_files": {
+    "luno_chess/test/round4_client_recovery_durability_test.dart": "558e01063ec708aee80db6154d73a8e227c2db4e5a13ba63044e1c8e9d055132"
+  },
+  "format_and_diff_check": "passed",
+  "source_frozen": true,
+  "full_suites_analyze_build_emulator_live_services": "NOT RUN by this agent",
+  "approval_review": {
+    "agent_request": "not executed: approval service usage limit",
+    "parent_request": "accepted; baseline and final focused completed",
+    "bypass": false
+  }
+}

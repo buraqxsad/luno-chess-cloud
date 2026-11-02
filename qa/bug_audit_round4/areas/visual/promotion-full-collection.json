@@ -1,0 +1,22 @@
+[
+  {
+    "path": "luno_chess/test/failures/promotion_isolatedDiff.png",
+    "sha256": "5a3254f8ee8467d5d2f0d5e00ec6af82b4c66f786a067f2f19305419715a59e6",
+    "bytes": 45588
+  },
+  {
+    "path": "luno_chess/test/failures/promotion_maskedDiff.png",
+    "sha256": "3157f69d591ca1820c02da32fb45272f2891050efb3b781c6e655a0b97449a29",
+    "bytes": 266791
+  },
+  {
+    "path": "luno_chess/test/failures/promotion_masterImage.png",
+    "sha256": "121783a8f1a008fadb8a41318ad33a159a0dc2ea75c9f3b05de265117f9e8eaa",
+    "bytes": 258501
+  },
+  {
+    "path": "luno_chess/test/failures/promotion_testImage.png",
+    "sha256": "cab8a2be1baf8bcb01c223e88574f6415fe3a49eb5f5522543d43456e290e243",
+    "bytes": 265722
+  }
+]

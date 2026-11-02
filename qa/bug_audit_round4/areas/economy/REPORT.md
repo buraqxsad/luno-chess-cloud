@@ -1,0 +1,15 @@
+# Round 4 economy audit — RTDN lease lifecycle
+
+One new P1 family confirmed. Exact baseline d67cd449cbd8834a4878f5484941d376fa7c17d8 is 4 pass / 4 fail on the final eight-case suite. The full candidate and root-integrated actual source are both 8/8. Root owns all production integration; this agent wrote unique tests and external candidates/patches/evidence only.
+
+A runtime interruption after the event processing transaction commits leaves a durable five-minute lease. The original handler returns a successful duplicate for an early retry even though the event has not reconciled. With retry:true on the exported Pub/Sub trigger, that normal return acknowledges the only refund delivery. The known owned 1000-gold grant remains spendable (1250 instead of the post-reversal 250) and its claim is not voided. The test interrupts the actual exported handler immediately after its lock commit, then verifies that the early retry rejects, and that a retry after lease expiration reverses exactly once. Cold and warm callbacks exercise the same root cause.
+
+The first minimal fix distinguishes complete duplicates from running leases. Own-fix review then proved that an expired first worker can overwrite the takeover worker's complete marker as failed, or mark complete while the takeover worker still owns processing. These are counted within the same event-lease family. The final patch adds a fresh per-attempt UUID and commits completion/failure only through a transaction for its own processing lease. Lost completion ownership remains retriable; its catch path cannot change another worker's marker.
+
+Controls preserve fresh event confirmation/reversal, completed duplicates with no provider call, expired legacy-lease takeover, ordinary provider failure retry, and a single debit under concurrent refund workers. Provider proof is faked and RTDB is in memory; this does not establish deployed Pub/Sub or licensed Google Play acceptance.
+
+Evidence: rtdn-lease-exact-baseline-final8.tap, rtdn-lease-preownership-baseline-clean.tap, rtdn-lease-owner-candidate.tap. Production patches: rtdn-lease-full.patch (from exact original baseline), rtdn-lease-ownership-followup.patch (on top of root's minimal patch). Hashes and excluded startup/exploratory harness attempts are retained in result.json.
+
+The focused ten-file candidate run before the ownership extension passed 82/82; its tests overlap older regression records and are not new bug counts. Root integrated both parts. Final actual-source focused verification: 84/84 pass, 0 fail, 0 skip in ten direct-Node files. The final new suite is 8/8; source hash was stable throughout. See actual-focused-results.json and result.json for per-file TAP counts and hashes. Earlier first-registration refund and pending restore defects were not recounted. No second independent new defect was confirmed before scope freeze. Daily two-client/UTC-boundary coverage, consume recovery and subscription lifecycle controls remain relevant focused regression evidence.
+
+No production deploy, payment, upload, push, signing change, emulator, build or full regression was performed by this agent.

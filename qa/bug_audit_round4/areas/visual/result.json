@@ -1,0 +1,38 @@
+{
+  "scope": "Read-only visual acceptance review of97 historical Flutter golden mismatches; no runner/build/device/live calls. No production/assets/goldens mutation by this agent.",
+  "baseline": "d67cd449cbd8834a4878f5484941d376fa7c17d8",
+  "reviewed_utc": "2026-11-02T14:46:31.503705+00:00",
+  "pairs_inspected": 97,
+  "contact_sheets": 18,
+  "full_resolution_pairs_inspected": 12,
+  "groups": {
+    "battle": 50,
+    "surface": 46,
+    "card-art": 1
+  },
+  "classifications": {
+    "text_edge_delta_no_target_rule_layout_regression_observed": 50,
+    "text_or_control_metrics_delta_no_semantic_regression_observed": 32,
+    "text_edge_delta_art_unchanged_observed": 1,
+    "existing_design_or_guidance_delta_without_exact_signoff": 13,
+    "visible_glyph_defect_current_declared_font_chain": 1
+  },
+  "same_size_pairs": 97,
+  "generated_master_matches_tracked_reference": 97,
+  "24_card_art_rectangles_pixel_identical": true,
+  "historical_golden_failures_open": 97,
+  "goldens_updated": 0,
+  "design_acceptance_granted": false,
+  "visible_existing_issue_reported_to_root": {
+    "promotion": "Missing dotted I in widget capture/current declared font chain; root owns focused current reproduction/fix. Native/system font fallback unverified."
+  },
+  "withdrawn_suspicion": "timeout winner mismatch withdrawn after full-resolution inspection: both images correctly show Zafer.",
+  "tests_run": [],
+  "limitations": [
+    "No new Flutter capture/test/full suite; candidate R3 source predates round4 changes.",
+    "No native Android, physical-device, GPU, input-reachability, animation or service acceptance.",
+    "No exact historical font/renderer context for references; text-edge origin not established.",
+    "Referenced qa/v216/golden-review and qa/v236/golden-review acceptance artifacts absent from transfer. V203 original exact design signoff unavailable.",
+    "Widget snapshots do not prove rules/privacy/purchases/services work; fixture logic only supplies a concrete expected state."
+  ]
+}

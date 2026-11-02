@@ -1,0 +1,8 @@
+{
+  "standalone_module": "/workspace/luno-chess/functions/node_modules/@firebase/database-compat/dist/index.standalone.js",
+  "original_sha256": "98421fa06420904b942332c20705b0a577374e82a5bde95bdaf770052d1aa760",
+  "in_memory_sha256": "37485ba9ba07895906cfc1b7cf205c8d045dc41cf54cd93b50a4203cea9309ed",
+  "exact_replaced_blocks": 1,
+  "changed_transport_condition_only": true,
+  "repo_or_sdk_disk_files_modified": false
+}

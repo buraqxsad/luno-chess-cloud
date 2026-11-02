@@ -1,0 +1,3233 @@
+{
+  "source_commit": "0f40ddda041c205b129f3a35d9d4e9f1b661bf8c",
+  "coverage_groups": [
+    {
+      "area": "Hesap, silme ve oturum",
+      "backend": [
+        {
+          "file": "test/account-deletion-gate.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 7,
+            "pass": 7,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/account-metadata-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 26,
+            "pass": 26,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/pass-chest-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 42,
+            "pass": 42,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/pass-purchase-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 55,
+            "pass": 55,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/profile-deletion-race.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 9,
+            "pass": 9,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/public-profile-deletion-race.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 11,
+            "pass": 11,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/request-deletion-race.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 15,
+            "pass": 15,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/retained-data-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 21,
+            "pass": 21,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round2-online-admission-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 6,
+            "pass": 6,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round2-security-notification-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 14,
+            "pass": 14,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round3-online-settlement-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 4,
+            "pass": 4,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round3-security-v1-invite-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 12,
+            "pass": 12,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/settlement-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 19,
+            "pass": 19,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/shop-chest-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 53,
+            "pass": 53,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/soft-purchase-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 110,
+            "pass": 110,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v201b-authority.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 3,
+            "pass": 3,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v201b-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 6,
+            "pass": 6,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v214-guest-bootstrap.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 13,
+            "pass": 13,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v215-blocked-pagination-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 11,
+            "pass": 11,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v215-native-mission-ownership.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 3,
+            "pass": 3,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v217-billing-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 3,
+            "pass": 3,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v217-settlement-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 1,
+            "pass": 1,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v236-economy-route-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 3,
+            "pass": 3,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v238-battle-v1-migration-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 4,
+            "pass": 4,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        }
+      ],
+      "flutter": [
+        {
+          "file": "test/permanent_purchase_recovery_test.dart",
+          "counts": {
+            "success": 44
+          }
+        },
+        {
+          "file": "test/rc_deck_navigation_owner_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/rc_achievement_ownership_test.dart",
+          "counts": {
+            "success": 10
+          }
+        },
+        {
+          "file": "test/shop_chest_request_recovery_test.dart",
+          "counts": {
+            "success": 29
+          }
+        },
+        {
+          "file": "test/battle_deck_account_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/v238_battle_sheet_owner_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/pass_premium_purchase_recovery_test.dart",
+          "counts": {
+            "success": 61
+          }
+        },
+        {
+          "file": "test/profile_save_account_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/shop_account_action_test.dart",
+          "counts": {
+            "success": 17
+          }
+        },
+        {
+          "file": "test/online_account_block_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/rc_account_confirmation_owner_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v238_emote_picker_owner_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/v236_account_restore_ui_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/reward_modal_account_test.dart",
+          "counts": {
+            "success": 9
+          }
+        },
+        {
+          "file": "test/server_state_ownership_test.dart",
+          "counts": {
+            "success": 10
+          }
+        },
+        {
+          "file": "test/v220_billing_pending_chest_recovery_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/v228_store_write_recovery_test.dart",
+          "counts": {
+            "success": 13
+          }
+        },
+        {
+          "file": "test/account_store_isolation_test.dart",
+          "counts": {
+            "success": 11
+          }
+        },
+        {
+          "file": "test/online_hub_account_block_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/reward_screen_account_test.dart",
+          "counts": {
+            "success": 19
+          }
+        },
+        {
+          "file": "test/v214_bootstrap_consent_test.dart",
+          "counts": {
+            "success": 25
+          }
+        },
+        {
+          "file": "test/pass_account_action_test.dart",
+          "counts": {
+            "success": 12
+          }
+        },
+        {
+          "file": "test/v221_economy_account_restore_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/rc_battle_modal_ownership_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/social_account_scope_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/online_bootstrap_failure_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/online_match_recovery_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/online_auth_transition_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/rc_information_modal_owner_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/account_erasure_test.dart",
+          "counts": {
+            "success": 9
+          }
+        },
+        {
+          "file": "test/round3_client_bootstrap_continuation_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/online_deleted_session_recovery_test.dart",
+          "counts": {
+            "success": 22
+          }
+        },
+        {
+          "file": "test/rc_username_ownership_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/rc_home_action_owner_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/v237_request_bootstrap_owner_test.dart",
+          "counts": {
+            "success": 12
+          }
+        },
+        {
+          "file": "test/account_deletion_flow_test.dart",
+          "counts": {
+            "success": 15
+          }
+        },
+        {
+          "file": "test/card_action_account_test.dart",
+          "counts": {
+            "success": 10
+          }
+        },
+        {
+          "file": "test/rc_purchase_bootstrap_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/v219_online_screen_recovery_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/account_operation_guard_test.dart",
+          "counts": {
+            "success": 9
+          }
+        },
+        {
+          "file": "test/rc_account_surface_test.dart",
+          "counts": {
+            "success": 11
+          }
+        },
+        {
+          "file": "test/rc_matchmaking_owner_test.dart",
+          "counts": {
+            "success": 12
+          }
+        },
+        {
+          "file": "test/round4_client_recovery_durability_test.dart",
+          "counts": {
+            "success": 49
+          }
+        },
+        {
+          "file": "test/pass_chest_request_recovery_test.dart",
+          "counts": {
+            "success": 22
+          }
+        },
+        {
+          "file": "test/v219_online_recovery_test.dart",
+          "counts": {
+            "success": 18
+          }
+        },
+        {
+          "file": "test/account_modal_lifecycle_test.dart",
+          "counts": {
+            "success": 14
+          }
+        },
+        {
+          "file": "test/v217_player_journey_ownership_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v228_store_migration_recovery_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v219_online_bootstrap_reentry_test.dart",
+          "counts": {
+            "success": 6
+          }
+        }
+      ],
+      "overlaps_other_areas": true,
+      "scope": "Named source/test coverage; not exhaustive, not real service or Android acceptance."
+    },
+    {
+      "area": "Ekonomi, ödül ve ödeme",
+      "backend": [
+        {
+          "file": "test/dm-receipt-race.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 27,
+            "pass": 27,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/pass-chest-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 42,
+            "pass": 42,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/pass-purchase-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 55,
+            "pass": 55,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/reward-boundaries.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 5,
+            "pass": 5,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round2-economy-subscription-inactive-refresh.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 8,
+            "pass": 8,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round3-economy-unmatched-refund.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 8,
+            "pass": 8,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round4-economy-rtdn-lease.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 8,
+            "pass": 8,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/soft-purchase-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 110,
+            "pass": 110,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/subscription-reconciliation-race.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 12,
+            "pass": 12,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/system-hunt-economy-refund-grant-race.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 10,
+            "pass": 10,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/system-hunt-economy-subscription-stale-fulfillment.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 20,
+            "pass": 20,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v204-battle-card-rewards.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 15,
+            "pass": 15,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v214-economy.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 10,
+            "pass": 10,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v214-existing-reward-bridge.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 11,
+            "pass": 11,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v215-product-economy.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 31,
+            "pass": 31,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v217-billing-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 3,
+            "pass": 3,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v218-pass-chest-entropy.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 2,
+            "pass": 2,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v220-billing-odds-contract.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 4,
+            "pass": 4,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v220-billing-pagination.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 8,
+            "pass": 8,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v220-billing-policy-contract.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 5,
+            "pass": 5,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v236-economy-evidence.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 10,
+            "pass": 10,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v236-economy-route-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 3,
+            "pass": 3,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v238-daily-claim-ordering.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 2,
+            "pass": 2,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v239-daily-acceptance.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 5,
+            "pass": 5,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        }
+      ],
+      "flutter": [
+        {
+          "file": "test/permanent_purchase_recovery_test.dart",
+          "counts": {
+            "success": 44
+          }
+        },
+        {
+          "file": "test/luno_google_play_billing_adapter_test.dart",
+          "counts": {
+            "success": 10
+          }
+        },
+        {
+          "file": "test/round3_economy_pending_restore_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/pass_premium_purchase_recovery_test.dart",
+          "counts": {
+            "success": 61
+          }
+        },
+        {
+          "file": "test/dm_receipt_queue_test.dart",
+          "counts": {
+            "success": 9
+          }
+        },
+        {
+          "file": "test/battle_v1/settlement_receipt_test.dart",
+          "counts": {
+            "success": 11
+          }
+        },
+        {
+          "file": "test/v215_billing_ui_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/v229_reward_flow_boundary_test.dart",
+          "counts": {
+            "success": 50
+          }
+        },
+        {
+          "file": "test/luno_online_billing_backend_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/v220_billing_odds_test.dart",
+          "counts": {
+            "success": 14
+          }
+        },
+        {
+          "file": "test/v220_billing_restore_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/reward_modal_account_test.dart",
+          "counts": {
+            "success": 9
+          }
+        },
+        {
+          "file": "test/v220_billing_pending_chest_recovery_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/v218_economy_store_test.dart",
+          "counts": {
+            "success": 13
+          }
+        },
+        {
+          "file": "test/reward_screen_account_test.dart",
+          "counts": {
+            "success": 19
+          }
+        },
+        {
+          "file": "test/shop_reward_dialog_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/billing_historical_receipt_launch_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v221_economy_account_restore_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/v216_reward_frame_test.dart",
+          "counts": {
+            "success": 48
+          }
+        },
+        {
+          "file": "test/v218_economy_pass_contract_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v216_cosmetic_rewards_test.dart",
+          "counts": {
+            "success": 26
+          }
+        },
+        {
+          "file": "test/rc_purchase_bootstrap_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/luno_billing_service_test.dart",
+          "counts": {
+            "success": 32
+          }
+        },
+        {
+          "file": "test/v220_billing_policy_ui_test.dart",
+          "counts": {
+            "success": 10
+          }
+        },
+        {
+          "file": "test/round2_client_billing_snapshot_order_test.dart",
+          "counts": {
+            "success": 12
+          }
+        },
+        {
+          "file": "test/reward_claim_result_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/pass_chest_request_recovery_test.dart",
+          "counts": {
+            "success": 22
+          }
+        },
+        {
+          "file": "test/dm_receipt_cursor_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v218_economy_persistence_test.dart",
+          "counts": {
+            "success": 7
+          }
+        }
+      ],
+      "overlaps_other_areas": true,
+      "scope": "Named source/test coverage; not exhaustive, not real service or Android acceptance."
+    },
+    {
+      "area": "Online, arkadaşlık ve mesaj",
+      "backend": [
+        {
+          "file": "test/dm-receipt-race.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 27,
+            "pass": 27,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/ranked-cold-cache.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 12,
+            "pass": 12,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/ranked.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 33,
+            "pass": 33,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round2-online-admission-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 6,
+            "pass": 6,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round3-online-enqueue-replay.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 6,
+            "pass": 6,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round3-online-settlement-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 4,
+            "pass": 4,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round3-runtime-friendly-cold.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 8,
+            "pass": 8,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round3-security-v1-invite-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 12,
+            "pass": 12,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round4-online-friendly-replay.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 13,
+            "pass": 13,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/settlement-audit.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 10,
+            "pass": 10,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/settlement-presence.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 8,
+            "pass": 8,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/settlement-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 19,
+            "pass": 19,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/system-hunt-identity-presence.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 3,
+            "pass": 3,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/system-hunt-online-expired-queue-room.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 5,
+            "pass": 5,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/system-hunt-online-settlement-fairness.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 3,
+            "pass": 3,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v201b-friendly.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 3,
+            "pass": 3,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v214-social-safety.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 14,
+            "pass": 14,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v217-settlement-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 1,
+            "pass": 1,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v218-social-atomic.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 7,
+            "pass": 7,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v219-sidecar-social-integrity.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 27,
+            "pass": 27,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v221-backend-dm-rejected-attempt.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 5,
+            "pass": 5,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        }
+      ],
+      "flutter": [
+        {
+          "file": "test/v221_online_action_admission_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/online_response_lifecycle_test.dart",
+          "counts": {
+            "success": 18
+          }
+        },
+        {
+          "file": "test/dm_read_session_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/dm_receipt_queue_test.dart",
+          "counts": {
+            "success": 9
+          }
+        },
+        {
+          "file": "test/battle_v1/online_test.dart",
+          "counts": {
+            "success": 14
+          }
+        },
+        {
+          "file": "test/battle_v1/settlement_receipt_test.dart",
+          "counts": {
+            "success": 11
+          }
+        },
+        {
+          "file": "test/v218_online_service_test.dart",
+          "counts": {
+            "success": 13
+          }
+        },
+        {
+          "file": "test/online_request_session_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/rc_v1_invite_contract_test.dart",
+          "counts": {
+            "success": 27
+          }
+        },
+        {
+          "file": "test/online_account_block_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v218_online_protocol_test.dart",
+          "counts": {
+            "success": 12
+          }
+        },
+        {
+          "file": "test/v217_player_journey_ranked_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/round2_client_friendly_route_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/luno_online_billing_backend_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/online_hub_account_block_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/online_database_session_test.dart",
+          "counts": {
+            "success": 26
+          }
+        },
+        {
+          "file": "test/v229_social_boundary_test.dart",
+          "counts": {
+            "success": 14
+          }
+        },
+        {
+          "file": "test/v218_social_public_profile_block_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/social_account_scope_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/online_bootstrap_failure_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/online_match_recovery_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/v218_social_dm_lifecycle_test.dart",
+          "counts": {
+            "success": 9
+          }
+        },
+        {
+          "file": "test/online_auth_transition_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/online_activity_session_test.dart",
+          "counts": {
+            "success": 9
+          }
+        },
+        {
+          "file": "test/dm_send_session_test.dart",
+          "counts": {
+            "success": 11
+          }
+        },
+        {
+          "file": "test/online_deleted_session_recovery_test.dart",
+          "counts": {
+            "success": 22
+          }
+        },
+        {
+          "file": "test/online_settlement_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/online_badges_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/v214_social_safety_ui_test.dart",
+          "counts": {
+            "success": 26
+          }
+        },
+        {
+          "file": "test/v214_social_safety_result_test.dart",
+          "counts": {
+            "success": 16
+          }
+        },
+        {
+          "file": "test/dm_lifecycle_regression_test.dart",
+          "counts": {
+            "success": 1
+          }
+        },
+        {
+          "file": "test/v228_online_controller_regression_test.dart",
+          "counts": {
+            "success": 12
+          }
+        },
+        {
+          "file": "test/v233_online_regression_test.dart",
+          "counts": {
+            "success": 11
+          }
+        },
+        {
+          "file": "test/dm_loading_resilience_test.dart",
+          "counts": {
+            "success": 9
+          }
+        },
+        {
+          "file": "test/social_action_result_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v221_local_action_admission_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v219_online_screen_recovery_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v216_friendly_art_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/v223_card_admission_test.dart",
+          "counts": {
+            "success": 144
+          }
+        },
+        {
+          "file": "test/online_retry_policy_test.dart",
+          "counts": {
+            "success": 17
+          }
+        },
+        {
+          "file": "test/v233_social_regression_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/rc_matchmaking_owner_test.dart",
+          "counts": {
+            "success": 12
+          }
+        },
+        {
+          "file": "test/v216_1_social_visual_test.dart",
+          "counts": {
+            "success": 64
+          }
+        },
+        {
+          "file": "test/v219_online_recovery_test.dart",
+          "counts": {
+            "success": 18
+          }
+        },
+        {
+          "file": "test/dm_receipt_cursor_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v229_dm_read_ack_test.dart",
+          "counts": {
+            "success": 19
+          }
+        },
+        {
+          "file": "test/v219_online_bootstrap_reentry_test.dart",
+          "counts": {
+            "success": 6
+          }
+        }
+      ],
+      "overlaps_other_areas": true,
+      "scope": "Named source/test coverage; not exhaustive, not real service or Android acceptance."
+    },
+    {
+      "area": "Savaş, kartlar ve gizlilik",
+      "backend": [
+        {
+          "file": "test/card-stress.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 3,
+            "pass": 3,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v204-battle-card-rewards.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 15,
+            "pass": 15,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v213-battle-progress.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 18,
+            "pass": 18,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v214-battle-v1-public-profile.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 72,
+            "pass": 72,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v238-battle-v1-migration-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 4,
+            "pass": 4,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        }
+      ],
+      "flutter": [
+        {
+          "file": "test/v236_battle_readability_test.dart",
+          "counts": {
+            "success": 30
+          }
+        },
+        {
+          "file": "test/battle_ui/visual_test.dart",
+          "counts": {
+            "error": 50,
+            "success": 60
+          }
+        },
+        {
+          "file": "test/battle_ui/private_effect_test.dart",
+          "counts": {
+            "success": 11
+          }
+        },
+        {
+          "file": "test/battle_ui/layout_test.dart",
+          "counts": {
+            "success": 24
+          }
+        },
+        {
+          "file": "test/battle_ui/lifecycle_accessibility_test.dart",
+          "counts": {
+            "success": 13
+          }
+        },
+        {
+          "file": "test/battle_ui/interaction_test.dart",
+          "counts": {
+            "success": 12
+          }
+        },
+        {
+          "file": "test/battle_ui/foundation_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/v236_hotseat_screen_test.dart",
+          "counts": {
+            "success": 16
+          }
+        },
+        {
+          "file": "test/battle_deck_account_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/v238_battle_sheet_owner_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/v232_battle_motion_boundaries_test.dart",
+          "counts": {
+            "success": 14
+          }
+        },
+        {
+          "file": "test/v223_card_copy_semantics_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/v231_battle_capture_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/v214_battle_visibility_test.dart",
+          "counts": {
+            "success": 1
+          }
+        },
+        {
+          "file": "test/rc_battle_capture_test.dart",
+          "counts": {
+            "success": 90
+          }
+        },
+        {
+          "file": "test/battle_v1/core_test.dart",
+          "counts": {
+            "success": 59
+          }
+        },
+        {
+          "file": "test/battle_v1/fixtures_test.dart",
+          "counts": {
+            "success": 113
+          }
+        },
+        {
+          "file": "test/battle_v1/online_test.dart",
+          "counts": {
+            "success": 14
+          }
+        },
+        {
+          "file": "test/battle_v1/settlement_receipt_test.dart",
+          "counts": {
+            "success": 11
+          }
+        },
+        {
+          "file": "test/battle_v1/card_stress_v212_test.dart",
+          "counts": {
+            "success": 24
+          }
+        },
+        {
+          "file": "test/battle_v1/local_clock_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/battle_tutorial_v207_test.dart",
+          "counts": {
+            "success": 33
+          }
+        },
+        {
+          "file": "test/battle_card_identity_v210_test.dart",
+          "counts": {
+            "success": 63
+          }
+        },
+        {
+          "file": "test/emoji_selection_regression_test.dart",
+          "counts": {
+            "success": 1
+          }
+        },
+        {
+          "file": "test/battle_draw_source_audit_test.dart",
+          "counts": {
+            "success": 21
+          }
+        },
+        {
+          "file": "test/card_collection_layout_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/battle_presentation_v209_test.dart",
+          "counts": {
+            "success": 30
+          }
+        },
+        {
+          "file": "test/card_dialog_regression_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/battle_vfx_v206_test.dart",
+          "counts": {
+            "success": 72
+          }
+        },
+        {
+          "file": "test/v223_remaining_card_semantics_test.dart",
+          "counts": {
+            "success": 180
+          }
+        },
+        {
+          "file": "test/match/card_exhaustive_test.dart",
+          "counts": {
+            "success": 17
+          }
+        },
+        {
+          "file": "test/v231_battle_vfx_test.dart",
+          "counts": {
+            "success": 28
+          }
+        },
+        {
+          "file": "test/v216_battle_visual_test.dart",
+          "counts": {
+            "success": 52
+          }
+        },
+        {
+          "file": "test/piece_selection_regression_test.dart",
+          "counts": {
+            "success": 14
+          }
+        },
+        {
+          "file": "test/v236_hotseat_privacy_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/system_hunt_battle_sheet_version_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/v216_1_battle_emote_integration_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v224_card_wire_targets_test.dart",
+          "counts": {
+            "success": 30
+          }
+        },
+        {
+          "file": "test/v216_battle_payoff_test.dart",
+          "counts": {
+            "success": 18
+          }
+        },
+        {
+          "file": "test/round4_battle_compact_pass_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v219_battle_impact_frames_test.dart",
+          "counts": {
+            "success": 15
+          }
+        },
+        {
+          "file": "test/v222_all_card_contract_test.dart",
+          "counts": {
+            "success": 97
+          }
+        },
+        {
+          "file": "test/initial_stream_timeout_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/round4_battle_knowledge_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/v225_card_terminal_lifecycle_test.dart",
+          "counts": {
+            "success": 77
+          }
+        },
+        {
+          "file": "test/v219_full_battle_frames_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/v215_battle_accessibility_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/rc_battle_modal_ownership_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/card_localization_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v226_card_effect_semantics_test.dart",
+          "counts": {
+            "success": 320
+          }
+        },
+        {
+          "file": "test/v215_privacy_legal_ui_test.dart",
+          "counts": {
+            "success": 24
+          }
+        },
+        {
+          "file": "test/v223_black_card_ui_test.dart",
+          "counts": {
+            "success": 96
+          }
+        },
+        {
+          "file": "test/battle_practice_v208_test.dart",
+          "counts": {
+            "success": 28
+          }
+        },
+        {
+          "file": "test/v219_card_render_contract_test.dart",
+          "counts": {
+            "success": 17
+          }
+        },
+        {
+          "file": "test/card_upgrade_flow_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v222_card_use_ui_test.dart",
+          "counts": {
+            "success": 48
+          }
+        },
+        {
+          "file": "test/v222_card_presentation_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v219_battle_presentation_epoch_test.dart",
+          "counts": {
+            "success": 12
+          }
+        },
+        {
+          "file": "test/battle_motion_v208_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/v215_settings_privacy_label_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v215_costume_battle_test.dart",
+          "counts": {
+            "success": 11
+          }
+        },
+        {
+          "file": "test/screen_request_timeouts_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/v228_battle_interaction_regression_test.dart",
+          "counts": {
+            "success": 61
+          }
+        },
+        {
+          "file": "test/v216_battle_regression_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/v224_card_branch_closure_test.dart",
+          "counts": {
+            "success": 520
+          }
+        },
+        {
+          "file": "test/collection_selection_result_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/card_upgrade_confirmation_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v223_card_block_adversarial_test.dart",
+          "counts": {
+            "success": 124
+          }
+        },
+        {
+          "file": "test/battle_learning_v203_test.dart",
+          "counts": {
+            "success": 36
+          }
+        },
+        {
+          "file": "test/card_upgrade_eligibility_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/card_action_account_test.dart",
+          "counts": {
+            "success": 10
+          }
+        },
+        {
+          "file": "test/v217_home_battle_entry_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/battle_card_art_v204_test.dart",
+          "counts": {
+            "error": 1
+          }
+        },
+        {
+          "file": "test/round3_battle_selection_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/v239_card_acceptance_test.dart",
+          "counts": {
+            "success": 76
+          }
+        },
+        {
+          "file": "test/card_upgrade_result_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/v223_card_admission_test.dart",
+          "counts": {
+            "success": 144
+          }
+        },
+        {
+          "file": "test/v222_card_targeting_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/rc_compact_battle_board_test.dart",
+          "counts": {
+            "success": 22
+          }
+        },
+        {
+          "file": "test/v222_opponent_card_notice_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/battle_async_v213_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/v214_card_copy_test.dart",
+          "counts": {
+            "success": 78
+          }
+        },
+        {
+          "file": "test/v216_battle_safety_test.dart",
+          "counts": {
+            "success": 18
+          }
+        },
+        {
+          "file": "test/v227_battle_learning_ui_test.dart",
+          "counts": {
+            "success": 14
+          }
+        },
+        {
+          "file": "test/v216_battle_stages_test.dart",
+          "counts": {
+            "success": 24
+          }
+        }
+      ],
+      "overlaps_other_areas": true,
+      "scope": "Named source/test coverage; not exhaustive, not real service or Android acceptance."
+    },
+    {
+      "area": "Kurallar ve kayıt biçimleri",
+      "backend": [
+        {
+          "file": "test/core.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 56,
+            "pass": 56,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/public-profile-contract.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 7,
+            "pass": 7,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v215-memory-query-contract.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 2,
+            "pass": 2,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v220-billing-odds-contract.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 4,
+            "pass": 4,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v220-billing-policy-contract.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 5,
+            "pass": 5,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v220-rules-contract.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 1,
+            "pass": 1,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v236-query-index-contract.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 2,
+            "pass": 2,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        }
+      ],
+      "flutter": [
+        {
+          "file": "test/battle_v1/core_test.dart",
+          "counts": {
+            "success": 59
+          }
+        },
+        {
+          "file": "test/models/player_data_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/ranking_score_layout_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/rc_v1_invite_contract_test.dart",
+          "counts": {
+            "success": 27
+          }
+        },
+        {
+          "file": "test/v219_rules_repetition_contract_test.dart",
+          "counts": {
+            "success": 44
+          }
+        },
+        {
+          "file": "test/v218_rules_geometry_test.dart",
+          "counts": {
+            "success": 14
+          }
+        },
+        {
+          "file": "test/v224_card_wire_targets_test.dart",
+          "counts": {
+            "success": 30
+          }
+        },
+        {
+          "file": "test/v222_all_card_contract_test.dart",
+          "counts": {
+            "success": 97
+          }
+        },
+        {
+          "file": "test/v218_rules_action_validation_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/v214_collection_contract_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/engine/final_rules_test.dart",
+          "counts": {
+            "success": 15
+          }
+        },
+        {
+          "file": "test/engine/perft_test.dart",
+          "counts": {
+            "success": 11
+          }
+        },
+        {
+          "file": "test/engine/chess_game_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/engine/ai_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/v227_onboarding_lesson_contract_test.dart",
+          "counts": {
+            "success": 103
+          }
+        },
+        {
+          "file": "test/v219_card_render_contract_test.dart",
+          "counts": {
+            "success": 17
+          }
+        },
+        {
+          "file": "test/v215_product_contract_test.dart",
+          "counts": {
+            "success": 16
+          }
+        },
+        {
+          "file": "test/v218_economy_pass_contract_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v219_rules_mine_contract_test.dart",
+          "counts": {
+            "success": 16
+          }
+        },
+        {
+          "file": "test/v218_rules_terminal_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v219_android_source_contract_test.dart",
+          "counts": {
+            "success": 5
+          }
+        }
+      ],
+      "overlaps_other_areas": true,
+      "scope": "Named source/test coverage; not exhaustive, not real service or Android acceptance."
+    },
+    {
+      "area": "Tutorial, rehber ve arayüz",
+      "backend": [
+        {
+          "file": "test/v208-emotes.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 6,
+            "pass": 6,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        }
+      ],
+      "flutter": [
+        {
+          "file": "test/v230_learning_ui_test.dart",
+          "counts": {
+            "success": 18
+          }
+        },
+        {
+          "file": "test/v216_audio_visual_test.dart",
+          "counts": {
+            "success": 16
+          }
+        },
+        {
+          "file": "test/v236_deck_navigation_test.dart",
+          "counts": {
+            "success": 25
+          }
+        },
+        {
+          "file": "test/rc_deck_navigation_owner_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/v215_audio_runtime_test.dart",
+          "counts": {
+            "success": 1
+          }
+        },
+        {
+          "file": "test/battle_ui/layout_test.dart",
+          "counts": {
+            "success": 24
+          }
+        },
+        {
+          "file": "test/rc_audio_epoch_test.dart",
+          "counts": {
+            "success": 1
+          }
+        },
+        {
+          "file": "test/costume_layout_regression_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/v236_hotseat_screen_test.dart",
+          "counts": {
+            "success": 16
+          }
+        },
+        {
+          "file": "test/emoji_layout_regression_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v214_first_match_ui_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v216_cosmetics_audio_test.dart",
+          "counts": {
+            "success": 1
+          }
+        },
+        {
+          "file": "test/battle_deck_account_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/v216_1_emote_acquisition_test.dart",
+          "counts": {
+            "success": 10
+          }
+        },
+        {
+          "file": "test/friends_layout_regression_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/resource_amount_layout_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/tutorial_luno_live_test.dart",
+          "counts": {
+            "success": 22
+          }
+        },
+        {
+          "file": "test/v214_ugc_consent_ui_test.dart",
+          "counts": {
+            "success": 16
+          }
+        },
+        {
+          "file": "test/v216_tutorial_integration_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/battle_tutorial_v207_test.dart",
+          "counts": {
+            "success": 33
+          }
+        },
+        {
+          "file": "test/audio_service_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/rc_screen_copy_test.dart",
+          "counts": {
+            "success": 23
+          }
+        },
+        {
+          "file": "test/emoji_selection_regression_test.dart",
+          "counts": {
+            "success": 1
+          }
+        },
+        {
+          "file": "test/ranking_score_layout_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v215_billing_ui_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/card_collection_layout_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v237_living_guide_test.dart",
+          "counts": {
+            "success": 14
+          }
+        },
+        {
+          "file": "test/ranking_error_layout_test.dart",
+          "counts": {
+            "success": 1
+          }
+        },
+        {
+          "file": "test/v216_audio_mixer_test.dart",
+          "counts": {
+            "success": 9
+          }
+        },
+        {
+          "file": "test/rc_deck_label_fit_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/rc_settings_volume_target_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v238_emote_picker_owner_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/v214_deck_progression_result_test.dart",
+          "counts": {
+            "success": 26
+          }
+        },
+        {
+          "file": "test/v214_active_deck_test.dart",
+          "counts": {
+            "success": 15
+          }
+        },
+        {
+          "file": "test/v218_local_audio_startup_test.dart",
+          "counts": {
+            "success": 1
+          }
+        },
+        {
+          "file": "test/v215_deck_replacement_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/v215_audio_controls_test.dart",
+          "counts": {
+            "success": 16
+          }
+        },
+        {
+          "file": "test/v236_account_restore_ui_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/v216_1_battle_emote_integration_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/screen_smoke_test.dart",
+          "counts": {
+            "success": 1824
+          }
+        },
+        {
+          "file": "test/rc_tutorial_interaction_gate_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/pending_promotion_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/ui_button_audit_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/tutorial_flow_test.dart",
+          "counts": {
+            "success": 1
+          }
+        },
+        {
+          "file": "test/v214_audio_semantics_test.dart",
+          "counts": {
+            "success": 36
+          }
+        },
+        {
+          "file": "test/rc_tutorial_lifecycle_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/v216_1_audio_emotes_test.dart",
+          "counts": {
+            "success": 11
+          }
+        },
+        {
+          "file": "test/reward_screen_account_test.dart",
+          "counts": {
+            "success": 19
+          }
+        },
+        {
+          "file": "test/rc_tutorial_board_visibility_test.dart",
+          "counts": {
+            "success": 10
+          }
+        },
+        {
+          "file": "test/v215_welcome_ui_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/rc_settings_inbox_navigation_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v216_audio_feedback_test.dart",
+          "counts": {
+            "success": 36
+          }
+        },
+        {
+          "file": "test/card_localization_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v215_privacy_legal_ui_test.dart",
+          "counts": {
+            "success": 24
+          }
+        },
+        {
+          "file": "test/rc_screen_capture_test.dart",
+          "counts": {
+            "success": 62
+          }
+        },
+        {
+          "file": "test/v223_black_card_ui_test.dart",
+          "counts": {
+            "success": 96
+          }
+        },
+        {
+          "file": "test/v216_inbox_layout_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/chest_layout_regression_test.dart",
+          "counts": {
+            "success": 6
+          }
+        },
+        {
+          "file": "test/v222_card_use_ui_test.dart",
+          "counts": {
+            "success": 48
+          }
+        },
+        {
+          "file": "test/ui_polish_test.dart",
+          "counts": {
+            "success": 1
+          }
+        },
+        {
+          "file": "test/v216_1_emote_capture_test.dart",
+          "counts": {
+            "success": 30
+          }
+        },
+        {
+          "file": "test/v215_settings_privacy_label_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/ui_v205_test.dart",
+          "counts": {
+            "success": 44
+          }
+        },
+        {
+          "file": "test/round4_promotion_glyph_render_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/screen_request_timeouts_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/rc_tutorial_scroll_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v216_tutorial_home_visual_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/tutorial_live_safety_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/v227_coach_guidance_test.dart",
+          "counts": {
+            "success": 27
+          }
+        },
+        {
+          "file": "test/v236_deck_metrics_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/v214_social_safety_ui_test.dart",
+          "counts": {
+            "success": 26
+          }
+        },
+        {
+          "file": "test/collection_deck_save_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/deck_layout_regression_test.dart",
+          "counts": {
+            "success": 3
+          }
+        },
+        {
+          "file": "test/v220_billing_policy_ui_test.dart",
+          "counts": {
+            "success": 10
+          }
+        },
+        {
+          "file": "test/rc_tutorial_capture_test.dart",
+          "counts": {
+            "success": 20
+          }
+        },
+        {
+          "file": "test/deck_update_result_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/v214_introduction_ui_test.dart",
+          "counts": {
+            "success": 19
+          }
+        },
+        {
+          "file": "test/v219_online_screen_recovery_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/v219_settings_preservation_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/v217_ai_deck_test.dart",
+          "counts": {
+            "success": 12
+          }
+        },
+        {
+          "file": "test/v236_tutorial_layout_test.dart",
+          "counts": {
+            "success": 30
+          }
+        },
+        {
+          "file": "test/settings_test.dart",
+          "counts": {
+            "success": 8
+          }
+        },
+        {
+          "file": "test/v219_settings_locale_persistence_test.dart",
+          "counts": {
+            "success": 34
+          }
+        },
+        {
+          "file": "test/v227_battle_learning_ui_test.dart",
+          "counts": {
+            "success": 14
+          }
+        },
+        {
+          "file": "test/v216_tutorial_home_regression_test.dart",
+          "counts": {
+            "success": 26
+          }
+        },
+        {
+          "file": "test/rc_settings_loading_race_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/v221_emote_ordering_test.dart",
+          "counts": {
+            "success": 4
+          }
+        },
+        {
+          "file": "test/v215_audio_migration_test.dart",
+          "counts": {
+            "success": 33
+          }
+        }
+      ],
+      "overlaps_other_areas": true,
+      "scope": "Named source/test coverage; not exhaustive, not real service or Android acceptance."
+    },
+    {
+      "area": "Güvenlik ve API sınırları",
+      "backend": [
+        {
+          "file": "test/account-deletion-gate.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 7,
+            "pass": 7,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/account-metadata-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 26,
+            "pass": 26,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/api-route-boundary.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 54,
+            "pass": 54,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/profile-deletion-race.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 9,
+            "pass": 9,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/public-profile-deletion-race.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 11,
+            "pass": 11,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/request-deletion-race.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 15,
+            "pass": 15,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/retained-data-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 21,
+            "pass": 21,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round2-online-admission-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 6,
+            "pass": 6,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round2-security-notification-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 14,
+            "pass": 14,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round2-security-report-conversation.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 6,
+            "pass": 6,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round3-online-settlement-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 4,
+            "pass": 4,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/round3-security-v1-invite-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 12,
+            "pass": 12,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v214-v1-rating-boundary.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 7,
+            "pass": 7,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v215-blocked-pagination-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 11,
+            "pass": 11,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v215-product-telemetry-route.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 9,
+            "pass": 9,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v236-app-check-policy.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 12,
+            "pass": 12,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v236-economy-route-recovery.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 3,
+            "pass": 3,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        },
+        {
+          "file": "test/v238-battle-v1-migration-erasure.test.js",
+          "exit": 0,
+          "counts": {
+            "tests": 4,
+            "pass": 4,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          }
+        }
+      ],
+      "flutter": [
+        {
+          "file": "test/v229_reward_flow_boundary_test.dart",
+          "counts": {
+            "success": 50
+          }
+        },
+        {
+          "file": "test/round2_client_friendly_route_test.dart",
+          "counts": {
+            "success": 5
+          }
+        },
+        {
+          "file": "test/v229_social_boundary_test.dart",
+          "counts": {
+            "success": 14
+          }
+        },
+        {
+          "file": "test/v219_offline_practice_boundary_test.dart",
+          "counts": {
+            "success": 2
+          }
+        },
+        {
+          "file": "test/account_erasure_test.dart",
+          "counts": {
+            "success": 9
+          }
+        },
+        {
+          "file": "test/system_hunt_client_refresh_boundary_test.dart",
+          "counts": {
+            "success": 7
+          }
+        },
+        {
+          "file": "test/account_deletion_flow_test.dart",
+          "counts": {
+            "success": 15
+          }
+        },
+        {
+          "file": "test/v229_store_boundary_test.dart",
+          "counts": {
+            "success": 33
+          }
+        }
+      ],
+      "overlaps_other_areas": true,
+      "scope": "Named source/test coverage; not exhaustive, not real service or Android acceptance."
+    }
+  ],
+  "counts_are_overlapping": true,
+  "native_or_production_acceptance": false
+}

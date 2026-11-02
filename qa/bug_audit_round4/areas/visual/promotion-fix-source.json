@@ -1,0 +1,10 @@
+{
+  "baseline": "d67cd449cbd8834a4878f5484941d376fa7c17d8",
+  "before_sha256": "c93e266faec75e218efdf077426806a9787665facdb185df132e95d41cbb5866",
+  "after_sha256": "284afb30e56675f4145cd16fa40c9f2808480299b0ed6e8fe23fddba4038c0e4",
+  "valid_baseline": {
+    "pass": 1,
+    "fail": 2
+  },
+  "scope": "Current actual font raster matches supported bundled Turkish reference; no native OS fallback assertion."
+}

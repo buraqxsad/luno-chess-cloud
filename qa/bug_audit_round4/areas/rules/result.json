@@ -1,0 +1,204 @@
+{
+  "status": "NO_NEW_CONFIRMED_BUG",
+  "baseline": "d67cd449cbd8834a4878f5484941d376fa7c17d8",
+  "scope": "Pure Dart/TypeScript rule model/core/authority/board/serialization; bounded fourth adversarial audit",
+  "typescriptBuild": {
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  "metamorphicTypeScript": {
+    "status": "PASS",
+    "testCases": {
+      "pass": 2,
+      "fail": 0,
+      "skip": 0
+    },
+    "stats": {
+      "fixturePaths": 113,
+      "states": 258,
+      "sourceLegalActions": 4775,
+      "cards": [
+        "angry_n",
+        "board_seal",
+        "break_seal",
+        "card_block",
+        "chain",
+        "echo",
+        "fate_exchange",
+        "fog",
+        "freeze",
+        "hunt_vow",
+        "locked_square",
+        "mana_sabotage",
+        "mine",
+        "pawn_advance",
+        "pawn_deviation",
+        "prophecy",
+        "purify",
+        "radar",
+        "rook_bend",
+        "shadow_contract",
+        "shadow_pass",
+        "shelter",
+        "slow",
+        "watch_vow"
+      ],
+      "rename": {
+        "states": 258,
+        "branches": 4775,
+        "assertions": 19616
+      },
+      "clock": {
+        "states": 258,
+        "changedStates": 254,
+        "branches": 4775,
+        "assertions": 19616
+      }
+    }
+  },
+  "metamorphicDart": {
+    "status": "PASS",
+    "invariantGroups": {
+      "pass": 2,
+      "fail": 0
+    },
+    "stats": {
+      "states": 258,
+      "sourceLegalActions": 4775,
+      "cards": [
+        "angry_n",
+        "board_seal",
+        "break_seal",
+        "card_block",
+        "chain",
+        "echo",
+        "fate_exchange",
+        "fog",
+        "freeze",
+        "hunt_vow",
+        "locked_square",
+        "mana_sabotage",
+        "mine",
+        "pawn_advance",
+        "pawn_deviation",
+        "prophecy",
+        "purify",
+        "radar",
+        "rook_bend",
+        "shadow_contract",
+        "shadow_pass",
+        "shelter",
+        "slow",
+        "watch_vow"
+      ],
+      "rename": {
+        "states": 258,
+        "branches": 4775,
+        "assertions": 19616
+      },
+      "clock": {
+        "states": 258,
+        "changedStates": 254,
+        "branches": 4775,
+        "assertions": 19616
+      }
+    }
+  },
+  "focusedDirectNode": {
+    "files": [
+      {
+        "file": "v219-rules-contract.test.js",
+        "exitCode": 0,
+        "seconds": 4.439,
+        "tests": 60,
+        "pass": 60,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      {
+        "file": "v223-terminal-cards.test.js",
+        "exitCode": 0,
+        "seconds": 1.186,
+        "tests": 14,
+        "pass": 14,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      }
+    ],
+    "counts": {
+      "tests": 74,
+      "pass": 74,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  "explicitMetamorphicAssertions": 78464,
+  "existingSuiteAssertionInstrumentation": "Not instrumented; actual direct-node TAP cases reported separately.",
+  "coverage": {
+    "phases": {
+      "chess": 102,
+      "card": 148,
+      "pending": 4,
+      "terminal": 4
+    },
+    "actions": {
+      "move": 1383,
+      "discard": 403,
+      "pass": 148,
+      "play": 2825,
+      "resolve": 16
+    },
+    "playedCardBranches": {
+      "angry_n": 3,
+      "board_seal": 189,
+      "break_seal": 4,
+      "card_block": 28,
+      "chain": 73,
+      "echo": 28,
+      "fate_exchange": 6,
+      "fog": 147,
+      "freeze": 68,
+      "hunt_vow": 33,
+      "locked_square": 564,
+      "mana_sabotage": 28,
+      "mine": 115,
+      "pawn_advance": 6,
+      "pawn_deviation": 6,
+      "prophecy": 112,
+      "purify": 2,
+      "radar": 1094,
+      "rook_bend": 2,
+      "shadow_contract": 4,
+      "shadow_pass": 2,
+      "shelter": 211,
+      "slow": 16,
+      "watch_vow": 84
+    },
+    "specialAuthorizationStates": {
+      "angry_n": 3,
+      "pawn_deviation": 2,
+      "pawn_advance": 2,
+      "rook_bend": 2,
+      "shadow_pass": 2
+    },
+    "pendingStates": 4,
+    "terminalStates": 4
+  },
+  "sourceFilesChangedByRulesAgent": [],
+  "newRepositoryTests": 0,
+  "sourceAndContractFilesChecked": 30,
+  "allOwnedSourceAndContractsMatchBaseline": true,
+  "newGeneratedQaAssets": 0,
+  "fullSuiteRun": false,
+  "flutterRun": false,
+  "limits": [
+    "Paired metamorphic consistency checks over canonical fixture states, not an independent complete card/chess oracle.",
+    "All outgoing actions at 258 states on 113 canonical fixture paths; no claim about all reachable states or arbitrarily deep trees.",
+    "Dart derives its own actions and results from the serialized fixture states; this run is not a fresh complete Dart/TS differential.",
+    "Physical/native performance, production services, payment, upload, signing, deploy and push excluded."
+  ],
+  "noReleaseAcceptanceClaim": true
+}

@@ -1,0 +1,31 @@
+{
+  "cases": [
+    {
+      "path": "luno_chess/test/failures/promotion_testImage.png",
+      "previous_round3_sha256": "b0e98538ce6222609ae71835e796dedc1f8294d2f21e4b6361381da01030243d",
+      "reviewed_candidate_sha256": "cab8a2be1baf8bcb01c223e88574f6415fe3a49eb5f5522543d43456e290e243",
+      "pixel_difference_bbox": [
+        99,
+        91,
+        291,
+        126
+      ],
+      "changed_pixels": 2045,
+      "dimensions": [
+        390,
+        844
+      ],
+      "reason": "Explicit existing CinzelTurkish fallback fixes missing \u0130/\u015e/\u011e glyphs. Before/current raster and full promotion reference/candidate inspected. All golden references retained; full Flutter expected97 historical FAIL.",
+      "glyph_test_before": {
+        "pass": 1,
+        "fail": 2
+      },
+      "glyph_plus_existing_after": {
+        "pass": 39,
+        "fail": 0
+      },
+      "reference_updated": false,
+      "reviewed": true
+    }
+  ]
+}

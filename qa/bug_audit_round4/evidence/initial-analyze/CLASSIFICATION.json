@@ -1,0 +1,12 @@
+{
+  "status": "SUPERSEDED_BY_FINAL_ANALYZE",
+  "initial_source": "e1bdd772c7ce5336c4f0ad4faf3c8b411c15cf42",
+  "issue_count": 1,
+  "issue": "unnecessary_null_comparison in game_store.dart",
+  "initial_analyze_exit": 1,
+  "full_flutter_started_in_initial_attempt": false,
+  "initial_pipeline_exit": 2,
+  "fix_commit": "0f40ddda041c205b129f3a35d9d4e9f1b661bf8c",
+  "final_analyze_exit": 0,
+  "assertions_weakened": false
+}

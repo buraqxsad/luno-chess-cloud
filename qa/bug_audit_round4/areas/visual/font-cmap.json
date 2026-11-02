@@ -1,0 +1,113 @@
+{
+  "source": {
+    "heading": "lib/widgets/arena_progression_benefits.dart:111",
+    "tr_theme": "lib/theme/luno_theme.dart:180",
+    "caller": "lib/screens/parity_extra_screens.dart:585",
+    "fixture": "test/visual_v203_test.dart:174"
+  },
+  "observed_widget_title": "P□YON VAD□S□",
+  "expected_title": "PİYON VADİSİ",
+  "explicit_font_family": "Cinzel",
+  "explicit_heading_fallback": null,
+  "inherited_tr_theme_fallback": [
+    "Spectral"
+  ],
+  "tr_declared_chain": [
+    "Cinzel",
+    "Spectral"
+  ],
+  "all_fixture_fonts_loaded": true,
+  "fonts": {
+    "Cinzel": {
+      "path": "/workspace/luno-chess/luno_chess/assets/fonts/cinzel-latin.ttf",
+      "sha256": "714948b4dd30f8904cb3a7d613d4fc7ad435df804211b05f401c5353aac01144",
+      "glyphs": {
+        "U+0130 İ": null,
+        "U+0131 ı": "dotlessi",
+        "U+015E Ş": null,
+        "U+015F ş": null,
+        "U+011E Ğ": null,
+        "U+011F ğ": null,
+        "U+00C7 Ç": "Ccedilla",
+        "U+00E7 ç": "ccedilla",
+        "U+00D6 Ö": "Odieresis",
+        "U+00F6 ö": "odieresis",
+        "U+00DC Ü": "Udieresis",
+        "U+00FC ü": "udieresis"
+      }
+    },
+    "CinzelTurkish": {
+      "path": "/workspace/luno-chess/luno_chess/assets/fonts/cinzel-turkish.ttf",
+      "sha256": "69e87ad45cfae24a47484808cd3536cd1b589fb6c3aa0d48ce1edf00b9e02671",
+      "glyphs": {
+        "U+0130 İ": "Idotaccent",
+        "U+0131 ı": null,
+        "U+015E Ş": "Scedilla",
+        "U+015F ş": "scedilla",
+        "U+011E Ğ": "Gbreve",
+        "U+011F ğ": "gbreve",
+        "U+00C7 Ç": null,
+        "U+00E7 ç": null,
+        "U+00D6 Ö": null,
+        "U+00F6 ö": null,
+        "U+00DC Ü": null,
+        "U+00FC ü": null
+      }
+    },
+    "Spectral": {
+      "path": "/workspace/luno-chess/luno_chess/assets/fonts/spectral/spectral-regular-latin.ttf",
+      "sha256": "aea98fcbef500fcec013b5706329e387f2501be9e06878aad3c1e3b011edaa99",
+      "glyphs": {
+        "U+0130 İ": null,
+        "U+0131 ı": "idotless",
+        "U+015E Ş": null,
+        "U+015F ş": null,
+        "U+011E Ğ": null,
+        "U+011F ğ": null,
+        "U+00C7 Ç": "Ccedilla",
+        "U+00E7 ç": "ccedilla",
+        "U+00D6 Ö": "Odieresis",
+        "U+00F6 ö": "odieresis",
+        "U+00DC Ü": "Udieresis",
+        "U+00FC ü": "udieresis"
+      }
+    },
+    "SpectralTurkish": {
+      "path": "/workspace/luno-chess/luno_chess/assets/fonts/spectral/spectral-regular-turkish.ttf",
+      "sha256": "3f7298c884a258356647fdc71ed85a0eb9a7edf63e2d38085c10d62466912fd9",
+      "glyphs": {
+        "U+0130 İ": "Idotaccent",
+        "U+0131 ı": null,
+        "U+015E Ş": "Scedilla",
+        "U+015F ş": "scedilla",
+        "U+011E Ğ": "Gbreve",
+        "U+011F ğ": "gbreve",
+        "U+00C7 Ç": null,
+        "U+00E7 ç": null,
+        "U+00D6 Ö": null,
+        "U+00F6 ö": null,
+        "U+00DC Ü": null,
+        "U+00FC ü": null
+      }
+    },
+    "Nunito": {
+      "path": "/workspace/luno-chess/luno_chess/assets/fonts/nunito/nunito-variable.ttf",
+      "sha256": "bb55a5ca5c2042335b3991af27c4d0705d0ef41cac6164ac737fd8f2a1e85207",
+      "glyphs": {
+        "U+0130 İ": "Idotaccent",
+        "U+0131 ı": "dotlessi",
+        "U+015E Ş": "Scedilla",
+        "U+015F ş": "scedilla",
+        "U+011E Ğ": "Gbreve",
+        "U+011F ğ": "gbreve",
+        "U+00C7 Ç": "Ccedilla",
+        "U+00E7 ç": "ccedilla",
+        "U+00D6 Ö": "Odieresis",
+        "U+00F6 ö": "odieresis",
+        "U+00DC Ü": "Udieresis",
+        "U+00FC ü": "udieresis"
+      }
+    }
+  },
+  "limitation": "Current native system fallback can differ; no new current Flutter or native render was run by this read-only agent. Root owns focused reproduction/fix."
+}

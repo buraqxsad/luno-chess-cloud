@@ -1,0 +1,199 @@
+{
+  "baselineCommit": "d67cd449cbd8834a4878f5484941d376fa7c17d8",
+  "bugFamilies": [
+    {
+      "id": "R4-ECONOMY-RTDN-LEASE",
+      "severity": "P1",
+      "summary": "An interrupted or expired RTDN processing lease can acknowledge incomplete refund delivery or overwrite a takeover owner marker",
+      "baseline": {
+        "log": "rtdn-lease-exact-baseline-final8.tap",
+        "tests": 8,
+        "pass": 4,
+        "fail": 4,
+        "skipped": 0
+      },
+      "minimalFix": {
+        "log": "rtdn-lease-preownership-baseline-clean.tap",
+        "tests": 8,
+        "pass": 6,
+        "fail": 2,
+        "skipped": 0
+      },
+      "candidate": {
+        "log": "rtdn-lease-owner-candidate.tap",
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 0
+      },
+      "actualIntegrated": {
+        "file": "round4-economy-rtdn-lease.test.js",
+        "exitCode": 0,
+        "seconds": 3.446,
+        "log": "actual-round4-economy-rtdn-lease.test.js.tap",
+        "testSha256": "cbf2d5e3068e32d7dfac1f196bec2eb5ef6907c55dc56bc95b1186f4b0ab864c",
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 0
+      }
+    }
+  ],
+  "scope": [
+    "exported Pub/Sub handler event lock/ACK and takeover",
+    "known-claim refund reversal exactly once",
+    "consumable consume-response/completion recovery",
+    "subscription claim/projection/ACK races",
+    "voided provider pagination",
+    "UTC midnight daily cursor and multiple client replay"
+  ],
+  "limitations": [
+    "Memory RTDB and fake Google Play replies; no production or licensed-Play acceptance",
+    "No emulator/device/build/full-suite execution by this agent",
+    "Prior round3 pre-registration refund and pending restore families excluded",
+    "No confirmed second new family; client latch/multi-quantity ideas left uncounted without independent proof"
+  ],
+  "excludedAttempts": [
+    {
+      "log": "rtdn-lease-baseline.tap",
+      "reason": "node --test produced only process wrapper failure, zero assertion cases; direct Node logs replace it"
+    },
+    {
+      "log": "rtdn-lease-preownership-baseline.tap",
+      "reason": "Initial exploratory failed assertion released an unawaited mock continuation; stopped process after test mock teardown warning; clean cleanup rerun is authoritative"
+    }
+  ],
+  "hashes": {
+    "index.baseline.js": "c370ab3286f08549122050ce83213542dfd1b52ba582eb2c6389098067cd4f31",
+    "index.rtdn-lease.candidate.js": "92c1fe742398d30255e33efffc78e82aa6cc862f6a11e7955cc2444b48920a08",
+    "rtdn-lease.patch": "d3c95347f2d5d5941a59e634275f9b7e6242000cbd843a32684937ecd7357373",
+    "rtdn-lease-ownership-followup.patch": "ea0bb8a6bf78d47518db96e4847946d129f62aa5acd9767ef407e37f1a86e623",
+    "rtdn-lease-full.patch": "4db8dfa1db7f8172205742c37c8278fe8d327a15eecdea3dc2de7eb7f41c49f6",
+    "run-candidate.js": "4055f3f9526f3d35f88088bc2ff7eaa456a22f14a4c47457632d9ca79bf5a571",
+    "functions/test/round4-economy-rtdn-lease.test.js": "cbf2d5e3068e32d7dfac1f196bec2eb5ef6907c55dc56bc95b1186f4b0ab864c",
+    "functions/index.js": "92c1fe742398d30255e33efffc78e82aa6cc862f6a11e7955cc2444b48920a08"
+  },
+  "actualFocused": {
+    "sourceBeforeSha256": "92c1fe742398d30255e33efffc78e82aa6cc862f6a11e7955cc2444b48920a08",
+    "sourceAfterSha256": "92c1fe742398d30255e33efffc78e82aa6cc862f6a11e7955cc2444b48920a08",
+    "sourceStableDuringRun": true,
+    "files": [
+      {
+        "file": "round4-economy-rtdn-lease.test.js",
+        "exitCode": 0,
+        "seconds": 3.446,
+        "log": "actual-round4-economy-rtdn-lease.test.js.tap",
+        "testSha256": "cbf2d5e3068e32d7dfac1f196bec2eb5ef6907c55dc56bc95b1186f4b0ab864c",
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "file": "round3-economy-unmatched-refund.test.js",
+        "exitCode": 0,
+        "seconds": 3.707,
+        "log": "actual-round3-economy-unmatched-refund.test.js.tap",
+        "testSha256": "b02b6a36ef8257387e03253cbc160c627f6b335b74f19d0df59ffe626f51b24d",
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "file": "system-hunt-economy-refund-grant-race.test.js",
+        "exitCode": 0,
+        "seconds": 3.981,
+        "log": "actual-system-hunt-economy-refund-grant-race.test.js.tap",
+        "testSha256": "b805af7ab79fcd7cb49898abd84d3198ced141acd6b91f6fccb5790c7db62036",
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "file": "system-hunt-economy-subscription-stale-fulfillment.test.js",
+        "exitCode": 0,
+        "seconds": 4.55,
+        "log": "actual-system-hunt-economy-subscription-stale-fulfillment.test.js.tap",
+        "testSha256": "af6527eea53b73798f9814e0bf8e0d20171a05b8d9bd519b1eec0e5af71e80da",
+        "tests": 20,
+        "pass": 20,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "file": "subscription-reconciliation-race.test.js",
+        "exitCode": 0,
+        "seconds": 3.456,
+        "log": "actual-subscription-reconciliation-race.test.js.tap",
+        "testSha256": "76b056991aa13d14e6f91a62256e5144fef77785a5c7b0a4c6bfff79700f6c3a",
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "file": "round2-economy-subscription-inactive-refresh.test.js",
+        "exitCode": 0,
+        "seconds": 10.84,
+        "log": "actual-round2-economy-subscription-inactive-refresh.test.js.tap",
+        "testSha256": "4e08521b95a57f5ff4c41ed06c9bbc704cd7db424e117c1425bdbb176d945f7d",
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "file": "v217-billing-recovery.test.js",
+        "exitCode": 0,
+        "seconds": 3.212,
+        "log": "actual-v217-billing-recovery.test.js.tap",
+        "testSha256": "a421b52f57933b7a8a793e56282e72523d9ed7a6a116f67dbe0f92f5d6a61feb",
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "file": "v220-billing-pagination.test.js",
+        "exitCode": 0,
+        "seconds": 3.592,
+        "log": "actual-v220-billing-pagination.test.js.tap",
+        "testSha256": "23e7cdbb606f1bb580b72ffaba9489f7671e1c393f4e00df8df2ec5f201c8094",
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "file": "v238-daily-claim-ordering.test.js",
+        "exitCode": 0,
+        "seconds": 1.462,
+        "log": "actual-v238-daily-claim-ordering.test.js.tap",
+        "testSha256": "b035ff088ef3a240b335dd5f1ce63ea8f6bce989c4cb7de93f9dc789c2678612",
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "file": "v239-daily-acceptance.test.js",
+        "exitCode": 0,
+        "seconds": 1.992,
+        "log": "actual-v239-daily-acceptance.test.js.tap",
+        "testSha256": "b773f3cfc444425a72c54690193b25137a9959f6a01f1a34c19334b2c70f8e95",
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0
+      }
+    ],
+    "totals": {
+      "tests": 84,
+      "pass": 84,
+      "fail": 0,
+      "skipped": 0
+    }
+  }
+}

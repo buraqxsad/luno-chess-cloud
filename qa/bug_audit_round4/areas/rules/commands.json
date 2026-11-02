@@ -1,0 +1,36 @@
+{
+  "environment": "source /workspace/toolchains/luno-env.sh; login:false; Dart 3.13.1, Node 22.23.3",
+  "typescriptBuild": {
+    "cwd": "/workspace/luno-chess/functions/rules-v1",
+    "command": "npm run build",
+    "log": "typescript-build.log"
+  },
+  "typescriptMetamorphic": {
+    "cwd": "/workspace/luno-chess",
+    "command": "node /workspace/luno-review/bug-audit-round4/rules/round4_rules_metamorphic.cjs",
+    "log": "metamorphic-node.log"
+  },
+  "dartMetamorphic": {
+    "cwd": "/workspace/luno-chess/luno_chess",
+    "command": "nice -n 10 dart --packages=/workspace/luno-chess/luno_chess/.dart_tool/package_config.json /workspace/luno-review/bug-audit-round4/rules/round4_rules_metamorphic.dart",
+    "log": "metamorphic-dart.log",
+    "flutterNotRequired": true
+  },
+  "focusedDirectNode": [
+    {
+      "cwd": "/workspace/luno-chess/functions/rules-v1",
+      "command": "node dist/test/v219-rules-contract.test.js",
+      "log": "v219-rules-contract.log",
+      "timeoutSeconds": 90
+    },
+    {
+      "cwd": "/workspace/luno-chess/functions/rules-v1",
+      "command": "node dist/test/v223-terminal-cards.test.js",
+      "log": "v223-terminal-cards.log",
+      "timeoutSeconds": 90
+    }
+  ],
+  "fullSuiteRun": false,
+  "flutterRun": false,
+  "repositoryMutationsByRulesAgent": []
+}

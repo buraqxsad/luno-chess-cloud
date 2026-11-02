@@ -1,0 +1,1169 @@
+{
+  "backend_run_commit": "e1bdd772c7ce5336c4f0ad4faf3c8b411c15cf42",
+  "final_build_flutter_commit": "0f40ddda041c205b129f3a35d9d4e9f1b661bf8c",
+  "only_later_change": [
+    "luno_chess/lib/models/game_store.dart"
+  ],
+  "later_change_summary": "Remove redundant uid != null guard after an earlier null return; no backend, TypeScript, Dart rules or differential tool input changed.",
+  "git_diff_relevant_paths_empty": true,
+  "functions_index_sha256": "92c1fe742398d30255e33efffc78e82aa6cc862f6a11e7955cc2444b48920a08",
+  "tracked_inputs": [
+    {
+      "path": "functions/.gitignore",
+      "git_blob": "81c8f5cc1ce4b65b6776b9e66fbde46b55be3c87"
+    },
+    {
+      "path": "functions/index.js",
+      "git_blob": "5c27a0d4a77afe96372f5af43b75049a88e7526e"
+    },
+    {
+      "path": "functions/lib/app-check-policy.js",
+      "git_blob": "0001cef0ec971cd900056f210d400d1cda3eafa7"
+    },
+    {
+      "path": "functions/lib/battle-v1-emotes.js",
+      "git_blob": "9350e7403e89e7f99844cef77a3dfbaa7dbe956d"
+    },
+    {
+      "path": "functions/lib/battle-v1-friendly.js",
+      "git_blob": "2f98f371b2dc130ffaf0ec86f5f2c7d99a19e7d1"
+    },
+    {
+      "path": "functions/lib/battle-v1-product-progress.js",
+      "git_blob": "dac6de692a009fb2c4acdf8bfaaf020fb2186245"
+    },
+    {
+      "path": "functions/lib/battle-v1-progression.js",
+      "git_blob": "e56e47104baf67be5899691f02999e40558f7469"
+    },
+    {
+      "path": "functions/lib/battle-v1-public-profile.js",
+      "git_blob": "aa95bd3e146a7eedf2a65b5d9b8bbff0cca36a68"
+    },
+    {
+      "path": "functions/lib/battle-v1-rating.js",
+      "git_blob": "01ee1f1a02c6c9a76bed1a770ffc9ae7e2b6f728"
+    },
+    {
+      "path": "functions/lib/battle-v1-recovery.js",
+      "git_blob": "ffde8ed6faad377f152ae8d1f2d0370ff82eef97"
+    },
+    {
+      "path": "functions/lib/battle-v1-rollout.js",
+      "git_blob": "befce4fd636c9b9bb26b1bb66b2c6bb52f3c1bb4"
+    },
+    {
+      "path": "functions/lib/battle-v1.js",
+      "git_blob": "b5b10bec444310380e99dda74d53dda15c2a04bd"
+    },
+    {
+      "path": "functions/lib/catalogs.js",
+      "git_blob": "f7c897ddd20d2ccb8d5599a409e5a4842fcb6dab"
+    },
+    {
+      "path": "functions/lib/chests.js",
+      "git_blob": "78347f632d482e7f575683ca691a838d19527bb7"
+    },
+    {
+      "path": "functions/lib/economy.js",
+      "git_blob": "17aa9c50ebb05d7b87fcea28ddfec8e2a38b212a"
+    },
+    {
+      "path": "functions/lib/membership.js",
+      "git_blob": "9b0606d17893e8aa6718555c2afc0c00941bb51d"
+    },
+    {
+      "path": "functions/lib/missions.js",
+      "git_blob": "f79215156c6473a154b82f2f9f22711f289e6fb0"
+    },
+    {
+      "path": "functions/lib/pass.js",
+      "git_blob": "551e409516b559d046cf6fd60ac367829df164c8"
+    },
+    {
+      "path": "functions/lib/player-state-revision.js",
+      "git_blob": "e12d46ef8cd4e4907ec265df382a716da59a8ef3"
+    },
+    {
+      "path": "functions/lib/product-telemetry.js",
+      "git_blob": "258f9a796471c641fd163a1385dc22c22efc6a48"
+    },
+    {
+      "path": "functions/lib/ranked.js",
+      "git_blob": "b52ef46f636811744982844744006c47392a2fe1"
+    },
+    {
+      "path": "functions/lib/retained-data.js",
+      "git_blob": "a3d4434ba5471c3ac01bc72ad3383d4a06936ee1"
+    },
+    {
+      "path": "functions/lib/settlement-audit.js",
+      "git_blob": "ee53572637f4f0c2c32e41a75a26267956ddfa67"
+    },
+    {
+      "path": "functions/lib/settlement-presence.js",
+      "git_blob": "faf4cf124b15787ca1702f963673f73b0234902b"
+    },
+    {
+      "path": "functions/lib/ugc-safety.js",
+      "git_blob": "a594be46bf8100ae8e8fb53b7118677911e524d7"
+    },
+    {
+      "path": "functions/package-lock.json",
+      "git_blob": "6acf0ab2b01f60f5f4e34673b9ab8ac2547422f5"
+    },
+    {
+      "path": "functions/package.json",
+      "git_blob": "372d9f4c73136fa8999113be3f25b1b3da65e488"
+    },
+    {
+      "path": "functions/rules-v1/package-lock.json",
+      "git_blob": "c793d602826eba6d25125afa7bc42067893bddc3"
+    },
+    {
+      "path": "functions/rules-v1/package.json",
+      "git_blob": "4ba40de1dc27234046f900c5131c8c844714c98c"
+    },
+    {
+      "path": "functions/rules-v1/src/authoritative.ts",
+      "git_blob": "ada9399e0e59dbb468377e23baee6391395a2b4e"
+    },
+    {
+      "path": "functions/rules-v1/src/board.ts",
+      "git_blob": "36035e7eb6735eeb00c82b5ae65c1e021727cf4e"
+    },
+    {
+      "path": "functions/rules-v1/src/chess.ts",
+      "git_blob": "1af4f470be869338b79ff3e5ffeb48458ade02c0"
+    },
+    {
+      "path": "functions/rules-v1/src/core.ts",
+      "git_blob": "90df628147941797258a09af541a060ae29a4b72"
+    },
+    {
+      "path": "functions/rules-v1/src/model.ts",
+      "git_blob": "50a039c99bfe8a018e1bc878e3e983adf8dc229f"
+    },
+    {
+      "path": "functions/rules-v1/src/online/authority.ts",
+      "git_blob": "c6fa3019deaf6195e12b0109e6388c802147fb5f"
+    },
+    {
+      "path": "functions/rules-v1/src/online/migration.ts",
+      "git_blob": "0ed8f35b71b78c359173a23847c85da204e857c2"
+    },
+    {
+      "path": "functions/rules-v1/src/online/protocol.ts",
+      "git_blob": "87830e9070a1805c873d63f587d90f27d2d0ea04"
+    },
+    {
+      "path": "functions/rules-v1/test/authority.test.ts",
+      "git_blob": "043aeafca0066e5995985e9459710bdc382317d2"
+    },
+    {
+      "path": "functions/rules-v1/test/chess.test.ts",
+      "git_blob": "569591c7461d44fa223095649c3ad835564c50f0"
+    },
+    {
+      "path": "functions/rules-v1/test/core.test.ts",
+      "git_blob": "d1d7ae4a116ab12bc3412a239c261e83f166f31c"
+    },
+    {
+      "path": "functions/rules-v1/test/differential.ts",
+      "git_blob": "121aaa7dfb9f27cff5ca38bd6c83c9caf16a0ae2"
+    },
+    {
+      "path": "functions/rules-v1/test/fixture_support.ts",
+      "git_blob": "3e1df0296621f34a18e09e0b674fdb743ac670d1"
+    },
+    {
+      "path": "functions/rules-v1/test/fixtures.test.ts",
+      "git_blob": "4df9029e60498fdcf5a81d8576def455526d8043"
+    },
+    {
+      "path": "functions/rules-v1/test/migration.test.ts",
+      "git_blob": "2188280f70e061b559c33e3f57a7518607ce79dd"
+    },
+    {
+      "path": "functions/rules-v1/test/protocol.test.ts",
+      "git_blob": "2ed67a779b0eb4862f017b4a9762d5efd9bea2ed"
+    },
+    {
+      "path": "functions/rules-v1/test/v215-native-migration.test.ts",
+      "git_blob": "50759f380d6115d3a494be894538fe315a9a21b3"
+    },
+    {
+      "path": "functions/rules-v1/test/v218-rule-actions.test.ts",
+      "git_blob": "15fc0eb366ab0357fa8f6c2bc36ab2b4c53f102e"
+    },
+    {
+      "path": "functions/rules-v1/test/v218-rule-geometry.test.ts",
+      "git_blob": "08a4ec38b5f49cdaeceaf86b276680662a7d01db"
+    },
+    {
+      "path": "functions/rules-v1/test/v218-rule-terminal.test.ts",
+      "git_blob": "4d059caaf22da08a7b8a7d7a929117eaaaa56bda"
+    },
+    {
+      "path": "functions/rules-v1/test/v218_online_private_access.test.ts",
+      "git_blob": "d2798068cd850634535aaa6b0c64fdd859e23eaf"
+    },
+    {
+      "path": "functions/rules-v1/test/v219-rules-contract.test.ts",
+      "git_blob": "24c7717e304ed819bd81b67612541aa97d9a130c"
+    },
+    {
+      "path": "functions/rules-v1/test/v219_online_boundary.test.ts",
+      "git_blob": "173f0932a60408072e309541c29b1e844bbfcda8"
+    },
+    {
+      "path": "functions/rules-v1/test/v223-removal-identity.test.ts",
+      "git_blob": "9901763b9946b0bc3846e209276c7fcc01da708e"
+    },
+    {
+      "path": "functions/rules-v1/test/v223-terminal-cards.test.ts",
+      "git_blob": "3e6108c4403b67131a6183a8fc06811c3ee56956"
+    },
+    {
+      "path": "functions/rules-v1/test/v224-card-wire-targets.test.ts",
+      "git_blob": "e28e36692e78b94cb5d46b405c5bfa79e0d3d8aa"
+    },
+    {
+      "path": "functions/rules-v1/tsconfig.json",
+      "git_blob": "87808491cd960f9334d58e11efc90c7d70a1bcb7"
+    },
+    {
+      "path": "functions/scripts/audit-live-settlement-sample.js",
+      "git_blob": "177ae207224d9407509b69964f478c318ae73abd"
+    },
+    {
+      "path": "functions/scripts/audit-settlements.js",
+      "git_blob": "6be2756bd609dea683b48c0b16ef1102544ce46a"
+    },
+    {
+      "path": "functions/scripts/remove-legacy-username-emails.js",
+      "git_blob": "8d8c4ea4aab3fb2df46fdb41bad685bbfd3d902f"
+    },
+    {
+      "path": "functions/scripts/v215-economy-model.js",
+      "git_blob": "853c08bb97d7cc39efd61ab70a43698cf7e78cd9"
+    },
+    {
+      "path": "functions/scripts/v217-enable-online.js",
+      "git_blob": "62af7098be10c1ee5a9f7f33199dc4949e636612"
+    },
+    {
+      "path": "functions/scripts/v217-live-api-smoke.js",
+      "git_blob": "4cc3459622c0c05758856a2632675d4195fa510d"
+    },
+    {
+      "path": "functions/scripts/v217-live-config-audit.js",
+      "git_blob": "0d5ffee170b11213d70114b5c4904359114f0ed0"
+    },
+    {
+      "path": "functions/scripts/v217-live-scheduler-smoke.js",
+      "git_blob": "c839a93ca698377cd87a4649119119c9f23fa63b"
+    },
+    {
+      "path": "functions/scripts/v217-player-reset-inventory.js",
+      "git_blob": "5009d31793f071c1d3657df19cbce13a182ee051"
+    },
+    {
+      "path": "functions/scripts/v217-player-reset.js",
+      "git_blob": "c3b89d4edbfc714aae578124be2706c26b7f4678"
+    },
+    {
+      "path": "functions/test/account-deletion-gate.test.js",
+      "git_blob": "770d810194600a0c703e9152f065da15b10636ac"
+    },
+    {
+      "path": "functions/test/account-metadata-erasure.test.js",
+      "git_blob": "1c138980cd8552bebaf6ee3a81d40019c903d310"
+    },
+    {
+      "path": "functions/test/account-metadata.integration.js",
+      "git_blob": "15431706b343e66d4ae5ab959f95e0e9e35d3ce4"
+    },
+    {
+      "path": "functions/test/android-startup-diagnostics.test.js",
+      "git_blob": "135254f3b631332bd865c53124182cf665e06d5a"
+    },
+    {
+      "path": "functions/test/api-route-boundary.test.js",
+      "git_blob": "0a16eafc54ac224b7112ec7b9c7f12bb8e097ef9"
+    },
+    {
+      "path": "functions/test/card-stress.test.js",
+      "git_blob": "404728f91bcc7de4b7b8b6b225c478e157b1b6cd"
+    },
+    {
+      "path": "functions/test/client-source.test.js",
+      "git_blob": "3d05e820f3837cc250ac82f48c8e28db55a54782"
+    },
+    {
+      "path": "functions/test/core.test.js",
+      "git_blob": "f4177066ee15e9861b480c2be2a492568c25c3c6"
+    },
+    {
+      "path": "functions/test/dm-receipt-race.test.js",
+      "git_blob": "58acfabc27ab05d5fc00aa14e9d73f3cee71c984"
+    },
+    {
+      "path": "functions/test/dm.integration.js",
+      "git_blob": "9043256ae505d1733fc805d7a6740305aa17a83e"
+    },
+    {
+      "path": "functions/test/emulator.integration.js",
+      "git_blob": "48e876c1b1c9d1216b7a770a78409cd7e34d2204"
+    },
+    {
+      "path": "functions/test/friends.integration.js",
+      "git_blob": "8b1482380b274f79c9c7f400f87005067311152a"
+    },
+    {
+      "path": "functions/test/helpers/battle-v1-fixture.js",
+      "git_blob": "ca4f933fb7dbf1bd6c18704912c1422bb408e39c"
+    },
+    {
+      "path": "functions/test/helpers/local-emulators.js",
+      "git_blob": "dc13cee71c3ce8fbc46e1137053bb90b392d6244"
+    },
+    {
+      "path": "functions/test/helpers/memory-database.js",
+      "git_blob": "e869f1eac8baf58ce53de7cae4a0b068b38cc4bf"
+    },
+    {
+      "path": "functions/test/identity-index-race.test.js",
+      "git_blob": "0bdf7a882435e7698c8d0f68f0ec3d3ba0a64f04"
+    },
+    {
+      "path": "functions/test/legal-consent.integration.js",
+      "git_blob": "cf37eff7e9627ae0ebdc20fdf075c468a129c129"
+    },
+    {
+      "path": "functions/test/legal-consent.test.js",
+      "git_blob": "3bb604b38bc1cb9c8fe64c9b705afe0efa6b4035"
+    },
+    {
+      "path": "functions/test/live-online-smoke.js",
+      "git_blob": "ee2652fa97b1acd8aecd49ee8a14894dbad2ff91"
+    },
+    {
+      "path": "functions/test/local-emulator-guard.test.js",
+      "git_blob": "80ae58a7fad69770d5c4865cf689ea0148d3e1e2"
+    },
+    {
+      "path": "functions/test/online.integration.js",
+      "git_blob": "b1c77e915737a534e8ffefadccd34bfdb9179e29"
+    },
+    {
+      "path": "functions/test/pass-chest-recovery.integration.js",
+      "git_blob": "2aedb74986548570782946a1b1b423ac41aa9ae4"
+    },
+    {
+      "path": "functions/test/pass-chest-recovery.test.js",
+      "git_blob": "b650e99e688a966af69c7af83dba34e846d49975"
+    },
+    {
+      "path": "functions/test/pass-purchase-recovery.integration.js",
+      "git_blob": "fb25eeaacbac56765595b088b6395c12bc503443"
+    },
+    {
+      "path": "functions/test/pass-purchase-recovery.test.js",
+      "git_blob": "5ee53ec4c90812d5ae634a6b1e9c2a4bf9b2257d"
+    },
+    {
+      "path": "functions/test/pass.integration.js",
+      "git_blob": "2bb6534ee3654344c01495b4939827387259a8b1"
+    },
+    {
+      "path": "functions/test/player-state-freshness.test.js",
+      "git_blob": "b1fc2ee7a44f6b7c74cffcd2895b3a8f851fc4d3"
+    },
+    {
+      "path": "functions/test/player-state.integration.js",
+      "git_blob": "428c7105bf5035305ad0063c3826bb271b9b49f7"
+    },
+    {
+      "path": "functions/test/profile-deletion-race.test.js",
+      "git_blob": "5fc841ed2578750b9047ca5da54914a666835a67"
+    },
+    {
+      "path": "functions/test/public-profile-contract.test.js",
+      "git_blob": "24848c93e57f869cc55078985e176448eca7db05"
+    },
+    {
+      "path": "functions/test/public-profile-deletion-race.test.js",
+      "git_blob": "c961b602a01ccdcbfb8b89ee364f207016dc07e0"
+    },
+    {
+      "path": "functions/test/public-profile-publication.test.js",
+      "git_blob": "8668ee3041e379e50eef17e61b106334c5b5a3ca"
+    },
+    {
+      "path": "functions/test/ranked-cold-cache.test.js",
+      "git_blob": "099301f713269245ea0739ef65ac7813cb0228e3"
+    },
+    {
+      "path": "functions/test/ranked.test.js",
+      "git_blob": "5056b7c3b1ec3b9cf99033576a984058a8e2d77c"
+    },
+    {
+      "path": "functions/test/release-blockers.test.js",
+      "git_blob": "44bf9c5f9f0682e6ef73f867ff4c38dda4939c51"
+    },
+    {
+      "path": "functions/test/request-deletion-race.test.js",
+      "git_blob": "ae45a6dd5c188c2e5023e50a9f8938be02d82763"
+    },
+    {
+      "path": "functions/test/retained-data-erasure.integration.js",
+      "git_blob": "f888505209a6e206f7574458042652c3eaff0031"
+    },
+    {
+      "path": "functions/test/retained-data-erasure.test.js",
+      "git_blob": "cb526f393c3eff901fb7b37d0e3a2c38212e504d"
+    },
+    {
+      "path": "functions/test/retained-record-race.integration.js",
+      "git_blob": "cff49b670ad0d4350291c63dc6e3362f85f4d1b7"
+    },
+    {
+      "path": "functions/test/retained-record-race.test.js",
+      "git_blob": "f5632912cc98047e256ac9322926a2baa2fd1fe2"
+    },
+    {
+      "path": "functions/test/reward-boundaries.test.js",
+      "git_blob": "ad9b98e0e7e7d359d37a8a1ada842a0e1b6c57e4"
+    },
+    {
+      "path": "functions/test/round2-economy-subscription-inactive-refresh.test.js",
+      "git_blob": "6594a65cdef4786c13ff25c33d1a15fba898bd37"
+    },
+    {
+      "path": "functions/test/round2-online-admission-erasure.test.js",
+      "git_blob": "04ec11b957163bba45d6d7963c1b4c80d267f793"
+    },
+    {
+      "path": "functions/test/round2-security-notification-erasure.test.js",
+      "git_blob": "773a39d4877723279c79dff5c5432d104ee87ba9"
+    },
+    {
+      "path": "functions/test/round2-security-report-conversation.test.js",
+      "git_blob": "b8e71ba7d2962778432947536ab0433d7db72284"
+    },
+    {
+      "path": "functions/test/round3-economy-unmatched-refund.test.js",
+      "git_blob": "add5aca812afcfcc4bb3075a2c4ace68ae92b319"
+    },
+    {
+      "path": "functions/test/round3-online-enqueue-replay.test.js",
+      "git_blob": "a591c75cbd1b17092ef015727e1dacf929709743"
+    },
+    {
+      "path": "functions/test/round3-online-settlement-erasure.test.js",
+      "git_blob": "790c4fb6ae08102b05c55a9c71789b3f6cb181a4"
+    },
+    {
+      "path": "functions/test/round3-runtime-friendly-cold.test.js",
+      "git_blob": "864576b9f0e8d07b448c3e774aafda52c56e6793"
+    },
+    {
+      "path": "functions/test/round3-security-v1-invite-erasure.test.js",
+      "git_blob": "67357cd3ee7f0a223ba35c8aef1bce2144acf934"
+    },
+    {
+      "path": "functions/test/round4-economy-rtdn-lease.test.js",
+      "git_blob": "39d58d1e39a3b1fd7fb06c013aa02ec359642fdd"
+    },
+    {
+      "path": "functions/test/round4-online-friendly-replay.test.js",
+      "git_blob": "6185bdcf73baae77279240e6a111cbea71a35ab3"
+    },
+    {
+      "path": "functions/test/settlement-audit.test.js",
+      "git_blob": "6fa2945f8fc46f8cc16522e3e6a52d39f67afe12"
+    },
+    {
+      "path": "functions/test/settlement-presence.test.js",
+      "git_blob": "e07b42b74437fffa86435a7088b00aa7fc58c4b5"
+    },
+    {
+      "path": "functions/test/settlement-recovery.test.js",
+      "git_blob": "a519fd5a569b0199d8c23d6345afe58b246dd581"
+    },
+    {
+      "path": "functions/test/shop-chest-recovery.integration.js",
+      "git_blob": "6f441f3192224d1a3fbdaf4df943078991b7687f"
+    },
+    {
+      "path": "functions/test/shop-chest-recovery.test.js",
+      "git_blob": "cdffe91d885171924939ff9c36ae4cad86e31db5"
+    },
+    {
+      "path": "functions/test/shop.integration.js",
+      "git_blob": "22d3e724ff00ccf4541568917c791d03ac761f4f"
+    },
+    {
+      "path": "functions/test/soft-purchase-recovery.integration.js",
+      "git_blob": "93134a34c2e37ac53cbaa082c9322378bf138d40"
+    },
+    {
+      "path": "functions/test/soft-purchase-recovery.test.js",
+      "git_blob": "1bd310dc7f35ed67dd41f781c94c1423f8407d6b"
+    },
+    {
+      "path": "functions/test/source-audit-emulators.js",
+      "git_blob": "b5c8a67f9ad9ad8b824744665c398eab686f8947"
+    },
+    {
+      "path": "functions/test/subscription-reconciliation-race.test.js",
+      "git_blob": "c6d952cdd8eb12644986ffff7cc37dfac39efe04"
+    },
+    {
+      "path": "functions/test/system-hunt-economy-refund-grant-race.test.js",
+      "git_blob": "27d338d110752aa18d952e0e23e1d15457108b85"
+    },
+    {
+      "path": "functions/test/system-hunt-economy-subscription-stale-fulfillment.test.js",
+      "git_blob": "b0e8cfb43bba2754c51f1f2b127c8a62fbfbbf7a"
+    },
+    {
+      "path": "functions/test/system-hunt-identity-presence.integration.js",
+      "git_blob": "61d1215f8fe823ea12aa66d922583aa8061a5ebb"
+    },
+    {
+      "path": "functions/test/system-hunt-identity-presence.test.js",
+      "git_blob": "97dea20e90a86ca8bfb66069a7f442b8a8d87a5c"
+    },
+    {
+      "path": "functions/test/system-hunt-online-expired-queue-room.test.js",
+      "git_blob": "5b418be94015e854a0db7d897080afca4ef9f6db"
+    },
+    {
+      "path": "functions/test/system-hunt-online-settlement-fairness.test.js",
+      "git_blob": "f89ebdf4a5b1f1a38c441d961705d4d4531ce72a"
+    },
+    {
+      "path": "functions/test/v201b-acceptance.js",
+      "git_blob": "7556654d9f777073f12655fc1eb88da23fcd435d"
+    },
+    {
+      "path": "functions/test/v201b-authority.test.js",
+      "git_blob": "de1ebcbcf2f6f12af2a18b3bf1f69f8c340cc4df"
+    },
+    {
+      "path": "functions/test/v201b-friendly.test.js",
+      "git_blob": "6258550aa2daeaafae34f58092f7ccbc0836ee00"
+    },
+    {
+      "path": "functions/test/v201b-production.integration.js",
+      "git_blob": "fa8ff95e36d4076d7adc970aaff5ae8e93ec5af5"
+    },
+    {
+      "path": "functions/test/v201b-recovery.test.js",
+      "git_blob": "d4837a6eb8aa977aa4f373088e297a1cb33993d8"
+    },
+    {
+      "path": "functions/test/v201b-rollout.test.js",
+      "git_blob": "4f749cf737bc877d425485d0a3c3fd11d241bbec"
+    },
+    {
+      "path": "functions/test/v201b-security.integration.js",
+      "git_blob": "16be356f89153e5dd1e6b65889664cf247874c1f"
+    },
+    {
+      "path": "functions/test/v204-battle-card-rewards.test.js",
+      "git_blob": "41ad091637a5b437456538853f0d0017a5107d3c"
+    },
+    {
+      "path": "functions/test/v208-emotes.test.js",
+      "git_blob": "f766aea5e1c0cffa98c06701b40dc9e243ff3d02"
+    },
+    {
+      "path": "functions/test/v213-battle-progress.test.js",
+      "git_blob": "f9954f75793606c86d8774924c2eaeb36093abee"
+    },
+    {
+      "path": "functions/test/v214-acceptance.js",
+      "git_blob": "475dabe01ff2135552a6ca64bd5c8685618a2bd4"
+    },
+    {
+      "path": "functions/test/v214-battle-v1-public-profile.test.js",
+      "git_blob": "01dc712d28154847b46c9b4d7838965c2cf9fb73"
+    },
+    {
+      "path": "functions/test/v214-chest-fairness.test.js",
+      "git_blob": "83b3008a78b72dc2c7b8b7680e5e1ba00b6ff998"
+    },
+    {
+      "path": "functions/test/v214-competitive-progression.test.js",
+      "git_blob": "83f80d0d3f0a3b90ef941eef487ed8f6f3c4d6c4"
+    },
+    {
+      "path": "functions/test/v214-economy.test.js",
+      "git_blob": "f3697353bca503b6d57536fabd56db7c985142b5"
+    },
+    {
+      "path": "functions/test/v214-existing-reward-bridge.test.js",
+      "git_blob": "a91ffc9b3ced4438594838d90c33737f5e489361"
+    },
+    {
+      "path": "functions/test/v214-guest-bootstrap.test.js",
+      "git_blob": "2b9adf497a0bca597d543b813d609792f3e1c72a"
+    },
+    {
+      "path": "functions/test/v214-local-acceptance-runner.js",
+      "git_blob": "c24811ee83170fc9b117798d957f44e08de7c643"
+    },
+    {
+      "path": "functions/test/v214-social-safety.integration.js",
+      "git_blob": "826c206f90f5235b28a80194226f4b1a36ced3df"
+    },
+    {
+      "path": "functions/test/v214-social-safety.test.js",
+      "git_blob": "8c38ac0192c338d6ac1744f2663517e5cef4c9df"
+    },
+    {
+      "path": "functions/test/v214-ugc-safety.test.js",
+      "git_blob": "1d7f6afe53a71586c17655914505f42c812d6388"
+    },
+    {
+      "path": "functions/test/v214-v1-rating-boundary.test.js",
+      "git_blob": "a6a668c660709d49470d17acaec092ddb3a673d3"
+    },
+    {
+      "path": "functions/test/v215-blocked-pagination-erasure.test.js",
+      "git_blob": "3bab96b39d916e916787ed3bbe79e86282a28b2a"
+    },
+    {
+      "path": "functions/test/v215-economy.integration.js",
+      "git_blob": "3dd3e7c671b0f9e62cb031be72d931fe37c6cb81"
+    },
+    {
+      "path": "functions/test/v215-local-acceptance-runner.js",
+      "git_blob": "1204901d02276019d02fdde58e641e74341d660b"
+    },
+    {
+      "path": "functions/test/v215-memory-query-contract.test.js",
+      "git_blob": "782172d2acbfd4324b4195a49b28022f2a61bbb2"
+    },
+    {
+      "path": "functions/test/v215-native-mission-ownership.test.js",
+      "git_blob": "329fd33a8d4c8a25c509f83b3fa1e88f5f65e768"
+    },
+    {
+      "path": "functions/test/v215-product-economy.test.js",
+      "git_blob": "eb9a8e0bbb94cb85e30669a3647501741c66f219"
+    },
+    {
+      "path": "functions/test/v215-product-telemetry-route.test.js",
+      "git_blob": "15aa243c727df0e08a1f64f0df1172944b121724"
+    },
+    {
+      "path": "functions/test/v215-product-telemetry.test.js",
+      "git_blob": "77bfe69e9f0d4426c7a6a790923de8443e73160d"
+    },
+    {
+      "path": "functions/test/v216-1-arena-preview.test.js",
+      "git_blob": "81278b917f895b8632fa5894ecea7e50a9b161ac"
+    },
+    {
+      "path": "functions/test/v216-1-cosmetic-chain.test.js",
+      "git_blob": "d4d2ff274b48cc24d5c344510c78dd6aeaf5bb05"
+    },
+    {
+      "path": "functions/test/v217-billing-recovery.test.js",
+      "git_blob": "ea0956fa91315ba57f465c00a019cc8dd7823052"
+    },
+    {
+      "path": "functions/test/v217-functions-discovery.test.js",
+      "git_blob": "17ca4cba6aff8d3042ae060af8eedf0a7a7487a4"
+    },
+    {
+      "path": "functions/test/v217-settlement-recovery.test.js",
+      "git_blob": "fdc24d4a06316685b5a33a456af1fbd66feeb52f"
+    },
+    {
+      "path": "functions/test/v218-pass-array-claims.test.js",
+      "git_blob": "dd60b1aea969845e8891455f0caa721245e49131"
+    },
+    {
+      "path": "functions/test/v218-pass-chest-entropy.test.js",
+      "git_blob": "8985fc226df039a2e3a828b62b0365a1c0f13df8"
+    },
+    {
+      "path": "functions/test/v218-product-integration.test.js",
+      "git_blob": "08d5d1c462d91c5318bc01d2018dba53aaee0289"
+    },
+    {
+      "path": "functions/test/v218-product-progression.test.js",
+      "git_blob": "af892f34456c548dff5e8c719c242c0cb9c98bad"
+    },
+    {
+      "path": "functions/test/v218-social-atomic.test.js",
+      "git_blob": "154a3adc8019135b615eefc1456554a6a0514061"
+    },
+    {
+      "path": "functions/test/v219-sidecar-product-integrity.test.js",
+      "git_blob": "b084ef0fe4e09f07644e77db5eeac78ca503db7f"
+    },
+    {
+      "path": "functions/test/v219-sidecar-social-integrity.test.js",
+      "git_blob": "956584f96d24f353261079d55a04641b25332cfd"
+    },
+    {
+      "path": "functions/test/v220-billing-odds-contract.test.js",
+      "git_blob": "f7e426c74b6340a153ece95d0a9fc67fe50a5bb8"
+    },
+    {
+      "path": "functions/test/v220-billing-pagination.test.js",
+      "git_blob": "be95248d00d8a3b100a95e3817d6462de1853cb6"
+    },
+    {
+      "path": "functions/test/v220-billing-policy-contract.test.js",
+      "git_blob": "f51e7764265b3b38ff2c8a64cec4ca1a3d6b19ee"
+    },
+    {
+      "path": "functions/test/v220-firebase-integration.test.js",
+      "git_blob": "dc76e5e34c2ec7db63674d4109581dbd17d8f66e"
+    },
+    {
+      "path": "functions/test/v220-memory-query.test.js",
+      "git_blob": "25acccdfb402134c4ca5bd0c638e9417b6d8a6ae"
+    },
+    {
+      "path": "functions/test/v220-mock-gaps.test.js",
+      "git_blob": "665d17c46f81dce03728161541a8eeb8baee4f9c"
+    },
+    {
+      "path": "functions/test/v220-query-compat.test.js",
+      "git_blob": "a6a606597631821113c9caa119fa9b191dc8560a"
+    },
+    {
+      "path": "functions/test/v220-rules-contract.test.js",
+      "git_blob": "fdfe8ad97c63f71667e33d6efe8cd89c74baf7c7"
+    },
+    {
+      "path": "functions/test/v221-backend-dm-rejected-attempt.test.js",
+      "git_blob": "4f403f2e40af9bf480e28efc02ade0f58036017b"
+    },
+    {
+      "path": "functions/test/v221-backend-restore-invariants.test.js",
+      "git_blob": "0d02f92c94cf5c5b708f75af449ecb220ef712bc"
+    },
+    {
+      "path": "functions/test/v234-player-state-ordering.test.js",
+      "git_blob": "0bd3b6dce918a809296dddc7e9efba8ef1509e2c"
+    },
+    {
+      "path": "functions/test/v236-app-check-policy.test.js",
+      "git_blob": "7a5530898c2df1e7c05adc41842eb53241403fe2"
+    },
+    {
+      "path": "functions/test/v236-economy-evidence.test.js",
+      "git_blob": "065b971a55970c95db0f2041346d4796415813a5"
+    },
+    {
+      "path": "functions/test/v236-economy-route-recovery.test.js",
+      "git_blob": "7504dfb842bf6ed24f55e6a784e635a8272a58c5"
+    },
+    {
+      "path": "functions/test/v236-query-index-contract.test.js",
+      "git_blob": "3d8f58abb58ffc38d3d47c268902a4e222a5df9a"
+    },
+    {
+      "path": "functions/test/v238-battle-v1-migration-erasure.test.js",
+      "git_blob": "213f46733a2db3ca83e081535c0a9e6cac94429a"
+    },
+    {
+      "path": "functions/test/v238-daily-claim-ordering.test.js",
+      "git_blob": "ce0ee8e9439c2c0006517f8b061e92d211d531b9"
+    },
+    {
+      "path": "functions/test/v239-daily-acceptance.test.js",
+      "git_blob": "d441e84aa66706e9b304041bf8e95afbd2268fd2"
+    },
+    {
+      "path": "functions/tools/v220-capacity.cjs",
+      "git_blob": "c0a9f51102d7f6b0c05a043ff28073bd30a434a7"
+    },
+    {
+      "path": "functions/tools/v220-run.cjs",
+      "git_blob": "852200987651a14a90853d24351d9c10bb0f7ee3"
+    },
+    {
+      "path": "functions/tools/v220-support.cjs",
+      "git_blob": "c71ed41539162701e8f3168e107cc2bd83b23032"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/authoritative.dart",
+      "git_blob": "d857f1e15349a2bfa3d606c6346a8855655bc402"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/bot_policy.dart",
+      "git_blob": "9eaca731eafd5c1d5713836af0c1772fc0ed23a8"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/core.dart",
+      "git_blob": "39a4558366c713c480d7b856ad17f24135259478"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/deck_account.dart",
+      "git_blob": "f1f51418e7df0d73f675b4040515475485014e3e"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/deck_metrics.dart",
+      "git_blob": "65dd1ea3c15a311d847dd6aa71e7c370e58e2c07"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/emotes.dart",
+      "git_blob": "ae9a664ded1347e7a5e06a9bfe1d8db8356c9928"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/introduction.dart",
+      "git_blob": "49da744880f5800056e4e4a334e27b6e2b4d6ac8"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/local_clock.dart",
+      "git_blob": "5f081825baf5373f42fa1eca2528b8a47955adb5"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/local_session.dart",
+      "git_blob": "041ef4c0c1e6b59c890e5a427bcba416bc398a6e"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/model.dart",
+      "git_blob": "e2d3124a078132eb1ecc251d7089de4dd7144942"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/online.dart",
+      "git_blob": "3a68c65d8a95b592ff25bbd01bbc07793ac1c97b"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/pending_store.dart",
+      "git_blob": "2a0cc5843cfd99489c91f393875006899099efb7"
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/practice.dart",
+      "git_blob": "e8dcabdf48e9ee50591ff24eec518e5f5ce5b428"
+    },
+    {
+      "path": "luno_chess/pubspec.lock",
+      "git_blob": "f5b99709bb656adde2dfdff9ea2119cd65bfd261"
+    },
+    {
+      "path": "luno_chess/pubspec.yaml",
+      "git_blob": "ad23829f21d77caee91399822f96b6becc006f6f"
+    },
+    {
+      "path": "luno_chess/tool/RELEASE_PREFLIGHT.md",
+      "git_blob": "295e0a932843c839e0fd849f20f5ba70dcaa4a44"
+    },
+    {
+      "path": "luno_chess/tool/aisim.dart",
+      "git_blob": "b97420489f67ed60d99b3fac9be47b3ff1f286cd"
+    },
+    {
+      "path": "luno_chess/tool/audit_android_resources.ps1",
+      "git_blob": "2e6262839f556944c78eec3d2ec07bc86f6f92d7"
+    },
+    {
+      "path": "luno_chess/tool/battle_fixture_support.dart",
+      "git_blob": "51ae2d00be2c01161e67bd0aecc8d36ac5811eaa"
+    },
+    {
+      "path": "luno_chess/tool/battle_json_runner.dart",
+      "git_blob": "d7620d89686812b20a8affc65c647a15b892f751"
+    },
+    {
+      "path": "luno_chess/tool/build_battle_audio_v209.cjs",
+      "git_blob": "3811f491cb71a806910e9bd89c15bbcaf1eefdfa"
+    },
+    {
+      "path": "luno_chess/tool/build_card_audio_v210.cjs",
+      "git_blob": "b03a7dd870ac7d3c962b35cac20d898fb553b3af"
+    },
+    {
+      "path": "luno_chess/tool/build_semantic_audio_v214.cjs",
+      "git_blob": "986894d3f23100780c539d8ad743d3bd15a3062d"
+    },
+    {
+      "path": "luno_chess/tool/cardsim.dart",
+      "git_blob": "4615ec85ba18ce538868d84d0ad78e4044d28913"
+    },
+    {
+      "path": "luno_chess/tool/export_android_identity.cjs",
+      "git_blob": "fabdca590624117cad0119245a366fa66ec3d961"
+    },
+    {
+      "path": "luno_chess/tool/export_battle_impact_v209.cjs",
+      "git_blob": "14b2345a2a00048666b9ea1cd9a6fec0a736bebf"
+    },
+    {
+      "path": "luno_chess/tool/export_card_face_v210.cjs",
+      "git_blob": "e1bd99e6d0fd1d0f3fc91738c5af56c0d363adc4"
+    },
+    {
+      "path": "luno_chess/tool/export_card_face_v211.cjs",
+      "git_blob": "532793c3f112458edbf593cc1a85e4eb713aedb6"
+    },
+    {
+      "path": "luno_chess/tool/export_onboarding_v212.cjs",
+      "git_blob": "cdc876b706e8473f8bafd150b4b4c91ba8624c74"
+    },
+    {
+      "path": "luno_chess/tool/generate_audio_assets.dart",
+      "git_blob": "82422901a0480aec67b464aab0c42b058879907b"
+    },
+    {
+      "path": "luno_chess/tool/luno1_perft.dart",
+      "git_blob": "7be9ef071f9893fc5acef2e8182ffe57bf14d832"
+    },
+    {
+      "path": "luno_chess/tool/package_source.ps1",
+      "git_blob": "9a22796432ce32d40dcddeb7bafe90983578e43c"
+    },
+    {
+      "path": "luno_chess/tool/prepare_v202b_art.cjs",
+      "git_blob": "84feb4d54aaad396c8ea7c17ef92c89f2ed8d981"
+    },
+    {
+      "path": "luno_chess/tool/prepare_v203_art.cjs",
+      "git_blob": "ce39ae63bb462fb528dbce6920f980a6aa4401ef"
+    },
+    {
+      "path": "luno_chess/tool/rc_asset_audit.cjs",
+      "git_blob": "027dd8afe889615927f8e963bd6726fa22ce387f"
+    },
+    {
+      "path": "luno_chess/tool/rc_audio_asset_audit.py",
+      "git_blob": "4b05724b50ebe376eaf820842b2efd490bafad33"
+    },
+    {
+      "path": "luno_chess/tool/rc_contacts.cjs",
+      "git_blob": "f184d25c5d2aa1076d5797a56558b5f6d06f42d0"
+    },
+    {
+      "path": "luno_chess/tool/rc_product_inventory.dart",
+      "git_blob": "da4ee016d710f5161d8fc069659a385085d8ff66"
+    },
+    {
+      "path": "luno_chess/tool/rc_source_stamp.cjs",
+      "git_blob": "c59cc91908d9e0fbd810f450d80c5dd6f356db67"
+    },
+    {
+      "path": "luno_chess/tool/release_preflight.py",
+      "git_blob": "0d1de6b26717be17a512b2e685c2f6d170bedfd2"
+    },
+    {
+      "path": "luno_chess/tool/selfcheck.dart",
+      "git_blob": "e408f251d6c4cbd4287c638508a2c24582bfaca4"
+    },
+    {
+      "path": "luno_chess/tool/source_asset_audit.cjs",
+      "git_blob": "e04b6ceed6e8a2f0a89d0132f8c5002cdaaee1e1"
+    },
+    {
+      "path": "luno_chess/tool/source_audit_contacts.cjs",
+      "git_blob": "e63f9f17d4b9723bc7bb22ee14c89c0caeb9ff82"
+    },
+    {
+      "path": "luno_chess/tool/source_audit_evidence.cjs",
+      "git_blob": "0b96fbad22ef3a2fff5f7d9640d53e37f4a6ffd7"
+    },
+    {
+      "path": "luno_chess/tool/source_audit_final_gate.cjs",
+      "git_blob": "46dd0b19bf0768033749bd08b3239b8f0f4bb04d"
+    },
+    {
+      "path": "luno_chess/tool/source_string_audit.dart",
+      "git_blob": "6252c01aec2a3461e73f007349d5bc72dc4df1eb"
+    },
+    {
+      "path": "luno_chess/tool/v203_contacts.cjs",
+      "git_blob": "a9a89b75ddad5f7e3b8ddb5e47793442361cedf9"
+    },
+    {
+      "path": "luno_chess/tool/v203_palette.cjs",
+      "git_blob": "25bc3eb33c755c8d79b27ec80f422a53e93732d3"
+    },
+    {
+      "path": "luno_chess/tool/v203_scope.cjs",
+      "git_blob": "9efaf8e5a7b29252689928114a43e9f18c1aed0d"
+    },
+    {
+      "path": "luno_chess/tool/v203_validate_art.cjs",
+      "git_blob": "4242ed824e984bf8296253529634d0f8c4b3489c"
+    },
+    {
+      "path": "luno_chess/tool/v214_economy_simulator.cjs",
+      "git_blob": "8aec1d40bb52acd16f8b94073aeab70eaed7a52c"
+    },
+    {
+      "path": "luno_chess/tool/v214_social_contact_sheet.cjs",
+      "git_blob": "9149e0f70894f93ea1c884a8a50410b44397ba5c"
+    },
+    {
+      "path": "luno_chess/tool/v215_asset_audit.cjs",
+      "git_blob": "63249c9c0e38a9be79223f42a0f83efd8e3ee3ec"
+    },
+    {
+      "path": "luno_chess/tool/v215_checked_android_build.ps1",
+      "git_blob": "6dde37dbcaa5d2dfc6b447d256ca0fa7c9867a7f"
+    },
+    {
+      "path": "luno_chess/tool/v215_golden_review.cjs",
+      "git_blob": "126f9448db7b9d3ca32e193e74be26fbaaa2c1c7"
+    },
+    {
+      "path": "luno_chess/tool/v215_lossless_assets.cjs",
+      "git_blob": "32de3162244cabd9d088540f14b5dcb777cb917d"
+    },
+    {
+      "path": "luno_chess/tool/v215_package_audit.ps1",
+      "git_blob": "06db1573be5607a4c94c42f0364ecd7d462f4bf4"
+    },
+    {
+      "path": "luno_chess/tool/v215_render_sheets.cjs",
+      "git_blob": "4616b25b9faf79132d80e28f7ad86287c06e2fae"
+    },
+    {
+      "path": "luno_chess/tool/v216_1_audio.cjs",
+      "git_blob": "5d1b48dda8bed90a79e40828090499655f29c32b"
+    },
+    {
+      "path": "luno_chess/tool/v216_1_audio_review.cjs",
+      "git_blob": "4a127d11b3302f8b15f49a6bcda2cb3e0c8b0296"
+    },
+    {
+      "path": "luno_chess/tool/v216_1_audio_test.cjs",
+      "git_blob": "43d9360540345ef4d4a86cef7f9d3da10cc926cf"
+    },
+    {
+      "path": "luno_chess/tool/v216_1_social_before_check.cjs",
+      "git_blob": "641f256271479222bd014d1e41d8bf2b8ff338d1"
+    },
+    {
+      "path": "luno_chess/tool/v216_1_social_scope_check.cjs",
+      "git_blob": "a14b8e849ca6b8861324de1c047bdb574da91824"
+    },
+    {
+      "path": "luno_chess/tool/v216_1_source_gate.cjs",
+      "git_blob": "27eff2e731a02f11e32bcfb3feea1d5b00ca2c9c"
+    },
+    {
+      "path": "luno_chess/tool/v216_1_visual_review.cjs",
+      "git_blob": "4656c32a41aeab6836619c8b750e11a0967eb932"
+    },
+    {
+      "path": "luno_chess/tool/v216_asset_audit.cjs",
+      "git_blob": "58df7aa50dcb072972024e57d7f2573911c9093f"
+    },
+    {
+      "path": "luno_chess/tool/v216_audio_audit.cjs",
+      "git_blob": "4152ffb77694d1ed1e9522e0d715f0fbd8c5ef84"
+    },
+    {
+      "path": "luno_chess/tool/v216_cosmetics_sheets.cjs",
+      "git_blob": "6a2ff08a8efa64981f56af70e194c8c76bfcb62f"
+    },
+    {
+      "path": "luno_chess/tool/v216_costume_art.cjs",
+      "git_blob": "2c0ecdfc2715fb0fab6d1c2b3566dbcde384bccc"
+    },
+    {
+      "path": "luno_chess/tool/v216_friendly_art.cjs",
+      "git_blob": "5dd3da17d7cdb258deb265c19c78ff4465fe81cc"
+    },
+    {
+      "path": "luno_chess/tool/v216_golden_review.cjs",
+      "git_blob": "9e4893b071103506a61d8a298769629bbd4ff4f5"
+    },
+    {
+      "path": "luno_chess/tool/v216_progression_sheets.cjs",
+      "git_blob": "e76f4af76a5390e8f3dc4e4fd050f896f5636ee5"
+    },
+    {
+      "path": "luno_chess/tool/v216_surface_golden_review.cjs",
+      "git_blob": "4b039987c59143d4d8c2db8e5825c6b24e5c7882"
+    },
+    {
+      "path": "luno_chess/tool/v216_tutorial_home_sheets.cjs",
+      "git_blob": "ebebfd67db65e20dd830cb0c2389da51e5c70ba9"
+    },
+    {
+      "path": "luno_chess/tool/v216_visual_inventory.cjs",
+      "git_blob": "21e57192e880a659103f4f3154b77f6aad13e9d5"
+    },
+    {
+      "path": "luno_chess/tool/v217_android_archive_policy.ps1",
+      "git_blob": "0890faa15dec6461e13b423a012133a2e4bf201c"
+    },
+    {
+      "path": "luno_chess/tool/v217_android_archive_tests.ps1",
+      "git_blob": "f34cc0a4a98c93100fe13363af2cec960d5eeb7a"
+    },
+    {
+      "path": "luno_chess/tool/v217_android_config_tests.ps1",
+      "git_blob": "b9979d9cf888213353e90ef234e52ecf82d124db"
+    },
+    {
+      "path": "luno_chess/tool/v217_android_package_tests.ps1",
+      "git_blob": "b1ed2b86146f6897aadab1810489f5817b301e3a"
+    },
+    {
+      "path": "luno_chess/tool/v217_android_signing_probe.java",
+      "git_blob": "c3f29b6ad07fa93c55e7e4e733621d0a655bed0c"
+    },
+    {
+      "path": "luno_chess/tool/v217_android_static_audit.ps1",
+      "git_blob": "ac00804a78116ee0d9582f66ec2d2fcbaf66ff0a"
+    },
+    {
+      "path": "luno_chess/tool/v217_release_bundle_verify.java",
+      "git_blob": "7ac340be29202e0aeca50e03884a3005249ceb49"
+    },
+    {
+      "path": "luno_chess/tool/v217_release_bundle_verify.ps1",
+      "git_blob": "aecc743ee73221f243ec79015e97553be0c56714"
+    },
+    {
+      "path": "luno_chess/tool/v219_golden_review.cjs",
+      "git_blob": "ee96f5fbab42e6df4fe0b5e9d03d2dd01751656d"
+    },
+    {
+      "path": "luno_chess/tool/v219_visual_review.cjs",
+      "git_blob": "1e8be7d48d4adadbde193e09b72633e0c4800d4d"
+    },
+    {
+      "path": "luno_chess/tool/v220_apk_acceptance.ps1",
+      "git_blob": "f2851cfaeafa56c964d092b5e3dcf7a42e9ec9e4"
+    },
+    {
+      "path": "luno_chess/tool/v220_archive_current.cjs",
+      "git_blob": "ef1a28765122c7f94e1f118bdd2b5b879c635c7c"
+    },
+    {
+      "path": "luno_chess/tool/v220_device_capture.ps1",
+      "git_blob": "92f5d73ba37c9906133ef2e69b7408622fb85f94"
+    },
+    {
+      "path": "luno_chess/tool/v220_visual_review.cjs",
+      "git_blob": "d6795ae2f54f2c31a6e8191ed0442ce3107fae52"
+    },
+    {
+      "path": "luno_chess/tool/v221_elf_page_audit.cjs",
+      "git_blob": "f58000880c6f072f5cb6b73f10b265711e7fdbc8"
+    },
+    {
+      "path": "luno_chess/tool/v221_elf_page_audit.test.cjs",
+      "git_blob": "68b236580ebac99cf69b0e686fcca98876a20f5e"
+    },
+    {
+      "path": "luno_chess/tool/verify_v202b_art.cjs",
+      "git_blob": "16b6dda07008b16856acb14d699b158560a66c4d"
+    }
+  ],
+  "scope": "Provenance equivalence for completed backend/TypeScript/differential run; Flutter full suite reruns on final build source."
+}

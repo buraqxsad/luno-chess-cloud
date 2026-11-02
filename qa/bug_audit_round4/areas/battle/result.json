@@ -1,0 +1,50 @@
+{
+  "scope": "BattleV1Screen/private overlay content and compact selection admission",
+  "baseline_owned_runtime_commit": "d67cd449cbd8834a4878f5484941d376fa7c17d8",
+  "observed_worktree_head_at_verification": "d67cd449cbd8834a4878f5484941d376fa7c17d8",
+  "new_defect_families": [
+    {
+      "severity": "P2",
+      "name": "Queued content opener assigns obsolete private projection to current snapshot",
+      "status": "fixed",
+      "valid_baseline_failures": 2
+    }
+  ],
+  "prior_family_residuals": [
+    {
+      "source_family": "round3 stale battle selection command",
+      "path": "large-text compact Pass icon",
+      "status": "fixed",
+      "valid_baseline_failures": 1
+    }
+  ],
+  "valid_baseline": {
+    "passed": 4,
+    "failed": 3,
+    "skipped": 0,
+    "exit_code": 1,
+    "test_files": 2,
+    "log": "rawlogs/battle-before.log"
+  },
+  "after_related": {
+    "passed": 122,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "test_files": 8,
+    "new_tests_included": 7,
+    "log": "rawlogs/battle-after-related.log"
+  },
+  "owned_source_hashes": {
+    "luno_chess/lib/screens/battle_v1_screen.dart": "18089e6586521b43a9011b29e975322266a6ff58afac68351ff3b6e4c41389e8",
+    "luno_chess/test/round4_battle_knowledge_test.dart": "6ecd58a44d76451996b1168b9af8389bcf8874ffb38ac9d0b969c9abc56f34de",
+    "luno_chess/test/round4_battle_compact_pass_test.dart": "b66e5715b65d0846235b53f17da9d73cc370b0016fd83ab1550559aa982e4dc0"
+  },
+  "diff_check": "passed",
+  "generated_untracked_qa_files": [],
+  "limitations": [
+    "Fixture transport and mocked audio platform channels; no native or live service acceptance.",
+    "No full suite, analyzer, build, emulator, deployment, payment, upload, signing change or push."
+  ],
+  "retracted_candidate": "Timeout winner display is consistent at full resolution; no bug."
+}
