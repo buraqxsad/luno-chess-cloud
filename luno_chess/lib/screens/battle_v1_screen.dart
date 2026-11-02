@@ -1102,9 +1102,15 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
     }
   }
 
-  Future<T?> _sheet<T>(Widget child, {int? hotseatEpoch}) async {
+  Future<T?> _sheet<T>(
+    Widget child, {
+    int? hotseatEpoch,
+    int? sourceVersion,
+  }) async {
     if (sheetOpen ||
         !_canInteract ||
+        // A queued opener can still carry content from the painted old view.
+        (sourceVersion != null && sourceVersion != version) ||
         (hotseatEpoch != null && !_hotseatInputCurrent(hotseatEpoch))) {
       return null;
     }
@@ -2158,6 +2164,7 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
   @override
   Widget build(BuildContext context) {
     final v = view, l = LunoLocalizations.of(context);
+    final sourceVersion = version;
     final hotseatEpoch = _hotseatPrivacy.epoch;
     final selectedPlay = selection.play;
     final selectedCard = selection.card;
@@ -2497,6 +2504,7 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                                                     style: BattleTokens.body,
                                                   ),
                                                 ),
+                                                sourceVersion: sourceVersion,
                                               ),
                                             );
                                           },
@@ -2560,10 +2568,12 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                                               label: l.battle(BattleCopy.pass),
                                               onPressed:
                                                   ready
-                                                      ? () => _apply(
-                                                        const PassAction(),
-                                                        hotseatEpoch:
-                                                            hotseatEpoch,
+                                                      ? _selectionCommand(
+                                                        () => _apply(
+                                                          const PassAction(),
+                                                          hotseatEpoch:
+                                                              hotseatEpoch,
+                                                        ),
                                                       )
                                                       : null,
                                             ),
@@ -2587,6 +2597,8 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                                                       knowledge: v.knowledge,
                                                     ),
                                                     hotseatEpoch: hotseatEpoch,
+                                                    sourceVersion:
+                                                        sourceVersion,
                                                   ),
                                             ),
                                         ],
@@ -2698,6 +2710,8 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                                                           ),
                                                           hotseatEpoch:
                                                               hotseatEpoch,
+                                                          sourceVersion:
+                                                              sourceVersion,
                                                         ),
                                                   ),
                                                 if (v
@@ -2718,6 +2732,8 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                                                           ),
                                                           hotseatEpoch:
                                                               hotseatEpoch,
+                                                          sourceVersion:
+                                                              sourceVersion,
                                                         ),
                                                   ),
                                                 if (controller?.error != null ||
@@ -2908,6 +2924,7 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
 
   Widget _handHeader(PlayerView v) {
     final l = LunoLocalizations.of(context), channel = emotes;
+    final sourceVersion = version;
     final hotseatEpoch = _hotseatPrivacy.epoch;
     final dense =
         BattleTokens.sideDock(context) && !BattleTokens.compactText(context);
@@ -2937,6 +2954,7 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                       ownHand: v.ownHand.toSet(),
                     ),
                     hotseatEpoch: hotseatEpoch,
+                    sourceVersion: sourceVersion,
                   ),
               padding: const EdgeInsets.all(2),
               icon: Image.asset(
@@ -3043,6 +3061,7 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
 
   Widget _practiceHandHeader(PlayerView v) {
     final l = LunoLocalizations.of(context);
+    final sourceVersion = version;
     final focusedCard = _focusedLessonCard ? selection.card : null;
     return Row(
       key: const ValueKey('practice-hand-strip'),
@@ -3082,6 +3101,7 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                         own: true,
                         ownHand: v.ownHand.toSet(),
                       ),
+                      sourceVersion: sourceVersion,
                     ),
             padding: const EdgeInsets.all(2),
             icon:
