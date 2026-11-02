@@ -4146,19 +4146,33 @@ async function reconcilePlayNotification(notification,eventKey){
 }
 async function handlePlayBillingNotification(event){
   const notification=decodeRtdnNotification(event),message=event&&event.data&&event.data.message||{},externalId=cleanString(event&&event.id||message.messageId||'',256);
-  const eventKey=hash(externalId||JSON.stringify(notification)).slice(0,48),eventRef=db.ref(`billingEvents/${eventKey}`),startedAt=now();
+  const eventKey=hash(externalId||JSON.stringify(notification)).slice(0,48),eventRef=db.ref(`billingEvents/${eventKey}`),startedAt=now(),leaseId=crypto.randomUUID();
   const lock=await eventRef.transaction(function(value){
     if(value&&value.status==='complete')return;
     if(value&&value.status==='processing'&&startedAt-safeInt(value.startedAt,0)<5*60*1000)return;
-    return {status:'processing',startedAt,attempts:safeInt(value&&value.attempts,0)+1};
+    return {status:'processing',startedAt,leaseId,attempts:safeInt(value&&value.attempts,0)+1};
   });
-  if(!lock.committed)return {duplicate:true,eventKey};
+  if(!lock.committed){
+    if(lock.snapshot.val()?.status==='complete')return {duplicate:true,eventKey};
+    // A running or interrupted lease is not a completed notification. Returning
+    // successfully would ACK Pub/Sub and can discard its only refund retry.
+    throw httpError(503,'billing-event-in-progress','Billing notification is still processing. Retry the notification.');
+  }
   try{
     const result=await reconcilePlayNotification(notification,eventKey);
-    await eventRef.update({status:'complete',completedAt:ServerValue.TIMESTAMP,resultStatus:cleanString(result&&result.status||result&&result.eventType||'handled',80)});
+    const completed=await eventRef.transaction(function(value){
+      if(value===null)return null;
+      if(value.status!=='processing'||value.leaseId!==leaseId)return;
+      return Object.assign({},value,{status:'complete',completedAt:ServerValue.TIMESTAMP,resultStatus:cleanString(result&&result.status||result&&result.eventType||'handled',80)});
+    },undefined,false);
+    if(!completed.committed||completed.snapshot.val()?.leaseId!==leaseId)throw httpError(503,'billing-event-lease-lost','Billing notification lease changed. Retry the notification.');
     return result;
   }catch(error){
-    await eventRef.update({status:'failed',failedAt:ServerValue.TIMESTAMP,errorCode:cleanString(error&&error.code||'reconcile-failed',80)}).catch(function(){});
+    await eventRef.transaction(function(value){
+      if(value===null)return null;
+      if(value.status!=='processing'||value.leaseId!==leaseId)return;
+      return Object.assign({},value,{status:'failed',failedAt:ServerValue.TIMESTAMP,errorCode:cleanString(error&&error.code||'reconcile-failed',80)});
+    },undefined,false).catch(function(){});
     throw error;
   }
 }
