@@ -1,0 +1,14 @@
+{
+  "baseline_commit": "b1b9c7a2f76282c6588383d5ab7926ec8b438e5f",
+  "inspected_source_files": {
+    "luno_chess/android/app/src/main/kotlin/com/luno/chess/MainActivity.kt": "591e6d66a342167e0dd8e0d3b1a74c86f0e583861d4265fb45053f6947d3aee7",
+    "luno_chess/android/app/src/main/AndroidManifest.xml": "725b555ec8c1ee1cf691892e6135a8789a687a0e623e33c20480d5a39874353e",
+    "luno_chess/android/app/build.gradle.kts": "b10fe93e2db1274eede553afb8972088b120c8e9b5a3996f1c239cdd65fd3187",
+    "luno_chess/lib/main.dart": "cbd59e6157322058cd1f4149a8974c8f11fe8fd279ac4901b8ff4ebccdff15f9",
+    "luno_chess/lib/app.dart": "f177e285ba628e96da8a20c3b3938f5023e0dbbc631c116663d3e177bd8be4a5"
+  },
+  "old_native_trace_sha256": "bdb31aeab7da8b022b4d977e08c73848e04a1d42ac00b73fd8a4a31bf3e0c31e",
+  "new_native_runtime_run": false,
+  "repo_or_sdk_disk_files_modified": false,
+  "new_verified_game_bug_count": 0
+}

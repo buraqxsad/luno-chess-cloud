@@ -1,0 +1,32 @@
+[
+  {
+    "file": "functions/rules-v1/dist/test/v218-rule-geometry.test.js",
+    "exit": 0,
+    "counts": {
+      "tests": 14,
+      "pass": 14,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "file": "functions/rules-v1/dist/test/v223-terminal-cards.test.js",
+    "exit": 0,
+    "counts": {
+      "tests": 14,
+      "pass": 14,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "file": "functions/rules-v1/dist/test/v219-rules-contract.test.js",
+    "exit": 0,
+    "counts": {
+      "tests": 60,
+      "pass": 60,
+      "fail": 0,
+      "skipped": 0
+    }
+  }
+]

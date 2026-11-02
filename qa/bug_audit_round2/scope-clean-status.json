@@ -1,0 +1,10 @@
+{
+  "new_verified_bug_families_found": 6,
+  "new_verified_bug_families_fixed": 6,
+  "new_verified_source_bug_families_left_open_this_round": 0,
+  "scope": "Six audited areas and explicitly listed adversarial cases; not an exhaustive bug-free guarantee.",
+  "previous_native_P1": "UNRESOLVED",
+  "historical_visual_comparisons": "FAIL",
+  "global_bug_free_acceptance": "NOT ESTABLISHED",
+  "release_decision": "HOLD"
+}

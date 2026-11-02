@@ -1,0 +1,57 @@
+[
+  {
+    "gate": "Bu tur doğrulanan altı kaynak kusuru",
+    "status": "PASS",
+    "reason": "Altı hata, başarısız tekrar üretimden sonra düzeltildi. Bu turda açık bırakılan doğrulanmış yeni kaynak hatası 0; bütün oyun için hatasızlık kanıtı değildir."
+  },
+  {
+    "gate": "Tam backend",
+    "status": "PASS",
+    "reason": "1399 geçti / 0 başarısız / 1 atlandı. Node dosyaları gerçek TAP vakalarıyla doğrudan çalıştırıldı; atlanan opt-in test ayrıca kaydedildi."
+  },
+  {
+    "gate": "Tam TypeScript ve differential",
+    "status": "PASS",
+    "reason": "376 test geçti. 3101 senaryo / 10967 durum ve tam geçerli hamle kümesi; 0 ayrışma."
+  },
+  {
+    "gate": "Gerçek yerel SDK Billing",
+    "status": "PASS",
+    "reason": "Dört dar vaka geçti. Ayrı SDK bağlantısı kalıcı veriyi doğruladı. Google yanıtları fake; tek loopback proxy koşulu bellekte değiştirildi. SDK disk dosyaları, ortam ve header’lar korundu."
+  },
+  {
+    "gate": "Tam Flutter",
+    "status": "FAIL",
+    "reason": "11776 geçti / 97 başarısız / 0 atlandı. Tarihsel 97 pixel farkı açık; golden referansları değiştirilmedi."
+  },
+  {
+    "gate": "Güncel ARM64 debug APK statik kabulü",
+    "status": "PASS",
+    "reason": "Aynı debug imzası, 750 asset, targetSdk 36 ve ELF/ZIP statik 16 KB kontrolleri geçti. Gerçek 16 KB runtime testi değildir."
+  },
+  {
+    "gate": "Önceki Android raster SIGSEGV",
+    "status": "FAIL / UNRESOLVED",
+    "reason": "Sağlıklı Android ortamında kök neden veya düzelme kanıtı yok. Bu tur emülatör/cihaz testi yapılmadı."
+  },
+  {
+    "gate": "Fiziksel Android/E2E/FPS/RAM/p95–p99/16KB",
+    "status": "NOT RUN",
+    "reason": "KVM, donanım GPU ve fiziksel cihaz yok; widget görüntüleri cihaz performansı değildir."
+  },
+  {
+    "gate": "Gerçek Firebase/Google/AppCheck/Integrity",
+    "status": "BLOCKED",
+    "reason": "Staging/üretim kimlikleri ve servis kabulü yok. Yerel SDK testi bunların yerine geçmez."
+  },
+  {
+    "gate": "Play lisans Billing ve Console beyanları/Pre-launch",
+    "status": "BLOCKED",
+    "reason": "Lisans hesabı, track, Play Services ve Console geçmişi yok. +19 kullanılabilirliği bilinmiyor."
+  },
+  {
+    "gate": "Release APK/AAB",
+    "status": "BLOCKED",
+    "reason": "Mevcut upload keystore/properties yok. İmzalama koruması build’i durdurdu; kimlik değiştirilmedi."
+  }
+]

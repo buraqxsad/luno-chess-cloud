@@ -1,0 +1,10 @@
+{
+  "source_commit": "9d41c5055006907ee2dafdf8e5daf70bb9f2c7a3",
+  "guard_exit": 1,
+  "missing_existing_signing_identity_rejected": true,
+  "release_apk": "BLOCKED",
+  "release_aab": "BLOCKED",
+  "full_release_build": "NOT RUN when required signing prerequisite fails",
+  "signing_identity_changed": false,
+  "play_upload": false
+}

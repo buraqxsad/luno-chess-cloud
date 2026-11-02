@@ -1,0 +1,10 @@
+{
+  "head": "3936314190d7b455845d752ddf357668ba190400",
+  "source_sha256": "7ba0773430cb8432ad3301410b2abc5760ee60f458c52ac96b906e0952cc539c",
+  "candidate_sha256": "dbf7e19514e9abc2f42fd8f2955cf36b63cbd825ace221145a3f1580c5b47561",
+  "changes": [
+    "bounded checkpointed notification erasure helper",
+    "call after processing marker, before any completed deletion"
+  ],
+  "repo_source_modified": false
+}

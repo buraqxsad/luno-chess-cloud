@@ -1,0 +1,6 @@
+{
+  "base_commit": "b1b9c7a2f76282c6588383d5ab7926ec8b438e5f",
+  "file": "luno_chess/lib/services/luno_billing_service.dart",
+  "sha256": "f95a03620d0596d699622ef32b4339ebae3c8f3c2eaccfa78fdeb7ed4ca94f78",
+  "new_test": "luno_chess/test/round2_client_billing_snapshot_order_test.dart"
+}

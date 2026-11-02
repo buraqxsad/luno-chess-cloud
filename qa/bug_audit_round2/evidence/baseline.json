@@ -1,0 +1,29 @@
+{
+  "started_utc": "2026-11-01T11:16:49.868018+00:00",
+  "head": "b1b9c7a2f76282c6588383d5ab7926ec8b438e5f",
+  "branch": "codex/cloud-transfer-20261027",
+  "status": "",
+  "prior_full_flutter": {
+    "pass": 11759,
+    "fail": 97,
+    "skip": 0
+  },
+  "prior_backend": {
+    "pass": 1365,
+    "fail": 0,
+    "skip": 1
+  },
+  "prior_typescript": {
+    "pass": 376,
+    "fail": 0,
+    "skip": 0
+  },
+  "prior_new_bugs_fixed": 7,
+  "open_gates": [
+    "historical97pixelmismatch",
+    "previousAndroidrasterSIGSEGV",
+    "realBillingSDKproofincomplete",
+    "realFirebase/Play/Console",
+    "existinguploadkeymissing"
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "recorded_utc": "2026-11-01T18:56:45.407086+00:00",
+  "baseline_commit": "b1b9c7a2f76282c6588383d5ab7926ec8b438e5f",
+  "last_reviewed_index_sha256": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+  "new_verified_bug_families": 2,
+  "severity": {
+    "P2": 2
+  },
+  "bugs": [
+    {
+      "id": "declared-dm-report-membership",
+      "severity": "P2",
+      "before": {
+        "pass": 3,
+        "fail": 2
+      },
+      "fixed": {
+        "pass": 6,
+        "fail": 0
+      },
+      "root_cause": "reportMessage checked only target-authored message under a non-injective legacy conversation key, without checking its declared participants.",
+      "fix": "Two bounded reads (member map plus selected message), exact declared pair validation, no full thread load; existing members-absent legacy contract retained.",
+      "source_commit": "dbbfbc2"
+    },
+    {
+      "id": "pushed-notification-erasure",
+      "severity": "P2",
+      "before": {
+        "pass": 0,
+        "fail": 2
+      },
+      "fixed": {
+        "pass": 14,
+        "fail": 0
+      },
+      "root_cause": "deleteAccount removed notifications/recipient/deletedUID but actual notices use pushed IDs; rejected/expired relations also lose recipient discovery edges.",
+      "fix": "Bounded5-recipient SDK-ordered pages; per-notice current fromUid check; checkpoint only after complete page,40-page/15s budget with retry; private durable processing-owner30/min resume rate and final counter cleanup; no false completion."
+    }
+  ],
+  "focused_actual_source": {
+    "files": 14,
+    "totals": {
+      "tests": 245,
+      "pass": 245,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "results": [
+      {
+        "file": "round2-security-notification-erasure.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 14,
+          "pass": 14,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 1.027,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "round2-security-report-conversation.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 6,
+          "pass": 6,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 0.605,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "v214-social-safety.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 14,
+          "pass": 14,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 0.621,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "v219-sidecar-social-integrity.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 27,
+          "pass": 27,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 0.718,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "retained-record-race.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 66,
+          "pass": 66,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 1.587,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "account-deletion-gate.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 7,
+          "pass": 7,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 0.569,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "account-metadata-erasure.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 26,
+          "pass": 26,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 0.765,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "v238-battle-v1-migration-erasure.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 4,
+          "pass": 4,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 0.567,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "v236-app-check-policy.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 12,
+          "pass": 12,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 0.115,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "request-deletion-race.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 15,
+          "pass": 15,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 0.617,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "public-profile-deletion-race.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 11,
+          "pass": 11,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 0.621,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "profile-deletion-race.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 9,
+          "pass": 9,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 0.717,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "v218-social-atomic.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 7,
+          "pass": 7,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 0.617,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      },
+      {
+        "file": "dm-receipt-race.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 27,
+          "pass": 27,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "elapsed": 0.617,
+        "index_sha256_at_start": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+        "per_case_tap_observed": true
+      }
+    ]
+  },
+  "test_files_sha256": {
+    "functions/test/round2-security-report-conversation.test.js": "17d49dfbe4c4af69207b68745006358e086f168e045bdaaeb8939d1943217367",
+    "functions/test/round2-security-notification-erasure.test.js": "07702c82641decffb33095070a665946964c40bc17da57eb1b9c7ee68ff6caa9"
+  },
+  "production_index_written_by_agent": false,
+  "rules_modified": false,
+  "goldens_modified": false,
+  "existing_assertions_weakened": false,
+  "own_fix_review_open_findings": 0,
+  "review_scope": "Changed functions, real API memory-database fault injection, AppCheck/auth/account/tombstone/social/DM regressions. Not universal bug-free proof.",
+  "production_firebase": "NOT RUN",
+  "native_android": "NOT RUN",
+  "full_regression": "Root responsibility",
+  "deploy": false,
+  "real_money": false,
+  "push": false
+}

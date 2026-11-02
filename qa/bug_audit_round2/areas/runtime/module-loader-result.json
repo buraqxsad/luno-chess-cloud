@@ -1,0 +1,20 @@
+{
+  "scope": "Read-only module-load and bundled-source probe; no emulator or SDK data operations. Not an integration acceptance test.",
+  "standalone_module": "/workspace/luno-chess/functions/node_modules/@firebase/database-compat/dist/index.standalone.js",
+  "standalone_sha256": "98421fa06420904b942332c20705b0a577374e82a5bde95bdaf770052d1aa760",
+  "external_faye_module": "/workspace/luno-chess/functions/node_modules/faye-websocket/lib/faye/websocket.js",
+  "observations": [
+    {
+      "requested": "@firebase/database-compat/standalone",
+      "parent": "/workspace/luno-chess/functions/node_modules/firebase-admin/lib/database/index.js"
+    },
+    {
+      "requested": "@firebase/database-compat/standalone",
+      "parent": "/workspace/luno-chess/functions/node_modules/firebase-admin/lib/database/database.js"
+    }
+  ],
+  "external_faye_loads": 0,
+  "bundled_client_present": true,
+  "standalone_binds_internal_client": true,
+  "repository_or_sdk_files_modified": false
+}

@@ -1,0 +1,7 @@
+{
+  "captured_head": "b1b9c7a2f76282c6588383d5ab7926ec8b438e5f",
+  "source_index_sha256": "5b0a8ef98fd05ee3d8414db884b617fdef44881c2c3c27ade8be5fbaa82aaf59",
+  "candidate_sha256": "cd92e8fab9f1f31ab871e1b696070bb61272c5443a356ac2b283b10fe09d5d15",
+  "only_replacement": "reportMessage bounded members + one message reads and exact declared pair authorization",
+  "repository_index_modified": false
+}

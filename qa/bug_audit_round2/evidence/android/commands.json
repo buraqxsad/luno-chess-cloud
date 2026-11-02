@@ -1,0 +1,51 @@
+[
+  {
+    "args": [
+      "flutter",
+      "build",
+      "apk",
+      "--debug",
+      "--target-platform",
+      "android-arm64",
+      "--build-number",
+      "19",
+      "--no-pub"
+    ],
+    "cwd": "/workspace/luno-chess/luno_chess",
+    "exit": 0,
+    "log": "debug-arm64-build.log",
+    "source_commit": "9d41c5055006907ee2dafdf8e5daf70bb9f2c7a3"
+  },
+  {
+    "args": [
+      "python3",
+      "/workspace/luno-review/bug-audit-round2/android/audit_apk.py",
+      "/workspace/luno-review/bug-audit-round2/Luno-Chess-bug-audit-round2-debug-arm64.apk"
+    ],
+    "cwd": "/workspace/luno-chess",
+    "exit": 0,
+    "log": "debug-arm64-audit.log",
+    "source_commit": "9d41c5055006907ee2dafdf8e5daf70bb9f2c7a3"
+  },
+  {
+    "args": [
+      "./gradlew",
+      ":app:validateLunoReleaseSigning",
+      "--offline"
+    ],
+    "cwd": "/workspace/luno-chess/luno_chess/android",
+    "exit": 1,
+    "log": "release-signing-guard.log",
+    "source_commit": "9d41c5055006907ee2dafdf8e5daf70bb9f2c7a3"
+  },
+  {
+    "args": [
+      "./gradlew",
+      "--stop"
+    ],
+    "cwd": "/workspace/luno-chess/luno_chess/android",
+    "exit": 0,
+    "log": "gradle-stop.log",
+    "source_commit": "9d41c5055006907ee2dafdf8e5daf70bb9f2c7a3"
+  }
+]

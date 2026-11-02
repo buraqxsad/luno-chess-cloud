@@ -1,0 +1,11 @@
+--- installed-standalone.js (unchanged on disk)
++++ in-memory-standalone.js
+@@ -4375,7 +4375,7 @@
+                 const proxy = this.connURL.indexOf('wss://') === 0
+                     ? env['HTTPS_PROXY'] || env['https_proxy']
+                     : env['HTTP_PROXY'] || env['http_proxy'];
+-                if (proxy) {
++                if (proxy && !globalThis.__LUNO_PROOF_LOOPBACK__(this.connURL)) {
+                     options['proxy'] = { origin: proxy };
+                 }
+             }

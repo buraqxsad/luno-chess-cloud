@@ -1,0 +1,8 @@
+[
+  {
+    "suite": "backend",
+    "test": "V220 actual isolated RTDB integration (Auth, App Check and Play remain mocked)",
+    "file": "functions/test/v220-firebase-integration.test.js",
+    "reason": "V220_DB_INTEGRATION opt-in not enabled in the unit run; separate four-case local SDK proof does not turn this skipped test into a PASS."
+  }
+]

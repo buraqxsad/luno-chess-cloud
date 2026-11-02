@@ -1,0 +1,8 @@
+{
+  "source_commit": "9d41c5055006907ee2dafdf8e5daf70bb9f2c7a3",
+  "file": "Luno-Chess-bug-audit-round2-debug-arm64.apk",
+  "payload": "assets/flutter_assets/kernel_blob.bin",
+  "sha256": "8ecc553f69cea7fc6aaa16875693e309fa0edce01966fea9335037efeef35a45",
+  "previous_system_bug_hunt_sha256": "3ac75d4e297031d6dcfd439ba6af7b1aaa5300e5dbe63fd5b580b27bbd0391ae",
+  "different_from_previous": true
+}

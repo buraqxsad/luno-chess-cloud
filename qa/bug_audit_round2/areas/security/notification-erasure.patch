@@ -1,0 +1,68 @@
+--- a/functions/index.js
++++ b/functions/index.js
+@@ -4184,6 +4184,50 @@
+   const reportKeys=new Set(reportSnapshots.flatMap(snapshot=>Object.keys(snapshot.val()||{})));
+   await Promise.all(Array.from(reportKeys,key=>anonymizeModerationReport(uid,key)));
+ }
++async function rateLimitAccountDeletion(uid){
++  const deletion=(await db.ref(`accountDeletions/${hash(uid)}`).get()).val();
++  if(!deletion||deletion.status!=='processing')return rateLimit(uid,'deleteAccount',3,60*60*1000);
++  // The owner may need more than three bounded cleanup pages/attempts. Keep
++  // resume traffic bounded without charging it against first-entry attempts.
++  const ref=db.ref(`serverRateLimits/${uid}/deleteAccountResume/${Math.floor(now()/60000)}`);
++  const result=await writeAccountMetadata(uid,'deleteAccount',()=>ref.transaction(function(value){
++    const count=safeInt(value,0);return count>=30?undefined:count+1;
++  },undefined,false),()=>ref.remove());
++  if(!result.committed)throw httpError(429,'rate-limited','Too many account deletion retries.');
++}
++async function eraseAuthoredNotifications(uid,deletionRef){
++  const progress=(await deletionRef.get()).val()||{};
++  if(progress.notificationsErased===true)return;
++  const root=db.ref('notifications'),pageSize=5,pageBudget=40,deadline=now()+15000;
++  let cursor=typeof progress.notificationCursor==='string'?progress.notificationCursor:null;
++  const finish=()=>deletionRef.update({notificationCursor:null,notificationsErased:true});
++  for(let pageNumber=0;pageNumber<pageBudget;pageNumber++){
++    let query=root.orderByKey();if(cursor!==null)query=query.startAfter(cursor);
++    const page=await query.limitToFirst(pageSize).get(),recipients=[];
++    // RTDB integer-key order is not JavaScript lexicographic order.
++    page.forEach(child=>{recipients.push(child);return false;});
++    if(!recipients.length){await finish();return;}
++    for(const recipient of recipients){
++      const notices=recipient.val()||{};
++      for(const [key,notice] of Object.entries(notices)){
++        if(!notice||notice.fromUid!==uid)continue;
++        if(now()>=deadline)throw httpError(503,'account-deletion-in-progress','Notification cleanup is still in progress. Retry account deletion.');
++        await root.child(recipient.key).child(key).transaction(function(value){
++          if(value===null)return null;
++          return value.fromUid===uid?null:undefined;
++        },undefined,false);
++      }
++    }
++    // Advance only after every owned notice in the page was removed. Failures
++    // retain the prior checkpoint, so retries cannot skip unfinished data.
++    cursor=recipients.at(-1).key;
++    await deletionRef.update({notificationCursor:cursor});
++    if(recipients.length<pageSize){await finish();return;}
++    if(now()>=deadline)throw httpError(503,'account-deletion-in-progress','Notification cleanup is still in progress. Retry account deletion.');
++  }
++  if(!(await root.orderByKey().startAfter(cursor).limitToFirst(1).get()).exists()){await finish();return;}
++  throw httpError(503,'account-deletion-in-progress','Notification cleanup is still in progress. Retry account deletion.');
++}
+ async function deleteAccount(context){
+   const {uid,token,body}=context;
+   assertBodyKeys(body,['confirm']);
+@@ -4191,10 +4235,13 @@
+   const provider=token.firebase&&token.firebase.sign_in_provider||'';
+   const age=Math.floor(now()/1000)-Number(token.auth_time||0);
+   if(provider!=='anonymous'&&age>300)throw httpError(401,'reauth-required','Recent authentication is required.');
+-  await rateLimit(uid,'deleteAccount',3,60*60*1000);
++  await rateLimitAccountDeletion(uid);
+   return withUsernameLock(uid,async function(){
+     const deletionKey=hash(uid),deletionRef=db.ref(`accountDeletions/${deletionKey}`);
+     await deletionRef.update({status:'processing',requestIdHash:hash(context.requestId),updatedAt:ServerValue.TIMESTAMP});
++    // Rejected/expired relationships can lose every recipient edge. Scan small
++    // recipient pages to erase their pushed notices too, before deletion can finish.
++    await eraseAuthoredNotifications(uid,deletionRef);
+     // The tombstone blocks new deliveries before their private erase index is
+     // purged. A failed purge leaves user data intact and deletion retryable.
+     await productTelemetry.purgeUser(uid);

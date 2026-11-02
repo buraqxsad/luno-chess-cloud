@@ -1,0 +1,6 @@
+{
+  "base_commit": "b1b9c7a2f76282c6588383d5ab7926ec8b438e5f",
+  "base_sha256": "5b0a8ef98fd05ee3d8414db884b617fdef44881c2c3c27ade8be5fbaa82aaf59",
+  "observed_worktree_sha256": "5b0a8ef98fd05ee3d8414db884b617fdef44881c2c3c27ade8be5fbaa82aaf59",
+  "worktree_source_equals_base": true
+}

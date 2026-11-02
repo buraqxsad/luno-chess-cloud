@@ -1,0 +1,685 @@
+{
+  "cases": [
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state default",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state first-turn",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state four-card",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state zero-card",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state low-mana",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state selected",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state piece-target",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state square-target",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state zone",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state movement",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state mine",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state lockedSquare",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state fog",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state boardSeal",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state shelter",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state chain",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state slow",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state freeze",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state vow",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state mine-vow",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state multi-effect",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state arsenal",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state radar",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state radar-stale",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state prophecy",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state fate",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state manaSabotage",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state cardBlock",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state echo",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state discount",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state check",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state low-time",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state reconnect",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state pending",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state mismatch",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state checkmate",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state stalemate",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state timeout",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state resign",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state compact",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state large",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state long-tr",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state large-text",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state match-menu",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state resign-confirm",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state card-detail",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state compact-four",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state compact-four-large-text",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state arsenal-large-text",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_ui/visual_test.dart",
+      "name": "visual state fate-large-text",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface home",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface shop",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface pass",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface profile",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface collection",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface browser",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface cards",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface costumes",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface emojis",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface deck",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface season",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface missions",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface ranking",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface friends",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface inbox",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface settings",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface edit-profile",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface guide",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface tutorial",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface tutorial-1",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface tutorial-2",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface tutorial-3",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface tutorial-4",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface tutorial-5",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface tutorial-6",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface tutorial-7",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface tutorial-8",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface tutorial-9",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface premium",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface achievements",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface history",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface arenas",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface levels",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface promotion",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface season-reward",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface public-profile",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface play",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface difficulty",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface friendly",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface queue",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface dm",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface victory",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface defeat",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface draw",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface daily-reward",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/visual_v203_test.dart",
+      "name": "V203 native surface chest",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    },
+    {
+      "file": "test/battle_card_art_v204_test.dart",
+      "name": "every V1 card has its own bundled artwork",
+      "status": "error",
+      "same_v240_failed_case": true,
+      "pixel_failure_confirmed": true
+    }
+  ],
+  "all_failures_are_existing_pixel_comparisons": true,
+  "golden_reference_updates": 0
+}

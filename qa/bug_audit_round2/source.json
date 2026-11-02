@@ -1,0 +1,8 @@
+{
+  "full_regression_source_commit": "9d41c5055006907ee2dafdf8e5daf70bb9f2c7a3",
+  "build_source_commit": "9d41c5055006907ee2dafdf8e5daf70bb9f2c7a3",
+  "base_commit": "b1b9c7a2f76282c6588383d5ab7926ec8b438e5f",
+  "frozen_utc": "2026-11-01T18:57:50.613161+00:00",
+  "source_index_sha256": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+  "runtime_change_between_test_and_build_commits": []
+}

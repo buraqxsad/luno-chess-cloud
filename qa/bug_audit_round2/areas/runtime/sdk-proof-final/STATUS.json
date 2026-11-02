@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "target_commit": "9d41c5055006907ee2dafdf8e5daf70bb9f2c7a3",
+  "target_index_sha256": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+  "actual_cases": {
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "sdk_disk_unchanged": true,
+  "emulator_running": false,
+  "port_closed": true
+}

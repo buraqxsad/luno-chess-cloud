@@ -1,0 +1,21 @@
+{
+  "new_verified_production_bugs": 1,
+  "severity": "P2",
+  "before": {
+    "pass": 4,
+    "fail": 2
+  },
+  "after_root_existing_tests": {
+    "pass": 6,
+    "fail": 0,
+    "skip": 0,
+    "exit": 0
+  },
+  "test_file": "functions/test/round2-online-admission-erasure.test.js",
+  "test_sha256": "5ca35941a364b995528878707a5b224b51c3bb870ebc4cf09a402bc4388849d5",
+  "commit": "3936314",
+  "extra_four_tests": "NOT RUN / not written; automatic review usage limit rejected agent combined action",
+  "root_safer_validation": "Existing six-case test file run directly, no test mutations or escalated permissions",
+  "full_backend": "Pending root final source regression",
+  "live_deploy": false
+}

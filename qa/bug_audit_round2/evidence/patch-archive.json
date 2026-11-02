@@ -1,0 +1,5 @@
+{
+  "file": "areas/client/client-fixes.patch.gz",
+  "raw_sha256": "056963f4fd06d9e03f609e093eab342acc2b125a3ec89873988271e8c26129cd",
+  "reason": "Preserve original valid diff context bytes without treating blank context marker spaces as trailing whitespace in newly tracked evidence. Decompressed bytes match original patch."
+}

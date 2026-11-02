@@ -1,0 +1,492 @@
+{
+  "checked": 97,
+  "matching_v239": 97,
+  "goldens_updated": false,
+  "cases": [
+    {
+      "path": "luno_chess/test/battle_ui/failures/arsenal-large-text_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/arsenal_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/boardSeal_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/card-detail_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/cardBlock_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/chain_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/check_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/checkmate_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/compact-four-large-text_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/compact-four_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/compact_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/default_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/discount_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/echo_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/fate-large-text_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/fate_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/first-turn_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/fog_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/four-card_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/freeze_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/large-text_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/large_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/lockedSquare_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/long-tr_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/low-mana_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/low-time_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/manaSabotage_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/match-menu_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/mine-vow_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/mine_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/mismatch_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/movement_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/multi-effect_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/pending_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/piece-target_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/prophecy_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/radar-stale_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/radar_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/reconnect_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/resign-confirm_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/resign_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/selected_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/shelter_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/slow_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/square-target_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/stalemate_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/timeout_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/vow_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/zero-card_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/zone_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/achievements_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/arenas_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/battle-card-art-v204_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/browser_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/cards_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/chest_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/collection_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/costumes_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/daily-reward_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/deck_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/defeat_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/difficulty_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/dm_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/draw_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/edit-profile_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/emojis_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/friendly_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/friends_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/guide_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/history_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/home_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/inbox_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/levels_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/missions_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/pass_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/play_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/premium_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/profile_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/promotion_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/public-profile_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/queue_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/ranking_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/season-reward_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/season_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/settings_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/shop_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-1_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-2_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-3_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-4_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-5_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-6_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-7_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-8_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-9_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/victory_testImage.png",
+      "v239_exists": true,
+      "same_v239_candidate": true
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "results": [
+    {
+      "file": "functions/test/round2-economy-subscription-inactive-refresh.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "log": "round2-economy-subscription-inactive-refresh-actual.log",
+      "elapsed_seconds": 1.322
+    },
+    {
+      "file": "functions/test/system-hunt-economy-subscription-stale-fulfillment.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 20,
+        "pass": 20,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "log": "system-hunt-economy-subscription-stale-fulfillment-actual.log",
+      "elapsed_seconds": 1.329
+    },
+    {
+      "file": "functions/test/system-hunt-economy-refund-grant-race.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "log": "system-hunt-economy-refund-grant-race-actual.log",
+      "elapsed_seconds": 1.282
+    },
+    {
+      "file": "functions/test/subscription-reconciliation-race.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "log": "subscription-reconciliation-race-actual.log",
+      "elapsed_seconds": 1.486
+    }
+  ]
+}

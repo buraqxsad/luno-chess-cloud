@@ -1,0 +1,16 @@
+--- a/functions/index.js
++++ b/functions/index.js
+@@ -4292,6 +4292,13 @@
+ ROUTES.submitBattleV1Action=battleV1.submitBattleV1Action;
+ for(const name of ['enqueueBattleV1','cancelBattleV1Queue','setBattleV1Deck','getBattleV1Deck','getBattleV1Rollout','resignBattleV1','ackBattleV1Result'])ROUTES[name]=battleV1[name];
+ for(const name of ['createBattleV1Room','cancelBattleV1Room','joinBattleV1Room','sendBattleV1Invite','respondBattleV1Invite'])ROUTES[name]=battleV1[name];
++// Admission captures a deck/host entry before its control transaction. A late
++// transaction must be removed when account erasure wins that async boundary.
++for(const name of ['enqueueBattleV1','createBattleV1Room']){
++  const operation=ROUTES[name];
++  ROUTES[name]=context=>writeAccountMetadata(context.uid,name,
++    ()=>operation(context),()=>battleV1.leaveAccount(context.uid));
++}
+ async function handler(req,res){
+   const startedAt=Date.now();
+   let correlationId=crypto.randomUUID(),route='',uidHash='',appId='';

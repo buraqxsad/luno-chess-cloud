@@ -1,0 +1,107 @@
+{
+  "base_commit": "b1b9c7a2f76282c6588383d5ab7926ec8b438e5f",
+  "new_verified_bug_families": 1,
+  "severity": "P1",
+  "bug": "Fresh inactive subscription verification rejects restore without reconciling retained active membership",
+  "baseline_canonical": {
+    "pass": 3,
+    "fail": 5,
+    "total": 8,
+    "log": "inactive-expanded-canonical-before.log",
+    "index_sha256": "5b0a8ef98fd05ee3d8414db884b617fdef44881c2c3c27ade8be5fbaa82aaf59"
+  },
+  "isolated_candidate": {
+    "pass": 8,
+    "fail": 0,
+    "log": "inactive-expanded-candidate.log"
+  },
+  "actual_source_regression": {
+    "files": 4,
+    "counts": {
+      "tests": 50,
+      "pass": 50,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "results": [
+      {
+        "file": "functions/test/round2-economy-subscription-inactive-refresh.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 8,
+          "pass": 8,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "log": "round2-economy-subscription-inactive-refresh-actual.log",
+        "elapsed_seconds": 1.322
+      },
+      {
+        "file": "functions/test/system-hunt-economy-subscription-stale-fulfillment.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 20,
+          "pass": 20,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "log": "system-hunt-economy-subscription-stale-fulfillment-actual.log",
+        "elapsed_seconds": 1.329
+      },
+      {
+        "file": "functions/test/system-hunt-economy-refund-grant-race.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 10,
+          "pass": 10,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "log": "system-hunt-economy-refund-grant-race-actual.log",
+        "elapsed_seconds": 1.282
+      },
+      {
+        "file": "functions/test/subscription-reconciliation-race.test.js",
+        "exit": 0,
+        "counts": {
+          "tests": 12,
+          "pass": 12,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0
+        },
+        "log": "subscription-reconciliation-race-actual.log",
+        "elapsed_seconds": 1.486
+      }
+    ],
+    "index_sha256_at_end": "643b97a75cb93c94a371971674ce053a05b5ae6b53040643ebfd516521c7de83",
+    "concurrent_unrelated_root_security_patch": true
+  },
+  "new_test_file": "functions/test/round2-economy-subscription-inactive-refresh.test.js",
+  "new_test_sha256": "4e08521b95a57f5ff4c41ed06c9bbc704cd7db424e117c1425bdbb176d945f7d",
+  "production_patch_file": "inactive-reconciliation.patch",
+  "repository_index_modified_by_agent": false,
+  "production_patch_applied_by_root": true,
+  "reviewed_additional_areas": [
+    "existing subscription claim fencing and publication order",
+    "refund/debt accounting conservation",
+    "daily midnight/idempotent replay and stored cursor rules",
+    "soft purchase/pass/upgrade receipt recovery source paths"
+  ],
+  "scope_limits": [
+    "memoryDatabase fixture and fake Google provider responses",
+    "No real Play/Firebase or Android runtime acceptance",
+    "No full regression run by this agent",
+    "Previous release gates and prior7fixes not recounted"
+  ],
+  "remaining_verified_bug_in_owned_scope_after_fix": 0,
+  "global_bug_free_claim": false,
+  "deploy": false,
+  "real_money": false,
+  "play_upload": false,
+  "commit_by_agent": false
+}

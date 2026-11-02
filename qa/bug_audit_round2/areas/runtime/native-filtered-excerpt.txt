@@ -1,0 +1,23 @@
+10-29 00:43:22.640  3303  3331 E flutter : [ERROR:flutter/impeller/toolkit/egl/egl.cc(56)] EGL Error: Success (12288) in ../../../flutter/impeller/toolkit/egl/display.cc:161
+10-29 00:43:22.641  3303  3331 E flutter : [ERROR:flutter/impeller/toolkit/egl/egl.cc(56)] EGL Error: Success (12288) in ../../../flutter/impeller/toolkit/egl/display.cc:161
+10-29 00:43:23.033  3303  3331 I flutter : [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+10-29 00:43:31.462  3303  3331 F libc    : Fatal signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0 in tid 3331 (1.raster), pid 3303 (com.luno.chess)
+10-29 00:43:32.225  3346  3346 F DEBUG   : signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0
+10-29 00:43:32.232  3346  3346 F DEBUG   : Cause: null pointer dereference
+10-29 00:43:32.291  3346  3346 F DEBUG   : backtrace:
+10-29 00:43:32.293  3346  3346 F DEBUG   :       #00 pc 00000000000702c5  /apex/com.android.runtime/lib64/bionic/libc.so (extent_recycle+1429) (BuildId: b5c6019a3b4ea61b5e9a2f56319b584e)
+10-29 00:43:32.293  3346  3346 F DEBUG   :       #05 pc 000000000004dfb5  /apex/com.android.runtime/lib64/bionic/libc.so (je_malloc+1189) (BuildId: b5c6019a3b4ea61b5e9a2f56319b584e)
+10-29 00:43:32.295  3346  3346 F DEBUG   :       #07 pc 000000000053a839  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.295  3346  3346 F DEBUG   :       #08 pc 0000000000ce3357  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.304  3346  3346 F DEBUG   :       #09 pc 000000000094bd1c  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.304  3346  3346 F DEBUG   :       #10 pc 00000000009e2676  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.304  3346  3346 F DEBUG   :       #11 pc 0000000000552dd0  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.305  3346  3346 F DEBUG   :       #12 pc 0000000000552ac7  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.305  3346  3346 F DEBUG   :       #13 pc 00000000005523e4  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.305  3346  3346 F DEBUG   :       #14 pc 000000000055b6c7  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.305  3346  3346 F DEBUG   :       #15 pc 00000000009e1d2f  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.305  3346  3346 F DEBUG   :       #16 pc 00000000005857c5  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.305  3346  3346 F DEBUG   :       #17 pc 000000000058a1a5  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.314  3346  3346 F DEBUG   :       #21 pc 000000000058a2b7  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.314  3346  3346 F DEBUG   :       #22 pc 0000000000587b08  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)
+10-29 00:43:32.314  3346  3346 F DEBUG   :       #23 pc 00000000005878e0  /data/app/com.luno.chess-DQImWgPQWiS6YOvHibUFzg==/base.apk!libflutter.so (offset 0x14e8000) (BuildId: e3c81af1bc8699176634814ea44d3b03d6987bb9)

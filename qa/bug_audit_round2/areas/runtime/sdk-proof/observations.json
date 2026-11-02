@@ -1,0 +1,31 @@
+[
+  {
+    "case": "pregrant-refund",
+    "expected_gold": 1250,
+    "actual_gold": 1250,
+    "ungranted_marker": true,
+    "purchase_receipt_absent": true,
+    "error_code": "purchase-revoked",
+    "provider_consume_calls": 0
+  },
+  {
+    "case": "stale-subscription-profile-grant",
+    "premium_until": 0,
+    "current_claim_active": false,
+    "current_claim_revision": 2,
+    "installed_profile_fence": 2,
+    "error_code": "subscription-state-changed",
+    "provider_lookups": 3,
+    "newer_claim_unchanged": true
+  },
+  {
+    "case": "stale-subscription-granted-claim",
+    "premium_until": 0,
+    "current_claim_active": false,
+    "current_claim_revision": 2,
+    "installed_profile_fence": 2,
+    "error_code": "subscription-state-changed",
+    "provider_lookups": 3,
+    "newer_claim_unchanged": true
+  }
+]

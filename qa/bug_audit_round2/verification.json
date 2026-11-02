@@ -1,0 +1,30 @@
+{
+  "recorded_utc": "2026-11-02T08:29:44.164439+00:00",
+  "source": {
+    "full_regression_source_commit": "9d41c5055006907ee2dafdf8e5daf70bb9f2c7a3",
+    "build_source_commit": "9d41c5055006907ee2dafdf8e5daf70bb9f2c7a3",
+    "base_commit": "b1b9c7a2f76282c6588383d5ab7926ec8b438e5f",
+    "frozen_utc": "2026-11-01T18:57:50.613161+00:00",
+    "source_index_sha256": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+    "runtime_change_between_test_and_build_commits": []
+  },
+  "new_verified_bug_families": {
+    "P1": 1,
+    "P2": 5
+  },
+  "open_new_verified_source_bugs_this_round": 0,
+  "global_bug_free_acceptance": "NOT ESTABLISHED",
+  "historical_native_P1": "OPEN",
+  "historical_golden": "FAIL",
+  "release_decision": "HOLD",
+  "current_native_apk": "NOT RUN",
+  "physical_perf": "NOT RUN",
+  "real_16kb": "NOT RUN",
+  "production_firebase": "BLOCKED",
+  "licensed_billing": "BLOCKED",
+  "play_console": "BLOCKED",
+  "live_deploy": false,
+  "real_money": false,
+  "play_upload": false,
+  "github_push": false
+}

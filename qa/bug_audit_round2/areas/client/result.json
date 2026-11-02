@@ -1,0 +1,97 @@
+{
+  "base_commit": "b1b9c7a2f76282c6588383d5ab7926ec8b438e5f",
+  "production_bug_count": 2,
+  "severity_counts": {
+    "P2": 2
+  },
+  "bugs": [
+    {
+      "severity": "P2",
+      "title": "Out-of-order billing refresh rolls back membership ownership",
+      "root_cause": "Concurrent restore and purchase verification check only account ownership, not server stateRevision/stateObservedAt. A late older snapshot replaces latestSnapshot and private _ownsMembership despite GameStore having its own independent ordering guard.",
+      "baseline": {
+        "pass": 2,
+        "fail": 7,
+        "log": "billing-snapshot-expanded-before.log"
+      },
+      "fixed_new_tests": 12,
+      "behavioral_proof": "A late inactive restore permits purchase(yearId) to return true and invoke the fake native launch despite a newer confirmed active monthly subscription. Reverse ordering also incorrectly blocks legitimate renewal.",
+      "fix": "Validate complete bounded version metadata; retain current snapshot/ownership when older revision, older same-revision observation or legacy-after-versioned response arrives. Legacy-only backend and new-owner revision reset remain supported."
+    },
+    {
+      "severity": "P2",
+      "title": "Late friendly join replaces an unrelated top route",
+      "root_cause": "FriendlyOnlineScreen._openMatch uses Navigator.pushReplacement without checking foreground/current route. A valid delayed join response replaces a separately pushed page above Friendly.",
+      "baseline": {
+        "pass": 1,
+        "fail": 1,
+        "log": "friendly-route-before.log"
+      },
+      "fixed_new_tests": 5,
+      "fix": "Restrict presentation/user actions to the current resumed owner page. Keep accepted matches pending while covered/paused, clear consumed room tracking, and navigate this page exactly once after it becomes current/resumed. Exit cleanup remains owner guarded."
+    }
+  ],
+  "final_related_regression": {
+    "pass": 90,
+    "fail": 0,
+    "skip": 0,
+    "files": 9,
+    "exit_code": 0,
+    "log": "client-final.log",
+    "new_cases": 17,
+    "existing_cases": 73
+  },
+  "additional_new_cases_do_not_change_baseline_counts": true,
+  "intermediate_fixed_runs": {
+    "billing": {
+      "pass": 73,
+      "fail": 0,
+      "log": "billing-snapshot-final.log"
+    },
+    "friendly": {
+      "pass": 14,
+      "fail": 0,
+      "log": "friendly-route-after.log"
+    }
+  },
+  "files": [
+    {
+      "file": "luno_chess/lib/services/luno_billing_service.dart",
+      "fixed_sha256": "813628ad093dc2979fd94aef14e739b8c35798aada6a4b5cbbd3574a3a7773e5",
+      "baseline_sha256": "f95a03620d0596d699622ef32b4339ebae3c8f3c2eaccfa78fdeb7ed4ca94f78"
+    },
+    {
+      "file": "luno_chess/lib/screens/friendly_online_screen.dart",
+      "fixed_sha256": "55d5d882f9ff38bffd67825c3e0b995e916ead0a53606854cab73f99a344c8ca",
+      "baseline_sha256": "5fb39078d5c753d5ff9b7be4780af3db29a48ec35a5f355578c4dea16f519239"
+    },
+    {
+      "file": "luno_chess/test/round2_client_billing_snapshot_order_test.dart",
+      "fixed_sha256": "9865c10bf89fbd51125db35be7afbf2ef08aee739d89d993e04def6b0f15f513",
+      "new_file": true
+    },
+    {
+      "file": "luno_chess/test/round2_client_friendly_route_test.dart",
+      "fixed_sha256": "03d970a910f648c021dc8924060cb3e8f978ffd12811055edfa2ce3847ce9bda",
+      "new_file": true
+    }
+  ],
+  "production_source_frozen": true,
+  "existing_tests_changed": false,
+  "golden_reference_updates": 0,
+  "invalid_harness_runs_excluded": [
+    "friendly-invalid-localization-fixture.log",
+    "friendly-invalid-request-flush.log",
+    "friendly-invalid-request-flush-second.log",
+    "friendly-invalid-dispatch-diagnostics.log",
+    "client-invalid-lifecycle-transition.log"
+  ],
+  "full_flutter_analyze": "NOT RUN by agent; root owns final checks",
+  "full_regression": "NOT RUN by agent",
+  "native_android": "NOT RUN",
+  "real_play_billing": "NOT RUN",
+  "production_firebase": "NOT RUN",
+  "deploy": false,
+  "commit": false,
+  "final_scoped_result": "Two new defects fixed; tested client scope passes. No universal bug-free or release acceptance claim."
+}

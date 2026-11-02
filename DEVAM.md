@@ -4,6 +4,41 @@ Son dogrulama/aktarim tarihi: 27 Ekim 2026. Bu dosya kaynak aktarimini anlatir;
 oyunun kusursuz, canli servislerin tamamen kabul edilmis veya Play yayininin
 onaylanmis oldugu anlamina gelmez.
 
+## 2 Kasım — ikinci sistem taraması
+
+**Bu turda doğrulanıp açık bırakılan yeni kaynak hatası: 0. Genel karar:
+RELEASE HOLD.** [Son rapor](qa/bug_audit_round2/REPORT.md),
+[kusur ve commit matrisi](qa/bug_audit_round2/BUGS.md),
+[kapsam sonucu](qa/bug_audit_round2/scope-clean-status.json) ve
+[açık sorunlar](qa/bug_audit_round2/OPEN-ISSUES.md). Bu, bütün oyunun hatasız olduğunun kanıtı değildir.
+Build ve tam regresyon kaynağı `9d41c5055006907ee2dafdf8e5daf70bb9f2c7a3`; son QA commit’i çalışma kodunu değiştirmez.
+
+- 6 yeni hata bulundu ve kapatıldı: 1 P1, 5 P2. Güncel inactive owned subscription;
+  billing snapshot sırası; üstü kapalı Friendly route; silme sonrası V1 admission;
+  DM raporlamada konuşma üyeliği; eski push bildirimlerinin silinmesi.
+  Önceki yedi düzeltme ve aynı düzeltmenin alt senaryoları yeniden sayılmadı.
+- Tam backend: 1399 geçti / 0 başarısız / 1 atlandı.
+  TypeScript: 376 / 0 / 0. Differential:
+  3101 senaryo, 10967 durum ve tam geçerli hamle kümesi; 0 ayrışma.
+  Analiz temiz. Tam Flutter: 11776 geçti /
+  97 başarısız / 0 atlandı,
+  437 dosya. 97 tarihsel görsel fark açık; golden referansları korundu.
+- Son gerçek yerel RTDB/Admin SDK koşusu 4/4 geçti. Bağımsız SDK bağlantısı kalıcı
+  veriyi doğruladı. Önceki timeout’un test düzeneği nedeni: Admin dış faye yerine
+  bundled standalone transport kullanıyor. Yalnız kesin loopback için bir proxy
+  seçimi koşulu bellekte değişti; SDK disk dosyası, ortam ve header’lar korundu.
+  Google Play yanıtları fake; üretim kabulü değildir.
+- Güncel ARM64 debug test APK’sı üretildi: aynı imza, com.luno.chess/1.6.3+19,
+  minSdk 24 / targetSdk 36, 750 asset ve ELF/ZIP statik 16 KB kontrolleri geçti.
+  Mevcut upload key yok; release APK/AAB BLOCKED. +19 Play geçmişi doğrulanmadı.
+- Eski API 29 raster SIGSEGV açık. Yeni APK ile native oyuncu yolculuğu, fiziksel
+  FPS/RAM/p95–p99 ve gerçek 16 KB runtime NOT RUN. Gerçek Firebase/Google/App Check/
+  Integrity, Play lisans/Console/Pre-launch kabulleri BLOCKED. [Kapılar](qa/bug_audit_round2/GATES.md).
+- Canlı deploy, gerçek ödeme, Play upload/yayın veya GitHub push yapılmadı.
+  Kanıt/APK/source bundle/QA ZIP/hash: `/workspace/luno-review/bug-audit-round2/`.
+
+Aşağıdaki kayıtlar tarihseldir; yeni dört SDK başarısı geçmiş timeout kayıtlarını silmez.
+
 ## 1 Kasım teslimi — sistem çapında bug avı
 
 **RELEASE HOLD.** En yeni [rapor](qa/system_bug_hunt/REPORT.md),

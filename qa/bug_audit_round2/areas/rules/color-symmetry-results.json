@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "Color-swap + vertical board reflection metamorphic audit; FEN fullmove and serialized repetition dictionary omitted from equality, not a complete independent rules oracle.",
+  "stats": {
+    "fixturePaths": 113,
+    "statesCompared": 258,
+    "completeLegalSetsCompared": 258,
+    "branchTransitionsCompared": 1214,
+    "canonicalTransitionsCompared": 145,
+    "cards": [
+      "angry_n",
+      "board_seal",
+      "break_seal",
+      "card_block",
+      "chain",
+      "echo",
+      "fate_exchange",
+      "fog",
+      "freeze",
+      "hunt_vow",
+      "locked_square",
+      "mana_sabotage",
+      "mine",
+      "pawn_advance",
+      "pawn_deviation",
+      "prophecy",
+      "purify",
+      "radar",
+      "rook_bend",
+      "shadow_contract",
+      "shadow_pass",
+      "shelter",
+      "slow",
+      "watch_vow"
+    ],
+    "specialMoves": 22,
+    "castles": 23,
+    "enPassants": 0,
+    "promotions": 2,
+    "illegalAtomicRejections": 774
+  }
+}

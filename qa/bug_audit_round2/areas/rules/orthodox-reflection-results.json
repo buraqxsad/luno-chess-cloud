@@ -1,0 +1,1 @@
+{"status":"PASS","scope":"Independent color/vertical reflection and counter/material invariants on the pure Dart orthodox move generator; not a complete independent rules oracle.","starts":5,"games":20,"states":800,"branchTransitions":2395,"enPassantBranches":4,"castleBranches":6,"promotionBranches":29}

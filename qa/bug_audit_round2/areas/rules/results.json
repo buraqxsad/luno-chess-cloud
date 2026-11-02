@@ -1,0 +1,87 @@
+{
+  "recorded_utc": "2026-11-01T11:28:01.255890+00:00",
+  "scope": "Rules/engine second independent audit, not full product or release acceptance",
+  "baseline_commit": "b1b9c7a2f76282c6588383d5ab7926ec8b438e5f",
+  "new_confirmed_production_bugs": 0,
+  "production_files_changed": 0,
+  "contract_or_golden_changes": 0,
+  "new_repo_test_files": 0,
+  "flutter_focused": {
+    "pass": 252,
+    "fail": 0,
+    "skip": 0,
+    "files": 5,
+    "exit": 0
+  },
+  "typescript_focused": {
+    "pass": 88,
+    "fail": 0,
+    "skip": 0,
+    "files": 3
+  },
+  "new_card_metamorphic_probe": {
+    "status": "PASS",
+    "scope": "Color-swap + vertical board reflection metamorphic audit; FEN fullmove and serialized repetition dictionary omitted from equality, not a complete independent rules oracle.",
+    "stats": {
+      "fixturePaths": 113,
+      "statesCompared": 258,
+      "completeLegalSetsCompared": 258,
+      "branchTransitionsCompared": 1214,
+      "canonicalTransitionsCompared": 145,
+      "cards": [
+        "angry_n",
+        "board_seal",
+        "break_seal",
+        "card_block",
+        "chain",
+        "echo",
+        "fate_exchange",
+        "fog",
+        "freeze",
+        "hunt_vow",
+        "locked_square",
+        "mana_sabotage",
+        "mine",
+        "pawn_advance",
+        "pawn_deviation",
+        "prophecy",
+        "purify",
+        "radar",
+        "rook_bend",
+        "shadow_contract",
+        "shadow_pass",
+        "shelter",
+        "slow",
+        "watch_vow"
+      ],
+      "specialMoves": 22,
+      "castles": 23,
+      "enPassants": 0,
+      "promotions": 2,
+      "illegalAtomicRejections": 774
+    }
+  },
+  "new_orthodox_dart_probe": {
+    "status": "PASS",
+    "scope": "Independent color/vertical reflection and counter/material invariants on the pure Dart orthodox move generator; not a complete independent rules oracle.",
+    "starts": 5,
+    "games": 20,
+    "states": 800,
+    "branchTransitions": 2395,
+    "enPassantBranches": 4,
+    "castleBranches": 6,
+    "promotionBranches": 29
+  },
+  "counter_notes": {
+    "ts_castles": "Diagnostic UCI signature count only; not used as verified castle coverage.",
+    "ts_enPassants": "Not instrumented by TS probe; zero does not mean absence. Actual EP/castle/promotion coverage is reported by the pure Dart probe flags.",
+    "metamorphic_equality_omits": "Fullmove number and serialized repetition dictionary. The pure Dart probe separately checks fullmove arithmetic. Dedicated regression tests cover repetition and terminal precedence."
+  },
+  "counts_not_summed_across_overlapping_runs": true,
+  "runtime_source_provenance": "source-provenance.json",
+  "full_suite_run_by_this_agent": false,
+  "native_android": "NOT RUN",
+  "real_firebase_play": "NOT RUN",
+  "deploy": false,
+  "commit": false
+}
