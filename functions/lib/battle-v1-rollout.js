@@ -49,15 +49,38 @@ function installBattleV1Rollout(api,deps){
  async function completeReservation(id){
   const reservation=(await db.ref('battleV1Control/reservations/'+id).get()).val();
   if(!reservation){return null;}
-  const m=await api.create(id,reservation.w.player,reservation.b.player,reservation.w.deck,reservation.b.deck,reservation.rated,{w:reservation.w.rating||0,b:reservation.b.rating||0});
-  await db.ref('battleV1Control').transaction(v=>{if(v===null)return null;if(v.reservations?.[id])delete v.reservations[id];return v;},undefined,false);
+  let m;
+  try{m=await api.create(id,reservation.w.player,reservation.b.player,reservation.w.deck,reservation.b.deck,reservation.rated,{w:reservation.w.rating||0,b:reservation.b.rating||0});}
+  catch(error){
+   if(error.code!=='MATCH_CREATION_CONFLICT'||!reservation.requestUid||!reservation.reservationToken)throw error;
+   // A delayed duplicate can cross terminal cleanup after its deterministic ID
+   // was already consumed. Restore its peer without cancelling a newer attempt.
+   const original=await api.load(id,reservation.requestUid);
+   await db.ref('battleV1Control').transaction(v=>{
+    if(v===null)return null;
+    if(v.reservations?.[id]?.reservationToken!==reservation.reservationToken)return v;
+    delete v.reservations[id];
+    for(const entry of [reservation.w,reservation.b]){
+     if(v.active?.[entry.uid]!==id)continue;
+     delete v.active[entry.uid];
+     if(entry.uid!==reservation.requestUid&&!entry.player.bot&&!v.queue?.[entry.uid]){
+      v.queue=v.queue||{};v.queue[entry.uid]={...entry,lastSeenAt:now()};
+     }
+    }
+    return v;
+   },undefined,false);
+   return original;
+  }
+  await db.ref('battleV1Control').transaction(v=>{if(v===null)return null;const current=v.reservations?.[id];if(current&&current.reservationToken===reservation.reservationToken)delete v.reservations[id];return v;},undefined,false);
   return m;
  }
  async function entry(uid,client){const {profile,account}=await migrate(uid);return {uid,player:{uid,name:String(profile.username||profile.name||'LunoPlayer').slice(0,32),bot:false},deck:account.deck,rating:account.rating,skill:account.games?account.rating:account.provisionalSkillSeed,client,joinedAt:now(),lastSeenAt:now(),protocolVersion:PROTOCOL};}
  async function enqueueBattleV1(context){
   const b=requireRecord(context.body);exactKeys(b,['client']);const c=await admission(b);await deps.rateLimit(context.uid,'enqueueBattleV1',30,60000);
   if(deps.resolveLegacyForV1)await deps.resolveLegacyForV1(context.uid);
-  const queued=await entry(context.uid,b.client),id=matchId(context.uid,context.requestId),at=now(),ownWhite=crypto.randomInt(2)===0;let error=null;
+  const queued=await entry(context.uid,b.client),id=matchId(context.uid,context.requestId),at=now(),ownWhite=crypto.randomInt(2)===0,reservationToken=crypto.randomUUID();let error=null;
+  try{return reconnectSnapshot(await api.load(id,context.uid),context.uid);}
+  catch(error){if(error.code!=='MATCH_NOT_FOUND')throw error;}
   const tx=await db.ref('battleV1Control').transaction(value=>{
    error=null;const v=value||{};v.queue=v.queue||{};v.active=v.active||{};v.reservations=v.reservations||{};
    if(v.active[context.uid])return v;
@@ -70,7 +93,7 @@ function installBattleV1Rollout(api,deps){
    if(!opponent&&at-own.joinedAt>=c.v1BotFillTimeoutMs)opponent={uid:'bot_v1_'+id.slice(4),player:{uid:'bot_v1_'+id.slice(4),name:'Luno',bot:true},deck:[...STARTER]};
    if(!opponent){if(Object.keys(v.queue).length>=MAX_QUEUE&&!previous){error=new BattleError('TEMPORARILY_UNAVAILABLE',503);return;}v.queue[context.uid]=own;return v;}
    delete v.queue[context.uid];delete v.queue[opponent.uid];
-   v.reservations[id]={w:ownWhite?own:opponent,b:ownWhite?opponent:own,rated:!opponent.player.bot,configVersion:c.configVersion};
+   v.reservations[id]={w:ownWhite?own:opponent,b:ownWhite?opponent:own,rated:!opponent.player.bot,configVersion:c.configVersion,requestUid:context.uid,reservationToken};
    v.active[context.uid]=id;if(!opponent.player.bot)v.active[opponent.uid]=id;return v;
   },undefined,false);
   if(!tx.committed){if(error)throw error;throw new BattleError('TEMPORARILY_UNAVAILABLE',503);}
