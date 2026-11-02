@@ -39,7 +39,11 @@ function assertErased(db){
  assert.equal(db.read('matchesV1/'+id+'/public/participants/'+owner),null);
  assert.equal(db.read('users/'+peer+'/uid'),peer);
  assert.ok(db.read('battleV1Ratings/'+peer));
- assert.equal(api.battleV1.hydrate(db.read('matchSecretsV1/'+id)).settlementStatus,'complete');
+ const match=api.battleV1.hydrate(db.read('matchSecretsV1/'+id));
+ assert.equal(match.settlementStatus,'complete');
+ assert.equal(match.deletedParticipants[owner],true,'A stale settlement receipt must preserve revoked membership.');
+ assert.equal(match.players.w.name,'Deleted player');
+ assert.equal(db.read('matchesV1/'+id+'/public/stateVersion'),match.stateVersion);
 }
 
 test('terminal settlement followed by complete account deletion erases its public rating row',async t=>{
