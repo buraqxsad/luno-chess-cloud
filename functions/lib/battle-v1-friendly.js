@@ -19,7 +19,22 @@ function installBattleV1Friendly(api,deps){
   if(v.queue[uid]&&now()-v.queue[uid].lastSeenAt<TTL)throw new BattleError('QUEUE_ACTIVE');
   const room=v.rooms[v.roomByUser[uid]];if(room&&room.expiresAt>now()&&!room.matchId)throw new BattleError('ROOM_ACTIVE');
  }
- async function transact(change){let error;const tx=await db.ref('battleV1Control').transaction(value=>{error=null;try{return change(state(value));}catch(e){error=e;return;}},undefined,false);if(!tx.committed){throw error||new BattleError('TEMPORARILY_UNAVAILABLE',503);}return tx.snapshot.val();}
+ async function transact(change){
+  let error;
+  const tx=await db.ref('battleV1Control').transaction(value=>{
+   error=null;
+   try{return change(state(value));}
+   catch(e){
+    error=e;
+    // A new SDK instance first observes null from its local cache. Let the
+    // server compare-and-swap retry with existing data before aborting.
+    return value===null?null:undefined;
+   }
+  },undefined,false);
+  // A genuinely empty database can commit the null no-op; retain its error.
+  if(error||!tx.committed)throw error||new BattleError('TEMPORARILY_UNAVAILABLE',503);
+  return tx.snapshot.val();
+ }
  async function prepare(context,required){const b=requireRecord(context.body);exactKeys(b,['client',...required]);await api.admission(b);await deps.requirePlayer(context.uid);await deps.rateLimit(context.uid,'battleV1Friendly',20,60000);if(deps.resolveLegacyForV1)await deps.resolveLegacyForV1(context.uid);return b;}
  async function createBattleV1Room(context){
   await prepare(context,[]);const owner=await api.entry(context.uid,context.body.client),code=roomCode(),at=now();
