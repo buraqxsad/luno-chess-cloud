@@ -886,8 +886,7 @@ class GameStore extends ChangeNotifier {
         )) {
           throw StateError('Could not preserve the unowned legacy snapshot');
         }
-        if (uid != null &&
-            !restoreExisting &&
+        if (!restoreExisting &&
             !await prefs.setString(
               'luno_unowned_account_backup_owner_v1',
               uid,
