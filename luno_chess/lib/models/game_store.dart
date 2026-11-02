@@ -42,6 +42,8 @@ class GameStore extends ChangeNotifier {
   static const _schemaVersionKey = 'luno_player_schema_v2';
   static const _schemaVersion = 2;
   static const _corruptSnapshotBackupKey = 'luno_player_corrupt_backup_v2';
+  static const _unownedBackupPendingKey =
+      'luno_unowned_account_backup_pending_v1';
   static const _usernameChosenKey = 'luno_username_chosen_v1';
   static const _tutorialCompletedKey = 'luno_tutorial_completed_v1';
   static const _tutorialStepKey = 'luno_tutorial_step_v1';
@@ -191,6 +193,9 @@ class GameStore extends ChangeNotifier {
   int _accountBindingRevision = 0;
   final _erasedAccountUids = <String>{};
   final _pendingAccountErasures = <String, _LocalAccountErasure>{};
+  final _unconfirmedAccountRecoveryKeys = <String>{};
+  bool _unownedBackupInProgress = false;
+  bool _unownedBackupCleanupPending = false;
   int get accountBindingRevision => _accountBindingRevision;
   int get serverStateEpoch => _serverStateEpoch;
 
@@ -865,7 +870,15 @@ class GameStore extends ChangeNotifier {
           throw StateError('Could not preserve the previous account');
         }
       } else if (!_accountOwnerKnown &&
-          !prefs.containsKey('luno_unowned_account_backup_v1')) {
+          (_unownedBackupInProgress ||
+              prefs.get(_unownedBackupPendingKey) is String ||
+              !prefs.containsKey('luno_unowned_account_backup_v1'))) {
+        // A failed preference write still updates the plugin's cache. Keep
+        // retrying this departure backup until the owner commit succeeds.
+        _unownedBackupInProgress = true;
+        if (!await prefs.setString(_unownedBackupPendingKey, uid!)) {
+          throw StateError('Could not record pending unowned recovery');
+        }
         departureArchiveKey = 'luno_unowned_account_backup_v1';
         if (!await prefs.setString(
           'luno_unowned_account_backup_v1',
@@ -898,11 +911,15 @@ class GameStore extends ChangeNotifier {
           }
           if (restored == null && raw.length <= 200000) {
             final recoveryKey = '${_accountKey(uid!)}_recovery';
-            if (!prefs.containsKey(recoveryKey) &&
-                !await prefs.setString(recoveryKey, raw)) {
-              throw StateError(
-                'Could not preserve the invalid account archive',
-              );
+            if (!prefs.containsKey(recoveryKey) ||
+                _unconfirmedAccountRecoveryKeys.contains(recoveryKey)) {
+              _unconfirmedAccountRecoveryKeys.add(recoveryKey);
+              if (!await prefs.setString(recoveryKey, raw)) {
+                throw StateError(
+                  'Could not preserve the invalid account archive',
+                );
+              }
+              _unconfirmedAccountRecoveryKeys.remove(recoveryKey);
             }
           }
         }
@@ -981,8 +998,12 @@ class GameStore extends ChangeNotifier {
       accountUid = uid;
       _battleRank = restoredRank;
       _accountOwnerKnown = true;
+      _unownedBackupInProgress = false;
       notifyListeners();
       await save();
+      if (!_hasUnsavedSnapshot) {
+        await _clearCompletedUnownedBackup(prefs);
+      }
     });
     _accountQueue = operation.catchError((Object _) {});
     return operation;
@@ -1090,6 +1111,9 @@ class GameStore extends ChangeNotifier {
         'luno_unowned_account_backup_v1',
         'luno_unowned_account_backup_owner_v1',
       ]);
+    }
+    if (prefs.get(_unownedBackupPendingKey) == uid) {
+      keys.add(_unownedBackupPendingKey);
     }
     for (final key in [
       _corruptSnapshotBackupKey,
@@ -1368,6 +1392,33 @@ class GameStore extends ChangeNotifier {
     await _auxiliaryWriteQueue;
     // Retry once per flush, using current state rather than an old failed owner.
     if (_hasUnsavedSnapshot) await save();
+    if (_accountOwnerKnown && !_hasUnsavedSnapshot) {
+      try {
+        await _clearCompletedUnownedBackup(
+          await SharedPreferences.getInstance(),
+        );
+      } catch (_) {
+        // Platform acquisition can fail too. Keep lifecycle flush best-effort
+        // and retry this cleanup after preferences become available again.
+        _unownedBackupCleanupPending = true;
+      }
+    }
+  }
+
+  Future<void> _clearCompletedUnownedBackup(SharedPreferences prefs) async {
+    if (!_unownedBackupCleanupPending &&
+        !prefs.containsKey(_unownedBackupPendingKey)) {
+      return;
+    }
+    _unownedBackupCleanupPending = true;
+    try {
+      if (await prefs.remove(_unownedBackupPendingKey)) {
+        _unownedBackupCleanupPending = false;
+      }
+    } catch (_) {
+      // The owner and recovery copy are committed. Flush retries metadata
+      // cleanup, including a failed remove hidden by the plugin's cache.
+    }
   }
 
   Future<void> _queueAuxiliaryWrite(
