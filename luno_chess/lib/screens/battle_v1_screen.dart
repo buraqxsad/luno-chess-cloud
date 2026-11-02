@@ -1045,6 +1045,29 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
     return accepted;
   }
 
+  VoidCallback _selectionCommand(VoidCallback command) {
+    final capturedVersion = version;
+    final capturedCard = selection.card;
+    final capturedPlay = selection.play?.key;
+    final capturedDestination = selection.specialDestination?.key;
+    final privacyEpoch = _hotseatPrivacy.epoch;
+    return () {
+      // Several input events can arrive before the next widget rebuild. Rule
+      // legality alone cannot admit a command for a card or target the player
+      // has already changed, or for a selection cleared by a newer snapshot.
+      if (!_canInteract ||
+          !ready ||
+          version != capturedVersion ||
+          !_hotseatInputCurrent(privacyEpoch) ||
+          selection.card != capturedCard ||
+          selection.play?.key != capturedPlay ||
+          selection.specialDestination?.key != capturedDestination) {
+        return;
+      }
+      command();
+    };
+  }
+
   Future<void> _apply(
     BattleAction action, {
     ChessMoveAction? boundDestination,
@@ -2731,11 +2754,7 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                                                             ),
                                                             onPressed:
                                                                 ready
-                                                                    ? () {
-                                                                      if (!_canInteract ||
-                                                                          !ready) {
-                                                                        return;
-                                                                      }
+                                                                    ? _selectionCommand(() {
                                                                       setState(
                                                                         selection
                                                                             .cancel,
@@ -2753,7 +2772,7 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                                                                               _mode,
                                                                         );
                                                                       }
-                                                                    }
+                                                                    })
                                                                     : null,
                                                           ),
                                                           Expanded(
@@ -2778,12 +2797,14 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                                                                               ) ||
                                                                               selection.specialDestination !=
                                                                                   null)
-                                                                      ? () => _apply(
-                                                                        selectedPlay!,
-                                                                        hotseatEpoch:
-                                                                            hotseatEpoch,
-                                                                        boundDestination:
-                                                                            selectedDestination,
+                                                                      ? _selectionCommand(
+                                                                        () => _apply(
+                                                                          selectedPlay!,
+                                                                          hotseatEpoch:
+                                                                              hotseatEpoch,
+                                                                          boundDestination:
+                                                                              selectedDestination,
+                                                                        ),
                                                                       )
                                                                       : null,
                                                             ),
@@ -2837,12 +2858,14 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                                                                               a.card ==
                                                                                   selection.card,
                                                                         )
-                                                                    ? () => _apply(
-                                                                      DiscardAction(
-                                                                        selectedCard!,
+                                                                    ? _selectionCommand(
+                                                                      () => _apply(
+                                                                        DiscardAction(
+                                                                          selectedCard!,
+                                                                        ),
+                                                                        hotseatEpoch:
+                                                                            hotseatEpoch,
                                                                       ),
-                                                                      hotseatEpoch:
-                                                                          hotseatEpoch,
                                                                     )
                                                                     : null,
                                                           ),
@@ -2864,10 +2887,12 @@ class _BattleV1ScreenState extends State<BattleV1Screen>
                                                     art: 'pass',
                                                     onPressed:
                                                         ready
-                                                            ? () => _apply(
-                                                              const PassAction(),
-                                                              hotseatEpoch:
-                                                                  hotseatEpoch,
+                                                            ? _selectionCommand(
+                                                              () => _apply(
+                                                                const PassAction(),
+                                                                hotseatEpoch:
+                                                                    hotseatEpoch,
+                                                              ),
                                                             )
                                                             : null,
                                                   ),
