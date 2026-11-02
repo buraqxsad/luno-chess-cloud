@@ -856,14 +856,17 @@ class GameStore extends ChangeNotifier {
         return;
       }
       final previous = jsonEncode(_localSnapshot());
+      String? departureArchiveKey;
       if (_accountOwnerKnown &&
           accountUid != null &&
           !_isAccountErased(prefs, accountUid!)) {
-        if (!await prefs.setString(_accountKey(accountUid!), previous)) {
+        departureArchiveKey = _accountKey(accountUid!);
+        if (!await prefs.setString(departureArchiveKey, previous)) {
           throw StateError('Could not preserve the previous account');
         }
       } else if (!_accountOwnerKnown &&
           !prefs.containsKey('luno_unowned_account_backup_v1')) {
+        departureArchiveKey = 'luno_unowned_account_backup_v1';
         if (!await prefs.setString(
           'luno_unowned_account_backup_v1',
           previous,
@@ -880,6 +883,7 @@ class GameStore extends ChangeNotifier {
         }
       }
       BattleV1Rank? restoredRank;
+      void Function()? restoreAccount;
       if (_accountOwnerKnown || restoreExisting) {
         Map<String, dynamic>? restored;
         final raw = uid == null ? null : prefs.getString(_accountKey(uid));
@@ -936,19 +940,40 @@ class GameStore extends ChangeNotifier {
 
         // Finish candidate parsing before the synchronous owner commit so a
         // rejected archive cannot mix one account's data with another's UID.
-        data = restoredData;
-        hasChosenUsername = restoredChosenUsername;
-        pendingUsernameDraft = restoredUsernameDraft;
-        hasCompletedTutorial = restoredTutorialCompleted;
-        introductionStep = restoredIntroductionStep;
-        welcomeStep = restoredWelcomeStep;
-        guidedLearning = restoredLearning;
-        onboardingBattleStage = restoredOnboardingBattleStage;
-        _firstSessionMatchesStarted = restoredFirstSessionMatches;
-        firstSessionMatchCompleted = restoredFirstSessionCompleted;
-        practiceStage = restoredPracticeStage;
-        tutorialStep = restoredTutorialStep;
+        restoreAccount = () {
+          data = restoredData;
+          hasChosenUsername = restoredChosenUsername;
+          pendingUsernameDraft = restoredUsernameDraft;
+          hasCompletedTutorial = restoredTutorialCompleted;
+          introductionStep = restoredIntroductionStep;
+          welcomeStep = restoredWelcomeStep;
+          guidedLearning = restoredLearning;
+          onboardingBattleStage = restoredOnboardingBattleStage;
+          _firstSessionMatchesStarted = restoredFirstSessionMatches;
+          firstSessionMatchCompleted = restoredFirstSessionCompleted;
+          practiceStage = restoredPracticeStage;
+          tutorialStep = restoredTutorialStep;
+        };
       }
+      if (departureArchiveKey != null) {
+        // The departing owner remains usable while disk writes are pending.
+        // Preserve edits accepted during those awaits before changing owners.
+        var archived = previous;
+        for (var attempt = 0; attempt < 3; attempt++) {
+          final latest = jsonEncode(_localSnapshot());
+          if (latest == archived) break;
+          if (!await prefs.setString(departureArchiveKey, latest)) {
+            throw StateError('Could not preserve the latest account edits');
+          }
+          archived = latest;
+        }
+        if (jsonEncode(_localSnapshot()) != archived) {
+          // Keep the current owner and its live edits on sustained mutations;
+          // a later switch can retry without an unbounded persistence loop.
+          throw StateError('Account changed while preserving local edits');
+        }
+      }
+      restoreAccount?.call();
       // Legacy data has no provable owner. Preserve it on first association,
       // retain a separate recovery copy, and use server state as authority.
       invalidateServerStates();
