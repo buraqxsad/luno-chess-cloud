@@ -119,6 +119,7 @@ class ArenaPromotionHeading extends StatelessWidget {
       const style = TextStyle(
         color: Colors.white,
         fontFamily: 'Cinzel',
+        fontFamilyFallback: ['CinzelTurkish'],
         fontSize: 25,
         fontWeight: FontWeight.w900,
         letterSpacing: 0,
