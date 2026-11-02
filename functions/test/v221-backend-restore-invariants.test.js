@@ -58,11 +58,11 @@ test('valid duplicate-token restore still grants once and reports one restored p
   const result=await request('restorePurchases',{purchases:[item,item]},'v221-restore-valid');
   assert.equal(result.status,200);assert.equal(result.body.restored,1);
   assert.equal(db.read('users/'+uid+'/gold'),before+1000);
-  assert.deepEqual(calls,{verify:1,consume:1});
+  assert.deepEqual(calls,{verify:2,consume:1},'First registration revalidates after claim publication; completed replay adds no Play calls.');
   const replay=await request('restorePurchases',{purchases:[item]},'v221-restore-replay');
   assert.equal(replay.status,200);assert.equal(replay.body.results[0].idempotent,true);
   assert.equal(db.read('users/'+uid+'/gold'),before+1000);
-  assert.deepEqual(calls,{verify:1,consume:1});
+  assert.deepEqual(calls,{verify:2,consume:1},'First registration revalidates after claim publication; completed replay adds no Play calls.');
 });
 
 test('structurally valid restore keeps item-level verification failures isolated',async t=>{
@@ -75,5 +75,5 @@ test('structurally valid restore keeps item-level verification failures isolated
   assert.deepEqual(result.body.results[0],{productId:'unknown_product',restored:false,error:'invalid-product'});
   assert.equal(result.body.results[1].restored,true);
   assert.equal(db.read('users/'+uid+'/gold'),before+1000);
-  assert.deepEqual(calls,{verify:1,consume:1});
+  assert.deepEqual(calls,{verify:2,consume:1},'First registration revalidates after claim publication; completed replay adds no Play calls.');
 });
