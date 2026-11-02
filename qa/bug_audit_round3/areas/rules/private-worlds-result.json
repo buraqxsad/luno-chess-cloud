@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "stats": {
+    "fixturePaths": 113,
+    "states": 258,
+    "worldPairs": 258,
+    "changedWorldPairs": 219,
+    "privateSuffixPermutations": 406,
+    "publicBranchesCompared": 954,
+    "authoritativeCanonicalExtras": 954,
+    "malformedAtomicRejections": 4328,
+    "serializationStates": 258,
+    "cards": [
+      "angry_n",
+      "board_seal",
+      "break_seal",
+      "card_block",
+      "chain",
+      "echo",
+      "fate_exchange",
+      "fog",
+      "freeze",
+      "hunt_vow",
+      "locked_square",
+      "mana_sabotage",
+      "mine",
+      "pawn_advance",
+      "pawn_deviation",
+      "prophecy",
+      "purify",
+      "radar",
+      "rook_bend",
+      "shadow_contract",
+      "shadow_pass",
+      "shelter",
+      "slow",
+      "watch_vow"
+    ]
+  },
+  "limits": "Metamorphic noninterference, JSON round trips and malformed-action atomicity; no independent complete chess/card oracle."
+}

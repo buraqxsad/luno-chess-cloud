@@ -1,0 +1,110 @@
+{
+  "runs": [
+    {
+      "file": "test/round3-online-settlement-erasure.test.js",
+      "sha256": "f1abcb0619268aa384b9cda8984a462c5d156ae5f31e1b51d4c571dc18cd3fbc",
+      "exit": 0,
+      "summary": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-round3-online-settlement-erasure.test.js.log"
+    },
+    {
+      "file": "test/v201b-recovery.test.js",
+      "sha256": "d0b32de0f3567f72d8776fe502ff5579fbbd6b13f8a32794ec6d3f028172bfe7",
+      "exit": 0,
+      "summary": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-v201b-recovery.test.js.log"
+    },
+    {
+      "file": "test/v217-settlement-recovery.test.js",
+      "sha256": "fd0fec85c04ad7b49882953e416486c7dcaf4e32b56fd5cfe6808766e060e36f",
+      "exit": 0,
+      "summary": {
+        "tests": 1,
+        "pass": 1,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-v217-settlement-recovery.test.js.log"
+    },
+    {
+      "file": "test/v238-battle-v1-migration-erasure.test.js",
+      "sha256": "c501703f6ac4e12c9e81f51a3725af795c88e45976f70681254082093b9dbe43",
+      "exit": 0,
+      "summary": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-v238-battle-v1-migration-erasure.test.js.log"
+    },
+    {
+      "file": "test/round2-online-admission-erasure.test.js",
+      "sha256": "5ca35941a364b995528878707a5b224b51c3bb870ebc4cf09a402bc4388849d5",
+      "exit": 0,
+      "summary": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-round2-online-admission-erasure.test.js.log"
+    },
+    {
+      "file": "test/v213-battle-progress.test.js",
+      "sha256": "e494ca9e0080d9ef8724cc2d0da6364628a98c9ffd39c66031e5d305bbe29b5a",
+      "exit": 0,
+      "summary": {
+        "tests": 18,
+        "pass": 18,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-v213-battle-progress.test.js.log"
+    },
+    {
+      "file": "test/system-hunt-online-settlement-fairness.test.js",
+      "sha256": "13f95ecf68d228ba6dacd531affd9bc1c252855c1e52edc94b83084de8ec2edf",
+      "exit": 0,
+      "summary": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-system-hunt-online-settlement-fairness.test.js.log"
+    },
+    {
+      "file": "test/v201b-authority.test.js",
+      "sha256": "a5a44e59c56d9f923a9fe68d90c9b6258c2d1a74d53c9041940f782952344a9a",
+      "exit": 0,
+      "summary": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-v201b-authority.test.js.log"
+    }
+  ],
+  "totals": {
+    "tests": 45,
+    "pass": 45,
+    "fail": 0,
+    "skipped": 0
+  },
+  "production_sha256": {
+    "index.js": "fe8ad58864b14f82ed31d23477b64e0627fcfa9a6df0f84772f47f2281326816",
+    "lib/battle-v1-recovery.js": "7cfe7b449278a59952efc3420b5f63cb85bf23705d32fb88e2d543230b99cf4c"
+  }
+}

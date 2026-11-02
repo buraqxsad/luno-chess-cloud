@@ -1,0 +1,246 @@
+{
+  "status": "NO_NEW_CONFIRMED_BUG",
+  "scope": "Pure Dart/TypeScript chess/card rules and authoritative serialization; bounded third adversarial audit",
+  "baseline": "d627e06a963e6ab5f85d479ac53cbb161eb8ce3f",
+  "sourceFilesChangedByRulesAgent": [],
+  "sourceFilesMatchBaseline": true,
+  "privateWorlds": {
+    "status": "PASS",
+    "stats": {
+      "fixturePaths": 113,
+      "states": 258,
+      "worldPairs": 258,
+      "changedWorldPairs": 219,
+      "privateSuffixPermutations": 406,
+      "publicBranchesCompared": 954,
+      "authoritativeCanonicalExtras": 954,
+      "malformedAtomicRejections": 4328,
+      "serializationStates": 258,
+      "cards": [
+        "angry_n",
+        "board_seal",
+        "break_seal",
+        "card_block",
+        "chain",
+        "echo",
+        "fate_exchange",
+        "fog",
+        "freeze",
+        "hunt_vow",
+        "locked_square",
+        "mana_sabotage",
+        "mine",
+        "pawn_advance",
+        "pawn_deviation",
+        "prophecy",
+        "purify",
+        "radar",
+        "rook_bend",
+        "shadow_contract",
+        "shadow_pass",
+        "shelter",
+        "slow",
+        "watch_vow"
+      ]
+    },
+    "limits": "Metamorphic noninterference, JSON round trips and malformed-action atomicity; no independent complete chess/card oracle."
+  },
+  "dartCodecAndBattlePerft": {
+    "status": "PASS",
+    "codecStates": 258,
+    "actionCodecs": 954,
+    "restoredTransitionsCompared": 954,
+    "cards": [
+      "angry_n",
+      "board_seal",
+      "break_seal",
+      "card_block",
+      "chain",
+      "echo",
+      "fate_exchange",
+      "fog",
+      "freeze",
+      "hunt_vow",
+      "locked_square",
+      "mana_sabotage",
+      "mine",
+      "pawn_advance",
+      "pawn_deviation",
+      "prophecy",
+      "purify",
+      "radar",
+      "rook_bend",
+      "shadow_contract",
+      "shadow_pass",
+      "shelter",
+      "slow",
+      "watch_vow"
+    ],
+    "battlePerftCases": [
+      {
+        "position": "initial",
+        "depth": 1,
+        "expected": 20,
+        "actual": 20
+      },
+      {
+        "position": "initial",
+        "depth": 2,
+        "expected": 400,
+        "actual": 400
+      },
+      {
+        "position": "initial",
+        "depth": 3,
+        "expected": 8902,
+        "actual": 8902
+      },
+      {
+        "position": "kiwipete",
+        "depth": 1,
+        "expected": 48,
+        "actual": 48
+      },
+      {
+        "position": "kiwipete",
+        "depth": 2,
+        "expected": 2039,
+        "actual": 2039
+      },
+      {
+        "position": "position3",
+        "depth": 1,
+        "expected": 14,
+        "actual": 14
+      },
+      {
+        "position": "position3",
+        "depth": 2,
+        "expected": 191,
+        "actual": 191
+      },
+      {
+        "position": "position3",
+        "depth": 3,
+        "expected": 2812,
+        "actual": 2812
+      },
+      {
+        "position": "position4",
+        "depth": 1,
+        "expected": 6,
+        "actual": 6
+      },
+      {
+        "position": "position4",
+        "depth": 2,
+        "expected": 264,
+        "actual": 264
+      },
+      {
+        "position": "position4",
+        "depth": 3,
+        "expected": 9467,
+        "actual": 9467
+      },
+      {
+        "position": "position5",
+        "depth": 1,
+        "expected": 44,
+        "actual": 44
+      },
+      {
+        "position": "position5",
+        "depth": 2,
+        "expected": 1486,
+        "actual": 1486
+      },
+      {
+        "position": "position6",
+        "depth": 1,
+        "expected": 46,
+        "actual": 46
+      },
+      {
+        "position": "position6",
+        "depth": 2,
+        "expected": 2079,
+        "actual": 2079
+      }
+    ],
+    "battlePerftNodes": 1088,
+    "battlePerftTransitions": 1928,
+    "terminalBeforeLeaf": 0,
+    "oracle": "Existing tracked battle_contract/v1/perft.json, source https://chessprogramming.org/Perft_Results. Traverses actual Battle authority moves and passes card windows; no card played. Codec assertions are self-consistency invariants, not independent rules oracle."
+  },
+  "focusedFlutter": {
+    "pass": 38,
+    "fail": 0,
+    "skip": 0,
+    "exit": 0,
+    "firstAttempt": {
+      "assertionsExecuted": 0,
+      "loadErrors": 3,
+      "reason": "Sandbox loopback socket denied",
+      "accepted": false
+    }
+  },
+  "focusedDirectNode": {
+    "status": "PASS",
+    "rows": [
+      {
+        "file": "v218-rule-actions.test.js",
+        "exitCode": 0,
+        "error": null,
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      {
+        "file": "v223-removal-identity.test.js",
+        "exitCode": 0,
+        "error": null,
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      {
+        "file": "v224-card-wire-targets.test.js",
+        "exitCode": 0,
+        "error": null,
+        "tests": 31,
+        "pass": 31,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      }
+    ],
+    "counts": {
+      "tests": 40,
+      "pass": 40,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "wireBridge": {
+    "requests": 212,
+    "valid": 90,
+    "rejected": 122,
+    "divergences": 0,
+    "countsIncludedInDirectNode": true
+  },
+  "excludedInitialNodeAttempts": [
+    "targeted-node-first-runner-timeout.log",
+    "targeted-node-second-pipe-runner-stopped.log",
+    "targeted-node-third-pipe-runner-stopped.log"
+  ],
+  "newRepositoryTests": 0,
+  "newGeneratedQaAssets": 0,
+  "fullSuiteRun": false,
+  "independentCompleteOracle": false,
+  "noReleaseAcceptanceClaim": true
+}

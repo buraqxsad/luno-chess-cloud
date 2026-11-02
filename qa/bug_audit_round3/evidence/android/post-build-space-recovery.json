@@ -1,0 +1,235 @@
+{
+  "canonical_apk_sha256": "12e00ef03700275a6af0c46ab42a01fcdf2b17afd624e46aa02b05b5d81ca8ec",
+  "only_completed_rebuildable_debug_intermediates": true,
+  "removed": [
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/aar_metadata_check/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/android_res_source_set_path_map/debug",
+      "bytes": 10314
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/annotation_processor_list/debug",
+      "bytes": 2
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/apk_ide_redirect_file/debug",
+      "bytes": 81
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/app_metadata/debug",
+      "bytes": 56
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/assets/debug",
+      "bytes": 190947029
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/compatible_screen_manifest/debug",
+      "bytes": 190
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/compile_and_runtime_r_class_jar/debug",
+      "bytes": 609645
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/compile_r_class_jar/debug",
+      "bytes": 3086
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/compile_symbol_list/debug",
+      "bytes": 714
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/compiled_navigation_res/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/compressed_assets/debug",
+      "bytes": 137895744
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/data_binding_layout_info_type_merge/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/data_binding_layout_info_type_package/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/desugar_graph/debug",
+      "bytes": 470
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/dex/debug",
+      "bytes": 19965056
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/dex_archive_input_jar_hashes/debug",
+      "bytes": 389
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/dex_number_of_buckets_file/debug",
+      "bytes": 1
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/duplicate_classes_check/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/external_file_lib_dex_archives/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/external_libs_dex_archive/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/external_libs_dex_archive_with_artifact_transforms/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/flutter/debug",
+      "bytes": 191252012
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_dex/debug",
+      "bytes": 1228
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_external_lib/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_external_libs_artifact_transform/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_file_lib/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_mixed_scope/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_project/debug",
+      "bytes": 3548
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/global_synthetics_subproject/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/incremental/debug",
+      "bytes": 2353735
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/java_res/debug",
+      "bytes": 24
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/javac/debug",
+      "bytes": 3506
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/linked_resources_binary_format/debug",
+      "bytes": 1545839
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/local_only_symbol_list/debug",
+      "bytes": 601
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/manifest_merge_blame_file/debug",
+      "bytes": 58061
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_java_res/debug",
+      "bytes": 35796
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_jni_libs/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_manifest/debug",
+      "bytes": 29580
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_manifests/debug",
+      "bytes": 15176
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_native_libs/debug",
+      "bytes": 644861376
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_res/debug",
+      "bytes": 1558784
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_res_blame_folder/debug",
+      "bytes": 1668512
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/merged_test_only_native_libs/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/mixed_scope_dex_archive/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/navigation_json/debug",
+      "bytes": 2
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/nested_resources_validation_report/debug",
+      "bytes": 15
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/packaged_manifests/debug",
+      "bytes": 15178
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/packaged_res/debug",
+      "bytes": 649209
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/project_dex_archive/debug",
+      "bytes": 76923
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/runtime_symbol_list/debug",
+      "bytes": 118558
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/signing_config_versions/debug",
+      "bytes": 96
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/stable_resource_ids_file/debug",
+      "bytes": 102762
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/stripped_native_libs/debug",
+      "bytes": 54447820
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/sub_project_dex_archive/debug",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/symbol_list_with_package_name/debug",
+      "bytes": 561
+    },
+    {
+      "path": "/workspace/luno-chess/luno_chess/build/app/intermediates/validate_signing_config/debug",
+      "bytes": 0
+    }
+  ],
+  "bytes": 1248231679
+}

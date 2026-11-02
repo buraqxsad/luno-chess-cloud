@@ -1,0 +1,6 @@
+{
+  "functions/lib/battle-v1-rollout.js": {
+    "baseline_sha256": "d1208e562df65cdb3d0b8a6dbc24a45ebd645dcdd86ebbec35f49dc419198005",
+    "proposed_sha256": "186ba1fe1747e25deb36e09f1054d730d44f0d49f9a3b077b4a2bf980d4743a6"
+  }
+}

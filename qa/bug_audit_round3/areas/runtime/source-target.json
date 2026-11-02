@@ -1,0 +1,12 @@
+{
+  "baseline_commit": "d627e06a963e6ab5f85d479ac53cbb161eb8ce3f",
+  "observed_head": "58314762482ab93d82aba9551e2c9128ffce74cb",
+  "friendly_sha256": "24db67ece22b41a0f70a42c75aea612365564e86796aa21916910d915f99dd9a",
+  "captured_friendly_matches_baseline": true,
+  "working_friendly_sha256": "4a223b1c1c5a655a63d40b83009d67a0fe492850c945e6dceca061178b9ca06b",
+  "respond_transact_scope_matches_working_source": true,
+  "dependencies": {
+    "functions/lib/battle-v1.js": "04d7a086a84091f2a490f3715ade0bc14fd9bacb5589f9b85409b1f7bd6bbffa",
+    "functions/rules-v1/dist/src/online/protocol.js": "e93fb5f07428db4e368d6f9e56148e5d1ef14c14a98bc21b29652e9817fcaff9"
+  }
+}

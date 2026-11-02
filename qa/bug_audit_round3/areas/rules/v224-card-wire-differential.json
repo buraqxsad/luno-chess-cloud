@@ -1,0 +1,8 @@
+{
+  "requests": 210,
+  "valid": 90,
+  "rejected": 120,
+  "completeStatesCompared": 210,
+  "completeLegalSetsCompared": 210,
+  "divergences": 0
+}

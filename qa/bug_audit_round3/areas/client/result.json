@@ -1,0 +1,115 @@
+{
+  "area": "Flutter client identity/session/local persistence/deck/social/route-modal lifecycle",
+  "recorded_utc": "2026-11-02T11:54:21.061319+00:00",
+  "baseline_commit": "d627e06a963e6ab5f85d479ac53cbb161eb8ce3f",
+  "new_verified_bug_families": 2,
+  "severity_counts": {
+    "P2": 2
+  },
+  "new_verified_unfixed_in_scope": 0,
+  "bugs": [
+    {
+      "id": "R3-CLIENT-01",
+      "severity": "P2",
+      "title": "Departure archive loses edits accepted while preserving the departing account",
+      "file": "luno_chess/lib/models/game_store.dart",
+      "before": {
+        "canonical_log": "canonical-before.log",
+        "individual_log": "departure-before-valid.log",
+        "individual_pass": 1,
+        "individual_fail": 1,
+        "expanded_log": "departure-before-expanded-valid.log",
+        "expanded_pass": 1,
+        "expanded_fail": 6
+      },
+      "observable": "chooseUsername completes and the durable active snapshot contains latest_name, but switching back restores original_name.",
+      "fix": "Before synchronous owner commit, preserve latest departure JSON after all asynchronous archive/recovery writes. At most three correction attempts; persistent churn or write failure rejects the switch with the current owner, revision and edits intact.",
+      "new_cases": 7
+    },
+    {
+      "id": "R3-CLIENT-02",
+      "severity": "P2",
+      "title": "Guest-creation continuation starts its final read under a later session or state epoch",
+      "file": "luno_chess/lib/services/luno_online_service.dart",
+      "before": {
+        "canonical_log": "canonical-before.log",
+        "expanded_log": "bootstrap-before-six.log",
+        "expanded_pass": 2,
+        "expanded_fail": 4,
+        "request_owner_log": "bootstrap-before-expanded.log"
+      },
+      "observable": "The original first-UID creation flow dispatches getPlayerState under second UID after its real local username write completes. Same-UID relogin, retry and local epoch reset also admit a fresh request from the stale continuation.",
+      "relation_to_prior_fix": "The earlier refreshState fix validates completion of one state read. This defect is the enclosing creation flow forgetting its original owner before initiating a distinct later read.",
+      "fix": "Capture original owner, request generation and bound store epoch in _ensureRemoteProfile, then validate before creation, after creation, and after local persistence before its final refreshState.",
+      "new_cases": 6
+    }
+  ],
+  "canonical_before": {
+    "log": "canonical-before.log",
+    "pass": 3,
+    "fail": 10,
+    "skip": 0,
+    "exit_code": 1,
+    "source_hashes": "canonical-before-source-hashes.txt",
+    "baseline_replay": "Both uniquely owned production files temporarily restored to saved exact baseline bytes under shared Flutter lock; fixed bytes restored by EXIT trap and verified afterward."
+  },
+  "final": {
+    "log": "client-final.log",
+    "pass": 124,
+    "fail": 0,
+    "skip": 0,
+    "exit_code": 0,
+    "files": 9,
+    "new_cases": 13,
+    "existing_cases": 111,
+    "command": "flock /workspace/luno-review/bug-audit-round3/flutter.lock bash -c 'source /workspace/toolchains/luno-env.sh; cd /workspace/luno-chess/luno_chess; flutter test --no-pub --concurrency=1 test/round3_client_departure_write_test.dart test/round3_client_bootstrap_continuation_test.dart test/account_store_isolation_test.dart test/v228_store_write_recovery_test.dart test/v229_store_boundary_test.dart test/v214_bootstrap_consent_test.dart test/system_hunt_client_refresh_boundary_test.dart test/server_state_ownership_test.dart test/v237_request_bootstrap_owner_test.dart --reporter expanded'"
+  },
+  "sources": [
+    {
+      "path": "luno_chess/lib/models/game_store.dart",
+      "fixed_sha256": "f5932f691465c57fee4ed124f4587d3ef13e9b2754e9ede8e45bcb35098cd79d",
+      "baseline_sha256": "857cc5be8e5678df7fef3a3f2c5d17d97b69484b22d512f95f57830bd2b38405"
+    },
+    {
+      "path": "luno_chess/lib/services/luno_online_service.dart",
+      "fixed_sha256": "09459e1f3eee4d516828b48d522b913acf71b0d297778b57a01a8f29917b4449",
+      "baseline_sha256": "a6e1d67f8a56fa1507e747cd11261442fb76daa5750b1410fb8dd8f1de91d8ac"
+    },
+    {
+      "path": "luno_chess/test/round3_client_departure_write_test.dart",
+      "fixed_sha256": "f335230ba6b97fa743637ada030f10630755aa08e55f6bdd9e6c178e59f97cb2"
+    },
+    {
+      "path": "luno_chess/test/round3_client_bootstrap_continuation_test.dart",
+      "fixed_sha256": "89f393d688162173ca8450e66dd02533988e5b48e04a36f4275db60c7e2ea345"
+    }
+  ],
+  "excluded_runs": [
+    {
+      "log": "departure-before.log",
+      "reason": "Flutter startup denied loopback socket; no test body ran."
+    },
+    {
+      "log": "departure-before-expanded.log",
+      "reason": "Agent test expansion was accidentally placed inside helper class; compilation failed before any case ran."
+    },
+    {
+      "log": "client-final-initial.log",
+      "reason": "Intermediate combined run had the same new-test compilation failure. This partial run is not the final result."
+    }
+  ],
+  "limits": [
+    "Targeted Flutter unit/widget-test execution with controlled HTTP, native auth test doubles and real in-memory SharedPreferences platform writes; no real Firebase/Google/Play acceptance.",
+    "No full suite, analyzer, APK build, Android emulator, real device performance, production deploy, upload, push, payment or signing changes by this agent.",
+    "No exhaustive no-bug claim. Source review of adjacent client boundaries found no additional independently proved defect. Existing release gates and golden failures remain open."
+  ],
+  "production_files_changed": [
+    "luno_chess/lib/models/game_store.dart",
+    "luno_chess/lib/services/luno_online_service.dart"
+  ],
+  "tests_added": [
+    "luno_chess/test/round3_client_departure_write_test.dart",
+    "luno_chess/test/round3_client_bootstrap_continuation_test.dart"
+  ],
+  "frozen": true
+}

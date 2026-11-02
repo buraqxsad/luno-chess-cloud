@@ -1,0 +1,13 @@
+{
+  "initial_backend": {
+    "pass": 1420,
+    "fail": 17,
+    "skip": 1
+  },
+  "infrastructure_spawn_eperm_cases": 15,
+  "stale_provider_call_count_cases": 2,
+  "runtime_changed": false,
+  "test_change": "Three exact provider verify-count expectations in two tests changed1\u21922 to match post-registration verification; gold, consume1, replay idempotency and no-extra-call invariants retained.",
+  "pipeline_harness_defect": "Outer shell wrote0 after recording inner build precondition failure1; corrected explicit exit status propagation. No APK was produced or accepted on this failed attempt.",
+  "timestamp": "2026-11-02T13:49:13.717360+00:00"
+}

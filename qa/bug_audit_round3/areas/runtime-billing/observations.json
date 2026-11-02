@@ -1,0 +1,57 @@
+[
+  {
+    "case": "pregrant-refund",
+    "expected_gold": 1250,
+    "actual_gold": 1250,
+    "ungranted_marker": true,
+    "purchase_receipt_absent": true,
+    "error_code": "purchase-revoked",
+    "provider_consume_calls": 0
+  },
+  {
+    "case": "stale-subscription-profile-grant",
+    "premium_until": 0,
+    "current_claim_active": false,
+    "current_claim_revision": 2,
+    "installed_profile_fence": 2,
+    "error_code": "subscription-state-changed",
+    "provider_lookups": 3,
+    "newer_claim_unchanged": true
+  },
+  {
+    "case": "stale-subscription-granted-claim",
+    "premium_until": 0,
+    "current_claim_active": false,
+    "current_claim_revision": 2,
+    "installed_profile_fence": 2,
+    "error_code": "subscription-state-changed",
+    "provider_lookups": 3,
+    "newer_claim_unchanged": true
+  },
+  {
+    "case": "fresh-owned-inactive-without-rtdn",
+    "initial_owned_grant": true,
+    "initial_claim_revision": 3,
+    "current_claim_revision": 4,
+    "installed_profile_fence": 4,
+    "premium_until": 0,
+    "current_claim_active": false,
+    "entitlement_status": "SUBSCRIPTION_STATE_ON_HOLD",
+    "provider_lookups_for_inactive": 1,
+    "rtdn_invoked_by_test": false,
+    "expected_gold": 1250,
+    "actual_gold": 1250
+  },
+  {
+    "case": "first-inapp-ACKed-unmatched-refund",
+    "provider_lookups": 2,
+    "event_status": "complete",
+    "unmatched_status": "awaiting-client-claim",
+    "redelivery_duplicate": true,
+    "error_code": "purchase-not-complete",
+    "expected_gold": 1250,
+    "actual_gold": 1250,
+    "receipt_absent": true,
+    "consume_calls": 0
+  }
+]

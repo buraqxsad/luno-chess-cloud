@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "file": "v218-rule-actions.test.js",
+      "exitCode": 0,
+      "error": null,
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    {
+      "file": "v223-removal-identity.test.js",
+      "exitCode": 0,
+      "error": null,
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    {
+      "file": "v224-card-wire-targets.test.js",
+      "exitCode": 0,
+      "error": null,
+      "tests": 31,
+      "pass": 31,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  ],
+  "counts": {
+    "tests": 40,
+    "pass": 40,
+    "fail": 0,
+    "skipped": 0
+  }
+}

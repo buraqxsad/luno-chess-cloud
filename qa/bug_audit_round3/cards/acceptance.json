@@ -1,0 +1,296 @@
+{
+  "flutter_source_commit": "000faaaada3106bc5bf306d02498821f046773e2",
+  "build_source_commit": "8b12d5aa649d26b1eb67dd1252922fea53532bbd",
+  "identical_flutter_inputs": true,
+  "scope": "Actual Flutter BattleV1Screen, fixture transport/defaultTR; not native acceptance.",
+  "rows": [
+    {
+      "card": "radar",
+      "atlas": "arcane",
+      "cases": [
+        "V239 radar identity target duplicate audio and background",
+        "V239 radar timeout clears active accepted feedback",
+        "V239 radar resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "prophecy",
+      "atlas": "veil",
+      "cases": [
+        "V239 prophecy identity target duplicate audio and background",
+        "V239 prophecy timeout clears active accepted feedback",
+        "V239 prophecy resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "shelter",
+      "atlas": "crystal",
+      "cases": [
+        "V239 shelter identity target duplicate audio and background",
+        "V239 shelter timeout clears active accepted feedback",
+        "V239 shelter resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "chain",
+      "atlas": "binding",
+      "cases": [
+        "V239 chain identity target duplicate audio and background",
+        "V239 chain timeout clears active accepted feedback",
+        "V239 chain resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "slow",
+      "atlas": "binding",
+      "cases": [
+        "V239 slow identity target duplicate audio and background",
+        "V239 slow timeout clears active accepted feedback",
+        "V239 slow resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "pawn_deviation",
+      "atlas": "arcane",
+      "cases": [
+        "V239 pawn_deviation identity target duplicate audio and background",
+        "V239 pawn_deviation timeout clears active accepted feedback",
+        "V239 pawn_deviation resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "pawn_advance",
+      "atlas": "crystal",
+      "cases": [
+        "V239 pawn_advance identity target duplicate audio and background",
+        "V239 pawn_advance timeout clears active accepted feedback",
+        "V239 pawn_advance resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "locked_square",
+      "atlas": "binding",
+      "cases": [
+        "V239 locked_square identity target duplicate audio and background",
+        "V239 locked_square timeout clears active accepted feedback",
+        "V239 locked_square resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "freeze",
+      "atlas": "crystal",
+      "cases": [
+        "V239 freeze identity target duplicate audio and background",
+        "V239 freeze timeout clears active accepted feedback",
+        "V239 freeze resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "purify",
+      "atlas": "crystal",
+      "cases": [
+        "V239 purify identity target duplicate audio and background",
+        "V239 purify timeout clears active accepted feedback",
+        "V239 purify resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "mine",
+      "atlas": "binding",
+      "cases": [
+        "V239 mine identity target duplicate audio and background",
+        "V239 mine timeout clears active accepted feedback",
+        "V239 mine resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "break_seal",
+      "atlas": "binding",
+      "cases": [
+        "V239 break_seal identity target duplicate audio and background",
+        "V239 break_seal timeout clears active accepted feedback",
+        "V239 break_seal resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "fog",
+      "atlas": "veil",
+      "cases": [
+        "V239 fog identity target duplicate audio and background",
+        "V239 fog timeout clears active accepted feedback",
+        "V239 fog resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "mana_sabotage",
+      "atlas": "veil",
+      "cases": [
+        "V239 mana_sabotage identity target duplicate audio and background",
+        "V239 mana_sabotage timeout clears active accepted feedback",
+        "V239 mana_sabotage resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "card_block",
+      "atlas": "binding",
+      "cases": [
+        "V239 card_block identity target duplicate audio and background",
+        "V239 card_block timeout clears active accepted feedback",
+        "V239 card_block resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "rook_bend",
+      "atlas": "binding",
+      "cases": [
+        "V239 rook_bend identity target duplicate audio and background",
+        "V239 rook_bend timeout clears active accepted feedback",
+        "V239 rook_bend resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "angry_n",
+      "atlas": "crystal",
+      "cases": [
+        "V239 angry_n identity target duplicate audio and background",
+        "V239 angry_n timeout clears active accepted feedback",
+        "V239 angry_n resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "shadow_pass",
+      "atlas": "veil",
+      "cases": [
+        "V239 shadow_pass identity target duplicate audio and background",
+        "V239 shadow_pass timeout clears active accepted feedback",
+        "V239 shadow_pass resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "hunt_vow",
+      "atlas": "binding",
+      "cases": [
+        "V239 hunt_vow identity target duplicate audio and background",
+        "V239 hunt_vow timeout clears active accepted feedback",
+        "V239 hunt_vow resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "watch_vow",
+      "atlas": "arcane",
+      "cases": [
+        "V239 watch_vow identity target duplicate audio and background",
+        "V239 watch_vow timeout clears active accepted feedback",
+        "V239 watch_vow resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "echo",
+      "atlas": "veil",
+      "cases": [
+        "V239 echo identity target duplicate audio and background",
+        "V239 echo timeout clears active accepted feedback",
+        "V239 echo resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "fate_exchange",
+      "atlas": "veil",
+      "cases": [
+        "V239 fate_exchange identity target duplicate audio and background",
+        "V239 fate_exchange timeout clears active accepted feedback",
+        "V239 fate_exchange resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "shadow_contract",
+      "atlas": "veil",
+      "cases": [
+        "V239 shadow_contract identity target duplicate audio and background",
+        "V239 shadow_contract timeout clears active accepted feedback",
+        "V239 shadow_contract resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    },
+    {
+      "card": "board_seal",
+      "atlas": "binding",
+      "cases": [
+        "V239 board_seal identity target duplicate audio and background",
+        "V239 board_seal timeout clears active accepted feedback",
+        "V239 board_seal resign clears active accepted feedback"
+      ],
+      "current_flutter_TR": "PASS",
+      "separate_EN_card_run": "NOT RUN",
+      "native_android": "NOT RUN"
+    }
+  ]
+}

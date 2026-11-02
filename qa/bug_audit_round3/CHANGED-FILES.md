@@ -1,0 +1,21 @@
+# Değişen dosyalar
+
+- `functions/index.js`
+- `functions/lib/battle-v1-friendly.js`
+- `functions/lib/battle-v1-recovery.js`
+- `functions/lib/battle-v1-rollout.js`
+- `functions/test/retained-record-race.test.js`
+- `functions/test/round3-economy-unmatched-refund.test.js`
+- `functions/test/round3-online-enqueue-replay.test.js`
+- `functions/test/round3-online-settlement-erasure.test.js`
+- `functions/test/round3-runtime-friendly-cold.test.js`
+- `functions/test/round3-security-v1-invite-erasure.test.js`
+- `functions/test/v221-backend-restore-invariants.test.js`
+- `luno_chess/lib/models/game_store.dart`
+- `luno_chess/lib/screens/battle_v1_screen.dart`
+- `luno_chess/lib/services/luno_billing_service.dart`
+- `luno_chess/lib/services/luno_online_service.dart`
+- `luno_chess/test/round3_battle_selection_test.dart`
+- `luno_chess/test/round3_client_bootstrap_continuation_test.dart`
+- `luno_chess/test/round3_client_departure_write_test.dart`
+- `luno_chess/test/round3_economy_pending_restore_test.dart`

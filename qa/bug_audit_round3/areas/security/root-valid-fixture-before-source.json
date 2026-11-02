@@ -1,0 +1,5 @@
+{
+  "functions/index.js": "25bc0ce394bf4b8852986d8c74a5896b7f4248a65210c8e539c3d486af4ef870",
+  "functions/lib/battle-v1-friendly.js": "24db67ece22b41a0f70a42c75aea612365564e86796aa21916910d915f99dd9a",
+  "functions/test/round3-security-v1-invite-erasure.test.js": "b43263b0f745a0ac5ccfc954ef592e2e483be7c12e0e8b8b283978f577482a8a"
+}

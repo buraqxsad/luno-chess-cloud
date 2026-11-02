@@ -1,0 +1,99 @@
+[
+  {
+    "case": "raw-sdk-cold-null-cas-retry",
+    "trace": [
+      {
+        "input_null": true,
+        "invite_present": false,
+        "output_undefined": false,
+        "output_null": true
+      },
+      {
+        "input_null": false,
+        "invite_present": true,
+        "output_undefined": false,
+        "output_null": false
+      }
+    ],
+    "committed": true,
+    "durable": {
+      "matchInvites": {
+        "runtime_guest": {
+          "runtime_sender": {
+            "status": "pending"
+          }
+        }
+      },
+      "unrelated": {
+        "preserved": 7
+      }
+    }
+  },
+  {
+    "case": "friendly-cold-existing-invite",
+    "seed_root_verified": true,
+    "tested_app_reads_before_transaction": 0,
+    "trace": [
+      {
+        "input_null": true,
+        "invite_present": false,
+        "output_undefined": false,
+        "output_null": true
+      },
+      {
+        "input_null": false,
+        "invite_present": true,
+        "output_undefined": false,
+        "output_null": false
+      }
+    ],
+    "result": {
+      "ok": true,
+      "accepted": false
+    },
+    "durable": {
+      "unrelated": {
+        "preserved": 7
+      }
+    },
+    "root_unchanged": false
+  },
+  {
+    "case": "friendly-warm-existing-invite",
+    "same_seed_as_cold": true,
+    "trace": [
+      {
+        "input_null": false,
+        "invite_present": true,
+        "output_undefined": false,
+        "output_null": false
+      }
+    ],
+    "result": {
+      "ok": true,
+      "accepted": false
+    },
+    "durable": {
+      "unrelated": {
+        "preserved": 7
+      }
+    }
+  },
+  {
+    "case": "friendly-truly-empty-root",
+    "independent_seed_root": null,
+    "trace": [
+      {
+        "input_null": true,
+        "invite_present": false,
+        "output_undefined": false,
+        "output_null": true
+      }
+    ],
+    "error": {
+      "code": "INVITE_UNAVAILABLE",
+      "status": 404
+    },
+    "durable": null
+  }
+]

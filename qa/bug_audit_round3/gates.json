@@ -1,0 +1,62 @@
+[
+  {
+    "gate": "Dokuz yeni doğrulanmış kaynak hatası",
+    "status": "PASS",
+    "reason": "Hepsi başarısız tekrar üretimden sonra düzeltildi; bu turdan açık doğrulanmış yeni kaynak hatası 0. Evrensel hatasızlık kanıtı değildir."
+  },
+  {
+    "gate": "Flutter analiz",
+    "status": "PASS",
+    "reason": "No issues found; final Dart kaynakları değişmedi."
+  },
+  {
+    "gate": "Tam Flutter",
+    "status": "FAIL",
+    "reason": "11803 geçti /97 başarısız /0 atlandı. 97 eski pixel farkı açık."
+  },
+  {
+    "gate": "Tam backend",
+    "status": "PASS",
+    "reason": "1437 geçti /0 başarısız /1 atlandı; doğrudan gerçek TAP."
+  },
+  {
+    "gate": "TypeScript ve differential",
+    "status": "PASS",
+    "reason": "376 test; 3101 senaryo/10967 durum, 0 ayrışma."
+  },
+  {
+    "gate": "Yerel gerçek RTDB/Admin SDK",
+    "status": "PASS",
+    "reason": "Billing 5/5 ve cold-friendly 4/4. Google/admission/Auth bağımlılıkları ilgili fixture sınırlarında fake; yalnız localhost transport koşulu bellekte değiştirildi."
+  },
+  {
+    "gate": "Güncel ARM64 debug APK statik kabulü",
+    "status": "PASS",
+    "reason": "Aynı debug sertifikası, 750 asset, targetSdk 36, ELF/ZIP statik 16 KB. Native runtime kabulü değildir."
+  },
+  {
+    "gate": "Önceki Android raster SIGSEGV",
+    "status": "FAIL / UNRESOLVED",
+    "reason": "Yeni sağlıklı Android ortamında kök neden/düzelme kanıtı yok."
+  },
+  {
+    "gate": "Yeni native yolculuk / fiziksel FPS-RAM-p95–p99 / gerçek 16 KB",
+    "status": "NOT RUN",
+    "reason": "KVM, donanım GPU ve fiziksel cihaz yok; yeni Android emulator açılmadı."
+  },
+  {
+    "gate": "Üretim Firebase / Google / App Check / Integrity",
+    "status": "BLOCKED",
+    "reason": "Staging/üretim kimlikleri ve servis kabulü yok."
+  },
+  {
+    "gate": "Play lisans Billing / Console / Pre-launch",
+    "status": "BLOCKED",
+    "reason": "Lisans hesabı, track ve Console erişimi yok; +19 uygunluğu doğrulanmadı."
+  },
+  {
+    "gate": "İmzalı release APK/AAB",
+    "status": "BLOCKED",
+    "reason": "Mevcut upload keystore/properties yok; imzalama koruması durdurdu. Kimlik değiştirilmedi."
+  }
+]

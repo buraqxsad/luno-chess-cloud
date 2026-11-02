@@ -1,0 +1,10 @@
+'use strict';
+const {readFileSync}=require('node:fs');
+const {Module}=require('node:module');
+const {dirname,resolve}=require('node:path');
+const source='/workspace/luno-chess/functions/lib/battle-v1-friendly.js';
+const captured=readFileSync(resolve(__dirname,'captured-friendly.cjs'),'utf8');
+const backend=new Module(source,module);backend.filename=source;
+backend.paths=Module._nodeModulePaths(dirname(source));require.cache[source]=backend;
+backend._compile(captured,source);backend.loaded=true;
+require('/workspace/luno-chess/functions/test/round3-runtime-friendly-cold.test.js');

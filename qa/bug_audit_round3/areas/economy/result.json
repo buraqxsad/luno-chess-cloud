@@ -1,0 +1,247 @@
+{
+  "scope": "Economy, Google Play server fulfillment/RTDN/refund/restore, Flutter billing pending/recovery, daily claim ordering",
+  "baselineCommit": "d627e06a963e6ab5f85d479ac53cbb161eb8ce3f",
+  "findings": [
+    {
+      "id": "R3-ECON-01",
+      "severity": "P1",
+      "title": "First consumable registration misses its only pre-claim refund RTDN",
+      "status": "fixed by root",
+      "before": {
+        "tests": 8,
+        "pass": 5,
+        "fail": 3
+      },
+      "after": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0
+      }
+    },
+    {
+      "id": "R3-ECON-02",
+      "severity": "P2",
+      "title": "Canceled pending Play receipt keeps future payments busy after successful empty restore",
+      "status": "fixed by root",
+      "before": {
+        "tests": 6,
+        "pass": 4,
+        "fail": 2
+      },
+      "after": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0
+      }
+    }
+  ],
+  "uniqueNewTests": 14,
+  "baseline": {
+    "backend": {
+      "log": "/workspace/luno-review/bug-audit-round3/economy/unmatched-refund-exact-baseline-final.log",
+      "indexOverride": "/workspace/luno-review/bug-audit-round3/economy/index.baseline.js",
+      "indexSha256": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+      "mechanism": "Node .js loader compiles exact baseline index with its original filename; billing dependencies unchanged by round3 patches. Memory DB and mocked Google API responses."
+    },
+    "flutter": {
+      "log": "/workspace/luno-review/bug-audit-round3/economy/pending-baseline-with-adapter.log",
+      "billingServiceSha256": "813628ad093dc2979fd94aef14e739b8c35798aada6a4b5cbbd3574a3a7773e5",
+      "newTestsPass": 4,
+      "newTestsFail": 2,
+      "existingAdapterPass": 10
+    }
+  },
+  "candidate": {
+    "newBackendTests": 8,
+    "pass": 8,
+    "fail": 0,
+    "log": "/workspace/luno-review/bug-audit-round3/economy/unmatched-refund-candidate-final8.log",
+    "indexSha256": "25bc0ce394bf4b8852986d8c74a5896b7f4248a65210c8e539c3d486af4ef870",
+    "historicalOldProviderCountMismatch": {
+      "tests": 66,
+      "pass": 65,
+      "fail": 1,
+      "log": "/workspace/luno-review/bug-audit-round3/economy/candidate-retained-record-race.test.js.log",
+      "resolution": "Explicit initial provider lookups 2 and no additional lookup on completed replay; consume1/grant once assertions preserved."
+    }
+  },
+  "actualBackend": {
+    "files": [
+      {
+        "file": "functions/test/round3-economy-unmatched-refund.test.js",
+        "exitCode": 0,
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 0,
+        "sha256": "b02b6a36ef8257387e03253cbc160c627f6b335b74f19d0df59ffe626f51b24d",
+        "log": "/workspace/luno-review/bug-audit-round3/economy/actual-round3-economy-unmatched-refund.test.js.log"
+      },
+      {
+        "file": "functions/test/system-hunt-economy-refund-grant-race.test.js",
+        "exitCode": 0,
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "skipped": 0,
+        "sha256": "b805af7ab79fcd7cb49898abd84d3198ced141acd6b91f6fccb5790c7db62036",
+        "log": "/workspace/luno-review/bug-audit-round3/economy/actual-system-hunt-economy-refund-grant-race.test.js.log"
+      },
+      {
+        "file": "functions/test/system-hunt-economy-subscription-stale-fulfillment.test.js",
+        "exitCode": 0,
+        "tests": 20,
+        "pass": 20,
+        "fail": 0,
+        "skipped": 0,
+        "sha256": "af6527eea53b73798f9814e0bf8e0d20171a05b8d9bd519b1eec0e5af71e80da",
+        "log": "/workspace/luno-review/bug-audit-round3/economy/actual-system-hunt-economy-subscription-stale-fulfillment.test.js.log"
+      },
+      {
+        "file": "functions/test/round2-economy-subscription-inactive-refresh.test.js",
+        "exitCode": 0,
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 0,
+        "sha256": "4e08521b95a57f5ff4c41ed06c9bbc704cd7db424e117c1425bdbb176d945f7d",
+        "log": "/workspace/luno-review/bug-audit-round3/economy/actual-round2-economy-subscription-inactive-refresh.test.js.log"
+      },
+      {
+        "file": "functions/test/subscription-reconciliation-race.test.js",
+        "exitCode": 0,
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "skipped": 0,
+        "sha256": "76b056991aa13d14e6f91a62256e5144fef77785a5c7b0a4c6bfff79700f6c3a",
+        "log": "/workspace/luno-review/bug-audit-round3/economy/actual-subscription-reconciliation-race.test.js.log"
+      },
+      {
+        "file": "functions/test/retained-record-race.test.js",
+        "exitCode": 0,
+        "tests": 66,
+        "pass": 66,
+        "fail": 0,
+        "skipped": 0,
+        "sha256": "7a9306989d57eec7b80409c2bbeb543f247a1086755a39ced7589296717f4c26",
+        "log": "/workspace/luno-review/bug-audit-round3/economy/actual-retained-record-race.test.js.log"
+      },
+      {
+        "file": "functions/test/v217-billing-recovery.test.js",
+        "exitCode": 0,
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0,
+        "sha256": "a421b52f57933b7a8a793e56282e72523d9ed7a6a116f67dbe0f92f5d6a61feb",
+        "log": "/workspace/luno-review/bug-audit-round3/economy/actual-v217-billing-recovery.test.js.log"
+      },
+      {
+        "file": "functions/test/v238-daily-claim-ordering.test.js",
+        "exitCode": 0,
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "skipped": 0,
+        "sha256": "b035ff088ef3a240b335dd5f1ce63ea8f6bce989c4cb7de93f9dc789c2678612",
+        "log": "/workspace/luno-review/bug-audit-round3/economy/actual-v238-daily-claim-ordering.test.js.log"
+      },
+      {
+        "file": "functions/test/v239-daily-acceptance.test.js",
+        "exitCode": 0,
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0,
+        "sha256": "b773f3cfc444425a72c54690193b25137a9959f6a01f1a34c19334b2c70f8e95",
+        "log": "/workspace/luno-review/bug-audit-round3/economy/actual-v239-daily-acceptance.test.js.log"
+      }
+    ],
+    "tests": 134,
+    "pass": 134,
+    "fail": 0,
+    "skipped": 0,
+    "execution": "Each file executed directly as node FILE, sequentially. Actual TAP counts."
+  },
+  "actualFlutter": {
+    "tests": 72,
+    "pass": 72,
+    "fail": 0,
+    "skipped": 0,
+    "log": "/workspace/luno-review/bug-audit-round3/economy/pending-actual-focused.log",
+    "files": [
+      {
+        "file": "luno_chess/test/round3_economy_pending_restore_test.dart",
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "sha256": "3b7c9b9ebd1fae1237b499472240a92fb77092773dfe05f04b485579d7f86cb4"
+      },
+      {
+        "file": "luno_chess/test/luno_billing_service_test.dart",
+        "tests": 32,
+        "pass": 32,
+        "fail": 0,
+        "sha256": "3d498eb820c8ab0241f0edf0e6d19223328e7853d5016857370b4b5dc49941ee"
+      },
+      {
+        "file": "luno_chess/test/luno_google_play_billing_adapter_test.dart",
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "sha256": "b4584cc27c3761f93b54de1d43860cf4c65bdc29e87fde4a8f3e279c384f046a"
+      },
+      {
+        "file": "luno_chess/test/v220_billing_restore_test.dart",
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "sha256": "0b37a9dbcbc5b8a15e9880450ae3beb9650fedbfc08837dd4853fdb4626de295"
+      },
+      {
+        "file": "luno_chess/test/billing_historical_receipt_launch_test.dart",
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "sha256": "dd365a9aac5f4edaf45a638e5b337e1ee4ca577bd749c3cd14090bc5a9b98b95"
+      },
+      {
+        "file": "luno_chess/test/round2_client_billing_snapshot_order_test.dart",
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "sha256": "9865c10bf89fbd51125db35be7afbf2ef08aee739d89d993e04def6b0f15f513"
+      }
+    ]
+  },
+  "actualSourceHashes": {
+    "functions/index.js": "25bc0ce394bf4b8852986d8c74a5896b7f4248a65210c8e539c3d486af4ef870",
+    "functions/lib/economy.js": "ca3a1d574d42db1aa5ec3a7a1a063a80ce86b1f011024889540f885df6b28317",
+    "functions/lib/membership.js": "932b02b163e69c8d624c9c1da887267398e5945324ea4fe477e3ea6159c7a58b",
+    "functions/test/retained-record-race.test.js": "7a9306989d57eec7b80409c2bbeb543f247a1086755a39ced7589296717f4c26",
+    "functions/test/round3-economy-unmatched-refund.test.js": "b02b6a36ef8257387e03253cbc160c627f6b335b74f19d0df59ffe626f51b24d",
+    "luno_chess/lib/services/luno_billing_service.dart": "d956fd878ac4a1f87b7a187ac355bc549e51ac326bad8b99f0aee02a9ea5635d",
+    "luno_chess/lib/services/luno_google_play_billing_adapter.dart": "a7054f323496affb4bbfce842d9ca0c55c0b4572df7e30678235a4a7274657bf",
+    "luno_chess/test/round3_economy_pending_restore_test.dart": "3b7c9b9ebd1fae1237b499472240a92fb77092773dfe05f04b485579d7f86cb4"
+  },
+  "patches": {
+    "unmatched-refund.patch": "00459fb6f90a3e30fdb20fcf37de673877dba2bdcf980e53ea558cc8e618ac97",
+    "retained-record-expectation.patch": "083c624f2f674ce7bab35e4dbd4a62d0c5ed18ff9a6999095b498bb8f165f8ad",
+    "pending-restore.patch": "ab0389b1bfe44dfa6a39f92fe0acc81c35620d88da138a41089035179ab154ad"
+  },
+  "excludedStartupAttempts": [
+    {
+      "reason": "Initial working-directory error resulted in missing test file; no assertions executed.",
+      "countedAsBug": false
+    },
+    {
+      "reason": "Sandbox blocked Flutter loopback server socket (EPERM), before tests loaded; rerun with command-specific network permission.",
+      "log": "/workspace/luno-review/bug-audit-round3/economy/pending-baseline-sandbox-blocked.log",
+      "countedAsBug": false
+    }
+  ],
+  "sdkAndProductionLimits": "Node exercises real exported fulfillment and PubSub onMessage handler with memory DB and mock Google replies. Flutter service/adapter tests use fake ports; installed real Android plugin query/mapping source inspected. No new actual RTDB/Admin SDK, Google Play, Firebase production, App Check, license payment, real device, deployment, signing, upload or push acceptance performed.",
+  "noOtherNewBug": "No further confirmed new bug in the scanned billing/debt/subscription/daily boundaries; scope frozen at parent request. This is not universal bug-free or release acceptance.",
+  "productionEditsByAgent": false
+}

@@ -1,0 +1,1471 @@
+{
+  "scope": "backend",
+  "runner": "Each *.test.js executed directly in a fresh Node process; actual TAP case counts, no file-level wrapper acceptance.",
+  "files": 97,
+  "totals": {
+    "tests": 1438,
+    "pass": 1437,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 1,
+    "todo": 0
+  },
+  "results": [
+    {
+      "file": "test/account-deletion-gate.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.963,
+      "log": "account-deletion-gate.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/account-metadata-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 26,
+        "pass": 26,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.747,
+      "log": "account-metadata-erasure.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/android-startup-diagnostics.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.168,
+      "log": "android-startup-diagnostics.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/api-route-boundary.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 54,
+        "pass": 54,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.365,
+      "log": "api-route-boundary.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/card-stress.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 2.462,
+      "log": "card-stress.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/client-source.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 24,
+        "pass": 24,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 2.982,
+      "log": "client-source.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/core.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 56,
+        "pass": 56,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.088,
+      "log": "core.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/dm-receipt-race.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 27,
+        "pass": 27,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.772,
+      "log": "dm-receipt-race.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/identity-index-race.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 19,
+        "pass": 19,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.881,
+      "log": "identity-index-race.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/legal-consent.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.721,
+      "log": "legal-consent.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/local-emulator-guard.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 39,
+        "pass": 39,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.178,
+      "log": "local-emulator-guard.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/pass-chest-recovery.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 42,
+        "pass": 42,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.303,
+      "log": "pass-chest-recovery.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/pass-purchase-recovery.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 55,
+        "pass": 55,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.374,
+      "log": "pass-purchase-recovery.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/player-state-freshness.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 28,
+        "pass": 28,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.02,
+      "log": "player-state-freshness.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/profile-deletion-race.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 9,
+        "pass": 9,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.18,
+      "log": "profile-deletion-race.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/public-profile-contract.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.028,
+      "log": "public-profile-contract.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/public-profile-deletion-race.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 11,
+        "pass": 11,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.026,
+      "log": "public-profile-deletion-race.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/public-profile-publication.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 9,
+        "pass": 9,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.922,
+      "log": "public-profile-publication.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/ranked-cold-cache.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.023,
+      "log": "ranked-cold-cache.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/ranked.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 33,
+        "pass": 33,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.423,
+      "log": "ranked.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/release-blockers.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 9,
+        "pass": 9,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.22,
+      "log": "release-blockers.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/request-deletion-race.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 15,
+        "pass": 15,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.078,
+      "log": "request-deletion-race.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/retained-data-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 21,
+        "pass": 21,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.438,
+      "log": "retained-data-erasure.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/retained-record-race.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 66,
+        "pass": 66,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 3.512,
+      "log": "retained-record-race.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/reward-boundaries.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.234,
+      "log": "reward-boundaries.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/round2-economy-subscription-inactive-refresh.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 3.3,
+      "log": "round2-economy-subscription-inactive-refresh.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/round2-online-admission-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.923,
+      "log": "round2-online-admission-erasure.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/round2-security-notification-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 14,
+        "pass": 14,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.737,
+      "log": "round2-security-notification-erasure.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/round2-security-report-conversation.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.032,
+      "log": "round2-security-report-conversation.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/round3-economy-unmatched-refund.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 2.546,
+      "log": "round3-economy-unmatched-refund.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/round3-online-enqueue-replay.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.331,
+      "log": "round3-online-enqueue-replay.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/round3-online-settlement-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.123,
+      "log": "round3-online-settlement-erasure.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/round3-runtime-friendly-cold.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.168,
+      "log": "round3-runtime-friendly-cold.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/round3-security-v1-invite-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.04,
+      "log": "round3-security-v1-invite-erasure.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/settlement-audit.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.17,
+      "log": "settlement-audit.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/settlement-presence.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.119,
+      "log": "settlement-presence.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/settlement-recovery.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 19,
+        "pass": 19,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.235,
+      "log": "settlement-recovery.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/shop-chest-recovery.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 53,
+        "pass": 53,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.381,
+      "log": "shop-chest-recovery.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/soft-purchase-recovery.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 110,
+        "pass": 110,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 2.245,
+      "log": "soft-purchase-recovery.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/subscription-reconciliation-race.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 2.839,
+      "log": "subscription-reconciliation-race.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/system-hunt-economy-refund-grant-race.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 3.815,
+      "log": "system-hunt-economy-refund-grant-race.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/system-hunt-economy-subscription-stale-fulfillment.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 20,
+        "pass": 20,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 3.097,
+      "log": "system-hunt-economy-subscription-stale-fulfillment.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/system-hunt-identity-presence.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.116,
+      "log": "system-hunt-identity-presence.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/system-hunt-online-expired-queue-room.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.319,
+      "log": "system-hunt-online-expired-queue-room.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/system-hunt-online-settlement-fairness.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.385,
+      "log": "system-hunt-online-settlement-fairness.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v201b-authority.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.528,
+      "log": "v201b-authority.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v201b-friendly.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.319,
+      "log": "v201b-friendly.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v201b-recovery.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.425,
+      "log": "v201b-recovery.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v201b-rollout.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.32,
+      "log": "v201b-rollout.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v204-battle-card-rewards.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 15,
+        "pass": 15,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.369,
+      "log": "v204-battle-card-rewards.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v208-emotes.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.371,
+      "log": "v208-emotes.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v213-battle-progress.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 18,
+        "pass": 18,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 2.018,
+      "log": "v213-battle-progress.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v214-battle-v1-public-profile.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 72,
+        "pass": 72,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.734,
+      "log": "v214-battle-v1-public-profile.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v214-chest-fairness.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 2.705,
+      "log": "v214-chest-fairness.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v214-competitive-progression.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 25,
+        "pass": 25,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.927,
+      "log": "v214-competitive-progression.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v214-economy.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 6.625,
+      "log": "v214-economy.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v214-existing-reward-bridge.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 11,
+        "pass": 11,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.633,
+      "log": "v214-existing-reward-bridge.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v214-guest-bootstrap.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 13,
+        "pass": 13,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.136,
+      "log": "v214-guest-bootstrap.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v214-social-safety.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 14,
+        "pass": 14,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.054,
+      "log": "v214-social-safety.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v214-ugc-safety.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 20,
+        "pass": 20,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.273,
+      "log": "v214-ugc-safety.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v214-v1-rating-boundary.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.217,
+      "log": "v214-v1-rating-boundary.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v215-blocked-pagination-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 11,
+        "pass": 11,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.132,
+      "log": "v215-blocked-pagination-erasure.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v215-memory-query-contract.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.48,
+      "log": "v215-memory-query-contract.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v215-native-mission-ownership.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.269,
+      "log": "v215-native-mission-ownership.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v215-product-economy.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 31,
+        "pass": 31,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.574,
+      "log": "v215-product-economy.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v215-product-telemetry-route.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 9,
+        "pass": 9,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.877,
+      "log": "v215-product-telemetry-route.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v215-product-telemetry.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 34,
+        "pass": 34,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.168,
+      "log": "v215-product-telemetry.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v216-1-arena-preview.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.167,
+      "log": "v216-1-arena-preview.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v216-1-cosmetic-chain.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 29,
+        "pass": 29,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.029,
+      "log": "v216-1-cosmetic-chain.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v217-billing-recovery.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 2.487,
+      "log": "v217-billing-recovery.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v217-functions-discovery.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.872,
+      "log": "v217-functions-discovery.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v217-settlement-recovery.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 1,
+        "pass": 1,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.272,
+      "log": "v217-settlement-recovery.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v218-pass-array-claims.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.116,
+      "log": "v218-pass-array-claims.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v218-pass-chest-entropy.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.03,
+      "log": "v218-pass-chest-entropy.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v218-product-integration.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 11,
+        "pass": 11,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.121,
+      "log": "v218-product-integration.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v218-product-progression.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 20,
+        "pass": 20,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.317,
+      "log": "v218-product-progression.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v218-social-atomic.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.92,
+      "log": "v218-social-atomic.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v219-sidecar-product-integrity.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.036,
+      "log": "v219-sidecar-product-integrity.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v219-sidecar-social-integrity.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 27,
+        "pass": 27,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.275,
+      "log": "v219-sidecar-social-integrity.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v220-billing-odds-contract.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.217,
+      "log": "v220-billing-odds-contract.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v220-billing-pagination.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 2.184,
+      "log": "v220-billing-pagination.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v220-billing-policy-contract.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.116,
+      "log": "v220-billing-policy-contract.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v220-firebase-integration.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 1,
+        "pass": 0,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 1,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.229,
+      "log": "v220-firebase-integration.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v220-memory-query.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.174,
+      "log": "v220-memory-query.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v220-mock-gaps.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.218,
+      "log": "v220-mock-gaps.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v220-query-compat.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.973,
+      "log": "v220-query-compat.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v220-rules-contract.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 1,
+        "pass": 1,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.121,
+      "log": "v220-rules-contract.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v221-backend-dm-rejected-attempt.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.271,
+      "log": "v221-backend-dm-rejected-attempt.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v221-backend-restore-invariants.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 2.351,
+      "log": "v221-backend-restore-invariants.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v234-player-state-ordering.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.03,
+      "log": "v234-player-state-ordering.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v236-app-check-policy.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.117,
+      "log": "v236-app-check-policy.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v236-economy-evidence.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.166,
+      "log": "v236-economy-evidence.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v236-economy-route-recovery.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.922,
+      "log": "v236-economy-route-recovery.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v236-query-index-contract.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.168,
+      "log": "v236-query-index-contract.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v238-battle-v1-migration-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 0.93,
+      "log": "v238-battle-v1-migration-erasure.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v238-daily-claim-ordering.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.375,
+      "log": "v238-daily-claim-ordering.test.js.log",
+      "assertions_observed": true
+    },
+    {
+      "file": "test/v239-daily-acceptance.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "elapsed_seconds": 1.587,
+      "log": "v239-daily-acceptance.test.js.log",
+      "assertions_observed": true
+    }
+  ],
+  "all_pass": true
+}

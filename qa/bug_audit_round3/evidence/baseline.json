@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-02T11:40:30.995446+00:00",
+  "baseline_commit": "d627e06a963e6ab5f85d479ac53cbb161eb8ce3f",
+  "branch": "codex/cloud-transfer-20261027",
+  "production_index_sha256": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+  "worktree": "CLEAN",
+  "previous_report": "qa/bug_audit_round2/REPORT.md",
+  "native_crash": "UNRESOLVED",
+  "historical_pixel_failures": 97,
+  "production_actions_authorized": false
+}

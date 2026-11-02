@@ -1,0 +1,10 @@
+{
+  "functions/lib/battle-v1-recovery.js": {
+    "baseline_sha256": "34676f097fe1a7e831ca988d5c8324cacb01eaa14e1b0f0673119831673642aa",
+    "proposed_sha256": "7cfe7b449278a59952efc3420b5f63cb85bf23705d32fb88e2d543230b99cf4c"
+  },
+  "functions/index.js": {
+    "baseline_sha256": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+    "proposed_sha256": "fe8ad58864b14f82ed31d23477b64e0627fcfa9a6df0f84772f47f2281326816"
+  }
+}

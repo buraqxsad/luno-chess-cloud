@@ -1,0 +1,100 @@
+{
+  "baseline_commit": "d627e06a963e6ab5f85d479ac53cbb161eb8ce3f",
+  "observed_head": "a1ab435e5e6f75ed0f5f9b907fb4b2b7cbb87c8d",
+  "source_sha256": {
+    "functions/index.js": "c370ab3286f08549122050ce83213542dfd1b52ba582eb2c6389098067cd4f31",
+    "functions/lib/battle-v1.js": "04d7a086a84091f2a490f3715ade0bc14fd9bacb5589f9b85409b1f7bd6bbffa",
+    "functions/lib/battle-v1-recovery.js": "7cfe7b449278a59952efc3420b5f63cb85bf23705d32fb88e2d543230b99cf4c",
+    "functions/lib/battle-v1-rollout.js": "186ba1fe1747e25deb36e09f1054d730d44f0d49f9a3b077b4a2bf980d4743a6",
+    "functions/lib/battle-v1-friendly.js": "4a223b1c1c5a655a63d40b83009d67a0fe492850c945e6dceca061178b9ca06b",
+    "functions/test/helpers/memory-database.js": "1e857ef05ecdecbc7a5036aeb272d9789723e9c25262cc5bac2d29392bed4591"
+  },
+  "test_sha256": {
+    "functions/test/round3-online-settlement-erasure.test.js": "0312cf0d10040a2e29f5d8fa80cfd74bb9db35040a9956512a3ed63036584bfa",
+    "functions/test/round3-online-enqueue-replay.test.js": "30c88a2188ac993bec7a319f43b82da04537dd9616b00c0b95bf187df5a15d52"
+  },
+  "bugs": [
+    {
+      "id": "round3-online-terminal-rating-erasure",
+      "severity": "P2",
+      "status": "fixed-by-root",
+      "baseline": {
+        "log": "settlement-erasure-baseline-exact-final.log",
+        "tests": 4,
+        "pass": 3,
+        "fail": 1,
+        "skipped": 0
+      },
+      "actual": {
+        "log": "actual-round3-online-settlement-erasure.test.js.log",
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "skipped": 0
+      },
+      "patch": "settlement-erasure.patch",
+      "baseline_module_hashes": {
+        "functions/lib/battle-v1-recovery.js": {
+          "baseline_sha256": "34676f097fe1a7e831ca988d5c8324cacb01eaa14e1b0f0673119831673642aa",
+          "proposed_sha256": "7cfe7b449278a59952efc3420b5f63cb85bf23705d32fb88e2d543230b99cf4c"
+        },
+        "functions/index.js": {
+          "baseline_sha256": "5c6800410e05ff020a8e576b67b2419eaad5f56f44a912d8d48ceace7c85b486",
+          "proposed_sha256": "fe8ad58864b14f82ed31d23477b64e0627fcfa9a6df0f84772f47f2281326816"
+        }
+      }
+    },
+    {
+      "id": "round3-online-enqueue-id-replay",
+      "severity": "P1",
+      "status": "fixed-by-root",
+      "baseline": {
+        "log": "enqueue-replay-baseline-exact-final.log",
+        "tests": 6,
+        "pass": 2,
+        "fail": 4,
+        "skipped": 0
+      },
+      "actual": {
+        "log": "actual-round3-online-enqueue-replay.test.js.log",
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      },
+      "patch": "enqueue-replay.patch",
+      "baseline_module_hashes": {
+        "functions/lib/battle-v1-rollout.js": {
+          "baseline_sha256": "d1208e562df65cdb3d0b8a6dbc24a45ebd645dcdd86ebbec35f49dc419198005",
+          "proposed_sha256": "186ba1fe1747e25deb36e09f1054d730d44f0d49f9a3b077b4a2bf980d4743a6"
+        }
+      }
+    }
+  ],
+  "new_regressions": {
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "skipped": 0
+  },
+  "earlier_settlement_focused_result": "actual-focused-results.json",
+  "final_rollout_focused_result": "actual-rollout-focused-results.json",
+  "focused_groups_overlap": true,
+  "scope": {
+    "runtime": "direct per-file node:test TAP using pinned Node22.23.3",
+    "db": "in-memory Admin ref adapter, cold-null then current-value transaction callbacks; deterministic async barriers",
+    "auth": "stub verifyIdToken/deleteUser only; no Firebase Auth calls",
+    "appcheck": "stub verifyToken, fake trusted-app fixture, no real attestation",
+    "actual_sdk": false,
+    "live_services": false,
+    "production_source_edits_by_agent": false,
+    "root_applied_patches": true
+  },
+  "not_run": [
+    "production Firebase/Auth/App Check/Play",
+    "real Admin SDK or RTDB rules integration",
+    "physical devices/native Android",
+    "full suite/build/deploy/signing/upload/push"
+  ],
+  "invalid_harness_attempts": []
+}

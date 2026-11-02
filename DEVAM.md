@@ -4,6 +4,44 @@ Son dogrulama/aktarim tarihi: 27 Ekim 2026. Bu dosya kaynak aktarimini anlatir;
 oyunun kusursuz, canli servislerin tamamen kabul edilmis veya Play yayininin
 onaylanmis oldugu anlamina gelmez.
 
+## 2 Kasım — üçüncü sistem taraması
+
+**9 yeni hata kapatıldı: 2 P1, 7 P2. Bu turda açık bırakılan doğrulanmış yeni kaynak
+hatası: 0. Genel karar RELEASE HOLD.** [Son rapor](qa/bug_audit_round3/REPORT.md),
+[dokuz kök neden/commit](qa/bug_audit_round3/BUGS.md),
+[kapsam](qa/bug_audit_round3/scope-clean-status.json) ve
+[kabul kapıları](qa/bug_audit_round3/GATES.md). Bütün oyunun hatasız olduğu kanıtlanmadı.
+
+- P1: ilk consumable claim kaydından önce ACK edilen refund sonrası eski provider
+  yanıtından altın basılması; eski enqueue request tekrarının üçüncü oyuncuyu
+  deterministik match ID çakışmasında kilitlemesi. İki yol da kontrol/regresyonla kapatıldı.
+- P2: iptal edilen pending ödeme kilidi; silme sonrası rating index kimliği;
+  departure archive son edit kaybı; guest bootstrap’ın yeni oturumu devralması;
+  eski savaş seçimine ait Play/Discard/Pass komutları; geç V1 davet metadata’sı;
+  gerçek Admin SDK cold-null cache’in geçerli daveti404 reddetmesi.
+- Tam Flutter 11803 geçti /97 başarısız /
+  0 atlandı; 441 dosya. 97 tarihsel görsel fark açık;
+  adaylar eski V239 baytlarıyla aynı, golden değiştirilmedi. Analiz temiz.
+  Tam backend 1437/0/1; TypeScript 376/0/0;
+  differential 3101 senaryo / 10967 durum ve tam legal set, sıfır ayrışma.
+- Yerel gerçek RTDB/Admin SDK: Billing 5/5 (yeni ACKed-unmatched refund dahil),
+  cold-friendly 4/4. Google ve ilgili Auth/admission bağımlılıkları fake; yalnız
+  localhost transport koşulu bellekte değişti, proxy/header/SDK disk korundu.
+  İlk tamamlanmamış ek SDK koşusu ve diğer ilk başarısızlıklar kanıtta korunur.
+- Build kaynağı `8b12d5aa649d26b1eb67dd1252922fea53532bbd`; tam Flutter’ın çalıştığı runtime
+  `000faaaada3106bc5bf306d02498821f046773e2` ile byte düzeyinde aynı. Son test commit’i
+  yalnız backend verify-call beklentilerini ikinci registration kontrolüne uyarladı;
+  gold/consume/idempotency assertion’ları korundu. Son backend/TS/differential yeni HEAD’de.
+- Yeni ARM64 debug test APK’sı: aynı debug imzası, com.luno.chess/1.6.3+19,
+  minSdk 24 / targetSdk 36, 750 asset, ELF/ZIP statik 16 KB kontrolleri geçti.
+  Release upload key yok: imzalı release APK/AAB BLOCKED; +19 Play geçmişi bilinmiyor.
+- Önceki native raster SIGSEGV ve gerçek Android yolculuğu/performans/16 KB açık.
+  Üretim Firebase/Google/AppCheck/Integrity, Play lisans/Console kabulü tamamlanmadı.
+  Yeni emulator/cihaz testi, canlı deploy, para, Play upload/yayın veya GitHub push yok.
+  Tam dış teslim `/workspace/luno-review/bug-audit-round3/` içindedir.
+
+Aşağıdaki kayıtlar tarihseldir; önceki tur sonuçları yeni sayılara eklenmez.
+
 ## 2 Kasım — ikinci sistem taraması
 
 **Bu turda doğrulanıp açık bırakılan yeni kaynak hatası: 0. Genel karar:

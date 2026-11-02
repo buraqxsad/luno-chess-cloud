@@ -1,0 +1,7 @@
+[
+  {
+    "suite": "backend",
+    "file": "functions/test/v220-firebase-integration.test.js",
+    "reason": "V220_DB_INTEGRATION opt-in disabled. Separate local SDK cases do not relabel this skipped integration as PASS."
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "reason": "Preserve exact executed probe bytes including original blank EOF lines; decompress cjs.gz before running.",
+  "files": [
+    {
+      "archive": "areas/runtime/cold-root.cjs.gz",
+      "raw_sha256": "f31f412146eb6fa11b09bda6d057959dd4fd94d4a4eb92234c8d25cb4fd3cc74"
+    },
+    {
+      "archive": "areas/runtime/fixed-proof/cold-root.cjs.gz",
+      "raw_sha256": "f31f412146eb6fa11b09bda6d057959dd4fd94d4a4eb92234c8d25cb4fd3cc74"
+    },
+    {
+      "archive": "areas/runtime/fixed-proof/initial-run/cold-root.cjs.gz",
+      "raw_sha256": "ca6ea751fda274288bfa22da357791f21e490adff32bd2935cc37af84d147566"
+    }
+  ]
+}

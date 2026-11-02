@@ -1,0 +1,31 @@
+{
+  "activation": "source /workspace/toolchains/luno-env.sh",
+  "typescriptBuild": {
+    "cwd": "/workspace/luno-chess",
+    "command": "npm --prefix functions/rules-v1 run build",
+    "exit": 0
+  },
+  "privateWorldProbe": {
+    "cwd": "/workspace/luno-chess",
+    "command": "node /workspace/luno-review/bug-audit-round3/rules/round3-rules-private-worlds.cjs",
+    "exit": 0
+  },
+  "codecBattlePerftProbe": {
+    "cwd": "/workspace/luno-chess/luno_chess",
+    "command": "dart --packages=/workspace/luno-chess/luno_chess/.dart_tool/package_config.json /workspace/luno-review/bug-audit-round3/rules/round3-rules-codec-perft.dart",
+    "exit": 0
+  },
+  "focusedFlutter": {
+    "cwd": "/workspace/luno-chess/luno_chess",
+    "command": "flock /workspace/luno-review/bug-audit-round3/flutter.lock flutter test --no-pub --concurrency=1 --reporter expanded test/v218_rules_action_validation_test.dart test/v223_removal_identity_test.dart test/v224_card_wire_targets_test.dart",
+    "exit": 0,
+    "sandboxEscalation": "Approved; loopback test harness"
+  },
+  "focusedDirectNode": {
+    "cwd": "/workspace/luno-chess",
+    "command": "node /workspace/luno-review/bug-audit-round3/rules/round3-rules-targeted-node.cjs",
+    "exit": 0,
+    "sandboxEscalation": "Approved; bridge child process pipes"
+  },
+  "limits": "No full suites/builds/emulator/deploy/signing/push. Independent published perft oracle only for card-free normal chess; other custom checks are invariants/metamorphic."
+}

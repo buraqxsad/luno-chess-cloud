@@ -1,0 +1,103 @@
+{
+  "runs": [
+    {
+      "file": "test/round3-online-enqueue-replay.test.js",
+      "sha256": "30c88a2188ac993bec7a319f43b82da04537dd9616b00c0b95bf187df5a15d52",
+      "exit": 0,
+      "summary": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-round3-online-enqueue-replay.test.js.log"
+    },
+    {
+      "file": "test/v201b-rollout.test.js",
+      "sha256": "1f3a26ce1cb05f5775ec28039f06aaf78e950906e21725b9bc6c287043ce18b5",
+      "exit": 0,
+      "summary": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-v201b-rollout.test.js.log"
+    },
+    {
+      "file": "test/v201b-friendly.test.js",
+      "sha256": "5d849bbcf8713b69c1872eadb3943e5f9be1e84358e85a7884a96f57be083694",
+      "exit": 0,
+      "summary": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-v201b-friendly.test.js.log"
+    },
+    {
+      "file": "test/v201b-recovery.test.js",
+      "sha256": "d0b32de0f3567f72d8776fe502ff5579fbbd6b13f8a32794ec6d3f028172bfe7",
+      "exit": 0,
+      "summary": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-v201b-recovery.test.js.log"
+    },
+    {
+      "file": "test/system-hunt-online-expired-queue-room.test.js",
+      "sha256": "fa41d4c68e83cbef22911721e593fb1ce46ae4b664868f55de0086a20834cd94",
+      "exit": 0,
+      "summary": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-system-hunt-online-expired-queue-room.test.js.log"
+    },
+    {
+      "file": "test/round2-online-admission-erasure.test.js",
+      "sha256": "5ca35941a364b995528878707a5b224b51c3bb870ebc4cf09a402bc4388849d5",
+      "exit": 0,
+      "summary": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": "/workspace/luno-review/bug-audit-round3/online/actual-round2-online-admission-erasure.test.js.log"
+    }
+  ],
+  "totals": {
+    "tests": 32,
+    "pass": 32,
+    "fail": 0,
+    "skipped": 0
+  },
+  "syntax_checks": [
+    {
+      "file": "index.js",
+      "exit": 0
+    },
+    {
+      "file": "lib/battle-v1-recovery.js",
+      "exit": 0
+    },
+    {
+      "file": "lib/battle-v1-rollout.js",
+      "exit": 0
+    }
+  ],
+  "production_sha256": {
+    "index.js": "c370ab3286f08549122050ce83213542dfd1b52ba582eb2c6389098067cd4f31",
+    "lib/battle-v1.js": "04d7a086a84091f2a490f3715ade0bc14fd9bacb5589f9b85409b1f7bd6bbffa",
+    "lib/battle-v1-recovery.js": "7cfe7b449278a59952efc3420b5f63cb85bf23705d32fb88e2d543230b99cf4c",
+    "lib/battle-v1-rollout.js": "186ba1fe1747e25deb36e09f1054d730d44f0d49f9a3b077b4a2bf980d4743a6",
+    "lib/battle-v1-friendly.js": "4a223b1c1c5a655a63d40b83009d67a0fe492850c945e6dceca061178b9ca06b"
+  }
+}

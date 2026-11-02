@@ -1,0 +1,35 @@
+{
+  "reported_utc": "2026-11-02T11:55:55.537896+00:00",
+  "new_bug_families": {
+    "P2": 1
+  },
+  "bug": "V1 send invitation recreates deleted sender/recipient metadata after actual erasure",
+  "baseline": {
+    "tests": 12,
+    "pass": 8,
+    "fail": 4,
+    "skip": 0
+  },
+  "actual_focused": {
+    "tests": 49,
+    "pass": 49,
+    "fail": 0,
+    "skipped": 0
+  },
+  "baseline_source": "root-valid-fixture-before-source.json",
+  "test_model": "Direct Node actual TAP; exported Auth/AppCheck dispatcher with fake Auth/AppCheck and memory RTDB; actual deleteAccount workflow. Acceptance controls use warmed cache matching prior send; separate real SDK cold-cache proof assigned runtime.",
+  "changed_files": [
+    "functions/index.js",
+    "functions/lib/battle-v1-friendly.js",
+    "functions/test/round3-security-v1-invite-erasure.test.js"
+  ],
+  "fix_commit": "5831476",
+  "source_sha256": {
+    "functions/index.js": "c370ab3286f08549122050ce83213542dfd1b52ba582eb2c6389098067cd4f31",
+    "functions/lib/battle-v1-friendly.js": "4a223b1c1c5a655a63d40b83009d67a0fe492850c945e6dceca061178b9ca06b",
+    "functions/test/round3-security-v1-invite-erasure.test.js": "46d93920c0ccc82e9b6893875917a25965bf064fcdd2cc8743dfbf5f39c3f85c"
+  },
+  "agent_end": "Security agent ended with automatic content flag for possible cybersecurity risk. Root completed already-created local fixture reproduction and minimal metadata-wrapper fix without privilege escalation, remote calls or repeating the flagged agent request. Unproven DM-cache/friendshape candidates not counted as bugs or passes.",
+  "production_acceptance": "NOT RUN",
+  "new_verified_open_in_this_scope": 0
+}

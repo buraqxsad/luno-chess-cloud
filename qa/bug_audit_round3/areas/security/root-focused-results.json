@@ -1,0 +1,94 @@
+{
+  "runs": [
+    {
+      "file": "round3-security-v1-invite-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "skipped": 0
+      },
+      "elapsed_seconds": 1.323,
+      "test_sha256": "46d93920c0ccc82e9b6893875917a25965bf064fcdd2cc8743dfbf5f39c3f85c"
+    },
+    {
+      "file": "round2-security-notification-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 14,
+        "pass": 14,
+        "fail": 0,
+        "skipped": 0
+      },
+      "elapsed_seconds": 1.514,
+      "test_sha256": "07702c82641decffb33095070a665946964c40bc17da57eb1b9c7ee68ff6caa9"
+    },
+    {
+      "file": "round2-security-report-conversation.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      },
+      "elapsed_seconds": 0.718,
+      "test_sha256": "17d49dfbe4c4af69207b68745006358e086f168e045bdaaeb8939d1943217367"
+    },
+    {
+      "file": "round2-online-admission-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "skipped": 0
+      },
+      "elapsed_seconds": 0.72,
+      "test_sha256": "5ca35941a364b995528878707a5b224b51c3bb870ebc4cf09a402bc4388849d5"
+    },
+    {
+      "file": "round3-online-settlement-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "skipped": 0
+      },
+      "elapsed_seconds": 0.829,
+      "test_sha256": "0312cf0d10040a2e29f5d8fa80cfd74bb9db35040a9956512a3ed63036584bfa"
+    },
+    {
+      "file": "v238-battle-v1-migration-erasure.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "skipped": 0
+      },
+      "elapsed_seconds": 0.926,
+      "test_sha256": "c501703f6ac4e12c9e81f51a3725af795c88e45976f70681254082093b9dbe43"
+    },
+    {
+      "file": "v201b-friendly.test.js",
+      "exit": 0,
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0
+      },
+      "elapsed_seconds": 0.269,
+      "test_sha256": "5d849bbcf8713b69c1872eadb3943e5f9be1e84358e85a7884a96f57be083694"
+    }
+  ],
+  "totals": {
+    "tests": 49,
+    "pass": 49,
+    "fail": 0,
+    "skipped": 0
+  }
+}

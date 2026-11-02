@@ -1,0 +1,92 @@
+[
+  {
+    "file": "functions/test/round3-economy-unmatched-refund.test.js",
+    "exitCode": 0,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "skipped": 0,
+    "sha256": "b02b6a36ef8257387e03253cbc160c627f6b335b74f19d0df59ffe626f51b24d",
+    "log": "/workspace/luno-review/bug-audit-round3/economy/actual-round3-economy-unmatched-refund.test.js.log"
+  },
+  {
+    "file": "functions/test/system-hunt-economy-refund-grant-race.test.js",
+    "exitCode": 0,
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "skipped": 0,
+    "sha256": "b805af7ab79fcd7cb49898abd84d3198ced141acd6b91f6fccb5790c7db62036",
+    "log": "/workspace/luno-review/bug-audit-round3/economy/actual-system-hunt-economy-refund-grant-race.test.js.log"
+  },
+  {
+    "file": "functions/test/system-hunt-economy-subscription-stale-fulfillment.test.js",
+    "exitCode": 0,
+    "tests": 20,
+    "pass": 20,
+    "fail": 0,
+    "skipped": 0,
+    "sha256": "af6527eea53b73798f9814e0bf8e0d20171a05b8d9bd519b1eec0e5af71e80da",
+    "log": "/workspace/luno-review/bug-audit-round3/economy/actual-system-hunt-economy-subscription-stale-fulfillment.test.js.log"
+  },
+  {
+    "file": "functions/test/round2-economy-subscription-inactive-refresh.test.js",
+    "exitCode": 0,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "skipped": 0,
+    "sha256": "4e08521b95a57f5ff4c41ed06c9bbc704cd7db424e117c1425bdbb176d945f7d",
+    "log": "/workspace/luno-review/bug-audit-round3/economy/actual-round2-economy-subscription-inactive-refresh.test.js.log"
+  },
+  {
+    "file": "functions/test/subscription-reconciliation-race.test.js",
+    "exitCode": 0,
+    "tests": 12,
+    "pass": 12,
+    "fail": 0,
+    "skipped": 0,
+    "sha256": "76b056991aa13d14e6f91a62256e5144fef77785a5c7b0a4c6bfff79700f6c3a",
+    "log": "/workspace/luno-review/bug-audit-round3/economy/actual-subscription-reconciliation-race.test.js.log"
+  },
+  {
+    "file": "functions/test/retained-record-race.test.js",
+    "exitCode": 0,
+    "tests": 66,
+    "pass": 66,
+    "fail": 0,
+    "skipped": 0,
+    "sha256": "7a9306989d57eec7b80409c2bbeb543f247a1086755a39ced7589296717f4c26",
+    "log": "/workspace/luno-review/bug-audit-round3/economy/actual-retained-record-race.test.js.log"
+  },
+  {
+    "file": "functions/test/v217-billing-recovery.test.js",
+    "exitCode": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0,
+    "sha256": "a421b52f57933b7a8a793e56282e72523d9ed7a6a116f67dbe0f92f5d6a61feb",
+    "log": "/workspace/luno-review/bug-audit-round3/economy/actual-v217-billing-recovery.test.js.log"
+  },
+  {
+    "file": "functions/test/v238-daily-claim-ordering.test.js",
+    "exitCode": 0,
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "skipped": 0,
+    "sha256": "b035ff088ef3a240b335dd5f1ce63ea8f6bce989c4cb7de93f9dc789c2678612",
+    "log": "/workspace/luno-review/bug-audit-round3/economy/actual-v238-daily-claim-ordering.test.js.log"
+  },
+  {
+    "file": "functions/test/v239-daily-acceptance.test.js",
+    "exitCode": 0,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "skipped": 0,
+    "sha256": "b773f3cfc444425a72c54690193b25137a9959f6a01f1a34c19334b2c70f8e95",
+    "log": "/workspace/luno-review/bug-audit-round3/economy/actual-v239-daily-acceptance.test.js.log"
+  }
+]

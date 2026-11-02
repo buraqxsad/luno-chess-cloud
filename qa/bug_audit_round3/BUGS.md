@@ -1,0 +1,15 @@
+# Dokuz yeni hata
+
+2 P1 + 7 P2. Önceki turlarda kapatılan kusurlar yeniden sayılmadı. Aynı fix’in retry/ownership alt vakaları ayrı bug diye çoğaltılmadı.
+
+| Önem | Kusur | Commit | Kök neden ve düzeltme | Tekrar üretim |
+| --- | --- | --- | --- | --- |
+| P1 | [İlk consumable kaydından önceki iade](areas/economy/REPORT.md) | `3fec420` | Sahipsiz RTDN ACK edildikten sonra eski PURCHASED yanıtı altın basabiliyordu. Ownership claim kaydından sonra güncel provider kanıtı alınır; consumed durumu da bu yanıttan hesaplanır. | 8 vaka: 5 geçti /3 başarısız →8/8; ek gerçek SDK yeni vaka geçti. |
+| P1 | [Eski enqueue tekrarının üçüncü oyuncuyu kilitlemesi](areas/online/REPORT.md) | `92c71b4` | Tekrar kullanılan deterministik match ID eski maça çakışınca yeni peer reservation’ı zehirleniyordu. Eski makbuz geri döner; çakışma rollback’i ve completion token ile kendi rezervasyonunu temizler. | 6 vaka: 2 geçti /4 başarısız →6/6. |
+| P2 | [İptal edilmiş pending ödeme kilidi](areas/economy/REPORT.md) | `58f3171` | Başarılı ve güncel boş ownership yanıtı eski pending durumunu bırakıyordu. Per-product generation yalnız yok olan eski pending’i temizler; yeni stream, açık launch ve başarısız query korunur. | 6 vaka: 4 geçti /2 başarısız →6/6. |
+| P2 | [Silinen hesabın puan kimliğinin geri gelmesi](areas/online/REPORT.md) | `ebd09b2` | Geç settlement rating projection’ı silinmiş UID/adı yeniden yazıyordu. Mevcut pre/post metadata gate ve cleanup ile silme kazanır; yaşayan peer settlement tamamlanır. | 4 vaka: 3 geçti /1 başarısız →4/4. |
+| P2 | [Hesap ayrılırken kabul edilmiş son yerel editin kaybı](areas/client/REPORT.md) | `017a16d` | Disk await sırasında değişen departure snapshot eski arşivle kalıyordu. Commit öncesi sınırlı yeniden arşivleme, başarısızlık/churn durumunda eski owner ve canlı editleri korur. | 7 vaka: 1 geçti /6 başarısız →7/7. |
+| P2 | [Guest bootstrap’ın yeni oturumu devralması](areas/client/REPORT.md) | `282edfa` | createGuestPlayer sonrası yerel await eski akışı yeni owner/generation ile refresh başlatmaya bırakıyordu. Başlangıç owner/generation/state epoch her continuation’da doğrulanır. | 6 vaka: 2 geçti /4 başarısız →6/6. |
+| P2 | [Eski savaş seçimine ait komutların uygulanması](areas/battle/REPORT.md) | `a1ab435` | Kaydedilmiş Play/Discard/Pass callback’i retarget veya gerçek hamleler sonrasında önceki seçimi uygulayabiliyordu. Sürüm, seçim ve hotseat epoch kabul kapısı eklendi. | Geçerli baseline 7 vaka: 3 geçti /4 başarısız; son 8/8. |
+| P2 | [Silme sonrası V1 davet yazısı](areas/security/REPORT.md) | `5831476` | Send daveti yalnız pair lock kullanıyordu. İki hesabı koruyan mevcut withSocialPairMetadata dependency’si ve cleanup uygulanır; ikinci iç lock eklenmez. | 12 vaka: 8 geçti /4 başarısız →12/12. |
+| P2 | [Cold Firebase cache ile geçerli davetin reddi](areas/runtime/REPORT.md) | `000faaa` | Transaction’ın ilk null cache çağrısında undefined ile abort edilmesi server CAS retry’ını engelliyordu. Null retry’a izin verilir; gerçek boş veride kaydedilmiş hata korunur. | Gerçek SDK 3/4→4/4; repo regression6/8→8/8. |

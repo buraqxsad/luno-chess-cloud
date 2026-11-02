@@ -1,0 +1,7 @@
+{
+  "stopped_waiting_script_pids": [
+    16296
+  ],
+  "android_build_started": false,
+  "reason": "Wait explicitly for completed backend, TypeScript AND differential before build, when full Flutter already finished."
+}

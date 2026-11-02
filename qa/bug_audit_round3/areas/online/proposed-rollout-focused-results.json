@@ -1,0 +1,52 @@
+[
+  {
+    "file": "v201b-rollout.test.js",
+    "exit": 0,
+    "summary": {
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "file": "v201b-friendly.test.js",
+    "exit": 0,
+    "summary": {
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "file": "v201b-recovery.test.js",
+    "exit": 0,
+    "summary": {
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "file": "system-hunt-online-expired-queue-room.test.js",
+    "exit": 0,
+    "summary": {
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "file": "round2-online-admission-erasure.test.js",
+    "exit": 0,
+    "summary": {
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "skipped": 0
+    }
+  }
+]

@@ -1,0 +1,166 @@
+{
+  "source": {
+    "baseline_commit": "d627e06a963e6ab5f85d479ac53cbb161eb8ce3f",
+    "observed_head": "cadcc60389f51d3745f04ed79f6a9ac09ef7e812",
+    "friendly_sha256": "5a69e284206501df9feb93904de4e532ea6917f54aa2d8eac25105f94e90b7bb",
+    "captured_friendly_matches_current_working_source": true,
+    "baseline_friendly_sha256": "24db67ece22b41a0f70a42c75aea612365564e86796aa21916910d915f99dd9a",
+    "working_friendly_sha256": "5a69e284206501df9feb93904de4e532ea6917f54aa2d8eac25105f94e90b7bb",
+    "respond_transact_scope_matches_working_source": true,
+    "dependencies": {
+      "functions/lib/battle-v1.js": "04d7a086a84091f2a490f3715ade0bc14fd9bacb5589f9b85409b1f7bd6bbffa",
+      "functions/rules-v1/dist/src/online/protocol.js": "e93fb5f07428db4e368d6f9e56148e5d1ef14c14a98bc21b29652e9817fcaff9"
+    }
+  },
+  "host": "127.0.0.1:19000",
+  "namespace": "demo-luno-cold-root-r3-default-rtdb",
+  "java_command": [
+    "java",
+    "-Xms32m",
+    "-Xmx192m",
+    "-XX:MaxMetaspaceSize=96m",
+    "-XX:ReservedCodeCacheSize=32m",
+    "-Xss256k",
+    "-XX:ActiveProcessorCount=2",
+    "-XX:+UseSerialGC",
+    "-Duser.language=en",
+    "-jar",
+    "/workspace/toolchains/firebase-emulators/firebase-database-emulator-v4.11.2.jar",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "19000",
+    "--single_project_mode",
+    "Warning"
+  ],
+  "scope": "Local real Admin SDK/RTDB only. Exact-loopback proxy-selection condition changed in memory; inherited proxy env, SDK disk, data/transaction code unchanged. Admission/player/social/rate-limit dependencies stubbed; no production repo edits; focused regression added separately.",
+  "peak_combined_rss_kib": 226020,
+  "local_sdk_result": "PASS (same4 actual SDK assertions against captured fixed source)",
+  "rules_sha256": "2c62fa56509b6f5ed84abf6847763193e4399fcaf181bfbce161ce78bcf45ff9",
+  "worker_exit": 0,
+  "counts": {
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "observations": [
+    {
+      "case": "raw-sdk-cold-null-cas-retry",
+      "trace": [
+        {
+          "input_null": true,
+          "invite_present": false,
+          "output_undefined": false,
+          "output_null": true
+        },
+        {
+          "input_null": false,
+          "invite_present": true,
+          "output_undefined": false,
+          "output_null": false
+        }
+      ],
+      "committed": true,
+      "durable": {
+        "matchInvites": {
+          "runtime_guest": {
+            "runtime_sender": {
+              "status": "pending"
+            }
+          }
+        },
+        "unrelated": {
+          "preserved": 7
+        }
+      }
+    },
+    {
+      "case": "friendly-cold-existing-invite",
+      "seed_root_verified": true,
+      "tested_app_reads_before_transaction": 0,
+      "trace": [
+        {
+          "input_null": true,
+          "invite_present": false,
+          "output_undefined": false,
+          "output_null": true
+        },
+        {
+          "input_null": false,
+          "invite_present": true,
+          "output_undefined": false,
+          "output_null": false
+        }
+      ],
+      "result": {
+        "ok": true,
+        "accepted": false
+      },
+      "durable": {
+        "unrelated": {
+          "preserved": 7
+        }
+      },
+      "root_unchanged": false
+    },
+    {
+      "case": "friendly-warm-existing-invite",
+      "same_seed_as_cold": true,
+      "trace": [
+        {
+          "input_null": false,
+          "invite_present": true,
+          "output_undefined": false,
+          "output_null": false
+        }
+      ],
+      "result": {
+        "ok": true,
+        "accepted": false
+      },
+      "durable": {
+        "unrelated": {
+          "preserved": 7
+        }
+      }
+    },
+    {
+      "case": "friendly-truly-empty-root",
+      "independent_seed_root": null,
+      "trace": [
+        {
+          "input_null": true,
+          "invite_present": false,
+          "output_undefined": false,
+          "output_null": true
+        }
+      ],
+      "error": {
+        "code": "INVITE_UNAVAILABLE",
+        "status": 404
+      },
+      "durable": null
+    }
+  ],
+  "transport_audit": {
+    "selected_connections": 5,
+    "rejected_other_urls": 0,
+    "headers_or_proxy_environment_changed": false,
+    "smoke_pass": true,
+    "inherited_proxy_environment_unchanged": true
+  },
+  "transport_provenance": {
+    "standalone_module": "/workspace/luno-chess/functions/node_modules/@firebase/database-compat/dist/index.standalone.js",
+    "original_sha256": "98421fa06420904b942332c20705b0a577374e82a5bde95bdaf770052d1aa760",
+    "in_memory_sha256": "37485ba9ba07895906cfc1b7cf205c8d045dc41cf54cd93b50a4203cea9309ed",
+    "exact_replaced_blocks": 1,
+    "changed_transport_condition_only": true,
+    "repo_or_sdk_disk_files_modified": false
+  },
+  "source_reverified_after_run": true,
+  "port19000_closed_after_cleanup": true,
+  "elapsed_seconds": 8.791,
+  "private_logs_remaining": 0
+}

@@ -1,0 +1,9 @@
+{
+  "acceptance": "FAIL / NOT COMPLETE",
+  "executed_test_cases": 0,
+  "observations": 0,
+  "limit_seconds": 35,
+  "concurrent_android_build": true,
+  "cause": "Not established; run reached transport initialization but no completed SDK smoke/test case before global deadline.",
+  "next_attempt": "Same source, assertions, transport and deadline, serial after Gradle stop."
+}

@@ -1,0 +1,117 @@
+[
+  {
+    "case": "raw-sdk-cold-null-cas-retry",
+    "trace": [
+      {
+        "input_null": true,
+        "invite_present": false,
+        "output_undefined": false,
+        "output_null": true
+      },
+      {
+        "input_null": false,
+        "invite_present": true,
+        "output_undefined": false,
+        "output_null": false
+      }
+    ],
+    "committed": true,
+    "durable": {
+      "matchInvites": {
+        "runtime_guest": {
+          "runtime_sender": {
+            "status": "pending"
+          }
+        }
+      },
+      "unrelated": {
+        "preserved": 7
+      }
+    }
+  },
+  {
+    "case": "friendly-cold-existing-invite",
+    "seed_root_verified": true,
+    "tested_app_reads_before_transaction": 0,
+    "trace": [
+      {
+        "input_null": true,
+        "invite_present": false,
+        "output_undefined": true,
+        "output_null": false
+      }
+    ],
+    "error": {
+      "name": "Error",
+      "code": "INVITE_UNAVAILABLE",
+      "status": 404
+    },
+    "durable": {
+      "battleV1Control": {
+        "invites": {
+          "runtime_sender|runtime_guest": {
+            "expiresAt": 1750000120000,
+            "from": {
+              "player": {
+                "name": "Sender"
+              },
+              "uid": "runtime_sender"
+            },
+            "requestId": "original-invite",
+            "to": "runtime_guest"
+          }
+        }
+      },
+      "matchInvites": {
+        "runtime_guest": {
+          "runtime_sender": {
+            "status": "pending"
+          }
+        }
+      },
+      "unrelated": {
+        "preserved": 7
+      }
+    },
+    "root_unchanged": true,
+    "derived_comparison_correction": "Original strict JSON string comparison reported false only because RTDB sorted object keys. Recomputed as object equality over the same stored durable observation; no run result changed. Original artifact preserved at observations-original.json."
+  },
+  {
+    "case": "friendly-warm-existing-invite",
+    "same_seed_as_cold": true,
+    "trace": [
+      {
+        "input_null": false,
+        "invite_present": true,
+        "output_undefined": false,
+        "output_null": false
+      }
+    ],
+    "result": {
+      "ok": true,
+      "accepted": false
+    },
+    "durable": {
+      "unrelated": {
+        "preserved": 7
+      }
+    }
+  },
+  {
+    "case": "friendly-truly-empty-root",
+    "independent_seed_root": null,
+    "trace": [
+      {
+        "input_null": true,
+        "invite_present": false,
+        "output_undefined": true,
+        "output_null": false
+      }
+    ],
+    "error": {
+      "code": "INVITE_UNAVAILABLE",
+      "status": 404
+    },
+    "durable": null
+  }
+]

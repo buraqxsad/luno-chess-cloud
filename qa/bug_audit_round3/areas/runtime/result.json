@@ -1,0 +1,37 @@
+{
+  "new_bug_families": {
+    "P2": 1
+  },
+  "root_cause": "Cold SDK null cache validation returned undefined and aborted before server CAS retry.",
+  "baseline_real_sdk": {
+    "tests": 4,
+    "pass": 3,
+    "fail": 1,
+    "skip": 0
+  },
+  "fixed_real_sdk": {
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "baseline_unit": {
+    "tests": 8,
+    "pass": 6,
+    "fail": 2,
+    "skip": 0
+  },
+  "fixed_unit": {
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "skip": 0
+  },
+  "source_friendly_sha256": "5a69e284206501df9feb93904de4e532ea6917f54aa2d8eac25105f94e90b7bb",
+  "commit": "000faaaada3106bc5bf306d02498821f046773e2",
+  "sdk_scope": "Local real Admin SDK/RTDB only. Exact-loopback proxy-selection condition changed in memory; inherited proxy env, SDK disk, data/transaction code unchanged. Admission/player/social/rate-limit dependencies stubbed; no production repo edits; focused regression added separately.",
+  "new_verified_open_this_scope": 0,
+  "production_acceptance": "NOT RUN",
+  "agent_end": "Agent final report turn hit usage limit after completing actual fixed SDK proof and unit results. Root verified persisted TAP, source hashes, port cleanup and results. No failed run relabeled PASS."
+}

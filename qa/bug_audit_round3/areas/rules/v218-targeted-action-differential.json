@@ -1,0 +1,17 @@
+{
+  "runner": "/workspace/luno-review/bug-audit-round3/rules/round3-rules-dart-runner.sh",
+  "actions": [
+    {
+      "type": "play",
+      "card": "shelter",
+      "target": "8"
+    },
+    {
+      "type": "play",
+      "card": "prophecy",
+      "target": ""
+    }
+  ],
+  "rejectedWithoutMutation": 2,
+  "divergences": 0
+}

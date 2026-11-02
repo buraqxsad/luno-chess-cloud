@@ -1,0 +1,203 @@
+{
+  "recordedUtc": "2026-11-02T11:52:32.257177+00:00",
+  "baseline": "d627e06a963e6ab5f85d479ac53cbb161eb8ce3f",
+  "headAtRecord": "a1ab435e5e6f75ed0f5f9b907fb4b2b7cbb87c8d",
+  "sourceFiles": [
+    {
+      "path": "functions/rules-v1/src/model.ts",
+      "sha256": "b0b6e6826840f2a0b6536161c1414033c2bb778942a1e0ebce811ef7c8031fb5",
+      "baselineSha256": "b0b6e6826840f2a0b6536161c1414033c2bb778942a1e0ebce811ef7c8031fb5",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/src/core.ts",
+      "sha256": "0d347ea9dd0c1596b479275ccea9869f792d1c58e611b86f29d251de8ce481fa",
+      "baselineSha256": "0d347ea9dd0c1596b479275ccea9869f792d1c58e611b86f29d251de8ce481fa",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/src/authoritative.ts",
+      "sha256": "4f0c4a75099a600ba6225c0b5f386d1a37fcee1fbf4d40d0c1eddaf5791219a3",
+      "baselineSha256": "4f0c4a75099a600ba6225c0b5f386d1a37fcee1fbf4d40d0c1eddaf5791219a3",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/src/board.ts",
+      "sha256": "2c8f471a85a66c3f8400c1d104e3ac94e4831920aa26f1476d77caa9c3483784",
+      "baselineSha256": "2c8f471a85a66c3f8400c1d104e3ac94e4831920aa26f1476d77caa9c3483784",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/src/chess.ts",
+      "sha256": "aa3c1f0ca95a1b2dffbda13b59f05a8f71dab17b4243a1c7984535a61dac0284",
+      "baselineSha256": "aa3c1f0ca95a1b2dffbda13b59f05a8f71dab17b4243a1c7984535a61dac0284",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/model.dart",
+      "sha256": "cf366391573dd36d49cfa910921db6934c5b2de3ca9ebd9b77107dbfc6983947",
+      "baselineSha256": "cf366391573dd36d49cfa910921db6934c5b2de3ca9ebd9b77107dbfc6983947",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/core.dart",
+      "sha256": "46a626cf3b67b621e687fcfb7eac6ddb2eb9379ed20171794e9d9de765af6958",
+      "baselineSha256": "46a626cf3b67b621e687fcfb7eac6ddb2eb9379ed20171794e9d9de765af6958",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/authoritative.dart",
+      "sha256": "9114def0d2cc83134177859ea74caa6c96c5d399b84d66e49429ae836c5bea9f",
+      "baselineSha256": "9114def0d2cc83134177859ea74caa6c96c5d399b84d66e49429ae836c5bea9f",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/ai.dart",
+      "sha256": "5128b56aa995cf6bc251726576ff7ad81b4f814b3053d5a9b961b852268bef4f",
+      "baselineSha256": "5128b56aa995cf6bc251726576ff7ad81b4f814b3053d5a9b961b852268bef4f",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/board.dart",
+      "sha256": "250915de2fba30f9e1ff74eb14a1a469b61b13aac3f525b64cfd650dbbc53412",
+      "baselineSha256": "250915de2fba30f9e1ff74eb14a1a469b61b13aac3f525b64cfd650dbbc53412",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/chess_game.dart",
+      "sha256": "14db45aed616c612d87c85c7aaebc31e16b7f09d9a4fdedea427479bae3bca47",
+      "baselineSha256": "14db45aed616c612d87c85c7aaebc31e16b7f09d9a4fdedea427479bae3bca47",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/move.dart",
+      "sha256": "3bb0ac8723222db95ee22c8929e45688a22b2f4cbf6f59f329964941ca15ba00",
+      "baselineSha256": "3bb0ac8723222db95ee22c8929e45688a22b2f4cbf6f59f329964941ca15ba00",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/move_gen.dart",
+      "sha256": "417dbb956ad8c50b4e7d15e98b5c8e49008354f9ec609e73476bd794879c406b",
+      "baselineSha256": "417dbb956ad8c50b4e7d15e98b5c8e49008354f9ec609e73476bd794879c406b",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/perft.dart",
+      "sha256": "e5bcea97595adaccb11029387422f6510f7c9ae5260d428e603f5dece20f9d0e",
+      "baselineSha256": "e5bcea97595adaccb11029387422f6510f7c9ae5260d428e603f5dece20f9d0e",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/piece.dart",
+      "sha256": "398ce9c8cd7872b73fb5b241a6424cd2c3737fe2f05c57c5f05191df632af149",
+      "baselineSha256": "398ce9c8cd7872b73fb5b241a6424cd2c3737fe2f05c57c5f05191df632af149",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/square.dart",
+      "sha256": "94da1e8e2db0a614ecf6761ce4155fc35aa5ad02eec403caf2d84a8036485075",
+      "baselineSha256": "94da1e8e2db0a614ecf6761ce4155fc35aa5ad02eec403caf2d84a8036485075",
+      "matchesBaseline": true
+    },
+    {
+      "path": "battle_contract/v1/rules.json",
+      "sha256": "e9dd66b17876f48e55c2e56f99a833a60a83ef4d839ab4f08df4b15eba43927c",
+      "baselineSha256": "e9dd66b17876f48e55c2e56f99a833a60a83ef4d839ab4f08df4b15eba43927c",
+      "matchesBaseline": true
+    },
+    {
+      "path": "battle_contract/v1/perft.json",
+      "sha256": "2e7c24ecacb8eea0223d02cf4469d5147713b96ec5bf8ffcfdb55f5806bc2493",
+      "baselineSha256": "2e7c24ecacb8eea0223d02cf4469d5147713b96ec5bf8ffcfdb55f5806bc2493",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/test/fixture_support.ts",
+      "sha256": "99667fde2d226d254b1a7d932210700e99b3339387babfa0ebcbac92bb882baf",
+      "baselineSha256": "99667fde2d226d254b1a7d932210700e99b3339387babfa0ebcbac92bb882baf",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/tool/battle_json_runner.dart",
+      "sha256": "cddbf3d2e25cc28527b22fcf60d978bd0181909788a2fa7aa3bfba5b2dc89cbb",
+      "baselineSha256": "cddbf3d2e25cc28527b22fcf60d978bd0181909788a2fa7aa3bfba5b2dc89cbb",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/test/v218-rule-actions.test.ts",
+      "sha256": "6c0ef0c4ee0a12c69943f3496161ed7025f49c8b460dac8e3b6744e93d53092b",
+      "baselineSha256": "6c0ef0c4ee0a12c69943f3496161ed7025f49c8b460dac8e3b6744e93d53092b",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/test/v223-removal-identity.test.ts",
+      "sha256": "bc55c5a215f48b6acc9f6e60241994a739830eddd7a390b5f6cb9c459680c738",
+      "baselineSha256": "bc55c5a215f48b6acc9f6e60241994a739830eddd7a390b5f6cb9c459680c738",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/test/v224-card-wire-targets.test.ts",
+      "sha256": "60c61f2a2c47736b22a4a7474cdfa94fedd63a3ebaf6ad3323eb048bcd863820",
+      "baselineSha256": "60c61f2a2c47736b22a4a7474cdfa94fedd63a3ebaf6ad3323eb048bcd863820",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/test/v218_rules_action_validation_test.dart",
+      "sha256": "e6fded7b89f6c928fa8fe010d7d28941e3652f68a4430ecc4f360834914a8a56",
+      "baselineSha256": "e6fded7b89f6c928fa8fe010d7d28941e3652f68a4430ecc4f360834914a8a56",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/test/v223_removal_identity_test.dart",
+      "sha256": "85131f1d53eae8025473ad857fad8ca95aa681636adad32beca1853655f9eaaf",
+      "baselineSha256": "85131f1d53eae8025473ad857fad8ca95aa681636adad32beca1853655f9eaaf",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/test/v224_card_wire_targets_test.dart",
+      "sha256": "2170605cbcb5025e8691d900364c5c4db1449a44728d35b4513d75723ce1d57b",
+      "baselineSha256": "2170605cbcb5025e8691d900364c5c4db1449a44728d35b4513d75723ce1d57b",
+      "matchesBaseline": true
+    }
+  ],
+  "compiledFiles": [
+    {
+      "path": "functions/rules-v1/dist/src/model.js",
+      "sha256": "44a2e8c54ecdd1fa64ff1199f9ea0f088849b9ab06ceb2f6ee5fca1c6a7ba201"
+    },
+    {
+      "path": "functions/rules-v1/dist/src/core.js",
+      "sha256": "ea9d9360415964c7a0e9e04647b7c3a2292903bd31e5341be9367c8f301fc871"
+    },
+    {
+      "path": "functions/rules-v1/dist/src/authoritative.js",
+      "sha256": "f51a5026b3479b64dd6715842555a4d862a5debbd0b65fcc7f428c3e92da4472"
+    },
+    {
+      "path": "functions/rules-v1/dist/src/board.js",
+      "sha256": "a3a2c8a5b64675e2c3277300bfbe748b1c172969f3c3d9aad61739491b11dd51"
+    },
+    {
+      "path": "functions/rules-v1/dist/src/chess.js",
+      "sha256": "d8a7b055816200574e60ed29db725b79b0d3791b0d127ef21b45d10b457765db"
+    }
+  ],
+  "externalProbeFiles": [
+    {
+      "path": "round3-rules-codec-perft.dart",
+      "sha256": "b4ec06d1493a732f1cc2ed90cafb96be877af6515814ba53dcea63b7dc186be6"
+    },
+    {
+      "path": "round3-rules-dart-runner.sh",
+      "sha256": "c1f08120fb8253373dcbb7da2cd6f8c745be171245ff8295fd2789c26a037c35"
+    },
+    {
+      "path": "round3-rules-private-worlds.cjs",
+      "sha256": "fc0e02feb6f1cb1a2c95eccba6a3f7143708d473b03dea8f315bfe51a00429c9"
+    },
+    {
+      "path": "round3-rules-targeted-node.cjs",
+      "sha256": "73386b789b86e8bb94f6a58c534fbb505e29d7f36524c472174663724897fa9c"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "file": "functions/test/round3-economy-unmatched-refund.test.js",
+    "exitCode": 0,
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "skipped": 0,
+    "log": "/workspace/luno-review/bug-audit-round3/economy/candidate-round3-economy-unmatched-refund.test.js.log"
+  },
+  {
+    "file": "functions/test/system-hunt-economy-refund-grant-race.test.js",
+    "exitCode": 0,
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "skipped": 0,
+    "log": "/workspace/luno-review/bug-audit-round3/economy/candidate-system-hunt-economy-refund-grant-race.test.js.log"
+  },
+  {
+    "file": "functions/test/system-hunt-economy-subscription-stale-fulfillment.test.js",
+    "exitCode": 0,
+    "tests": 20,
+    "pass": 20,
+    "fail": 0,
+    "skipped": 0,
+    "log": "/workspace/luno-review/bug-audit-round3/economy/candidate-system-hunt-economy-subscription-stale-fulfillment.test.js.log"
+  },
+  {
+    "file": "functions/test/round2-economy-subscription-inactive-refresh.test.js",
+    "exitCode": 0,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "skipped": 0,
+    "log": "/workspace/luno-review/bug-audit-round3/economy/candidate-round2-economy-subscription-inactive-refresh.test.js.log"
+  },
+  {
+    "file": "functions/test/subscription-reconciliation-race.test.js",
+    "exitCode": 0,
+    "tests": 12,
+    "pass": 12,
+    "fail": 0,
+    "skipped": 0,
+    "log": "/workspace/luno-review/bug-audit-round3/economy/candidate-subscription-reconciliation-race.test.js.log"
+  },
+  {
+    "file": "functions/test/retained-record-race.test.js",
+    "exitCode": 1,
+    "tests": 66,
+    "pass": 65,
+    "fail": 1,
+    "skipped": 0,
+    "log": "/workspace/luno-review/bug-audit-round3/economy/candidate-retained-record-race.test.js.log"
+  },
+  {
+    "file": "functions/test/v217-billing-recovery.test.js",
+    "exitCode": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0,
+    "log": "/workspace/luno-review/bug-audit-round3/economy/candidate-v217-billing-recovery.test.js.log"
+  },
+  {
+    "file": "functions/test/v238-daily-claim-ordering.test.js",
+    "exitCode": 0,
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "skipped": 0,
+    "log": "/workspace/luno-review/bug-audit-round3/economy/candidate-v238-daily-claim-ordering.test.js.log"
+  },
+  {
+    "file": "functions/test/v239-daily-acceptance.test.js",
+    "exitCode": 0,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "skipped": 0,
+    "log": "/workspace/luno-review/bug-audit-round3/economy/candidate-v239-daily-acceptance.test.js.log"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "base_commit": "d627e06a963e6ab5f85d479ac53cbb161eb8ce3f",
+  "build_source_commit": "8b12d5aa649d26b1eb67dd1252922fea53532bbd",
+  "full_regression_source_commit": "000faaaada3106bc5bf306d02498821f046773e2",
+  "source_index_sha256": "c370ab3286f08549122050ce83213542dfd1b52ba582eb2c6389098067cd4f31",
+  "recorded_utc": "2026-11-02T11:59:56.694728+00:00",
+  "worktree": "CLEAN",
+  "backend_regression_source_commit": "8b12d5aa649d26b1eb67dd1252922fea53532bbd",
+  "flutter_regression_source_commit": "000faaaada3106bc5bf306d02498821f046773e2",
+  "only_backend_test_expectations_changed_after_flutter": true,
+  "runtime_unchanged_after_flutter": true
+}

@@ -1,0 +1,83 @@
+{
+  "area": "battle",
+  "baseline": "d627e06a963e6ab5f85d479ac53cbb161eb8ce3f",
+  "status": "ONE_NEW_P2_FIXED",
+  "new_bug_families": 1,
+  "fixed_bug_families": 1,
+  "verified_open_new_source_bugs": 0,
+  "bugs": [
+    {
+      "id": "R3-BATTLE-STALE-SELECTION-COMMAND",
+      "severity": "P2",
+      "status": "fixed",
+      "root_cause": "Painted selection command callbacks admitted old card/target decisions using only current rule legality and readiness.",
+      "reproductions": [
+        "retarget_before_cast_callback",
+        "reselect_before_discard_callback",
+        "select_card_before_old_pass_callback",
+        "reconnect_across_real_legal_turn_before_retained_cast"
+      ],
+      "production_files": [
+        "luno_chess/lib/screens/battle_v1_screen.dart"
+      ],
+      "test_files": [
+        "luno_chess/test/round3_battle_selection_test.dart"
+      ]
+    }
+  ],
+  "baseline_regression": {
+    "passed": 3,
+    "failed": 4,
+    "exit_code": 1,
+    "log": "rawlogs/selection-before-legal.log",
+    "source_modified": false,
+    "legal_transition_reconnect_case": true
+  },
+  "earlier_baseline": {
+    "passed": 3,
+    "failed": 4,
+    "exit_code": 1,
+    "log": "rawlogs/selection-before.log",
+    "limitation": "Last case used version-only update; superseded by legal-transition baseline."
+  },
+  "infrastructure_attempt": {
+    "log": "rawlogs/selection-sandbox-blocked.log",
+    "classification": "loopback_socket_sandbox_failure",
+    "product_reproduction": false
+  },
+  "final_related": {
+    "passed": 66,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "new_tests_included": 8,
+    "files": [
+      "test/round3_battle_selection_test.dart",
+      "test/battle_ui/interaction_test.dart",
+      "test/v236_hotseat_screen_test.dart",
+      "test/rc_battle_modal_ownership_test.dart",
+      "test/tutorial_luno_live_test.dart"
+    ],
+    "log": "rawlogs/selection-after-related.log"
+  },
+  "diff_check": "passed",
+  "new_untracked_qa_files": [],
+  "owned_changes": [
+    "luno_chess/lib/screens/battle_v1_screen.dart",
+    "luno_chess/test/round3_battle_selection_test.dart"
+  ],
+  "source_sha256": {
+    "baseline_screen": "89df1a0cea6279c5d038234120f29b4de9af9e744b74ac8ae1f73cad88c318ab",
+    "fixed_screen": "20ab001064d737a5cb03298e6f178462d3053a65df958815bf99df8bf33aa5d8",
+    "final_test": "1940a71bdfe4c089774e3be9341f54d8a410abca978275a3969fb6d4650aa56b"
+  },
+  "limits": [
+    "fixture transport widget/controller/rules checks",
+    "no full suite or analyzer",
+    "no native build or emulator",
+    "no production Firebase/App Check/Google/Play acceptance",
+    "no physical audio/GPU/FPS measurement",
+    "no production deploy/payment/upload/push/signing change"
+  ],
+  "release_hold_unchanged": true
+}
