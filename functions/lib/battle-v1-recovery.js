@@ -110,7 +110,7 @@ function installBattleV1Recovery(api,deps){
  async function ackBattleV1Result(context){
   const b=requireRecord(context.body);exactKeys(b,['matchId','protocolVersion']);if(b.protocolVersion!==PROTOCOL)throw new BattleError('INCOMPATIBLE_PROTOCOL',400);
   await deps.requirePlayer(context.uid);await deps.rateLimit(context.uid,'ackBattleV1Result',20,60000);const m=await api.load(b.matchId,context.uid);if(!m.result||m.settlementStatus!=='complete')throw new BattleError('RESULT_NOT_READY');
-  await db.ref('battleV1Control').transaction(v=>{if(v===null)return null;if(v.lastMatch?.[context.uid]===m.matchId)delete v.lastMatch[context.uid];return v;},undefined,false);return {ok:true,acknowledged:true};
+  await db.ref('battleV1Control').transaction(v=>{if(v===null)return null;if(v.active?.[context.uid]===m.matchId)delete v.active[context.uid];if(v.lastMatch?.[context.uid]===m.matchId)delete v.lastMatch[context.uid];return v;},undefined,false);return {ok:true,acknowledged:true};
  }
  Object.assign(api,{settle,driveBot,resignBattleV1,ackBattleV1Result,sweep,cleanup});return api;
 }
