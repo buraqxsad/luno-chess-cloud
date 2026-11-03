@@ -29,7 +29,8 @@ class _PrivateChoiceSheetState extends State<PrivateChoiceSheet> {
   final _cardOrigins = <CardId, GlobalKey>{};
   bool get fate => widget.view.rules.pending?.card == CardId.fateExchange;
   bool get _active => mounted && ModalRoute.of(context)?.isCurrent == true;
-  void shift(int index, int delta) {
+  void shift(CardId card, int delta) {
+    final index = order.indexOf(card);
     if (!_active || index < 0 || index >= order.length) return;
     final other = index + delta;
     if (other < 0 || other >= order.length) return;
@@ -54,6 +55,7 @@ class _PrivateChoiceSheetState extends State<PrivateChoiceSheet> {
   @override
   Widget build(BuildContext context) {
     final l = LunoLocalizations.of(context);
+    final paintedChoice = choice;
     if (widget.view.rules.pending?.owner != widget.view.viewer) {
       return const SizedBox.shrink();
     }
@@ -74,18 +76,18 @@ class _PrivateChoiceSheetState extends State<PrivateChoiceSheet> {
             style: BattleTokens.body,
           ),
           const SizedBox(height: 12),
-          for (var i = 0; i < order.length; i++)
+          for (final (i, card) in order.indexed)
             Padding(
               padding: const EdgeInsets.only(bottom: 8),
               child: BattleSkin(
                 name: 'command-panel',
                 child: InkWell(
-                  key: ValueKey('private-${order[i].wire}'),
+                  key: ValueKey('private-${card.wire}'),
                   onTap:
                       fate
                           ? () {
                             if (!_active) return;
-                            setState(() => taken = order[i]);
+                            setState(() => taken = card);
                           }
                           : null,
                   child: Padding(
@@ -94,11 +96,11 @@ class _PrivateChoiceSheetState extends State<PrivateChoiceSheet> {
                       children: [
                         SizedBox.square(
                           key: _cardOrigins.putIfAbsent(
-                            order[i],
+                            card,
                             GlobalKey.new,
                           ),
                           dimension: 64,
-                          child: BattleCardArt(card: order[i]),
+                          child: BattleCardArt(card: card),
                         ),
                         const SizedBox(width: 8),
                         Expanded(
@@ -106,11 +108,11 @@ class _PrivateChoiceSheetState extends State<PrivateChoiceSheet> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                l.battleCardName(order[i]),
+                                l.battleCardName(card),
                                 style: BattleTokens.card,
                               ),
                               Text(
-                                taken == order[i]
+                                taken == card
                                     ? l.battle(BattleCopy.take)
                                     : '${i + 1}',
                                 style: BattleTokens.body,
@@ -118,11 +120,11 @@ class _PrivateChoiceSheetState extends State<PrivateChoiceSheet> {
                             ],
                           ),
                         ),
-                        if (taken != order[i]) ...[
+                        if (taken != card) ...[
                           BattleIconControl(
                             icon: Icons.arrow_upward,
                             label: l.battle(BattleCopy.earlier),
-                            onPressed: i == 0 ? null : () => shift(i, -1),
+                            onPressed: i == 0 ? null : () => shift(card, -1),
                           ),
                           BattleIconControl(
                             icon: Icons.arrow_downward,
@@ -130,7 +132,7 @@ class _PrivateChoiceSheetState extends State<PrivateChoiceSheet> {
                             onPressed:
                                 i == order.length - 1
                                     ? null
-                                    : () => shift(i, 1),
+                                    : () => shift(card, 1),
                           ),
                         ] else
                           const BattleArt('confirm', size: 28),
@@ -146,10 +148,10 @@ class _PrivateChoiceSheetState extends State<PrivateChoiceSheet> {
             icon: Icons.check,
             art: 'confirm',
             onPressed:
-                choice == null
+                paintedChoice == null
                     ? null
                     : () {
-                      if (!_active) return;
+                      if (!_active || choice?.key != paintedChoice.key) return;
                       final render =
                           _cardOrigins[taken]?.currentContext
                               ?.findRenderObject();
@@ -162,7 +164,7 @@ class _PrivateChoiceSheetState extends State<PrivateChoiceSheet> {
                           render.localToGlobal(Offset.zero) & render.size,
                         );
                       }
-                      dismissBattleSheet(context, choice);
+                      dismissBattleSheet(context, paintedChoice);
                     },
           ),
         ],
