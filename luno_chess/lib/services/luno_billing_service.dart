@@ -44,6 +44,7 @@ class LunoBillingService extends ChangeNotifier {
   final Set<String> _completed = {};
   final Map<String, String> _rejected = {};
   final Map<String, Object> _pendingReceipts = {};
+  final Map<String, Object> _productGenerations = {};
   StreamSubscription<List<LunoPlayPurchase>>? _subscription;
   LunoBillingOwner? _owner;
   Future<void>? _initialization;
@@ -88,7 +89,7 @@ class LunoBillingService extends ChangeNotifier {
     _enabled = true;
     if (_owner != null &&
         _initialization == null &&
-        (_subscription == null || !_available)) {
+        (_subscription == null || !_available || _products.isEmpty)) {
       unawaited(_clearSession());
     }
     _onBackendChanged();
@@ -286,6 +287,19 @@ class LunoBillingService extends ChangeNotifier {
   Future<void> _restore(LunoBillingOwner owner) async {
     final pendingAtStart = Map<String, Object>.of(_pendingReceipts);
     try {
+      // Product availability does not determine receipt ownership. Recover
+      // owned payments even when a catalog retry remains unavailable.
+      LunoBillingFailure? catalogFailure;
+      if (_available && _products.isEmpty) {
+        try {
+          await queryProducts();
+        } catch (error) {
+          _guard(owner);
+          catalogFailure = _failure(error);
+        }
+      }
+      _guard(owner);
+      final receiptsAtStart = Map<String, Object>.of(_productGenerations);
       final owned = await _play
           .queryOwned(_accountHash(owner))
           .timeout(storeTimeout);
@@ -293,7 +307,19 @@ class LunoBillingService extends ChangeNotifier {
       for (final queued in _queue.values) {
         queued.deferred = false;
       }
-      _handleBatch(owner, owned, replayCompleted: true);
+      // A query snapshot can predate a live purchase callback. An older
+      // pending status cannot replace the product's newer stream decision.
+      final currentOwned = owned
+          .where(
+            (receipt) =>
+                receipt.status != LunoPlayPurchaseStatus.pending ||
+                identical(
+                  _productGenerations[receipt.productId],
+                  receiptsAtStart[receipt.productId],
+                ),
+          )
+          .toList(growable: false);
+      _handleBatch(owner, currentOwned, replayCompleted: true);
       final ownedProducts = owned.map((receipt) => receipt.productId).toSet();
       for (final entry in pendingAtStart.entries) {
         final id = entry.key;
@@ -313,7 +339,9 @@ class LunoBillingService extends ChangeNotifier {
       _guard(owner);
       await _refreshState(owner);
       _guard(owner);
-      if (_queue.isEmpty &&
+      if (catalogFailure != null) {
+        _report(catalogFailure);
+      } else if (_queue.isEmpty &&
           !_productStatuses.values.any(
             (s) =>
                 s == LunoBillingStatus.pending || s == LunoBillingStatus.error,
@@ -554,7 +582,10 @@ class LunoBillingService extends ChangeNotifier {
     if (_disposed) return;
     _status = status;
     _errorCode = code;
-    if (productId != null) _productStatuses[productId] = status;
+    if (productId != null) {
+      _productStatuses[productId] = status;
+      _productGenerations[productId] = Object();
+    }
     _events.add(
       LunoBillingEvent(status, productId: productId, errorCode: code),
     );
@@ -578,6 +609,7 @@ class LunoBillingService extends ChangeNotifier {
     _completed.clear();
     _rejected.clear();
     _pendingReceipts.clear();
+    _productGenerations.clear();
     _missing = const {};
     _latestSnapshot = null;
     return subscription?.cancel() ?? Future<void>.value();
