@@ -2612,6 +2612,17 @@ class LunoOnlineService extends ChangeNotifier {
           if (error.code == 'account-deleted' && _bindsPlayerStore) {
             await _playerStore.eraseLocalAccount(user.uid);
           }
+          if (deletionRequest && error.code == 'account-deletion-in-progress') {
+            // The processing response invalidated this request's state epoch.
+            // Return its explicit retry state while preserving real owner changes.
+            assertOwner();
+            if (generation != _requestGeneration ||
+                this.user?.uid != user.uid ||
+                (stateEpoch != null && _playerStore.accountUid != user.uid)) {
+              throw const LunoApiException('session-changed', 409);
+            }
+            rethrow;
+          }
         }
         if (attempt < attemptLimit - 1 && isRetryableFailure(error)) {
           await Future<void>.delayed(

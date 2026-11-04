@@ -80,12 +80,46 @@ function installBattleV1Friendly(api,deps){
   const match=await api.completeReservation(id)||await api.load(id,context.uid);return {...api.snapshot(match,context.uid),accepted:true,durationMinutes:5};
   });
  }
+ async function eraseAccountHistory(uid,deletionRef){
+  const progress=(await deletionRef.get()).val()||{};
+  if(progress.battleV1HistoryErased===true)return;
+  const root=db.ref('matchSecretsV1'),pageSize=5,pageBudget=40,deadline=now()+15000;
+  let cursor=typeof progress.battleV1HistoryCursor==='string'?progress.battleV1HistoryCursor:null;
+  const finish=()=>deletionRef.update({battleV1HistoryCursor:null,battleV1HistoryErased:true});
+  const deferred=()=>new BattleError('account-deletion-in-progress',503);
+  for(let pageNumber=0;pageNumber<pageBudget;pageNumber++){
+   let query=root.orderByKey();if(cursor!==null)query=query.startAfter(cursor);
+   const snapshot=await query.limitToFirst(pageSize).get(),rows=[];
+   snapshot.forEach(child=>{rows.push(child);return false;});
+   if(!rows.length){await finish();return;}
+   for(const row of rows){
+    const captured=api.hydrate(row.val());
+    if(!Object.values(captured.players).some(player=>player.uid===uid&&!player.bot))continue;
+    if(now()>=deadline)throw deferred();
+    const tx=await api.transact(row.key,uid,m=>({match:require('./battle-v1').authority.finishMatch(m,{reason:'account-deleted',winner:protocol.sideForUid(m,uid)==='w'?'b':'w',finishedAt:now()})}));
+    await api.settle(tx.match.matchId,uid);
+    const deleted=await api.transact(row.key,uid,m=>{
+     if(m.deletedParticipants?.[uid]===true)return {match:m};
+     m.deletedParticipants={...m.deletedParticipants,[uid]:true};m.players[protocol.sideForUid(m,uid)].name='Deleted player';m.stateVersion++;return {match:m};
+    });
+    await api.publish(deleted.match);
+    await db.ref('matchEmotesV1/'+row.key).remove();
+   }
+   // A retry must revisit the page until canonical retirement and projection
+   // publication both finish; never skip a partially erased match.
+   cursor=rows.at(-1).key;await deletionRef.update({battleV1HistoryCursor:cursor});
+   if(rows.length<pageSize){await finish();return;}
+   if(now()>=deadline)throw deferred();
+  }
+  if(!(await root.orderByKey().startAfter(cursor).limitToFirst(1).get()).exists()){await finish();return;}
+  throw deferred();
+ }
  async function leaveAccount(uid){
   const id=(await db.ref('battleV1Control/active/'+uid).get()).val()||(await db.ref('battleV1Control/lastMatch/'+uid).get()).val();
   if(id){await api.completeReservation(id);const tx=await api.transact(id,uid,m=>({match:require('./battle-v1').authority.finishMatch(m,{reason:'account-deleted',winner:protocol.sideForUid(m,uid)==='w'?'b':'w',finishedAt:now()})}));await api.settle(tx.match.matchId,uid);const deleted=await api.transact(id,uid,m=>{m.deletedParticipants={...m.deletedParticipants,[uid]:true};m.players[protocol.sideForUid(m,uid)].name='Deleted player';m.stateVersion++;return {match:m};});await api.publish(deleted.match);}
   await transact(v=>{delete v.queue[uid];delete v.active[uid];if(v.lastMatch)delete v.lastMatch[uid];for(const [code,r] of Object.entries(v.rooms))if(r.host.uid===uid||r.guestUid===uid)delete v.rooms[code];delete v.roomByUser[uid];for(const [key,i] of Object.entries(v.invites))if(i.from.uid===uid||i.to===uid)delete v.invites[key];return v;});
   if(id)await db.ref('matchEmotesV1/'+id).remove();
  }
- Object.assign(api,{createBattleV1Room,cancelBattleV1Room,joinBattleV1Room,sendBattleV1Invite,respondBattleV1Invite,leaveAccount});return api;
+ Object.assign(api,{createBattleV1Room,cancelBattleV1Room,joinBattleV1Room,sendBattleV1Invite,respondBattleV1Invite,leaveAccount,eraseAccountHistory});return api;
 }
 module.exports={installBattleV1Friendly};

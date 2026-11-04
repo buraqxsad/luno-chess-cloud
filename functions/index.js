@@ -4265,6 +4265,7 @@ async function deleteAccount(context){
     await productTelemetry.purgeUser(uid);
     await leaveRankedBeforeDeletion(uid);
     await battleV1.leaveAccount(uid);
+    await battleV1.eraseAccountHistory(uid,deletionRef);
     const userRef=db.ref(`users/${uid}`),profile=(await userRef.get()).val()||{};
     const username=profile&&Object.keys(profile).length?canonicalUsername(profile,uid):'',usernameReservations=(await db.ref('usernames').orderByValue().equalTo(uid).get()).val()||{};
     const codeReservations=(await db.ref('playerCodes').orderByValue().equalTo(uid).get()).val()||{};
