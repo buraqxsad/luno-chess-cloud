@@ -1327,22 +1327,39 @@ function rankedOutcome(match,color){
   return match.result.winner===color?'win':'loss';
 }
 function queueRange(entry,at){return Math.min(2000,200+Math.floor(Math.max(0,at-safeInt(entry&&entry.joinedAt,at))/(15*1000))*200);}
+async function publishLegacyMatchAccount(uid,matchId,updates){
+  const cleanup=async function(){
+    await db.ref().update({
+      [`matchHistory/${uid}/${matchId}`]:null,[`rankedReplays/${uid}/${matchId}`]:null,
+      [`rankedMatchViews/${uid}/${matchId}`]:null,[`rankedMessages/${uid}/${matchId}`]:null,
+      [`rankedState/pendingSettlementsByUser/${uid}/${matchId}`]:null,
+    });
+    await db.ref(`rankedPlayers/${uid}`).transaction(value=>{
+      if(value===null)return null;return value.matchId===matchId?null:undefined;
+    },undefined,false);
+    await db.ref(`rankedState/activeByUser/${uid}`).transaction(value=>{
+      if(value===null)return null;return value===matchId?null:undefined;
+    },undefined,false);
+  };
+  try{await writeAccountMetadata(uid,'legacyMatchProjection',()=>db.ref().update(updates),cleanup);}
+  catch(error){if(!isAccountDeletionError(error))throw error;await cleanup();}
+}
 async function publishRankedMatch(match,publishPlayerStatus=true){
-  match=hydrateMatch(match);const updates={};
+  match=hydrateMatch(match);
   for(const uid of Object.keys(match.participants||{})){
-    const view=sanitizeMatchView(match,uid);
+    const updates={},view=sanitizeMatchView(match,uid);
     updates[`rankedMatchViews/${uid}/${match.matchId}`]=view;
     if(publishPlayerStatus)updates[`rankedPlayers/${uid}`]={
       status:match.status==='active'?'active':match.status,matchId:match.matchId,mode:match.mode||'ranked',color:match.colors[uid],
       opponentUid:match.players[match.colors[uid]==='W'?'B':'W'].uid,updatedAt:ServerValue.TIMESTAMP
     };
+    await publishLegacyMatchAccount(uid,match.matchId,updates);
   }
-  await db.ref().update(updates);
 }
 async function settleRankedMatch(matchId){
   if(!validServerMatchId(matchId))throw httpError(400,'invalid-match-id','Server match id is invalid.');
   let match=hydrateMatch((await db.ref(`rankedState/matches/${matchId}`).get()).val());
-  if(!match||!match.result)return match;
+  if(!match||!match.result||match.settlementStatus==='complete')return match;
   const mode=match.mode==='friendly'?'friendly':'ranked',settlements={};
   for(const color of ['W','B']){
     const player=match.players[color],opponent=match.players[color==='W'?'B':'W'],uid=player.uid,outcome=rankedOutcome(match,color);
@@ -1350,28 +1367,35 @@ async function settleRankedMatch(matchId){
       settlements[color]={applied:false,idempotent:true,mode:'friendly',outcome,trophyDelta:0,gold:0,levelGold:0,xp:0};
       continue;
     }
-    const transaction=await transactExistingPlayer(uid,function(profile){
+    let transaction;
+    try{transaction=await transactExistingPlayer(uid,function(profile){
       const settlement=applyRankedSettlement(profile,{
         uid,matchId,outcome,opponentTrophies:opponent.trophies,moveCount:match.moveCount,
         metrics:Object.assign({moveCount:match.moveCount},match.metrics[color]||{}),at:safeInt(match.result.finishedAt,now())
       });
       return {commit:settlement.applied===true,settlement};
-    });
+    });}catch(error){
+      try{await assertAccountOperationAllowed(uid,'settleRankedMatch');}
+      catch(lifecycle){
+        if(!isAccountDeletionError(lifecycle))throw lifecycle;
+        settlements[color]=match.settlement?.[color]||{applied:false,skipped:true,reason:'account-unavailable',outcome};continue;
+      }
+      throw error;
+    }
     settlements[color]=transaction.decision.settlement||match.settlement&&match.settlement[color]||null;
   }
   match.settlement=Object.assign({},match.settlement||{},settlements);
-  const updates={};
-  updates[`rankedState/matches/${matchId}/settlement`]=match.settlement;
+  await db.ref(`rankedState/matches/${matchId}/settlement`).set(match.settlement);
   for(const color of ['W','B']){
-    const uid=match.players[color].uid,outcome=rankedOutcome(match,color),opponent=match.players[color==='W'?'B':'W'];
+    const uid=match.players[color].uid,outcome=rankedOutcome(match,color),opponent=match.players[color==='W'?'B':'W'],updates={};
     updates[`matchHistory/${uid}/${matchId}`]={
       matchId,mode,outcome,opponent:{uid:opponent.uid,name:opponent.name,trophies:opponent.trophies},
       result:match.result,moveCount:match.moveCount,createdAt:match.createdAt,finishedAt:match.result.finishedAt,settlement:settlements[color]
     };
     updates[`rankedReplays/${uid}/${matchId}`]=sanitizeMatchReplay(match,uid);
     updates[`rankedState/pendingSettlementsByUser/${uid}/${matchId}`]=true;
+    await publishLegacyMatchAccount(uid,matchId,updates);
   }
-  await db.ref().update(updates);
   for(const color of ['W','B']){
     const uid=match.players[color].uid,opponent=match.players[color==='W'?'B':'W'];
     await settlePlayerPresence(db,uid,matchId,{status:match.status,matchId,mode,color,opponentUid:opponent.uid,updatedAt:ServerValue.TIMESTAMP});
