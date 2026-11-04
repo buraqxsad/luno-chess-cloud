@@ -3738,7 +3738,7 @@ function applyVoidedPurchaseRevocation(profile,claim,tokenHashValue,at){
   const economy=profile.serverEconomy||{},previous=economy.purchaseTokens&&economy.purchaseTokens[tokenHashValue];
   if(economy.billingReversals&&economy.billingReversals[tokenHashValue])return {revoked:false,idempotent:true};
   if(!previous){
-    if(claim.status!=='verified')return {error:'purchase-receipt-invalid'};
+    if(!['verified','reconcile-required'].includes(claim.status))return {error:'purchase-receipt-invalid'};
     // A verified fulfillment may already be waiting to transact this profile.
     // Persist the provider-confirmed revocation in the same transaction even
     // without a grant: its stale claim snapshot must not mint currency later.
