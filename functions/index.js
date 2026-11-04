@@ -1799,9 +1799,11 @@ function authoritativeState(profile,at,external){
 }
 async function getPlayerState(context){
   await rateLimit(context.uid,'getPlayerState',60,60*1000);
-  const at=now();
+  let at=now();
   await reconcileUsernameState(context.uid);
   const result=await transactExistingPlayer(context.uid,function(profile){
+    // Normalization observes the commit attempt, including retries after rollover.
+    at=now();
     if(isIncompleteGuestProfile(profile))return {commit:false,error:'profile-not-found'};
     let changed=normalizeLoginActivity(profile,at);
     const productChanged=normalizeProductEntitlements(profile);

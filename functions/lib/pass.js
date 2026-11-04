@@ -1,6 +1,6 @@
 'use strict';
 
-const {periodSnapshot}=require('./economy');
+const {periodSnapshot,seasonBounds}=require('./economy');
 const {PASS_CURRENCY_REWARDS,PASS_CURRENCY_REWARDS_V2}=require('./catalogs');
 const {normalizeProductEntitlements}=require('./membership');
 // s6 was live during this pass. Its full advertised rewards are retained;
@@ -28,6 +28,11 @@ function passRewardVersion(pass,seasonId){
 }
 function syncPassState(profile,at){
   normalizeProductEntitlements(profile);
+  const savedSeason=safeInt(profile.passState?.season),requestedSeason=periodSnapshot(at).seasonNumber;
+  // A delayed operational request cannot replace an already opened later Pass.
+  // Future and malformed saved seasons still follow the normal reset path.
+  if(savedSeason>requestedSeason&&savedSeason<=periodSnapshot(Date.now()).seasonNumber&&
+    profile.passState?.seasonKey==='ranked-s'+savedSeason+'-v2')at=seasonBounds(savedSeason).startAt;
   const periods=periodSnapshot(at),season=periods.seasonNumber,seasonKey='ranked-'+periods.seasonId+'-v2';
   if(!record(profile.passState)||profile.passState.seasonKey!==seasonKey){
     profile.passState={seasonKey,seasonStartedAt:at,season,level:0,xp:0,premium:false,
