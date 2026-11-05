@@ -22,6 +22,9 @@ Snapshot RAM’i orijinal byte/SHA ile geri kondu. Yeni güvenlik probe’u BLOC
 Gerçek cihaz/native önceki çökme, performans/16KB, signing ve Firebase/Play/Console
 kapıları açık. Sunucu canlı deploy’u, ödeme, Play upload ve oyun yayını yapılmadı.
 Bu devir kullanıcı isteğiyle GitHub'a kaynak yüklemesi ve yerel devam içindir.
+**Son aktarım sonucu:** GitHub erişimi `401 Bad credentials` ile reddedildi;
+son commit'ler uzakta doğrulanamadı/yüklenmedi. Bilgisayara devam için indirilen
+kaynak ZIP veya Git bundle kullanılmalı; ayrıntılar `PC_DEVAM.md` içinde.
 Aşağıdaki kayıtlar tarihseldir; eski sonuçlar yeni sayılara eklenmez.
 
 ## 2 Kasım — dördüncü sistem taraması

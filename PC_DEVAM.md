@@ -6,6 +6,21 @@ Bundan sonraki devir commit’i yalnız belge ve QA kanıtı ekler.
 Aktif Flutter projesi `luno_chess/`; sunucu `functions/`, motor TS `functions/rules-v1/`.
 Kök HTML ve `luno_android/` mevcut uyumluluk girdileridir.
 
+## Aktarım: GitHub erişimi engelli; ZIP veya bundle kullan
+
+5 Kasım'daki yükleme denemesi `Invalid username or token` ile reddedildi;
+GitHub API de `401 Bad credentials` döndürdü. Son bulut commit'leri GitHub'a
+yüklenemedi. GitHub dalını çekmek tek başına bu devri getirmez.
+
+İndirilen **Luno-Chess-final-source.zip** dosyasını mevcut PC projesinin üzerine
+yazmadan ayrı klasöre aç. ZIP, son kaynakları ve takipli assetleri içerir;
+Git geçmişi, toolchain/cache ve yerel imzalama sırlarını içermez.
+Git geçmişini de aktarmak için **Luno-Chess-final-source.bundle** kullanılabilir;
+mevcut klonda `14780e10e9b511aababd009517507425890c4840` temel commit'i gerekir.
+Önce `git bundle verify` ile doğrula, sonra ayrı inceleme dalına fetch et.
+Yeni klasöre mevcut yerel ayarları/anahtarları taşırken sırları Git'e ekleme.
+GitHub yeniden yetkilendirildiğinde bu kaynak ayrıca yüklenebilir.
+
 ## Önce okunacaklar
 
 - [DEVAM.md](DEVAM.md): önceki sürümler ve tarihsel düzeltmeler.
