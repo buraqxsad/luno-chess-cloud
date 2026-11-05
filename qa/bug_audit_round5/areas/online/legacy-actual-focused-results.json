@@ -1,0 +1,56 @@
+[
+  {
+    "file": "round5-online-legacy-settlement-erasure.test.js",
+    "exit": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "settlement-recovery.test.js",
+    "exit": 0,
+    "tests": 19,
+    "pass": 19,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "settlement-presence.test.js",
+    "exit": 0,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "ranked-cold-cache.test.js",
+    "exit": 0,
+    "tests": 12,
+    "pass": 12,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "account-deletion-gate.test.js",
+    "exit": 0,
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v201b-authority.test.js",
+    "exit": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  }
+]

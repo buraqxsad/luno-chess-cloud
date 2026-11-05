@@ -1,0 +1,13 @@
+{
+  "derivedFrom": "retained new legal traces; replayed prefixes and matched actual GeometryMove flags",
+  "castling": 50,
+  "enPassant": 0,
+  "promotion": 0,
+  "authorizedByCard": {
+    "pawn_deviation": 2,
+    "pawn_advance": 1,
+    "rook_bend": 1,
+    "angry_n": 4,
+    "shadow_pass": 4
+  }
+}

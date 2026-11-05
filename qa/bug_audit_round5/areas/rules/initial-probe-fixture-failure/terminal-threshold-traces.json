@@ -1,0 +1,6030 @@
+[
+  {
+    "id": "radar-oldmine",
+    "white": [
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "radar",
+        "target": "chain"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "prophecy-oldmine",
+    "white": [
+      "prophecy",
+      "radar",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "prophecy"
+      },
+      {
+        "type": "resolve",
+        "order": [
+          "pawn_deviation",
+          "slow"
+        ]
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "shelter-oldmine",
+    "white": [
+      "shelter",
+      "radar",
+      "prophecy",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "shelter",
+        "target": 27
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "chain-oldmine",
+    "white": [
+      "chain",
+      "radar",
+      "prophecy",
+      "shelter",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "chain",
+        "target": 48
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "pawn_deviation-oldmine",
+    "white": [
+      "pawn_deviation",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "pawn_deviation",
+        "target": 12
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "e2d3"
+      },
+      {
+        "type": "move",
+        "uci": "e2f3"
+      }
+    ]
+  },
+  {
+    "id": "pawn_advance-oldmine",
+    "white": [
+      "pawn_advance",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "pawn_advance",
+        "target": 12
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "e2e4"
+      }
+    ]
+  },
+  {
+    "id": "locked_square-oldmine",
+    "white": [
+      "locked_square",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "locked_square",
+        "target": 10
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "freeze-oldmine",
+    "white": [
+      "freeze",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "purify"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "freeze",
+        "target": 48
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "purify-oldmine",
+    "white": [
+      "purify",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "purify",
+        "target": "e2"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "mine-oldmine",
+    "white": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 10
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "break_seal-locked_square",
+    "white": [
+      "break_seal",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "locked_square",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "freeze",
+      "purify"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "play",
+        "card": "locked_square",
+        "target": 21
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "break_seal",
+        "target": "e1"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "fog-oldmine",
+    "white": [
+      "fog",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "fog",
+        "target": 27
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "mana_sabotage-oldmine",
+    "white": [
+      "mana_sabotage",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "mana_sabotage",
+        "target": "chain"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "card_block-oldmine",
+    "white": [
+      "card_block",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "card_block",
+        "target": "chain"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "rook_bend-oldmine",
+    "white": [
+      "rook_bend",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "rook_bend",
+        "target": 7
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "h1g2"
+      }
+    ]
+  },
+  {
+    "id": "angry_n-oldmine",
+    "white": [
+      "angry_n",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "angry_n",
+        "target": 27
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4e4"
+      },
+      {
+        "type": "move",
+        "uci": "d4c4"
+      },
+      {
+        "type": "move",
+        "uci": "d4d5"
+      },
+      {
+        "type": "move",
+        "uci": "d4d3"
+      }
+    ]
+  },
+  {
+    "id": "shadow_pass-oldmine",
+    "white": [
+      "shadow_pass",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "shadow_pass",
+        "target": 0
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "a1a3"
+      },
+      {
+        "type": "move",
+        "uci": "a1a4"
+      },
+      {
+        "type": "move",
+        "uci": "a1a5"
+      },
+      {
+        "type": "move",
+        "uci": "a1a6"
+      }
+    ]
+  },
+  {
+    "id": "hunt_vow-oldmine",
+    "white": [
+      "hunt_vow",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "hunt_vow",
+        "target": 48
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "watch_vow-oldmine",
+    "white": [
+      "watch_vow",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "watch_vow",
+        "target": 10
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "echo-oldmine",
+    "white": [
+      "echo",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "echo",
+        "target": "chain"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "fate_exchange-oldmine",
+    "white": [
+      "fate_exchange",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "fate_exchange",
+        "sacrifice": "prophecy"
+      },
+      {
+        "type": "resolve",
+        "selected": "pawn_deviation",
+        "order": [
+          "slow",
+          "chain"
+        ]
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "shadow_contract-oldmine",
+    "white": [
+      "shadow_contract",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "shadow_contract",
+        "sacrifice": "prophecy"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "board_seal-oldmine",
+    "white": [
+      "board_seal",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "board_seal",
+        "target": 27
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "radar-freshmine",
+    "white": [
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "mine",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "play",
+        "card": "mine",
+        "target": 21
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "radar",
+        "target": "chain"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "radar-freeze",
+    "white": [
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "freeze",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "purify"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "play",
+        "card": "freeze",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "radar",
+        "target": "chain"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "radar-chain",
+    "white": [
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "chain",
+      "radar",
+      "prophecy",
+      "shelter",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "play",
+        "card": "chain",
+        "target": 27
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "radar",
+        "target": "freeze"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "radar-slow",
+    "white": [
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "slow",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "play",
+        "card": "slow",
+        "target": 7
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "radar",
+        "target": "chain"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f3"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "radar-locked_square",
+    "white": [
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "locked_square",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "freeze",
+      "purify"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "play",
+        "card": "locked_square",
+        "target": 21
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "radar",
+        "target": "chain"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "f2f4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  },
+  {
+    "id": "radar-board_seal",
+    "white": [
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze",
+      "purify"
+    ],
+    "black": [
+      "board_seal",
+      "radar",
+      "prophecy",
+      "shelter",
+      "chain",
+      "slow",
+      "pawn_deviation",
+      "pawn_advance",
+      "locked_square",
+      "freeze"
+    ],
+    "lowFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 0 1",
+    "highFen": "3nk3/pp3ppp/8/8/3N4/8/PP2PP1P/R3K2R w KQ - 137 1",
+    "actions": [
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d4f3"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "d8c6"
+      },
+      {
+        "type": "pass"
+      },
+      {
+        "type": "move",
+        "uci": "f3d4"
+      },
+      {
+        "type": "play",
+        "card": "board_seal",
+        "target": 21
+      },
+      {
+        "type": "move",
+        "uci": "c6d8"
+      },
+      {
+        "type": "play",
+        "card": "radar",
+        "target": "chain"
+      }
+    ],
+    "finalMoves": [
+      {
+        "type": "move",
+        "uci": "d4b5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c6"
+      },
+      {
+        "type": "move",
+        "uci": "d4e6"
+      },
+      {
+        "type": "move",
+        "uci": "d4f5"
+      },
+      {
+        "type": "move",
+        "uci": "d4c2"
+      },
+      {
+        "type": "move",
+        "uci": "d4b3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a3"
+      },
+      {
+        "type": "move",
+        "uci": "a2a4"
+      },
+      {
+        "type": "move",
+        "uci": "b2b3"
+      },
+      {
+        "type": "move",
+        "uci": "b2b4"
+      },
+      {
+        "type": "move",
+        "uci": "e2e3"
+      },
+      {
+        "type": "move",
+        "uci": "e2e4"
+      },
+      {
+        "type": "move",
+        "uci": "h2h3"
+      },
+      {
+        "type": "move",
+        "uci": "h2h4"
+      },
+      {
+        "type": "move",
+        "uci": "a1b1"
+      },
+      {
+        "type": "move",
+        "uci": "a1c1"
+      },
+      {
+        "type": "move",
+        "uci": "a1d1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d2"
+      },
+      {
+        "type": "move",
+        "uci": "e1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1d1"
+      },
+      {
+        "type": "move",
+        "uci": "h1g1"
+      },
+      {
+        "type": "move",
+        "uci": "h1f1"
+      },
+      {
+        "type": "move",
+        "uci": "e1g1"
+      },
+      {
+        "type": "move",
+        "uci": "e1c1"
+      }
+    ]
+  }
+]

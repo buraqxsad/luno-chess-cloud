@@ -1,0 +1,30 @@
+# Rules engine — fifth bounded adversarial audit
+
+**No new confirmed production defect in this inspected scope.** No production file, contract, existing test assertion, fixture or golden was changed by this audit. No speculative patch is proposed. All 33 owned source/contract files match baseline `6467e72f6181efc10420a98df1b7d7977cdf757a`; exact hashes are in `source-provenance.json`. Concurrent agents' work is outside this statement.
+
+| Executed check | Actual result |
+| --- | --- |
+| TypeScript build, observed completion | PASS, exit 0 |
+| New reachable terminal-threshold paths, direct Node TAP | 30 pass / 0 fail / 0 skip, exit 0 |
+| New native Dart terminal-threshold paths, direct TAP | 30 pass / 0 fail / 0 skip, exit 0; 6,433 explicit assertions |
+
+The new family tests **card effects and secret resolution immediately before automatic terminal accounting**. It does not repeat the prior identity-renaming, turn-translation, conservation, reflection or codec/perft probes. Each case starts with `newBattle`/`DeckManager.newBattle` and a custom initial FEN, then executes twelve legal chess plies, passing intervening card windows and legally planting the selected enemy effect. No ready-state injection, direct rule-state mutation or fabricated fixture expectation is used. The low/high twins begin with halfmove clocks 0/137 and reach 12/149 through the same legal history. They have equal complete authoritative states after ignoring only the halfmove clock, including repetition histories.
+
+All 24 cards are then legally played, one chosen target/sacrifice per card. Prophecy and Fate Exchange choices are completely resolved before moving. Twenty-three cases carry an old Mine debuff produced by a real Mine entry; Break Seal has a removable Locked Square instead. Six additional Radar paths install a fresh Mine, Freeze, Chain, Slow, Locked Square or Board Seal. The retained explicit decks, initial FENs, action sequences and final move sets are in `terminal-threshold-traces.json`.
+
+Every outgoing final move is executed from each newly reached boundary: **657 branches per implementation**, each with low/high clocks. There are 1,384 prefix transitions and 1,314 final branch transitions per implementation, 2,698 calls in total. These calls share histories; they are not independent games or unique states to add to previous audits. Exact branch accounting:
+
+- 401 quiet non-pawn moves reach the automatic 75-move terminal. The complete authoritative state must preserve the lower-clock transition's already-completed triggers, identity movement and effect expiry, while suppressing the draw, next-player mana/turn advance and new repetition entry. Legal actions must then be empty.
+- 250 pawn moves and six captures reset the halfmove clock. Their complete resulting authoritative states must equal their lower-clock counterparts.
+- 106 quiet terminal branches consume an existing Mine debuff when its affected piece moves. One terminal branch enters a fresh Mine and retains the newly created punishment. These distinguish old-effect expiry from a new entry trigger at the terminal boundary.
+- Both pending knowledge cards resolve in actual card windows at clock 149. The terminal move retains the selected/reordered secret state and does not take the otherwise available normal post-move draw.
+
+Native Dart replays the explicit legal histories with its own engine and derives its own complete outgoing legal set. It checks the same clock/terminal law against its own lower-clock transitions, without consuming TypeScript expected output states. The legal action sets also agree across implementations at the 30 final boundaries. This is a precise metamorphic terminal-ordering check, not an independent complete card or chess oracle. The invariant follows the existing contract's automatic 75-move boundary and documented terminal no-draw behavior; no goldens were generated or replaced.
+
+Review covered all 24 card transitions and target categories; special authorization and movement geometry; capture/entry/final-position trigger order; piece/board/modifier expiry; castling/EP/promotion identity application; terminal/repetition accounting; action matching, codecs, authoritative hands/decks and knowledge. No new actionable root cause was established. Inactive special authorization remaining in a finished server projection was not reported as a gameplay defect: terminal phase rejects further actions. Existing explicitly intended public Mine visibility and Luno-specific repetition semantics remain intact.
+
+An initial **probe-fixture error**, preserved under `initial-probe-fixture-failure/`, registered 29 passes and one failure: the newly invented placement had no enemy slider, so Slow was correctly unavailable. The corrected placement adds an actual enemy rook and a pawn to exercise capture reset. No product rule or assertion was weakened. Initial counts are excluded from accepted counts. The first build log is retained; a second observed build records the exit status explicitly because the first asynchronous invocation's completion status was not captured.
+
+Limits are concrete: one custom initial placement, White as the final actor, one chosen cast per card, and the stated final outgoing branches. This round does not establish all targeting combinations, checkmate/75-move precedence, EP/promotion terminal interactions, arbitrary histories, full-regression acceptance or a fresh whole-corpus differential. The derived geometry counts identify the actual castling and movement-card branches and zero EP/promotion branches. Previous gates remain open outside this scope.
+
+Pinned activation was `/workspace/toolchains/luno-env.sh` (Dart 3.13.1, Node 22.23.3). Native Dart ran under `/workspace/luno-review/bug-audit-round5/flutter.lock`; no Flutter suite, full regression, AOT build, emulator, native device, live service, payment, deployment, signing, upload or push was performed. No repository QA assets were generated. This scoped no-new-defect result is not whole-product release acceptance.

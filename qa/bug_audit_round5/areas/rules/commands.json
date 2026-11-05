@@ -1,0 +1,21 @@
+[
+  {
+    "cwd": "/workspace/luno-chess",
+    "command": "source /workspace/toolchains/luno-env.sh; npm --prefix functions/rules-v1 run build",
+    "exit": 0,
+    "log": "typescript-build-observed.log",
+    "note": "first asynchronous build completion exit was not captured; original log retained separately"
+  },
+  {
+    "cwd": "/workspace/luno-chess",
+    "command": "source /workspace/toolchains/luno-env.sh; node /workspace/luno-review/bug-audit-round5/rules/terminal_threshold.cjs",
+    "exit": 0,
+    "log": "terminal-threshold-node.log"
+  },
+  {
+    "cwd": "/workspace/luno-chess/luno_chess",
+    "command": "source /workspace/toolchains/luno-env.sh; flock /workspace/luno-review/bug-audit-round5/flutter.lock dart /workspace/luno-review/bug-audit-round5/rules/terminal_threshold.dart",
+    "exit": 0,
+    "log": "terminal-threshold-dart.log"
+  }
+]

@@ -1,0 +1,96 @@
+{
+  "baseline": "6467e72f6181efc10420a98df1b7d7977cdf757a",
+  "newConfirmedBugs": 0,
+  "residualBugPaths": 0,
+  "productionEdits": 0,
+  "repositoryTestsAdded": 0,
+  "typescriptBuildExit": 0,
+  "node": {
+    "pass": 30,
+    "fail": 0,
+    "skip": 0,
+    "exit": 0
+  },
+  "dart": {
+    "tests": 30,
+    "pass": 30,
+    "fail": 0,
+    "skip": 0,
+    "assertions": 6433,
+    "prefixTransitions": 1384,
+    "finalMoves": 657,
+    "quietThreshold": 401,
+    "pawnReset": 250,
+    "captureReset": 6,
+    "exit": 0
+  },
+  "coverage": {
+    "cases": 30,
+    "states": 1314,
+    "prefixTransitions": 1384,
+    "finalMoves": 657,
+    "quietThreshold": 401,
+    "pawnReset": 250,
+    "captureReset": 6,
+    "pendingResolutions": 2,
+    "played": {
+      "radar": 7,
+      "prophecy": 1,
+      "shelter": 1,
+      "chain": 1,
+      "slow": 1,
+      "pawn_deviation": 1,
+      "pawn_advance": 1,
+      "locked_square": 1,
+      "freeze": 1,
+      "purify": 1,
+      "mine": 1,
+      "break_seal": 1,
+      "fog": 1,
+      "mana_sabotage": 1,
+      "card_block": 1,
+      "rook_bend": 1,
+      "angry_n": 1,
+      "shadow_pass": 1,
+      "hunt_vow": 1,
+      "watch_vow": 1,
+      "echo": 1,
+      "fate_exchange": 1,
+      "shadow_contract": 1,
+      "board_seal": 1
+    },
+    "enemyEffects": {
+      "oldmine": 23,
+      "locked_square": 2,
+      "freshmine": 1,
+      "freeze": 1,
+      "chain": 1,
+      "slow": 1,
+      "board_seal": 1
+    },
+    "mineDebuffConsumedAtTerminal": 106,
+    "freshMineRetainedAtTerminal": 1
+  },
+  "derivedGeometryCoverage": {
+    "derivedFrom": "retained new legal traces; replayed prefixes and matched actual GeometryMove flags",
+    "castling": 50,
+    "enPassant": 0,
+    "promotion": 0,
+    "authorizedByCard": {
+      "pawn_deviation": 2,
+      "pawn_advance": 1,
+      "rook_bend": 1,
+      "angry_n": 4,
+      "shadow_pass": 4
+    }
+  },
+  "allOwnedSourceMatchesBaseline": true,
+  "limitations": [
+    "one custom starting placement",
+    "White final actor",
+    "one legal cast per card, not all targets",
+    "no new EP/promotion or checkmate-precedence acceptance",
+    "metamorphic law, not complete independent oracle",
+    "no full regression or full differential"
+  ]
+}

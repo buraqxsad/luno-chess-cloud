@@ -1,0 +1,42 @@
+[
+  {
+    "file": "core.test.js",
+    "exitCode": 0,
+    "tests": 56,
+    "pass": 56,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "player-state-freshness.test.js",
+    "exitCode": 0,
+    "tests": 28,
+    "pass": 28,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "pass-purchase-recovery.test.js",
+    "exitCode": 0,
+    "tests": 55,
+    "pass": 55,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v217-settlement-recovery.test.js",
+    "exitCode": 0,
+    "tests": 1,
+    "pass": 1,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v218-pass-array-claims.test.js",
+    "exitCode": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0
+  }
+]

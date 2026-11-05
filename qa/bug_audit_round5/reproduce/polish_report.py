@@ -1,0 +1,8 @@
+from pathlib import Path
+r=Path('/workspace/luno-review/bug-audit-round5');q=Path('/workspace/luno-chess/qa/bug_audit_round5')
+changes={'8 somut kusur kapatıldı:2yeni':'8 somut kusur kapatıldı: 2 yeni','ailelerde1P1+5P2':'ailelerde 1 P1 + 5 P2','kusuru0':'kusuru: 0','dalı,24kart':'dalı, 24 kart','24kart':'24 kart','448dosya':'448 dosya','104dosya':'104 dosya','9/9:6':'9/9: 6','6finansal':'6 finansal','1legacy':'1 legacy','2yeni':'2 yeni','97aday':'97 aday','97hata':'97 hata','97görsel':'97 görsel','6433Dart':'6433 Dart','657final':'657 final','yerleşiminden30iz':'yerleşiminden 30 iz','NativeDart':'host Dart CLI','4gerçek':'4 gerçek','root verilen minimal client patch’i ve24/24':'ana ajan verilen minimal istemci patch’ini ve 24/24','orijinal1426527045bayt veSHA256':'orijinal 1426527045 bayt ve SHA256','test APK’sı** üretildi:com.luno.chess/1.6.3+19,minSdk24/targetSdk36':'test APK’sı** üretildi: com.luno.chess/1.6.3+19, minSdk 24/targetSdk 36','750asset':'750 asset','statik16KB':'statik 16 KB','gerçek16KB':'gerçek 16 KB','2 yeni P2 aile; önceki ailelerde 1 P1+5 P2':'2 yeni P2 aile; önceki ailelerde 1 P1 + 5 P2','Toplam8 kusur,1 P1+7 P2':'Toplam 8 kusur, 1 P1 + 7 P2','2 yeni aile ve6 eski':'2 yeni aile ve 6 eski','/10967durum':'/10967 durum','3101senaryo':'3101 senaryo',';0ayrışma':'; 0 ayrışma','iz; bütün reachable':'iz; bütün erişilebilir','literal':'literal'}
+for name in ['REPORT.md','BUGS.md','GATES.md','OPEN-ISSUES.md','cards/acceptance.md']:
+ p=q/name;s=p.read_text()
+ for a,b in changes.items():s=s.replace(a,b)
+ p.write_text(s)
+print('Main human reports polished; source, raw proofs and assertions untouched.')

@@ -1,0 +1,27 @@
+{
+  "purpose": "Latest-source transfer to local PC, not release acceptance",
+  "source_commit": "767ae74314a664f180ad1ca9e279e2c9881989d2",
+  "full_Flutter": {
+    "pass": 11881,
+    "fail": 97,
+    "skip": 0
+  },
+  "backend": {
+    "pass": 1481,
+    "fail": 0,
+    "skip": 1
+  },
+  "typescript": {
+    "pass": 376,
+    "fail": 0
+  },
+  "local_SDK": {
+    "pass": 7,
+    "fail": 2,
+    "status": "FAIL/NOT COMPLETE"
+  },
+  "original_release_assembler_unchanged": true,
+  "new_tests_or_builds_run_for_transfer": false,
+  "snapshot_restored_verified": true,
+  "release_decision": "HOLD"
+}

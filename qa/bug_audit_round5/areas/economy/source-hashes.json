@@ -1,0 +1,6 @@
+{
+  "functions/index.js": "92c1fe742398d30255e33efffc78e82aa6cc862f6a11e7955cc2444b48920a08",
+  "functions/lib/pass.js": "917b480096e9dff1d739abf97a2903a9d17c7b95c926a5e96d0de610f3b25a5b",
+  "functions/lib/economy.js": "ca3a1d574d42db1aa5ec3a7a1a063a80ce86b1f011024889540f885df6b28317",
+  "functions/test/round5-economy-pass-rollover.test.js": "5016d814d3b310c373ec316e3ac1fb36e2d4dfe88e370de10a72bafdc7037fd3"
+}

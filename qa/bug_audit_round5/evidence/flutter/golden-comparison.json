@@ -1,0 +1,688 @@
+{
+  "checked": 97,
+  "matching_round4": 97,
+  "reviewed_intentional": 0,
+  "unreviewed_changed": 0,
+  "goldens_updated": false,
+  "cases": [
+    {
+      "path": "luno_chess/test/battle_ui/failures/arsenal-large-text_testImage.png",
+      "round4_exists": true,
+      "sha256": "74a9045b443a9614422fa43bb9661a6c9ee2c1c4934ab305c499351d74acb3b4",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/arsenal_testImage.png",
+      "round4_exists": true,
+      "sha256": "4622e4c9081fd856124a8a2bb47696f1c49a61b5d6e35bb481914e60c52410b6",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/boardSeal_testImage.png",
+      "round4_exists": true,
+      "sha256": "71d1d04ed440946483e88dd1a375c5f8c40572909eb4a34f007c9472130f5ba8",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/card-detail_testImage.png",
+      "round4_exists": true,
+      "sha256": "9c42ecdb827538e00a229649a686d912013464b01e497a5da989141a12aa9409",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/cardBlock_testImage.png",
+      "round4_exists": true,
+      "sha256": "5d4e31edf258540fcb1fd95b57285e72eafff86ba360eba33a19c9bb7194d385",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/chain_testImage.png",
+      "round4_exists": true,
+      "sha256": "e8d3f8f2de89f8b0633ede35278c730f7e2b5d0978067460ab1c9b5a56bbc4e1",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/check_testImage.png",
+      "round4_exists": true,
+      "sha256": "05152937f34f6e3e15682ffba4013b55644d6eda79aed294e3023f2ac5df9bc1",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/checkmate_testImage.png",
+      "round4_exists": true,
+      "sha256": "b9fab3318cb5210d72413c993830bfa87fa1c9b6ec3801330010fb1f1a8b9a79",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/compact-four-large-text_testImage.png",
+      "round4_exists": true,
+      "sha256": "cb34f10299b05229b1a4b2755e764b3177f0880729ce118552811035fd613bec",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/compact-four_testImage.png",
+      "round4_exists": true,
+      "sha256": "c24fa4d3ae70a2d24c90c5d390be41342833dce2911d96da13851266f46dd315",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/compact_testImage.png",
+      "round4_exists": true,
+      "sha256": "1402e221c3a350a577d045a71f47f448ce880ba7be3f161a519d8925fed9809a",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/default_testImage.png",
+      "round4_exists": true,
+      "sha256": "5ff4d6f84fe27dc8c29e3d35a354b629c7be05c0e6f999c5e09ec2c076be80db",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/discount_testImage.png",
+      "round4_exists": true,
+      "sha256": "a5326b8608709cee44ffed63b1bec5043f3a79e5d39659a21f5c91856b379edc",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/echo_testImage.png",
+      "round4_exists": true,
+      "sha256": "ed4f4fef6b05fd1239b14473885aabfb1c847c80bbf68ea7bb36ca5c826a9e49",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/fate-large-text_testImage.png",
+      "round4_exists": true,
+      "sha256": "7f521542930796019ad142080f0db70fd0f8622d5bf73023a75ea387249e1f90",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/fate_testImage.png",
+      "round4_exists": true,
+      "sha256": "f5339af55b375234b5bbe69a6943bbbd1c9f69d77770c638461034e9f43a1286",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/first-turn_testImage.png",
+      "round4_exists": true,
+      "sha256": "3e0c16389b9ae3da441ffcce35acd9b5a719262314b58f5edf87096fd6106033",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/fog_testImage.png",
+      "round4_exists": true,
+      "sha256": "339c8c0b0ae6c6fd2c54060677f918560f525007a215c75d75ac8a21e19a54dd",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/four-card_testImage.png",
+      "round4_exists": true,
+      "sha256": "2330a5cb1a524e6d591f829bce625054aaab9ca9c7fda56cb67722de9e6e4434",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/freeze_testImage.png",
+      "round4_exists": true,
+      "sha256": "96bce734eca34719c873662d997c60aed8633964aaa860be488133c16e7ff7a9",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/large-text_testImage.png",
+      "round4_exists": true,
+      "sha256": "093420945b06bc94ed6a02d5dd804cc1f8c2b489715dad42df42a395961e12d3",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/large_testImage.png",
+      "round4_exists": true,
+      "sha256": "15cf9843c5ed44b82257598d48435e0b17cd8d1d9729fad67f96cf11044d0958",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/lockedSquare_testImage.png",
+      "round4_exists": true,
+      "sha256": "dd88af62a199354ff058a1ce9a78349b275d1982e134d721d7e5b786f98186b2",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/long-tr_testImage.png",
+      "round4_exists": true,
+      "sha256": "ac0b830cab5371aad03410a9c108a39a7509d61ab534534579b030c43681f3dd",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/low-mana_testImage.png",
+      "round4_exists": true,
+      "sha256": "c9bef1fa09b7b89d82669706784ae505f0252ef395398f840cb5773312f017e4",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/low-time_testImage.png",
+      "round4_exists": true,
+      "sha256": "fe48468a789aac3e8bbb4811b240b329361ea6e39cebb68b0e444276eafa730b",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/manaSabotage_testImage.png",
+      "round4_exists": true,
+      "sha256": "ef5bb92083d54f28d4ec5cb9cc8c61c0ee31a602d3a755dc72b3a5ac18ed7fb5",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/match-menu_testImage.png",
+      "round4_exists": true,
+      "sha256": "eaa35628143e9170e42c9807173d9727ba2bd588c6a71514836680458aebd4ef",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/mine-vow_testImage.png",
+      "round4_exists": true,
+      "sha256": "2a83a9d328146819c190f0be4bd562cb3c209e5bbade5e1975cda9ea039c421b",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/mine_testImage.png",
+      "round4_exists": true,
+      "sha256": "5d116f230fb4ec55d6bb8939c8654cc47b09723beb0249c026dad6379f91b93b",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/mismatch_testImage.png",
+      "round4_exists": true,
+      "sha256": "21fead79b8d6cb9d125262a5da77c082ad64c700da553b82aaedf97b6c1c8aa1",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/movement_testImage.png",
+      "round4_exists": true,
+      "sha256": "d7d3875f0c068023c8f289e399dd5828de568132456f598d2725fa50406028ee",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/multi-effect_testImage.png",
+      "round4_exists": true,
+      "sha256": "5f798cf3da02b3ae80dece3186024058a4815e0eed3c7330bd55c02a628e4432",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/pending_testImage.png",
+      "round4_exists": true,
+      "sha256": "a82be202aee43606b457605da7791c5b1e9c80167eb271a6a004d9cefa562fb8",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/piece-target_testImage.png",
+      "round4_exists": true,
+      "sha256": "6f5d8c2f3c3378de9171a7732f9563d80eb1c708b1d0ea88cb89e9d40fc1c451",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/prophecy_testImage.png",
+      "round4_exists": true,
+      "sha256": "a8217dbd7320d888fbb55bbb580b61b3274906b13611777d94820997056f2db6",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/radar-stale_testImage.png",
+      "round4_exists": true,
+      "sha256": "bdba60ddc87a284c28fe1808ccfc32a4eec9d0463ffe65d0defef7e4ebdb0629",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/radar_testImage.png",
+      "round4_exists": true,
+      "sha256": "6150591a40cc74416813211ba1ef663b26db5e7bb5318d70a7131909f1139ca8",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/reconnect_testImage.png",
+      "round4_exists": true,
+      "sha256": "e2fa2bfa8107e99bdea08b7bd874cc1d29c0fae0cfd3188fce43117c4cd651ab",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/resign-confirm_testImage.png",
+      "round4_exists": true,
+      "sha256": "b6f52fe974dd6c335b06b3ee31f96195359bf0316775ce65a6ebb8c831c033db",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/resign_testImage.png",
+      "round4_exists": true,
+      "sha256": "9b3b428303f445d25948f5cdd37aba910cd13b76bc5012e3a65192770750ce4d",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/selected_testImage.png",
+      "round4_exists": true,
+      "sha256": "5168f671ad8e8f75777bb74e2a297b93d88e75b67007cb08cea26cd452234b7b",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/shelter_testImage.png",
+      "round4_exists": true,
+      "sha256": "76fe2e3b693cb50d41f7e4487ba2d8f1076440fb474e1e9c9da529262ba006af",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/slow_testImage.png",
+      "round4_exists": true,
+      "sha256": "407c1de83be55b2d10689d2dd6f0c0a4959f3cef1f67b624890b48dd2fd9ef28",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/square-target_testImage.png",
+      "round4_exists": true,
+      "sha256": "e588a147476604f79b563352eb457ed4931f1e4dcb311aea6e8db9b9821db7bb",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/stalemate_testImage.png",
+      "round4_exists": true,
+      "sha256": "8f7c58724b19d9c8859f3338ef8e00776b64e44ec775b1b8591db30ca2ae8b4e",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/timeout_testImage.png",
+      "round4_exists": true,
+      "sha256": "b4f82afa74a779956ff04e973090275ff4a01cc8c1602653d83bbd66ec06d0ed",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/vow_testImage.png",
+      "round4_exists": true,
+      "sha256": "981a48b261e59ddeee2591fdf6f6b3dcca467aaa4182d8f21c70f867d638c08d",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/zero-card_testImage.png",
+      "round4_exists": true,
+      "sha256": "20abe5afdee8b397bf8490fafacfa674d786640f43abbe734f63e3883a867466",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/battle_ui/failures/zone_testImage.png",
+      "round4_exists": true,
+      "sha256": "a5aece493bb3df5afe170473085b0a5e6fed42c7ec25af7579407cd23170894d",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/achievements_testImage.png",
+      "round4_exists": true,
+      "sha256": "44ec7ccd60c91af953f8da253de5bd4aa80b91d9457ae3ae91611514b3978527",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/arenas_testImage.png",
+      "round4_exists": true,
+      "sha256": "50002ad541dc01261fdd135d0800a9919a24c58298522d7f546f73d2db40f813",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/battle-card-art-v204_testImage.png",
+      "round4_exists": true,
+      "sha256": "88047ca7e39c3a2d32b73d2b3916e59918d7cb52a5d82e45f97c3bef57739b93",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/browser_testImage.png",
+      "round4_exists": true,
+      "sha256": "3b582d4d583aeb82d5e915433a715700947d655ce032278bfc431f293a261952",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/cards_testImage.png",
+      "round4_exists": true,
+      "sha256": "d8cf2527760dea7886e5356165c396d1267bbda45f171beb4b80379e78389ed3",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/chest_testImage.png",
+      "round4_exists": true,
+      "sha256": "ed15883a396be8c9867502ab1ccacf9225e3f046e02abb9ce122932b30a33d58",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/collection_testImage.png",
+      "round4_exists": true,
+      "sha256": "69d3b9a75e0c4179e1c65dd081b6bab2867b5e6d3c1386371d875af1f9b2b380",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/costumes_testImage.png",
+      "round4_exists": true,
+      "sha256": "613f88f2c08fa3234b5f8bf4bf4cbe05a6234e65f55895ecfcf46592c7989e3f",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/daily-reward_testImage.png",
+      "round4_exists": true,
+      "sha256": "bf1b20f5ef74035b333790c7fcc71287e048f040d108f562960a696f5262f478",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/deck_testImage.png",
+      "round4_exists": true,
+      "sha256": "065ae6f069d050beec7d09af1642e8fe73654d4205ad67764ef77116e34f56c1",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/defeat_testImage.png",
+      "round4_exists": true,
+      "sha256": "79605a31e0f28016d93d4ebbc75623dc1db947fe5f3603f5ec2ad8d31ea71a07",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/difficulty_testImage.png",
+      "round4_exists": true,
+      "sha256": "a929c76d8a83170e3f0a5bd61ba30913595542882cc01a07d8f61e5c05e78790",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/dm_testImage.png",
+      "round4_exists": true,
+      "sha256": "02478662a775ec84c6a88b555e26e54c20f3b9ae8522c149516c35a19953c5f8",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/draw_testImage.png",
+      "round4_exists": true,
+      "sha256": "2bb5d456ffbeac3bc1aa6fdf8eb7968c07fb5061c4d814685e493eb372afe94d",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/edit-profile_testImage.png",
+      "round4_exists": true,
+      "sha256": "c583a92baf4594f306ceddd14b8886030d2dc42a662f6e23a4c8ff26de8309b3",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/emojis_testImage.png",
+      "round4_exists": true,
+      "sha256": "bc41b5fb712530ccfd6b394b9de7f22d3092455446e1a4449aac4567786bc1ad",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/friendly_testImage.png",
+      "round4_exists": true,
+      "sha256": "9f7f350ac34e12ffd55054c05e52e511374be26f25404aa8d7bfe52aae520fe4",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/friends_testImage.png",
+      "round4_exists": true,
+      "sha256": "1dc6d0a75e37a8833c2a5a5bc2d61d47e4937059167dea7d072f2036594ade70",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/guide_testImage.png",
+      "round4_exists": true,
+      "sha256": "e89ea82af82867ce842aae025ab5b89ec29a6c3d236aedc213186eac4933279f",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/history_testImage.png",
+      "round4_exists": true,
+      "sha256": "763658273c02f6197046f1541f3a133f1b173b08056ba3684a82268d40722612",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/home_testImage.png",
+      "round4_exists": true,
+      "sha256": "d233691fe586389cb90f70ad776f910bf737e2814dfa5f9d7b075a55afc507db",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/inbox_testImage.png",
+      "round4_exists": true,
+      "sha256": "eb346458b06aa2813ae29fd00f42aaa3439f0a5b8c13ec848b1b27ef0f5e7426",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/levels_testImage.png",
+      "round4_exists": true,
+      "sha256": "c790781e44dcddbf72cf26382f2ed79a6f324250660cab0a5f60031237754d64",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/missions_testImage.png",
+      "round4_exists": true,
+      "sha256": "3b4e34746c19438676d706af5516ccda3654cf6a1267b28afd6cbdb2eb38affc",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/pass_testImage.png",
+      "round4_exists": true,
+      "sha256": "49881d938f80156f38c95f6a680affa6af12438310f91ec0075ba48f2a72bf14",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/play_testImage.png",
+      "round4_exists": true,
+      "sha256": "0c6b9eb572486c5c72c20327b324be017290d7538aa1e38436517717b0a09e01",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/premium_testImage.png",
+      "round4_exists": true,
+      "sha256": "0d55fbdc1d269cb75afe1ed0e6bd034237ac84cd28b15e56856667c4d3d0a72f",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/profile_testImage.png",
+      "round4_exists": true,
+      "sha256": "f6df874d7e2828e575b3cef8e49d02379fcf60c6f6ad8882780c1b2cdfb748c5",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/promotion_testImage.png",
+      "round4_exists": true,
+      "sha256": "cab8a2be1baf8bcb01c223e88574f6415fe3a49eb5f5522543d43456e290e243",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/public-profile_testImage.png",
+      "round4_exists": true,
+      "sha256": "9fe3fd72d87345e5b20fbdfac30b24cb70c340cf689013d132ad338cc49e2f4f",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/queue_testImage.png",
+      "round4_exists": true,
+      "sha256": "1daf62cb5407f6052440e6ffa01469e620fd99e4ea05e86ccd6f6ef392cbce22",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/ranking_testImage.png",
+      "round4_exists": true,
+      "sha256": "c2f32d4770a1301045173c30a1a4203269d71f9215edb0f7bc37f10ac3aa1c62",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/season-reward_testImage.png",
+      "round4_exists": true,
+      "sha256": "b56c1554f1cf8f845fda948c8b0a723acd1907181a2925ee6ccf886ac783da79",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/season_testImage.png",
+      "round4_exists": true,
+      "sha256": "43f1387599ae3e96272ec971b8bfb582c8f0bbfa891efd1d112cd989d97dd2d1",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/settings_testImage.png",
+      "round4_exists": true,
+      "sha256": "4dccfd7350793a87e541d39c2fb840d9998ee0f02c55bfc5a6fc36b2eefdee08",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/shop_testImage.png",
+      "round4_exists": true,
+      "sha256": "0c87f8bd06253af1a87ec210871b2d6475b1487eac09e1b4f9e811f7f8e92320",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-1_testImage.png",
+      "round4_exists": true,
+      "sha256": "3f906baf5c502f322264802e644b5b5e01ea55be05c6b98147f73c857cb3bf19",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-2_testImage.png",
+      "round4_exists": true,
+      "sha256": "2fc01f72d648de38b9c682a28355c14911e4e1fd3c6a1f96c9ceb671146fafff",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-3_testImage.png",
+      "round4_exists": true,
+      "sha256": "acef154a8a675dd4ce6cfcd1f5c7245c64217432c25f6c16a2afcd842414a010",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-4_testImage.png",
+      "round4_exists": true,
+      "sha256": "ad72b61a641e75272b5e375c85e5a71e42b7459f629ec60bff530eefa8a0d240",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-5_testImage.png",
+      "round4_exists": true,
+      "sha256": "3e29d7ca613b12b242cc08ce1ce6d082ee738360d7f8d4bcdee021cc000e2fc8",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-6_testImage.png",
+      "round4_exists": true,
+      "sha256": "15a738961e1aa404d1dcb337537d64f1f595f86f8087bcca861f3bb76c0a3bcb",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-7_testImage.png",
+      "round4_exists": true,
+      "sha256": "2102dadefa8478d56e3ba5bcb286b4ccb0d41b7cd18e2818e843c8b5195040fa",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-8_testImage.png",
+      "round4_exists": true,
+      "sha256": "4f954dfdd6c84d65d7521af0497265df8b6c95c243fdfc97a5e7945f8d47429d",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial-9_testImage.png",
+      "round4_exists": true,
+      "sha256": "032b23caa16ef42983a7e2cf03a98f0cbeed89fde50c6cc1ba9e7f9624db6c55",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/tutorial_testImage.png",
+      "round4_exists": true,
+      "sha256": "93d1fc6dc9f5d1189a1c1cec7b44ee5a42597aadd30f1d1ade84fa4058f97f69",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    },
+    {
+      "path": "luno_chess/test/failures/victory_testImage.png",
+      "round4_exists": true,
+      "sha256": "1b065f1d6fcff064f3edbfaf25609cc6bdccedf94931c5473595e59f3fac01cc",
+      "reviewed_intentional": false,
+      "same_round4_candidate": true
+    }
+  ]
+}

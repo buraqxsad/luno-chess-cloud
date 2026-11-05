@@ -1,0 +1,12 @@
+{
+  "tests": 30,
+  "pass": 30,
+  "fail": 0,
+  "skip": 0,
+  "assertions": 6433,
+  "prefixTransitions": 1384,
+  "finalMoves": 657,
+  "quietThreshold": 401,
+  "pawnReset": 250,
+  "captureReset": 6
+}

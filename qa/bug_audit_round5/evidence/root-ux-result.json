@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "success": 67
+  },
+  "done": {
+    "success": true,
+    "type": "done",
+    "time": 13488
+  },
+  "scope": "Existing consent/telemetry/settings persistence and locale tests; no new confirmed bug, host Flutter only."
+}

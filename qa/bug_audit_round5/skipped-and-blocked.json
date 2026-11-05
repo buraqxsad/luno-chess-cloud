@@ -1,0 +1,13 @@
+[
+  {
+    "scope": "backend",
+    "file": "functions/test/v220-firebase-integration.test.js",
+    "status": "SKIPPED",
+    "reason": "V220_DB_INTEGRATION not enabled; local SDK does not relabel this skip."
+  },
+  {
+    "scope": "new security-agent investigation",
+    "status": "BLOCKED / NOT RUN",
+    "reason": "Agent content filter stopped the turn for possible cybersecurity risk. Its new scratch produced only a file-wrapper/harness failure, not4 real case results. It was preserved externally and not retried, rephrased or reassigned; no source/accepted-test assertions removed and no new security PASS claimed."
+  }
+]

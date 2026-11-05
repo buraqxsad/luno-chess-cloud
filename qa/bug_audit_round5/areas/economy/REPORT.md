@@ -1,0 +1,29 @@
+# Round 5 economy review — two previously uncovered residual paths
+
+After root review, the approved surgical fixes were applied to functions/index.js and functions/lib/pass.js; no commits were made by this agent. Baseline is `6467e72f6181efc10420a98df1b7d7977cdf757a`; two uniquely named tests are the only repository additions. Existing test assertions were not changed. Two concrete bugs are reproduced. Conservatively classify both as residual paths of established defenses, not two new independent families.
+
+## Paid Pass lost at rollover
+
+A `getPlayerState` request begins one millisecond before season rollover and waits in the existing username-repair read. A second client then makes a genuine successful 450-gem current-season Premium Pass purchase. Resuming the older read commits `syncServerPass(profile, oldAt)`, replacing the purchased current Pass with an empty previous-season Pass. `authoritativeState` computes a new empty current-season Pass for the response, so the paid entitlement disappears while the 450-gem debit and receipt remain. Purchase replay then rejects the now-inconsistent receipt rather than restoring Premium. This is an economically destructive legal two-client sequence, not an injected corrupt receipt.
+
+The final 7-case suite is **baseline 4 pass / 3 fail; external candidate 7 pass / 0 fail / 0 skip**. Both cold and warm two-client runs fail. The third failure exercises the shared normalizer with an already canonical current paid Pass. Controls retain same-season concurrency, normal rollover expiration, and rejection of both canonical and malformed future-season data. The original 4-case baseline (2 pass / 2 fail) is retained separately and not added to counts.
+
+The proposed `pass-rollover-candidate.patch` refreshes getPlayerState's time inside every profile transaction attempt, protecting all of its period normalization. The shared Pass normalizer also preserves an already opened canonical later season only when it is no later than the actual current season; it does not retain truly future or malformed Pass data. The preexisting historical match wrapper still rejects late XP into an already opened newer Pass before invoking the normalizer. Its real V1 regression passes. This is conservatively a residual of V217's late-settlement/newer-Pass protection; the existing state freshness test only covered purchases within the same season.
+
+## Confirmed refund never finishes after a pre-grant interruption
+
+First fulfillment successfully proves provider ownership and creates a verified global claim. Its required second provider lookup fails transiently before any profile grant. The catch path legitimately persists `reconcile-required`. Google then confirms a refund. The actual exported RTDN handler rejects with `purchase-receipt-invalid` because absent-receipt revocation accepts only `verified`, leaving every retry unable to create the ungranted tombstone or finish the event. No fabricated receipt or corrupt state is necessary.
+
+The final 4-case suite is **baseline 2 pass / 2 fail; external candidate 4 pass / 0 fail / 0 skip**. Cold/warm confirmed-refund cases fail; an unrefunded retry recovers exactly one grant/consume, and a missing receipt for a completed token still fails closed. The one-line `pregrant-refund-candidate.patch` allows the existing ungranted tombstone for both verified and reconcile-required pre-grant claims. The guard remains token-local and does not mint currency or debit unrelated funds. This is a residual of the existing pre-grant refund fence, not a newly counted refund family.
+
+## Focused verification and limits
+
+Existing candidate checks: core 56, player-state freshness 28, Pass purchase recovery 55, historical V1 settlement 1, Pass array claims 3 = **143/143** on the Pass-only candidate. On the combined Pass+refund candidate: consume recovery 3, original pre-grant refund 10, unmatched first-registration refund 8, RTDN lease 8, owned inactive subscription refresh 8, daily ordering 2 = **39/39**. These 182 existing cases overlap prior audit evidence and are not new tests or bug counts. Each file ran directly with Node and reports actual TAP case counts, never a file-wrapper count. These checks are not a full backend regression. New test suites total 11 cases: final baseline **6 pass / 5 fail**, candidates **11 pass / 0 fail / 0 skip**. The candidate versions differ only by the independent one-line refund change; all source hashes are recorded.
+
+Provider outages in the new refund tests are deliberate scenario inputs; assertion failures are source defects rather than harness failures. No startup failures, hanging subprocesses, or permission bypasses occurred. The memory database models cold and warm callbacks, but it is not real RTDB/Admin transport. Google Play replies are local fakes. No live services, real payments, deploys, builds, emulators, full regressions, push or signing changes were performed. Subscription/RTDN/daily controls provide bounded coverage, not a bug-free claim or production acceptance.
+
+## Approved actual-source verification
+
+The root approved integration of the two minimal fixes after reviewing the independent baseline evidence. The direct-Node actual-source run passed **193 / 193 cases, 0 fail / 0 skip in 13 files**: new Pass 7, new refund 4, and 182 existing focused cases listed above. This total includes the new suites and is not added to earlier candidate totals. `actual-focused-results.json` records per-file case counts and the unchanged before/after SHA-256 of the two production files. `git diff --check` passed. `approved-actual.patch` is the exact approved two-file production diff; no unrelated shared index edits are included.
+
+Bug count: **0 new independent families; 2 newly confirmed residual paths** (recommended severity: paid Pass loss P1, pre-grant refund retry P2). Whole-game bug freedom and real-provider acceptance remain unproven.

@@ -1,0 +1,50 @@
+[
+  {
+    "file": "v217-billing-recovery.test.js",
+    "exitCode": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "system-hunt-economy-refund-grant-race.test.js",
+    "exitCode": 0,
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "round3-economy-unmatched-refund.test.js",
+    "exitCode": 0,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "round4-economy-rtdn-lease.test.js",
+    "exitCode": 0,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "round2-economy-subscription-inactive-refresh.test.js",
+    "exitCode": 0,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v238-daily-claim-ordering.test.js",
+    "exitCode": 0,
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "skipped": 0
+  }
+]

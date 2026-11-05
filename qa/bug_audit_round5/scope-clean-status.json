@@ -1,0 +1,14 @@
+{
+  "concrete_defects_fixed": 8,
+  "new_independent_families_fixed": {
+    "P2": 2
+  },
+  "prior_family_residual_paths_fixed": {
+    "P1": 1,
+    "P2": 5
+  },
+  "untriaged_local_sdk_failures": 2,
+  "new_security_probe": "BLOCKED_NOT_VALIDATED",
+  "global_bug_free_acceptance": "NOT ESTABLISHED",
+  "release_decision": "HOLD"
+}

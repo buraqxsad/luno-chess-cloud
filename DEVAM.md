@@ -4,6 +4,26 @@ Son dogrulama/aktarim tarihi: 27 Ekim 2026. Bu dosya kaynak aktarimini anlatir;
 oyunun kusursuz, canli servislerin tamamen kabul edilmis veya Play yayininin
 onaylanmis oldugu anlamina gelmez.
 
+## 5 Kasım — bilgisayara son kaynak devri
+
+**RELEASE HOLD.** Son runtime/backend kaynağı `767ae74314a664f180ad1ca9e279e2c9881989d2`.
+Bilgisayardaki Codex önce [PC_DEVAM.md](PC_DEVAM.md) dosyasını okusun.
+[Son rapor](qa/bug_audit_round5/REPORT.md), [sekiz düzeltme](qa/bug_audit_round5/BUGS.md),
+[açık kabul kapıları](qa/bug_audit_round5/GATES.md).
+8 kusur kapatıldı:2 yeni P2 aile ve mevcut ailelerde1P1+5P2 kapsam eksiği.
+Analiz temiz; tam Flutter11881/97/0 (448dosya), backend1481/0/1,
+TypeScript376/0/0, differential3101senaryo/10967durum/0ayrışma.
+97 görsel adayın tamamı R4 ile aynı; golden güncellenmedi.
+Son gerçek yerel SDK7 geçti/2başarısız: iki yeni silme senaryosu başlangıçta
+INVALID_ACTION400 ile durdu. Fixture/schema ayrımı PC’de dar testle incelenecek;
+9/9 veya gerçek Firebase/Play kabulü verilmedi.
+Yeni ARM64 debug APK aynı imza/750asset/API36/statik16KB denetiminden geçti.
+Snapshot RAM’i orijinal byte/SHA ile geri kondu. Yeni güvenlik probe’u BLOCKED.
+Gerçek cihaz/native önceki çökme, performans/16KB, signing ve Firebase/Play/Console
+kapıları açık. Sunucu canlı deploy’u, ödeme, Play upload ve oyun yayını yapılmadı.
+Bu devir kullanıcı isteğiyle GitHub'a kaynak yüklemesi ve yerel devam içindir.
+Aşağıdaki kayıtlar tarihseldir; eski sonuçlar yeni sayılara eklenmez.
+
 ## 2 Kasım — dördüncü sistem taraması
 
 **4 yeni hata ailesi ve önceki düzeltmelerde kalan 2 yol kapatıldı: 6 somut kusur.**

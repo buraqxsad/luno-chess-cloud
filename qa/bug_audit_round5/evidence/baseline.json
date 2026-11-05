@@ -1,0 +1,24 @@
+{
+  "recorded_utc": "2026-11-03T12:12:05.178994+00:00",
+  "baseline_commit": "6467e72f6181efc10420a98df1b7d7977cdf757a",
+  "branch": "codex/cloud-transfer-20261027",
+  "worktree": "CLEAN",
+  "index_sha256": "92c1fe742398d30255e33efffc78e82aa6cc862f6a11e7955cc2444b48920a08",
+  "free_bytes": 1429409792,
+  "previous_report": "qa/bug_audit_round4/REPORT.md",
+  "previous_flutter": {
+    "pass": 11862,
+    "fail": 97,
+    "skip": 0,
+    "files": 445
+  },
+  "previous_backend": {
+    "pass": 1458,
+    "fail": 0,
+    "skip": 1
+  },
+  "previous_ts": 376,
+  "scope": "Fifth bounded all-system audit; preserve previous fixes/assets/rules. No predetermined no-bug result.",
+  "real_services": "No configured secrets/outbound identities; production acceptance BLOCKED.",
+  "runtime": "No KVM/hardware GPU; no emulator boot authorized/needed for this source audit."
+}

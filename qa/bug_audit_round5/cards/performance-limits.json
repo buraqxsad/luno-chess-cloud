@@ -1,0 +1,34 @@
+{
+  "source_commit": "767ae74314a664f180ad1ca9e279e2c9881989d2",
+  "atlas_file_bytes": 585174,
+  "assets": [
+    {
+      "file": "assets/native_art/v237-arcane-halo-atlas.webp",
+      "bytes": 164026,
+      "sha256": "b047675b8f1086f7c77017c09b160ff8b2744304279fa23e8e4574867208bc76"
+    },
+    {
+      "file": "assets/native_art/v238-crystal-atlas.webp",
+      "bytes": 140332,
+      "sha256": "fc609f1f0cab1d07e838a668e6791d4b913b81b009d78263c804462a5356d4b4"
+    },
+    {
+      "file": "assets/native_art/v238-binding-atlas.webp",
+      "bytes": 214622,
+      "sha256": "d92d6b097b328ddd9cb0213e8f758949feacebf260796641b1ba49150faf2c9b"
+    },
+    {
+      "file": "assets/native_art/v238-veil-atlas.webp",
+      "bytes": 66194,
+      "sha256": "3f54a52ac176b49c4c436b7d5592b041bb5baf2fea3f8f0ca47f998f679493ae"
+    }
+  ],
+  "host_RGBA_asserted_bytes": 9437184,
+  "host_atlas_test": {
+    "success": 1
+  },
+  "host_decode_times_current": "NOT RECORDED (optional output define unset)",
+  "Android_GPU_texture_RAM_FPS_build_raster_p95_p99_long_match": "NOT RUN",
+  "real_16kb_runtime": "NOT RUN",
+  "performance_acceptance": "NOT RUN"
+}

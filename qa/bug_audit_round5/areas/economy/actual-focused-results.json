@@ -1,0 +1,116 @@
+{
+  "sourceHashesBefore": {
+    "functions/index.js": "fc263678211999af63d73669591596e2f0ec49648c803405a46c2e5f78da07db",
+    "functions/lib/pass.js": "54db9f0c9ec6f2e5d7ed8275df0d0dcefda0b4b2d650438124beeb6b81f898d7"
+  },
+  "sourceHashesAfter": {
+    "functions/index.js": "fc263678211999af63d73669591596e2f0ec49648c803405a46c2e5f78da07db",
+    "functions/lib/pass.js": "54db9f0c9ec6f2e5d7ed8275df0d0dcefda0b4b2d650438124beeb6b81f898d7"
+  },
+  "results": [
+    {
+      "file": "round5-economy-pass-rollover.test.js",
+      "exitCode": 0,
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "file": "round5-economy-pregrant-refund.test.js",
+      "exitCode": 0,
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "file": "core.test.js",
+      "exitCode": 0,
+      "tests": 56,
+      "pass": 56,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "file": "player-state-freshness.test.js",
+      "exitCode": 0,
+      "tests": 28,
+      "pass": 28,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "file": "pass-purchase-recovery.test.js",
+      "exitCode": 0,
+      "tests": 55,
+      "pass": 55,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "file": "v217-settlement-recovery.test.js",
+      "exitCode": 0,
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "file": "v218-pass-array-claims.test.js",
+      "exitCode": 0,
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "file": "v217-billing-recovery.test.js",
+      "exitCode": 0,
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "file": "system-hunt-economy-refund-grant-race.test.js",
+      "exitCode": 0,
+      "tests": 10,
+      "pass": 10,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "file": "round3-economy-unmatched-refund.test.js",
+      "exitCode": 0,
+      "tests": 8,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "file": "round4-economy-rtdn-lease.test.js",
+      "exitCode": 0,
+      "tests": 8,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "file": "round2-economy-subscription-inactive-refresh.test.js",
+      "exitCode": 0,
+      "tests": 8,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "file": "v238-daily-claim-ordering.test.js",
+      "exitCode": 0,
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "skipped": 0
+    }
+  ]
+}

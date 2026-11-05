@@ -1,0 +1,35 @@
+{
+  "recorded_utc": "2026-11-05T12:44:44.963746+00:00",
+  "source": {
+    "base_commit": "6467e72f6181efc10420a98df1b7d7977cdf757a",
+    "build_source_commit": "767ae74314a664f180ad1ca9e279e2c9881989d2",
+    "full_regression_source_commit": "767ae74314a664f180ad1ca9e279e2c9881989d2",
+    "flutter_regression_source_commit": "767ae74314a664f180ad1ca9e279e2c9881989d2",
+    "backend_regression_source_commit": "767ae74314a664f180ad1ca9e279e2c9881989d2",
+    "source_index_sha256": "86eb5e1bcdbcffa2248798857f4baf58af775f4d1c01e62dd274f60a91f6ae29",
+    "recorded_utc": "2026-11-04T13:53:28.362661+00:00",
+    "worktree": "CLEAN"
+  },
+  "concrete_defects_fixed": 8,
+  "new_independent_families": {
+    "P2": 2
+  },
+  "prior_family_residuals": {
+    "P1": 1,
+    "P2": 5
+  },
+  "new_security_probe": "BLOCKED_NOT_VALIDATED",
+  "global_bug_free_acceptance": "NOT ESTABLISHED",
+  "release_decision": "HOLD",
+  "real_firebase": "BLOCKED",
+  "licensed_billing": "BLOCKED",
+  "play_console": "BLOCKED",
+  "native_current_apk": "NOT RUN",
+  "real_16kb_runtime": "NOT RUN",
+  "github_push": false,
+  "live_deploy": false,
+  "real_money": false,
+  "play_upload": false,
+  "snapshot_restored_verified": true,
+  "untriaged_local_sdk_failures": 2
+}

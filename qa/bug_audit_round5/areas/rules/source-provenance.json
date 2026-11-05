@@ -1,0 +1,171 @@
+{
+  "baseline": "6467e72f6181efc10420a98df1b7d7977cdf757a",
+  "files": [
+    {
+      "path": "battle_contract/v1/README.md",
+      "sha256": "7928df6f76ad7520f5f1358ed99362fff45117514f88b5a41f6a2e0496ab91a6",
+      "matchesBaseline": true
+    },
+    {
+      "path": "battle_contract/v1/cards.json",
+      "sha256": "7143b339b75340cc0529c5c47b83433b12e35065619c160ee59d71663014302b",
+      "matchesBaseline": true
+    },
+    {
+      "path": "battle_contract/v1/perft.json",
+      "sha256": "2e7c24ecacb8eea0223d02cf4469d5147713b96ec5bf8ffcfdb55f5806bc2493",
+      "matchesBaseline": true
+    },
+    {
+      "path": "battle_contract/v1/rules.json",
+      "sha256": "e9dd66b17876f48e55c2e56f99a833a60a83ef4d839ab4f08df4b15eba43927c",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/src/authoritative.ts",
+      "sha256": "4f0c4a75099a600ba6225c0b5f386d1a37fcee1fbf4d40d0c1eddaf5791219a3",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/src/board.ts",
+      "sha256": "2c8f471a85a66c3f8400c1d104e3ac94e4831920aa26f1476d77caa9c3483784",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/src/chess.ts",
+      "sha256": "aa3c1f0ca95a1b2dffbda13b59f05a8f71dab17b4243a1c7984535a61dac0284",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/src/core.ts",
+      "sha256": "0d347ea9dd0c1596b479275ccea9869f792d1c58e611b86f29d251de8ce481fa",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/src/model.ts",
+      "sha256": "b0b6e6826840f2a0b6536161c1414033c2bb778942a1e0ebce811ef7c8031fb5",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/src/online/authority.ts",
+      "sha256": "039a7fc0e912e77581a0dbffcc7e2e10d73b4e28c3a9c83ec23aebfe684fe816",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/src/online/migration.ts",
+      "sha256": "a61384ea2bbb6e27136a070727dd6928b2c4ee5aeca0bdd8ee4a343710fac976",
+      "matchesBaseline": true
+    },
+    {
+      "path": "functions/rules-v1/src/online/protocol.ts",
+      "sha256": "e9525db6d7a58cbcd475825e0b77f85d193c19f3d0783878f2561f05ee1307be",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/authoritative.dart",
+      "sha256": "9114def0d2cc83134177859ea74caa6c96c5d399b84d66e49429ae836c5bea9f",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/bot_policy.dart",
+      "sha256": "34ea7b3d653ce96d28191dcd5efc12d8eb4c04ac78e3c6944f3e29de457109a0",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/core.dart",
+      "sha256": "46a626cf3b67b621e687fcfb7eac6ddb2eb9379ed20171794e9d9de765af6958",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/deck_account.dart",
+      "sha256": "3a411a529881edf2d51e59dcf394de4aba1da5830adcf7881144380b74979f46",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/deck_metrics.dart",
+      "sha256": "a4c938de0edf24fccf07a3283cd70db89a10ac3820b098bfcd8eb47dccc33b63",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/emotes.dart",
+      "sha256": "abd12c2cb74f02e1bb850d34e9d36f5d75ca77a710417f337c6019c08bec542b",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/introduction.dart",
+      "sha256": "0df6b5ff48ba604a8c673549c2df312a5717619d0f0b96b94e3c0c8762c4dd82",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/local_clock.dart",
+      "sha256": "f136ee7d3b782a1b3ea5bceaa9f3ecfb6c3221dc5bf24eb96b4df5a6138e41ed",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/local_session.dart",
+      "sha256": "9896b4d1f45492d67f8c1a1f5a7b36292ad6ba1301d93900d4e2f111a6269fd9",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/model.dart",
+      "sha256": "cf366391573dd36d49cfa910921db6934c5b2de3ca9ebd9b77107dbfc6983947",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/online.dart",
+      "sha256": "ed3d0c3ecfff0772a2f68d66c34c0d5cb05dc8b092d4d3835f518575dba23a10",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/pending_store.dart",
+      "sha256": "512c19dcfc1e4562ab01d92e52ac13484bcfcec8987e8f323ab708cedd148dc6",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/battle_v1/practice.dart",
+      "sha256": "a770fdbef63f23e6961bfac0854a1a68d9531f8f025be729c304852e31414729",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/ai.dart",
+      "sha256": "5128b56aa995cf6bc251726576ff7ad81b4f814b3053d5a9b961b852268bef4f",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/board.dart",
+      "sha256": "250915de2fba30f9e1ff74eb14a1a469b61b13aac3f525b64cfd650dbbc53412",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/chess_game.dart",
+      "sha256": "14db45aed616c612d87c85c7aaebc31e16b7f09d9a4fdedea427479bae3bca47",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/move.dart",
+      "sha256": "3bb0ac8723222db95ee22c8929e45688a22b2f4cbf6f59f329964941ca15ba00",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/move_gen.dart",
+      "sha256": "417dbb956ad8c50b4e7d15e98b5c8e49008354f9ec609e73476bd794879c406b",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/perft.dart",
+      "sha256": "e5bcea97595adaccb11029387422f6510f7c9ae5260d428e603f5dece20f9d0e",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/piece.dart",
+      "sha256": "398ce9c8cd7872b73fb5b241a6424cd2c3737fe2f05c57c5f05191df632af149",
+      "matchesBaseline": true
+    },
+    {
+      "path": "luno_chess/lib/engine/square.dart",
+      "sha256": "94da1e8e2db0a614ecf6761ce4155fc35aa5ad02eec403caf2d84a8036485075",
+      "matchesBaseline": true
+    }
+  ],
+  "allMatch": true
+}

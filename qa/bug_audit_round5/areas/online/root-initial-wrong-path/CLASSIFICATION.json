@@ -1,0 +1,7 @@
+{
+  "category": "HARNESS_MISSING_TEST_FILE",
+  "incorrect_argument": "test/round3_client_bootstrap_generation_test.dart",
+  "correct_argument": "test/round3_client_bootstrap_continuation_test.dart",
+  "product_bug": false,
+  "raw_outputs_preserved": true
+}

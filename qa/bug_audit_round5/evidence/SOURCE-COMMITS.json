@@ -1,0 +1,12 @@
+{
+  "baseline": "6467e72f6181efc10420a98df1b7d7977cdf757a",
+  "commits": [
+    "767ae74314a664f180ad1ca9e279e2c9881989d2 fix(online): fence legacy result publication after account erasure",
+    "60fe95207fe8ebde8a445cbd1158505ba2cbcccb fix(account): retire historical V1 data with resumable deletion",
+    "1a32a99f054e5eb55ab28db4f715e2a6a871f966 fix(billing): reconcile confirmed refunds before an interrupted grant",
+    "67c99b8199dfe6d741e057fc8987b37c6b72a2d4 fix(economy): preserve purchased Pass state across delayed season refresh",
+    "b315685074a2f659c1266e9c7ee54b5db6ef1630 fix(online): prevent late cleanup from recreating acknowledged results",
+    "2b2ad1eb4beb368f7d5fe3904fc6c0bf229eb612 fix(battle): bind private choices to painted card identity",
+    "91863e377768fd491974ea21333cb7625ca7041f fix(billing): recover catalog retries and fence stale pending snapshots"
+  ]
+}

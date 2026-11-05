@@ -1,0 +1,19 @@
+# Fifth audit: online result and erasure races
+
+Three concrete defects were reproduced and corrected. The ACK race is one new P2 family. Historical V1 erasure and late legacy settlement are two P2 residual paths in the existing erasure family; the deletion503 client correction belongs to the historical erasure integration and is not counted again.
+
+| Defect | Valid before proof | Actual production after |
+| --- | --- | --- |
+| Result ACK returns success while delayed cleanup recreates lastMatch | 3 cases:2 pass/1 fail | 17/17 focused; ACK clears only the matching active and last pointers, preserving peer and newer mappings. |
+| Older acknowledged V1 results retain deleted name, membership and private projection | Initial3:1 pass/2 fail; expanded5:1 pass/4 fail | Expanded6/6; broader12-file118/118 overlaps ACK and existing deletion tests. |
+| Surviving peer heartbeat or already running legacy friendly worker recreates deleted private state | Expanded3:1 pass/2 fail | Actual6-file52/52; source/profile errors are skipped only with a proven deletion marker. |
+
+Historical erasure scans existing JSON envelopes in five-record pages, at most40 pages plus a bounded tail probe per invocation. A private deletion-workflow cursor advances only after retirement and publication complete. Failure or budget exhaustion leaves processing state and allows retry; unrelated canonical bytes, surviving peer result/private state and committed rewards are preserved. One deliberate publish failure proves retry cannot skip a partially retired page. A201-record unrelated backlog proves bounded progress and explicit second-call completion.
+
+The15-second deadline is cooperative between matched records/pages: one awaited database operation may overrun. A malformed canonical envelope fails closed. This is not a benchmark or a proof of scalability for arbitrarily large global history. A valid delayed admission captured before deletion creates its canonical only after the scan completes; existing metadata postgates retire that result and reject the deleted caller. A worker crash between creation and its postgate remains an existing crash-recovery coverage limitation, not a claimed closed case.
+
+Real local Flutter service+GameStore testing found a related integration issue: processing503 invalidated the request epoch and automatic retry replaced the intended progress error with session-changed. New portable regression before2 pass/1 fail; root applied the reviewed deletion-specific propagation patch and actual focused run passed24/24 (new3 + existing21). Both real account-change boundaries still reject, first processing response retains Auth/local data, and explicit retry completes deletion/signout. This is part of the same historical erasure acceptance, not another independent bug.
+
+Legacy publication uses the existing per-account metadata writer and conditional cleanup. Already complete settlements return their result. A suspended worker is also covered; an early-complete return alone would not close that path. Living peer state and rewards remain available. The initial draft used the wrong legacy reason spelling; that fixture failure is retained separately and excluded from the valid before proof.
+
+Raw logs and exact patches are retained in this directory. Initial local-IPC and a root wrong-test-path attempt are preserved; they are harness failures, not product bugs or passing cases. The final online agent hit its model usage limit after providing patches and baseline evidence. Root finished the client patch and normal approved local tests; no new agent was started to retry that limit. No production deploy, remote services, actual Auth/Google/Play, payment, Android run or push was performed. Actual RTDB SDK validation, if recorded later, has its own explicit scope.

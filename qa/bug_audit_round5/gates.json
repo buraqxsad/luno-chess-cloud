@@ -1,0 +1,67 @@
+[
+  {
+    "gate": "Sekiz doğrulanmış kaynak düzeltmesi",
+    "status": "PASS",
+    "reason": "2 yeni aile ve6 eski aile kapsam eksiği kapatıldı; genel hatasızlık kanıtı değil."
+  },
+  {
+    "gate": "Flutter analiz",
+    "status": "PASS",
+    "reason": "Son sabit kaynakta hata/uyarı yok."
+  },
+  {
+    "gate": "Tam Flutter",
+    "status": "FAIL",
+    "reason": "11881 geçti/97 eski görsel başarısızlık/0 atlandı;448dosya."
+  },
+  {
+    "gate": "Tam backend",
+    "status": "PASS",
+    "reason": "1481 geçti/0 başarısız/1 atlandı;104dosya, gerçek doğrudan TAP."
+  },
+  {
+    "gate": "TypeScript/differential",
+    "status": "PASS",
+    "reason": "376 test;3101senaryo/10967durum;0ayrışma."
+  },
+  {
+    "gate": "Yerel gerçek RTDB/Admin SDK",
+    "status": "FAIL",
+    "reason": "7 geçti/2 başarısız. İki yeni silme senaryosu enqueueBattleV1/createFriendlyRoom başlangıcında INVALID_ACTION400 ile durdu; erasure kabulü verilmedi. Auth/AppCheck/Google fake; Admin client rules kabulü değildir."
+  },
+  {
+    "gate": "Yeni güvenlik ajanı incelemesi",
+    "status": "BLOCKED",
+    "reason": "Otomatik içerik filtresi; yeni probe doğrulanmadı. Mevcut AppCheck/API/metadata regresyon sonuçları ayrıdır."
+  },
+  {
+    "gate": "ARM64 debug APK statik kabul",
+    "status": "PASS",
+    "reason": "Aynı debug sertifikası,750asset,API36,ELF/ZIP statik16KB."
+  },
+  {
+    "gate": "Önceki native raster SIGSEGV",
+    "status": "FAIL",
+    "reason": "Kök neden/düzelme sağlıklı Android ortamında doğrulanmadı."
+  },
+  {
+    "gate": "Güncel Android yolculuğu/performans/gerçek16KB",
+    "status": "NOT RUN",
+    "reason": "KVM/GPU/fiziksel Android yok; emulator açılmadı."
+  },
+  {
+    "gate": "Üretim Firebase/Google/App Check/Integrity",
+    "status": "BLOCKED",
+    "reason": "Kimlik ve staging/üretim erişimi yok."
+  },
+  {
+    "gate": "Play lisans Billing/Console/Pre-launch",
+    "status": "BLOCKED",
+    "reason": "Lisans hesabı/track/Console yok;versionCode19 uygunluğu bilinmiyor."
+  },
+  {
+    "gate": "Release APK/AAB",
+    "status": "BLOCKED",
+    "reason": "Mevcut upload key/properties yok; imzalama kimliği değiştirilmedi."
+  }
+]

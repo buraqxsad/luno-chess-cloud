@@ -1,0 +1,25 @@
+{
+  "commit": "6467e72f6181efc10420a98df1b7d7977cdf757a",
+  "files": {
+    "functions/lib/battle-v1-recovery.js": {
+      "sha256": "7cfe7b449278a59952efc3420b5f63cb85bf23705d32fb88e2d543230b99cf4c",
+      "bytes": 10643
+    },
+    "functions/lib/battle-v1-friendly.js": {
+      "sha256": "653bb788d7e6a55d526f4a656f3a1f1e64f98100faf45cfc520e62e2284c17cc",
+      "bytes": 9310
+    },
+    "functions/index.js": {
+      "sha256": "92c1fe742398d30255e33efffc78e82aa6cc862f6a11e7955cc2444b48920a08",
+      "bytes": 284849
+    },
+    "functions/test/round5-online-result-ack-race.test.js": {
+      "sha256": "5fbcdc2c0e0ccf63a7ea7f4cf03016e408e26e985297372447b88901df649086",
+      "bytes": 2788
+    },
+    "functions/test/round5-online-historical-erasure.test.js": {
+      "sha256": "7ed67c44ece098af57a77242dcaddc73a6d342ccaf972151c17f0d13612e0705",
+      "bytes": 4464
+    }
+  }
+}

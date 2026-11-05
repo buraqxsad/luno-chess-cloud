@@ -1,0 +1,82 @@
+{
+  "baselineCommit": "6467e72f6181efc10420a98df1b7d7977cdf757a",
+  "classification": {
+    "paidPassRollover": "residual of preexisting late-settlement/newer-Pass protection",
+    "pregrantRefundInterruption": "residual of pre-grant refund fencing"
+  },
+  "productionEdited": true,
+  "baselineFinalNewCases": {
+    "tests": 11,
+    "pass": 6,
+    "fail": 5,
+    "skip": 0
+  },
+  "candidateNewCases": {
+    "tests": 11,
+    "pass": 11,
+    "fail": 0,
+    "skip": 0
+  },
+  "existingFocusedCases": {
+    "tests": 182,
+    "pass": 182,
+    "fail": 0,
+    "skip": 0
+  },
+  "sourceHashes": {
+    "functions/index.js": "92c1fe742398d30255e33efffc78e82aa6cc862f6a11e7955cc2444b48920a08",
+    "functions/lib/pass.js": "917b480096e9dff1d739abf97a2903a9d17c7b95c926a5e96d0de610f3b25a5b",
+    "functions/lib/economy.js": "ca3a1d574d42db1aa5ec3a7a1a063a80ce86b1f011024889540f885df6b28317",
+    "functions/test/round5-economy-pass-rollover.test.js": "cc888b472adfee4c24f333b2c4aa917640f8bffeaca61da4793da0bdaa7ca766",
+    "functions/test/round5-economy-pregrant-refund.test.js": "48276c234329a6006febbe5e06586bf11e10a5bdb9edde58855f616d552a89f1"
+  },
+  "artifactHashes": {
+    "candidate-system-hunt-economy-refund-grant-race.test.js.tap": "78ffde2d7058c87da2b0a788314997777902153c1c6ff9e811eca026c1c41608",
+    "actual-v217-settlement-recovery.test.js.tap": "d22158df50c610ee39b2e5eb348b49576f7dd01c7405286b1e24065fa46ce426",
+    "pass-rollover-combined-candidate-final7.tap": "e867ad48f8c8ab682d50407f7c7fea23a1223c4a1516f37201abc15efe06540e",
+    "actual-v217-billing-recovery.test.js.tap": "bb6d2496940a5a8562edadfdc69c1a7dd4121d6463dc4fdb45658de98bd27d17",
+    "candidate-round3-economy-unmatched-refund.test.js.tap": "4ce9cc3d9089fbf3e8f8cb6c844e052a7dc6d1716ada9c81f43e0a54d53c47d0",
+    "actual-core.test.js.tap": "b1c1d7298371903a778578c0711663243908c847c16ea3e481bc572634efcf3c",
+    "candidate-round2-economy-subscription-inactive-refresh.test.js.tap": "6aa1a5e3c3e4da560e667794d64eb64536c8ec354837def607b68e86d76c4a2b",
+    "actual-v238-daily-claim-ordering.test.js.tap": "35871ac95b9f992e1eb7aa273db155efaa8c500dd94bd14b98fb40fbcfb48eba",
+    "candidate-round4-economy-rtdn-lease.test.js.tap": "27dd299d35f0d6c18d48ad1347ca5c48a2caa3e502e495b842d0eb6ac83e1aff",
+    "pass-rollover-baseline.tap": "ed349f2b62a676a5951e25eb058938636626cb3cf8d3b2d6a486a3676c896733",
+    "actual-system-hunt-economy-refund-grant-race.test.js.tap": "5243df9e8f7d9d32ebe79baeeb5bc243ee2692afe5d692d9b2483f2fd09cc7c5",
+    "actual-pass-purchase-recovery.test.js.tap": "25d118ffec4a5b4236ecda96dbee679dfa73ad466b4a85c99f8dd9fc77cc5cf5",
+    "candidate-v217-billing-recovery.test.js.tap": "f65e422fd9536e7122ef61fe71888007b4048a20704b913cabd2eada64c26c64",
+    "actual-round2-economy-subscription-inactive-refresh.test.js.tap": "e81d5ffa4ca41be71e618dde0eaef7cd5831b84ac93cba368d9793dae3acf532",
+    "actual-round4-economy-rtdn-lease.test.js.tap": "38c5b72c65429854a93a6d004a3d03d7c2dd937e646d428c419d45fe24b683df",
+    "candidate-v217-settlement-recovery.test.js.tap": "f8973037d6a4d23deb40b87e716bdb913a6649cc549aec703d6f520ae4536800",
+    "candidate-pass.js": "54db9f0c9ec6f2e5d7ed8275df0d0dcefda0b4b2d650438124beeb6b81f898d7",
+    "candidate-v238-daily-claim-ordering.test.js.tap": "5a7280cf7997c59184b1e04549dca366ef1a495b362337fe11c210630ed42c4c",
+    "candidate-player-state-freshness.test.js.tap": "8e94897436126a3e1a8d9200f63aade17f39f05b038605780c815b838d59fb02",
+    "load-candidate.cjs": "e5501cd9745468320eb35f5bc33beffeba585e14427022ce48d8a38ef4970d4f",
+    "candidate-v218-pass-array-claims.test.js.tap": "86e9cea4018c3db7e6fd14fbd66a91189c043171020f496c6220844e5e4a044e",
+    "actual-v218-pass-array-claims.test.js.tap": "db9241ccb861a2e4c1ae789270afefabb76e2412538dd545b91fb34360ce712e",
+    "actual-player-state-freshness.test.js.tap": "31e52200b02c659250dcbf4184b85433ba8ab893582ffa3ec2141ad89ed7a7bc",
+    "pregrant-refund-baseline.tap": "c40c4f282422cb561f106b92421f927f1e8ab981df9d9e981845fb10ee727268",
+    "pass-rollover-candidate.tap": "a1c0f85b18ef7093a751ce82c943b3ee493c1e6064ad927b9b5bb4f0a1b57c74",
+    "candidate-pass-purchase-recovery.test.js.tap": "d260d74b5dcd7e9ecf7d4d7fdeaf70dcc59ce90c70a1672a5c7b275d5a97e4dc",
+    "pass-rollover-candidate.patch": "00d0d297fe0529816a83a5c7b29b68293f9aa4947aba13c2f5997cd0f88b53c4",
+    "actual-round5-economy-pregrant-refund.test.js.tap": "207734d4a290c67081d0a1c087ddef5078aceebcabc100d060068c961886dbb0",
+    "pass-rollover-baseline-final7.tap": "0b88fcaf3ca23dd58459d86eec1e6dae5f98d87447313e27384f286d52f2e6dd",
+    "candidate-index.js": "fc263678211999af63d73669591596e2f0ec49648c803405a46c2e5f78da07db",
+    "candidate-core.test.js.tap": "bc7543f5ea18449d3fbe8b8560145d80ce0cebe70ddc464893020eaf85bb8315",
+    "pregrant-refund-candidate.patch": "3d1b0e8357c95faef405ba8ef4764feb6911d88a845d888f918f324e2d25311a",
+    "pregrant-refund-candidate.tap": "0a3ce4e8d1b203728fa3257408647971607e3c06c9662aaa92ab9aa86f150eb6",
+    "approved-actual.patch": "406f5dc0efc37c64428b78b148521669b5f20f08ba3f8790e9160d9108356b8e",
+    "actual-round5-economy-pass-rollover.test.js.tap": "1087c0e3f4e2a31e2d1189d2711bc7e4c682d93d2a6da1899d8ab1f4f80fda36",
+    "actual-round3-economy-unmatched-refund.test.js.tap": "03952389313fb7b2568eb771ea134fcc323f48f84119ce34c74c55707fee2276"
+  },
+  "committed": false,
+  "actualFocusedCases": {
+    "tests": 193,
+    "pass": 193,
+    "fail": 0,
+    "skipped": 0
+  },
+  "actualSourceHashes": {
+    "functions/index.js": "fc263678211999af63d73669591596e2f0ec49648c803405a46c2e5f78da07db",
+    "functions/lib/pass.js": "54db9f0c9ec6f2e5d7ed8275df0d0dcefda0b4b2d650438124beeb6b81f898d7"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "success": 24
+  },
+  "done": {
+    "success": true,
+    "type": "done",
+    "time": 9323
+  },
+  "new_test_cases": 3,
+  "before_new_cases": {
+    "pass": 2,
+    "fail": 1
+  },
+  "source_patch": "deletion503-client.patch",
+  "scope": "Real local Flutter service+GameStore tests with HTTP/Auth fakes. No native/production acceptance."
+}

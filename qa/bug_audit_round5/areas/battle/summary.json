@@ -1,0 +1,43 @@
+{
+  "baseline": "6467e72f6181efc10420a98df1b7d7977cdf757a",
+  "production_source_edited": true,
+  "confirmed_defects": 1,
+  "severity": "P2",
+  "recommended_classification": "residual coverage in prior stale-input/selection family",
+  "current_source_new_regression": {
+    "pass": 3,
+    "fail": 4,
+    "skip": 0
+  },
+  "external_proposed_widget_same_cases": {
+    "pass": 7,
+    "fail": 0,
+    "skip": 0
+  },
+  "existing_boundaries": {
+    "pass": 27,
+    "fail": 0,
+    "skip": 0
+  },
+  "combined_run": {
+    "pass": 37,
+    "fail": 4,
+    "skip": 0,
+    "files": 5
+  },
+  "earlier_overlapping_runs_excluded": true,
+  "tests_create_qa_assets": false,
+  "deployment_or_emulator": false,
+  "production_fix_applied_after_valid_baselines": true,
+  "actual_production_fixed": {
+    "pass": 34,
+    "fail": 0,
+    "skip": 0,
+    "files": 4,
+    "new_cases": 7,
+    "existing_boundaries": 27
+  },
+  "fixed_source_sha256": "15c7962aa04a2c717ccd9237de41f3988a4877506aa2c6d8720b106894af692a",
+  "regression_sha256": "a38fd80a94b02fac3377f30f2b62cf8554d9a4ce05fa1b931a2fd275ee4f81aa",
+  "committed": false
+}

@@ -1,0 +1,11 @@
+{
+  "agent_turn_status": "BLOCKED",
+  "reason": "Agent turn stopped by automatic content filter for possible cybersecurity risk. Not retried or reassigned.",
+  "source_edits": false,
+  "validated_product_bug": false,
+  "raw_baseline_acceptance": "INVALID file-wrapper/harness failure: tests1/pass0/fail1, not four real case outcomes.",
+  "scratch_probe_archived": "unvalidated-legacy-invite-probe.js",
+  "scratch_sha256": "dc0ad24aab5915a3d7e01df963f499cbab4a10213c0a3dde31db9349e2edf3c7",
+  "tracked_or_accepted_assertions_removed": false,
+  "scope": "Existing approved AppCheck/daily baseline tests unaffected; no new security PASS claim."
+}

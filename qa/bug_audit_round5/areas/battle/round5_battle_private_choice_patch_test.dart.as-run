@@ -1,0 +1,198 @@
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import '../../../luno-review/bug-audit-round5/battle/private_choice_candidate.dart';
+import 'package:luno_chess/battle_ui/primitives.dart';
+import 'package:luno_chess/battle_v1/authoritative.dart';
+import 'package:luno_chess/battle_v1/core.dart';
+import 'package:luno_chess/battle_v1/model.dart';
+import 'package:luno_chess/engine/piece.dart';
+
+import 'battle_practice_v208_test.dart' show setupPracticeTestAssets;
+import 'battle_tutorial_v207_test.dart' show shell;
+import 'battle_ui/fixtures.dart';
+
+PlayerView _pending(CardId pendingCard) {
+  final before = battleFixture(
+    hand: [pendingCard, CardId.shelter, CardId.mine],
+  );
+  return DeckManager.apply(
+    before,
+    pendingCard == CardId.fateExchange
+        ? const PlayCardAction(CardId.fateExchange, sacrifice: CardId.mine)
+        : const PlayCardAction(CardId.prophecy),
+  ).view(PieceColor.white);
+}
+
+Future<PlayerView> _mount(
+  WidgetTester tester, {
+  CardId pendingCard = CardId.fateExchange,
+}) async {
+  tester.view.physicalSize = const Size(390, 950);
+  tester.view.devicePixelRatio = 1;
+  addTearDown(() async {
+    await tester.pumpWidget(const SizedBox.shrink());
+    tester.view.resetPhysicalSize();
+    tester.view.resetDevicePixelRatio();
+  });
+  final view = _pending(pendingCard);
+  expect(
+    view.knowledge.pendingCards,
+    hasLength(pendingCard == CardId.fateExchange ? 3 : 2),
+  );
+  late BuildContext owner;
+  await tester.pumpWidget(
+    shell(
+      Builder(
+        builder: (context) {
+          owner = context;
+          return const Scaffold(body: Text('owner'));
+        },
+      ),
+      language: 'en',
+      reduced: true,
+    ),
+  );
+  unawaited(
+    showModalBottomSheet<ResolveAction>(
+      context: owner,
+      isScrollControlled: true,
+      builder:
+          (_) => PrivateChoiceSheet(
+            view: view,
+            actions:
+                BattleRulesCore.legalActions(
+                  view,
+                ).whereType<ResolveAction>().toList(),
+          ),
+    ),
+  );
+  await tester.pumpAndSettle();
+  return view;
+}
+
+VoidCallback _take(WidgetTester tester, CardId card) =>
+    tester.widget<InkWell>(find.byKey(ValueKey('private-${card.wire}'))).onTap!;
+
+VoidCallback _down(WidgetTester tester, CardId card) =>
+    tester
+        .widgetList<BattleIconControl>(
+          find.descendant(
+            of: find.byKey(ValueKey('private-${card.wire}')),
+            matching: find.byType(BattleIconControl),
+          ),
+        )
+        .last
+        .onPressed!;
+
+void main() {
+  setupPracticeTestAssets();
+
+  testWidgets(
+    'same-frame reorder preserves the identity of a painted take row',
+    (tester) async {
+      final view = await _mount(tester);
+      final paintedCard = view.knowledge.pendingCards.first;
+      final takePainted = _take(tester, paintedCard);
+      _down(tester, paintedCard)();
+      // No rebuild: this second input still belongs to the painted first card.
+      takePainted();
+      final dynamic state = tester.state(find.byType(PrivateChoiceSheet));
+      expect(
+        state.taken,
+        paintedCard,
+        reason: 'The painted card identity must survive a reorder callback',
+      );
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets('freshly painted take row still selects its named card', (
+    tester,
+  ) async {
+    final view = await _mount(tester);
+    final card = view.knowledge.pendingCards.first;
+    _down(tester, card)();
+    await tester.pumpAndSettle();
+    _take(tester, card)();
+    await tester.pumpAndSettle();
+    final dynamic state = tester.state(find.byType(PrivateChoiceSheet));
+    expect(state.taken, card);
+    expect(state.choice.selected, card);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('two same-frame reorder callbacks move the named card twice', (
+    tester,
+  ) async {
+    final view = await _mount(tester);
+    final card = view.knowledge.pendingCards.first;
+    final down = _down(tester, card);
+    down();
+    down();
+    final dynamic state = tester.state(find.byType(PrivateChoiceSheet));
+    expect(
+      state.order.last,
+      card,
+      reason: 'A repeated row command must not reorder a different card',
+    );
+    expect(tester.takeException(), isNull);
+  });
+
+  for (final card in [CardId.fateExchange, CardId.prophecy]) {
+    testWidgets(
+      '$card reorder invalidates the previously painted confirm command',
+      (tester) async {
+        final view = await _mount(tester, pendingCard: card);
+        if (card == CardId.fateExchange) {
+          _take(tester, view.knowledge.pendingCards.first)();
+        }
+        await tester.pumpAndSettle();
+        final confirm =
+            tester
+                .widget<BattleCommand>(
+                  find.byKey(const ValueKey('confirm-private')),
+                )
+                .onPressed!;
+        _down(
+          tester,
+          view.knowledge.pendingCards[card == CardId.fateExchange ? 1 : 0],
+        )();
+        confirm();
+        await tester.pumpAndSettle();
+        expect(
+          find.byType(PrivateChoiceSheet),
+          findsOneWidget,
+          reason: 'An old confirm must not submit a deck order never painted',
+        );
+        expect(tester.takeException(), isNull);
+      },
+    );
+
+    testWidgets(
+      '$card freshly painted confirm still submits the current choice',
+      (tester) async {
+        final view = await _mount(tester, pendingCard: card);
+        if (card == CardId.fateExchange) {
+          _take(tester, view.knowledge.pendingCards.first)();
+        }
+        await tester.pumpAndSettle();
+        _down(
+          tester,
+          view.knowledge.pendingCards[card == CardId.fateExchange ? 1 : 0],
+        )();
+        await tester.pumpAndSettle();
+        tester
+            .widget<BattleCommand>(
+              find.byKey(const ValueKey('confirm-private')),
+            )
+            .onPressed!();
+        await tester.pumpAndSettle();
+        expect(find.byType(PrivateChoiceSheet), findsNothing);
+        expect(find.text('owner'), findsOneWidget);
+        expect(tester.takeException(), isNull);
+      },
+    );
+  }
+}

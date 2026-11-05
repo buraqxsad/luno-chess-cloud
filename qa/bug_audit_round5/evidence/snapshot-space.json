@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-11-03T12:33:26.143888+00:00",
+  "scope": "Stopped emulator snapshot RAM temporarily losslessly parked for source tests/build disk. No raw memory content printed, uploaded or committed. No emulator boot.",
+  "snapshot": "/workspace/toolchains/avds/Luno_Android_10.avd/snapshots/luno-ready/ram.bin",
+  "archive": "/workspace/toolchains/avds/Luno_Android_10.avd/snapshots/luno-ready/ram.bin.round5-parking.gz",
+  "original_bytes": 1426527045,
+  "original_sha256": "72a55d41bec7b6b53d3615328c4026f34ff75e5075fc1f36a621386420031b68",
+  "archive_bytes": 481239759,
+  "archive_sha256": "2093f98eb0b7abd1599e9e26deb79e4ee9a49a2f60313d47065a70e861e50de8",
+  "roundtrip_verified_before_unlink": true,
+  "restore_required": false,
+  "free_before": 1256980480,
+  "free_after": 2202267648,
+  "restored_utc": "2026-11-04T15:07:49.851872+00:00",
+  "restored_original_sha256": "72a55d41bec7b6b53d3615328c4026f34ff75e5075fc1f36a621386420031b68",
+  "restored_original_bytes": 1426527045,
+  "archive_removed_after_restore": true,
+  "free_after_restore": 1196912640
+}

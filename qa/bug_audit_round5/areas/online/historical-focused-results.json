@@ -1,0 +1,110 @@
+[
+  {
+    "file": "round5-online-result-ack-race.test.js",
+    "exit": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "round5-online-historical-erasure.test.js",
+    "exit": 0,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v201b-recovery.test.js",
+    "exit": 0,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "v201b-friendly.test.js",
+    "exit": 0,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "round4-online-friendly-replay.test.js",
+    "exit": 0,
+    "tests": 13,
+    "pass": 13,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "round3-online-enqueue-replay.test.js",
+    "exit": 0,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "round2-online-admission-erasure.test.js",
+    "exit": 0,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "round3-online-settlement-erasure.test.js",
+    "exit": 0,
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "system-hunt-online-expired-queue-room.test.js",
+    "exit": 0,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "account-metadata-erasure.test.js",
+    "exit": 0,
+    "tests": 26,
+    "pass": 26,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "identity-index-race.test.js",
+    "exit": 0,
+    "tests": 19,
+    "pass": 19,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  {
+    "file": "retained-data-erasure.test.js",
+    "exit": 0,
+    "tests": 21,
+    "pass": 21,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  }
+]

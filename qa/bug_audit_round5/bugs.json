@@ -1,0 +1,74 @@
+[
+  {
+    "severity": "P1",
+    "new_independent_family": false,
+    "title": "Gecikmiş sezon okuması alınmış Premium Pass’i siliyordu",
+    "commit": "67c99b8",
+    "area": "economy",
+    "fix": "Transaction denemesinde güncel saat okunur; geçerli daha yeni sezon Pass’i eski normalizer çağrısından korunur.",
+    "proof": "7 baseline:4 geçti/3 başarısız →7/7; ilgili193 koşusunda."
+  },
+  {
+    "severity": "P2",
+    "new_independent_family": false,
+    "title": "Yarım grant sonrası doğrulanmış refund tamamlanamıyordu",
+    "commit": "1a32a99",
+    "area": "economy",
+    "fix": "Reconcile-required claim için de grant öncesi iade işareti yazılır. Complete/granted ve eksik receipt korumaları korunur.",
+    "proof": "4 baseline:2 geçti/2 başarısız →4/4; ilgili193 koşusunda."
+  },
+  {
+    "severity": "P2",
+    "new_independent_family": true,
+    "title": "İlk ürün kataloğu hatası mağazayı kalıcı kilitliyordu",
+    "commit": "91863e3",
+    "area": "client",
+    "fix": "Start ve restore boş kataloğu tekrar sorgular; katalog arızası eldeki satın alma sahipliği kurtarmasını engellemez.",
+    "proof": "Birleşik9 baseline:4 geçti/5 başarısız; son9/9, ilgili75/75."
+  },
+  {
+    "severity": "P2",
+    "new_independent_family": false,
+    "title": "Eski pending yanıtı doğrulanmış ürünü yeniden beklemeye alıyordu",
+    "commit": "91863e3",
+    "area": "client",
+    "fix": "Sorgu başındaki ürün nesliyle güncel canlı durum karşılaştırılır; tokeni boş eski pending de yeni sonucu ezemez.",
+    "proof": "Yukarıdaki9 ve75 koşularında; ayrı hata diye iki token varyantı sayılmadı."
+  },
+  {
+    "severity": "P2",
+    "new_independent_family": false,
+    "title": "Özel kart penceresinde eski satır yanlış kartı işliyordu",
+    "commit": "2b2ad1e",
+    "area": "battle",
+    "fix": "Satırlar mutable indeks yerine CardId tutar; Confirm yalnız boyanmış seçim anahtarı hâlâ geçerliyken uygulanır.",
+    "proof": "7 baseline:3 geçti/4 başarısız →7/7; ilgili34/34."
+  },
+  {
+    "severity": "P2",
+    "new_independent_family": true,
+    "title": "Onaylanan sonuç geç cleanup ile yeniden görünüyordu",
+    "commit": "b315685",
+    "area": "online",
+    "fix": "ACK aynı transaction’da yalnız eşleşen active ve lastMatch işaretlerini temizler; peer/yeni maç korunur.",
+    "proof": "3 baseline:2 geçti/1 başarısız →3/3; ilgili17/17."
+  },
+  {
+    "severity": "P2",
+    "new_independent_family": false,
+    "title": "Eski V1 maçlarda silinen hesabın verisi kalıyordu",
+    "commit": "60fe952",
+    "area": "online",
+    "fix": "Sayfalı ve kaldığı yerden devam eden geçmiş temizliği; yarım publish tekrarında sayfa atlanmaz. İstemci503 doğru ilerleme hatasını korur.",
+    "proof": "Genişleyen5 baseline:1 geçti/4 başarısız; son6/6, ilgili118/118. İstemci3 baseline2/1 →3/3, ilgili24/24."
+  },
+  {
+    "severity": "P2",
+    "new_independent_family": false,
+    "title": "Eski maç sonucu silinen özel kayıtları yeniden yazıyordu",
+    "commit": "767ae74",
+    "area": "online",
+    "fix": "Her katılımcı yayını mevcut metadata kontrolünden geçer; geç worker temizliği yeni maç işaretlerini ve yaşayan peer’i korur.",
+    "proof": "3 baseline:1 geçti/2 başarısız →3/3; ilgili52/52."
+  }
+]

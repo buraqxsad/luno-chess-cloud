@@ -1,0 +1,40 @@
+{
+  "recorded_utc": "2026-11-04T14:06:29.830658+00:00",
+  "new_families": {
+    "P2": 1
+  },
+  "prior_family_residuals": {
+    "P2": 2
+  },
+  "concrete_defects": 3,
+  "ack": {
+    "before_pass": 2,
+    "before_fail": 1,
+    "focused_after_pass": 17
+  },
+  "historical": {
+    "expanded_before_pass": 1,
+    "expanded_before_fail": 4,
+    "actual_new_cases_pass": 6,
+    "focused_after_pass": 118
+  },
+  "legacy": {
+    "before_pass": 1,
+    "before_fail": 2,
+    "focused_after_pass": 52
+  },
+  "client_processing503": {
+    "before_pass": 2,
+    "before_fail": 1,
+    "actual_focused_after_pass": 24,
+    "counted_as_separate_bug": false
+  },
+  "source_commit": "767ae74314a664f180ad1ca9e279e2c9881989d2",
+  "source_sha256": {
+    "functions/index.js": "86eb5e1bcdbcffa2248798857f4baf58af775f4d1c01e62dd274f60a91f6ae29",
+    "functions/lib/battle-v1-friendly.js": "d58524c98cb9b5b77604018fd5f08e75003cc3b0bb3d314ca6cf60d7448fd023",
+    "functions/lib/battle-v1-recovery.js": "081cbd6002ec93e2a235af5bdeb97b44114b24fe365c4a937abb584995c42060",
+    "luno_chess/lib/services/luno_online_service.dart": "76e5360a5ecb62594b2eb2dd32975800971a88460f5f05e7b9a8babe61387ee7"
+  },
+  "test_scope": "Memory RTDB/Auth/HTTP/provider fakes and actual host Flutter service tests; not Android or production acceptance."
+}
